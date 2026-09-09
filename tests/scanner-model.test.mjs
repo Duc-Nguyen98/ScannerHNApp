@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { seedStore,validateLine,createDocument as createRaw,postDocument as postRaw,changeCase as caseRaw,canIssueParts } from '../lib/scanner-model.ts';
+import {profiles} from '../lib/scanner-policy.ts';
+const actor={userId:'test',name:'QA',roleCode:'SUPER_ADMIN',permissions:profiles['Super Admin'].permissions,shiftStarted:true,expiresAt:Date.now()+3600000};
+const createDocument=(s,d)=>createRaw(s,d,actor),postDocument=(s,id)=>postRaw(s,id,actor),changeCase=(s,id,status,note)=>caseRaw(s,id,status,note,actor);
+const input=(kind,lines,more={})=>({kind,lines,name:'Ca kiểm thử',recipient:'Đại lý A',phone:'0900000000',address:'Hà Nội',group:'Đại lý',note:'',key:'test-'+kind,...more});
+test('inbound → posted → outbound → posted changes same inventory',()=>{
+ let s=seedStore();s=createDocument(s,input('in',[{code:'NEW-001',qty:1}]));const id=s.docs[0].id;
+ assert.equal(s.items.find(i=>i.code==='NEW-001').status,'Chờ nhập');
+ s=postDocument(s,id);assert.equal(s.items.find(i=>i.code==='NEW-001').status,'Trong kho');
+ s=createDocument(s,input('out',[{code:'NEW-001',qty:1}]));s=postDocument(s,s.docs[0].id);
+ assert.equal(s.items.find(i=>i.code==='NEW-001').status,'Đã xuất');
+ assert.equal(s.items.find(i=>i.code==='NEW-001').qty,0);
+});
+test('idempotency for submit and post',()=>{const base=seedStore();const data=input('in',[{code:'NEW-001',qty:1}]);const s=createDocument(base,data);assert.equal(createDocument(s,data),s);const p=postDocument(s,s.docs[0].id);assert.equal(postDocument(p,s.docs[0].id),p);});
+test('parts mixed item plus box uses actual quantity, links timeline',()=>{let s=seedStore();s=createDocument(s,input('parts',[{code:'LK-001',qty:1},{code:'BOX-001',qty:3}],{caseId:'BH-001'}));assert.equal(s.items.find(i=>i.code==='BOX-001').qty,20);s=postDocument(s,s.docs[0].id);assert.equal(s.items.find(i=>i.code==='BOX-001').qty,17);assert.equal(s.items.find(i=>i.code==='LK-001').status,'Đã xuất');assert.match(s.cases[0].timeline.at(-1).text,/4 cái/);});
+test('invalid box quantities, duplicate, unknown and wrong type rejected',()=>{const s=seedStore();for(const qty of [0,-1,1.2,21,NaN])assert.ok(validateLine(s,'parts',{code:'BOX-001',qty},[],'BH-001'));assert.ok(validateLine(s,'parts',{code:'LK-001',qty:1},[{code:'LK-001',qty:1}],'BH-001'));assert.ok(validateLine(s,'parts',{code:'MAY-001',qty:1},[],'BH-001'));assert.ok(validateLine(s,'in',{code:'UNKNOWN',qty:1},[]));});
+test('two eligible warranty statuses only',()=>{assert.ok(canIssueParts('Đang kiểm tra'));assert.ok(canIssueParts('Đang sửa chữa'));for(const s of ['Tiếp nhận','Hoàn tất','Đã trả','Đã huỷ'])assert.equal(canIssueParts(s),false);assert.throws(()=>createDocument(seedStore(),input('parts',[{code:'LK-001',qty:1}],{caseId:'BH-003'})));});
+test('pending document protects duplicate reservation',()=>{const s=createDocument(seedStore(),input('out',[{code:'MAY-001',qty:1}]));assert.throws(()=>createDocument(s,input('out',[{code:'MAY-001',qty:1}],{key:'other'})));});
+test('post rechecks stock and fails atomically',()=>{const s=createDocument(seedStore(),input('parts',[{code:'LK-001',qty:1},{code:'BOX-001',qty:3}],{caseId:'BH-001'}));const conflict={...s,items:s.items.map(i=>i.code==='BOX-001'?{...i,qty:2}:i)};assert.throws(()=>postDocument(conflict,s.docs[0].id));assert.equal(conflict.items.find(i=>i.code==='LK-001').status,'Trong kho');});
+test('case transition guards notes, invalid transitions and pending parts',()=>{const s=seedStore();assert.throws(()=>changeCase(s,'BH-001','Đã trả','Done'));assert.throws(()=>changeCase(s,'BH-001','Đang sửa chữa',''));const p=createDocument(s,input('parts',[{code:'LK-001',qty:1}],{caseId:'BH-001'}));assert.throws(()=>changeCase(p,'BH-001','Hoàn tất','Đã xử lý'));assert.equal(changeCase(s,'BH-001','Đang sửa chữa','Thay gioăng').cases[0].status,'Đang sửa chữa');});

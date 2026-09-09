@@ -1,0 +1,36 @@
+html:has(.sc-app-shell),body:has(.sc-app-shell){height:100%;overflow:hidden;overscroll-behavior:none;}
+.sc-app-shell{position:fixed;inset:0;display:flex;justify-content:center;align-items:center;background:#edf5f8;padding:16px;overflow:hidden;font-family:var(--font-public-sans),'Segoe UI',sans-serif;color:#193b49;}
+.sc-device{width:var(--sc-device-width,390px);height:min(var(--sc-device-height,844px),calc(100dvh - 32px));max-width:100%;max-height:100%;border-radius:24px;border:0;outline:1px solid #dbe8ed;box-shadow:0 12px 40px #073b5214;overflow:hidden;}
+.sc-app-viewport{position:relative;width:100%;height:100%;overflow:hidden;border-radius:inherit;isolation:isolate;--sc-safe-top:env(safe-area-inset-top,0px);--sc-safe-bottom:env(safe-area-inset-bottom,0px);background:#fafcfc;}
+.sc-screen-scroll{position:static;height:100%;width:100%;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;scroll-padding-top:100px;scroll-padding-bottom:var(--mobile-bottom-reserved-space,130px);}
+.sc-screen-scroll::-webkit-scrollbar{display:none;}
+.sc-app-overlay-root{position:absolute;inset:0;z-index:100;pointer-events:none;overflow:hidden;}
+.sc-overlay-layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:calc(12px + var(--sc-safe-top)) 12px calc(12px + var(--sc-safe-bottom));pointer-events:auto;overflow:hidden;}
+.sc-overlay-layer.is-sheet{align-items:flex-end;padding:var(--sc-safe-top) 0 0;}
+.sc-app-backdrop{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;background:#193b4970;padding:0;cursor:default;}
+.sc-app-overlay-root .sc-app-dialog{position:relative;inset:auto;box-sizing:border-box;display:block;width:100%;max-width:100%;max-height:100%;margin:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;border:1px solid #dbe8ed;border-radius:18px;background:#fff;color:#193b49;padding:20px;box-shadow:0 8px 24px #073b521a;animation:sc-overlay-enter 180ms ease-out;}
+.sc-app-overlay-root .is-sheet .sc-app-dialog{border-radius:24px 24px 0 0;padding-bottom:calc(20px + var(--sc-safe-bottom));}
+.sc-app-dialog .sc-btn{width:100%;min-height:48px;margin-top:12px;}
+.sc-app-dialog button:not(.sg-action){min-width:44px;min-height:44px;}
+.sc-app-dialog h2{font-size:21px;line-height:1.35;overflow-wrap:anywhere;}
+.sc-app-dialog p{font-size:14px;line-height:1.55;}
+.sc-app-dialog input,.sc-app-dialog select,.sc-app-dialog textarea{font-size:16px;min-height:48px;max-width:100%;}
+.sc-app-dialog :focus-visible{outline:3px solid #0c6286;outline-offset:2px;}
+.sc-app-dialog [autofocus]{scroll-margin-block:16px;}
+.sc-modal-heading{display:flex;align-items:center;gap:12px;justify-content:space-between;}.sc-modal-heading h2{margin:0;}.sc-modal-heading button{flex:none;width:44px;height:44px;border:0;border-radius:12px;background:#edf5f8;color:#0c6286;font-size:26px;}.sc-modal-actions{display:grid;gap:8px;}
+.sc-app-toast{position:absolute;left:12px;right:12px;bottom:calc(12px + var(--sc-safe-bottom));border-radius:12px;padding:12px 16px;background:#073b52;color:#fff;pointer-events:auto;font-size:14px;}
+.sc-app-viewport .sc-workspace{min-height:100%;padding:0;display:block;background:#fafcfc;}
+.sc-app-viewport .sc-phone{width:100%;max-width:none;min-height:100%;border:0;border-radius:0;box-shadow:none;position:static;overflow:visible;padding-bottom:0;}
+.sc-app-viewport .sc-phone .sc-nav,.sc-app-viewport .sc-phone .sc-sticky-actions{position:absolute;left:0;width:100%;}
+.sc-app-viewport .sc-phone .sc-nav{bottom:0;}
+.sc-app-viewport .sc-phone .sc-sticky-actions{bottom:var(--sc-nav-height);}
+.sc-app-viewport .sc-content{min-height:calc(100% - 180px);}
+.sc-app-viewport .sc-header{top:0;padding-top:calc(12px + var(--sc-safe-top));}
+.sc-app-viewport .sc-auth-wrap{width:100%;max-width:none;}.sc-app-viewport .sc-auth.sc-entry{min-height:var(--sc-viewport-height,100%);border-radius:0;}
+.sc-app-viewport .sc-auth{border-radius:0;min-height:100%;}
+.sc-app-viewport .sc-design-panel{display:none;}
+.sc-app-viewport .sc-mobile-controls{display:block;}
+.sc-app-viewport .sg-sheet{animation:none;}
+@keyframes sc-overlay-enter{from{opacity:.5;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.sc-app-shell{padding:0;align-items:flex-start;}.sc-device{border:0;outline:0;border-radius:0;width:100vw;height:100dvh;max-height:none;box-shadow:none;}.sc-app-viewport{height:var(--sc-runtime-height,100dvh);}}
+@media(prefers-reduced-motion:reduce){.sc-app-overlay-root *{animation:none!important;transition:none!important;}}

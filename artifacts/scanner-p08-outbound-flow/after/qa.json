@@ -1,0 +1,84 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "states": [
+      {
+        "name": "login",
+        "axe": []
+      },
+      {
+        "name": "shift",
+        "axe": []
+      },
+      {
+        "name": "home",
+        "axe": []
+      },
+      {
+        "name": "p07-recipient",
+        "axe": []
+      },
+      {
+        "name": "p07-quantity",
+        "axe": []
+      },
+      {
+        "name": "empty",
+        "axe": []
+      },
+      {
+        "name": "partial",
+        "axe": []
+      },
+      {
+        "name": "duplicate",
+        "axe": []
+      },
+      {
+        "name": "unavailable",
+        "axe": []
+      },
+      {
+        "name": "reserved",
+        "axe": []
+      },
+      {
+        "name": "stock-quantity",
+        "axe": []
+      },
+      {
+        "name": "complete",
+        "axe": []
+      },
+      {
+        "name": "over-target",
+        "axe": []
+      },
+      {
+        "name": "camera",
+        "axe": []
+      },
+      {
+        "name": "manual",
+        "axe": []
+      },
+      {
+        "name": "draft-confirm",
+        "axe": []
+      },
+      {
+        "name": "review",
+        "axe": []
+      },
+      {
+        "name": "confirm",
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "checks": [
+      "quantity-progress-duplicates-stock-reserved-target-no-mutation-draft"
+    ]
+  }
+]

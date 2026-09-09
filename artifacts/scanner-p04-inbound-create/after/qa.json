@@ -1,0 +1,514 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#login"
+      },
+      {
+        "name": "shift",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#shift"
+      },
+      {
+        "name": "home",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#home"
+      },
+      {
+        "name": "create",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "validation",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "filled",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "scan-boundary",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#scan"
+      },
+      {
+        "name": "draft-retained",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "draft-confirm",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "short-height",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "keyboard-proxy",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "safe-area",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "viewer",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      },
+      {
+        "name": "paused",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      }
+    ],
+    "checks": [
+      "inline-validation-focus-active-nav-no-QA",
+      "required-name-enter-context-back-draft-retained",
+      "scanned-item-retained-no-inventory-mutation",
+      "cross-context-draft-confirm-cancel-keeps-values",
+      "short-height-keyboard-proxy-safe-area-sticky-no-overlap",
+      "viewer-write-blocked-paused-write-blocked-readonly-lookup"
+    ],
+    "geometry": {
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 800,
+        "top": 0,
+        "right": 360,
+        "bottom": 800,
+        "left": 0
+      },
+      "form": {
+        "x": 16,
+        "y": 195.390625,
+        "width": 328,
+        "height": 448.875,
+        "top": 195.390625,
+        "right": 344,
+        "bottom": 644.265625,
+        "left": 16
+      },
+      "cta": {
+        "x": 0,
+        "y": 629,
+        "width": 360,
+        "height": 79,
+        "top": 629,
+        "right": 360,
+        "bottom": 708,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 708,
+        "width": 360,
+        "height": 92,
+        "top": 708,
+        "right": 360,
+        "bottom": 800,
+        "left": 0
+      }
+    },
+    "result": "PASS"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#login"
+      },
+      {
+        "name": "shift",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#shift"
+      },
+      {
+        "name": "home",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#home"
+      },
+      {
+        "name": "create",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "validation",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "filled",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "scan-boundary",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#scan"
+      },
+      {
+        "name": "draft-retained",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "draft-confirm",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "short-height",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "keyboard-proxy",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "safe-area",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "viewer",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      },
+      {
+        "name": "paused",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      }
+    ],
+    "checks": [
+      "inline-validation-focus-active-nav-no-QA",
+      "required-name-enter-context-back-draft-retained",
+      "scanned-item-retained-no-inventory-mutation",
+      "cross-context-draft-confirm-cancel-keeps-values",
+      "short-height-keyboard-proxy-safe-area-sticky-no-overlap",
+      "viewer-write-blocked-paused-write-blocked-readonly-lookup"
+    ],
+    "geometry": {
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "form": {
+        "x": 18,
+        "y": 195.390625,
+        "width": 354,
+        "height": 450.1875,
+        "top": 195.390625,
+        "right": 372,
+        "bottom": 645.578125,
+        "left": 18
+      },
+      "cta": {
+        "x": 0,
+        "y": 673,
+        "width": 390,
+        "height": 79,
+        "top": 673,
+        "right": 390,
+        "bottom": 752,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 752,
+        "width": 390,
+        "height": 92,
+        "top": 752,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      }
+    },
+    "result": "PASS"
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#login"
+      },
+      {
+        "name": "shift",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#shift"
+      },
+      {
+        "name": "home",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#home"
+      },
+      {
+        "name": "create",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "validation",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "filled",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "scan-boundary",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#scan"
+      },
+      {
+        "name": "draft-retained",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "draft-confirm",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "short-height",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "keyboard-proxy",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "safe-area",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "viewer",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      },
+      {
+        "name": "paused",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      }
+    ],
+    "checks": [
+      "inline-validation-focus-active-nav-no-QA",
+      "required-name-enter-context-back-draft-retained",
+      "scanned-item-retained-no-inventory-mutation",
+      "cross-context-draft-confirm-cancel-keeps-values",
+      "short-height-keyboard-proxy-safe-area-sticky-no-overlap",
+      "viewer-write-blocked-paused-write-blocked-readonly-lookup"
+    ],
+    "geometry": {
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 932,
+        "top": 0,
+        "right": 430,
+        "bottom": 932,
+        "left": 0
+      },
+      "form": {
+        "x": 18,
+        "y": 195.390625,
+        "width": 394,
+        "height": 450.1875,
+        "top": 195.390625,
+        "right": 412,
+        "bottom": 645.578125,
+        "left": 18
+      },
+      "cta": {
+        "x": 0,
+        "y": 761,
+        "width": 430,
+        "height": 79,
+        "top": 761,
+        "right": 430,
+        "bottom": 840,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 840,
+        "width": 430,
+        "height": 92,
+        "top": 840,
+        "right": 430,
+        "bottom": 932,
+        "left": 0
+      }
+    },
+    "result": "PASS"
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#login"
+      },
+      {
+        "name": "shift",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#shift"
+      },
+      {
+        "name": "home",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#home"
+      },
+      {
+        "name": "create",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "validation",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "filled",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "scan-boundary",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#scan"
+      },
+      {
+        "name": "draft-retained",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "draft-confirm",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "short-height",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "keyboard-proxy",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "safe-area",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/#create"
+      },
+      {
+        "name": "viewer",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      },
+      {
+        "name": "paused",
+        "axe": [],
+        "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#create"
+      }
+    ],
+    "checks": [
+      "inline-validation-focus-active-nav-no-QA",
+      "required-name-enter-context-back-draft-retained",
+      "scanned-item-retained-no-inventory-mutation",
+      "cross-context-draft-confirm-cancel-keeps-values",
+      "short-height-keyboard-proxy-safe-area-sticky-no-overlap",
+      "viewer-write-blocked-paused-write-blocked-readonly-lookup"
+    ],
+    "geometry": {
+      "viewport": {
+        "x": 525,
+        "y": 78,
+        "width": 390,
+        "height": 844,
+        "top": 78,
+        "right": 915,
+        "bottom": 922,
+        "left": 525
+      },
+      "form": {
+        "x": 543,
+        "y": 273.390625,
+        "width": 354,
+        "height": 450.1875,
+        "top": 273.390625,
+        "right": 897,
+        "bottom": 723.578125,
+        "left": 543
+      },
+      "cta": {
+        "x": 525,
+        "y": 751,
+        "width": 390,
+        "height": 79,
+        "top": 751,
+        "right": 915,
+        "bottom": 830,
+        "left": 525
+      },
+      "nav": {
+        "x": 525,
+        "y": 830,
+        "width": 390,
+        "height": 92,
+        "top": 830,
+        "right": 915,
+        "bottom": 922,
+        "left": 525
+      }
+    },
+    "result": "PASS"
+  }
+]

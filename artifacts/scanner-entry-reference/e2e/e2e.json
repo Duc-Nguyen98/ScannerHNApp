@@ -1,0 +1,206 @@
+{
+  "base": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1",
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "steps": [
+        {
+          "name": "01-login-shift-home",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#home",
+          "result": "PASS"
+        },
+        {
+          "name": "03-inbound-submitted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result",
+          "result": "PASS"
+        },
+        {
+          "name": "05-inbound-posted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#doc?id=PN-0005",
+          "result": "PASS"
+        },
+        {
+          "name": "13-submit-error-keeps-draft",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#review",
+          "result": "PASS"
+        },
+        {
+          "name": "04-outbound-retry-once",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result",
+          "result": "PASS"
+        },
+        {
+          "name": "09-inventory-trace",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#product?product=NEW-001",
+          "result": "PASS"
+        },
+        {
+          "name": "05-search-no-result",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#docs",
+          "result": "PASS"
+        },
+        {
+          "name": "07-parts-submitted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result?id=BH-001",
+          "result": "PASS"
+        },
+        {
+          "name": "07-parts-posted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#doc?id=XLK-0007",
+          "result": "PASS"
+        },
+        {
+          "name": "06-warranty-status-tabs",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#case?id=BH-001",
+          "result": "PASS"
+        },
+        {
+          "name": "08-nfc-bind-revoke",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#nfc",
+          "result": "PASS"
+        },
+        {
+          "name": "09-history",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#history",
+          "result": "PASS"
+        }
+      ],
+      "console": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "steps": [
+        {
+          "name": "01-login-shift-home",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#home",
+          "result": "PASS"
+        },
+        {
+          "name": "03-inbound-submitted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result",
+          "result": "PASS"
+        },
+        {
+          "name": "05-inbound-posted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#doc?id=PN-0005",
+          "result": "PASS"
+        },
+        {
+          "name": "13-submit-error-keeps-draft",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#review",
+          "result": "PASS"
+        },
+        {
+          "name": "04-outbound-retry-once",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result",
+          "result": "PASS"
+        },
+        {
+          "name": "09-inventory-trace",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#product?product=NEW-001",
+          "result": "PASS"
+        },
+        {
+          "name": "05-search-no-result",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#docs",
+          "result": "PASS"
+        },
+        {
+          "name": "07-parts-submitted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result?id=BH-001",
+          "result": "PASS"
+        },
+        {
+          "name": "07-parts-posted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#doc?id=XLK-0007",
+          "result": "PASS"
+        },
+        {
+          "name": "06-warranty-status-tabs",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#case?id=BH-001",
+          "result": "PASS"
+        },
+        {
+          "name": "08-nfc-bind-revoke",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#nfc",
+          "result": "PASS"
+        },
+        {
+          "name": "09-history",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#history",
+          "result": "PASS"
+        }
+      ],
+      "console": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "steps": [
+        {
+          "name": "01-login-shift-home",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#home",
+          "result": "PASS"
+        },
+        {
+          "name": "03-inbound-submitted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result",
+          "result": "PASS"
+        },
+        {
+          "name": "05-inbound-posted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#doc?id=PN-0005",
+          "result": "PASS"
+        },
+        {
+          "name": "13-submit-error-keeps-draft",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#review",
+          "result": "PASS"
+        },
+        {
+          "name": "04-outbound-retry-once",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result",
+          "result": "PASS"
+        },
+        {
+          "name": "09-inventory-trace",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#product?product=NEW-001",
+          "result": "PASS"
+        },
+        {
+          "name": "05-search-no-result",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#docs",
+          "result": "PASS"
+        },
+        {
+          "name": "07-parts-submitted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#result?id=BH-001",
+          "result": "PASS"
+        },
+        {
+          "name": "07-parts-posted",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#doc?id=XLK-0007",
+          "result": "PASS"
+        },
+        {
+          "name": "06-warranty-status-tabs",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#case?id=BH-001",
+          "result": "PASS"
+        },
+        {
+          "name": "08-nfc-bind-revoke",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#nfc",
+          "result": "PASS"
+        },
+        {
+          "name": "09-history",
+          "url": "http://127.0.0.1:4174/WMS_UIUX_HoaNamv2/app-scanner/?qa=1#history",
+          "result": "PASS"
+        }
+      ],
+      "console": []
+    }
+  ]
+}

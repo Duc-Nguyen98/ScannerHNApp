@@ -1,0 +1,17 @@
+'use client';
+import {AppBottomSheet,AppModal} from './scanner-app-overlay';
+import {useState} from 'react';
+import {PackageOpen,Package,ShieldCheck,Search,ChevronRight,LockKeyhole,CircleAlert,CirclePause} from 'lucide-react';
+import type {GlobalIntent} from '@/lib/scanner-intent';
+const actions=[{intent:'INBOUND',title:'Nhập kho',description:'Nhận hàng và kiểm đếm vào kho',Icon:PackageOpen},{intent:'OUTBOUND',title:'Xuất kho',description:'Soạn hàng theo yêu cầu xuất',Icon:Package},{intent:'WARRANTY',title:'Bảo hành',description:'Quét máy để tra cứu hoặc tiếp nhận bảo hành',Icon:ShieldCheck},{intent:'LOOKUP',title:'Tra cứu sản phẩm',description:'Xem tồn kho, lịch sử và bảo hành',Icon:Search}] as const;
+export default function ScannerLauncher({hasDraft,onSelect,onResume,onClose,reason}:{hasDraft:boolean;onSelect:(intent:GlobalIntent,discard:boolean)=>void;onResume:()=>void;onClose:()=>void;reason:(intent:GlobalIntent)=>string}){
+ const [pending,setPending]=useState<GlobalIntent|null>(null);
+ const finish=(fn:()=>void)=>{onClose();fn();};
+ if(pending)return <AppModal key="draft" open onClose={onClose} className="vl-warning vl-draft" title="Bạn đang có phiếu chưa hoàn tất." description="Các mã đã quét sẽ được giữ nếu bạn tiếp tục phiếu hiện tại. Nếu chuyển sang tác vụ mới, phiếu hiện tại sẽ bị hủy."><CircleAlert className="vl-warning-icon" aria-hidden="true"/><div className="sg-confirm"><button className="sc-btn" onClick={()=>finish(onResume)}>Tiếp tục phiếu hiện tại</button><button className="sc-btn secondary" disabled={!!reason(pending)} onClick={()=>finish(()=>onSelect(pending,true))}>Bỏ phiếu và bắt đầu tác vụ mới</button>{reason(pending)&&<p>{reason(pending)}</p>}<button className="sc-btn vl-cancel" onClick={onClose}>Hủy</button></div></AppModal>;
+ return <AppBottomSheet key="launcher" open onClose={onClose} className="sg-sheet sg-operational vl-launcher" closeLabel="Đóng chọn tác vụ quét" title="Chọn tác vụ quét" description="Mã sẽ được kiểm tra theo nghiệp vụ bạn chọn."><div className="sg-actions">{actions.map(({intent,title,description,Icon})=>{const blocked=reason(intent);return <div key={intent}><button className={'sg-action vl-'+intent.toLowerCase()} disabled={!!blocked} aria-describedby={blocked?'sg-'+intent:undefined} onClick={()=>{if(hasDraft)setPending(intent);else finish(()=>onSelect(intent,false));}}><span className="sg-icon"><Icon aria-hidden="true"/></span><span><strong>{title}</strong><small>{description}</small></span>{blocked?<LockKeyhole aria-hidden="true"/>:<ChevronRight aria-hidden="true"/>}</button>{blocked&&<p className="sg-reason" id={'sg-'+intent}>{blocked}</p>}</div>;})}</div></AppBottomSheet>;
+}
+/** Presents the existing denied-write state without changing warehouse policy. */
+export function ScannerPausedWarning({onLookup}:{onLookup:()=>void}){
+ const [open,setOpen]=useState(true);
+ return <AppModal open={open} onClose={()=>setOpen(false)} className="vl-warning vl-paused" title="Kho đang tạm dừng hoạt động" description="Bạn vẫn có thể tra cứu và xem chứng từ, nhưng các thao tác nhập, xuất và cập nhật kho hiện đang bị khóa."><CirclePause className="vl-warning-icon" aria-hidden="true"/><span className="vl-paused-badge"><CirclePause aria-hidden="true"/>Tạm dừng</span><button className="sc-btn" onClick={()=>{setOpen(false);onLookup();}}>Chỉ tra cứu</button><button className="sc-btn secondary" onClick={()=>setOpen(false)}>Đóng</button></AppModal>;
+}

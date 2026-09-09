@@ -1,0 +1,66 @@
+/* P07 Xuất kho → Thông tin yêu cầu. Scope is limited to outbound create. */
+.sc-app-viewport .sc-phone.sc-phone-outbound-create{background:#f7fafb;background-image:linear-gradient(90deg,#073b52e8,#073b52c9),url('./scanner-approved-assets/bg_warehouse_main.jpg');background-size:100% 190px;background-position:center top;background-repeat:no-repeat;}
+.sc-phone.sc-phone-outbound-create .sc-preview-note{display:none;}
+.sc-app-viewport .sc-phone.sc-phone-outbound-create .sc-header{position:static;min-height:94px;padding:calc(18px + var(--sc-safe-top)) 18px 14px;background:transparent;border:0;color:#fff;gap:12px;}
+.sc-app-viewport .sc-phone.sc-phone-outbound-create .sc-header small{font-size:10px;line-height:1.5;letter-spacing:.05em;color:#dbe8ed;}
+.sc-app-viewport .sc-phone.sc-phone-outbound-create .sc-header h1{font-size:26px;line-height:1.2;letter-spacing:-.6px;font-weight:700;color:#fff;margin:4px 0 0;}
+.sc-app-viewport .sc-phone.sc-phone-outbound-create .sc-header button{width:44px;height:44px;min-width:44px;border-radius:12px;background:#ffffff12;color:#fff;}
+.sc-phone.sc-phone-outbound-create>.sc-content{padding:0 18px calc(var(--mobile-bottom-reserved-space) + var(--sc-safe-bottom));background:transparent;}
+.sc-phone.sc-phone-outbound-create .so-warehouse-context{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 2px 20px;color:#fff;}
+.sc-phone.sc-phone-outbound-create .so-warehouse-context>span:first-child{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;}
+.sc-phone.sc-phone-outbound-create .so-warehouse-context svg{width:18px;height:18px;}
+.sc-phone.sc-phone-outbound-create .so-active{display:inline-flex;align-items:center;gap:6px;background:#d9f6e4;color:#176333;padding:5px 8px;border-radius:8px;font-size:11px;font-weight:600;white-space:nowrap;}
+.sc-phone.sc-phone-outbound-create .so-active i{width:7px;height:7px;border-radius:50%;background:#08973f;}
+.sc-phone.sc-phone-outbound-create .so-progress{display:grid;grid-template-columns:1fr 1fr;gap:6px;list-style:none;margin:0;padding:14px 12px;background:#edf5f8;border-radius:16px 16px 0 0;}
+.sc-phone.sc-phone-outbound-create .so-progress b{display:flex;align-items:center;gap:7px;font-size:12px;line-height:1.4;color:#607680;font-weight:500;white-space:nowrap;}
+.sc-phone.sc-phone-outbound-create .so-progress b>span{display:grid;place-items:center;width:23px;height:23px;border:1px solid #b2c8d3;border-radius:50%;font-size:11px;color:#526f7c;}
+.sc-phone.sc-phone-outbound-create .so-progress b[aria-current=step]{color:#0c6286;font-weight:700;}
+.sc-phone.sc-phone-outbound-create .so-progress b[aria-current=step]>span{background:#0c6286;border-color:#0c6286;color:#fff;}
+.sc-phone.sc-phone-outbound-create .so-surface{background:#fff;border-radius:0 0 16px 16px;padding:20px 18px 18px;box-shadow:0 4px 12px #073b5206;}
+.sc-phone.sc-phone-outbound-create .so-section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid #e7eff3;}
+.sc-phone.sc-phone-outbound-create .so-section-heading h2{font-size:20px;line-height:1.3;font-weight:700;letter-spacing:-.4px;color:#193b49;margin:0 0 5px;}
+.sc-phone.sc-phone-outbound-create .so-section-heading p{font-size:12px;line-height:1.5;color:#526f7c;margin:0;}
+.sc-phone.sc-phone-outbound-create .so-section-heading>svg{width:26px;height:26px;flex:none;color:#0c6286;}
+.sc-phone.sc-phone-outbound-create .so-eyebrow{display:block;font-size:10px;line-height:1.5;letter-spacing:.07em;color:#607680;margin-bottom:5px;}
+.sc-phone.sc-phone-outbound-create .so-field{display:block;margin:0 0 14px;}
+.sc-phone.sc-phone-outbound-create .so-field>span{display:flex;align-items:center;justify-content:space-between;font-size:14px;line-height:1.5;font-weight:650;color:#193b49;margin-bottom:8px;}
+.sc-phone.sc-phone-outbound-create .so-field input,.sc-phone.sc-phone-outbound-create .so-field select,.sc-phone.sc-phone-outbound-create .so-field textarea{display:block;width:100%;min-height:50px;border:1px solid #cbdde6;border-radius:10px;background:#f7fafb;color:#193b49;font-size:16px;line-height:1.5;padding:11px 12px;transition:border-color 150ms,box-shadow 150ms;}
+.sc-phone.sc-phone-outbound-create .so-field textarea{min-height:96px;resize:vertical;}
+.sc-phone.sc-phone-outbound-create .so-field input::placeholder,.sc-phone.sc-phone-outbound-create .so-field textarea::placeholder{font-size:14px;color:#607d8d;opacity:1;}
+.sc-phone.sc-phone-outbound-create .so-field input:focus,.sc-phone.sc-phone-outbound-create .so-field select:focus,.sc-phone.sc-phone-outbound-create .so-field textarea:focus{outline:2px solid #0c6286;outline-offset:2px;border-color:#0c6286;box-shadow:0 0 0 4px #e5f1f7;}
+.sc-phone.sc-phone-outbound-create .so-field input[aria-invalid=true],.sc-phone.sc-phone-outbound-create .so-field select[aria-invalid=true],.sc-phone.sc-phone-outbound-create .so-field textarea[aria-invalid=true]{border-color:#a12f35;}
+.sc-phone.sc-phone-outbound-create .so-field-error{display:block;color:#963b37;font-size:12px;line-height:1.5;padding-top:5px;}
+.sc-phone.sc-phone-outbound-create .so-recipient-trigger{display:flex;align-items:center;gap:10px;width:100%;min-height:64px;padding:10px 11px;border:1px solid #cbdde6;border-radius:11px;background:#f7fafb;color:#193b49;text-align:left;margin:1px 0 14px;}
+.sc-phone.sc-phone-outbound-create .so-recipient-trigger>svg:first-child{width:22px;height:22px;flex:none;color:#0c6286;}
+.sc-phone.sc-phone-outbound-create .so-recipient-trigger>span{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0;}
+.sc-phone.sc-phone-outbound-create .so-recipient-trigger strong{font-size:14px;line-height:1.45;font-weight:650;overflow-wrap:anywhere;}
+.sc-phone.sc-phone-outbound-create .so-recipient-trigger small{font-size:11px!important;line-height:1.4;color:#607680;overflow-wrap:anywhere;}
+.sc-phone.sc-phone-outbound-create .so-recipient-trigger>svg:last-child{width:18px;height:18px;color:#0c6286;flex:none;}
+.sc-phone.sc-phone-outbound-create .so-recipient-fields{border-top:1px solid #e7eff3;padding-top:14px;}
+.sc-phone.sc-phone-outbound-create .so-supporting,.sc-phone.sc-phone-outbound-create .so-stock-note{font-size:12px;line-height:1.55;color:#526f7c;margin:4px 0 0;}
+.sc-phone.sc-phone-outbound-create .so-target-focus{display:flex;align-items:flex-end;gap:9px;margin:0 0 18px;padding:14px;border:1px solid #b9d6e3;border-radius:12px;background:#edf7fb;}
+.sc-phone.sc-phone-outbound-create .so-target-focus .so-field{flex:1;margin:0;}
+.sc-phone.sc-phone-outbound-create .so-target-focus .so-field>span{color:#0c6286;margin-bottom:8px;}
+.sc-phone.sc-phone-outbound-create .so-target-focus .so-field input{height:62px;min-height:62px;border-color:#7eb4c8;background:#fff;font-size:28px;font-weight:700;color:#073b52;padding:10px 14px;}
+.sc-phone.sc-phone-outbound-create .so-target-focus>strong{font-size:14px;color:#193b49;padding:0 4px 16px 0;}
+.sc-phone.sc-phone-outbound-create .so-recipient-summary{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-top:1px solid #e7eff3;border-bottom:1px solid #e7eff3;margin-bottom:16px;}
+.sc-phone.sc-phone-outbound-create .so-recipient-summary>svg{width:19px;height:19px;color:#0c6286;margin-top:2px;flex:none;}
+.sc-phone.sc-phone-outbound-create .so-recipient-summary span{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.sc-phone.sc-phone-outbound-create .so-recipient-summary strong{font-size:14px;color:#193b49;overflow-wrap:anywhere;}
+.sc-phone.sc-phone-outbound-create .so-recipient-summary small{font-size:11px!important;color:#607680;overflow-wrap:anywhere;}
+.sc-phone.sc-phone-outbound-create .so-back-step{display:block;width:100%;min-height:46px;margin:14px 0 0;border:1px solid #cbdde6;border-radius:10px;background:#fff;color:#0c6286;font-size:13px;font-weight:600;}
+.sc-phone.sc-phone-outbound-create .so-sticky-actions{padding:10px 18px 12px;background:#f7fafb;border-top:1px solid #dbe8ed;}
+.sc-phone.sc-phone-outbound-create .so-continue{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;margin:0;padding:10px 14px;border:1px solid #146984;border-radius:11px;background:linear-gradient(115deg,#045a7b,#065574);color:#fff;font-size:16px;font-weight:650;}
+.sc-phone.sc-phone-outbound-create .so-continue>svg:first-child{width:19px;height:19px;}
+.sc-phone.sc-phone-outbound-create .so-continue>svg:last-child{width:20px;height:20px;}
+.sc-phone.sc-phone-outbound-create .so-continue:disabled{opacity:.6;cursor:not-allowed;}
+.sc-phone.sc-phone-outbound-create .sc-recipient-sheet{width:calc(100% - 24px);max-width:430px;max-height:calc(100% - 24px);border-radius:22px 22px 0 0;background:#fff;padding:20px;}
+.sc-phone.sc-phone-outbound-create .sc-recipient-sheet h2{font-size:20px;line-height:1.35;color:#193b49;}
+.sc-phone.sc-phone-outbound-create .sc-recipient-sheet .sc-field{display:block;margin:14px 0;}
+.sc-phone.sc-phone-outbound-create .sc-recipient-sheet .sc-list-card{border:1px solid #dbe8ed;border-radius:11px;background:#fff;padding:12px;text-align:left;}
+.sc-phone.sc-phone-outbound-create .sc-recipient-sheet .sc-btn{min-height:48px;width:100%;margin-top:8px;}
+.sc-phone.sc-phone-outbound-create .sc-recipient-sheet :focus-visible{outline:3px solid #0c6286;outline-offset:2px;}
+.sc-phone.sc-phone-outbound-create button:focus-visible{outline:3px solid #0c6286;outline-offset:-3px;}
+.sc-phone.sc-phone-outbound-create .so-continue:focus-visible{outline-color:#fff;outline-offset:-4px;}
+@media(max-width:375px){.sc-phone.sc-phone-outbound-create>.sc-content{padding-inline:16px;}.sc-app-viewport .sc-phone.sc-phone-outbound-create .sc-header{padding-inline:16px;}.sc-phone.sc-phone-outbound-create .so-progress{padding-inline:9px;gap:3px;}.sc-phone.sc-phone-outbound-create .so-progress b{font-size:11px;gap:5px;}.sc-phone.sc-phone-outbound-create .so-progress b>span{width:22px;height:22px;}.sc-phone.sc-phone-outbound-create .so-surface{padding-inline:16px;}.sc-phone.sc-phone-outbound-create .so-target-focus{padding:11px;}.sc-phone.sc-phone-outbound-create .so-recipient-trigger{padding-inline:9px;}}
+@media(prefers-reduced-motion:reduce){.sc-phone.sc-phone-outbound-create *{animation:none!important;transition:none!important;}}

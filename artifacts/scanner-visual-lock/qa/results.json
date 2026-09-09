@@ -1,0 +1,1822 @@
+{
+  "protectedFiles": {
+    "lib/scanner-model.ts": true,
+    "lib/scanner-auth.ts": true,
+    "lib/scanner-auth-preview.ts": true,
+    "lib/scanner-policy.ts": true
+  },
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "errors": [],
+      "states": [
+        {
+          "name": "login",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 280,
+                "y": 469,
+                "right": 326,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 210.1875,
+                "y": 517,
+                "right": 328,
+                "bottom": 561,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 571,
+                "right": 328,
+                "bottom": 629,
+                "width": 296,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "validation",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 280,
+                "y": 482.59375,
+                "right": 326,
+                "bottom": 528.59375,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 210.1875,
+                "y": 550.59375,
+                "right": 328,
+                "bottom": 594.59375,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 604.59375,
+                "right": 328,
+                "bottom": 662.59375,
+                "width": 296,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "inline-error",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 280,
+                "y": 469,
+                "right": 326,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 210.1875,
+                "y": 517,
+                "right": 328,
+                "bottom": 561,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 571,
+                "right": 328,
+                "bottom": 629,
+                "width": 296,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "shift",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Bắt đầu ca làm việc",
+                "x": 32,
+                "y": 573,
+                "right": 328,
+                "bottom": 631,
+                "width": 296,
+                "height": 58
+              },
+              {
+                "name": "Đăng xuất",
+                "x": 32,
+                "y": 673,
+                "right": 328,
+                "bottom": 725,
+                "width": 296,
+                "height": 52
+              }
+            ]
+          }
+        },
+        {
+          "name": "home",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Mở cá nhân",
+                "x": 298,
+                "y": 40,
+                "right": 342,
+                "bottom": 84,
+                "width": 44,
+                "height": 44
+              },
+              {
+                "name": "1Phiếu chờ duyệt",
+                "x": 17,
+                "y": 201.984375,
+                "right": 125.65625,
+                "bottom": 268.578125,
+                "width": 108.65625,
+                "height": 66.59375
+              },
+              {
+                "name": "4Bảo hành đang mở",
+                "x": 125.65625,
+                "y": 201.984375,
+                "right": 234.328125,
+                "bottom": 268.578125,
+                "width": 108.671875,
+                "height": 66.59375
+              },
+              {
+                "name": "Nhập khoNhận hàng và kiểm đếm",
+                "x": 16,
+                "y": 326.375,
+                "right": 175,
+                "bottom": 403.875,
+                "width": 159,
+                "height": 77.5
+              },
+              {
+                "name": "Xuất khoSoạn hàng theo phiếu",
+                "x": 185,
+                "y": 326.375,
+                "right": 344,
+                "bottom": 403.875,
+                "width": 159,
+                "height": 77.5
+              },
+              {
+                "name": "Bảo hànhTiếp nhận và sửa chữa",
+                "x": 16,
+                "y": 413.875,
+                "right": 175,
+                "bottom": 483.875,
+                "width": 159,
+                "height": 70
+              },
+              {
+                "name": "Thẻ NFCLiên kết và tra cứu thẻ",
+                "x": 185,
+                "y": 413.875,
+                "right": 344,
+                "bottom": 483.875,
+                "width": 159,
+                "height": 70
+              },
+              {
+                "name": "Quét hoặc nhập mã sản phẩmQR · Serial · SKU",
+                "x": 16,
+                "y": 495.875,
+                "right": 344,
+                "bottom": 557.875,
+                "width": 328,
+                "height": 62
+              },
+              {
+                "name": "Xem tất cả",
+                "x": 271.0625,
+                "y": 567.875,
+                "right": 344,
+                "bottom": 611.875,
+                "width": 72.9375,
+                "height": 44
+              },
+              {
+                "name": "PN-0001Nhập kho · Lô máy đầu ca08:10 08/09/2026Chờ duyệt",
+                "x": 16,
+                "y": 615.875,
+                "right": 344,
+                "bottom": 691.375,
+                "width": 328,
+                "height": 75.5
+              },
+              {
+                "name": "Trang chủ",
+                "x": 4,
+                "y": 728,
+                "right": 74.390625,
+                "bottom": 792,
+                "width": 70.390625,
+                "height": 64
+              },
+              {
+                "name": "Chứng từ",
+                "x": 74.390625,
+                "y": 728,
+                "right": 144.796875,
+                "bottom": 792,
+                "width": 70.40625,
+                "height": 64
+              },
+              {
+                "name": "Mở tác vụ quét mã",
+                "x": 144.796875,
+                "y": 728,
+                "right": 215.1875,
+                "bottom": 792,
+                "width": 70.390625,
+                "height": 64
+              },
+              {
+                "name": "Lịch sử",
+                "x": 215.1875,
+                "y": 728,
+                "right": 285.59375,
+                "bottom": 792,
+                "width": 70.40625,
+                "height": 64
+              },
+              {
+                "name": "Cá nhân",
+                "x": 285.59375,
+                "y": 728,
+                "right": 356,
+                "bottom": 792,
+                "width": 70.40625,
+                "height": 64
+              }
+            ]
+          }
+        },
+        {
+          "name": "launcher",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 360,
+                "bottom": 708,
+                "width": 360,
+                "height": 708
+              },
+              {
+                "x": 0,
+                "y": 294.625,
+                "right": 360,
+                "bottom": 708,
+                "width": 360,
+                "height": 413.375
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 360,
+                "bottom": 708,
+                "width": 360,
+                "height": 708
+              },
+              {
+                "name": "Đóng chọn tác vụ quét",
+                "x": 307,
+                "y": 313.625,
+                "right": 351,
+                "bottom": 357.625,
+                "width": 44,
+                "height": 44
+              },
+              {
+                "name": "Nhập khoNhận hàng và kiểm đếm vào kho",
+                "x": 21,
+                "y": 391.625,
+                "right": 339,
+                "bottom": 456.625,
+                "width": 318,
+                "height": 65
+              },
+              {
+                "name": "Xuất khoSoạn hàng theo yêu cầu xuất",
+                "x": 21,
+                "y": 466.625,
+                "right": 339,
+                "bottom": 531.625,
+                "width": 318,
+                "height": 65
+              },
+              {
+                "name": "Bảo hànhQuét máy để tra cứu hoặc tiếp nhận bảo hành",
+                "x": 21,
+                "y": 541.625,
+                "right": 339,
+                "bottom": 612,
+                "width": 318,
+                "height": 70.375
+              },
+              {
+                "name": "Tra cứu sản phẩmXem tồn kho, lịch sử và bảo hành",
+                "x": 21,
+                "y": 622,
+                "right": 339,
+                "bottom": 687,
+                "width": 318,
+                "height": 65
+              }
+            ]
+          }
+        },
+        {
+          "name": "draft",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 360,
+                "bottom": 800,
+                "width": 360,
+                "height": 800
+              },
+              {
+                "x": 12,
+                "y": 286.515625,
+                "right": 348,
+                "bottom": 645.484375,
+                "width": 336,
+                "height": 358.96875
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 360,
+                "bottom": 800,
+                "width": 360,
+                "height": 800
+              },
+              {
+                "name": "Tiếp tục phiếu hiện tại",
+                "x": 31,
+                "y": 472.484375,
+                "right": 329,
+                "bottom": 518.484375,
+                "width": 298,
+                "height": 46
+              },
+              {
+                "name": "Bỏ phiếu và bắt đầu tác vụ mới",
+                "x": 31,
+                "y": 526.484375,
+                "right": 329,
+                "bottom": 572.484375,
+                "width": 298,
+                "height": 46
+              },
+              {
+                "name": "Hủy",
+                "x": 31,
+                "y": 580.484375,
+                "right": 329,
+                "bottom": 626.484375,
+                "width": 298,
+                "height": 46
+              }
+            ]
+          }
+        },
+        {
+          "name": "paused",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 360,
+                "bottom": 800,
+                "width": 360,
+                "height": 800
+              },
+              {
+                "x": 12,
+                "y": 272.515625,
+                "right": 348,
+                "bottom": 635.484375,
+                "width": 336,
+                "height": 362.96875
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 360,
+                "bottom": 800,
+                "width": 360,
+                "height": 800
+              },
+              {
+                "name": "Chỉ tra cứu",
+                "x": 31,
+                "y": 514.484375,
+                "right": 329,
+                "bottom": 560.484375,
+                "width": 298,
+                "height": 46
+              },
+              {
+                "name": "Đóng",
+                "x": 31,
+                "y": 570.484375,
+                "right": 329,
+                "bottom": 616.484375,
+                "width": 298,
+                "height": 46
+              }
+            ]
+          }
+        },
+        {
+          "name": "small-height",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 360,
+              "bottom": 420,
+              "width": 360,
+              "height": 420
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 280,
+                "y": 106,
+                "right": 326,
+                "bottom": 152,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 210.1875,
+                "y": 154,
+                "right": 328,
+                "bottom": 198,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 208,
+                "right": 328,
+                "bottom": 266,
+                "width": 296,
+                "height": 58
+              }
+            ]
+          }
+        }
+      ],
+      "checks": [
+        "logo-svg-decodes",
+        "draft-resume-discard",
+        "paused-readonly-lookup",
+        "small-height-scroll-not-real-ime"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "errors": [],
+      "states": [
+        {
+          "name": "login",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 310,
+                "y": 469,
+                "right": 356,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 240.1875,
+                "y": 517,
+                "right": 358,
+                "bottom": 561,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 571,
+                "right": 358,
+                "bottom": 629,
+                "width": 326,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "validation",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 310,
+                "y": 469,
+                "right": 356,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 240.1875,
+                "y": 537,
+                "right": 358,
+                "bottom": 581,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 591,
+                "right": 358,
+                "bottom": 649,
+                "width": 326,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "inline-error",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 310,
+                "y": 469,
+                "right": 356,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 240.1875,
+                "y": 517,
+                "right": 358,
+                "bottom": 561,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 571,
+                "right": 358,
+                "bottom": 629,
+                "width": 326,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "shift",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Bắt đầu ca làm việc",
+                "x": 32,
+                "y": 573.5,
+                "right": 358,
+                "bottom": 631.5,
+                "width": 326,
+                "height": 58
+              },
+              {
+                "name": "Đăng xuất",
+                "x": 32,
+                "y": 673.5,
+                "right": 358,
+                "bottom": 725.5,
+                "width": 326,
+                "height": 52
+              }
+            ]
+          }
+        },
+        {
+          "name": "home",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Mở cá nhân",
+                "x": 328,
+                "y": 40,
+                "right": 372,
+                "bottom": 84,
+                "width": 44,
+                "height": 44
+              },
+              {
+                "name": "1Phiếu chờ duyệt",
+                "x": 17,
+                "y": 201.984375,
+                "right": 135.65625,
+                "bottom": 268.578125,
+                "width": 118.65625,
+                "height": 66.59375
+              },
+              {
+                "name": "4Bảo hành đang mở",
+                "x": 135.65625,
+                "y": 201.984375,
+                "right": 254.328125,
+                "bottom": 268.578125,
+                "width": 118.671875,
+                "height": 66.59375
+              },
+              {
+                "name": "Nhập khoNhận hàng và kiểm đếm",
+                "x": 16,
+                "y": 326.375,
+                "right": 190,
+                "bottom": 406.375,
+                "width": 174,
+                "height": 80
+              },
+              {
+                "name": "Xuất khoSoạn hàng theo phiếu",
+                "x": 200,
+                "y": 326.375,
+                "right": 374,
+                "bottom": 406.375,
+                "width": 174,
+                "height": 80
+              },
+              {
+                "name": "Bảo hànhTiếp nhận và sửa chữa",
+                "x": 16,
+                "y": 416.375,
+                "right": 190,
+                "bottom": 486.375,
+                "width": 174,
+                "height": 70
+              },
+              {
+                "name": "Thẻ NFCLiên kết và tra cứu thẻ",
+                "x": 200,
+                "y": 416.375,
+                "right": 374,
+                "bottom": 486.375,
+                "width": 174,
+                "height": 70
+              },
+              {
+                "name": "Quét hoặc nhập mã sản phẩmQR · Serial · SKU",
+                "x": 16,
+                "y": 498.375,
+                "right": 374,
+                "bottom": 560.375,
+                "width": 358,
+                "height": 62
+              },
+              {
+                "name": "Xem tất cả",
+                "x": 301.0625,
+                "y": 570.375,
+                "right": 374,
+                "bottom": 614.375,
+                "width": 72.9375,
+                "height": 44
+              },
+              {
+                "name": "PN-0001Nhập kho · Lô máy đầu ca08:10 08/09/2026Chờ duyệt",
+                "x": 16,
+                "y": 618.375,
+                "right": 374,
+                "bottom": 693.875,
+                "width": 358,
+                "height": 75.5
+              },
+              {
+                "name": "Trang chủ",
+                "x": 4,
+                "y": 772,
+                "right": 80.390625,
+                "bottom": 836,
+                "width": 76.390625,
+                "height": 64
+              },
+              {
+                "name": "Chứng từ",
+                "x": 80.390625,
+                "y": 772,
+                "right": 156.796875,
+                "bottom": 836,
+                "width": 76.40625,
+                "height": 64
+              },
+              {
+                "name": "Mở tác vụ quét mã",
+                "x": 156.796875,
+                "y": 772,
+                "right": 233.1875,
+                "bottom": 836,
+                "width": 76.390625,
+                "height": 64
+              },
+              {
+                "name": "Lịch sử",
+                "x": 233.1875,
+                "y": 772,
+                "right": 309.59375,
+                "bottom": 836,
+                "width": 76.40625,
+                "height": 64
+              },
+              {
+                "name": "Cá nhân",
+                "x": 309.59375,
+                "y": 772,
+                "right": 386,
+                "bottom": 836,
+                "width": 76.40625,
+                "height": 64
+              }
+            ]
+          }
+        },
+        {
+          "name": "launcher",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 390,
+                "bottom": 752,
+                "width": 390,
+                "height": 752
+              },
+              {
+                "x": 0,
+                "y": 344,
+                "right": 390,
+                "bottom": 752,
+                "width": 390,
+                "height": 408
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 390,
+                "bottom": 752,
+                "width": 390,
+                "height": 752
+              },
+              {
+                "name": "Đóng chọn tác vụ quét",
+                "x": 337,
+                "y": 363,
+                "right": 381,
+                "bottom": 407,
+                "width": 44,
+                "height": 44
+              },
+              {
+                "name": "Nhập khoNhận hàng và kiểm đếm vào kho",
+                "x": 21,
+                "y": 441,
+                "right": 369,
+                "bottom": 506,
+                "width": 348,
+                "height": 65
+              },
+              {
+                "name": "Xuất khoSoạn hàng theo yêu cầu xuất",
+                "x": 21,
+                "y": 516,
+                "right": 369,
+                "bottom": 581,
+                "width": 348,
+                "height": 65
+              },
+              {
+                "name": "Bảo hànhQuét máy để tra cứu hoặc tiếp nhận bảo hành",
+                "x": 21,
+                "y": 591,
+                "right": 369,
+                "bottom": 656,
+                "width": 348,
+                "height": 65
+              },
+              {
+                "name": "Tra cứu sản phẩmXem tồn kho, lịch sử và bảo hành",
+                "x": 21,
+                "y": 666,
+                "right": 369,
+                "bottom": 731,
+                "width": 348,
+                "height": 65
+              }
+            ]
+          }
+        },
+        {
+          "name": "draft",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 390,
+                "bottom": 844,
+                "width": 390,
+                "height": 844
+              },
+              {
+                "x": 18,
+                "y": 312.46875,
+                "right": 372,
+                "bottom": 671.4375,
+                "width": 354,
+                "height": 358.96875
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 390,
+                "bottom": 844,
+                "width": 390,
+                "height": 844
+              },
+              {
+                "name": "Tiếp tục phiếu hiện tại",
+                "x": 37,
+                "y": 498.4375,
+                "right": 353,
+                "bottom": 544.4375,
+                "width": 316,
+                "height": 46
+              },
+              {
+                "name": "Bỏ phiếu và bắt đầu tác vụ mới",
+                "x": 37,
+                "y": 552.4375,
+                "right": 353,
+                "bottom": 598.4375,
+                "width": 316,
+                "height": 46
+              },
+              {
+                "name": "Hủy",
+                "x": 37,
+                "y": 606.4375,
+                "right": 353,
+                "bottom": 652.4375,
+                "width": 316,
+                "height": 46
+              }
+            ]
+          }
+        },
+        {
+          "name": "paused",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 390,
+                "bottom": 844,
+                "width": 390,
+                "height": 844
+              },
+              {
+                "x": 18,
+                "y": 295.515625,
+                "right": 372,
+                "bottom": 658.484375,
+                "width": 354,
+                "height": 362.96875
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 390,
+                "bottom": 844,
+                "width": 390,
+                "height": 844
+              },
+              {
+                "name": "Chỉ tra cứu",
+                "x": 37,
+                "y": 537.484375,
+                "right": 353,
+                "bottom": 583.484375,
+                "width": 316,
+                "height": 46
+              },
+              {
+                "name": "Đóng",
+                "x": 37,
+                "y": 593.484375,
+                "right": 353,
+                "bottom": 639.484375,
+                "width": 316,
+                "height": 46
+              }
+            ]
+          }
+        },
+        {
+          "name": "small-height",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 310,
+                "y": 66,
+                "right": 356,
+                "bottom": 112,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 240.1875,
+                "y": 114,
+                "right": 358,
+                "bottom": 158,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 168,
+                "right": 358,
+                "bottom": 226,
+                "width": 326,
+                "height": 58
+              }
+            ]
+          }
+        }
+      ],
+      "checks": [
+        "logo-svg-decodes",
+        "draft-resume-discard",
+        "paused-readonly-lookup",
+        "small-height-scroll-not-real-ime"
+      ]
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "errors": [],
+      "states": [
+        {
+          "name": "login",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 350,
+                "y": 469,
+                "right": 396,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 280.1875,
+                "y": 517,
+                "right": 398,
+                "bottom": 561,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 571,
+                "right": 398,
+                "bottom": 629,
+                "width": 366,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "validation",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 350,
+                "y": 469,
+                "right": 396,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 280.1875,
+                "y": 537,
+                "right": 398,
+                "bottom": 581,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 591,
+                "right": 398,
+                "bottom": 649,
+                "width": 366,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "inline-error",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 350,
+                "y": 469,
+                "right": 396,
+                "bottom": 515,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 280.1875,
+                "y": 517,
+                "right": 398,
+                "bottom": 561,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 571,
+                "right": 398,
+                "bottom": 629,
+                "width": 366,
+                "height": 58
+              }
+            ]
+          }
+        },
+        {
+          "name": "shift",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Bắt đầu ca làm việc",
+                "x": 32,
+                "y": 573.5,
+                "right": 398,
+                "bottom": 631.5,
+                "width": 366,
+                "height": 58
+              },
+              {
+                "name": "Đăng xuất",
+                "x": 32,
+                "y": 673.5,
+                "right": 398,
+                "bottom": 725.5,
+                "width": 366,
+                "height": 52
+              }
+            ]
+          }
+        },
+        {
+          "name": "home",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Mở cá nhân",
+                "x": 368,
+                "y": 40,
+                "right": 412,
+                "bottom": 84,
+                "width": 44,
+                "height": 44
+              },
+              {
+                "name": "1Phiếu chờ duyệt",
+                "x": 17,
+                "y": 201.984375,
+                "right": 149,
+                "bottom": 268.578125,
+                "width": 132,
+                "height": 66.59375
+              },
+              {
+                "name": "4Bảo hành đang mở",
+                "x": 149,
+                "y": 201.984375,
+                "right": 281,
+                "bottom": 268.578125,
+                "width": 132,
+                "height": 66.59375
+              },
+              {
+                "name": "Nhập khoNhận hàng và kiểm đếm",
+                "x": 16,
+                "y": 326.375,
+                "right": 210,
+                "bottom": 396.375,
+                "width": 194,
+                "height": 70
+              },
+              {
+                "name": "Xuất khoSoạn hàng theo phiếu",
+                "x": 220,
+                "y": 326.375,
+                "right": 414,
+                "bottom": 396.375,
+                "width": 194,
+                "height": 70
+              },
+              {
+                "name": "Bảo hànhTiếp nhận và sửa chữa",
+                "x": 16,
+                "y": 406.375,
+                "right": 210,
+                "bottom": 476.375,
+                "width": 194,
+                "height": 70
+              },
+              {
+                "name": "Thẻ NFCLiên kết và tra cứu thẻ",
+                "x": 220,
+                "y": 406.375,
+                "right": 414,
+                "bottom": 476.375,
+                "width": 194,
+                "height": 70
+              },
+              {
+                "name": "Quét hoặc nhập mã sản phẩmQR · Serial · SKU",
+                "x": 16,
+                "y": 488.375,
+                "right": 414,
+                "bottom": 550.375,
+                "width": 398,
+                "height": 62
+              },
+              {
+                "name": "Xem tất cả",
+                "x": 341.0625,
+                "y": 560.375,
+                "right": 414,
+                "bottom": 604.375,
+                "width": 72.9375,
+                "height": 44
+              },
+              {
+                "name": "PN-0001Nhập kho · Lô máy đầu ca08:10 08/09/2026Chờ duyệt",
+                "x": 16,
+                "y": 608.375,
+                "right": 414,
+                "bottom": 683.875,
+                "width": 398,
+                "height": 75.5
+              },
+              {
+                "name": "Trang chủ",
+                "x": 4,
+                "y": 860,
+                "right": 88.390625,
+                "bottom": 924,
+                "width": 84.390625,
+                "height": 64
+              },
+              {
+                "name": "Chứng từ",
+                "x": 88.390625,
+                "y": 860,
+                "right": 172.796875,
+                "bottom": 924,
+                "width": 84.40625,
+                "height": 64
+              },
+              {
+                "name": "Mở tác vụ quét mã",
+                "x": 172.796875,
+                "y": 860,
+                "right": 257.1875,
+                "bottom": 924,
+                "width": 84.390625,
+                "height": 64
+              },
+              {
+                "name": "Lịch sử",
+                "x": 257.1875,
+                "y": 860,
+                "right": 341.59375,
+                "bottom": 924,
+                "width": 84.40625,
+                "height": 64
+              },
+              {
+                "name": "Cá nhân",
+                "x": 341.59375,
+                "y": 860,
+                "right": 426,
+                "bottom": 924,
+                "width": 84.40625,
+                "height": 64
+              }
+            ]
+          }
+        },
+        {
+          "name": "launcher",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 430,
+                "bottom": 840,
+                "width": 430,
+                "height": 840
+              },
+              {
+                "x": 0,
+                "y": 432,
+                "right": 430,
+                "bottom": 840,
+                "width": 430,
+                "height": 408
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 430,
+                "bottom": 840,
+                "width": 430,
+                "height": 840
+              },
+              {
+                "name": "Đóng chọn tác vụ quét",
+                "x": 377,
+                "y": 451,
+                "right": 421,
+                "bottom": 495,
+                "width": 44,
+                "height": 44
+              },
+              {
+                "name": "Nhập khoNhận hàng và kiểm đếm vào kho",
+                "x": 21,
+                "y": 529,
+                "right": 409,
+                "bottom": 594,
+                "width": 388,
+                "height": 65
+              },
+              {
+                "name": "Xuất khoSoạn hàng theo yêu cầu xuất",
+                "x": 21,
+                "y": 604,
+                "right": 409,
+                "bottom": 669,
+                "width": 388,
+                "height": 65
+              },
+              {
+                "name": "Bảo hànhQuét máy để tra cứu hoặc tiếp nhận bảo hành",
+                "x": 21,
+                "y": 679,
+                "right": 409,
+                "bottom": 744,
+                "width": 388,
+                "height": 65
+              },
+              {
+                "name": "Tra cứu sản phẩmXem tồn kho, lịch sử và bảo hành",
+                "x": 21,
+                "y": 754,
+                "right": 409,
+                "bottom": 819,
+                "width": 388,
+                "height": 65
+              }
+            ]
+          }
+        },
+        {
+          "name": "draft",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 430,
+                "bottom": 932,
+                "width": 430,
+                "height": 932
+              },
+              {
+                "x": 38,
+                "y": 356.515625,
+                "right": 392,
+                "bottom": 715.484375,
+                "width": 354,
+                "height": 358.96875
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 430,
+                "bottom": 932,
+                "width": 430,
+                "height": 932
+              },
+              {
+                "name": "Tiếp tục phiếu hiện tại",
+                "x": 57,
+                "y": 542.484375,
+                "right": 373,
+                "bottom": 588.484375,
+                "width": 316,
+                "height": 46
+              },
+              {
+                "name": "Bỏ phiếu và bắt đầu tác vụ mới",
+                "x": 57,
+                "y": 596.484375,
+                "right": 373,
+                "bottom": 642.484375,
+                "width": 316,
+                "height": 46
+              },
+              {
+                "name": "Hủy",
+                "x": 57,
+                "y": 650.484375,
+                "right": 373,
+                "bottom": 696.484375,
+                "width": 316,
+                "height": 46
+              }
+            ]
+          }
+        },
+        {
+          "name": "paused",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "bodyOverflow": false,
+            "dialogs": [
+              {
+                "x": 0,
+                "y": 0,
+                "right": 430,
+                "bottom": 932,
+                "width": 430,
+                "height": 932
+              },
+              {
+                "x": 38,
+                "y": 339.515625,
+                "right": 392,
+                "bottom": 702.484375,
+                "width": 354,
+                "height": 362.96875
+              }
+            ],
+            "buttons": [
+              {
+                "name": "",
+                "x": 0,
+                "y": 0,
+                "right": 430,
+                "bottom": 932,
+                "width": 430,
+                "height": 932
+              },
+              {
+                "name": "Chỉ tra cứu",
+                "x": 57,
+                "y": 581.484375,
+                "right": 373,
+                "bottom": 627.484375,
+                "width": 316,
+                "height": 46
+              },
+              {
+                "name": "Đóng",
+                "x": 57,
+                "y": 637.484375,
+                "right": 373,
+                "bottom": 683.484375,
+                "width": 316,
+                "height": 46
+              }
+            ]
+          }
+        },
+        {
+          "name": "small-height",
+          "axe": [],
+          "geometry": {
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "right": 430,
+              "bottom": 420,
+              "width": 430,
+              "height": 420
+            },
+            "bodyOverflow": false,
+            "dialogs": [],
+            "buttons": [
+              {
+                "name": "Hiện mật khẩu",
+                "x": 350,
+                "y": 106,
+                "right": 396,
+                "bottom": 152,
+                "width": 46,
+                "height": 46
+              },
+              {
+                "name": "Quên mật khẩu?",
+                "x": 280.1875,
+                "y": 154,
+                "right": 398,
+                "bottom": 198,
+                "width": 117.8125,
+                "height": 44
+              },
+              {
+                "name": "Đăng nhập",
+                "x": 32,
+                "y": 208,
+                "right": 398,
+                "bottom": 266,
+                "width": 366,
+                "height": 58
+              }
+            ]
+          }
+        }
+      ],
+      "checks": [
+        "logo-svg-decodes",
+        "draft-resume-discard",
+        "paused-readonly-lookup",
+        "small-height-scroll-not-real-ime"
+      ]
+    }
+  ]
+}

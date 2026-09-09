@@ -1,0 +1,2378 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "overlays": [
+      {
+        "name": "launcher",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 276,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 524
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "discard-draft",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 404.3125,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 395.6875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "camera",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 383.609375,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 416.390625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "manual",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 412,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 388
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "warehouse",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-warehouse-modal",
+            "rect": {
+              "left": 12,
+              "top": 202.453125,
+              "right": 348,
+              "bottom": 597.546875,
+              "width": 336,
+              "height": 395.09375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "nfc-confirm",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 280.609375,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 519.390625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "warranty-confirm",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 392.8125,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 407.1875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "logout",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 420.90625,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 379.09375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "avatar",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sa-sheet",
+            "rect": {
+              "left": 0,
+              "top": 507.78125,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 292.21875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "password-dirty",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 800,
+          "width": 360,
+          "height": 800
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 800,
+              "width": 360,
+              "height": 800
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog ",
+            "rect": {
+              "left": 12,
+              "top": 265.46875,
+              "right": 348,
+              "bottom": 534.53125,
+              "width": 336,
+              "height": 269.0625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "short-safe-area",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 420,
+          "width": 390,
+          "height": 420
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 20,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 400
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      }
+    ],
+    "errors": [],
+    "checks": [
+      "back-close-focus-restore",
+      "custom-dirty-confirm-retain-discard"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overlays": [
+      {
+        "name": "launcher",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 320,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 524
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "discard-draft",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 448.3125,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 395.6875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "camera",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 451.40625,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 392.59375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "manual",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 456,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 388
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "warehouse",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-warehouse-modal",
+            "rect": {
+              "left": 12,
+              "top": 235.296875,
+              "right": 378,
+              "bottom": 608.703125,
+              "width": 366,
+              "height": 373.40625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "nfc-confirm",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 324.609375,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 519.390625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "warranty-confirm",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 457.40625,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 386.59375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "logout",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 485.5,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 358.5
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "avatar",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sa-sheet",
+            "rect": {
+              "left": 0,
+              "top": 573.46875,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 270.53125
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "password-dirty",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog ",
+            "rect": {
+              "left": 12,
+              "top": 293.8125,
+              "right": 378,
+              "bottom": 550.1875,
+              "width": 366,
+              "height": 256.375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "short-safe-area",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 420,
+          "width": 390,
+          "height": 420
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 20,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 400
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      }
+    ],
+    "errors": [],
+    "checks": [
+      "back-close-focus-restore",
+      "custom-dirty-confirm-retain-discard"
+    ]
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "overlays": [
+      {
+        "name": "launcher",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 421,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 511
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "discard-draft",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 536.3125,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 395.6875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "camera",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 539.40625,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 392.59375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "manual",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 544,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 388
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "warehouse",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-warehouse-modal",
+            "rect": {
+              "left": 12,
+              "top": 279.296875,
+              "right": 418,
+              "bottom": 652.703125,
+              "width": 406,
+              "height": 373.40625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "nfc-confirm",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 412.609375,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 519.390625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "warranty-confirm",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 545.40625,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 386.59375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "logout",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 0,
+              "top": 596,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 336
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "avatar",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sa-sheet",
+            "rect": {
+              "left": 0,
+              "top": 661.46875,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 270.53125
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "password-dirty",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 430,
+          "bottom": 932,
+          "width": 430,
+          "height": 932
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 430,
+              "bottom": 932,
+              "width": 430,
+              "height": 932
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog ",
+            "rect": {
+              "left": 12,
+              "top": 348.65625,
+              "right": 418,
+              "bottom": 583.34375,
+              "width": 406,
+              "height": 234.6875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      },
+      {
+        "name": "short-safe-area",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 420,
+          "width": 390,
+          "height": 420
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 20,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 400
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      }
+    ],
+    "errors": [],
+    "checks": [
+      "back-close-focus-restore",
+      "custom-dirty-confirm-retain-discard"
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "overlays": [
+      {
+        "name": "launcher",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 525,
+              "top": 398,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 524
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "discard-draft",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 525,
+              "top": 526.3125,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 395.6875
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "camera",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 525,
+              "top": 529.40625,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 392.59375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "manual",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 525,
+              "top": 534,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 388
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "warehouse",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-warehouse-modal",
+            "rect": {
+              "left": 537,
+              "top": 313.296875,
+              "right": 903,
+              "bottom": 686.703125,
+              "width": 366,
+              "height": 373.40625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "nfc-confirm",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 525,
+              "top": 402.609375,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 519.390625
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "warranty-confirm",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 525,
+              "top": 535.40625,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 386.59375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "logout",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sc-dialog",
+            "rect": {
+              "left": 525,
+              "top": 563.5,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 358.5
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "avatar",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sa-sheet",
+            "rect": {
+              "left": 525,
+              "top": 651.46875,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 270.53125
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "password-dirty",
+        "viewport": {
+          "left": 525,
+          "top": 78,
+          "right": 915,
+          "bottom": 922,
+          "width": 390,
+          "height": 844
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer ",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 525,
+              "top": 78,
+              "right": 915,
+              "bottom": 922,
+              "width": 390,
+              "height": 844
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog ",
+            "rect": {
+              "left": 537,
+              "top": 371.8125,
+              "right": 903,
+              "bottom": 628.1875,
+              "width": 366,
+              "height": 256.375
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-shell"
+      },
+      {
+        "name": "short-safe-area",
+        "viewport": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 420,
+          "width": 390,
+          "height": 420
+        },
+        "layers": [
+          {
+            "class": "sc-overlay-layer is-sheet",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-backdrop",
+            "rect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 420
+            },
+            "inRoot": true
+          },
+          {
+            "class": "sc-app-dialog sg-sheet",
+            "rect": {
+              "left": 0,
+              "top": 20,
+              "right": 390,
+              "bottom": 420,
+              "width": 390,
+              "height": 400
+            },
+            "inRoot": true
+          }
+        ],
+        "bodyScroll": 0,
+        "native": 0,
+        "backgroundInert": true,
+        "outside": "sc-app-backdrop"
+      }
+    ],
+    "errors": [],
+    "checks": [
+      "back-close-focus-restore",
+      "custom-dirty-confirm-retain-discard"
+    ]
+  }
+]

@@ -1,0 +1,2607 @@
+[
+  {
+    "width": 360,
+    "height": 800,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 10.71875,
+            "y": 0,
+            "width": 339.375,
+            "height": 281.546875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 20.626434326171875,
+            "y": 53.65625,
+            "width": 308,
+            "height": 48.703125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 26.40625,
+            "y": 172.53125,
+            "width": 218.796875,
+            "height": 59.5,
+            "fontSize": "28.0734px"
+          },
+          ".sc-entry-card": {
+            "x": 10.71875,
+            "y": 281.546875,
+            "width": 339.375,
+            "height": 401.046875,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 27.40625,
+            "y": 329.59375,
+            "width": 306,
+            "height": 48,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 27.40625,
+            "y": 419.6875,
+            "width": 306,
+            "height": 48,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 27.40625,
+            "y": 523.234375,
+            "width": 306,
+            "height": 56,
+            "fontSize": "16.5138px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 27.40625,
+            "y": 599.046875,
+            "width": 306,
+            "height": 64.390625,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 10.71875,
+            "y": 714.953125,
+            "width": 339.375,
+            "height": 52.03125,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "validation",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 10.71875,
+            "y": 0,
+            "width": 339.375,
+            "height": 281.546875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 20.626434326171875,
+            "y": 53.65625,
+            "width": 308,
+            "height": 48.703125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 26.40625,
+            "y": 172.53125,
+            "width": 218.796875,
+            "height": 59.5,
+            "fontSize": "28.0734px"
+          },
+          ".sc-entry-card": {
+            "x": 10.71875,
+            "y": 281.546875,
+            "width": 339.375,
+            "height": 451.140625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 27.40625,
+            "y": 329.59375,
+            "width": 306,
+            "height": 48,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 27.40625,
+            "y": 444.78125,
+            "width": 306,
+            "height": 48,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 27.40625,
+            "y": 573.328125,
+            "width": 306,
+            "height": 56,
+            "fontSize": "16.5138px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 27.40625,
+            "y": 649.140625,
+            "width": 306,
+            "height": 64.390625,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 10.71875,
+            "y": 732.6875,
+            "width": 339.375,
+            "height": 52.03125,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "error",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 10.71875,
+            "y": 0,
+            "width": 339.375,
+            "height": 281.546875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 20.626434326171875,
+            "y": 53.65625,
+            "width": 308,
+            "height": 48.703125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 26.40625,
+            "y": 172.53125,
+            "width": 218.796875,
+            "height": 59.5,
+            "fontSize": "28.0734px"
+          },
+          ".sc-entry-card": {
+            "x": 10.71875,
+            "y": 281.546875,
+            "width": 339.375,
+            "height": 404.65625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 27.40625,
+            "y": 329.59375,
+            "width": 306,
+            "height": 48,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 27.40625,
+            "y": 419.6875,
+            "width": 306,
+            "height": 48,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 27.40625,
+            "y": 523.234375,
+            "width": 306,
+            "height": 56,
+            "fontSize": "16.5138px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 10.71875,
+            "y": 714.953125,
+            "width": 339.375,
+            "height": 52.03125,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "forgot",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 207.578125,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24,
+            "y": 24,
+            "width": 312,
+            "height": 37.78125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 24,
+            "y": 112.28125,
+            "width": 312,
+            "height": 32.5,
+            "fontSize": "26px"
+          },
+          ".sc-entry-card": {
+            "x": 16,
+            "y": 191.578125,
+            "width": 328,
+            "height": 305.78125,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 37,
+            "y": 428.359375,
+            "width": 286,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 16,
+            "y": 717,
+            "width": 328,
+            "height": 63,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "shift",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 10.71875,
+            "y": 0,
+            "width": 339.375,
+            "height": 273.296875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 20.626434326171875,
+            "y": 53.65625,
+            "width": 308,
+            "height": 48.703125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 26.40625,
+            "y": 170.546875,
+            "width": 218.796875,
+            "height": 35.125,
+            "fontSize": "30.5505px"
+          },
+          ".sc-entry-card": {
+            "x": 10.71875,
+            "y": 273.296875,
+            "width": 342.671875,
+            "height": 400.1875,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 27.40625,
+            "y": 292.453125,
+            "width": 309.296875,
+            "height": 72.828125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 27.40625,
+            "y": 292.453125,
+            "width": 56.96875,
+            "height": 56.96875,
+            "fontSize": "20.6422px"
+          },
+          ".sc-entry-details": {
+            "x": 27.40625,
+            "y": 378.484375,
+            "width": 309.296875,
+            "height": 41.28125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": {
+            "x": 27.40625,
+            "y": 432.96875,
+            "width": 309.296875,
+            "height": 61.921875,
+            "fontSize": "12.3853px"
+          },
+          ".sc-entry-primary": {
+            "x": 27.40625,
+            "y": 511.390625,
+            "width": 309.296875,
+            "height": 57.796875,
+            "fontSize": "16.5138px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 27.40625,
+            "y": 608.796875,
+            "width": 309.296875,
+            "height": 48,
+            "fontSize": "14.8624px"
+          },
+          ".sc-entry-footer": {
+            "x": 10.71875,
+            "y": 714.953125,
+            "width": 339.375,
+            "height": 52.03125,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "home",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": null,
+          ".sc-auth-brand": null,
+          ".sc-entry-heading h1": null,
+          ".sc-entry-card": null,
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": null,
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": null
+        },
+        "axe": []
+      },
+      {
+        "name": "shift-paused",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 800,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 10.71875,
+            "y": 0,
+            "width": 339.375,
+            "height": 273.296875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 20.626434326171875,
+            "y": 53.65625,
+            "width": 308,
+            "height": 48.703125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 26.40625,
+            "y": 170.546875,
+            "width": 218.796875,
+            "height": 35.125,
+            "fontSize": "30.5505px"
+          },
+          ".sc-entry-card": {
+            "x": 10.71875,
+            "y": 273.296875,
+            "width": 342.671875,
+            "height": 457.828125,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 27.40625,
+            "y": 292.453125,
+            "width": 309.296875,
+            "height": 72.828125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 27.40625,
+            "y": 292.453125,
+            "width": 56.96875,
+            "height": 56.96875,
+            "fontSize": "20.6422px"
+          },
+          ".sc-entry-details": {
+            "x": 27.40625,
+            "y": 378.484375,
+            "width": 309.296875,
+            "height": 41.28125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 27.40625,
+            "y": 569.03125,
+            "width": 309.296875,
+            "height": 57.796875,
+            "fontSize": "16.5138px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 27.40625,
+            "y": 666.4375,
+            "width": 309.296875,
+            "height": 48,
+            "fontSize": "14.8624px"
+          },
+          ".sc-entry-footer": {
+            "x": 10.71875,
+            "y": 731.125,
+            "width": 339.375,
+            "height": 52.03125,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      }
+    ],
+    "checks": [
+      "labels-validation-eye-next-enter-inline-error-loading",
+      "shared-slogan-real-session-data-shift-reload-home",
+      "logout-route-guard-launcher-regression",
+      "short-height-safe-area-reduced-motion-paused-readonly"
+    ],
+    "result": "PASS"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 11.625,
+            "y": 0,
+            "width": 367.65625,
+            "height": 305.015625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 22.34790802001953,
+            "y": 58.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 28.609375,
+            "y": 186.9375,
+            "width": 237.03125,
+            "height": 64.4375,
+            "fontSize": "30.4128px"
+          },
+          ".sc-entry-card": {
+            "x": 11.625,
+            "y": 305.015625,
+            "width": 367.65625,
+            "height": 425.15625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 29.609375,
+            "y": 356.984375,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 29.609375,
+            "y": 452.65625,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 29.609375,
+            "y": 559.25,
+            "width": 331.6875,
+            "height": 59.03125,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 29.609375,
+            "y": 639.734375,
+            "width": 331.6875,
+            "height": 69.765625,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 11.625,
+            "y": 751.875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "validation",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 11.625,
+            "y": 0,
+            "width": 367.65625,
+            "height": 305.015625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 22.34790802001953,
+            "y": 58.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 28.609375,
+            "y": 186.9375,
+            "width": 237.03125,
+            "height": 64.4375,
+            "fontSize": "30.4128px"
+          },
+          ".sc-entry-card": {
+            "x": 11.625,
+            "y": 305.015625,
+            "width": 367.65625,
+            "height": 457.28125,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 29.609375,
+            "y": 356.984375,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 29.609375,
+            "y": 459.78125,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 29.609375,
+            "y": 591.375,
+            "width": 331.6875,
+            "height": 59.03125,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 29.609375,
+            "y": 671.859375,
+            "width": 331.6875,
+            "height": 69.765625,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 11.625,
+            "y": 762.296875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "error",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 11.625,
+            "y": 0,
+            "width": 367.65625,
+            "height": 305.015625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 22.34790802001953,
+            "y": 58.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 28.609375,
+            "y": 186.9375,
+            "width": 237.03125,
+            "height": 64.4375,
+            "fontSize": "30.4128px"
+          },
+          ".sc-entry-card": {
+            "x": 11.625,
+            "y": 305.015625,
+            "width": 367.65625,
+            "height": 425.15625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 29.609375,
+            "y": 356.984375,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 29.609375,
+            "y": 452.65625,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 29.609375,
+            "y": 559.25,
+            "width": 331.6875,
+            "height": 59.03125,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 11.625,
+            "y": 751.875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "forgot",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 207.578125,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24,
+            "y": 24,
+            "width": 342,
+            "height": 37.78125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 24,
+            "y": 112.28125,
+            "width": 340,
+            "height": 32.5,
+            "fontSize": "26px"
+          },
+          ".sc-entry-card": {
+            "x": 16,
+            "y": 191.578125,
+            "width": 358,
+            "height": 281.984375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 37,
+            "y": 404.5625,
+            "width": 316,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 16,
+            "y": 761,
+            "width": 358,
+            "height": 63,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "shift",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 11.625,
+            "y": 0,
+            "width": 367.65625,
+            "height": 296.0625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 22.34790802001953,
+            "y": 58.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 28.609375,
+            "y": 184.765625,
+            "width": 237.03125,
+            "height": 38.046875,
+            "fontSize": "33.0963px"
+          },
+          ".sc-entry-card": {
+            "x": 11.625,
+            "y": 296.0625,
+            "width": 371.21875,
+            "height": 433.140625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 29.609375,
+            "y": 316.734375,
+            "width": 335.25,
+            "height": 78.8125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 29.609375,
+            "y": 316.734375,
+            "width": 61.71875,
+            "height": 61.71875,
+            "fontSize": "22.3624px"
+          },
+          ".sc-entry-details": {
+            "x": 29.609375,
+            "y": 409.84375,
+            "width": 335.25,
+            "height": 44.71875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": {
+            "x": 29.609375,
+            "y": 468.859375,
+            "width": 335.25,
+            "height": 67.078125,
+            "fontSize": "13.4174px"
+          },
+          ".sc-entry-primary": {
+            "x": 29.609375,
+            "y": 553.8125,
+            "width": 335.25,
+            "height": 62.609375,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 29.609375,
+            "y": 659.34375,
+            "width": 335.25,
+            "height": 51.875,
+            "fontSize": "16.1009px"
+          },
+          ".sc-entry-footer": {
+            "x": 11.625,
+            "y": 751.875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "home",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": null,
+          ".sc-auth-brand": null,
+          ".sc-entry-heading h1": null,
+          ".sc-entry-card": null,
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": null,
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": null
+        },
+        "axe": []
+      },
+      {
+        "name": "shift-paused",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 11.625,
+            "y": 0,
+            "width": 367.65625,
+            "height": 296.0625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 22.34790802001953,
+            "y": 58.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 28.609375,
+            "y": 184.765625,
+            "width": 237.03125,
+            "height": 38.046875,
+            "fontSize": "33.0963px"
+          },
+          ".sc-entry-card": {
+            "x": 11.625,
+            "y": 296.0625,
+            "width": 371.21875,
+            "height": 463.234375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 29.609375,
+            "y": 316.734375,
+            "width": 335.25,
+            "height": 78.8125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 29.609375,
+            "y": 316.734375,
+            "width": 61.71875,
+            "height": 61.71875,
+            "fontSize": "22.3624px"
+          },
+          ".sc-entry-details": {
+            "x": 29.609375,
+            "y": 409.84375,
+            "width": 335.25,
+            "height": 44.71875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 29.609375,
+            "y": 583.90625,
+            "width": 335.25,
+            "height": 62.609375,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 29.609375,
+            "y": 689.4375,
+            "width": 335.25,
+            "height": 51.875,
+            "fontSize": "16.1009px"
+          },
+          ".sc-entry-footer": {
+            "x": 11.625,
+            "y": 759.296875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      }
+    ],
+    "checks": [
+      "labels-validation-eye-next-enter-inline-error-loading",
+      "shared-slogan-real-session-data-shift-reload-home",
+      "logout-route-guard-launcher-regression",
+      "short-height-safe-area-reduced-motion-paused-readonly"
+    ],
+    "result": "PASS"
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 12.8125,
+            "y": 0,
+            "width": 405.359375,
+            "height": 336.296875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24.643205642700195,
+            "y": 64.09375,
+            "width": 367.890625,
+            "height": 58.1875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 31.546875,
+            "y": 206.109375,
+            "width": 261.34375,
+            "height": 71.0625,
+            "fontSize": "33.5321px"
+          },
+          ".sc-entry-card": {
+            "x": 12.8125,
+            "y": 336.296875,
+            "width": 405.359375,
+            "height": 464.09375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 32.546875,
+            "y": 393.515625,
+            "width": 365.890625,
+            "height": 55.21875,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 32.546875,
+            "y": 499.03125,
+            "width": 365.890625,
+            "height": 55.21875,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 32.546875,
+            "y": 612.046875,
+            "width": 365.890625,
+            "height": 65.078125,
+            "fontSize": "19.7248px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 32.546875,
+            "y": 700.78125,
+            "width": 365.890625,
+            "height": 76.921875,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 12.8125,
+            "y": 830.40625,
+            "width": 405.359375,
+            "height": 62.15625,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "validation",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 12.8125,
+            "y": 0,
+            "width": 405.359375,
+            "height": 336.296875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24.643205642700195,
+            "y": 64.09375,
+            "width": 367.890625,
+            "height": 58.1875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 31.546875,
+            "y": 206.109375,
+            "width": 261.34375,
+            "height": 71.0625,
+            "fontSize": "33.5321px"
+          },
+          ".sc-entry-card": {
+            "x": 12.8125,
+            "y": 336.296875,
+            "width": 405.359375,
+            "height": 494.375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 32.546875,
+            "y": 393.515625,
+            "width": 365.890625,
+            "height": 55.21875,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 32.546875,
+            "y": 504.3125,
+            "width": 365.890625,
+            "height": 55.21875,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 32.546875,
+            "y": 642.328125,
+            "width": 365.890625,
+            "height": 65.078125,
+            "fontSize": "19.7248px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 32.546875,
+            "y": 731.0625,
+            "width": 365.890625,
+            "height": 76.921875,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 12.8125,
+            "y": 830.671875,
+            "width": 405.359375,
+            "height": 62.15625,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "error",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 12.8125,
+            "y": 0,
+            "width": 405.359375,
+            "height": 336.296875,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24.643205642700195,
+            "y": 64.09375,
+            "width": 367.890625,
+            "height": 58.1875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 31.546875,
+            "y": 206.109375,
+            "width": 261.34375,
+            "height": 71.0625,
+            "fontSize": "33.5321px"
+          },
+          ".sc-entry-card": {
+            "x": 12.8125,
+            "y": 336.296875,
+            "width": 405.359375,
+            "height": 464.09375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 32.546875,
+            "y": 393.515625,
+            "width": 365.890625,
+            "height": 55.21875,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 32.546875,
+            "y": 499.03125,
+            "width": 365.890625,
+            "height": 55.21875,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 32.546875,
+            "y": 612.046875,
+            "width": 365.890625,
+            "height": 65.078125,
+            "fontSize": "19.7248px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 12.8125,
+            "y": 830.40625,
+            "width": 405.359375,
+            "height": 62.15625,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "forgot",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 207.578125,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24,
+            "y": 24,
+            "width": 382,
+            "height": 37.78125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 24,
+            "y": 112.28125,
+            "width": 340,
+            "height": 32.5,
+            "fontSize": "26px"
+          },
+          ".sc-entry-card": {
+            "x": 16,
+            "y": 191.578125,
+            "width": 398,
+            "height": 281.984375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 37,
+            "y": 404.5625,
+            "width": 356,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 16,
+            "y": 849,
+            "width": 398,
+            "height": 63,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "shift",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 12.8125,
+            "y": 0,
+            "width": 405.359375,
+            "height": 326.4375,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24.643205642700195,
+            "y": 64.09375,
+            "width": 367.890625,
+            "height": 58.1875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 31.546875,
+            "y": 203.734375,
+            "width": 261.34375,
+            "height": 41.953125,
+            "fontSize": "36.4908px"
+          },
+          ".sc-entry-card": {
+            "x": 12.8125,
+            "y": 326.4375,
+            "width": 409.296875,
+            "height": 477.25,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 32.546875,
+            "y": 349.125,
+            "width": 369.828125,
+            "height": 86.796875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 32.546875,
+            "y": 349.125,
+            "width": 68.046875,
+            "height": 68.046875,
+            "fontSize": "24.656px"
+          },
+          ".sc-entry-details": {
+            "x": 32.546875,
+            "y": 451.6875,
+            "width": 369.828125,
+            "height": 49.296875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": {
+            "x": 32.546875,
+            "y": 516.75,
+            "width": 369.828125,
+            "height": 73.953125,
+            "fontSize": "14.7936px"
+          },
+          ".sc-entry-primary": {
+            "x": 32.546875,
+            "y": 610.421875,
+            "width": 369.828125,
+            "height": 69.03125,
+            "fontSize": "19.7248px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 32.546875,
+            "y": 726.765625,
+            "width": 369.828125,
+            "height": 57.1875,
+            "fontSize": "17.7523px"
+          },
+          ".sc-entry-footer": {
+            "x": 12.8125,
+            "y": 830.40625,
+            "width": 405.359375,
+            "height": 62.15625,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "home",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": null,
+          ".sc-auth-brand": null,
+          ".sc-entry-heading h1": null,
+          ".sc-entry-card": null,
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": null,
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": null
+        },
+        "axe": []
+      },
+      {
+        "name": "shift-paused",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 932,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 12.8125,
+            "y": 0,
+            "width": 405.359375,
+            "height": 326.4375,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24.643205642700195,
+            "y": 64.09375,
+            "width": 367.890625,
+            "height": 58.1875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 31.546875,
+            "y": 203.734375,
+            "width": 261.34375,
+            "height": 41.953125,
+            "fontSize": "36.4908px"
+          },
+          ".sc-entry-card": {
+            "x": 12.8125,
+            "y": 326.4375,
+            "width": 409.296875,
+            "height": 500.46875,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 32.546875,
+            "y": 349.125,
+            "width": 369.828125,
+            "height": 86.796875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 32.546875,
+            "y": 349.125,
+            "width": 68.046875,
+            "height": 68.046875,
+            "fontSize": "24.656px"
+          },
+          ".sc-entry-details": {
+            "x": 32.546875,
+            "y": 451.6875,
+            "width": 369.828125,
+            "height": 49.296875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 32.546875,
+            "y": 633.640625,
+            "width": 369.828125,
+            "height": 69.03125,
+            "fontSize": "19.7248px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 32.546875,
+            "y": 749.984375,
+            "width": 369.828125,
+            "height": 57.1875,
+            "fontSize": "17.7523px"
+          },
+          ".sc-entry-footer": {
+            "x": 12.8125,
+            "y": 830.40625,
+            "width": 405.359375,
+            "height": 62.15625,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      }
+    ],
+    "checks": [
+      "labels-validation-eye-next-enter-inline-error-loading",
+      "shared-slogan-real-session-data-shift-reload-home",
+      "logout-route-guard-launcher-regression",
+      "short-height-safe-area-reduced-motion-paused-readonly"
+    ],
+    "result": "PASS"
+  },
+  {
+    "width": 436,
+    "height": 918,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 13,
+            "y": 0,
+            "width": 411,
+            "height": 341,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 25,
+            "y": 65,
+            "width": 373,
+            "height": 59,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 32,
+            "y": 209,
+            "width": 265,
+            "height": 72.0625,
+            "fontSize": "34px"
+          },
+          ".sc-entry-card": {
+            "x": 13,
+            "y": 341,
+            "width": 411,
+            "height": 470,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 33,
+            "y": 399,
+            "width": 371,
+            "height": 56,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 33,
+            "y": 506,
+            "width": 371,
+            "height": 56,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 33,
+            "y": 620,
+            "width": 371,
+            "height": 66,
+            "fontSize": "20px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 33,
+            "y": 710,
+            "width": 371,
+            "height": 78,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 13,
+            "y": 814.953125,
+            "width": 411,
+            "height": 63.046875,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "validation",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 13,
+            "y": 0,
+            "width": 411,
+            "height": 341,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 25,
+            "y": 65,
+            "width": 373,
+            "height": 59,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 32,
+            "y": 209,
+            "width": 265,
+            "height": 72.0625,
+            "fontSize": "34px"
+          },
+          ".sc-entry-card": {
+            "x": 13,
+            "y": 341,
+            "width": 411,
+            "height": 500,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 33,
+            "y": 399,
+            "width": 371,
+            "height": 56,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 33,
+            "y": 511,
+            "width": 371,
+            "height": 56,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 33,
+            "y": 650,
+            "width": 371,
+            "height": 66,
+            "fontSize": "20px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 33,
+            "y": 740,
+            "width": 371,
+            "height": 78,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 13,
+            "y": 841,
+            "width": 411,
+            "height": 63.046875,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "error",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 13,
+            "y": 0,
+            "width": 411,
+            "height": 341,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 25,
+            "y": 65,
+            "width": 373,
+            "height": 59,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 32,
+            "y": 209,
+            "width": 265,
+            "height": 72.0625,
+            "fontSize": "34px"
+          },
+          ".sc-entry-card": {
+            "x": 13,
+            "y": 341,
+            "width": 411,
+            "height": 470,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 33,
+            "y": 399,
+            "width": 371,
+            "height": 56,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 33,
+            "y": 506,
+            "width": 371,
+            "height": 56,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 33,
+            "y": 620,
+            "width": 371,
+            "height": 66,
+            "fontSize": "20px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 13,
+            "y": 814.953125,
+            "width": 411,
+            "height": 63.046875,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "forgot",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 207.578125,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 24,
+            "y": 24,
+            "width": 388,
+            "height": 37.78125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 24,
+            "y": 112.28125,
+            "width": 340,
+            "height": 32.5,
+            "fontSize": "26px"
+          },
+          ".sc-entry-card": {
+            "x": 16,
+            "y": 191.578125,
+            "width": 404,
+            "height": 281.984375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 37,
+            "y": 404.5625,
+            "width": 362,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 16,
+            "y": 835,
+            "width": 404,
+            "height": 63,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "shift",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 13,
+            "y": 0,
+            "width": 411,
+            "height": 331,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 25,
+            "y": 65,
+            "width": 373,
+            "height": 59,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 32,
+            "y": 206.59375,
+            "width": 265,
+            "height": 42.546875,
+            "fontSize": "37px"
+          },
+          ".sc-entry-card": {
+            "x": 13,
+            "y": 331,
+            "width": 415,
+            "height": 484,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 33,
+            "y": 354,
+            "width": 375,
+            "height": 88,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 33,
+            "y": 354,
+            "width": 69,
+            "height": 69,
+            "fontSize": "25px"
+          },
+          ".sc-entry-details": {
+            "x": 33,
+            "y": 458,
+            "width": 375,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": {
+            "x": 33,
+            "y": 524,
+            "width": 375,
+            "height": 75,
+            "fontSize": "15px"
+          },
+          ".sc-entry-primary": {
+            "x": 33,
+            "y": 619,
+            "width": 375,
+            "height": 70,
+            "fontSize": "20px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 33,
+            "y": 737,
+            "width": 375,
+            "height": 58,
+            "fontSize": "18px"
+          },
+          ".sc-entry-footer": {
+            "x": 13,
+            "y": 815,
+            "width": 411,
+            "height": 63.046875,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "home",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": null,
+          ".sc-auth-brand": null,
+          ".sc-entry-heading h1": null,
+          ".sc-entry-card": null,
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": null,
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": null
+        },
+        "axe": []
+      },
+      {
+        "name": "shift-paused",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 0,
+            "y": 0,
+            "width": 436,
+            "height": 918,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 13,
+            "y": 0,
+            "width": 411,
+            "height": 331,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 25,
+            "y": 65,
+            "width": 373,
+            "height": 59,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 32,
+            "y": 206.59375,
+            "width": 265,
+            "height": 42.546875,
+            "fontSize": "37px"
+          },
+          ".sc-entry-card": {
+            "x": 13,
+            "y": 331,
+            "width": 415,
+            "height": 506.171875,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 33,
+            "y": 354,
+            "width": 375,
+            "height": 88,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 33,
+            "y": 354,
+            "width": 69,
+            "height": 69,
+            "fontSize": "25px"
+          },
+          ".sc-entry-details": {
+            "x": 33,
+            "y": 458,
+            "width": 375,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 33,
+            "y": 641.171875,
+            "width": 375,
+            "height": 70,
+            "fontSize": "20px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 33,
+            "y": 759.171875,
+            "width": 375,
+            "height": 58,
+            "fontSize": "18px"
+          },
+          ".sc-entry-footer": {
+            "x": 13,
+            "y": 837.171875,
+            "width": 411,
+            "height": 63.046875,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      }
+    ],
+    "checks": [
+      "labels-validation-eye-next-enter-inline-error-loading",
+      "shared-slogan-real-session-data-shift-reload-home",
+      "logout-route-guard-launcher-regression",
+      "short-height-safe-area-reduced-motion-paused-readonly"
+    ],
+    "result": "PASS"
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "errors": [],
+    "states": [
+      {
+        "name": "login",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 536.625,
+            "y": 78,
+            "width": 367.65625,
+            "height": 305.015625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 547.347900390625,
+            "y": 136.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 553.609375,
+            "y": 264.9375,
+            "width": 237.03125,
+            "height": 64.4375,
+            "fontSize": "30.4128px"
+          },
+          ".sc-entry-card": {
+            "x": 536.625,
+            "y": 383.015625,
+            "width": 367.65625,
+            "height": 425.15625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 554.609375,
+            "y": 434.984375,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 554.609375,
+            "y": 530.65625,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 554.609375,
+            "y": 637.25,
+            "width": 331.6875,
+            "height": 59.03125,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 554.609375,
+            "y": 717.734375,
+            "width": 331.6875,
+            "height": 69.765625,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 536.625,
+            "y": 829.875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "validation",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 536.625,
+            "y": 78,
+            "width": 367.65625,
+            "height": 305.015625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 547.347900390625,
+            "y": 136.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 553.609375,
+            "y": 264.9375,
+            "width": 237.03125,
+            "height": 64.4375,
+            "fontSize": "30.4128px"
+          },
+          ".sc-entry-card": {
+            "x": 536.625,
+            "y": 383.015625,
+            "width": 367.65625,
+            "height": 457.28125,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 554.609375,
+            "y": 434.984375,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 554.609375,
+            "y": 537.78125,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 554.609375,
+            "y": 669.375,
+            "width": 331.6875,
+            "height": 59.03125,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": {
+            "x": 554.609375,
+            "y": 749.859375,
+            "width": 331.6875,
+            "height": 69.765625,
+            "fontSize": "12px"
+          },
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 536.625,
+            "y": 840.296875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "error",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 536.625,
+            "y": 78,
+            "width": 367.65625,
+            "height": 305.015625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 547.347900390625,
+            "y": 136.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 553.609375,
+            "y": 264.9375,
+            "width": 237.03125,
+            "height": 64.4375,
+            "fontSize": "30.4128px"
+          },
+          ".sc-entry-card": {
+            "x": 536.625,
+            "y": 383.015625,
+            "width": 367.65625,
+            "height": 425.15625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": {
+            "x": 554.609375,
+            "y": 434.984375,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          "#sc-auth-password": {
+            "x": 554.609375,
+            "y": 530.65625,
+            "width": 331.6875,
+            "height": 50.078125,
+            "fontSize": "16px"
+          },
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 554.609375,
+            "y": 637.25,
+            "width": 331.6875,
+            "height": 59.03125,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 536.625,
+            "y": 829.875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "forgot",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 207.578125,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 549,
+            "y": 102,
+            "width": 342,
+            "height": 37.78125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 549,
+            "y": 190.28125,
+            "width": 340,
+            "height": 32.5,
+            "fontSize": "26px"
+          },
+          ".sc-entry-card": {
+            "x": 541,
+            "y": 269.578125,
+            "width": 358,
+            "height": 281.984375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 562,
+            "y": 482.5625,
+            "width": 316,
+            "height": 50,
+            "fontSize": "15px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": {
+            "x": 541,
+            "y": 839,
+            "width": 358,
+            "height": 63,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "shift",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 536.625,
+            "y": 78,
+            "width": 367.65625,
+            "height": 296.0625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 547.347900390625,
+            "y": 136.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 553.609375,
+            "y": 262.765625,
+            "width": 237.03125,
+            "height": 38.046875,
+            "fontSize": "33.0963px"
+          },
+          ".sc-entry-card": {
+            "x": 536.625,
+            "y": 374.0625,
+            "width": 371.21875,
+            "height": 433.140625,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 554.609375,
+            "y": 394.734375,
+            "width": 335.25,
+            "height": 78.8125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 554.609375,
+            "y": 394.734375,
+            "width": 61.71875,
+            "height": 61.71875,
+            "fontSize": "22.3624px"
+          },
+          ".sc-entry-details": {
+            "x": 554.609375,
+            "y": 487.84375,
+            "width": 335.25,
+            "height": 44.71875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": {
+            "x": 554.609375,
+            "y": 546.859375,
+            "width": 335.25,
+            "height": 67.078125,
+            "fontSize": "13.4174px"
+          },
+          ".sc-entry-primary": {
+            "x": 554.609375,
+            "y": 631.8125,
+            "width": 335.25,
+            "height": 62.609375,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 554.609375,
+            "y": 737.34375,
+            "width": 335.25,
+            "height": 51.875,
+            "fontSize": "16.1009px"
+          },
+          ".sc-entry-footer": {
+            "x": 536.625,
+            "y": 829.875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      },
+      {
+        "name": "home",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": null,
+          ".sc-auth-brand": null,
+          ".sc-entry-heading h1": null,
+          ".sc-entry-card": null,
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": null,
+          ".sc-entry-avatar": null,
+          ".sc-entry-details": null,
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": null,
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": null,
+          ".sc-entry-footer": null
+        },
+        "axe": []
+      },
+      {
+        "name": "shift-paused",
+        "geometry": {
+          ".sc-app-viewport": {
+            "x": 525,
+            "y": 78,
+            "width": 390,
+            "height": 844,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading": {
+            "x": 536.625,
+            "y": 78,
+            "width": 367.65625,
+            "height": 296.0625,
+            "fontSize": "15px"
+          },
+          ".sc-auth-brand": {
+            "x": 547.347900390625,
+            "y": 136.140625,
+            "width": 333.6875,
+            "height": 52.765625,
+            "fontSize": "15px"
+          },
+          ".sc-entry-heading h1": {
+            "x": 553.609375,
+            "y": 262.765625,
+            "width": 237.03125,
+            "height": 38.046875,
+            "fontSize": "33.0963px"
+          },
+          ".sc-entry-card": {
+            "x": 536.625,
+            "y": 374.0625,
+            "width": 371.21875,
+            "height": 463.234375,
+            "fontSize": "15px"
+          },
+          "#sc-auth-id": null,
+          "#sc-auth-password": null,
+          ".sc-entry-user": {
+            "x": 554.609375,
+            "y": 394.734375,
+            "width": 335.25,
+            "height": 78.8125,
+            "fontSize": "15px"
+          },
+          ".sc-entry-avatar": {
+            "x": 554.609375,
+            "y": 394.734375,
+            "width": 61.71875,
+            "height": 61.71875,
+            "fontSize": "22.3624px"
+          },
+          ".sc-entry-details": {
+            "x": 554.609375,
+            "y": 487.84375,
+            "width": 335.25,
+            "height": 44.71875,
+            "fontSize": "15px"
+          },
+          ".sc-entry-shift-note": null,
+          ".sc-entry-primary": {
+            "x": 554.609375,
+            "y": 661.90625,
+            "width": 335.25,
+            "height": 62.609375,
+            "fontSize": "17.8899px"
+          },
+          ".sc-entry-reassurance": null,
+          ".sc-entry-signout": {
+            "x": 554.609375,
+            "y": 767.4375,
+            "width": 335.25,
+            "height": 51.875,
+            "fontSize": "16.1009px"
+          },
+          ".sc-entry-footer": {
+            "x": 536.625,
+            "y": 837.296875,
+            "width": 367.65625,
+            "height": 56.359375,
+            "fontSize": "12px"
+          }
+        },
+        "axe": []
+      }
+    ],
+    "checks": [
+      "labels-validation-eye-next-enter-inline-error-loading",
+      "shared-slogan-real-session-data-shift-reload-home",
+      "logout-route-guard-launcher-regression",
+      "short-height-safe-area-reduced-motion-paused-readonly"
+    ],
+    "result": "PASS"
+  }
+]

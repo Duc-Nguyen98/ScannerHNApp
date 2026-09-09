@@ -1,0 +1,30 @@
+.sg-sheet{width:calc(100% - 20px);max-width:430px;max-height:calc(100dvh - 20px);margin:0 auto;top:auto;bottom:0;border:1px solid #dbe8ed;border-radius:24px 24px 0 0;background:#fafcfc;padding:0 20px calc(20px + env(safe-area-inset-bottom,0px));color:#193b49;overflow:auto;animation:sg-enter 180ms ease-out;}
+.sg-sheet::backdrop{background:rgba(25,59,73,.45);}
+.sg-handle{height:28px;display:grid;place-items:center;touch-action:none;}.sg-handle span{height:4px;width:40px;border-radius:8px;background:#9ebac6;}
+.sg-heading{display:flex;align-items:center;gap:10px;justify-content:space-between;}.sg-heading h2{font-size:22px;line-height:1.3;margin:0;}.sg-close{width:44px;height:44px;flex:none;border:0;border-radius:50%;background:#eaf3f6;color:#0c6286;display:grid;place-items:center;}
+.sg-sheet p{font-size:14px;line-height:1.5;color:#526f7c;}.sg-actions{display:grid;gap:12px;margin-top:20px;}.sg-action{width:100%;min-height:80px;display:flex;align-items:center;gap:12px;background:white;border:1px solid #dbe8ed;border-radius:14px;padding:12px;color:#193b49;text-align:left;}.sg-action>span:nth-child(2){flex:1;}.sg-action strong{display:block;font-size:16px;}.sg-action small{display:block;font-size:13px;line-height:1.5;margin-top:4px;color:#526f7c;}.sg-icon{height:44px;width:44px;flex:none;display:grid;place-items:center;border-radius:12px;background:#eaf3f6;color:#0c6286;}.sg-action>svg{width:18px;flex:none;color:#526f7c;}.sg-action:disabled{cursor:not-allowed;background:#f0f4f6;}.sg-sheet .sg-reason{font-size:13px;margin:6px 4px 0;}.sg-confirm{display:grid;gap:12px;padding:12px 0;}.sg-confirm .sc-btn{width:100%;min-height:48px;}.sg-sheet :focus-visible{outline:3px solid #0c6286;outline-offset:2px;}
+.sg-context{display:flex;align-items:center;gap:10px;color:#0c6286;font-size:14px;}.sg-camera{background:#edf5f8;border:1px dashed #9ebac6;border-radius:12px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;margin:16px 0;text-align:center;}.sg-camera>svg{width:44px;height:44px;color:#0c6286;}.sg-camera p{font-size:14px;}.sc-phone .sc-nav-center[data-context-active=true] .sc-nav-orb{box-shadow:inset 0 0 0 2px #c8e4ee,0 2px 6px #0c628624;}
+@keyframes sg-enter{from{transform:translateY(16px);opacity:.5}to{transform:translateY(0);opacity:1}}@media(prefers-reduced-motion:reduce){.sg-sheet{animation:none;}}
+
+/* Operational Pro P03: launcher presentation only; AppBottomSheet owns containment/focus/Back. */
+.sc-bottomsheet-handle{height:24px;display:grid;place-items:center;touch-action:none;margin-top:-12px;}
+.sc-bottomsheet-handle>span{width:36px;height:4px;border-radius:4px;background:#9ebac6;}
+.sc-app-overlay-root .sg-operational{padding:18px 20px 20px;background:#fff;}
+.sg-operational .sc-modal-heading{gap:14px;}
+.sg-operational .sc-modal-heading h2{font-size:21px;font-weight:700;line-height:1.3;letter-spacing:-.25px;}
+.sg-operational .sc-modal-heading>button{background:transparent;border-radius:10px;color:#526f7c;font-weight:400;}
+.sg-operational>p{font-size:13px;line-height:1.55;color:#526f7c;margin:10px 0 14px;}
+.sg-operational .sg-actions{gap:0;margin-top:10px;border-top:1px solid #dbe8ed;}
+.sg-operational .sg-actions>div+div{border-top:1px solid #dbe8ed;}
+.sg-operational .sg-action{min-height:76px;padding:14px 0;gap:14px;border:0;border-radius:0;background:transparent;}
+.sg-operational .sg-action strong{font-size:15px;font-weight:650;line-height:1.4;}
+.sg-operational .sg-action small{font-size:12px;line-height:1.5;margin-top:3px;}
+.sg-operational .sg-icon{width:26px;height:32px;background:transparent;border-radius:0;color:#0c6286;}
+.sg-operational .sg-icon svg{width:24px;height:24px;}
+.sg-operational .sg-action:disabled{background:transparent;color:#526f7c;}
+.sg-operational .sg-action:disabled .sg-icon{color:#607680;}
+.sg-operational .sg-reason{font-size:12px;margin:-3px 0 12px 40px;color:#70431f;line-height:1.5;}
+.sg-operational .sg-confirm{gap:8px;padding:8px 0;}
+.sg-operational .sg-confirm .sc-btn{margin-top:0;border-radius:10px;}
+.sg-operational .sg-confirm .sc-btn:last-child{background:transparent;border-color:transparent;}
+.sg-operational :focus-visible{outline:3px solid #0c6286;outline-offset:2px;}

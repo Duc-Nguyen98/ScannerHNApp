@@ -1,0 +1,10 @@
+@import './legacy.css';
+
+:root {
+  --font-public-sans: 'Public Sans';
+  --background: #edf5f8;
+  --foreground: #193b49;
+}
+html,body,#root { min-height: 100%; }
+body { margin: 0; background: #edf5f8; color: #193b49; font-family: var(--font-public-sans), 'Segoe UI', sans-serif; }
+* { box-sizing: border-box; }

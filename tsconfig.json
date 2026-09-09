@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext", "moduleResolution": "bundler", "jsx": "react-jsx",
+    "strict": true, "skipLibCheck": true, "noEmit": true,
+    "allowImportingTsExtensions": true, "esModuleInterop": true,
+    "types": ["vite/client", "node"], "paths": {"@/*": ["./*"]}
+  },
+  "include": ["main.tsx", "components/**/*.tsx", "lib/**/*.ts", "vite.config.ts"]
+}
