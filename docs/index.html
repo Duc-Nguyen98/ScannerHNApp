@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WMS Hoa Nam Scanner — thư viện thiết kế mobile v2">
+  <title>WMS Hoa Nam Scanner · Design v2</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-lockup">
+      <span class="brand-mark">HN</span>
+      <span><strong>WMS Hoa Nam Scanner</strong><small>Mobile design v2 · 09/09/2026</small></span>
+    </div>
+    <a class="source-link" href="https://github.com/Duc-Nguyen98/ScannerHNApp" target="_blank" rel="noreferrer">Mở repository ↗</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DESIGN LIBRARY</p>
+        <h1>Xem toàn bộ màn hình Scanner trực quan.</h1>
+        <p class="lede">Thư viện ảnh bàn giao cho dev. Chọn một nhóm để lọc, sau đó mở từng board ở kích thước đầy đủ.</p>
+      </div>
+      <div class="hero-meta"><strong>18</strong><span>boards<br>đã bàn giao</span></div>
+    </section>
+    <nav class="filters" aria-label="Lọc bộ thiết kế">
+      <button class="filter is-active" data-filter="all">Tất cả <span>18</span></button>
+      <button class="filter" data-filter="original">Màn đã khóa <span>2</span></button>
+      <button class="filter" data-filter="updated">Màn cập nhật <span>10</span></button>
+      <button class="filter" data-filter="new">Màn bổ sung <span>6</span></button>
+    </nav>
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+  </main>
+  <dialog id="viewer" class="viewer">
+    <button class="viewer-close" aria-label="Đóng ảnh">×</button>
+    <img id="viewer-image" alt="">
+    <p id="viewer-caption"></p>
+  </dialog>
+  <footer>WMS Hoa Nam · Design v2 · Dùng ảnh board làm tài liệu tham chiếu triển khai.</footer>
+  <script>
+    const root = '../design/01_Main/BOARDS/';
+    const items = [
+      ['original','Đăng nhập & Xác nhận phiên','00_LOCKED_ORIGINALS/01_Dang_nhap_va_Xac_nhan_phien_ORIGINAL.jpg'],
+      ['original','Trang chủ đã khóa','00_LOCKED_ORIGINALS/02_Trang_chu_ORIGINAL.jpg'],
+      ['updated','Dialog cố định','01_UPDATED_BOARDS/01_dialog_fixed.png'],
+      ['updated','Nhập kho','01_UPDATED_BOARDS/02_nhap_kho.png'],
+      ['updated','Xuất kho','01_UPDATED_BOARDS/03_xuat_kho.png'],
+      ['updated','Tra cứu','01_UPDATED_BOARDS/04_tra_cuu.png'],
+      ['updated','NFC','01_UPDATED_BOARDS/05_nfc.png'],
+      ['updated','Lịch sử','01_UPDATED_BOARDS/06_lich_su.png'],
+      ['updated','Bảo hành','01_UPDATED_BOARDS/07_bao_hanh.png'],
+      ['updated','Cá nhân','01_UPDATED_BOARDS/08_ca_nhan.png'],
+      ['updated','Bảo mật','01_UPDATED_BOARDS/09_bao_mat.png'],
+      ['updated','Chứng từ','01_UPDATED_BOARDS/10_chung_tu.png'],
+      ['new','Thông báo phê duyệt','02_NEW_BOARDS/11_thong_bao_phe_duyet.png'],
+      ['new','Khôi phục ca','02_NEW_BOARDS/12_khoi_phuc_va_ca_fixed.png'],
+      ['new','Hệ thống','02_NEW_BOARDS/13_he_thong_fixed.png'],
+      ['new','Dữ liệu quyết lỗi','02_NEW_BOARDS/14_du_lieu_quyet_loi_fixed.png'],
+      ['new','Ngoại lệ quét','02_NEW_BOARDS/15_ngoai_le_quet_fixed.png'],
+      ['new','Đính kèm bàn giao','02_NEW_BOARDS/16_dinh_kem_ban_giao_fixed.png']
+    ];
+    const labels = {original:'Màn đã khóa',updated:'Màn cập nhật',new:'Màn bổ sung'};
+    const gallery = document.querySelector('#gallery');
+    const viewer = document.querySelector('#viewer');
+    const image = document.querySelector('#viewer-image');
+    const caption = document.querySelector('#viewer-caption');
+    const encode = value => value.split('/').map(encodeURIComponent).join('/');
+    function render(filter='all') {
+      gallery.innerHTML = items.filter(([kind]) => filter==='all'||kind===filter).map(([kind,title,file],index) => {
+        const src = root + encode(file);
+        return `<article class="card"><button class="preview" data-src="${src}" data-title="${title}"><img loading="lazy" src="${src}" alt="${title}"><span class="zoom">Mở ảnh ↗</span></button><div class="card-copy"><span class="tag tag-${kind}">${labels[kind]}</span><h2>${String(index+1).padStart(2,'0')} · ${title}</h2><a href="${src}" target="_blank" rel="noreferrer">Xem file gốc</a></div></article>`;
+      }).join('');
+      gallery.querySelectorAll('.preview').forEach(button => button.addEventListener('click', () => { image.src=button.dataset.src; image.alt=button.dataset.title; caption.textContent=button.dataset.title; viewer.showModal(); }));
+    }
+    document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { document.querySelector('.filter.is-active').classList.remove('is-active'); button.classList.add('is-active'); render(button.dataset.filter); }));
+    document.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
+    viewer.addEventListener('click', event => { if(event.target===viewer) viewer.close(); });
+    render();
+  </script>
+</body>
+</html>
