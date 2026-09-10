@@ -4,7 +4,7 @@
 
 Xem toàn bộ board trên GitHub Pages: **https://duc-nguyen98.github.io/ScannerHNApp/**
 
-Nền ảnh và overlay dùng trực tiếp trong app: **https://duc-nguyen98.github.io/ScannerHNApp/assets/scanner-background-pack-v1.zip**. Danh mục trực quan nằm ở cuối thư viện; file gốc được lưu trong [`assets/scanner-approved/`](assets/scanner-approved/).
+Nền ảnh và overlay dùng trực tiếp trong app: **https://duc-nguyen98.github.io/ScannerHNApp/assets/scanner-background-pack-v2-4k.zip**. Danh mục trực quan nằm ở cuối thư viện; file gốc được lưu trong [`assets/scanner-approved/`](assets/scanner-approved/).
 
 Ngày bàn giao: 09/09/2026. Đây là ảnh mockup thiết kế, không phải ứng dụng đã sửa code hoặc đã kiểm thử end-to-end.
 

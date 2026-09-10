@@ -39,7 +39,7 @@
           <p class="section-lede">Ảnh kho, ảnh nhân sự và overlay gradient được giữ trong thư mục asset có thể tải trực tiếp. Dùng đúng file gốc bên dưới để tránh lấy thumbnail từ contact sheet.</p>
         </div>
         <div class="asset-actions">
-          <a class="download-link" href="./assets/scanner-background-pack-v1.zip" download>Tải bộ nền (.zip) ↓</a>
+          <a class="download-link" href="./assets/scanner-background-pack-v2-4k.zip" download>Tải bộ nền 4K (.zip) ↓</a>
           <a class="source-link" href="./assets/scanner-approved/SOURCE_APPROVED_ASSET_SHEET.png" target="_blank" rel="noreferrer">Mở contact sheet ↗</a>
         </div>
       </div>
@@ -96,13 +96,13 @@
     }
     const assetItems = [
       ['Nền kho chính','01_backgrounds/bg_warehouse_main.jpg','1920 × 1080'],
-      ['Nền kho tối','01_backgrounds/bg_warehouse_dark.jpg','1920 × 1080'],
-      ['Nền kho sáng','01_backgrounds/bg_warehouse_light.jpg','1920 × 1080'],
+      ['Nền kho tối · nâng cấp','01_backgrounds/bg_warehouse_dark_v2_4k.jpg','3840 × 2160 · 4K'],
+      ['Nền kho chính · 4K','01_backgrounds/bg_warehouse_main_4k.jpg','3840 × 2160 · 4K'],
       ['Nền kho mờ','01_backgrounds/bg_warehouse_blur.jpg','1920 × 1080'],
       ['Chi tiết kệ hàng','01_backgrounds/bg_shelf_detail.jpg','1600 × 1024'],
-      ['Nhân sự trong kho','02_people_staff/staff_warehouse.jpg','1600 × 1200'],
-      ['Nhân sự tươi cười','02_people_staff/staff_smile.jpg','1200 × 800'],
-      ['Nhân sự quét mã','02_people_staff/staff_scan.jpg','1200 × 800']
+      ['Nhân sự trong kho · 4K','02_people_staff/staff_warehouse_4k.jpg','3840 × 2880 · 4K'],
+      ['Nhân sự tươi cười · 4K','02_people_staff/staff_smile_4k.jpg','3840 × 2560 · 4K'],
+      ['Nhân sự quét mã · 4K','02_people_staff/staff_scan_4k.jpg','3840 × 2560 · 4K']
     ];
     function renderAssets() {
       assetGrid.innerHTML = assetItems.map(([title,file,dimensions]) => {
