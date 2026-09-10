@@ -20,7 +20,7 @@
       <div>
         <p class="eyebrow">DESIGN LIBRARY</p>
         <h1>Xem toàn bộ màn hình Scanner trực quan.</h1>
-        <p class="lede">Thư viện ảnh bàn giao cho dev. Chọn một nhóm để lọc, sau đó mở từng board ở kích thước đầy đủ.</p>
+        <p class="lede">Thư viện ảnh bàn giao cho dev. Chọn một nhóm để lọc, mở từng board ở kích thước đầy đủ hoặc tải nền ảnh dùng trực tiếp trong app.</p>
       </div>
       <div class="hero-meta"><strong>18</strong><span>boards<br>đã bàn giao</span></div>
     </section>
@@ -31,6 +31,25 @@
       <button class="filter" data-filter="new">Màn bổ sung <span>6</span></button>
     </nav>
     <section id="gallery" class="gallery" aria-live="polite"></section>
+    <section class="asset-library" aria-labelledby="assets-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ASSET PACK</p>
+          <h2 id="assets-title">Nền ảnh đã tách sẵn cho dev</h2>
+          <p class="section-lede">Ảnh kho, ảnh nhân sự và overlay gradient được giữ trong thư mục asset có thể tải trực tiếp. Dùng đúng file gốc bên dưới để tránh lấy thumbnail từ contact sheet.</p>
+        </div>
+        <div class="asset-actions">
+          <a class="download-link" href="./assets/scanner-background-pack-v1.zip" download>Tải bộ nền (.zip) ↓</a>
+          <a class="source-link" href="./assets/scanner-approved/SOURCE_APPROVED_ASSET_SHEET.png" target="_blank" rel="noreferrer">Mở contact sheet ↗</a>
+        </div>
+      </div>
+      <div id="asset-grid" class="asset-grid" aria-live="polite"></div>
+      <div class="asset-footnote">
+        <a href="./assets/scanner-approved/README.md" target="_blank" rel="noreferrer">Đọc hướng dẫn dùng asset</a>
+        <span aria-hidden="true">·</span>
+        <a href="./assets/scanner-approved/ASSET_MANIFEST.json" target="_blank" rel="noreferrer">Manifest kích thước & SHA-256</a>
+      </div>
+    </section>
   </main>
   <dialog id="viewer" class="viewer">
     <button class="viewer-close" aria-label="Đóng ảnh">×</button>
@@ -40,6 +59,7 @@
   <footer>WMS Hoa Nam · Design v2 · Dùng ảnh board làm tài liệu tham chiếu triển khai.</footer>
   <script>
     const root = './design/01_Main/BOARDS/';
+    const assetRoot = './assets/scanner-approved/';
     const items = [
       ['original','Đăng nhập & Xác nhận phiên','00_LOCKED_ORIGINALS/01_Dang_nhap_va_Xac_nhan_phien_ORIGINAL.jpg'],
       ['original','Trang chủ đã khóa','00_LOCKED_ORIGINALS/02_Trang_chu_ORIGINAL.jpg'],
@@ -65,6 +85,7 @@
     const viewer = document.querySelector('#viewer');
     const image = document.querySelector('#viewer-image');
     const caption = document.querySelector('#viewer-caption');
+    const assetGrid = document.querySelector('#asset-grid');
     const encode = value => value.split('/').map(encodeURIComponent).join('/');
     function render(filter='all') {
       gallery.innerHTML = items.filter(([kind]) => filter==='all'||kind===filter).map(([kind,title,file],index) => {
@@ -73,10 +94,28 @@
       }).join('');
       gallery.querySelectorAll('.preview').forEach(button => button.addEventListener('click', () => { image.src=button.dataset.src; image.alt=button.dataset.title; caption.textContent=button.dataset.title; viewer.showModal(); }));
     }
+    const assetItems = [
+      ['Nền kho chính','01_backgrounds/bg_warehouse_main.jpg','1920 × 1080'],
+      ['Nền kho tối','01_backgrounds/bg_warehouse_dark.jpg','1920 × 1080'],
+      ['Nền kho sáng','01_backgrounds/bg_warehouse_light.jpg','1920 × 1080'],
+      ['Nền kho mờ','01_backgrounds/bg_warehouse_blur.jpg','1920 × 1080'],
+      ['Chi tiết kệ hàng','01_backgrounds/bg_shelf_detail.jpg','1600 × 1024'],
+      ['Nhân sự trong kho','02_people_staff/staff_warehouse.jpg','1600 × 1200'],
+      ['Nhân sự tươi cười','02_people_staff/staff_smile.jpg','1200 × 800'],
+      ['Nhân sự quét mã','02_people_staff/staff_scan.jpg','1200 × 800']
+    ];
+    function renderAssets() {
+      assetGrid.innerHTML = assetItems.map(([title,file,dimensions]) => {
+        const src = assetRoot + encode(file);
+        return `<article class="asset-card"><button class="asset-preview preview" data-src="${src}" data-title="${title}"><img loading="lazy" decoding="async" src="${src}" alt="${title}"><span class="zoom">Mở ảnh ↗</span></button><div class="asset-copy"><h3>${title}</h3><span>${dimensions}</span><a href="${src}" download>Tải file ↓</a></div></article>`;
+      }).join('');
+      assetGrid.querySelectorAll('.asset-preview').forEach(button => button.addEventListener('click', () => { image.src=button.dataset.src; image.alt=button.dataset.title; caption.textContent=button.dataset.title; viewer.showModal(); }));
+    }
     document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { document.querySelector('.filter.is-active').classList.remove('is-active'); button.classList.add('is-active'); render(button.dataset.filter); }));
     document.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
     viewer.addEventListener('click', event => { if(event.target===viewer) viewer.close(); });
     render();
+    renderAssets();
   </script>
 </body>
 </html>
