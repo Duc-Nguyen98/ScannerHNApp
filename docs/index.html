@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="brand-lockup">
       <span class="brand-mark">HN</span>
-      <span><strong>WMS Hoa Nam Scanner</strong><small>Mobile design v2 · 09/09/2026</small></span>
+      <span><strong>WMS Hoa Nam Scanner</strong><small>Mobile design · Cập nhật 10/09/2026</small></span>
     </div>
     <a class="source-link" href="https://github.com/Duc-Nguyen98/ScannerHNApp" target="_blank" rel="noreferrer">Mở repository ↗</a>
   </header>
@@ -22,10 +22,15 @@
         <h1>Xem toàn bộ màn hình Scanner trực quan.</h1>
         <p class="lede">Thư viện ảnh bàn giao cho dev. Chọn một nhóm để lọc, mở từng board ở kích thước đầy đủ hoặc tải nền ảnh dùng trực tiếp trong app.</p>
       </div>
-      <div class="hero-meta"><strong>18</strong><span>boards<br>đã bàn giao</span></div>
+      <div class="hero-meta"><strong>24</strong><span>boards<br>6 board bổ sung</span></div>
+    </section>
+    <section class="release-banner" aria-label="Bộ màn theo chốt mới">
+      <div><strong>Bộ màn 17–22 · Theo chốt nghiệp vụ mới</strong><p>Xuất linh kiện trực tiếp, tiếp tục phiếu dở, lịch sử có tải thêm và lịch sử NFC / bảo hành / phiên quét.</p><small>Nhập/xuất chính: chờ xử lý trên Web. Phần NFC/phiên quét đi kèm hợp đồng đề xuất để DEV chốt.</small></div>
+      <div class="release-actions"><a href="./flows/warranty-components/">Mở bộ màn tương tác →</a><a href="./flows/warranty-components/handoff.html">Bàn giao & đề xuất DEV</a><a href="./assets/scanner-screens-17-22.zip" download>Tải PNG các màn ↓</a></div>
     </section>
     <nav class="filters" aria-label="Lọc bộ thiết kế">
-      <button class="filter is-active" data-filter="all">Tất cả <span>18</span></button>
+      <button class="filter is-active" data-filter="current">Theo chốt mới <span>6</span></button>
+      <button class="filter" data-filter="all">Tất cả <span>24</span></button>
       <button class="filter" data-filter="original">Màn đã khóa <span>2</span></button>
       <button class="filter" data-filter="updated">Màn cập nhật <span>10</span></button>
       <button class="filter" data-filter="new">Màn bổ sung <span>6</span></button>
@@ -78,19 +83,29 @@
       ['new','Hệ thống','02_NEW_BOARDS/13_he_thong_fixed.png'],
       ['new','Dữ liệu quyết lỗi','02_NEW_BOARDS/14_du_lieu_quyet_loi_fixed.png'],
       ['new','Ngoại lệ quét','02_NEW_BOARDS/15_ngoai_le_quet_fixed.png'],
-      ['new','Đính kèm bàn giao','02_NEW_BOARDS/16_dinh_kem_ban_giao_fixed.png']
+      ['new','Đính kèm bàn giao','02_NEW_BOARDS/16_dinh_kem_ban_giao_fixed.png'],
+      ['current','17 · Xuất linh kiện bảo hành','02_NEW_BOARDS/17_xuat_linh_kien_bao_hanh.png'],
+      ['current','18 · Lịch sử linh kiện','02_NEW_BOARDS/18_lich_su_linh_kien.png'],
+      ['current','19 · Tiếp tục phiếu linh kiện','02_NEW_BOARDS/19_tiep_tuc_phieu_linh_kien.png'],
+      ['current','20 · Lịch sử thao tác & NFC','02_NEW_BOARDS/20_lich_su_thao_tac_nfc.png'],
+      ['current','21 · Bảo hành & phiên quét','02_NEW_BOARDS/21_lich_su_bao_hanh_phien_quet.png'],
+      ['current','22 · Trạng thái Scanner','02_NEW_BOARDS/22_trang_thai_scanner.png']
     ];
-    const labels = {original:'Màn đã khóa',updated:'Màn cập nhật',new:'Màn bổ sung'};
+    const labels = {original:'Màn đã khóa',updated:'Thiết kế trước chốt 10/09',new:'Thiết kế trước chốt 10/09',current:'Bổ sung theo chốt mới'};
     const gallery = document.querySelector('#gallery');
     const viewer = document.querySelector('#viewer');
     const image = document.querySelector('#viewer-image');
     const caption = document.querySelector('#viewer-caption');
     const assetGrid = document.querySelector('#asset-grid');
     const encode = value => value.split('/').map(encodeURIComponent).join('/');
-    function render(filter='all') {
+    function render(filter='current') {
       gallery.innerHTML = items.filter(([kind]) => filter==='all'||kind===filter).map(([kind,title,file],index) => {
         const src = root + encode(file);
-        return `<article class="card"><button class="preview" data-src="${src}" data-title="${title}"><img loading="lazy" src="${src}" alt="${title}"><span class="zoom">Mở ảnh ↗</span></button><div class="card-copy"><span class="tag tag-${kind}">${labels[kind]}</span><h2>${String(index+1).padStart(2,'0')} · ${title}</h2><a href="${src}" target="_blank" rel="noreferrer">Xem file gốc</a></div></article>`;
+        const board = file.split('/').pop().slice(0,2);
+        const firstScenes = {'17':'scan','18':'history','19':'drafts','20':'history-hub','21':'warranty','22':'quantity-invalid'};
+        const currentLink = kind==='current' ? `<a href="./flows/warranty-components/?scene=${firstScenes[board]}">Mở tương tác →</a>` : '';
+        const note = kind==='current' ? '' : kind==='original' ? '' : '<p class="reference-note">Tham chiếu giao diện cũ. Quy tắc nghiệp vụ hiện hành xem bộ 17–22.</p>';
+        return `<article class="card card-${kind}"><button class="preview" data-src="${src}" data-title="${title}"><img loading="lazy" decoding="async" src="${src}" alt="${title}"><span class="zoom">Mở ảnh ↗</span></button><div class="card-copy"><span class="tag tag-${kind}">${labels[kind]}</span><h2>${title}</h2><div class="card-links"><a href="${src}" target="_blank" rel="noreferrer">Xem PNG</a>${currentLink}</div>${note}</div></article>`;
       }).join('');
       gallery.querySelectorAll('.preview').forEach(button => button.addEventListener('click', () => { image.src=button.dataset.src; image.alt=button.dataset.title; caption.textContent=button.dataset.title; viewer.showModal(); }));
     }

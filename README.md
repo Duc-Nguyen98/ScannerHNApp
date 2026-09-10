@@ -4,6 +4,14 @@
 
 Xem toàn bộ board trên GitHub Pages: **https://duc-nguyen98.github.io/ScannerHNApp/**
 
+## Bổ sung theo chốt nghiệp vụ ngày 10/09/2026
+
+- [Màn 17–22 tương tác](https://duc-nguyen98.github.io/ScannerHNApp/flows/warranty-components/): xuất linh kiện, tiếp tục phiếu, lịch sử và các trạng thái xử lý.
+- [Bàn giao và đề xuất DEV](https://duc-nguyen98.github.io/ScannerHNApp/flows/warranty-components/handoff.html): mapping source/chốt mới; đề xuất trường gửi phiếu thiếu metadata và hợp đồng lịch sử NFC/phiên quét.
+- [Tải PNG từng màn và board](https://duc-nguyen98.github.io/ScannerHNApp/assets/scanner-screens-17-22.zip).
+
+Các quy tắc của bộ 17–22 ưu tiên hơn mô tả nghiệp vụ cũ bên dưới: App không có UI Post nhập/xuất chính; phiếu này chờ xử lý trên Web. Linh kiện bảo hành vẫn Post trực tiếp; một kho; tiếp tục đúng phiếu; lịch sử POSTED tải thêm/chống trùng. Một số nhãn/luồng trong board cũ được giữ để đối chiếu giao diện, không phải contract nghiệp vụ hiện hành. Các API NFC/phiên quét trong tài liệu là đề xuất để DEV chốt, chưa phải tích hợp thật.
+
 Nền ảnh và overlay dùng trực tiếp trong app: **https://duc-nguyen98.github.io/ScannerHNApp/assets/scanner-background-pack-v2-4k.zip**. Danh mục trực quan nằm ở cuối thư viện; file gốc được lưu trong [`assets/scanner-approved/`](assets/scanner-approved/).
 
 Ngày bàn giao: 09/09/2026. Đây là ảnh mockup thiết kế, không phải ứng dụng đã sửa code hoặc đã kiểm thử end-to-end.
