@@ -1,34 +1,229 @@
 {
-  "name": "Hoa Nam Scanner approved background assets",
-  "version": "1.0.0",
+  "name": "Hoa Nam Scanner — supplied replacement assets",
+  "version": "2.1.0",
+  "release": "enhanced-11a32adc5521",
   "source": {
+    "folder": "scanner-background-pack-v2-4k",
     "file": "SOURCE_APPROVED_ASSET_SHEET.png",
     "dimensions": "1536x1024",
-    "sha256": "f7e95bb549e9b0f06675c1be2a7bf17521761e997d55f128c095e3ebb3ef3af8",
-    "provenance": "Supplied approved Hoa Nam Scanner UI/UX Asset Pack contact sheet"
+    "sha256": "f7e95bb549e9b0f06675c1be2a7bf17521761e997d55f128c095e3ebb3ef3af8"
   },
-  "scope": ["01_backgrounds", "02_people_staff", "03_overlays_gradients"],
+  "note": "Images are published unchanged. Dimensions are measured; native-4K origin is not asserted.",
+  "scope": [
+    "01_backgrounds",
+    "02_people_staff",
+    "03_overlays_gradients"
+  ],
   "files": [
-    {"path":"01_backgrounds/bg_shelf_detail.jpg","width":1600,"height":1024,"mode":"RGB","bytes":256462,"sha256":"8511eef5b098ee896c36ecd4958e44763f21c2c3a713c5929226dba63b2ca364","provenance":"raster extract from approved contact sheet"},
-    {"path":"01_backgrounds/bg_warehouse_blur.jpg","width":1920,"height":1080,"mode":"RGB","bytes":213716,"sha256":"c9e538e87a0a6d33b099a97d60f375fbd862fdad747f66c2d88efac31e9a096b","provenance":"raster extract from approved contact sheet"},
-    {"path":"01_backgrounds/bg_warehouse_dark.jpg","width":1920,"height":1080,"mode":"RGB","bytes":339799,"sha256":"30f75ca589b3ee40abc737d9e5e7fc3efbda59e2d4eaf8f427bc5ac3d34cfd45","provenance":"raster extract from approved contact sheet"},
-    {"path":"01_backgrounds/bg_warehouse_light.jpg","width":1920,"height":1080,"mode":"RGB","bytes":402602,"sha256":"f568f5db2550ab8fbcffee5ca7f9e763cbb4d36359a338b98964734ee83c2ca1","provenance":"raster extract from approved contact sheet"},
-    {"path":"01_backgrounds/bg_warehouse_main.jpg","width":1920,"height":1080,"mode":"RGB","bytes":511453,"sha256":"768953dd9a570452d35ffddf74f67bf14c8272fabb52948136cf8a28fc03148e","provenance":"approved repo asset; byte-match with components/scanner-approved-assets/bg_warehouse_main.jpg"},
-    {"path":"01_backgrounds/bg_warehouse_dark_v2_1920.jpg","width":1920,"height":1080,"mode":"RGB","bytes":493566,"sha256":"9b1fe4882d785154d7b2e7ffe746ea5121205d9b1f9c0317bbd9cc7b4ea6a052","provenance":"sharp dark grade derived from approved bg_warehouse_main.jpg; exported at Full HD"},
-    {"path":"01_backgrounds/bg_warehouse_dark_v2_4k.jpg","width":3840,"height":2160,"mode":"RGB","bytes":1444537,"sha256":"89e44ef93de178a1f0c7fb2f8280c531deca51ad95cb84c8d5c4a8ba931799f4","provenance":"sharp dark grade derived from approved bg_warehouse_main.jpg; 4K upscale delivery"},
-    {"path":"01_backgrounds/bg_warehouse_main_4k.jpg","width":3840,"height":2160,"mode":"RGB","bytes":1667890,"sha256":"34a8839903beddb3713b40ed583f9721a9b3895c24d13279e9e2d01c911b252e","provenance":"approved bg_warehouse_main.jpg with controlled high-quality 4K upscale"},
-    {"path":"01_backgrounds/bg_warehouse_light_v2_4k.jpg","width":3840,"height":2160,"mode":"RGB","bytes":1788055,"sha256":"35e8d69df7258d0f55da05f00815da261f72fcc066b1c04d6abc097ebf66aad6","provenance":"light grade derived from approved bg_warehouse_main.jpg; 4K upscale delivery"},
-    {"path":"02_people_staff/staff_scan.jpg","width":1200,"height":800,"mode":"RGB","bytes":181189,"sha256":"0ae0eef92666c920dd9176bf99a9d2f7c886de147c355eae029f5634cc8a37d3","provenance":"raster extract from approved contact sheet"},
-    {"path":"02_people_staff/staff_smile.jpg","width":1200,"height":800,"mode":"RGB","bytes":192889,"sha256":"34a55504ef3d097eef9a92298a029fc552326d5eccc4f7b53754408473fe0212","provenance":"raster extract from approved contact sheet"},
-    {"path":"02_people_staff/staff_warehouse.jpg","width":1600,"height":1200,"mode":"RGB","bytes":406635,"sha256":"a864e45cb7375f4ca309872bc08e98c29425e6b6e454bfad77413c5500c9c462","provenance":"approved repo asset; byte-match with components/scanner-approved-assets/staff_warehouse.jpg"},
-    {"path":"02_people_staff/staff_warehouse_4k.jpg","width":3840,"height":2880,"mode":"RGB","bytes":1962372,"sha256":"9ea26ac053585c3ab829803fcab868ea33163f1582a5974c96ee78c830a06fb9","provenance":"approved staff_warehouse.jpg with controlled high-quality 4K upscale"},
-    {"path":"02_people_staff/staff_smile_4k.jpg","width":3840,"height":2560,"mode":"RGB","bytes":1572907,"sha256":"c075090e008106db3e2831fe2a8b88a15a4a356e0990f7737f23591d7376f54f","provenance":"approved staff_smile.jpg with controlled high-quality 4K upscale"},
-    {"path":"02_people_staff/staff_scan_4k.jpg","width":3840,"height":2560,"mode":"RGB","bytes":1422850,"sha256":"ef721219ec3ae3e03f02e40e0d7b6d86f7bad48ee74852b5a77080cd0043f0f1","provenance":"approved staff_scan.jpg with controlled high-quality 4K upscale"},
-    {"path":"03_overlays_gradients/overlay_bottom.png","width":390,"height":400,"mode":"RGBA","bytes":1470,"sha256":"a13489e9696b14d100da3b49faab8e4b9ca1ef553e4698c7fb30fc83026c6d77","provenance":"recreated transparent gradient based on approved contact sheet"},
-    {"path":"03_overlays_gradients/overlay_full.png","width":390,"height":844,"mode":"RGBA","bytes":2952,"sha256":"e66c9d375c72a6065e31cab8fb8d9e48987e03215ce30f58ccb167f9439bb1a5","provenance":"recreated transparent gradient based on approved contact sheet"},
-    {"path":"03_overlays_gradients/overlay_hero.png","width":1920,"height":1080,"mode":"RGBA","bytes":10953,"sha256":"4287a5ecc867b88b0380cdc4d5a7097e94059507c78c6f3813c2868734ac9063","provenance":"recreated transparent gradient based on approved contact sheet"},
-    {"path":"03_overlays_gradients/overlay_light.png","width":1920,"height":1080,"mode":"RGBA","bytes":11122,"sha256":"901aa518a040b2ac3bf7c4781497e6fdf84b95e778de57725d372341cd40d00c","provenance":"recreated transparent gradient based on approved contact sheet"},
-    {"path":"03_overlays_gradients/overlay_right.png","width":400,"height":844,"mode":"RGBA","bytes":3057,"sha256":"37059a7dec89c28991f0b64847792330d3a73c519587858d51b5721016eaeed3","provenance":"recreated transparent gradient based on approved contact sheet"},
-    {"path":"03_overlays_gradients/overlay_top_dark.png","width":390,"height":400,"mode":"RGBA","bytes":1480,"sha256":"462cf5e3160887f3fc589b377143b8a98c6b12ac5c8fbfe4a9366eb4a53bdf0d","provenance":"recreated transparent gradient based on approved contact sheet"}
+    {
+      "path": "01_backgrounds/bg_shelf_detail_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 1657541,
+      "sha256": "06f83275bbe94b3149453e4921d194b4e5589b4875180139649a7d96a82cff8f",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "01_backgrounds/bg_warehouse_blur_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 1156320,
+      "sha256": "ed9ef2a6b6831ad8b6888119f9cedb944d7ac623b591ab53d062482533f97a63",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "01_backgrounds/bg_warehouse_dark_v2_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 2240921,
+      "sha256": "470ce9b74592ff9fd0a7db9e60aeac367ca35915848df67c6ec7505f8107501b",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "01_backgrounds/bg_warehouse_light_v2_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 2637145,
+      "sha256": "d85fcb373047b5af41575fca9a6a6743e0aab2f41d7eec58612d3abcbf978377",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "01_backgrounds/bg_warehouse_main_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 2651791,
+      "sha256": "5444c04172cdc30a8497921b185f622bdbba71ba10d1eae898ab010df4ef49f1",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "02_people_staff/staff_scan_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 1843423,
+      "sha256": "110e65a764acdac42542383f0ad30046a7232bfb6b7981ebd52dbea42dc3178f",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "02_people_staff/staff_smile_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 1825111,
+      "sha256": "d75d52156da53cbad9628a589d106338f2b8b323dea83e9444ab7940518ece2b",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "02_people_staff/staff_warehouse_4k_enhanced.jpg",
+      "width": 3840,
+      "height": 2160,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "alpha_range": [
+        255,
+        255
+      ],
+      "bytes": 1908357,
+      "sha256": "510d31fec93bdc55394efb1129f3e17611bf938ff51f7ee70fccc8091fbeae18",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "03_overlays_gradients/overlay_bottom_4k.png",
+      "width": 3744,
+      "height": 3840,
+      "mode": "P",
+      "format": "PNG",
+      "has_transparency": true,
+      "alpha_range": [
+        0,
+        226
+      ],
+      "bytes": 24219,
+      "sha256": "d392512d2a11ab256373ca754ad0ed4bf618552dccbb2c6f56e76946b13c6a89",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "03_overlays_gradients/overlay_full_4k.png",
+      "width": 1774,
+      "height": 3840,
+      "mode": "P",
+      "format": "PNG",
+      "has_transparency": true,
+      "alpha_range": [
+        95,
+        216
+      ],
+      "bytes": 15714,
+      "sha256": "fee8daf0c02a2a6f0ca5c5bf442ecb49bbb83b442b5468904618105262bc9a8f",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "03_overlays_gradients/overlay_hero_4k.png",
+      "width": 3840,
+      "height": 2160,
+      "mode": "P",
+      "format": "PNG",
+      "has_transparency": true,
+      "alpha_range": [
+        120,
+        206
+      ],
+      "bytes": 13507,
+      "sha256": "39fae848c101bed4b5920ab9cd2cca06cd961b616658551a545fd24190a57f13",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "03_overlays_gradients/overlay_light_4k.png",
+      "width": 3840,
+      "height": 2160,
+      "mode": "P",
+      "format": "PNG",
+      "has_transparency": true,
+      "alpha_range": [
+        20,
+        151
+      ],
+      "bytes": 13766,
+      "sha256": "74c954cd7553482e44e743f284c74d5c19050844c143592224bba14db0f45df9",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "03_overlays_gradients/overlay_right_4k.png",
+      "width": 1820,
+      "height": 3840,
+      "mode": "P",
+      "format": "PNG",
+      "has_transparency": true,
+      "alpha_range": [
+        0,
+        191
+      ],
+      "bytes": 38988,
+      "sha256": "07ff1074e60650e64ebc80ffb0c52ae0191900a75723773b8319241dcef57fb1",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    },
+    {
+      "path": "03_overlays_gradients/overlay_top_dark_4k.png",
+      "width": 3744,
+      "height": 3840,
+      "mode": "P",
+      "format": "PNG",
+      "has_transparency": true,
+      "alpha_range": [
+        0,
+        236
+      ],
+      "bytes": 24255,
+      "sha256": "8406473fee018ecb09e5199139a2ff00b99778900217320af6b454ef01c7d53e",
+      "provenance": "User-supplied replacement asset; copied byte-for-byte"
+    }
   ]
 }

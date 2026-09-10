@@ -95,14 +95,14 @@
       gallery.querySelectorAll('.preview').forEach(button => button.addEventListener('click', () => { image.src=button.dataset.src; image.alt=button.dataset.title; caption.textContent=button.dataset.title; viewer.showModal(); }));
     }
     const assetItems = [
-      ['Nền kho chính','01_backgrounds/bg_warehouse_main.jpg','1920 × 1080'],
-      ['Nền kho tối · nâng cấp','01_backgrounds/bg_warehouse_dark_v2_4k.jpg','3840 × 2160 · 4K'],
-      ['Nền kho chính · 4K','01_backgrounds/bg_warehouse_main_4k.jpg','3840 × 2160 · 4K'],
-      ['Nền kho mờ','01_backgrounds/bg_warehouse_blur.jpg','1920 × 1080'],
-      ['Chi tiết kệ hàng','01_backgrounds/bg_shelf_detail.jpg','1600 × 1024'],
-      ['Nhân sự trong kho · 4K','02_people_staff/staff_warehouse_4k.jpg','3840 × 2880 · 4K'],
-      ['Nhân sự tươi cười · 4K','02_people_staff/staff_smile_4k.jpg','3840 × 2560 · 4K'],
-      ['Nhân sự quét mã · 4K','02_people_staff/staff_scan_4k.jpg','3840 × 2560 · 4K']
+      ['Nền kho chính · enhanced 4K','01_backgrounds/bg_warehouse_main_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Nền kho tối · enhanced 4K','01_backgrounds/bg_warehouse_dark_v2_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Nền kho sáng · enhanced 4K','01_backgrounds/bg_warehouse_light_v2_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Nền kho mờ · enhanced 4K','01_backgrounds/bg_warehouse_blur_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Chi tiết kệ hàng · enhanced 4K','01_backgrounds/bg_shelf_detail_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Nhân sự trong kho · enhanced 4K','02_people_staff/staff_warehouse_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Nhân sự tươi cười · enhanced 4K','02_people_staff/staff_smile_4k_enhanced.jpg','3840 × 2160 · 4K'],
+      ['Nhân sự quét mã · enhanced 4K','02_people_staff/staff_scan_4k_enhanced.jpg','3840 × 2160 · 4K']
     ];
     function renderAssets() {
       assetGrid.innerHTML = assetItems.map(([title,file,dimensions]) => {
