@@ -1,5 +1,9 @@
 # WMS Hoa Nam — Bộ thiết kế mobile v2
 
+## Mở thư viện trực quan
+
+Xem toàn bộ board trên GitHub Pages: **https://duc-nguyen98.github.io/ScannerHNApp/**
+
 Ngày bàn giao: 09/09/2026. Đây là ảnh mockup thiết kế, không phải ứng dụng đã sửa code hoặc đã kiểm thử end-to-end.
 
 ## Xem bộ thiết kế
