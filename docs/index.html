@@ -29,8 +29,8 @@
       <div class="release-actions"><a href="./flows/warranty-components/">Mở bộ màn tương tác →</a><a href="./flows/warranty-components/handoff.html">Bàn giao & đề xuất DEV</a><a href="./assets/scanner-screens-17-22.zip" download>Tải PNG các màn ↓</a></div>
     </section>
     <nav class="filters" aria-label="Lọc bộ thiết kế">
-      <button class="filter is-active" data-filter="current">Theo chốt mới <span>6</span></button>
-      <button class="filter" data-filter="all">Tất cả <span>24</span></button>
+      <button class="filter is-active" data-filter="all">Tất cả <span>24</span></button>
+      <button class="filter" data-filter="current">Theo chốt mới <span>6</span></button>
       <button class="filter" data-filter="original">Màn đã khóa <span>2</span></button>
       <button class="filter" data-filter="updated">Màn cập nhật <span>10</span></button>
       <button class="filter" data-filter="new">Màn bổ sung <span>6</span></button>
@@ -98,7 +98,7 @@
     const caption = document.querySelector('#viewer-caption');
     const assetGrid = document.querySelector('#asset-grid');
     const encode = value => value.split('/').map(encodeURIComponent).join('/');
-    function render(filter='current') {
+    function render(filter='all') {
       gallery.innerHTML = items.filter(([kind]) => filter==='all'||kind===filter).map(([kind,title,file],index) => {
         const src = root + encode(file);
         const board = file.split('/').pop().slice(0,2);
