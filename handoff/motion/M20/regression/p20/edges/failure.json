@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "First read error never displays empty or false0; retry resolves known empty",
+      "status": "PASS"
+    },
+    {
+      "name": "Switch case while page loading ignores old response",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard load retains focus/end focus; Back restores scroll and control",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p19=review]')\u001b[22m\n\n    at eval (<anonymous>:14:755)\n    at async check (<anonymous>:9:30)\n    at async eval (<anonymous>:14:1)"
+}

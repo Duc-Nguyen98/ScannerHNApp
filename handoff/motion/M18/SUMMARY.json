@@ -1,0 +1,109 @@
+{
+  "prompt": "MOTION_P18",
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "panels": [
+    "P18.S01",
+    "P18.S02",
+    "P18.S03",
+    "P18.S04"
+  ],
+  "normal": "PASS",
+  "reduced": "PASS",
+  "off": "PASS",
+  "node_tests": 30,
+  "motion_groups": 18,
+  "regression": {
+    "p18": 11,
+    "long_content": 4,
+    "M02": 36,
+    "footer_viewports": 4
+  },
+  "operations_per_mode": {
+    "auto": {
+      "begin": 1,
+      "event": 2,
+      "cancel": 1,
+      "caseWrites": 0,
+      "hardware": 0,
+      "httpWrites": 0
+    },
+    "os-reduced": {
+      "begin": 1,
+      "event": 2,
+      "cancel": 1,
+      "caseWrites": 0,
+      "hardware": 0,
+      "httpWrites": 0
+    },
+    "off": {
+      "begin": 1,
+      "event": 2,
+      "cancel": 1,
+      "caseWrites": 0,
+      "hardware": 0,
+      "httpWrites": 0
+    }
+  },
+  "intermediate_opacity_samples": {
+    "auto": 98,
+    "os-reduced": 65,
+    "off": 0
+  },
+  "geometry_equal": 12,
+  "text_equal": 12,
+  "pixel_equal": 9,
+  "pixel_deltas": [
+    {
+      "mode": "auto",
+      "panel": "P18.S03",
+      "geometry_equal": true,
+      "text_equal": true,
+      "pixel_difference": 31,
+      "bbox": [
+        20,
+        255,
+        22,
+        728
+      ],
+      "max_channel_delta": 1
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P18.S01",
+      "geometry_equal": true,
+      "text_equal": true,
+      "pixel_difference": 6,
+      "bbox": [
+        20,
+        875,
+        474,
+        876
+      ],
+      "max_channel_delta": 1
+    },
+    {
+      "mode": "off",
+      "panel": "P18.S03",
+      "geometry_equal": true,
+      "text_equal": true,
+      "pixel_difference": 31,
+      "bbox": [
+        20,
+        255,
+        22,
+        728
+      ],
+      "max_channel_delta": 1
+    }
+  ],
+  "source_byte_delta": 5907,
+  "primitive_core_unchanged": true,
+  "business_trackers_unchanged": true,
+  "virtualization": "NOT_NEEDED: current owner2 / fixture4 attachments; no new dataset or virtualizer",
+  "performance": "observed long tasks only; no FPS claim",
+  "visual": "USER_REVIEW_PENDING",
+  "production": "NOT_RUN; existing P18 integration blockers preserved",
+  "hardware": "NOT_RUN",
+  "report": "handoff/motion/M18/REPORT.md",
+  "evidence_root": "handoff/motion/M18"
+}

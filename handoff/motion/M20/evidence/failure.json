@@ -1,0 +1,195 @@
+{
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "Four panels use140/80/off; no row or viewport animation; Back does not replay empty"
+      ],
+      "geometry": {
+        "P20.S01": {
+          "rects": [
+            {
+              "class": "p19-header",
+              "x": 0,
+              "y": 0,
+              "w": 494,
+              "h": 86
+            },
+            {
+              "class": "p19-scroll p20-scroll",
+              "x": 0,
+              "y": 74,
+              "w": 494,
+              "h": 773
+            },
+            {
+              "class": "p19-card p20-context",
+              "x": 20,
+              "y": 94,
+              "w": 454,
+              "h": 165
+            },
+            {
+              "class": "p19-card p20-history",
+              "x": 20,
+              "y": 349,
+              "w": 454,
+              "h": 490
+            },
+            {
+              "class": "p20-secondary",
+              "x": 39,
+              "y": 765,
+              "w": 416,
+              "h": 54
+            },
+            {
+              "class": "p19-footer p20-footer",
+              "x": 0,
+              "y": 847,
+              "w": 494,
+              "h": 103
+            }
+          ],
+          "nodes": 89
+        },
+        "P20.S02": {
+          "rects": [
+            {
+              "class": "p19-header",
+              "x": 0,
+              "y": 0,
+              "w": 494,
+              "h": 86
+            },
+            {
+              "class": "p19-scroll p20-scroll",
+              "x": 0,
+              "y": 74,
+              "w": 494,
+              "h": 773
+            },
+            {
+              "class": "p19-card p20-context",
+              "x": 20,
+              "y": 94,
+              "w": 454,
+              "h": 165
+            },
+            {
+              "class": "p19-card p20-history",
+              "x": 20,
+              "y": 349,
+              "w": 454,
+              "h": 560
+            },
+            {
+              "class": "p20-secondary",
+              "x": 39,
+              "y": 845,
+              "w": 416,
+              "h": 44
+            },
+            {
+              "class": "p19-footer p20-footer",
+              "x": 0,
+              "y": 847,
+              "w": 494,
+              "h": 103
+            }
+          ],
+          "nodes": 91
+        },
+        "P20.S03": {
+          "rects": [
+            {
+              "class": "p19-header",
+              "x": 0,
+              "y": 0,
+              "w": 494,
+              "h": 86
+            },
+            {
+              "class": "p19-scroll p20-scroll",
+              "x": 0,
+              "y": 74,
+              "w": 494,
+              "h": 773
+            },
+            {
+              "class": "p19-card p20-context",
+              "x": 20,
+              "y": 94,
+              "w": 454,
+              "h": 165
+            },
+            {
+              "class": "p19-card p20-history",
+              "x": 20,
+              "y": 349,
+              "w": 454,
+              "h": 578
+            },
+            {
+              "class": "p20-secondary",
+              "x": 39,
+              "y": 854,
+              "w": 416,
+              "h": 54
+            },
+            {
+              "class": "p19-footer p20-footer",
+              "x": 0,
+              "y": 847,
+              "w": 494,
+              "h": 103
+            }
+          ],
+          "nodes": 94
+        },
+        "P20.S04": {
+          "rects": [
+            {
+              "class": "p19-header",
+              "x": 0,
+              "y": 0,
+              "w": 494,
+              "h": 86
+            },
+            {
+              "class": "p19-scroll p20-scroll",
+              "x": 0,
+              "y": 74,
+              "w": 494,
+              "h": 773
+            },
+            {
+              "class": "p19-card p20-context",
+              "x": 20,
+              "y": 94,
+              "w": 454,
+              "h": 165
+            },
+            {
+              "class": "p19-card p20-history",
+              "x": 20,
+              "y": 349,
+              "w": 454,
+              "h": 368
+            },
+            {
+              "class": "p19-footer p20-footer",
+              "x": 0,
+              "y": 847,
+              "w": 494,
+              "h": 103
+            }
+          ],
+          "nodes": 52
+        }
+      },
+      "errors": []
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2 !== 3\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p20.cjs:14:546\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:502:9)\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p20.cjs:9:177)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p20.cjs:14:1"
+}

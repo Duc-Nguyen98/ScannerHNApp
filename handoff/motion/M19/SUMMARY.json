@@ -1,0 +1,278 @@
+{
+  "prompt": "MOTION_P19",
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "panels": [
+    "P19.S01",
+    "P19.S02",
+    "P19.S03",
+    "P19.S04"
+  ],
+  "normal": "PASS",
+  "reduced": "PASS",
+  "off": "PASS",
+  "node_tests": 51,
+  "motion_groups": 21,
+  "regression": {
+    "P19": 9,
+    "P20": 7,
+    "P21": 9,
+    "P24": 5,
+    "M14_shared_modal": 21,
+    "footer_viewports": 4
+  },
+  "operations_per_mode": {
+    "auto": {
+      "counts": {
+        "codes": 2,
+        "quantity": 3
+      },
+      "metrics": {
+        "post": 2,
+        "check": 1,
+        "commits": 1
+      },
+      "status": "POSTED"
+    },
+    "os-reduced": {
+      "counts": {
+        "codes": 2,
+        "quantity": 3
+      },
+      "metrics": {
+        "post": 2,
+        "check": 1,
+        "commits": 1
+      },
+      "status": "POSTED"
+    },
+    "off": {
+      "counts": {
+        "codes": 2,
+        "quantity": 3
+      },
+      "metrics": {
+        "post": 2,
+        "check": 1,
+        "commits": 1
+      },
+      "status": "POSTED"
+    }
+  },
+  "static_geometry_cases": 12,
+  "visual_comparison": [
+    {
+      "mode": "auto",
+      "panel": "P19.S01",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "auto",
+      "panel": "P19.S02",
+      "changed_pixels": 41,
+      "bbox": [
+        20,
+        599,
+        474,
+        668
+      ],
+      "max_channel_delta": 26
+    },
+    {
+      "mode": "auto",
+      "panel": "P19.S03",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "auto",
+      "panel": "P19.S04",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P19.S01",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P19.S02",
+      "changed_pixels": 41,
+      "bbox": [
+        20,
+        599,
+        474,
+        668
+      ],
+      "max_channel_delta": 26
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P19.S03",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P19.S04",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P19.S01",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P19.S02",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P19.S03",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P19.S04",
+      "changed_pixels": 0,
+      "bbox": null,
+      "max_channel_delta": 0
+    }
+  ],
+  "source_byte_delta": 5984,
+  "unchanged": {
+    "docs/flows/warranty-components/issue-model.mjs": true,
+    "docs/flows/warranty-components/issue-fixture.mjs": true,
+    "docs/flows/shared/motion/motion-primitives.mjs": true,
+    "docs/flows/shared/motion/motion-tokens.css": true,
+    "RUN_STATE.json": true,
+    "SCREEN_COVERAGE.csv": true
+  },
+  "virtualization": "NOT_NEEDED for current2-code fixture; no qualifying long-scan profile",
+  "performance": [
+    {
+      "mode": "auto",
+      "scope": "4 panel demo snapshots incl startup, Chromium emulation; not FPS/input-latency benchmark",
+      "beforeLongTasks": [
+        {
+          "start": 3531.1000000089407,
+          "duration": 102
+        }
+      ],
+      "afterLongTasks": [
+        {
+          "start": 569.8999999910593,
+          "duration": 62
+        },
+        {
+          "start": 647.2999999970198,
+          "duration": 78
+        },
+        {
+          "start": 1385,
+          "duration": 71
+        },
+        {
+          "start": 2661.2999999970198,
+          "duration": 101
+        }
+      ],
+      "beforeMs": 8169,
+      "afterMs": 7025,
+      "reviewDOMNodes": 298,
+      "afterReviewDOMNodes": 298,
+      "resourceBytes": "UNAVAILABLE: harness returns0"
+    },
+    {
+      "mode": "os-reduced",
+      "scope": "4 panel demo snapshots incl startup, Chromium emulation; not FPS/input-latency benchmark",
+      "beforeLongTasks": [
+        {
+          "start": 3388.3999999910593,
+          "duration": 114
+        },
+        {
+          "start": 3875.7999999970198,
+          "duration": 184
+        },
+        {
+          "start": 5005.0999999940395,
+          "duration": 56
+        }
+      ],
+      "afterLongTasks": [
+        {
+          "start": 338.79999999701977,
+          "duration": 77
+        },
+        {
+          "start": 462.79999999701977,
+          "duration": 92
+        },
+        {
+          "start": 1180.8999999910593,
+          "duration": 76
+        },
+        {
+          "start": 2346,
+          "duration": 100
+        }
+      ],
+      "beforeMs": 7867,
+      "afterMs": 6211,
+      "reviewDOMNodes": 298,
+      "afterReviewDOMNodes": 298,
+      "resourceBytes": "UNAVAILABLE: harness returns0"
+    },
+    {
+      "mode": "off",
+      "scope": "4 panel demo snapshots incl startup, Chromium emulation; not FPS/input-latency benchmark",
+      "beforeLongTasks": [
+        {
+          "start": 2651.2999999970198,
+          "duration": 102
+        }
+      ],
+      "afterLongTasks": [
+        {
+          "start": 444.79999999701977,
+          "duration": 71
+        },
+        {
+          "start": 1112.4000000059605,
+          "duration": 69
+        },
+        {
+          "start": 2317.1000000089407,
+          "duration": 102
+        }
+      ],
+      "beforeMs": 6939,
+      "afterMs": 6498,
+      "reviewDOMNodes": 298,
+      "afterReviewDOMNodes": 298,
+      "resourceBytes": "UNAVAILABLE: harness returns0"
+    }
+  ],
+  "visual": "USER_REVIEW_PENDING",
+  "production": "NOT_RUN; business integration status unchanged",
+  "hardware": "NOT_RUN",
+  "report": "handoff/motion/M19/REPORT.md",
+  "evidence_root": "handoff/motion/M19/"
+}

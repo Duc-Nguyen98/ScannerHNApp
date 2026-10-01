@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "name": "UX1 link immediately below context; short receipt summary accurate and no fold control",
+      "status": "PASS"
+    },
+    {
+      "name": "UX2 large receipt3/6 rows; expand/collapse preserves ID, focus and remembered state per case",
+      "status": "PASS"
+    },
+    {
+      "name": "UX3 source code dialog exact incl2100+, Unicode/HTML; backdrop/Tab/Escape/Back restore exact trigger",
+      "status": "PASS"
+    },
+    {
+      "name": "UX6 overlap marks one new ID, keeps top; explicit jump focuses new row, not duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "UX4 exact verified receipt via P19→P09→P20 highlighted once; Back preserves new scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "UX5 pending footer exact draft ID +1code/2units and resume same document",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p19=review]')\u001b[22m\n\n    at eval (<anonymous>:21:104)\n    at check (<anonymous>:12:36)\n    at eval (<anonymous>:21:7)",
+  "layouts": [
+    {
+      "label": "codes494",
+      "viewport": {
+        "width": 494,
+        "height": 950
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    }
+  ]
+}

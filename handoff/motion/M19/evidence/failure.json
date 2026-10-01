@@ -1,0 +1,184 @@
+{
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "S01 accepted row160 only; same input/camera connection; counters immediate",
+        "S02 enter220/exit160; immediate cancel/quantity; rapid Back; no camera replacement",
+        "S03 immediate2 codes/3units; press100; repeated Post only1; UNKNOWN never success"
+      ],
+      "geometry": {
+        "P19.S01": {
+          "frame": [
+            494,
+            950
+          ],
+          "rects": {
+            ".p19-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p19-scroll": [
+              0,
+              74,
+              494,
+              773
+            ],
+            ".p19-footer": [
+              0,
+              847,
+              494,
+              103
+            ],
+            ".p19-context": [
+              20,
+              137,
+              454,
+              96
+            ],
+            ".hn-scan-camera": [
+              20,
+              315,
+              454,
+              210
+            ],
+            ".p19-sheet": null,
+            ".p19-sheet-footer": null,
+            ".p19-success-mark": null
+          },
+          "nodes": 286
+        },
+        "P19.S02": {
+          "frame": [
+            494,
+            950
+          ],
+          "rects": {
+            ".p19-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p19-scroll": [
+              0,
+              74,
+              494,
+              773
+            ],
+            ".p19-footer": [
+              0,
+              847,
+              494,
+              103
+            ],
+            ".p19-context": [
+              20,
+              137,
+              454,
+              96
+            ],
+            ".hn-scan-camera": [
+              20,
+              315,
+              454,
+              210
+            ],
+            ".p19-sheet": [
+              0,
+              279,
+              494,
+              671
+            ],
+            ".p19-sheet-footer": [
+              0,
+              794,
+              494,
+              156
+            ],
+            ".p19-success-mark": null
+          },
+          "nodes": 325
+        },
+        "P19.S03": {
+          "frame": [
+            494,
+            950
+          ],
+          "rects": {
+            ".p19-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p19-scroll": [
+              0,
+              74,
+              494,
+              673.5
+            ],
+            ".p19-footer": [
+              0,
+              747.5,
+              494,
+              202.5
+            ],
+            ".p19-context": [
+              20,
+              131,
+              454,
+              96
+            ],
+            ".hn-scan-camera": null,
+            ".p19-sheet": null,
+            ".p19-sheet-footer": null,
+            ".p19-success-mark": null
+          },
+          "nodes": 298
+        },
+        "P19.S04": {
+          "frame": [
+            494,
+            950
+          ],
+          "rects": {
+            ".p19-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p19-scroll": [
+              0,
+              74,
+              494,
+              773
+            ],
+            ".p19-footer": [
+              0,
+              847,
+              494,
+              103
+            ],
+            ".p19-context": null,
+            ".hn-scan-camera": null,
+            ".p19-sheet": null,
+            ".p19-sheet-footer": null,
+            ".p19-success-mark": [
+              192,
+              173,
+              110,
+              110
+            ]
+          },
+          "nodes": 251
+        }
+      },
+      "errors": []
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p19.cjs:27:620\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p19.cjs:8:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p19.cjs:26:1"
+}
