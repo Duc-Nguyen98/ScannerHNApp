@@ -1,0 +1,1354 @@
+{
+  "error": "locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#home-motion-mode')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m07.cjs:17:271",
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "verified card140/check160 only; OS reduced/off follows M00",
+        "Back/restored confirmed state does not replay; no legacy ripple loops",
+        "read UID then failed mapping never shows success",
+        "actual adapter listening only; hide cancels read, late completion cannot map",
+        "ten enter/leave cycles do not leak motion listeners or sessions",
+        "native list scroll, tabs, search and dialog focus stay usable",
+        "already linked UID remains blocked, no motion bypass or overwrite"
+      ],
+      "geometry": {
+        "P07.S01": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            777
+          ],
+          ".p07-footer": null,
+          ".p07-art-frame": null,
+          ".p07-phone": null,
+          ".p07-success-symbol": null
+        },
+        "P07.S02": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            778
+          ],
+          ".p07-footer": [
+            0,
+            852,
+            494,
+            98
+          ],
+          ".p07-art-frame": [
+            18,
+            433.390625,
+            458,
+            194
+          ],
+          ".p07-phone": [
+            125,
+            434.890625,
+            244,
+            191
+          ],
+          ".p07-success-symbol": null
+        },
+        "P07.S03": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            778
+          ],
+          ".p07-footer": [
+            0,
+            852,
+            494,
+            98
+          ],
+          ".p07-art-frame": null,
+          ".p07-phone": null,
+          ".p07-success-symbol": null
+        },
+        "P07.S04": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            724
+          ],
+          ".p07-footer": [
+            0,
+            798,
+            494,
+            152
+          ],
+          ".p07-art-frame": null,
+          ".p07-phone": null,
+          ".p07-success-symbol": [
+            191,
+            96,
+            112,
+            112
+          ]
+        }
+      },
+      "errors": [],
+      "profile": {
+        "nodes": 446,
+        "rows": 30
+      },
+      "domain": {
+        "receipt": {
+          "kind": "fixture-confirmed",
+          "namespace": "hn-scanner-nfc-fixture-v1",
+          "requestId": "hn-scanner-nfc-fixture-v1-1",
+          "tagId": "fixture-tag-8a2f",
+          "uid": "NFC-8A2F",
+          "itemId": "fixture-nfc-serial-HN12345",
+          "warehouseId": "fixture-hoa-nam",
+          "actorId": "fixture-minhanh",
+          "actor": {
+            "id": "fixture-minhanh",
+            "name": "Minh Anh",
+            "initials": "MA",
+            "role": "Nhân viên kho"
+          },
+          "warehouseName": "Kho Hoa Nam",
+          "linkedAt": "09/09/2026 14:32",
+          "product": {
+            "id": "fixture-nfc-serial-HN12345",
+            "code": "HN12345",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "serial": "HN12345",
+            "warehouseId": "fixture-hoa-nam"
+          }
+        },
+        "stats": {
+          "reads": 1,
+          "mutations": 1
+        }
+      },
+      "finalStats": {
+        "reads": 14,
+        "mutations": 1
+      },
+      "frames": [
+        {
+          "consumer": "NfcVerified",
+          "t": 27,
+          "opacity": "0.65",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 61,
+          "opacity": "0.854843",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 77,
+          "opacity": "0.915915",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 92,
+          "opacity": "0.951934",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 107,
+          "opacity": "0.974524",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 123,
+          "opacity": "0.988515",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 140,
+          "opacity": "0.99642",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 158,
+          "opacity": "0.999732",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 172,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 187,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 204,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 220,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 236,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 12,
+          "opacity": "0.6",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 34,
+          "opacity": "0.808661",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 44,
+          "opacity": "0.882432",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 59,
+          "opacity": "0.927011",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 75,
+          "opacity": "0.956212",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 92,
+          "opacity": "0.975695",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 108,
+          "opacity": "0.975695",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 123,
+          "opacity": "0.988362",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 139,
+          "opacity": "0.995919",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 156,
+          "opacity": "0.999469",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 171,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 187,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 205,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 219,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "t": 235,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 7,
+          "opacity": "0.65",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 27,
+          "opacity": "0.731594",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 36,
+          "opacity": "0.854853",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 50,
+          "opacity": "0.91592",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 66,
+          "opacity": "0.951937",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 83,
+          "opacity": "0.974494",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 99,
+          "opacity": "",
+          "connected": false
+        }
+      ],
+      "effects": [
+        {
+          "node": "primary",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "primary",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "button-label",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "button-label",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "consumer": "NfcVerified",
+          "node": "p07-section ",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "consumer": "NfcConfirmed",
+          "node": "p07-success-symbol",
+          "duration": 160,
+          "frames": [
+            {
+              "opacity": 0.6
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "consumer": "NfcVerified",
+          "node": "p07-section ",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-task",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "hn-nfc",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        }
+      ],
+      "lifecycle": {
+        "visibilityListeners": 4,
+        "hardware": 0
+      }
+    },
+    {
+      "mode": "os-reduced",
+      "checks": [
+        "verified card140/check160 only; OS reduced/off follows M00",
+        "Back/restored confirmed state does not replay; no legacy ripple loops",
+        "read UID then failed mapping never shows success",
+        "actual adapter listening only; hide cancels read, late completion cannot map",
+        "ten enter/leave cycles do not leak motion listeners or sessions",
+        "native list scroll, tabs, search and dialog focus stay usable",
+        "already linked UID remains blocked, no motion bypass or overwrite"
+      ],
+      "geometry": {
+        "P07.S01": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            777
+          ],
+          ".p07-footer": null,
+          ".p07-art-frame": null,
+          ".p07-phone": null,
+          ".p07-success-symbol": null
+        },
+        "P07.S02": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            778
+          ],
+          ".p07-footer": [
+            0,
+            852,
+            494,
+            98
+          ],
+          ".p07-art-frame": [
+            18,
+            433.390625,
+            458,
+            194
+          ],
+          ".p07-phone": [
+            125,
+            434.890625,
+            244,
+            191
+          ],
+          ".p07-success-symbol": null
+        },
+        "P07.S03": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            778
+          ],
+          ".p07-footer": [
+            0,
+            852,
+            494,
+            98
+          ],
+          ".p07-art-frame": null,
+          ".p07-phone": null,
+          ".p07-success-symbol": null
+        },
+        "P07.S04": {
+          ".hn-screen": [
+            0,
+            0,
+            494,
+            950
+          ],
+          ".p07-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p07-scroll": [
+            0,
+            74,
+            494,
+            724
+          ],
+          ".p07-footer": [
+            0,
+            798,
+            494,
+            152
+          ],
+          ".p07-art-frame": null,
+          ".p07-phone": null,
+          ".p07-success-symbol": [
+            191,
+            96,
+            112,
+            112
+          ]
+        }
+      },
+      "errors": [],
+      "profile": {
+        "nodes": 446,
+        "rows": 30
+      },
+      "domain": {
+        "receipt": {
+          "kind": "fixture-confirmed",
+          "namespace": "hn-scanner-nfc-fixture-v1",
+          "requestId": "hn-scanner-nfc-fixture-v1-1",
+          "tagId": "fixture-tag-8a2f",
+          "uid": "NFC-8A2F",
+          "itemId": "fixture-nfc-serial-HN12345",
+          "warehouseId": "fixture-hoa-nam",
+          "actorId": "fixture-minhanh",
+          "actor": {
+            "id": "fixture-minhanh",
+            "name": "Minh Anh",
+            "initials": "MA",
+            "role": "Nhân viên kho"
+          },
+          "warehouseName": "Kho Hoa Nam",
+          "linkedAt": "09/09/2026 14:32",
+          "product": {
+            "id": "fixture-nfc-serial-HN12345",
+            "code": "HN12345",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "serial": "HN12345",
+            "warehouseId": "fixture-hoa-nam"
+          }
+        },
+        "stats": {
+          "reads": 1,
+          "mutations": 1
+        }
+      },
+      "finalStats": {
+        "reads": 14,
+        "mutations": 1
+      },
+      "frames": [
+        {
+          "consumer": "NfcVerified",
+          "t": 17,
+          "opacity": "0.832852",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 38,
+          "opacity": "0.936234",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 53,
+          "opacity": "0.978777",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 65,
+          "opacity": "0.996446",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 81,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 97,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 113,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 129,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 145,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 160,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 177,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 193,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 209,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 224,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 241,
+          "opacity": "1",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 13,
+          "opacity": "0.65",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 28,
+          "opacity": "0.832295",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 39,
+          "opacity": "0.936159",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 55,
+          "opacity": "0.978744",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 74,
+          "opacity": "0.996358",
+          "connected": true
+        },
+        {
+          "consumer": "NfcVerified",
+          "t": 97,
+          "opacity": "",
+          "connected": false
+        }
+      ],
+      "effects": [
+        {
+          "node": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "button-label",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "node": "button-label",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "consumer": "NfcVerified",
+          "node": "p07-section ",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "consumer": "NfcVerified",
+          "node": "p07-section ",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ]
+        }
+      ],
+      "lifecycle": {
+        "visibilityListeners": 4,
+        "hardware": 0
+      }
+    },
+    {
+      "mode": "off",
+      "checks": [],
+      "geometry": {},
+      "errors": []
+    }
+  ]
+}

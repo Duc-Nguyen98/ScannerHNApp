@@ -1,0 +1,48 @@
+✔ P03 native Back consumes only modal marker and preserves caller identity (12.0377ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.4421ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.3255ms)
+✔ disposing a closing modal settles deferred work (0.3571ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.3955ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.4127ms)
+✔ Exception return adopts an existing marker without duplicate browser history (0.4524ms)
+✔ Forward to an owned dismissed dialog consumes the ghost entry and keeps caller data (1.4334ms)
+✔ Unknown stale marker is not allowed to traverse another owner history (0.4587ms)
+✔ Shell reuses one route owner; replacement cancels old effect, repeated identity never replays (3.6448ms)
+✔ OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks (1.7105ms)
+✔ Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles (0.9468ms)
+✔ Recovery receipt consumed by identity including off/hidden/hide; no replay or completion writes (2.7401ms)
+✔ Validation is immediate deduplicated feedback; live OS reduction cancels and uses opacity80 (0.8511ms)
+✔ Inactive/hidden scope consumes result without animating; off preserves static task controls (0.5077ms)
+✔ fixture receipts are unique across controller mounts and use Vietnam date (62.8741ms)
+✔ late response after expiry preserves original request for explicit reconciliation (65.6464ms)
+✔ same-owner reauthentication rebinds guard, foreign actor/warehouse cannot (30.7935ms)
+✔ rebound in-flight write is never auto-accepted; same request must be checked (45.8683ms)
+✔ read-only geography refresh does not dirty a saved draft or block verified end (61.6512ms)
+✔ real note/version/codes changes still dirty the checkpoint (1.9715ms)
+✔ A01 recovery only records support request; username is not display name (49.4577ms)
+✔ A02 empty recovery does not call adapter (0.4385ms)
+✔ A02 error cannot create receipt (4.3332ms)
+✔ A02 blocked cannot create receipt (0.7331ms)
+✔ A02 unknown cannot create receipt (0.7062ms)
+✔ A03 unfinished blocks end and preserves exact source (0.3564ms)
+✔ A04 successful save preserves IDs/version/codes; end keeps auth and draft (24.5753ms)
+✔ A04 failed save never allows end (3.7767ms)
+✔ A04 unknown save keeps request, rejects retry until reconciliation (11.6418ms)
+✔ unresolved UNKNOWN remains blocked even after mode changes (33.0102ms)
+✔ double submission sends once (2.1816ms)
+✔ source changes after save invalidate checkpoint (14.6866ms)
+✔ source unknown cannot be saved by shift (0.5179ms)
+✔ source busy cannot be saved by shift (0.1863ms)
+✔ source saveUnknown cannot be saved by shift (0.108ms)
+✔ actor/warehouse/permission guards and session expiry reject writes (0.3094ms)
+✔ late receipt after logout/disposal cannot create summary (29.6578ms)
+✔ A05 aggregate is defined separate 12+6+4+3+5=30, not loaded rows (10.6715ms)
+✔ mismatched adapter receipt cannot signal success (1.3951ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 679.3609

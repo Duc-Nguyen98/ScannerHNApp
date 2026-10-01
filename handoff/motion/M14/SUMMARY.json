@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "motion_groups": 21,
+  "comparisons": [
+    {
+      "mode": "auto",
+      "panel": "P14.S01",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "auto",
+      "panel": "P14.S02",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "auto",
+      "panel": "P14.S03",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "auto",
+      "panel": "P14.S04",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P14.S01",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P14.S02",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P14.S03",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "os-reduced",
+      "panel": "P14.S04",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P14.S01",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P14.S02",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P14.S03",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    },
+    {
+      "mode": "off",
+      "panel": "P14.S04",
+      "geometry_equal": true,
+      "pixel_equal": true,
+      "changed_pixels": 0,
+      "bbox": null,
+      "node_delta": 0
+    }
+  ],
+  "domain_equal_across_modes": true,
+  "reference_domain_equal_before_after": true,
+  "domain": {
+    "ops": [
+      "recovery",
+      "save",
+      "end",
+      "recovery",
+      "recovery"
+    ],
+    "hardware": 0
+  },
+  "source_changes": [
+    {
+      "file": "docs\\flows\\recovery-shift\\view.mjs",
+      "before_bytes": 19894,
+      "after_bytes": 21267,
+      "delta": 1373,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\recovery-shift\\style.css",
+      "before_bytes": 11765,
+      "after_bytes": 11765,
+      "delta": 0,
+      "changed": false
+    },
+    {
+      "file": "docs\\flows\\recovery-shift\\model.mjs",
+      "before_bytes": 6726,
+      "after_bytes": 6726,
+      "delta": 0,
+      "changed": false
+    },
+    {
+      "file": "docs\\flows\\recovery-shift\\record-dialog.mjs",
+      "before_bytes": 3414,
+      "after_bytes": 3548,
+      "delta": 134,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\recovery-shift\\motion.mjs",
+      "before_bytes": 0,
+      "after_bytes": 1718,
+      "delta": 1718,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\auth-session\\app.mjs",
+      "before_bytes": 20216,
+      "after_bytes": 20294,
+      "delta": 78,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\home\\home.mjs",
+      "before_bytes": 79218,
+      "after_bytes": 79736,
+      "delta": 518,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\home\\motion.mjs",
+      "before_bytes": 1701,
+      "after_bytes": 1701,
+      "delta": 0,
+      "changed": false
+    },
+    {
+      "file": "docs\\flows\\system\\view.mjs",
+      "before_bytes": 16450,
+      "after_bytes": 16623,
+      "delta": 173,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\shared\\app-modal.mjs",
+      "before_bytes": 3178,
+      "after_bytes": 3785,
+      "delta": 607,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\shared\\action-dialog.mjs",
+      "before_bytes": 2485,
+      "after_bytes": 2533,
+      "delta": 48,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\shared\\action-feedback.mjs",
+      "before_bytes": 2880,
+      "after_bytes": 3026,
+      "delta": 146,
+      "changed": true
+    },
+    {
+      "file": "docs\\flows\\shared\\motion\\motion-primitives.mjs",
+      "before_bytes": 3924,
+      "after_bytes": 3924,
+      "delta": 0,
+      "changed": false
+    },
+    {
+      "file": "docs\\flows\\shared\\motion\\motion-tokens.css",
+      "before_bytes": 745,
+      "after_bytes": 745,
+      "delta": 0,
+      "changed": false
+    }
+  ],
+  "source_byte_delta": 4795,
+  "source_metrics_note": "Plain files, not production bundle. Different edge-case journeys are not a comparable latency benchmark."
+}

@@ -1,0 +1,884 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      {
+        "name": "S01 validation immediate, CTA fixed and FormFeedback140/80/0",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 seed7/10 and1duplicate: exactly7 new row events160ms, camera/counter static",
+        "status": "PASS"
+      },
+      {
+        "name": "S03 missing3 appears immediately and cannot send; notice140ms/no row replay on Back",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate feedback is immediate and manual input stays connected",
+        "status": "PASS"
+      },
+      {
+        "name": "new camera-fixture scan preserves visible row anchor and does not replay through filter",
+        "status": "PASS"
+      },
+      {
+        "name": "accepted final row: real RAF opacity changes only in auto and counter immediately10",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 5,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.916002",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 22,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951988",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 38,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974558",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 54,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974558",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 69,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988536",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 86,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.99643",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 102,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 119,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 133,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 150,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 165,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 181,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 198,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 214,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 230,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-field-error",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          },
+          {
+            "owner": "FormFeedback",
+            "node": "p05-input",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "missing-three",
+        "samples": [
+          {
+            "ms": 34,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.91597",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 47,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951967",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 62,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974545",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 77,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988528",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 93,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996426",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 109,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 128,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 141,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 158,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 174,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 190,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 205,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 221,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 238,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-warning",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 14,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.882298",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 28,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.926926",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 43,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.926926",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 59,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.956155",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 75,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.975658",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 91,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.988338",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 106,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.995906",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 124,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.999466",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 139,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 155,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 170,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 187,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 203,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 219,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 235,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "ScanFeedback",
+            "node": "p05-attempt-code",
+            "duration": 160,
+            "frames": [
+              {
+                "opacity": 0.6
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "verified-result",
+        "samples": [
+          {
+            "ms": 4,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 20,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 36,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 52,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 69,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 85,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 100,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 117,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 133,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 149,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 165,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 180,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 197,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 214,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 228,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 250,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "SubmitFeedback",
+            "node": "hn-waiting-hero",
+            "duration": 160,
+            "frames": [
+              {
+                "opacity": 0.6
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      }
+    ],
+    "layouts": [],
+    "panels": [
+      {
+        "id": "P05.S01",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S02",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            102,
+            494,
+            848
+          ],
+          ".p05-scroll": [
+            22,
+            163,
+            450,
+            645
+          ],
+          ".p05-footer": [
+            22,
+            808,
+            450,
+            120
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": [
+            22,
+            236,
+            450,
+            220
+          ],
+          ".p05-counter": [
+            22,
+            528,
+            450,
+            115
+          ],
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S03",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": [
+            22,
+            910.578125,
+            450,
+            134
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      }
+    ],
+    "anchor": {
+      "id": "fixture-outbound-scan-0005-1:event:9",
+      "offset": 157.78125,
+      "delta": 0,
+      "scroll": {
+        "top": 443,
+        "height": 1088,
+        "client": 645
+      }
+    },
+    "listProfile": {
+      "rows": 4,
+      "nodes": 142,
+      "accepted": 10
+    },
+    "failure": {
+      "name": "S04 only after matched receipt; rapid send once; Back fromP12 never replays result",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(mode==='auto'?heroValues.some(v=>v<1):heroValues.every(v=>v===1))\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m05.cjs:29:488\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m05.cjs:13:36)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m05.cjs:29:2"
+    }
+  }
+]

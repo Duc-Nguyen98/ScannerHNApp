@@ -1,0 +1,992 @@
+{
+  "contract_version": "motion-1.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "baseline_working_diff_hash": "0b7603d797bc47da74c961fb381dab8ae5ca089f00395b36b808718ea524dc49",
+  "working_diff_hash": "ba50b7198cae7e8b8d805c77fee1c2fa7261f204f2170b201811e9ebba69051f",
+  "baselineAppSourceHash": "e968ad9ebd0875cfcf784d13754942b77d1cb8e515df7373c18ea3c1e5ff9767",
+  "appSourceHash": "aac2c60e5952b4a804227974433a5bff13cc9d931ecdd4a0784cc64e39b3e55d",
+  "target_kind": "prototype-local-ui-fixture",
+  "current_prompt": "MOTION_P13",
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "completed_panel_ids": [
+    "P01.S01",
+    "P01.S02",
+    "P02.S01",
+    "P03.S01",
+    "P03.S02",
+    "P03.S03",
+    "P03.S04",
+    "P04.S01",
+    "P04.S02",
+    "P04.S03",
+    "P04.S04",
+    "P05.S01",
+    "P05.S02",
+    "P05.S03",
+    "P05.S04",
+    "P06.S01",
+    "P06.S02",
+    "P06.S03",
+    "P06.S04",
+    "P07.S01",
+    "P07.S02",
+    "P07.S03",
+    "P07.S04",
+    "P08.S01",
+    "P08.S02",
+    "P08.S03",
+    "P08.S04",
+    "P09.S01",
+    "P09.S02",
+    "P09.S03",
+    "P09.S04",
+    "P10.S01",
+    "P10.S02",
+    "P10.S03",
+    "P10.S04",
+    "P11.S01",
+    "P11.S02",
+    "P11.S03",
+    "P11.S04",
+    "P12.S01",
+    "P12.S02",
+    "P12.S03",
+    "P12.S04",
+    "P13.S01",
+    "P13.S02",
+    "P13.S03",
+    "P13.S04"
+  ],
+  "verification": {
+    "prompt": "MOTION_P13",
+    "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+    "modes": [
+      "auto",
+      "os-reduced",
+      "off"
+    ],
+    "motion_browser_groups": 24,
+    "shell_browser_groups": 36,
+    "node_tests": 27,
+    "geometry_equal": 12,
+    "pixel_equal": 11,
+    "pixel_difference_note": "Auto S04: footer shadow pixels at y868-875; no geometry/style/fixture change, pixel-perfect not claimed. Other11 comparisons identical.",
+    "domain_equal": true,
+    "final_domain": {
+      "readOperations": 4,
+      "hardware": 0,
+      "pageCalls": "9 lÆ°á»£t táº£i trang"
+    },
+    "profile": [
+      {
+        "mode": "auto",
+        "before": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 278
+        },
+        "after": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 260
+        },
+        "node_delta": 0,
+        "append_wall_delta_ms": -18
+      },
+      {
+        "mode": "os-reduced",
+        "before": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 265
+        },
+        "after": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 306
+        },
+        "node_delta": 0,
+        "append_wall_delta_ms": 41
+      },
+      {
+        "mode": "off",
+        "before": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 267
+        },
+        "after": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 285
+        },
+        "node_delta": 0,
+        "append_wall_delta_ms": 18
+      }
+    ],
+    "virtualization": "NOT_ADDED: existing1000-source fixture loads10 then20 rows,335nodes; native pagination retained. Profile is not a full1000-render/hardware benchmark.",
+    "source_delta_bytes": 3003,
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "evidence_root": "D:\\CodexTemp\\ScannerHNApp-M13\\evidence",
+    "shell_evidence": "D:/CodexTemp/ScannerHNApp-M13/shell-regression",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "flow_regression": "PASS",
+    "visual": "USER_REVIEW_PENDING_SHADOW_DELTA_NOT_PIXEL_PERFECT",
+    "report": "handoff/motion/M13/REPORT.md",
+    "primitive_source_unchanged": true
+  },
+  "remaining_panel_ids": [
+    "P14.S01",
+    "P14.S02",
+    "P14.S03",
+    "P14.S04",
+    "P15.S01",
+    "P15.S02",
+    "P15.S03",
+    "P15.S04",
+    "P16.S01",
+    "P16.S02",
+    "P16.S03",
+    "P16.S04",
+    "P17.S01",
+    "P17.S02",
+    "P17.S03",
+    "P17.S04",
+    "P18.S01",
+    "P18.S02",
+    "P18.S03",
+    "P18.S04",
+    "P19.S01",
+    "P19.S02",
+    "P19.S03",
+    "P19.S04",
+    "P20.S01",
+    "P20.S02",
+    "P20.S03",
+    "P20.S04",
+    "P21.S01",
+    "P21.S02",
+    "P21.S03",
+    "P21.S04",
+    "P22.S01",
+    "P22.S02",
+    "P22.S03",
+    "P22.S04",
+    "P23.S01",
+    "P23.S02",
+    "P23.S03",
+    "P23.S04",
+    "P24.S01",
+    "P24.S02",
+    "P24.S03",
+    "P24.S04"
+  ],
+  "affected_dependencies": [
+    "M00 controller/tokens unchanged",
+    "M02 single route owner and mode/security fan-out",
+    "P12 exact-ID read-only navigation",
+    "P15 immediate permission/expiry guards",
+    "P24 waiting copy reused; no approval flow"
+  ],
+  "flow_gate": "handoff/flow/FLOW_GATE.json",
+  "flow_gate_status": "PASS",
+  "blockers": [],
+  "hardware": "NOT_RUN",
+  "virtualization": "DEFERRED",
+  "artifact_paths": [
+    "handoff/motion/M00/REPORT.md",
+    "handoff/motion/M00/STACK_DECISION.md",
+    "handoff/motion/M00/OWNERSHIP.md",
+    "handoff/motion/M00/before-evidence/flow-repaired-guard-final/baseline.json",
+    "handoff/motion/M00/verification/results.json",
+    "handoff/motion/MOTION_COVERAGE.csv",
+    "handoff/motion/M01/REPORT.md",
+    "handoff/motion/M01/evidence/verification.json",
+    "handoff/motion/M01/evidence/submit-actual-frame-trace.json",
+    "handoff/motion/M02/REPORT.md",
+    "handoff/motion/M02/evidence/results.json",
+    "handoff/motion/M02/evidence/source-manifest.json",
+    "handoff/motion/M03/REPORT.md",
+    "handoff/motion/M03/evidence/results.json",
+    "handoff/motion/M03/evidence/source-manifest.json",
+    "handoff/motion/M05/REPORT.md",
+    "handoff/motion/M05/SOURCE_MANIFEST.json",
+    "handoff/motion/M05/evidence/results.json",
+    "handoff/motion/M06/REPORT.md",
+    "handoff/motion/M06/SOURCE_MANIFEST.json",
+    "handoff/motion/M06/evidence/results.json",
+    "handoff/motion/M07/REPORT.md",
+    "handoff/motion/M07/SOURCE_MANIFEST.json",
+    "handoff/motion/M07/evidence/results.json",
+    "handoff/motion/M08/REPORT.md",
+    "handoff/motion/M08/SOURCE_MANIFEST.json",
+    "handoff/motion/M08/evidence/results.json",
+    "handoff/motion/M09/REPORT.md",
+    "handoff/motion/M09/SOURCE_MANIFEST.json",
+    "handoff/motion/M09/evidence/verified/results.json",
+    "handoff/motion/M10/REPORT.md",
+    "handoff/motion/M10/REVIEW.html",
+    "handoff/motion/M10/evidence",
+    "handoff/motion/M10/SUMMARY.json",
+    "handoff/motion/M11/REPORT.md",
+    "handoff/motion/M11/REVIEW.html",
+    "handoff/motion/M11/SUMMARY.json",
+    "handoff/motion/M11/SOURCE_MANIFEST.json",
+    "handoff/motion/M12/REPORT.md",
+    "handoff/motion/M12/REVIEW.html",
+    "handoff/motion/M12/SUMMARY.json",
+    "handoff/motion/M12/SOURCE_MANIFEST.json",
+    "handoff/motion/M12/STATIC_COMPARISON.json",
+    "handoff/motion/M13/REPORT.md",
+    "handoff/motion/M13/SUMMARY.json",
+    "handoff/motion/M13/SOURCE_MANIFEST.json",
+    "D:/CodexTemp/ScannerHNApp-M13/evidence"
+  ],
+  "next_action": "User review M13 motion and documented S04 footer-shadow pixel delta. Next authorized motion scope is M14; production/hardware remain NOT_RUN.",
+  "animation_added_to_app": true,
+  "deployed": false,
+  "verification_history": {
+    "M01": {
+      "focused_tests": 79,
+      "state_cases": 21,
+      "layout_cases": 18,
+      "lifecycle_cases": 7,
+      "trace_frame_samples": 15,
+      "visual": "AWAITING_USER_REVIEW_NOT_PIXEL_ACCEPTANCE",
+      "fps": "NOT_MEASURED",
+      "report": "handoff/motion/M01/REPORT.md"
+    },
+    "M02": {
+      "focused_tests": 82,
+      "browser_groups": 36,
+      "kpi_groups": 6,
+      "footer_viewports": 4,
+      "visual": "STATIC_ACTUAL_PRESERVED_MOTION_USER_REVIEW_PENDING",
+      "fps": "NOT_MEASURED",
+      "report": "handoff/motion/M02/REPORT.md"
+    },
+    "M04": {
+      "prompt": "MOTION_P04",
+      "normal": "PASS",
+      "os_reduced": "PASS",
+      "off": "PASS",
+      "panels": 4,
+      "node_tests": 47,
+      "motion_browser_groups": 39,
+      "shell_regression_groups": 36,
+      "manual_regression_groups": 11,
+      "browser_total": 86,
+      "domain_equal_across_modes": true,
+      "operations_per_mode": {
+        "record": 2,
+        "check": 1,
+        "camera": 0
+      },
+      "list_profiles": {
+        "auto": {
+          "accepted": 11,
+          "renderedScanRows": 11,
+          "domNodes": 187,
+          "cameraAnimations": 0
+        },
+        "os-reduced": {
+          "accepted": 11,
+          "renderedScanRows": 11,
+          "domNodes": 187,
+          "cameraAnimations": 0
+        },
+        "off": {
+          "accepted": 11,
+          "renderedScanRows": 11,
+          "domNodes": 187,
+          "cameraAnimations": 0
+        }
+      },
+      "source_bytes_new_motion_consumer": 3142,
+      "static_geometry": "PASS all4panels in3modes against before",
+      "visual": "USER_REVIEW_PENDING",
+      "hardware": "NOT_RUN",
+      "production": "NOT_RUN",
+      "fps": "NOT_MEASURED",
+      "scoped_source_hash": "bedcde493388f513edf8f08c219f81e2cb246b98e36443933df9611295416e8c",
+      "report": "handoff/motion/M04/REPORT.md"
+    },
+    "M05": {
+      "prompt": "MOTION_P05",
+      "normal": "PASS",
+      "os_reduced": "PASS",
+      "off": "PASS",
+      "panels": 4,
+      "node_tests": 64,
+      "motion_browser_groups": 39,
+      "p04_regression_groups": 39,
+      "shell_regression_groups": 36,
+      "manual_regression_groups": 11,
+      "browser_total": 125,
+      "domain_equal_across_modes": true,
+      "operations_per_mode": {
+        "record": 3,
+        "check": 1,
+        "camera": 0
+      },
+      "list_profiles": {
+        "auto": {
+          "rows": 4,
+          "nodes": 142,
+          "accepted": 10
+        },
+        "os-reduced": {
+          "rows": 4,
+          "nodes": 142,
+          "accepted": 10
+        },
+        "off": {
+          "rows": 4,
+          "nodes": 142,
+          "accepted": 10
+        }
+      },
+      "source_byte_delta": 5041,
+      "static_geometry": "PASS12panel-mode combinations against actual before",
+      "visual": "USER_REVIEW_PENDING",
+      "hardware": "NOT_RUN",
+      "production": "NOT_RUN",
+      "fps": "NOT_MEASURED",
+      "report": "handoff/motion/M05/REPORT.md"
+    },
+    "M06": {
+      "prompt": "MOTION_P06",
+      "normal": "PASS",
+      "os_reduced": "PASS",
+      "off": "PASS",
+      "panels": 4,
+      "node_tests": 39,
+      "motion_browser_groups": 36,
+      "shell_regression_groups": 36,
+      "flow_regression_groups": 7,
+      "recent_edge_groups": 2,
+      "browser_total": 81,
+      "domain_equal": true,
+      "operations_per_mode": {
+        "stock": [
+          12,
+          10,
+          1,
+          1
+        ],
+        "history": 7,
+        "hardware": 0,
+        "reads": {
+          "search": 36,
+          "history": 7
+        }
+      },
+      "initial_profiles": {
+        "auto": {
+          "nodes": 120,
+          "rows": 5,
+          "scrollController": "native"
+        },
+        "os-reduced": {
+          "nodes": 120,
+          "rows": 5,
+          "scrollController": "native"
+        },
+        "off": {
+          "nodes": 120,
+          "rows": 5,
+          "scrollController": "native"
+        }
+      },
+      "source_byte_delta": 7072,
+      "static_geometry": "PASS12 panel-mode combinations vs actual before",
+      "visual": "USER_REVIEW_PENDING",
+      "virtualization": "NOT_NEEDED current seed; DEFERRED long-list backend",
+      "fps": "NOT_MEASURED",
+      "production": "NOT_RUN",
+      "hardware": "NOT_RUN",
+      "report": "handoff/motion/M06/REPORT.md"
+    },
+    "M07": {
+      "prompt": "MOTION_P07",
+      "normal": "PASS",
+      "os_reduced": "PASS",
+      "off": "PASS",
+      "panels": 4,
+      "node_tests": 77,
+      "motion_browser_groups": 21,
+      "shell_regression_groups": 36,
+      "flow_regression_groups": 4,
+      "browser_total": 61,
+      "domain_equal": true,
+      "operations_per_mode": {
+        "reads": 14,
+        "mutations": 1
+      },
+      "initial_profiles": {
+        "auto": {
+          "nodes": 446,
+          "rows": 30
+        },
+        "os-reduced": {
+          "nodes": 446,
+          "rows": 30
+        },
+        "off": {
+          "nodes": 446,
+          "rows": 30
+        }
+      },
+      "source_byte_delta": 3620,
+      "static_geometry": "PASS12 panel-mode combinations relative to shell vs actual before",
+      "visual": "USER_REVIEW_PENDING",
+      "virtualization": "NOT_NEEDED existing30rows; DEFERRED long-list backend",
+      "fps": "NOT_MEASURED",
+      "production": "NOT_RUN",
+      "hardware": "NOT_RUN",
+      "report": "handoff/motion/M07/REPORT.md"
+    },
+    "M09": {
+      "prompt": "MOTION_P09",
+      "normal": "PASS",
+      "os_reduced": "PASS",
+      "off": "PASS",
+      "panels": 4,
+      "node_tests": 69,
+      "motion_browser_groups": 27,
+      "shell_regression_groups": 36,
+      "domain_equal": true,
+      "operations_per_mode": 4,
+      "camera_calls_per_mode": 0,
+      "initial_profiles": {
+        "auto": {
+          "rows": 8,
+          "nodes": 149
+        },
+        "os-reduced": {
+          "rows": 8,
+          "nodes": 149
+        },
+        "off": {
+          "rows": 8,
+          "nodes": 149
+        }
+      },
+      "source_byte_delta": 5990,
+      "static_geometry": "PASS12 exact panel-mode comparisons vs actual before",
+      "visual": "USER_REVIEW_PENDING",
+      "virtualization": "NOT_NEEDED current bounded seed; long backend list DEFERRED",
+      "fps": "NOT_MEASURED",
+      "hardware": "NOT_RUN",
+      "production": "NOT_RUN",
+      "report": "handoff/motion/M09/REPORT.md"
+    }
+  },
+  "M04": {
+    "prompt": "MOTION_P04",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 47,
+    "motion_browser_groups": 39,
+    "shell_regression_groups": 36,
+    "manual_regression_groups": 11,
+    "browser_total": 86,
+    "domain_equal_across_modes": true,
+    "operations_per_mode": {
+      "record": 2,
+      "check": 1,
+      "camera": 0
+    },
+    "list_profiles": {
+      "auto": {
+        "accepted": 11,
+        "renderedScanRows": 11,
+        "domNodes": 187,
+        "cameraAnimations": 0
+      },
+      "os-reduced": {
+        "accepted": 11,
+        "renderedScanRows": 11,
+        "domNodes": 187,
+        "cameraAnimations": 0
+      },
+      "off": {
+        "accepted": 11,
+        "renderedScanRows": 11,
+        "domNodes": 187,
+        "cameraAnimations": 0
+      }
+    },
+    "source_bytes_new_motion_consumer": 3142,
+    "static_geometry": "PASS all4panels in3modes against before",
+    "visual": "USER_REVIEW_PENDING",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "fps": "NOT_MEASURED",
+    "scoped_source_hash": "bedcde493388f513edf8f08c219f81e2cb246b98e36443933df9611295416e8c",
+    "report": "handoff/motion/M04/REPORT.md"
+  },
+  "M05": {
+    "prompt": "MOTION_P05",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 64,
+    "motion_browser_groups": 39,
+    "p04_regression_groups": 39,
+    "shell_regression_groups": 36,
+    "manual_regression_groups": 11,
+    "browser_total": 125,
+    "domain_equal_across_modes": true,
+    "operations_per_mode": {
+      "record": 3,
+      "check": 1,
+      "camera": 0
+    },
+    "list_profiles": {
+      "auto": {
+        "rows": 4,
+        "nodes": 142,
+        "accepted": 10
+      },
+      "os-reduced": {
+        "rows": 4,
+        "nodes": 142,
+        "accepted": 10
+      },
+      "off": {
+        "rows": 4,
+        "nodes": 142,
+        "accepted": 10
+      }
+    },
+    "source_byte_delta": 5041,
+    "static_geometry": "PASS12panel-mode combinations against actual before",
+    "visual": "USER_REVIEW_PENDING",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "fps": "NOT_MEASURED",
+    "report": "handoff/motion/M05/REPORT.md"
+  },
+  "M06": {
+    "prompt": "MOTION_P06",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 39,
+    "motion_browser_groups": 36,
+    "shell_regression_groups": 36,
+    "flow_regression_groups": 7,
+    "recent_edge_groups": 2,
+    "browser_total": 81,
+    "domain_equal": true,
+    "operations_per_mode": {
+      "stock": [
+        12,
+        10,
+        1,
+        1
+      ],
+      "history": 7,
+      "hardware": 0,
+      "reads": {
+        "search": 36,
+        "history": 7
+      }
+    },
+    "initial_profiles": {
+      "auto": {
+        "nodes": 120,
+        "rows": 5,
+        "scrollController": "native"
+      },
+      "os-reduced": {
+        "nodes": 120,
+        "rows": 5,
+        "scrollController": "native"
+      },
+      "off": {
+        "nodes": 120,
+        "rows": 5,
+        "scrollController": "native"
+      }
+    },
+    "source_byte_delta": 7072,
+    "static_geometry": "PASS12 panel-mode combinations vs actual before",
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED current seed; DEFERRED long-list backend",
+    "fps": "NOT_MEASURED",
+    "production": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "report": "handoff/motion/M06/REPORT.md"
+  },
+  "M07": {
+    "prompt": "MOTION_P07",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 77,
+    "motion_browser_groups": 21,
+    "shell_regression_groups": 36,
+    "flow_regression_groups": 4,
+    "browser_total": 61,
+    "domain_equal": true,
+    "operations_per_mode": {
+      "reads": 14,
+      "mutations": 1
+    },
+    "initial_profiles": {
+      "auto": {
+        "nodes": 446,
+        "rows": 30
+      },
+      "os-reduced": {
+        "nodes": 446,
+        "rows": 30
+      },
+      "off": {
+        "nodes": 446,
+        "rows": 30
+      }
+    },
+    "source_byte_delta": 3620,
+    "static_geometry": "PASS12 panel-mode combinations relative to shell vs actual before",
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED existing30rows; DEFERRED long-list backend",
+    "fps": "NOT_MEASURED",
+    "production": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "report": "handoff/motion/M07/REPORT.md"
+  },
+  "M08": {
+    "prompt": "MOTION_P08",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 57,
+    "motion_browser_groups": 30,
+    "shell_regression_groups": 36,
+    "domain_equal": true,
+    "history_records": 48,
+    "scan_reference_sessions": 3,
+    "hardware_calls_per_mode": 0,
+    "initial_profiles": {
+      "auto": {
+        "nodes": 144,
+        "rows": 6,
+        "scroll": "native"
+      },
+      "os-reduced": {
+        "nodes": 144,
+        "rows": 6,
+        "scroll": "native"
+      },
+      "off": {
+        "nodes": 144,
+        "rows": 6,
+        "scroll": "native"
+      }
+    },
+    "append_profiles": {
+      "auto": {
+        "rows": 18,
+        "nodes": 336
+      },
+      "os-reduced": {
+        "rows": 18,
+        "nodes": 336
+      },
+      "off": {
+        "rows": 18,
+        "nodes": 336
+      }
+    },
+    "source_byte_delta": 3965,
+    "static_geometry": "PASS12 panel-mode combinations relative to app shell, exact equality with before",
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED current bounded list; long backend list DEFERRED",
+    "fps": "NOT_MEASURED",
+    "production": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "report": "handoff/motion/M08/REPORT.md"
+  },
+  "M09": {
+    "prompt": "MOTION_P09",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 69,
+    "motion_browser_groups": 27,
+    "shell_regression_groups": 36,
+    "domain_equal": true,
+    "operations_per_mode": 4,
+    "camera_calls_per_mode": 0,
+    "initial_profiles": {
+      "auto": {
+        "rows": 8,
+        "nodes": 149
+      },
+      "os-reduced": {
+        "rows": 8,
+        "nodes": 149
+      },
+      "off": {
+        "rows": 8,
+        "nodes": 149
+      }
+    },
+    "source_byte_delta": 5990,
+    "static_geometry": "PASS12 exact panel-mode comparisons vs actual before",
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED current bounded seed; long backend list DEFERRED",
+    "fps": "NOT_MEASURED",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "report": "handoff/motion/M09/REPORT.md"
+  },
+  "source_manifest": "handoff/motion/M13/SOURCE_MANIFEST.json",
+  "working_diff_hash_definition": "M13 scoped before/after changes.patch including untracked consumer; see M13 SOURCE_MANIFEST.",
+  "M10": {
+    "prompt": "MOTION_P10",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 26,
+    "motion_browser_groups": 24,
+    "shell_regression_groups": 36,
+    "static_geometry": "PASS12 exact panel-mode comparisons",
+    "domain_equal": true,
+    "operations_per_mode": [
+      2,
+      2,
+      2
+    ],
+    "payloads_equal": true,
+    "permissions_equal": true,
+    "camera_calls_per_mode": [
+      0,
+      0,
+      0
+    ],
+    "source_byte_delta": 3411,
+    "primitive_source_unchanged": true,
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED",
+    "fps": "NOT_MEASURED",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "report": "handoff/motion/M10/REPORT.md"
+  },
+  "M11": {
+    "prompt": "MOTION_P11",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 68,
+    "motion_browser_groups": 21,
+    "shell_regression_groups": 36,
+    "static_geometry": "PASS12 exact panel-mode comparisons",
+    "domain_equal": true,
+    "operations_per_mode": {
+      "auto": {
+        "password": 2,
+        "revoke": 3,
+        "list": 6,
+        "reconcile": 1
+      },
+      "os-reduced": {
+        "password": 2,
+        "revoke": 3,
+        "list": 6,
+        "reconcile": 1
+      },
+      "off": {
+        "password": 2,
+        "revoke": 3,
+        "list": 6,
+        "reconcile": 1
+      }
+    },
+    "result_signatures_equal": true,
+    "camera_calls_per_mode": [
+      0,
+      0,
+      0
+    ],
+    "source_byte_delta": 3504,
+    "primitive_source_unchanged": true,
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED",
+    "fps": "NOT_MEASURED",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "report": "handoff/motion/M11/REPORT.md",
+    "preflight_repair": "Expiry clears password fields immediately; no credentials captured in evidence"
+  },
+  "M12": {
+    "prompt": "MOTION_P12",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 35,
+    "motion_browser_groups": 27,
+    "shell_regression_groups": 36,
+    "static_geometry": "PASS12 panel-mode comparisons",
+    "pixel_equal": 12,
+    "domain_equal": true,
+    "domain_per_mode": {
+      "auto": {
+        "note": "Motion keeps this draft",
+        "supplier": "fixture-supplier-001",
+        "accepted": [
+          {
+            "sku": "XP-420B",
+            "quantity": 1
+          }
+        ],
+        "outcome": "not-recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "os-reduced": {
+        "note": "Motion keeps this draft",
+        "supplier": "fixture-supplier-001",
+        "accepted": [
+          {
+            "sku": "XP-420B",
+            "quantity": 1
+          }
+        ],
+        "outcome": "not-recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "off": {
+        "note": "Motion keeps this draft",
+        "supplier": "fixture-supplier-001",
+        "accepted": [
+          {
+            "sku": "XP-420B",
+            "quantity": 1
+          }
+        ],
+        "outcome": "not-recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      }
+    },
+    "hardware_calls_per_mode": [
+      0,
+      0,
+      0
+    ],
+    "source_byte_delta": 4944,
+    "primitive_source_unchanged": true,
+    "list_profile": {
+      "nodes": 405,
+      "rows": 24
+    },
+    "dom_delta": 0,
+    "virtualization": "NOT_NEEDED_CURRENT24_ROWS;STRESS_DEFERRED",
+    "visual": "USER_REVIEW_PENDING",
+    "fps": "NOT_MEASURED",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "report": "handoff/motion/M12/REPORT.md"
+  },
+  "current_source_identity": "M13 scoped SOURCE_MANIFEST; global appSourceHash remains historical.",
+  "M13": {
+    "prompt": "MOTION_P13",
+    "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+    "modes": [
+      "auto",
+      "os-reduced",
+      "off"
+    ],
+    "motion_browser_groups": 24,
+    "shell_browser_groups": 36,
+    "node_tests": 27,
+    "geometry_equal": 12,
+    "pixel_equal": 11,
+    "pixel_difference_note": "Auto S04: footer shadow pixels at y868-875; no geometry/style/fixture change, pixel-perfect not claimed. Other11 comparisons identical.",
+    "domain_equal": true,
+    "final_domain": {
+      "readOperations": 4,
+      "hardware": 0,
+      "pageCalls": "9 lÆ°á»£t táº£i trang"
+    },
+    "profile": [
+      {
+        "mode": "auto",
+        "before": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 278
+        },
+        "after": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 260
+        },
+        "node_delta": 0,
+        "append_wall_delta_ms": -18
+      },
+      {
+        "mode": "os-reduced",
+        "before": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 265
+        },
+        "after": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 306
+        },
+        "node_delta": 0,
+        "append_wall_delta_ms": 41
+      },
+      {
+        "mode": "off",
+        "before": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 267
+        },
+        "after": {
+          "rows": 20,
+          "nodes": 335,
+          "appendWallMs": 285
+        },
+        "node_delta": 0,
+        "append_wall_delta_ms": 18
+      }
+    ],
+    "virtualization": "NOT_ADDED: existing1000-source fixture loads10 then20 rows,335nodes; native pagination retained. Profile is not a full1000-render/hardware benchmark.",
+    "source_delta_bytes": 3003,
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "evidence_root": "D:\\CodexTemp\\ScannerHNApp-M13\\evidence",
+    "shell_evidence": "D:/CodexTemp/ScannerHNApp-M13/shell-regression",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "flow_regression": "PASS",
+    "visual": "USER_REVIEW_PENDING_SHADOW_DELTA_NOT_PIXEL_PERFECT",
+    "report": "handoff/motion/M13/REPORT.md",
+    "primitive_source_unchanged": true
+  }
+}

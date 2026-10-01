@@ -1,0 +1,130 @@
+--- before/docs/flows/inbound/inbound.mjs
++++ after/docs/flows/inbound/inbound.mjs
+@@ -88,6 +88,7 @@
+       previousMessage=s.message;
+       renderScanException({root,owner:'p04',state:s,canCheck:flow.canCheck(),onSize});
+       exceptionExperience.exception(s,flow.canCheck());
++      motion.commit(s);
+       return;
+     }
+     let body, footer;
+--- before/docs/flows/nfc/nfc.mjs
++++ after/docs/flows/nfc/nfc.mjs
+@@ -115,7 +115,7 @@
+   const dialog=document.createElement('dialog');dialog.className='p07-dialog';dialog.setAttribute('aria-labelledby','p07-detail-title');
+   dialog.innerHTML=`<h2 class="app-modal-heading" id="p07-detail-title"><button class="p07-dialog-back" data-p07="close-detail" aria-label="Quay lại màn trước">${icon('back')}</button><span>Thông tin thẻ ${esc(tag.label)}</span></h2><div class="app-modal-body" tabindex="0" role="region" aria-label="Chi tiết thẻ NFC"><dl>${row('Mã thẻ (UID)',esc(tag.uid),'',copy(tag.uid))}${row('Trạng thái',chip(tag.status))}${row('Sản phẩm',esc(tag.product?.name))}${row('SKU',esc(tag.product?.sku))}${row('Serial',esc(tag.product?.serial))}${row(tag.status==='unlinked'?'Ngày tạo':'Cập nhật',esc(tag.date))}</dl><p class="p07-hint">Thông tin hiện tại của thẻ. Chưa có nguồn dữ liệu lịch sử thao tác.</p></div><footer class="app-modal-footer"><button class="p07-secondary" data-p07="close-detail">Đóng</button></footer>`;
+   detailTagId=id;detailTrigger=document.activeElement;detailRoute.begin();
+-  detailModal=openAppModal({screen,parent:root.querySelector('.p07-app'),dialog,tools,dismissOnBackdrop:false,initialFocus:'footer [data-p07="close-detail"]',onClose:()=>{detailModal=null;detailTagId=null;detailRoute.closed();}});
++  detailModal=openAppModal({motionMode:root.querySelector('[data-panel="P17.S03"]')?motionMode:null,screen,parent:root.querySelector('.p07-app'),dialog,tools,dismissOnBackdrop:false,initialFocus:'footer [data-p07="close-detail"]',onClose:()=>{detailModal=null;detailTagId=null;detailRoute.closed();}});
+  }
+  async function onClick(e){
+   if(!active)return;const b=e.target.closest('button');if(!b||b.disabled||!root.contains(b))return;
+@@ -177,9 +177,9 @@
+  review.querySelector('[data-p07-read-tag]').addEventListener('change',e=>{flow.selectReadTag(e.target.value);review.querySelector('[data-p07-read-tag]').focus({preventScroll:true});});
+  review.querySelector('[data-p07-scenario]').addEventListener('change',e=>{const s=flow.snapshot();if(s.busy||s.unknown)return;adapter.setScenario(e.target.value);flow.scenarioChanged();review.querySelector('[data-p07-scenario]').focus({preventScroll:true});});
+  return {
+-  setMotionMode:value=>motion.setMode(value),cancelMotion:()=>motion.cancel(),
++  setMotionMode:value=>{motionMode=value;motion.setMode(value);detailModal?.setMotionMode(value);},cancelMotion:()=>{motion.cancel();detailModal?.cancelMotion();},
+   show(context={}){backPending=false;detailModal?.close({restoreFocus:false});active=true;motion.activate(flow.snapshot());review.hidden=false;if(context.selectedNfcProduct)flow.select(context.selectedNfcProduct);else if(!context.restoreNfc){const panel=Number(new URLSearchParams(location.hash.split('?')[1]).get('panel')||1);if(!flow.panel(panel))flow.panel(1);}history.replaceState(history.state,'',hashFor(flow.snapshot().panel));render();if(pickerReturn&&flow.snapshot().panel===2){const saved=pickerReturn;pickerReturn=null;root.querySelector('.p07-scroll').scrollTop=saved.scroll;root.querySelector(`[data-p07="${saved.action}"]`)?.focus({preventScroll:true});}},
+   hide(){backPending=false;exceptionNavigation.hide();announcement.clear();for(const timer of copyTimers)clearTimeout(timer);copyTimers.clear();composing=false;if(active&&flow.snapshot().panel===1)listTop=root.querySelector('.p07-scroll')?.scrollTop||0;active=false;motion.hide();flow.stopRead();feedback.clear();detailModal?.close({restoreFocus:false});review.hidden=true;},
+-  dispose(){exceptionNavigation.dispose();announcement.dispose();for(const timer of copyTimers)clearTimeout(timer);copyTimers.clear();disposed=true;feedback.dispose();detailRoute.dispose();detailModal?.close({restoreFocus:false});flow.dispose();review.remove();window.removeEventListener('popstate',onDetailNavigation,true);window.removeEventListener('hashchange',onDetailNavigation,true);root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('compositionstart',onCompositionStart);root.removeEventListener('compositionend',onCompositionEnd);root.removeEventListener('keydown',onKey);root.removeEventListener('scroll',onScroll,true);},
++  dispose(){motion.dispose();exceptionNavigation.dispose();announcement.dispose();for(const timer of copyTimers)clearTimeout(timer);copyTimers.clear();disposed=true;feedback.dispose();detailRoute.dispose();detailModal?.close({restoreFocus:false});flow.dispose();review.remove();window.removeEventListener('popstate',onDetailNavigation,true);window.removeEventListener('hashchange',onDetailNavigation,true);root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('compositionstart',onCompositionStart);root.removeEventListener('compositionend',onCompositionEnd);root.removeEventListener('keydown',onKey);root.removeEventListener('scroll',onScroll,true);},
+  };
+ }
+--- before/docs/flows/outbound/outbound.mjs
++++ after/docs/flows/outbound/outbound.mjs
+@@ -117,6 +117,7 @@
+       previousMessage=s.message;
+       renderScanException({root,owner:'p05',state:s,canCheck:flow.canCheck(),onSize});
+       exceptionExperience.exception(s,flow.canCheck());
++      motion.commit(s);
+       return;
+     }
+     let body, footer;
+--- before/docs/flows/scan-exceptions/style.css
++++ after/docs/flows/scan-exceptions/style.css
+@@ -64,3 +64,9 @@
+ .p17-identity {padding:8px 12px;}
+ .p17-identity summary {min-height:44px;line-height:24px;padding:10px 0;}
+ .p17-button[aria-busy=true] {cursor:progress!important;}
++/* M17: same 24px icon slot, only a pending status read drives this indicator. */
++.p17-status-spinner{display:inline-block;width:24px;height:24px;flex-shrink:0;border:2px solid #ffffff66;border-top-color:currentColor;border-radius:50%;}
++.p17-status-spinner[data-running=true]{animation:p17-status-turn .9s linear infinite;}
++[inert] .p17-status-spinner{animation-play-state:paused!important;}
++@keyframes p17-status-turn{to{transform:rotate(360deg)}}
++@media(prefers-reduced-motion:reduce){.p17-status-spinner[data-running=true]{animation:none}}
+--- before/docs/flows/scan-exceptions/view.mjs
++++ after/docs/flows/scan-exceptions/view.mjs
+@@ -38,7 +38,7 @@
+  }else{
+   title=owner==='p05'?'Gửi phiếu xuất kho':'Gửi phiếu nhập kho';
+   body=`<section class="p17-verifying"><span class="p17-clock">${icon('clock')}</span><h2>${verificationText(state,canCheck)}</h2><p>${state.busy?'Hệ thống đang kiểm tra trạng thái tạo phiếu. Vui lòng chờ.':!canCheck?'Mở thông tin yêu cầu để đối chiếu với người phụ trách Web.':'Chưa xác định phiếu đã được ghi nhận. Kiểm tra trạng thái trước khi gửi lại.'}</p></section>`+card('Thông tin phiếu','document',owner==='p05'?'outbound':'inbound',value('Số phiếu',d.number)+value('Loại phiếu',owner==='p05'?'Xuất kho':'Nhập kho')+value('Ngày gửi',state.sentAt)+value('Người gửi',d.actorName))+info('Không gửi lại để tránh tạo trùng phiếu. Mã hợp lệ và định danh của lần gửi được giữ nguyên.')+(!canCheck?`<section class="p17-warning p17-small"><p>Chưa có nguồn tra trạng thái khả dụng. Cần đối chiếu với người phụ trách Web bằng thông tin yêu cầu bên dưới; chưa thể gửi lại.</p></section>`:'')+`<details id="${owner}-reconciliation" class="p17-identity" ${identityOpen?'open':''}><summary data-${owner}="identity">Thông tin đối chiếu</summary><dl>${value('Request ID',state.request?.requestId)}${value('ID phiếu',d.documentId)}${value('Phiên quét',d.scanSessionId)}${value('Version',d.version)}</dl>${button('copy-reconciliation','Sao chép thông tin yêu cầu',true)}</details>`;
+-  footer=(canCheck?button('check',`${icon('clock')} ${state.busy?'Đang kiểm tra…':'Kiểm tra trạng thái'}`):button('review-reconciliation',`${icon('info')} Thông tin đối chiếu`))+button('send','Gửi lại',true,true)+`<p class="p17-footer-hint">Chỉ gửi lại khi nguồn xác nhận chưa tạo phiếu và cho phép dùng cùng yêu cầu.</p>`;
++  footer=(canCheck?button('check',`${state.busy?'<span class="p17-status-spinner" data-hn-motion-consumer="UnknownState" data-running="false" aria-hidden="true"></span>':icon('clock')} ${state.busy?'Đang kiểm tra…':'Kiểm tra trạng thái'}`):button('review-reconciliation',`${icon('info')} Thông tin đối chiếu`))+button('send','Gửi lại',true,true)+`<p class="p17-footer-hint">Chỉ gửi lại khi nguồn xác nhận chưa tạo phiếu và cho phép dùng cùng yêu cầu.</p>`;
+  }
+  root.innerHTML=`<section class="${owner}-app p17-app" data-panel="${panel}" aria-busy="${!!state.busy}"><header class="p17-header">${button(panel==='P17.S03'?'exception-cancel':panel==='P17.S04'?'home':'exception-return',icon('back'),true)}<h1 tabindex="-1">${title}</h1></header><div class="p17-sheet">${context}<div class="p17-scroll" role="region" aria-label="Nội dung ngoại lệ quét" tabindex="0">${body}</div><footer class="p17-footer">${footer}</footer></div></section>`;
+  root.querySelector('.p17-header button').setAttribute('aria-label',panel==='P17.S04'?'Về Trang chủ, giữ phiếu để đối chiếu':'Quay lại');
+--- before/docs/flows/shared/motion/scan-flow-feedback.mjs
++++ after/docs/flows/shared/motion/scan-flow-feedback.mjs
+@@ -2,10 +2,15 @@
+ 
+ // Scan/Form/SubmitFeedback only; no commands, camera, router or scroll ownership.
+ export function mountScanFlowFeedback({root,isActive,prefix,reviewNotice=null,requested='auto'}) {
+-  let controller=null,disposed=false;
++  let controller=null,disposed=false,lastState=null;
++  const doc=root.ownerDocument;
+   const seenEvents=new Set(),seenReceipts=new Set(),errors=new Map(),seenNotices=new Set();
+   const active=()=>!disposed&&isActive()&&!root.hidden&&!root.closest('[inert]')&&!root.closest('.hn-screen')?.querySelector('.p03-host:not([hidden]),.app-modal-host');
+   function label(node,consumer){if(node)node.dataset.hnMotionConsumer=consumer;return node;}
++  function statusVisibility(){
++    const node=root.querySelector(`.p17-app.${prefix}-app .p17-status-spinner`);
++    if(node)node.dataset.running=String(!!controller&&controller.mode==='auto'&&!doc.hidden&&active()&&lastState?.unknown===true&&lastState?.busy===true);
++  }
+   function focus(event){
+     if(!controller||!active()||!event.target.matches(`input:not([readonly]):not([disabled]),textarea:not([readonly]):not([disabled]),[data-${prefix}-select]:not([disabled])`))return;
+     const node=event.target.closest(`.${prefix}-input`);if(node)controller.noticeFeedback(label(node,'FormFeedback'));
+@@ -13,20 +18,29 @@
+   root.addEventListener('focusin',focus);
+   return {
+     activate(state){
++      lastState=state;
+       // A mounted/restored draft is existing data, not a new scan event.
+       if(state){for(const event of state.attempts||[])if(event.eventId)seenEvents.add(event.eventId);
+         if(state.recorded&&state.request?.requestId)seenReceipts.add(state.request.requestId);
+         const notice=reviewNotice?.(state);if(notice)seenNotices.add(notice.key);}
+-      if(!disposed&&!controller)controller=createMotionController({element:root,requested});
++      if(!disposed&&!controller){controller=createMotionController({element:root,requested});doc.addEventListener('visibilitychange',statusVisibility);}
+     },
+-    setMode(value){requested=value;controller?.setMode(value);},
++    setMode(value){requested=value;controller?.setMode(value);statusVisibility();},
+     beforeRender(){controller?.cancel();},
+     validation(node,key,message){const old=errors.get(key)||'';errors.set(key,message);if(old&&!message)controller?.cancel();if(message&&old!==message&&active())controller?.noticeFeedback(label(node,'FormFeedback'));},
+     commit(state){
++      lastState=state;statusVisibility();
+       for(const event of state.attempts){
+         if(!event.eventId||seenEvents.has(event.eventId))continue;
+         seenEvents.add(event.eventId); // Includes hidden/filtered/off events: never replay later.
+-        if(event.kind!=='valid'||!active())continue;
++        if(!active())continue;
++        if(state.exception&&['invalid','blocked'].includes(event.kind)){
++          const conflict=state.exception.panel==='P17.S02';
++          const node=root.querySelector(conflict?'.p17-warning':'.p17-warning>div');
++          controller?.noticeFeedback(label(node,conflict?'ConflictNotice':'ScanFeedback'));
++          continue;
++        }
++        if(event.kind!=='valid')continue;
+         const row=[...root.querySelectorAll('[data-scan-event]')].find(n=>n.dataset.scanEvent===event.eventId);
+         if(row)controller?.rowFeedback(label(row.querySelector(`.${prefix}-attempt-code`),'ScanFeedback'));
+       }
+@@ -41,8 +55,8 @@
+         if(active())controller?.rowFeedback(label(root.querySelector('.hn-waiting-hero'),'SubmitFeedback'));
+       }
+     },
+-    cancel(){controller?.cancel();},
+-    hide(){controller?.dispose();controller=null;},
+-    dispose(){disposed=true;controller?.dispose();controller=null;seenEvents.clear();seenReceipts.clear();errors.clear();seenNotices.clear();root.removeEventListener('focusin',focus);},
++    cancel(){controller?.cancel();const node=root.querySelector(`.p17-app.${prefix}-app .p17-status-spinner`);if(node)node.dataset.running='false';},
++    hide(){if(controller){controller.dispose();controller=null;doc.removeEventListener('visibilitychange',statusVisibility);}statusVisibility();},
++    dispose(){disposed=true;this.hide();lastState=null;seenEvents.clear();seenReceipts.clear();errors.clear();seenNotices.clear();root.removeEventListener('focusin',focus);},
+   };
+ }

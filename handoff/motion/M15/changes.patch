@@ -1,0 +1,198 @@
+--- before/docs/flows/system/view.mjs
++++ docs/flows/system/view.mjs
+@@ -1,3 +1,4 @@
++import {mountSystemMotion} from './motion.mjs';
+ import {createDialogRoute} from '../shared/dialog-route.mjs';
+ 
+ import {connectionAction,cameraActions} from './presentation.mjs';
+@@ -46,15 +47,23 @@
+ 
+ // Layer within the caller shell: keep caller DOM, scroll, form and owner flow alive.
+ 
+-export function mountSystem({screen,tools,onHome,onLogin,onExpire,onForbidden=()=>{},routeKey='hnP15',onNfc=onHome,getContext=()=>null,isExpired=()=>false,contact=null,deviceAccess=createDeviceAccess()}) {
++export function mountSystem({screen,tools,motionMode='auto',onShow=()=>{},onHome,onLogin,onExpire,onForbidden=()=>{},routeKey='hnP15',onNfc=onHome,getContext=()=>null,isExpired=()=>false,contact=null,deviceAccess=createDeviceAccess()}) {
+ 
+   const root=document.createElement('section'); root.className='p15-app';root.hidden=true;screen.append(root);
+ 
+-  let active=false,disposed=false,kind=null,returnFocus=null,callerTitle='',saved=[],readRetry=null,sequence=0,pendingExpired=false,details={};
+-
+-  const observer=new MutationObserver(()=>{if(pendingExpired&&!screen.querySelector('.app-modal-host,.p03-host:not([hidden])')){pendingExpired=false;show('expired',{history:false});}});
+-
+-  observer.observe(screen,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
++  let active=false,disposed=false,kind=null,returnFocus=null,callerTitle='',saved=[],readRetry=null,sequence=0,details={};
++
++  const motion=mountSystemMotion({root,requested:motionMode,active:()=>active&&!disposed});
++  function concealCaller(includeModal=false){
++    if(!saved.length){returnFocus=document.activeElement;callerTitle=document.title;}
++    for(const e of [...screen.children].filter(e=>e!==root&&!e.matches('.hn-nav')&&(includeModal||!e.matches('.app-modal-host')))){
++      if(!saved.some(([node])=>node===e))saved.push([e,e.inert,e.style.visibility]);
++      if(!e.inert)e.inert=true;if(e.style.visibility!=='hidden')e.style.visibility='hidden';
++    }
++  }
++  const observer=new MutationObserver(()=>{if(active&&['expired','forbidden'].includes(kind))concealCaller();});
++
++  observer.observe(screen,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','inert']});
+ 
+   const route=createDialogRoute({history,location,key:routeKey});
+ 
+@@ -64,6 +73,7 @@
+ 
+   function render(focus=true) {
+ 
++    motion.cancel();
+     const priorScroll=root.querySelector('.p15-state-scroll,.p15-body')?.scrollTop||0;
+ 
+     const priorAction=root.contains(document.activeElement)?document.activeElement.closest('[data-p15]')?.dataset.p15:null;
+@@ -126,49 +136,47 @@
+ 
+     if(active&&kind==='expired'&&next==='expired')return true;
+ 
+-    if(route.isClosing()){const stamp=sequence;void route.ready().then(()=>{if(!disposed&&sequence===stamp)show(next,options);});return true;}
++    const security=['expired','forbidden'].includes(next);
++    if(security){onShow();motion.cancel();concealCaller(true);}
++    if(!security&&route.isClosing()){const stamp=sequence;void route.ready().then(()=>{if(!disposed&&sequence===stamp)show(next,options);});return true;}
+ 
+     if(next==='device'&&options.device&&options.error)deviceAccess.reportFailure(options.device,options.error,{fixture:options.fixture});
+ 
+     // Owner feedback has priority; route on a later explicit action if occupied.
+ 
+-    if(screen.querySelector('.app-modal-host,.p03-host:not([hidden])')){
+-
+-      if(next==='expired'){pendingExpired=true;screen.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());}
++    if(security){feedback.clear();screen.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());}
++    if(!security&&screen.querySelector('.app-modal-host,.p03-host:not([hidden])')){
++
++
+ 
+       return false;
+ 
+     }
+ 
+-    details={...options,context:getContext()};
++    details={...options,context:next==='expired'?null:getContext()};
+ 
+     sequence++;
+ 
+     if(!active){
+-
+-      returnFocus=document.activeElement;callerTitle=document.title;
+-
+-      saved=[...screen.children].filter(e=>e!==root&&!e.matches('.hn-nav')).map(e=>[e,e.inert,e.style.visibility]);
+-
+-      saved.forEach(([e])=>{e.inert=true;e.style.visibility='hidden';});
+-
+-      if(options.history!==false)route.begin();
+-
+-    }
+-
++      concealCaller();
++      if(options.history!==false&&!route.isClosing())route.begin();
++    }
++    onShow();
+     active=true;kind=next;root.hidden=false;screen.classList.add('p15-screen');
+ 
+     root.style.bottom=`${screen.querySelector('.hn-nav')?.offsetHeight||0}px`;
+ 
+     readRetry?.cancel();readRetry=createReadRetry({read:options.read,isActive:()=>active&&!disposed&&!isExpired()});
+ 
+-    render();return true;
++    motion.activate();render();
++    motion.notice(root.querySelector('.p15-state-copy'),next,JSON.stringify([details.context?.documentId||'',details.intent||'',details.actionLabel||'']));
++    return true;
+ 
+   }
+ 
+   function hide({restore=true}={}) {
+ 
+-    if(!active)return;sequence++;feedback.clear();readRetry?.cancel();active=false;root.hidden=true;screen.classList.remove('p15-screen');
++    if(!active)return;motion.hide();sequence++;feedback.clear();readRetry?.cancel();active=false;root.hidden=true;screen.classList.remove('p15-screen');
+ 
+     saved.forEach(([e,inert,visibility])=>{e.inert=inert;e.style.visibility=visibility;});saved=[];document.title=callerTitle;
+ 
+@@ -214,7 +222,7 @@
+ 
+   async function click(event){
+ 
+-    if(!active||disposed||root.hidden)return;
++    if(!active||disposed||root.hidden||screen.closest('[hidden],[inert]'))return;
+ 
+     const b=event.target.closest('[data-p15]');if(!b||!root.contains(b)||b.disabled||screen.querySelector('.app-modal-host'))return;
+ 
+@@ -260,11 +268,11 @@
+ 
+   window.addEventListener('popstate',routeEvent,true);window.addEventListener('hashchange',routeEvent,true);
+ 
+-  return {show,hide,leave,get active(){return active;},get kind(){return kind;},
++  return {show,hide,leave,setMotionMode:value=>motion.setMode(value),cancelMotion:()=>motion.cancel(),suspendMotion:()=>motion.hide(),get active(){return active;},get kind(){return kind;},
+ 
+     navigation,
+ 
+-    dispose(){pendingExpired=false;observer.disconnect();hide({restore:false});disposed=true;route.dispose();feedback.dispose();root.remove();window.removeEventListener('popstate',routeEvent,true);window.removeEventListener('hashchange',routeEvent,true);window.removeEventListener('keydown',keydown,true);},
++    dispose(){observer.disconnect();hide({restore:false});disposed=true;motion.dispose();route.dispose();feedback.dispose();root.remove();window.removeEventListener('popstate',routeEvent,true);window.removeEventListener('hashchange',routeEvent,true);window.removeEventListener('keydown',keydown,true);},
+ 
+   };
+ 
+--- before/docs/flows/system/motion.mjs
++++ docs/flows/system/motion.mjs
+@@ -0,0 +1,29 @@
++import {createMotionController} from '../shared/motion/motion-primitives.mjs';
++
++// M15 owns only notice descendants and button opacity. Shell owns routing;
++// the existing overlay owns dialogs. No domain, permission or scroll callbacks.
++export function mountSystemMotion({root,requested='auto',active=()=>true,media}) {
++  let controller=null,disposed=false;
++  const seen=new Set();
++  const usable=()=>!disposed&&active()&&!root.closest('[hidden],[inert]');
++  const mark=(node,name)=>{if(node)node.dataset.motionPrimitive=name;return node;};
++  function press(e){
++    if(e.type==='keydown'&&(e.repeat||e.isComposing||!['Enter',' '].includes(e.key)))return;
++    const button=e.target.closest?.('button');
++    if(!controller||!usable()||!button||!root.contains(button)||button.disabled||button.getAttribute('aria-disabled')==='true'||button.closest('dialog,[hidden],[inert]'))return;
++    controller.pressFeedback(mark(button,'DeviceFeedback'));
++  }
++  root.addEventListener('pointerdown',press);root.addEventListener('keydown',press);
++  return {
++    activate(){if(!disposed&&!controller)controller=createMotionController({element:root,requested,...(media?{media}:{})});},
++    notice(node,kind,identity){
++      if(!['connection','forbidden'].includes(kind))return;
++      const key=JSON.stringify([kind,identity]);if(seen.has(key))return;seen.add(key);
++      if(usable())controller?.noticeFeedback(mark(node,kind==='connection'?'SystemNotice':'BlockingGuard'));
++    },
++    cancel(){controller?.cancel();},
++    setMode(value){requested=value;controller?.setMode(value);},
++    hide(){controller?.dispose();controller=null;},
++    dispose(){disposed=true;controller?.dispose();controller=null;seen.clear();root.removeEventListener('pointerdown',press);root.removeEventListener('keydown',press);},
++  };
++}
+--- before/docs/flows/home/home.mjs
++++ docs/flows/home/home.mjs
+@@ -235,7 +235,7 @@
+   const motionTools=document.createElement('label');
+   motionTools.innerHTML='Motion P02 / AppShell <select id="home-motion-mode"><option value="auto">Tự động theo hệ điều hành</option><option value="reduced">Giảm chuyển động</option><option value="off">Tắt chuyển động</option></select>';
+   const motionSelect=motionTools.querySelector('select');motionSelect.value=motionMode;
+-  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);notifications?.setMotionMode(motionSelect.value);shift?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
++  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);notifications?.setMotionMode(motionSelect.value);shift?.setMotionMode(motionSelect.value);system?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
+   root.querySelector('.hn-tools > details').append(motionTools);
+   function syncDateRefresh(){
+     clearTimeout(dateRefreshTimer);dateRefreshTimer=null;
+@@ -762,7 +762,7 @@
+     if(system?.active&&system.kind===panel)return true;
+     return system?.show(panel,{...options,intent:options.intent||(error.kind==='unknown'?'reconcile':'read'),actionLabel:options.actionLabel})===true;
+   }
+-  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
++  system=mountSystem({screen,motionMode,onShow:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();},onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
+   // Explicit prototype controls stay outside product navigation.
+   const systemTools=document.createElement('details');systemTools.className='p15-tools';
+   systemTools.innerHTML='<summary>P15 · Hệ thống</summary><p>Chỉ mô phỏng lỗi hệ thống. Camera kiểm tra API môi trường thực khi bấm; không kết nối WMS.</p><button data-system-demo="connection">P15.S01 · Kết nối</button><button data-system-demo="expired">P15.S02 · Phiên hết hạn</button><button data-system-demo="forbidden">P15.S03 · Không có quyền</button><button data-system-demo="device">P15.S04 · Quyền thiết bị</button><button data-system-demo="deny">Mô phỏng thu hồi quyền</button><button data-system-demo="allow">Khôi phục quyền fixture</button>';
+@@ -783,9 +783,9 @@
+     dispose() { shellMotion.dispose();motionSelect.onchange=null;warrantySession.dispose();nfcAudit.dispose();disposed = true; system.dispose(); shift.dispose();clearTimeout(dateRefreshTimer); document.removeEventListener('visibilitychange',syncDateRefresh); notifications.dispose();notificationStore.dispose();homeFeedback.dispose();nameRoute.dispose();closeName();dialogRoute.dispose(); if (nameDialog.open) closeName(); inbound.dispose(); outbound.dispose(); lookup.dispose(); nfc.dispose(); historyView.dispose(); warranty.dispose(); profile.dispose(); security.dispose(); documents.dispose(); attachments.dispose(); componentIssue.dispose(); componentHistory.dispose(); componentResume.dispose(); dialogs.dispose(); sizeObserver.disconnect(); window.removeEventListener('resize', fitPreview); window.removeEventListener('popstate', onRoute); window.removeEventListener('hashchange', onRoute); root.removeEventListener('click', onClick); root.replaceChildren(); },
+     enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
+     showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
+-    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
++    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();system.suspendMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
+     resume(){suspended=false;shift.resumeSession();system.hide({restore:false});history.replaceState(null,'',currentHash);showRoute(parseRoute(currentHash));},
+-    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);notifications?.setMotionMode(value);shift?.setMotionMode(value);},
++    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);notifications?.setMotionMode(value);shift?.setMotionMode(value);system?.setMotionMode(value);},
+     snapshot() { return { motion:{mode:shellMotion.mode,active:shellMotion.activeCount},scenario, homeScroll, navigation: structuredClone(lastNavigation) }; },
+   };
+ }

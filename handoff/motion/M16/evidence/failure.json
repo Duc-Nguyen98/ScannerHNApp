@@ -1,0 +1,4269 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: same domain results and operations across modes\n+ actual - expected\n\n  {\n    hardware: 0,\n+   readCalls: 33,\n-   readCalls: 34,\n    seed: [\n      [\n        'fixture-inbound-0005',\n        'waiting',\n        [\n",
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "S01 fixed skeleton/no shimmer; spinner only pending; mode fallback",
+        "S02/S03 opacity140/80/off only, error/CTA immediate and static",
+        "Retry one read, preserves filter/input/focus, no intermediate empty; no extra domain operations",
+        "A slow/B fast; stale A after exit cannot overwrite state or animate",
+        "No replay after Back or repaint; debouncing is text-only until request starts",
+        "Mid-animation off/OS change/hidden/route cancellation; no delayed action or replay",
+        "Stale refresh retains anchor; ten navigation cycles clean listeners; small viewport and reader Back",
+        "Readonly empty creates nothing; expiry cancels current data motion immediately"
+      ],
+      "geometry": {
+        "P16.S01": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\nChưa xác định số kết quả\n\nMới nhất\n\nChờ danh sách tải xong để tìm bằng mã.\n\nĐang tải chứng từ…\nVui lòng chờ trong giây lát",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": null,
+            ".p16-art": null,
+            ".p16-actions": null,
+            ".p16-loading": [
+              18,
+              351,
+              458,
+              511.5
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 100
+        },
+        "P16.S02": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\n0\nkết quả\n\nMới nhất\n\nChưa có chứng từ\n\nBạn chưa có chứng từ nào.\nHãy tạo chứng từ mới để bắt đầu.\n\nTạo chứng từ",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              183,
+              419.125,
+              128,
+              128
+            ],
+            ".p16-actions": [
+              30,
+              698.875,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 74
+        },
+        "P16.S03": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\n0\nkết quả\n\nXóa lọc\nMới nhất\n\nKhông tìm thấy kết quả\n\nKhông có chứng từ phù hợp với “PN-9999”.\nVui lòng thử lại với điều kiện khác.\n\nTừ khóa: PN-9999\n×\nXóa bộ lọc\nSửa từ khóa",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              195,
+              413.71875,
+              104,
+              104
+            ],
+            ".p16-actions": [
+              30,
+              722.265625,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 85
+        },
+        "P16.S04": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\nChưa xác định số kết quả\n\nMới nhất\n\nChờ danh sách tải xong để tìm bằng mã.\n\nKhông tải được dữ liệu\n\nDữ liệu chưa được cập nhật.\nVui lòng thử lại sau.\n\nThử lại",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              183,
+              419.125,
+              128,
+              128
+            ],
+            ".p16-actions": [
+              30,
+              698.875,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 76
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "animations": [
+        {
+          "primitive": "",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DocumentFilter",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DocumentFilter",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DocumentFilter",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        }
+      ],
+      "samples": [
+        {
+          "primitive": "EmptyState",
+          "time": 13,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 13,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 27,
+          "opacity": "0.731665"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 27,
+          "opacity": "0.731665"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 41,
+          "opacity": "0.854887"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 41,
+          "opacity": "0.854887"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 57,
+          "opacity": "0.91594"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 61,
+          "opacity": "0.91594"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 73,
+          "opacity": "0.951949"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 73,
+          "opacity": "0.951949"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 89,
+          "opacity": "0.974534"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 93,
+          "opacity": "0.974534"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 106,
+          "opacity": "0.988521"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 106,
+          "opacity": "0.988521"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 120,
+          "opacity": "0.996423"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 120,
+          "opacity": "0.996423"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 137,
+          "opacity": "0.999733"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 137,
+          "opacity": "0.999733"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 153,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 153,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 169,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 169,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 185,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 185,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 18,
+          "opacity": "0.731928"
+        },
+        {
+          "primitive": "DataState",
+          "time": 23,
+          "opacity": "0.731928"
+        },
+        {
+          "primitive": "DataState",
+          "time": 37,
+          "opacity": "0.855015"
+        },
+        {
+          "primitive": "DataState",
+          "time": 37,
+          "opacity": "0.855015"
+        },
+        {
+          "primitive": "DataState",
+          "time": 49,
+          "opacity": "0.91601"
+        },
+        {
+          "primitive": "DataState",
+          "time": 53,
+          "opacity": "0.91601"
+        },
+        {
+          "primitive": "DataState",
+          "time": 65,
+          "opacity": "0.951993"
+        },
+        {
+          "primitive": "DataState",
+          "time": 65,
+          "opacity": "0.951993"
+        },
+        {
+          "primitive": "DataState",
+          "time": 80,
+          "opacity": "0.974561"
+        },
+        {
+          "primitive": "DataState",
+          "time": 87,
+          "opacity": "0.974561"
+        },
+        {
+          "primitive": "DataState",
+          "time": 98,
+          "opacity": "0.988538"
+        },
+        {
+          "primitive": "DataState",
+          "time": 98,
+          "opacity": "0.988538"
+        },
+        {
+          "primitive": "DataState",
+          "time": 112,
+          "opacity": "0.988538"
+        },
+        {
+          "primitive": "DataState",
+          "time": 112,
+          "opacity": "0.988538"
+        },
+        {
+          "primitive": "DataState",
+          "time": 128,
+          "opacity": "0.996431"
+        },
+        {
+          "primitive": "DataState",
+          "time": 129,
+          "opacity": "0.996431"
+        },
+        {
+          "primitive": "DataState",
+          "time": 144,
+          "opacity": "0.999735"
+        },
+        {
+          "primitive": "DataState",
+          "time": 145,
+          "opacity": "0.999735"
+        },
+        {
+          "primitive": "DataState",
+          "time": 160,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 161,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 176,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 176,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 13,
+          "opacity": "0.732029"
+        },
+        {
+          "primitive": "DataState",
+          "time": 14,
+          "opacity": "0.732029"
+        },
+        {
+          "primitive": "DataState",
+          "time": 20,
+          "opacity": "0.732029"
+        },
+        {
+          "primitive": "DataState",
+          "time": 20,
+          "opacity": "0.732029"
+        },
+        {
+          "primitive": "DataState",
+          "time": 33,
+          "opacity": "0.855064"
+        },
+        {
+          "primitive": "DataState",
+          "time": 33,
+          "opacity": "0.855064"
+        },
+        {
+          "primitive": "DataState",
+          "time": 50,
+          "opacity": "0.916038"
+        },
+        {
+          "primitive": "DataState",
+          "time": 50,
+          "opacity": "0.916038"
+        },
+        {
+          "primitive": "DataState",
+          "time": 65,
+          "opacity": "0.95201"
+        },
+        {
+          "primitive": "DataState",
+          "time": 65,
+          "opacity": "0.95201"
+        },
+        {
+          "primitive": "DataState",
+          "time": 82,
+          "opacity": "0.974572"
+        },
+        {
+          "primitive": "DataState",
+          "time": 82,
+          "opacity": "0.974572"
+        },
+        {
+          "primitive": "DataState",
+          "time": 98,
+          "opacity": "0.988544"
+        },
+        {
+          "primitive": "DataState",
+          "time": 98,
+          "opacity": "0.988544"
+        },
+        {
+          "primitive": "DataState",
+          "time": 113,
+          "opacity": "0.996434"
+        },
+        {
+          "primitive": "DataState",
+          "time": 113,
+          "opacity": "0.996434"
+        },
+        {
+          "primitive": "DataState",
+          "time": 129,
+          "opacity": "0.999736"
+        },
+        {
+          "primitive": "DataState",
+          "time": 129,
+          "opacity": "0.999736"
+        },
+        {
+          "primitive": "DataState",
+          "time": 146,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 146,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 161,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 162,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 178,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 178,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 20,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 20,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 33,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 33,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 51,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 51,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 66,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 66,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 83,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 83,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 99,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 99,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 15,
+          "opacity": "0.732029"
+        },
+        {
+          "primitive": "DataState",
+          "time": 27,
+          "opacity": "0.732029"
+        },
+        {
+          "primitive": "DataState",
+          "time": 37,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 37,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 53,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 53,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 70,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 70,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 83,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 83,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 97,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 97,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 132,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 132,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 22,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 22,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 28,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 28,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 41,
+          "opacity": "0.731706"
+        },
+        {
+          "primitive": "DataState",
+          "time": 41,
+          "opacity": "0.731706"
+        },
+        {
+          "primitive": "DataState",
+          "time": 58,
+          "opacity": "0.854907"
+        },
+        {
+          "primitive": "DataState",
+          "time": 58,
+          "opacity": "0.854907"
+        },
+        {
+          "primitive": "DataState",
+          "time": 96,
+          "opacity": "0.974544"
+        },
+        {
+          "primitive": "DataState",
+          "time": 96,
+          "opacity": "0.974544"
+        },
+        {
+          "primitive": "DataState",
+          "time": 107,
+          "opacity": "0.974544"
+        },
+        {
+          "primitive": "DataState",
+          "time": 108,
+          "opacity": "0.974544"
+        },
+        {
+          "primitive": "DataState",
+          "time": 127,
+          "opacity": "0.988527"
+        },
+        {
+          "primitive": "DataState",
+          "time": 127,
+          "opacity": "0.988527"
+        },
+        {
+          "primitive": "DataState",
+          "time": 138,
+          "opacity": "0.996426"
+        },
+        {
+          "primitive": "DataState",
+          "time": 138,
+          "opacity": "0.996426"
+        },
+        {
+          "primitive": "DataState",
+          "time": 153,
+          "opacity": "0.999733"
+        },
+        {
+          "primitive": "DataState",
+          "time": 157,
+          "opacity": "0.999733"
+        },
+        {
+          "primitive": "DataState",
+          "time": 169,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 169,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 186,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 186,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 15,
+          "opacity": "0.731847"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 14,
+          "opacity": "0.731847"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 34,
+          "opacity": "0.854976"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 33,
+          "opacity": "0.854976"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 44,
+          "opacity": "0.915989"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 43,
+          "opacity": "0.915989"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 60,
+          "opacity": "0.951979"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 59,
+          "opacity": "0.951979"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 77,
+          "opacity": "0.951979"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 76,
+          "opacity": "0.951979"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 101,
+          "opacity": ""
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 100,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 19,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 18,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 30,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 29,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 46,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 45,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 63,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 62,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 79,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 78,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 95,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 94,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 110,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 109,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 127,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 126,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 142,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 142,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 158,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 158,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 175,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 174,
+          "opacity": "1"
+        }
+      ],
+      "longTasks": [
+        {
+          "start": 1338.2999999970198,
+          "duration": 54
+        },
+        {
+          "start": 2390.7000000029802,
+          "duration": 80
+        }
+      ],
+      "domain": {
+        "readCalls": 34,
+        "hardware": 0,
+        "seed": [
+          [
+            "fixture-inbound-0005",
+            "waiting",
+            [
+              5,
+              4,
+              2
+            ]
+          ],
+          [
+            "b12-outbound-0004",
+            "posted",
+            [
+              3
+            ]
+          ],
+          [
+            "b12-inbound-0004",
+            "posted",
+            [
+              4
+            ]
+          ],
+          [
+            "b12-outbound-0003",
+            "posted",
+            [
+              5,
+              6
+            ]
+          ],
+          [
+            "p12-stock-PN-0006",
+            "waiting",
+            [
+              6
+            ]
+          ],
+          [
+            "p12-stock-PX-0006",
+            "posted",
+            [
+              7
+            ]
+          ],
+          [
+            "p12-stock-PN-0007",
+            "posted",
+            [
+              8,
+              2
+            ]
+          ],
+          [
+            "p12-stock-PX-0007",
+            "waiting",
+            [
+              2
+            ]
+          ],
+          [
+            "p12-stock-PN-0008",
+            "posted",
+            [
+              3
+            ]
+          ],
+          [
+            "p12-stock-PX-0008",
+            "posted",
+            [
+              4,
+              5
+            ]
+          ],
+          [
+            "p12-stock-PN-0009",
+            "waiting",
+            [
+              5
+            ]
+          ],
+          [
+            "p12-stock-PX-0009",
+            "posted",
+            [
+              6
+            ]
+          ],
+          [
+            "p12-stock-PN-0010",
+            "posted",
+            [
+              7,
+              8
+            ]
+          ],
+          [
+            "p12-stock-PX-0010",
+            "waiting",
+            [
+              8
+            ]
+          ],
+          [
+            "p12-stock-PN-0011",
+            "posted",
+            [
+              2
+            ]
+          ],
+          [
+            "p12-stock-PX-0011",
+            "posted",
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            "b12-warranty-001",
+            "checking",
+            [
+              1
+            ]
+          ],
+          [
+            "b12-warranty-002",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-003",
+            "received",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-004",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-005",
+            "ready",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-006",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-007",
+            "checking",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-008",
+            "returned",
+            [
+              1
+            ]
+          ]
+        ],
+        "writes": 0
+      }
+    },
+    {
+      "mode": "os-reduced",
+      "checks": [
+        "S01 fixed skeleton/no shimmer; spinner only pending; mode fallback",
+        "S02/S03 opacity140/80/off only, error/CTA immediate and static",
+        "Retry one read, preserves filter/input/focus, no intermediate empty; no extra domain operations",
+        "A slow/B fast; stale A after exit cannot overwrite state or animate",
+        "No replay after Back or repaint; debouncing is text-only until request starts",
+        "Mid-animation off/OS change/hidden/route cancellation; no delayed action or replay",
+        "Stale refresh retains anchor; ten navigation cycles clean listeners; small viewport and reader Back",
+        "Readonly empty creates nothing; expiry cancels current data motion immediately"
+      ],
+      "geometry": {
+        "P16.S01": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\nChưa xác định số kết quả\n\nMới nhất\n\nChờ danh sách tải xong để tìm bằng mã.\n\nĐang tải chứng từ…\nVui lòng chờ trong giây lát",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": null,
+            ".p16-art": null,
+            ".p16-actions": null,
+            ".p16-loading": [
+              18,
+              351,
+              458,
+              511.5
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 100
+        },
+        "P16.S02": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\n0\nkết quả\n\nMới nhất\n\nChưa có chứng từ\n\nBạn chưa có chứng từ nào.\nHãy tạo chứng từ mới để bắt đầu.\n\nTạo chứng từ",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              183,
+              419.125,
+              128,
+              128
+            ],
+            ".p16-actions": [
+              30,
+              698.875,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 74
+        },
+        "P16.S03": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\n0\nkết quả\n\nXóa lọc\nMới nhất\n\nKhông tìm thấy kết quả\n\nKhông có chứng từ phù hợp với “PN-9999”.\nVui lòng thử lại với điều kiện khác.\n\nTừ khóa: PN-9999\n×\nXóa bộ lọc\nSửa từ khóa",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              195,
+              413.71875,
+              104,
+              104
+            ],
+            ".p16-actions": [
+              30,
+              722.265625,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 85
+        },
+        "P16.S04": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\nChưa xác định số kết quả\n\nMới nhất\n\nChờ danh sách tải xong để tìm bằng mã.\n\nKhông tải được dữ liệu\n\nDữ liệu chưa được cập nhật.\nVui lòng thử lại sau.\n\nThử lại",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              183,
+              419.125,
+              128,
+              128
+            ],
+            ".p16-actions": [
+              30,
+              698.875,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 76
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "animations": [
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DocumentFilter",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DocumentFilter",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DocumentFilter",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "EmptyState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "primitive": "DataState",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        }
+      ],
+      "samples": [
+        {
+          "primitive": "EmptyState",
+          "time": 14,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 14,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 32,
+          "opacity": "0.832996"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 32,
+          "opacity": "0.832996"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 43,
+          "opacity": "0.936286"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 48,
+          "opacity": "0.936286"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 60,
+          "opacity": "0.9788"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 60,
+          "opacity": "0.9788"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 75,
+          "opacity": "0.996453"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 76,
+          "opacity": "0.996453"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 92,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 92,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 107,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 108,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 123,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 123,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 139,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 139,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 155,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 156,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 172,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 172,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 29,
+          "opacity": "0.832893"
+        },
+        {
+          "primitive": "DataState",
+          "time": 29,
+          "opacity": "0.832893"
+        },
+        {
+          "primitive": "DataState",
+          "time": 45,
+          "opacity": "0.936248"
+        },
+        {
+          "primitive": "DataState",
+          "time": 49,
+          "opacity": "0.936248"
+        },
+        {
+          "primitive": "DataState",
+          "time": 59,
+          "opacity": "0.978784"
+        },
+        {
+          "primitive": "DataState",
+          "time": 59,
+          "opacity": "0.978784"
+        },
+        {
+          "primitive": "DataState",
+          "time": 77,
+          "opacity": "0.996449"
+        },
+        {
+          "primitive": "DataState",
+          "time": 77,
+          "opacity": "0.996449"
+        },
+        {
+          "primitive": "DataState",
+          "time": 87,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 87,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 103,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 104,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 118,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 118,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 134,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 134,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 151,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 151,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 167,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 167,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 182,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 182,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 12,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 13,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 23,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 23,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 36,
+          "opacity": "0.832481"
+        },
+        {
+          "primitive": "DataState",
+          "time": 36,
+          "opacity": "0.832481"
+        },
+        {
+          "primitive": "DataState",
+          "time": 52,
+          "opacity": "0.936099"
+        },
+        {
+          "primitive": "DataState",
+          "time": 54,
+          "opacity": "0.936099"
+        },
+        {
+          "primitive": "DataState",
+          "time": 69,
+          "opacity": "0.978741"
+        },
+        {
+          "primitive": "DataState",
+          "time": 69,
+          "opacity": "0.978741"
+        },
+        {
+          "primitive": "DataState",
+          "time": 84,
+          "opacity": "0.996432"
+        },
+        {
+          "primitive": "DataState",
+          "time": 84,
+          "opacity": "0.996432"
+        },
+        {
+          "primitive": "DataState",
+          "time": 104,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 104,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 117,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 118,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 132,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 132,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 149,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 149,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 165,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 165,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 181,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 181,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 13,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 13,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 31,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 30,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 44,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 43,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 59,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 58,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 78,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 77,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 92,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 92,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 112,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 111,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 21,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 22,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 34,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 35,
+          "opacity": "0.65"
+        },
+        {
+          "primitive": "DataState",
+          "time": 50,
+          "opacity": "0.832563"
+        },
+        {
+          "primitive": "DataState",
+          "time": 50,
+          "opacity": "0.832563"
+        },
+        {
+          "primitive": "DataState",
+          "time": 65,
+          "opacity": "0.936129"
+        },
+        {
+          "primitive": "DataState",
+          "time": 65,
+          "opacity": "0.936129"
+        },
+        {
+          "primitive": "DataState",
+          "time": 82,
+          "opacity": "0.978678"
+        },
+        {
+          "primitive": "DataState",
+          "time": 82,
+          "opacity": "0.978678"
+        },
+        {
+          "primitive": "DataState",
+          "time": 112,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 113,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 114,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 131,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 131,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 155,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 156,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 162,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 166,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 179,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 179,
+          "opacity": "1"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 14,
+          "opacity": "0.832975"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 15,
+          "opacity": "0.832975"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 34,
+          "opacity": "0.936278"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 34,
+          "opacity": "0.936278"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 46,
+          "opacity": "0.978797"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 46,
+          "opacity": "0.978797"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 63,
+          "opacity": "0.978797"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 63,
+          "opacity": "0.978797"
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 80,
+          "opacity": ""
+        },
+        {
+          "primitive": "EmptyState",
+          "time": 80,
+          "opacity": ""
+        },
+        {
+          "primitive": "DataState",
+          "time": 24,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 29,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 43,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 43,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 48,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 48,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 64,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 64,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 80,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 80,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 96,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 96,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 112,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 112,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 128,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 128,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 143,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 143,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 159,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 159,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 176,
+          "opacity": "1"
+        },
+        {
+          "primitive": "DataState",
+          "time": 176,
+          "opacity": "1"
+        }
+      ],
+      "longTasks": [
+        {
+          "start": 2230,
+          "duration": 81
+        }
+      ],
+      "domain": {
+        "readCalls": 33,
+        "hardware": 0,
+        "seed": [
+          [
+            "fixture-inbound-0005",
+            "waiting",
+            [
+              5,
+              4,
+              2
+            ]
+          ],
+          [
+            "b12-outbound-0004",
+            "posted",
+            [
+              3
+            ]
+          ],
+          [
+            "b12-inbound-0004",
+            "posted",
+            [
+              4
+            ]
+          ],
+          [
+            "b12-outbound-0003",
+            "posted",
+            [
+              5,
+              6
+            ]
+          ],
+          [
+            "p12-stock-PN-0006",
+            "waiting",
+            [
+              6
+            ]
+          ],
+          [
+            "p12-stock-PX-0006",
+            "posted",
+            [
+              7
+            ]
+          ],
+          [
+            "p12-stock-PN-0007",
+            "posted",
+            [
+              8,
+              2
+            ]
+          ],
+          [
+            "p12-stock-PX-0007",
+            "waiting",
+            [
+              2
+            ]
+          ],
+          [
+            "p12-stock-PN-0008",
+            "posted",
+            [
+              3
+            ]
+          ],
+          [
+            "p12-stock-PX-0008",
+            "posted",
+            [
+              4,
+              5
+            ]
+          ],
+          [
+            "p12-stock-PN-0009",
+            "waiting",
+            [
+              5
+            ]
+          ],
+          [
+            "p12-stock-PX-0009",
+            "posted",
+            [
+              6
+            ]
+          ],
+          [
+            "p12-stock-PN-0010",
+            "posted",
+            [
+              7,
+              8
+            ]
+          ],
+          [
+            "p12-stock-PX-0010",
+            "waiting",
+            [
+              8
+            ]
+          ],
+          [
+            "p12-stock-PN-0011",
+            "posted",
+            [
+              2
+            ]
+          ],
+          [
+            "p12-stock-PX-0011",
+            "posted",
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            "b12-warranty-001",
+            "checking",
+            [
+              1
+            ]
+          ],
+          [
+            "b12-warranty-002",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-003",
+            "received",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-004",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-005",
+            "ready",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-006",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-007",
+            "checking",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-008",
+            "returned",
+            [
+              1
+            ]
+          ]
+        ],
+        "writes": 0
+      }
+    },
+    {
+      "mode": "off",
+      "checks": [
+        "S01 fixed skeleton/no shimmer; spinner only pending; mode fallback",
+        "S02/S03 opacity140/80/off only, error/CTA immediate and static",
+        "Retry one read, preserves filter/input/focus, no intermediate empty; no extra domain operations",
+        "A slow/B fast; stale A after exit cannot overwrite state or animate",
+        "No replay after Back or repaint; debouncing is text-only until request starts",
+        "Mid-animation off/OS change/hidden/route cancellation; no delayed action or replay",
+        "Stale refresh retains anchor; ten navigation cycles clean listeners; small viewport and reader Back",
+        "Readonly empty creates nothing; expiry cancels current data motion immediately"
+      ],
+      "geometry": {
+        "P16.S01": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\nChưa xác định số kết quả\n\nMới nhất\n\nChờ danh sách tải xong để tìm bằng mã.\n\nĐang tải chứng từ…\nVui lòng chờ trong giây lát",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": null,
+            ".p16-art": null,
+            ".p16-actions": null,
+            ".p16-loading": [
+              18,
+              351,
+              458,
+              511.5
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 100
+        },
+        "P16.S02": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\n0\nkết quả\n\nMới nhất\n\nChưa có chứng từ\n\nBạn chưa có chứng từ nào.\nHãy tạo chứng từ mới để bắt đầu.\n\nTạo chứng từ",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              183,
+              419.125,
+              128,
+              128
+            ],
+            ".p16-actions": [
+              30,
+              698.875,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 74
+        },
+        "P16.S03": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\n0\nkết quả\n\nXóa lọc\nMới nhất\n\nKhông tìm thấy kết quả\n\nKhông có chứng từ phù hợp với “PN-9999”.\nVui lòng thử lại với điều kiện khác.\n\nTừ khóa: PN-9999\n×\nXóa bộ lọc\nSửa từ khóa",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              195,
+              413.71875,
+              104,
+              104
+            ],
+            ".p16-actions": [
+              30,
+              722.265625,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 85
+        },
+        "P16.S04": {
+          "text": "Chứng từ\nTất cả\nNhập kho\nXuất kho\nBảo hành\nTất cả ngày\n\nChưa xác định số kết quả\n\nMới nhất\n\nChờ danh sách tải xong để tìm bằng mã.\n\nKhông tải được dữ liệu\n\nDữ liệu chưa được cập nhật.\nVui lòng thử lại sau.\n\nThử lại",
+          "rects": {
+            ".p12-header": [
+              0,
+              0,
+              494,
+              86
+            ],
+            ".p12-list-controls": [
+              0,
+              74,
+              494,
+              277
+            ],
+            ".p12-scroll": [
+              0,
+              351,
+              494,
+              524
+            ],
+            ".p16-state": [
+              18,
+              351,
+              458,
+              496
+            ],
+            ".p16-art": [
+              183,
+              419.125,
+              128,
+              128
+            ],
+            ".p16-actions": [
+              30,
+              698.875,
+              434,
+              56
+            ],
+            ".p16-loading": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          },
+          "nodes": 76
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "animations": [],
+      "samples": [],
+      "longTasks": [
+        {
+          "start": 1072.2000000029802,
+          "duration": 55
+        },
+        {
+          "start": 2160.7999999970198,
+          "duration": 76
+        }
+      ],
+      "domain": {
+        "readCalls": 33,
+        "hardware": 0,
+        "seed": [
+          [
+            "fixture-inbound-0005",
+            "waiting",
+            [
+              5,
+              4,
+              2
+            ]
+          ],
+          [
+            "b12-outbound-0004",
+            "posted",
+            [
+              3
+            ]
+          ],
+          [
+            "b12-inbound-0004",
+            "posted",
+            [
+              4
+            ]
+          ],
+          [
+            "b12-outbound-0003",
+            "posted",
+            [
+              5,
+              6
+            ]
+          ],
+          [
+            "p12-stock-PN-0006",
+            "waiting",
+            [
+              6
+            ]
+          ],
+          [
+            "p12-stock-PX-0006",
+            "posted",
+            [
+              7
+            ]
+          ],
+          [
+            "p12-stock-PN-0007",
+            "posted",
+            [
+              8,
+              2
+            ]
+          ],
+          [
+            "p12-stock-PX-0007",
+            "waiting",
+            [
+              2
+            ]
+          ],
+          [
+            "p12-stock-PN-0008",
+            "posted",
+            [
+              3
+            ]
+          ],
+          [
+            "p12-stock-PX-0008",
+            "posted",
+            [
+              4,
+              5
+            ]
+          ],
+          [
+            "p12-stock-PN-0009",
+            "waiting",
+            [
+              5
+            ]
+          ],
+          [
+            "p12-stock-PX-0009",
+            "posted",
+            [
+              6
+            ]
+          ],
+          [
+            "p12-stock-PN-0010",
+            "posted",
+            [
+              7,
+              8
+            ]
+          ],
+          [
+            "p12-stock-PX-0010",
+            "waiting",
+            [
+              8
+            ]
+          ],
+          [
+            "p12-stock-PN-0011",
+            "posted",
+            [
+              2
+            ]
+          ],
+          [
+            "p12-stock-PX-0011",
+            "posted",
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            "b12-warranty-001",
+            "checking",
+            [
+              1
+            ]
+          ],
+          [
+            "b12-warranty-002",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-003",
+            "received",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-004",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-005",
+            "ready",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-006",
+            "returned",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-007",
+            "checking",
+            [
+              1
+            ]
+          ],
+          [
+            "p12-warranty-BH-008",
+            "returned",
+            [
+              1
+            ]
+          ]
+        ],
+        "writes": 0
+      }
+    }
+  ]
+}

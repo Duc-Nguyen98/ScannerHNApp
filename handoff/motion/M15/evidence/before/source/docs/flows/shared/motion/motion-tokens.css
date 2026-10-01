@@ -1,0 +1,28 @@
+:root {
+  --hn-motion-press: 100ms;
+  --hn-motion-feedback: 140ms;
+  --hn-motion-row-feedback: 160ms;
+  --hn-motion-route: 180ms;
+  --hn-motion-panel-enter: 220ms;
+  --hn-motion-panel-exit: 160ms;
+  --hn-motion-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* M00 policy. Consumers must opt in on their owned subtree. */
+[data-hn-motion-mode="reduced"] {
+  --hn-motion-press: 0ms;
+  --hn-motion-feedback: 80ms;
+  --hn-motion-row-feedback: 0ms;
+  --hn-motion-route: 0ms;
+  --hn-motion-panel-enter: 0ms;
+  --hn-motion-panel-exit: 0ms;
+}
+
+[data-hn-motion-mode="off"] {
+  --hn-motion-press: 0ms;
+  --hn-motion-feedback: 0ms;
+  --hn-motion-row-feedback: 0ms;
+  --hn-motion-route: 0ms;
+  --hn-motion-panel-enter: 0ms;
+  --hn-motion-panel-exit: 0ms;
+}

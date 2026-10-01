@@ -1,0 +1,144 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'auto' !== null\n",
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "S01 notice opacity140/80/off, text immediate, no geometry/camera/CTA motion",
+        "Old notice does not replay after Back/reopen",
+        "S03 blocks outgoing content immediately, notice fade only",
+        "Live mode switch cancels press without invoking permission or changing content",
+        "S04 static instructions, one user permission request despite rapid tap",
+        "Ten denied-camera navigation cycles keep permission/listener count stable",
+        "Device pressed feedback supports keyboard, guard and shared modal Back/focus",
+        "Offline/online while UNKNOWN never replays mutation; exact owner request retained",
+        "S02 sensitive caller stays hidden/inert; no security exit or old context snapshot"
+      ],
+      "geometry": {
+        "P15.S01": {
+          "text": "Kết nối\nChưa thể đồng bộ\n\nChưa thể kiểm tra kết quả lúc này. Xem hướng dẫn để tiếp tục xử lý.\n\nXem cách xử lý\nVề Trang chủ",
+          "rects": {
+            ".p15-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p15-body": [
+              0,
+              88,
+              494,
+              787
+            ],
+            ".p15-state-actions": [
+              24,
+              680,
+              446,
+              165
+            ],
+            ".p15-device-card": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P15.S03": {
+          "text": "Quyền truy cập\nKhông có quyền thực hiện\n\nTài khoản không được phép thực hiện thao tác này.\n\nChưa có kênh quản trị được cấu hình trong ứng dụng.\n\nQuay lại\nHướng dẫn liên hệ quản trị",
+          "rects": {
+            ".p15-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p15-body": [
+              0,
+              88,
+              494,
+              787
+            ],
+            ".p15-state-actions": [
+              24,
+              692,
+              446,
+              153
+            ],
+            ".p15-device-card": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P15.S04": {
+          "text": "Quyền thiết bị\nQuyền thiết bị\n\nCấp quyền cần thiết để tiếp tục quét mã.\n\nCamera\nChưa yêu cầu quyền\n\nCấp quyền để quét mã vạch, QR code và chụp hình sản phẩm.\n\nCho phép camera\nMở hướng dẫn\nNFC\nKhông khả dụng trên thiết bị này\n\nMôi trường hiện tại không hỗ trợ đọc NFC. Xem yêu cầu về thiết bị để tiếp tục.\n\nHướng dẫn thiết bị hỗ trợ",
+          "rects": {
+            ".p15-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p15-body": [
+              0,
+              88,
+              494,
+              787
+            ],
+            ".p15-state-actions": null,
+            ".p15-device-card": [
+              24,
+              196.5,
+              446,
+              285
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P15.S02": {
+          "text": "Phiên hết hạn\nPhiên đăng nhập hết hạn\n\nĐăng nhập lại và xác nhận phiên để tiếp tục công việc.\n\nĐăng nhập lại",
+          "rects": {
+            ".p15-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p15-body": [
+              0,
+              88,
+              494,
+              787
+            ],
+            ".p15-state-actions": [
+              24,
+              748,
+              446,
+              97
+            ],
+            ".p15-device-card": null,
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "recordCalls": 1
+    }
+  ]
+}

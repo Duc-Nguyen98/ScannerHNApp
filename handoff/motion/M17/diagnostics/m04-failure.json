@@ -1,0 +1,185 @@
+[
+  {
+    "mode": "auto",
+    "checks": [],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 23,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915986",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 33,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915986",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 49,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951978",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 65,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974552",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 81,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988532",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 97,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996428",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 113,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 129,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 144,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 160,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 176,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 192,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 208,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 225,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 240,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p04-field-error",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      }
+    ],
+    "layouts": [],
+    "failure": {
+      "name": "S01 field error is immediate, fixed geometry and140ms/full or <=80ms reduced",
+      "error": "Error: ENOENT: no such file or directory, open 'C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\m04\\before\\geometry.json'\n    at Object.openSync (node:fs:622:18)\n    at Object.readFileSync (node:fs:488:35)\n    at shot (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m04.cjs:16:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m04.cjs:26:47\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m04.cjs:13:36)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M17\\regression\\check-m04.cjs:20:2"
+    }
+  }
+]

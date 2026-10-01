@@ -1,0 +1,43 @@
+✔ P03 native Back consumes only modal marker and preserves caller identity (12.0147ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.4764ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.3198ms)
+✔ disposing a closing modal settles deferred work (0.2589ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.3754ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.4028ms)
+✔ Exception return adopts an existing marker without duplicate browser history (0.3489ms)
+✔ Forward to an owned dismissed dialog consumes the ghost entry and keeps caller data (0.3824ms)
+✔ Unknown stale marker is not allowed to traverse another owner history (0.8155ms)
+✔ Shell reuses one route owner; replacement cancels old effect, repeated identity never replays (3.3622ms)
+✔ OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks (2.2723ms)
+✔ Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles (1.5827ms)
+✔ Recovery receipt consumed by identity including off/hidden/hide; no replay or completion writes (5.9449ms)
+✔ Validation is immediate deduplicated feedback; live OS reduction cancels and uses opacity80 (0.6398ms)
+✔ Inactive/hidden scope consumes result without animating; off preserves static task controls (0.5828ms)
+✔ System notice uses visible opacity only; stable identity does not replay after hide or off (2.7649ms)
+✔ OS reduced live cancels animation and never permits transform; expired/device content stays static (0.6475ms)
+✔ Hidden/inactive notices are consumed; visibility/dispose release controller (1.9798ms)
+✔ Fulfilled 401/403 responses still activate auth/permission boundary (2.5915ms)
+✔ Camera validation failure and one broken stop cannot leak remaining tracks (1.2912ms)
+✔ P15 context uses exact owner identity and preserves full Unicode number without credentials (1.6618ms)
+✔ Missing, foreign or unknown-operation context never invented (0.3402ms)
+✔ Write uncertainty wins over read label; no source produces guidance, never replay (0.3944ms)
+✔ Camera denied prioritizes guide with explicit recheck after settings; unsupported never prompts (0.3422ms)
+✔ HTTP auth/forbidden never map to network; unclassified errors remain with caller (1.3559ms)
+✔ Read retry fails closed without read source (1.0322ms)
+✔ Read retry deduplicates and invalidates late callbacks on caller exit (0.3043ms)
+✔ Retry preserves 401/403 classification and never calls a mutation (0.4369ms)
+✔ Device detection never infers support from model name or fixture; no permission prompt on mount (0.7584ms)
+✔ Camera denied/hardware/unsupported are distinct and recoverable (0.6063ms)
+✔ NFC actual caller errors distinguish denial/hardware; fixture cannot claim capability or readiness (1.5007ms)
+✔ Camera grant requires live track evidence and closes stream; duplicate prompts blocked (0.5279ms)
+✔ A01 UNKNOWN owner preserves request and allows only check until result verified (13.6586ms)
+✔ A02 active owner and direct protected route blocked after session expiration; late response cannot claim success (44.3335ms)
+✔ A03 permission loss blocks direct owner mutation as well as route (1.078ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 666.3787

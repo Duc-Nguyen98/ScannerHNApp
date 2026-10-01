@@ -1,0 +1,36 @@
+{
+  "current_prompt": "MOTION_P15",
+  "completed_panel_ids": [
+    "P15.S01",
+    "P15.S02",
+    "P15.S03",
+    "P15.S04"
+  ],
+  "remaining_panel_ids": [],
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "panel_ids": [
+    "P15.S01",
+    "P15.S02",
+    "P15.S03",
+    "P15.S04"
+  ],
+  "normal": "PASS",
+  "os_reduced": "PASS",
+  "off": "PASS",
+  "flow_regression": "PASS",
+  "visual": "USER_REVIEW_PENDING",
+  "production": "NOT_RUN",
+  "hardware": "NOT_RUN",
+  "node_tests": 35,
+  "motion_browser_groups": 36,
+  "direct_regression_groups": 69,
+  "geometry_equal": 12,
+  "pixel_equal": 12,
+  "source_byte_delta": 3213,
+  "report": "handoff/motion/M15/REPORT.md",
+  "evidence_root": "handoff/motion/M15",
+  "primitive_core_unchanged": true,
+  "virtualization": "NOT_NEEDED",
+  "flow_fix": "Immediate security conceal before history/overlay waits; dispose P15 controller during hidden auth suspension",
+  "next_action": "Review M15 visuals; proceed to the next authorized motion board. Production/hardware limitations unchanged; do not deploy."
+}

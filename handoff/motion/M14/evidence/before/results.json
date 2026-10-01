@@ -1,0 +1,614 @@
+{
+  "before": true,
+  "status": "PASS",
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [],
+      "geometry": {
+        "P14.S01": {
+          "nodes": 38,
+          "text": "Khôi phục tài khoản\n\nKho Hoa Nam\n\nKhôi phục tài khoản\n\nNhập tên đăng nhập để gửi yêu cầu hỗ trợ khôi phục quyền truy cập hệ thống.\n\nTên đăng nhập\nHỗ trợ truy cập\n\nLiên hệ quản trị viên để xác minh và cấp lại quyền truy cập.\n\nGửi yêu cầu hỗ trợ",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S02": {
+          "nodes": 73,
+          "text": "Yêu cầu đã tiếp nhận\n\nKho Hoa Nam\n\nYêu cầu đã tiếp nhận\n\nYêu cầu hỗ trợ khôi phục quyền truy cập đã được ghi nhận.\n\nChờ quản trị viên xác minh\n\nQuyền truy cập chỉ được cấp lại sau khi thông tin được xác minh.\n\nTên đăng nhập\nminhanh\nThời gian gửi yêu cầu\n12:00 · 01/10/2026\nMã yêu cầu\nRQ-20261001-001\nVề Đăng nhập",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S03": {
+          "nodes": 254,
+          "text": "Kết thúc ca\n\nKho Hoa Nam\n\nCòn 1 phiếu chưa hoàn tất\n\nTiếp tục xử lý hoặc lưu nháp các phiếu đang mở trước khi kết thúc ca.\n\nPhiếu đang thực hiện (1)\nXem tất cả\nPN-0005\nNhập kho · Đang mở\nTiếp tục\nLưu nháp trước khi kết thúc\nKết thúc ca",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P14.S04": {
+          "nodes": 336,
+          "text": "Tổng kết ca\n\nKho Hoa Nam\n\nMinh Anh\n\nNhân viên kho\n\nKho làm việc\nKho Hoa Nam\nNgày làm việc\n01/10/2026\nThời gian ca\n12:00 – 12:00\nKết quả công việc\n12\n\nNhập kho\n\n6\n\nXuất kho\n\n4\n\nBảo hành\n\n3\n\nThẻ NFC\n\n30\n\nTổng lượt hoạt động\n\nChứng từ: 5 lượt\nPhiếu nháp\nXem chi tiết\n1\nPhiếu nháp khi kết thúc ca\nXem lịch sử\nĐăng xuất",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "domain": {
+        "ops": [
+          "recovery",
+          "save",
+          "end"
+        ],
+        "hardware": 0
+      },
+      "animations": [
+        {
+          "node": "forgot",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "node": "submit",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "node": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "start",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "node": "button-label",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "button-label",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "hn-main",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "hn-destination",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "node": "",
+          "duration": 140,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "node": "p10-menu",
+          "primitive": "ProfileSettingsPress",
+          "duration": 100,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        },
+        {
+          "node": "hn-destination",
+          "duration": 180,
+          "frames": [
+            {
+              "opacity": 0.7
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        }
+      ],
+      "samples": [],
+      "longTasks": [
+        {
+          "start": 9759.5,
+          "duration": 76
+        }
+      ]
+    },
+    {
+      "mode": "os-reduced",
+      "checks": [],
+      "geometry": {
+        "P14.S01": {
+          "nodes": 38,
+          "text": "Khôi phục tài khoản\n\nKho Hoa Nam\n\nKhôi phục tài khoản\n\nNhập tên đăng nhập để gửi yêu cầu hỗ trợ khôi phục quyền truy cập hệ thống.\n\nTên đăng nhập\nHỗ trợ truy cập\n\nLiên hệ quản trị viên để xác minh và cấp lại quyền truy cập.\n\nGửi yêu cầu hỗ trợ",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S02": {
+          "nodes": 73,
+          "text": "Yêu cầu đã tiếp nhận\n\nKho Hoa Nam\n\nYêu cầu đã tiếp nhận\n\nYêu cầu hỗ trợ khôi phục quyền truy cập đã được ghi nhận.\n\nChờ quản trị viên xác minh\n\nQuyền truy cập chỉ được cấp lại sau khi thông tin được xác minh.\n\nTên đăng nhập\nminhanh\nThời gian gửi yêu cầu\n12:00 · 01/10/2026\nMã yêu cầu\nRQ-20261001-001\nVề Đăng nhập",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S03": {
+          "nodes": 254,
+          "text": "Kết thúc ca\n\nKho Hoa Nam\n\nCòn 1 phiếu chưa hoàn tất\n\nTiếp tục xử lý hoặc lưu nháp các phiếu đang mở trước khi kết thúc ca.\n\nPhiếu đang thực hiện (1)\nXem tất cả\nPN-0005\nNhập kho · Đang mở\nTiếp tục\nLưu nháp trước khi kết thúc\nKết thúc ca",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P14.S04": {
+          "nodes": 336,
+          "text": "Tổng kết ca\n\nKho Hoa Nam\n\nMinh Anh\n\nNhân viên kho\n\nKho làm việc\nKho Hoa Nam\nNgày làm việc\n01/10/2026\nThời gian ca\n12:00 – 12:00\nKết quả công việc\n12\n\nNhập kho\n\n6\n\nXuất kho\n\n4\n\nBảo hành\n\n3\n\nThẻ NFC\n\n30\n\nTổng lượt hoạt động\n\nChứng từ: 5 lượt\nPhiếu nháp\nXem chi tiết\n1\nPhiếu nháp khi kết thúc ca\nXem lịch sử\nĐăng xuất",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "domain": {
+        "ops": [
+          "recovery",
+          "save",
+          "end"
+        ],
+        "hardware": 0
+      },
+      "animations": [
+        {
+          "node": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "button-label",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "button-label",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "node": "",
+          "duration": 80,
+          "frames": [
+            {
+              "opacity": 0.65
+            },
+            {
+              "opacity": 1
+            }
+          ],
+          "cancelled": true
+        }
+      ],
+      "samples": [],
+      "longTasks": [
+        {
+          "start": 1151.5999999940395,
+          "duration": 53
+        },
+        {
+          "start": 5251.199999988079,
+          "duration": 76
+        }
+      ]
+    },
+    {
+      "mode": "off",
+      "checks": [],
+      "geometry": {
+        "P14.S01": {
+          "nodes": 38,
+          "text": "Khôi phục tài khoản\n\nKho Hoa Nam\n\nKhôi phục tài khoản\n\nNhập tên đăng nhập để gửi yêu cầu hỗ trợ khôi phục quyền truy cập hệ thống.\n\nTên đăng nhập\nHỗ trợ truy cập\n\nLiên hệ quản trị viên để xác minh và cấp lại quyền truy cập.\n\nGửi yêu cầu hỗ trợ",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S02": {
+          "nodes": 73,
+          "text": "Yêu cầu đã tiếp nhận\n\nKho Hoa Nam\n\nYêu cầu đã tiếp nhận\n\nYêu cầu hỗ trợ khôi phục quyền truy cập đã được ghi nhận.\n\nChờ quản trị viên xác minh\n\nQuyền truy cập chỉ được cấp lại sau khi thông tin được xác minh.\n\nTên đăng nhập\nminhanh\nThời gian gửi yêu cầu\n12:00 · 01/10/2026\nMã yêu cầu\nRQ-20261001-001\nVề Đăng nhập",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S03": {
+          "nodes": 254,
+          "text": "Kết thúc ca\n\nKho Hoa Nam\n\nCòn 1 phiếu chưa hoàn tất\n\nTiếp tục xử lý hoặc lưu nháp các phiếu đang mở trước khi kết thúc ca.\n\nPhiếu đang thực hiện (1)\nXem tất cả\nPN-0005\nNhập kho · Đang mở\nTiếp tục\nLưu nháp trước khi kết thúc\nKết thúc ca",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P14.S04": {
+          "nodes": 336,
+          "text": "Tổng kết ca\n\nKho Hoa Nam\n\nMinh Anh\n\nNhân viên kho\n\nKho làm việc\nKho Hoa Nam\nNgày làm việc\n01/10/2026\nThời gian ca\n12:00 – 12:00\nKết quả công việc\n12\n\nNhập kho\n\n6\n\nXuất kho\n\n4\n\nBảo hành\n\n3\n\nThẻ NFC\n\n30\n\nTổng lượt hoạt động\n\nChứng từ: 5 lượt\nPhiếu nháp\nXem chi tiết\n1\nPhiếu nháp khi kết thúc ca\nXem lịch sử\nĐăng xuất",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "domain": {
+        "ops": [
+          "recovery",
+          "save",
+          "end"
+        ],
+        "hardware": 0
+      },
+      "animations": [],
+      "samples": [],
+      "longTasks": [
+        {
+          "start": 392.5,
+          "duration": 60
+        },
+        {
+          "start": 3951.7000000029802,
+          "duration": 73
+        }
+      ]
+    }
+  ]
+}

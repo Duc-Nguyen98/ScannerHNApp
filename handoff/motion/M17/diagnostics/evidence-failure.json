@@ -1,0 +1,150 @@
+{
+  "error": "page.waitForSelector: Timeout 25000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#hn-home:not([hidden])') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p17.cjs:37:615\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p17.cjs:22:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p17.cjs:37:13",
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        {
+          "name": "S01 immediate raw/reason, repeated errors preserve accepted; local140/80/off feedback only",
+          "status": "PASS"
+        },
+        {
+          "name": "No replay on repaint, Back/Forward or mode changes; rapid cancel does not append codes",
+          "status": "PASS"
+        },
+        {
+          "name": "S04 rapid resend stays guarded; spinner only while checking; same request verified once",
+          "status": "PASS"
+        },
+        {
+          "name": "S02 reason immediate, static quantity; conflict notice fade; hidden/OS/off cancellation",
+          "status": "PASS"
+        },
+        {
+          "name": "S03 reused modal, backdrop/focus/Back/rapid reopen preserve NFC mapping and cancel",
+          "status": "PASS"
+        }
+      ],
+      "geometry": {
+        "P17.S01": {
+          "text": "Quét mã sản phẩm\nPN-0005\nĐã giữ 1 mã hợp lệ\nCamera chưa kết nối\n!\nMã không hợp lệ\n\nKhông thể xử lý mã này. Vui lòng kiểm tra và thử lại.\n\nThông tin kiểm tra\nMã đã đọc\nHN-NOT-FOUND\n\nKhông tìm thấy mã trong danh mục sản phẩm đang dùng.\n\nMã lỗi không được cộng vào số lượng của phiếu.\n\nNhập mã\nVề danh sách mã",
+          "dom": 56,
+          "app": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 63
+          },
+          "scroll": {
+            "x": 18,
+            "y": 135,
+            "w": 458,
+            "h": 572
+          },
+          "footer": {
+            "x": 18,
+            "y": 707,
+            "w": 458,
+            "h": 142
+          },
+          "overflow": false
+        },
+        "P17.S04": {
+          "text": "Gửi phiếu nhập kho\nPN-0005\nĐã giữ 1 mã hợp lệ\nChưa xác định kết quả gửi\n\nChưa xác định phiếu đã được ghi nhận. Kiểm tra trạng thái trước khi gửi lại.\n\nThông tin phiếu\nSố phiếu\nPN-0005\nLoại phiếu\nNhập kho\nNgày gửi\nChưa xác định\nNgười gửi\nMinh Anh\n\nKhông gửi lại để tránh tạo trùng phiếu. Mã hợp lệ và định danh của lần gửi được giữ nguyên.\n\nThông tin đối chiếu\nKiểm tra trạng thái\nGửi lại\n\nChỉ gửi lại khi nguồn xác nhận chưa tạo phiếu và cho phép dùng cùng yêu cầu.",
+          "dom": 94,
+          "app": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 950
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 63
+          },
+          "scroll": {
+            "x": 18,
+            "y": 135,
+            "w": 458,
+            "h": 599
+          },
+          "footer": {
+            "x": 18,
+            "y": 734,
+            "w": 458,
+            "h": 196
+          },
+          "overflow": false
+        },
+        "P17.S02": {
+          "text": "Kiểm tra mã xuất kho\nPX-0005\nĐã giữ 0 mã hợp lệ\n!\nMã không thể xuất\n\nSản phẩm này không thể xuất kho. Vui lòng kiểm tra thông tin bên dưới.\n\nNguyên nhân\n\nSản phẩm đã được xuất theo phiếu PX-0004.\n\nThông tin sản phẩm\nMã đã đọc\nHN99999\nMã sản phẩm\nHN99999\nTên sản phẩm\nMáy in nhiệt XP-420B\nSKU\nXP-420B\nĐơn vị tính\nCái\nPhiếu liên quan\nSố phiếu\nPX-0004\nLoại phiếu\nXuất kho\nTrạng thái\nĐã ghi sổ\nNgày tạo\n09/09/2026\n\nVui lòng quét mã khác để tiếp tục xuất kho. Các mã hợp lệ và phiếu đang soạn được giữ nguyên.\n\nQuét mã khác",
+          "dom": 106,
+          "app": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 950
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 63
+          },
+          "scroll": {
+            "x": 18,
+            "y": 135,
+            "w": 458,
+            "h": 721
+          },
+          "footer": {
+            "x": 18,
+            "y": 856,
+            "w": 458,
+            "h": 74
+          },
+          "overflow": false
+        },
+        "P17.S03": {
+          "text": "Đọc thẻ NFC\n!\nThẻ đã liên kết\n\nThẻ NFC này đã được liên kết với sản phẩm khác trong hệ thống.\n\nThông tin thẻ NFC\nUID thẻ\nNFC-OLD-003\nTrạng thái\nĐã liên kết\nSản phẩm đã liên kết\nMã sản phẩm\nHN12346\nTên sản phẩm\nĐầu in XP-420B\nSKU\nXP-420B\nSerial\nHN12346\n!\n\nKhông thể tự động ghi đè liên kết. Vui lòng kiểm tra và xử lý theo quyền quản trị liên kết.\n\nXem liên kết\nHủy",
+          "dom": 68,
+          "app": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 950
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 63
+          },
+          "scroll": {
+            "x": 18,
+            "y": 67,
+            "w": 458,
+            "h": 721
+          },
+          "footer": {
+            "x": 18,
+            "y": 788,
+            "w": 458,
+            "h": 142
+          },
+          "overflow": false
+        }
+      },
+      "errors": [],
+      "writes": []
+    }
+  ]
+}

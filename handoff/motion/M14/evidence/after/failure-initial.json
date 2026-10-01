@@ -1,0 +1,138 @@
+{
+  "error": "Error: locator.evaluate: Error: strict mode violation: locator('.p14-tools details') resolved to 2 elements:\n    1) <details>…</details> aka getByLabel('Công cụ prototype P02').getByText('P14 · Kịch bản kiểm chứngPROTOTYPE r06 · B14. Chỉ mô phỏng trong bộ nhớ trang;')\n    2) <details>…</details> aka getByLabel('Công cụ prototype', { exact: true }).getByText('P14 · Kịch bản kiểm chứngPROTOTYPE r06 · B14. Chỉ mô phỏng trong bộ nhớ trang;')\n\nCall log:\n\u001b[2m  - waiting for locator('.p14-tools details')\u001b[22m\n",
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "S01 validation and submit are immediate; no input transform or repeated error replay",
+        "S02 confirmed receipt fades160 only in full; IDs/time/content remain immediate",
+        "S03 modal uses common owner; Cancel/Back/rapid cancel preserve draft and session",
+        "S04 numbers static, history Back retains snapshot/scroll without replaying child receipt",
+        "Live OS/mode/hidden cancel and modal geometry/focus remain usable in compact viewport",
+        "Ten mount/hide cycles leave no new controller listeners; expiry cancels motion immediately"
+      ],
+      "geometry": {
+        "P14.S01": {
+          "nodes": 38,
+          "text": "Khôi phục tài khoản\n\nKho Hoa Nam\n\nKhôi phục tài khoản\n\nNhập tên đăng nhập để gửi yêu cầu hỗ trợ khôi phục quyền truy cập hệ thống.\n\nTên đăng nhập\nHỗ trợ truy cập\n\nLiên hệ quản trị viên để xác minh và cấp lại quyền truy cập.\n\nGửi yêu cầu hỗ trợ",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S02": {
+          "nodes": 73,
+          "text": "Yêu cầu đã tiếp nhận\n\nKho Hoa Nam\n\nYêu cầu đã tiếp nhận\n\nYêu cầu hỗ trợ khôi phục quyền truy cập đã được ghi nhận.\n\nChờ quản trị viên xác minh\n\nQuyền truy cập chỉ được cấp lại sau khi thông tin được xác minh.\n\nTên đăng nhập\nminhanh\nThời gian gửi yêu cầu\n12:00 · 01/10/2026\nMã yêu cầu\nRQ-20261001-001\nVề Đăng nhập",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              770
+            ],
+            ".p14-actions": [
+              0,
+              858,
+              494,
+              92
+            ],
+            ".hn-nav": null
+          }
+        },
+        "P14.S03": {
+          "nodes": 254,
+          "text": "Kết thúc ca\n\nKho Hoa Nam\n\nCòn 1 phiếu chưa hoàn tất\n\nTiếp tục xử lý hoặc lưu nháp các phiếu đang mở trước khi kết thúc ca.\n\nPhiếu đang thực hiện (1)\nXem tất cả\nPN-0005\nNhập kho · Đang mở\nTiếp tục\nLưu nháp trước khi kết thúc\nKết thúc ca",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        },
+        "P14.S04": {
+          "nodes": 336,
+          "text": "Tổng kết ca\n\nKho Hoa Nam\n\nMinh Anh\n\nNhân viên kho\n\nKho làm việc\nKho Hoa Nam\nNgày làm việc\n01/10/2026\nThời gian ca\n12:00 – 12:00\nKết quả công việc\n12\n\nNhập kho\n\n6\n\nXuất kho\n\n4\n\nBảo hành\n\n3\n\nThẻ NFC\n\n30\n\nTổng lượt hoạt động\n\nChứng từ: 5 lượt\nPhiếu nháp\nXem chi tiết\n1\nPhiếu nháp khi kết thúc ca\nXem lịch sử\nĐăng xuất",
+          "rects": {
+            ".p14-header": [
+              0,
+              0,
+              494,
+              100
+            ],
+            ".p14-scroll": [
+              0,
+              88,
+              494,
+              627
+            ],
+            ".p14-actions": [
+              0,
+              715,
+              494,
+              160
+            ],
+            ".hn-nav": [
+              0,
+              875,
+              494,
+              75
+            ]
+          }
+        }
+      },
+      "errors": [],
+      "writes": [],
+      "referenceDomain": {
+        "ops": [
+          "recovery",
+          "save",
+          "end"
+        ],
+        "hardware": 0
+      }
+    }
+  ]
+}
