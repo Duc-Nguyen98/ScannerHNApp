@@ -1,0 +1,5337 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      {
+        "name": "Confirmed password check fades160 once; session rows have no entrance/replay",
+        "status": "PASS"
+      },
+      {
+        "name": "Revoke Cancel/Back preserve IDs; confirmation alone performs and verifies one revoke",
+        "status": "PASS"
+      },
+      {
+        "name": "Error field semantics immediate; focus opacity140/80/0; mode/OS cancellation",
+        "status": "PASS"
+      },
+      {
+        "name": "Visibility toggle preserves connected inputs, caret, focus; mismatch never clears fields",
+        "status": "PASS"
+      },
+      {
+        "name": "Double submit and rapid navigate-away while pending do not change account twice",
+        "status": "PASS"
+      },
+      {
+        "name": "Revoke failure retains source IDs; UNKNOWN reconciles without duplicate revoke",
+        "status": "PASS"
+      },
+      {
+        "name": "Native compact scroll, small session list, hide/dispose and hidden cleanup",
+        "status": "PASS"
+      }
+    ],
+    "geometry": {
+      "P11.S01": {
+        "panel": "P11.S01",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 58
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          }
+        ],
+        "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+        "rows": []
+      },
+      "P11.S02": {
+        "panel": "P11.S02",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 58
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          }
+        ],
+        "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu xác nhận chưa khớp.\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+        "rows": []
+      },
+      "P11.S03": {
+        "panel": "P11.S03",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 53
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          },
+          {
+            "selector": ".p11-success-mark",
+            "box": [
+              120,
+              120
+            ],
+            "count": 3
+          },
+          {
+            "selector": ".p11-summary",
+            "box": [
+              446,
+              230
+            ],
+            "count": 35
+          }
+        ],
+        "text": "Đã đổi mật khẩu\nMật khẩu đăng nhập đã\nđược cập nhật\n\nBạn có thể sử dụng mật khẩu mới\nđể đăng nhập từ bây giờ.\n\nTài khoản\nMinh Anh\nKho\nKho Hoa Nam\nThời gian cập nhật\n09/09/2026 14:25\n\nNếu bạn nghi ngờ có hoạt động bất thường, hãy đăng xuất khỏi các thiết bị khác.\n\nTài khoản & bảo mật",
+        "rows": []
+      },
+      "P11.S04": {
+        "panel": "P11.S04",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              799
+            ],
+            "count": 78
+          },
+          {
+            "selector": ".p11-device",
+            "box": [
+              458,
+              273.71875
+            ],
+            "count": 32
+          },
+          {
+            "selector": ".p11-device",
+            "box": [
+              458,
+              357.578125
+            ],
+            "count": 36
+          }
+        ],
+        "text": "Phiên đăng nhập\nThiết bị hiện tại\nĐang hoạt động\niPhone 14 Pro\n\niOS 17.5.1\n\nHà Nội, Việt Nam\nĐăng nhập lúc 09/09/2026 14:25\nỨng dụng: Hoa Nam Scanner\nThiết bị khác\nWindows PC\n\nWindows 11 · Chrome 128.0\n\nHà Nội, Việt Nam\nĐăng nhập lúc 08/09/2026 10:12\nỨng dụng: Web WMS\nĐăng xuất từ xa\n\nNếu phát hiện thiết bị lạ, hãy đăng xuất khỏi thiết bị đó và đổi mật khẩu để tăng cường bảo mật.",
+        "rows": [
+          "fixture-security-current",
+          "fixture-security-windows"
+        ]
+      }
+    },
+    "errors": [],
+    "listProfile": {
+      "rows": 2,
+      "nodes": 86,
+      "overflow": false,
+      "frame": [
+        494,
+        950
+      ]
+    },
+    "calls": {
+      "password": 2,
+      "revoke": 3,
+      "list": 6,
+      "reconcile": 1
+    },
+    "outcomes": [
+      {
+        "action": "password",
+        "kind": "changed"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "revoked"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "password",
+        "kind": "changed"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "rejected"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "unknown"
+      },
+      {
+        "action": "reconcile",
+        "kind": "revoked"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      }
+    ],
+    "effects": [
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureSuccess",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      }
+    ],
+    "frames": [
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 16,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 17,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 33,
+        "opacity": "0.854956",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 9,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 16,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 34,
+        "opacity": "0.731807",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 50,
+        "opacity": "0.915978",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 24,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 34,
+        "opacity": "0.731847",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 50,
+        "opacity": "0.854976",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 67,
+        "opacity": "0.915989",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 41,
+        "opacity": "0.731847",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 57,
+        "opacity": "0.915901",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 70,
+        "opacity": "0.951925",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 86,
+        "opacity": "0.974519",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 64,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 17,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 14,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 72,
+        "opacity": "0.951925",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 89,
+        "opacity": "0.974519",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 106,
+        "opacity": "0.988512",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 80,
+        "opacity": "0.731524",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 37,
+        "opacity": "0.822345",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 34,
+        "opacity": "0.731524",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 85,
+        "opacity": "0.951925",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 98,
+        "opacity": "0.974519",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 118,
+        "opacity": "0.996418",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 92,
+        "opacity": "0.854818",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 52,
+        "opacity": "0.919734",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 51,
+        "opacity": "0.854818",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 101,
+        "opacity": "0.974519",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 114,
+        "opacity": "0.988512",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 132,
+        "opacity": "0.996418",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 109,
+        "opacity": "0.915907",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 70,
+        "opacity": "0.963439",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 67,
+        "opacity": "0.915907",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 116,
+        "opacity": "0.988513",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 132,
+        "opacity": "0.996419",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 148,
+        "opacity": "0.999732",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 124,
+        "opacity": "0.951929",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 87,
+        "opacity": "0.986091",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 84,
+        "opacity": "0.951929",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 131,
+        "opacity": "0.996419",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 149,
+        "opacity": "0.999732",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 165,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 139,
+        "opacity": "0.951929",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 100,
+        "opacity": "0.996936",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 101,
+        "opacity": "0.974521",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 148,
+        "opacity": "0.999732",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 166,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 182,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 156,
+        "opacity": "0.974521",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 118,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 119,
+        "opacity": "0.988513",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 166,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 179,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 175,
+        "opacity": "0.99643",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 132,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 130,
+        "opacity": "0.99643",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 181,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 194,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 184,
+        "opacity": "0.99643",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 149,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 151,
+        "opacity": "0.999735",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 164,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 161,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 181,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 178,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 194,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 7,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 24,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 48,
+        "opacity": "0.854572",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 11,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 64,
+        "opacity": "0.91595",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 27,
+        "opacity": "0.822515",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 74,
+        "opacity": "0.91595",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 38,
+        "opacity": "0.822515",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 87,
+        "opacity": "0.951956",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 54,
+        "opacity": "0.9198",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 102,
+        "opacity": "0.974538",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 66,
+        "opacity": "0.963469",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 118,
+        "opacity": "0.988524",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 81,
+        "opacity": "0.986106",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 135,
+        "opacity": "0.996424",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 98,
+        "opacity": "0.996942",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 151,
+        "opacity": "0.999733",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 114,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 130,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 182,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 145,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 161,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 177,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 193,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 5,
+        "opacity": "0.6",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 20,
+        "opacity": "0.66949",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 39,
+        "opacity": "0.80849",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 52,
+        "opacity": "0.882335",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 68,
+        "opacity": "0.926949",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 83,
+        "opacity": "0.956171",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 100,
+        "opacity": "0.975668",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 116,
+        "opacity": "0.988345",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 132,
+        "opacity": "0.99591",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 148,
+        "opacity": "0.99591",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 164,
+        "opacity": "0.999466",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 179,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 195,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 26,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 23,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 32,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 44,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 60,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 75,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 91,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 114,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 17,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 123,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 25,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 140,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 42,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 162,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 64,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 14,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 172,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 74,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 24,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 188,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 90,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 40,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 112,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 62,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 123,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 74,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 137,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 87,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 153,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 104,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 169,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 120,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 185,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 135,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 152,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 167,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 184,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 10,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 25,
+        "opacity": "0.731847",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 42,
+        "opacity": "0.854651",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 57,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 10,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 13,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 13,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 17,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 17,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 79,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 36,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 34,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 39,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 38,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 44,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 96,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 50,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 48,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 56,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 62,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 61,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 113,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 66,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 64,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 11,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 72,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 71,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 70,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 122,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 75,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 73,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 20,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 87,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 87,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 86,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 138,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 91,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 89,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 38,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 104,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 103,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 102,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 154,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 109,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 107,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 55,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 125,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 124,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 123,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 175,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 128,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 126,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 73,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 136,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 135,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 134,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 190,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 143,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 141,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 88,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 152,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 151,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 150,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 155,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 153,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 100,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 166,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 165,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 170,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 174,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 121,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 12,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 184,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 183,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 182,
+        "opacity": "0.731584",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 187,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 11,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 185,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 132,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 22,
+        "opacity": "0.731584",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 16,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 27,
+        "opacity": "0.731584",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 148,
+        "opacity": "0.731584",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 38,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 14,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 18,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 34,
+        "opacity": "0.731584",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 45,
+        "opacity": "0.854848",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 166,
+        "opacity": "0.854848",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 56,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 32,
+        "opacity": "0.731584",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 42,
+        "opacity": "0.8547",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 58,
+        "opacity": "0.915836",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 68,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 189,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 79,
+        "opacity": "0.8547",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 55,
+        "opacity": "0.915836",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 52,
+        "opacity": "0.8547",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 68,
+        "opacity": "0.915836",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 78,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 89,
+        "opacity": "0.8547",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 65,
+        "opacity": "0.915836",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 66,
+        "opacity": "0.915836",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 82,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 92,
+        "opacity": "0.974493",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 103,
+        "opacity": "0.915836",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 79,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 81,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 97,
+        "opacity": "0.974493",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 107,
+        "opacity": "0.988497",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 118,
+        "opacity": "0.951885",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 94,
+        "opacity": "0.974493",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 108,
+        "opacity": "0.988498",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 124,
+        "opacity": "0.996411",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 134,
+        "opacity": "0.99973",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 145,
+        "opacity": "0.988498",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 121,
+        "opacity": "0.996411",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 114,
+        "opacity": "0.988498",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 136,
+        "opacity": "0.996411",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 146,
+        "opacity": "0.99973",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 157,
+        "opacity": "0.988498",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 133,
+        "opacity": "0.996411",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 142,
+        "opacity": "0.999727",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 158,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 168,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 179,
+        "opacity": "0.999727",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 155,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 18,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 16,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 151,
+        "opacity": "0.999727",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 167,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 177,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 188,
+        "opacity": "0.999727",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 164,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 31,
+        "opacity": "0.822477",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 30,
+        "opacity": "0.731665",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 163,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 179,
+        "opacity": "0.731665",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 190,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 177,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 48,
+        "opacity": "0.919785",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 47,
+        "opacity": "0.854887",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 178,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 194,
+        "opacity": "0.854887",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 191,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 63,
+        "opacity": "0.963216",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 61,
+        "opacity": "0.915578",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 192,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 84,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 82,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 18,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 2,
+        "opacity": "0.6",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 19,
+        "opacity": "0.669161",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 34,
+        "opacity": "0.808289",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 50,
+        "opacity": "0.882221",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 66,
+        "opacity": "0.926876",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 83,
+        "opacity": "0.956123",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 98,
+        "opacity": "0.975636",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 114,
+        "opacity": "0.988324",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 130,
+        "opacity": "0.995899",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 146,
+        "opacity": "0.999462",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 163,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 178,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureSuccess",
+        "elapsed": 195,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 9,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 20,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 35,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 50,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 67,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 83,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 99,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 116,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 131,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 146,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 162,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 178,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 194,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 13,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 26,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 39,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 59,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 72,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 86,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 105,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 118,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 134,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 150,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 166,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 183,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 17,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 32,
+        "opacity": "0.822213",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 46,
+        "opacity": "0.919807",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 62,
+        "opacity": "0.963472",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 78,
+        "opacity": "0.986108",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 95,
+        "opacity": "0.996944",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 111,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 126,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 142,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 158,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 175,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecuritySettingsPress",
+        "elapsed": 193,
+        "opacity": "0.55",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 18,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 18,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 16,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 20,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 24,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 14,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 23,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 3,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 23,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 19,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 20,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 14,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 23,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 38,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 54,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 72,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 87,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 106,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 119,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 134,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 151,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 169,
+        "opacity": "1",
+        "connected": true
+      }
+    ],
+    "hardware": 0
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      {
+        "name": "Confirmed password check fades160 once; session rows have no entrance/replay",
+        "status": "PASS"
+      },
+      {
+        "name": "Revoke Cancel/Back preserve IDs; confirmation alone performs and verifies one revoke",
+        "status": "PASS"
+      },
+      {
+        "name": "Error field semantics immediate; focus opacity140/80/0; mode/OS cancellation",
+        "status": "PASS"
+      },
+      {
+        "name": "Visibility toggle preserves connected inputs, caret, focus; mismatch never clears fields",
+        "status": "PASS"
+      },
+      {
+        "name": "Double submit and rapid navigate-away while pending do not change account twice",
+        "status": "PASS"
+      },
+      {
+        "name": "Revoke failure retains source IDs; UNKNOWN reconciles without duplicate revoke",
+        "status": "PASS"
+      },
+      {
+        "name": "Native compact scroll, small session list, hide/dispose and hidden cleanup",
+        "status": "PASS"
+      }
+    ],
+    "geometry": {
+      "P11.S01": {
+        "panel": "P11.S01",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 58
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          }
+        ],
+        "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+        "rows": []
+      },
+      "P11.S02": {
+        "panel": "P11.S02",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 58
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          }
+        ],
+        "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu xác nhận chưa khớp.\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+        "rows": []
+      },
+      "P11.S03": {
+        "panel": "P11.S03",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 53
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          },
+          {
+            "selector": ".p11-success-mark",
+            "box": [
+              120,
+              120
+            ],
+            "count": 3
+          },
+          {
+            "selector": ".p11-summary",
+            "box": [
+              446,
+              230
+            ],
+            "count": 35
+          }
+        ],
+        "text": "Đã đổi mật khẩu\nMật khẩu đăng nhập đã\nđược cập nhật\n\nBạn có thể sử dụng mật khẩu mới\nđể đăng nhập từ bây giờ.\n\nTài khoản\nMinh Anh\nKho\nKho Hoa Nam\nThời gian cập nhật\n09/09/2026 14:25\n\nNếu bạn nghi ngờ có hoạt động bất thường, hãy đăng xuất khỏi các thiết bị khác.\n\nTài khoản & bảo mật",
+        "rows": []
+      },
+      "P11.S04": {
+        "panel": "P11.S04",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              799
+            ],
+            "count": 78
+          },
+          {
+            "selector": ".p11-device",
+            "box": [
+              458,
+              273.71875
+            ],
+            "count": 32
+          },
+          {
+            "selector": ".p11-device",
+            "box": [
+              458,
+              357.578125
+            ],
+            "count": 36
+          }
+        ],
+        "text": "Phiên đăng nhập\nThiết bị hiện tại\nĐang hoạt động\niPhone 14 Pro\n\niOS 17.5.1\n\nHà Nội, Việt Nam\nĐăng nhập lúc 09/09/2026 14:25\nỨng dụng: Hoa Nam Scanner\nThiết bị khác\nWindows PC\n\nWindows 11 · Chrome 128.0\n\nHà Nội, Việt Nam\nĐăng nhập lúc 08/09/2026 10:12\nỨng dụng: Web WMS\nĐăng xuất từ xa\n\nNếu phát hiện thiết bị lạ, hãy đăng xuất khỏi thiết bị đó và đổi mật khẩu để tăng cường bảo mật.",
+        "rows": [
+          "fixture-security-current",
+          "fixture-security-windows"
+        ]
+      }
+    },
+    "errors": [],
+    "listProfile": {
+      "rows": 2,
+      "nodes": 86,
+      "overflow": false,
+      "frame": [
+        494,
+        950
+      ]
+    },
+    "calls": {
+      "password": 2,
+      "revoke": 3,
+      "list": 6,
+      "reconcile": 1
+    },
+    "outcomes": [
+      {
+        "action": "password",
+        "kind": "changed"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "revoked"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "password",
+        "kind": "changed"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "rejected"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "unknown"
+      },
+      {
+        "action": "reconcile",
+        "kind": "revoked"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      }
+    ],
+    "effects": [
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormError",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      }
+    ],
+    "frames": [
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 15,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 15,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 29,
+        "opacity": "0.832913",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 15,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 32,
+        "opacity": "0.832913",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 46,
+        "opacity": "0.936256",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 15,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 32,
+        "opacity": "0.832913",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 47,
+        "opacity": "0.936256",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 61,
+        "opacity": "0.978787",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 31,
+        "opacity": "0.832913",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 59,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 74,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 88,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 56,
+        "opacity": "0.97879",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 13,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 69,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 84,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 102,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 70,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 27,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 80,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 95,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 109,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 80,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 43,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 94,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 113,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 127,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 95,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 59,
+        "opacity": "0.97879",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 113,
+        "opacity": "0.97879",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 128,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 145,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 113,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 75,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 126,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 144,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 158,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 127,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 92,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 143,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 158,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 176,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 144,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 107,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 158,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 173,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 187,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 160,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 125,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 176,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 191,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 173,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 140,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 191,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 193,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 156,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 171,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 188,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 11,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 24,
+        "opacity": "0.832728",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 40,
+        "opacity": "0.93583",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 56,
+        "opacity": "0.978655",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 74,
+        "opacity": "0.996422",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 89,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 105,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 121,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 136,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 153,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 168,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 184,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 12,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 28,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 48,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 16,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 16,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 15,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 13,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 61,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 24,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 24,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 24,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 22,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 75,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 38,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 38,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 37,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 35,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 92,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 56,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 56,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 56,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 54,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 108,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 76,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 76,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 19,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 75,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 73,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 124,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 87,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 87,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 30,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 88,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 88,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 139,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 102,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 102,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 45,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 101,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 99,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 160,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 123,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 124,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 67,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 123,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 121,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 171,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 134,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 134,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 79,
+        "opacity": "0.996449",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 138,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 136,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 188,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 151,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 151,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 94,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 150,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 148,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 3,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 110,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 169,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 167,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 22,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 13,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 183,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 183,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 126,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 14,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 182,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 180,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 35,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 27,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 11,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 143,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 31,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 52,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 43,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 27,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 14,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 158,
+        "opacity": "0.97879",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 46,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 67,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 58,
+        "opacity": "0.97879",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 42,
+        "opacity": "0.936263",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 29,
+        "opacity": "0.832934",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 186,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 74,
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 95,
+        "opacity": "0.978695",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 86,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 70,
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 57,
+        "opacity": "0.978695",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 79,
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 104,
+        "opacity": "0.978695",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 95,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 80,
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 67,
+        "opacity": "0.978695",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 93,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 114,
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 105,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 89,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 76,
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 110,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 131,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 122,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 106,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 93,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 126,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 147,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 138,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 122,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 109,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 141,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 165,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 156,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 140,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 127,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 157,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 178,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 169,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 153,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 140,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 173,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 194,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 186,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 170,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 157,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 190,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormError",
+        "elapsed": 186,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 173,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 10,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 192,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 29,
+        "opacity": "0.832377",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 41,
+        "opacity": "0.936062",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 58,
+        "opacity": "0.936062",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 81,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 21,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 14,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 22,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 20,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 16,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 2,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 24,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 18,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 18,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 21,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 24,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 19,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 34,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 58,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 67,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 82,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 101,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 116,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "SecureFormFocus",
+        "elapsed": 130,
+        "opacity": "1",
+        "connected": true
+      }
+    ],
+    "hardware": 0
+  },
+  {
+    "mode": "off",
+    "checks": [
+      {
+        "name": "Confirmed password check fades160 once; session rows have no entrance/replay",
+        "status": "PASS"
+      },
+      {
+        "name": "Revoke Cancel/Back preserve IDs; confirmation alone performs and verifies one revoke",
+        "status": "PASS"
+      },
+      {
+        "name": "Error field semantics immediate; focus opacity140/80/0; mode/OS cancellation",
+        "status": "PASS"
+      },
+      {
+        "name": "Visibility toggle preserves connected inputs, caret, focus; mismatch never clears fields",
+        "status": "PASS"
+      },
+      {
+        "name": "Double submit and rapid navigate-away while pending do not change account twice",
+        "status": "PASS"
+      },
+      {
+        "name": "Revoke failure retains source IDs; UNKNOWN reconciles without duplicate revoke",
+        "status": "PASS"
+      },
+      {
+        "name": "Native compact scroll, small session list, hide/dispose and hidden cleanup",
+        "status": "PASS"
+      }
+    ],
+    "geometry": {
+      "P11.S01": {
+        "panel": "P11.S01",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 58
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          }
+        ],
+        "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+        "rows": []
+      },
+      "P11.S02": {
+        "panel": "P11.S02",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 58
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          }
+        ],
+        "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu xác nhận chưa khớp.\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+        "rows": []
+      },
+      "P11.S03": {
+        "panel": "P11.S03",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              756
+            ],
+            "count": 53
+          },
+          {
+            "selector": ".p11-footer",
+            "box": [
+              494,
+              118
+            ],
+            "count": 1
+          },
+          {
+            "selector": ".p11-success-mark",
+            "box": [
+              120,
+              120
+            ],
+            "count": 3
+          },
+          {
+            "selector": ".p11-summary",
+            "box": [
+              446,
+              230
+            ],
+            "count": 35
+          }
+        ],
+        "text": "Đã đổi mật khẩu\nMật khẩu đăng nhập đã\nđược cập nhật\n\nBạn có thể sử dụng mật khẩu mới\nđể đăng nhập từ bây giờ.\n\nTài khoản\nMinh Anh\nKho\nKho Hoa Nam\nThời gian cập nhật\n09/09/2026 14:25\n\nNếu bạn nghi ngờ có hoạt động bất thường, hãy đăng xuất khỏi các thiết bị khác.\n\nTài khoản & bảo mật",
+        "rows": []
+      },
+      "P11.S04": {
+        "panel": "P11.S04",
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": [
+          {
+            "selector": ".p11-header",
+            "box": [
+              494,
+              88
+            ],
+            "count": 5
+          },
+          {
+            "selector": ".p11-scroll",
+            "box": [
+              494,
+              799
+            ],
+            "count": 78
+          },
+          {
+            "selector": ".p11-device",
+            "box": [
+              458,
+              273.71875
+            ],
+            "count": 32
+          },
+          {
+            "selector": ".p11-device",
+            "box": [
+              458,
+              357.578125
+            ],
+            "count": 36
+          }
+        ],
+        "text": "Phiên đăng nhập\nThiết bị hiện tại\nĐang hoạt động\niPhone 14 Pro\n\niOS 17.5.1\n\nHà Nội, Việt Nam\nĐăng nhập lúc 09/09/2026 14:25\nỨng dụng: Hoa Nam Scanner\nThiết bị khác\nWindows PC\n\nWindows 11 · Chrome 128.0\n\nHà Nội, Việt Nam\nĐăng nhập lúc 08/09/2026 10:12\nỨng dụng: Web WMS\nĐăng xuất từ xa\n\nNếu phát hiện thiết bị lạ, hãy đăng xuất khỏi thiết bị đó và đổi mật khẩu để tăng cường bảo mật.",
+        "rows": [
+          "fixture-security-current",
+          "fixture-security-windows"
+        ]
+      }
+    },
+    "errors": [],
+    "listProfile": {
+      "rows": 2,
+      "nodes": 86,
+      "overflow": false,
+      "frame": [
+        494,
+        950
+      ]
+    },
+    "calls": {
+      "password": 2,
+      "revoke": 3,
+      "list": 6,
+      "reconcile": 1
+    },
+    "outcomes": [
+      {
+        "action": "password",
+        "kind": "changed"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "revoked"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "password",
+        "kind": "changed"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "rejected"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "revoke",
+        "kind": "unknown"
+      },
+      {
+        "action": "reconcile",
+        "kind": "revoked"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      },
+      {
+        "action": "list",
+        "kind": "sessions"
+      }
+    ],
+    "effects": [],
+    "frames": [],
+    "hardware": 0
+  }
+]

@@ -1,0 +1,2072 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "S01 press100/filter140, stable search input and no row/route replay",
+      "S03 selected indicator140, rapid tabs keep one case/CTA and independent scroll",
+      "S02 invalid serial fades only error slot; camera/form/input remain connected at compact viewport",
+      "Intake failure retains request/serial/note/DOM and returns focus; retry writes once",
+      "S04 success160 occurs once after receipt, status remains waiting and Back never replays",
+      "UNKNOWN blocks duplicate update and reconciles exact request independently of motion",
+      "Closed case during P19 quantity sheet blocks mutation before any presentation",
+      "Mode/OS/hidden interruptions cancel; ten route cycles clean listeners; no camera startup",
+      "Logout/security immediately removes protected content and Back cannot restore it"
+    ],
+    "geometry": {
+      "P09.S01": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          97
+        ],
+        ".p09-scroll": [
+          0,
+          85,
+          494,
+          790
+        ],
+        ".p09-footer": null,
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P09.S02": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          63
+        ],
+        ".p09-scroll": [
+          0,
+          49,
+          494,
+          793
+        ],
+        ".p09-footer": [
+          0,
+          842,
+          494,
+          108
+        ],
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "P09.S03": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p09-scroll": [
+          0,
+          74,
+          494,
+          789
+        ],
+        ".p09-footer": [
+          0,
+          863,
+          494,
+          87
+        ],
+        ".p09-tabs": [
+          18,
+          278,
+          458,
+          49
+        ],
+        ".p09-case-summary": [
+          18,
+          92,
+          458,
+          172
+        ],
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "P09.S04": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p09-scroll": [
+          0,
+          74,
+          494,
+          729
+        ],
+        ".p09-footer": [
+          0,
+          803,
+          494,
+          147
+        ],
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": [
+          18,
+          90,
+          458,
+          254.25
+        ],
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "errors": [],
+    "profile": {
+      "rows": 8,
+      "nodes": 149
+    },
+    "initialResult": 1,
+    "parts": "3",
+    "newCase": "BH-009",
+    "domain": {
+      "cases": [
+        {
+          "id": "BH-001",
+          "serial": "HN12345",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa"
+          ]
+        },
+        {
+          "id": "BH-002",
+          "serial": "HN12346",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-003",
+          "serial": "SN-XP420B-202",
+          "status": "Đã tiếp nhận",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận"
+          ]
+        },
+        {
+          "id": "BH-004",
+          "serial": "SN-ZD421-203",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-005",
+          "serial": "SN-XP420B-204",
+          "status": "Chờ bàn giao",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Chờ bàn giao"
+          ]
+        },
+        {
+          "id": "BH-006",
+          "serial": "SN-ZD421-205",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-007",
+          "serial": "SN-XP420B-206",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Hoàn tất sửa chữa"
+          ]
+        },
+        {
+          "id": "BH-008",
+          "serial": "SN-ZD421-207",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-009",
+          "serial": "SN-XP420B-BK-0008",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Hoàn tất sửa chữa"
+          ]
+        }
+      ],
+      "ledger": [
+        {
+          "id": "XLK-0002",
+          "quantity": 3
+        },
+        {
+          "id": "XLK-0003",
+          "quantity": 1
+        },
+        {
+          "id": "XLK-0004",
+          "quantity": 2
+        },
+        {
+          "id": "XLK-0005",
+          "quantity": 1
+        },
+        {
+          "id": "XLK-0006",
+          "quantity": 1
+        }
+      ]
+    },
+    "operations": 4,
+    "frames": [
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.808467",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.882321",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.926941",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.956165",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.975664",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.988342",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.995909",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.999466",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.731989",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.855044",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.916027",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.952003",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.974568",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.988541",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.996433",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.999735",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "0.822778",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "0.919902",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "0.96352",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "0.9861",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.731989",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.855044",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.916027",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.952003",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.974568",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.988541",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.996433",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.999735",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.731463",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.731645",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.854877",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.915666",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.85473",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.85473",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.916038",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.951898",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.731362",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.85475",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.915863",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.951847",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.731746",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.854927",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.854927",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.731423",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.854769",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.915874",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.951908",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.974512",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.988508",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.996416",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.999731",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.731443",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.731443",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.854779",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.915879",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.951912",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.974514",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.98851",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.996417",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.999731",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyPress",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.6",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.6",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.669354",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.808408",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.882288",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.926919",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.956151",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.975655",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.988336",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.995906",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.999465",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.6",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.669568",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.808537",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.882362",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.926966",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.956182",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.975675",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.988349",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.995913",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.999469",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "0.999469",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantySuccess",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      }
+    ],
+    "effects": [
+      {
+        "node": "p09-check",
+        "primitive": "WarrantySuccess",
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "node": "p09-list",
+        "primitive": "WarrantyFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "p09-list",
+        "primitive": "WarrantyFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      }
+    ],
+    "hardware": 0
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "S01 press100/filter140, stable search input and no row/route replay",
+      "S03 selected indicator140, rapid tabs keep one case/CTA and independent scroll",
+      "S02 invalid serial fades only error slot; camera/form/input remain connected at compact viewport",
+      "Intake failure retains request/serial/note/DOM and returns focus; retry writes once",
+      "S04 success160 occurs once after receipt, status remains waiting and Back never replays",
+      "UNKNOWN blocks duplicate update and reconciles exact request independently of motion",
+      "Closed case during P19 quantity sheet blocks mutation before any presentation",
+      "Mode/OS/hidden interruptions cancel; ten route cycles clean listeners; no camera startup",
+      "Logout/security immediately removes protected content and Back cannot restore it"
+    ],
+    "geometry": {
+      "P09.S01": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          97
+        ],
+        ".p09-scroll": [
+          0,
+          85,
+          494,
+          790
+        ],
+        ".p09-footer": null,
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P09.S02": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          63
+        ],
+        ".p09-scroll": [
+          0,
+          49,
+          494,
+          793
+        ],
+        ".p09-footer": [
+          0,
+          842,
+          494,
+          108
+        ],
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "P09.S03": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p09-scroll": [
+          0,
+          74,
+          494,
+          789
+        ],
+        ".p09-footer": [
+          0,
+          863,
+          494,
+          87
+        ],
+        ".p09-tabs": [
+          18,
+          278,
+          458,
+          49
+        ],
+        ".p09-case-summary": [
+          18,
+          92,
+          458,
+          172
+        ],
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "P09.S04": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p09-scroll": [
+          0,
+          74,
+          494,
+          729
+        ],
+        ".p09-footer": [
+          0,
+          803,
+          494,
+          147
+        ],
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": [
+          18,
+          90,
+          458,
+          254.25
+        ],
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "errors": [],
+    "profile": {
+      "rows": 8,
+      "nodes": 149
+    },
+    "initialResult": 1,
+    "parts": "3",
+    "newCase": "BH-009",
+    "domain": {
+      "cases": [
+        {
+          "id": "BH-001",
+          "serial": "HN12345",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa"
+          ]
+        },
+        {
+          "id": "BH-002",
+          "serial": "HN12346",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-003",
+          "serial": "SN-XP420B-202",
+          "status": "Đã tiếp nhận",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận"
+          ]
+        },
+        {
+          "id": "BH-004",
+          "serial": "SN-ZD421-203",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-005",
+          "serial": "SN-XP420B-204",
+          "status": "Chờ bàn giao",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Chờ bàn giao"
+          ]
+        },
+        {
+          "id": "BH-006",
+          "serial": "SN-ZD421-205",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-007",
+          "serial": "SN-XP420B-206",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Hoàn tất sửa chữa"
+          ]
+        },
+        {
+          "id": "BH-008",
+          "serial": "SN-ZD421-207",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-009",
+          "serial": "SN-XP420B-BK-0008",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Hoàn tất sửa chữa"
+          ]
+        }
+      ],
+      "ledger": [
+        {
+          "id": "XLK-0002",
+          "quantity": 3
+        },
+        {
+          "id": "XLK-0003",
+          "quantity": 1
+        },
+        {
+          "id": "XLK-0004",
+          "quantity": 2
+        },
+        {
+          "id": "XLK-0005",
+          "quantity": 1
+        },
+        {
+          "id": "XLK-0006",
+          "quantity": 1
+        }
+      ]
+    },
+    "operations": 4,
+    "frames": [
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.832708",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.936181",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.978754",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.996437",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.832336",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.936047",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.978754",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.996437",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.832481",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.832852",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.832336",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.936047",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.978754",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.996456",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.833057",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.936308",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.97881",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.996382",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.832419",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.936077",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.978708",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.978708",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.832108",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.832108",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.936092",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.832811",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.936219",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.97877",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "0.996442",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "CaseTabs",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.83279",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.83279",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.936211",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.978767",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "0.996441",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFormFeedback",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.832913",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.936256",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "WarrantyFilter",
+        "opacity": "",
+        "connected": false
+      }
+    ],
+    "effects": [
+      {
+        "node": "p09-list",
+        "primitive": "WarrantyFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "p09-list",
+        "primitive": "WarrantyFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      }
+    ],
+    "hardware": 0
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "S01 press100/filter140, stable search input and no row/route replay",
+      "S03 selected indicator140, rapid tabs keep one case/CTA and independent scroll",
+      "S02 invalid serial fades only error slot; camera/form/input remain connected at compact viewport",
+      "Intake failure retains request/serial/note/DOM and returns focus; retry writes once",
+      "S04 success160 occurs once after receipt, status remains waiting and Back never replays",
+      "UNKNOWN blocks duplicate update and reconciles exact request independently of motion",
+      "Closed case during P19 quantity sheet blocks mutation before any presentation",
+      "Mode/OS/hidden interruptions cancel; ten route cycles clean listeners; no camera startup",
+      "Logout/security immediately removes protected content and Back cannot restore it"
+    ],
+    "geometry": {
+      "P09.S01": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          97
+        ],
+        ".p09-scroll": [
+          0,
+          85,
+          494,
+          790
+        ],
+        ".p09-footer": null,
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P09.S02": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          63
+        ],
+        ".p09-scroll": [
+          0,
+          49,
+          494,
+          793
+        ],
+        ".p09-footer": [
+          0,
+          842,
+          494,
+          108
+        ],
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "P09.S03": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p09-scroll": [
+          0,
+          74,
+          494,
+          789
+        ],
+        ".p09-footer": [
+          0,
+          863,
+          494,
+          87
+        ],
+        ".p09-tabs": [
+          18,
+          278,
+          458,
+          49
+        ],
+        ".p09-case-summary": [
+          18,
+          92,
+          458,
+          172
+        ],
+        ".p09-success": null,
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "P09.S04": {
+        ".p09-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p09-scroll": [
+          0,
+          74,
+          494,
+          729
+        ],
+        ".p09-footer": [
+          0,
+          803,
+          494,
+          147
+        ],
+        ".p09-tabs": null,
+        ".p09-case-summary": null,
+        ".p09-success": [
+          18,
+          90,
+          458,
+          254.25
+        ],
+        ".hn-nav": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "errors": [],
+    "profile": {
+      "rows": 8,
+      "nodes": 149
+    },
+    "initialResult": 1,
+    "parts": "3",
+    "newCase": "BH-009",
+    "domain": {
+      "cases": [
+        {
+          "id": "BH-001",
+          "serial": "HN12345",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa"
+          ]
+        },
+        {
+          "id": "BH-002",
+          "serial": "HN12346",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-003",
+          "serial": "SN-XP420B-202",
+          "status": "Đã tiếp nhận",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận"
+          ]
+        },
+        {
+          "id": "BH-004",
+          "serial": "SN-ZD421-203",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-005",
+          "serial": "SN-XP420B-204",
+          "status": "Chờ bàn giao",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Chờ bàn giao"
+          ]
+        },
+        {
+          "id": "BH-006",
+          "serial": "SN-ZD421-205",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-007",
+          "serial": "SN-XP420B-206",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Đang kiểm tra",
+            "Hoàn tất sửa chữa"
+          ]
+        },
+        {
+          "id": "BH-008",
+          "serial": "SN-ZD421-207",
+          "status": "Đã trả khách",
+          "version": 1,
+          "events": [
+            "Đã tiếp nhận",
+            "Đã xuất linh kiện",
+            "Hoàn tất sửa chữa",
+            "Đã trả khách"
+          ]
+        },
+        {
+          "id": "BH-009",
+          "serial": "SN-XP420B-BK-0008",
+          "status": "Chờ bàn giao",
+          "version": 2,
+          "events": [
+            "Đã tiếp nhận",
+            "Hoàn tất sửa chữa"
+          ]
+        }
+      ],
+      "ledger": [
+        {
+          "id": "XLK-0002",
+          "quantity": 3
+        },
+        {
+          "id": "XLK-0003",
+          "quantity": 1
+        },
+        {
+          "id": "XLK-0004",
+          "quantity": 2
+        },
+        {
+          "id": "XLK-0005",
+          "quantity": 1
+        },
+        {
+          "id": "XLK-0006",
+          "quantity": 1
+        }
+      ]
+    },
+    "operations": 4,
+    "frames": [],
+    "effects": [],
+    "hardware": 0
+  }
+]

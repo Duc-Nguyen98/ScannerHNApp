@@ -1,0 +1,34 @@
+✔ P03 native Back consumes only modal marker and preserves caller identity (35.4535ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (7.6015ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.3468ms)
+✔ disposing a closing modal settles deferred work (0.26ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.3709ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.4046ms)
+✔ Exception return adopts an existing marker without duplicate browser history (0.3441ms)
+✔ Forward to an owned dismissed dialog consumes the ghost entry and keeps caller data (1.3231ms)
+✔ Unknown stale marker is not allowed to traverse another owner history (0.4063ms)
+✔ M00 harness reuses the served primitive rather than a second implementation (2.8296ms)
+✔ OS reduction cannot be overridden and invalid modes fail to off (0.3146ms)
+✔ all six M00 primitives preserve presentation lifecycle in auto (1.9078ms)
+✔ all six M00 primitives preserve presentation lifecycle in reduced (0.5746ms)
+✔ all six M00 primitives preserve presentation lifecycle in off (0.503ms)
+✔ rapid replacement, OS change, hidden, detached and security teardown cancel without callbacks (1.4401ms)
+✔ inputs, preview scale roots and disabled targets remain static (0.4453ms)
+✔ P01 label updates apply immediately, do not replay identical text, and cancel on dispose (0.9375ms)
+✔ repeated P01 mount/dispose leaves zero media, visibility or pointer/key listeners (2.9982ms)
+✔ Shell reuses one route owner; replacement cancels old effect, repeated identity never replays (13.4624ms)
+✔ OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks (2.0957ms)
+✔ Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles (1.4469ms)
+✔ P10 reads identity from session, B10 contact isolated by actor AND namespace (2.1924ms)
+✔ P10 allowlist rejects forged immutable identity and preserves Vietnamese raw input (1.1593ms)
+✔ P10 does not infer individual grants from warehouseOperations or a role label (0.2956ms)
+✔ P10 missing profile/upload contracts return BLOCKED and never mutate input/session (0.3794ms)
+✔ P10 routes password/session to exact P11 panels, shift P14 with caller and identity (0.2685ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 456.502

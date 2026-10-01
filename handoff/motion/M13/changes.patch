@@ -1,0 +1,209 @@
+--- before/docs/flows/notifications/notifications.mjs
++++ after/docs/flows/notifications/notifications.mjs
+@@ -1,3 +1,4 @@
++import {mountNotificationMotion} from './motion.mjs';
+ import {clearFilterButton} from '../shared/list-actions.mjs';
+ import {scopedDocuments,waitingDocuments,canReadPreview,scopeKey,NOTIFICATION_PAGE_SIZE} from './notification-model.mjs';
+ import {notificationCount,notificationPageSummary} from './notification-count.mjs';
+@@ -17,9 +18,13 @@
+ const readable=(text,label,lines=3)=>`<p data-hn-readable="${esc(label)}" data-hn-lines="${lines}">${esc(text)}</p>`;
+ const empty=(title,copy)=>`<div class="p13-empty">${tile('documents')}<h2>${esc(title)}</h2><p>${esc(copy)}</p></div>`;
+ 
+-export function mountNotifications({root,screen,tools,getState,store,getDocuments,onHome,onSize,onDocument,onUnread}){
++export function mountNotifications({root,screen,tools,getState,store,getDocuments,onHome,onSize,onDocument,onUnread,motionMode='auto',onPanelTransition=()=>{}}){
+  let active=false,disposed=false,panel=1,eventId=null,docId=null,filter='unread',type='all',scenario='ready',renderedHash='',epoch=0;
+  const expandedMetadata=new Map(),returnFocus=new Map();
++ let filterMotion=null;
++ const motion=mountNotificationMotion({root,requested:motionMode,active:()=>active&&!disposed&&canReadPreview(getState())&&!obscured()});
++ const routeKey=()=>panel===1?'notifications:list':panel===3?'notifications:waiting':panel===2?'notifications:event:'+eventId:'notifications:document:'+docId;
++ function filterSettled(){if(filterMotion!==filter||panel!==1||!pages.snapshot(filter).loaded||syntheticState())return;filterMotion=null;motion.list(root.querySelector('.p13-records'));}
+  let pendingReadSync=false,pendingPageSync=false;
+  const positions=new Map(),pages=createNotificationPages({source:store});
+  const feedback=createActionFeedback({getScreen:()=>screen,tools,isActive:()=>active&&!disposed,key:'hnNotificationsFeedback'});
+@@ -38,7 +43,7 @@
+  function rememberOrigin(button){const attribute=button.dataset.p13Event?'p13Event':button.dataset.p13Doc?'p13Doc':null;if(attribute){const selector=attribute==='p13Event'?'[data-p13-event]':'[data-p13-doc]',buttons=[...root.querySelectorAll(selector)],i=buttons.indexOf(button);returnFocus.set(key(),{attribute,ids:[button.dataset[attribute],buttons[i+1]?.dataset[attribute],buttons[i-1]?.dataset[attribute]].filter(Boolean)});}else if(button.dataset.p13)returnFocus.set(key(),{action:button.dataset.p13});}
+  function restoreOrigin(){const origin=returnFocus.get(key());if(!origin||obscured())return;let target;if(origin.attribute){const attribute=origin.attribute==='p13Event'?'data-p13-event':'data-p13-doc';target=origin.ids.map(id=>root.querySelector(`[${attribute}="${CSS.escape(id)}"]`)).find(Boolean);target||=root.querySelector('[data-p13-filter][aria-pressed=true],[data-p13-type][aria-pressed=true]');}else target=root.querySelector(`[data-p13="${origin.action}"]`);target?.focus({preventScroll:true});}
+  const detailDocument=()=>{const d=documentById(panel===2?eventById(eventId)?.documentId:docId);return panel===4&&d&&!['inbound','outbound'].includes(d.type)?null:d;};
+- function info(title,message){feedback.show({title,message,confirmLabel:'Đóng'});}
++ function info(title,message){motion.cancel();filterMotion=null;feedback.show({title,message,confirmLabel:'Đóng'});}
+  function metadata(r){const category={inbound:'Thông báo nhập kho',outbound:'Thông báo xuất kho',warranty:'Thông báo bảo hành',nfc:'Thông báo thiết bị NFC',documents:'Thông báo kho'};return `<dl class="p13-metadata">${[
+  ['document','Loại thông báo',category[r.type]||'Chưa có dữ liệu'],['user','Người tạo',r.actor],['warehouse','Kho',r.warehouse]
+  ].map(([i,label,value])=>`<div>${icon(i)}<dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`;}
+@@ -83,9 +88,9 @@
+   if(!snapshot.items.length){const t=document.createElement('template');t.innerHTML=list();recordList.innerHTML=t.content.querySelector('.p13-records').innerHTML;}
+   recordList.dataset.p13Loaded='true';syncUnreadTab();updatePageControls();scroller.scrollTop=top;
+   if(!focused.isConnected)(fallback||root.querySelector('[data-p13-filter][aria-pressed=true]'))?.focus({preventScroll:true});
+-  pendingReadSync=false;pendingPageSync=false;return true;
++  pendingReadSync=false;pendingPageSync=false;filterSettled();return true;
+  }
+- const lifecycleObserver=new MutationObserver(()=>{if(pendingReadSync||pendingPageSync)syncList();});
++ const lifecycleObserver=new MutationObserver(()=>{if(obscured())motion.cancel();if(pendingReadSync||pendingPageSync)syncList();});
+  lifecycleObserver.observe(screen,{subtree:true,childList:true,attributes:true,attributeFilter:['hidden','inert']});
+ 
+  async function loadPage(){
+@@ -120,15 +125,15 @@
+ 
+  function counts(r){const total=totals(r.lines);return `<div class="p13-counts"><span>${icon('box')}<span><strong>${total.quantity??'—'}</strong><small>sản phẩm · ${total.skuCount??'—'} SKU</small></span></span><span>${icon('user')}<span>${esc(r.actor)}<small>Người tạo</small></span></span><span>${icon('calendar')}<span>${date(r.day)}<small>${esc(r.time||'—')}</small></span></span></div>`;}
+  function waiting(){const all=waitingDocuments(getState(),getDocuments()),items=scenario==='empty'?[]:all.filter(r=>type==='all'||r.type===type);return `<aside class="p13-banner">${icon('document')}<div><strong>Xử lý chứng từ trên Web</strong><p>Theo dõi phiếu đã gửi tại Kho Hoa Nam. Việc xử lý và ghi sổ được thực hiện trên Web.</p></div></aside><div class="p13-filters" aria-label="Loại phiếu chờ">${[['all','Tất cả'],['inbound','Phiếu nhập'],['outbound','Phiếu xuất']].map(([k,label])=>`<button type="button" data-p13-type="${k}" aria-pressed="${type===k}">${label} (${all.filter(r=>k==='all'||r.type===k).length})</button>`).join('')}</div><div class="p13-records">${sourceState()||(items.length?items.map(r=>`<button type="button" class="p13-waiting-record" data-p13-doc="${esc(r.id)}"><span class="p13-summary">${tile(r.type)}<span><strong>${esc(r.number)}</strong><small>Phiếu ${r.type==='inbound'?'nhập':'xuất'} kho</small></span>${badge(r)}${icon('chevron')}</span>${counts(r)}</button>`).join(''):(empty('Không có phiếu chờ xử lý','Chưa có phiếu nhập/xuất phù hợp trong nguồn được cấp.')+(scenario==='ready'&&type!=='all'?clearFilterButton('data-p13-type','all'):'')))}</div>`;}
+- function waitingDetail(){const r=documentById(docId);if(!r||!['inbound','outbound'].includes(r.type))return empty('Không tìm thấy chứng từ','Chứng từ không thuộc nguồn được cấp cho phiên hiện tại.');const total=totals(r.lines);return `<article class="p13-document-card"><div class="p13-summary">${tile(r.type)}<div><h2>${esc(r.number)}</h2><p>Phiếu ${r.type==='inbound'?'nhập':'xuất'} kho</p></div>${badge(r)}</div>${counts(r)}</article><section class="p13-card"><div class="p13-warehouse">${tile('documents')}<div><small>Kho</small><strong>${esc(r.warehouse)}</strong></div></div><p class="p13-muted">Kho được xác định theo chứng từ và phạm vi truy cập của phiên.</p></section><aside class="p13-banner"><div><strong>${r.status==='waiting'?WAITING_WEB.status:'Trạng thái chứng từ đã cập nhật'}</strong><p>${r.status==='waiting'?WAITING_WEB.description:'Mở chứng từ để xem trạng thái hiện tại. App không thực hiện duyệt hoặc ghi sổ phiếu nhập/xuất.'}</p></div></aside><section class="p13-card"><div class="p13-section-heading"><h2>Danh sách hàng hóa (${total.skuCount??'—'} SKU)</h2>${btn('products',icon('chevron'),'p13-icon-button','aria-label="Xem đầy đủ sản phẩm"')}</div>${r.lines?.length?`<table class="p13-lines"><thead><tr><th>SKU</th><th>Số lượng</th><th>Đơn vị</th></tr></thead><tbody>${r.lines.map(l=>`<tr><td>${esc(l.sku)}</td><td>${l.quantity??'—'}</td><td>${esc(l.unit)}</td></tr>`).join('')}</tbody></table>`:'<p>Chưa có dữ liệu sản phẩm.</p>'}</section>${r.note?`<section class="p13-card"><h2>Ghi chú</h2>${readable(r.note,'Ghi chú · '+r.number,2)}</section>`:''}`;}
+- function render(focus=false){if(!active||disposed)return;screen.classList.toggle('p13-detail-screen',[2,4].includes(panel));screen.classList.toggle('p13-inbox-screen',[1,2].includes(panel));const allowed=canReadPreview(getState());const r=panel===2?eventById(eventId):null,d=detailDocument();const titles=['','Thông báo','Chi tiết thông báo','Chờ xử lý trên Web','Chi tiết chờ xử lý Web'];
++ function waitingDetail(){const r=documentById(docId);if(!r||!['inbound','outbound'].includes(r.type))return empty('Không tìm thấy chứng từ','Chứng từ không thuộc nguồn được cấp cho phiên hiện tại.');const total=totals(r.lines);return `<article class="p13-document-card"><div class="p13-summary">${tile(r.type)}<div><h2>${esc(r.number)}</h2><p>Phiếu ${r.type==='inbound'?'nhập':'xuất'} kho</p></div>${badge(r)}</div>${counts(r)}</article><section class="p13-card"><div class="p13-warehouse">${tile('documents')}<div><small>Kho</small><strong>${esc(r.warehouse)}</strong></div></div><p class="p13-muted">Kho được xác định theo chứng từ và phạm vi truy cập của phiên.</p></section><aside class="p13-banner" data-p13-waiting-state><div><strong>${r.status==='waiting'?WAITING_WEB.status:'Trạng thái chứng từ đã cập nhật'}</strong><p>${r.status==='waiting'?WAITING_WEB.description:'Mở chứng từ để xem trạng thái hiện tại. App không thực hiện duyệt hoặc ghi sổ phiếu nhập/xuất.'}</p></div></aside><section class="p13-card"><div class="p13-section-heading"><h2>Danh sách hàng hóa (${total.skuCount??'—'} SKU)</h2>${btn('products',icon('chevron'),'p13-icon-button','aria-label="Xem đầy đủ sản phẩm"')}</div>${r.lines?.length?`<table class="p13-lines"><thead><tr><th>SKU</th><th>Số lượng</th><th>Đơn vị</th></tr></thead><tbody>${r.lines.map(l=>`<tr><td>${esc(l.sku)}</td><td>${l.quantity??'—'}</td><td>${esc(l.unit)}</td></tr>`).join('')}</tbody></table>`:'<p>Chưa có dữ liệu sản phẩm.</p>'}</section>${r.note?`<section class="p13-card"><h2>Ghi chú</h2>${readable(r.note,'Ghi chú · '+r.number,2)}</section>`:''}`;}
++ function render(focus=false){if(!active||disposed)return;motion.cancel();screen.classList.toggle('p13-detail-screen',[2,4].includes(panel));screen.classList.toggle('p13-inbox-screen',[1,2].includes(panel));const allowed=canReadPreview(getState());const r=panel===2?eventById(eventId):null,d=detailDocument();const titles=['','Thông báo','Chi tiết thông báo','Chờ xử lý trên Web','Chi tiết chờ xử lý Web'];
+  root.innerHTML=`<section class="p13-app" data-panel="P13.S0${panel}"><header class="p13-header">${btn('back',icon('back'),'p13-back','aria-label="Quay lại"')}<h1 tabindex="-1">${titles[panel]}</h1></header><div class="p13-body">${allowed&&panel===1?`<div class="p13-filter-dock">${filters()}</div>`:''}<div class="p13-scroll" tabindex="0" aria-label="Nội dung ${titles[panel]}">${!allowed?empty('Chưa xác minh quyền xem','Chưa có nguồn dữ liệu được cấp cho tài khoản và kho trong phiên này.'):panel===1?list():panel===2?notification():panel===3?waiting():waitingDetail()}</div>${allowed&&[2,4].includes(panel)&&d?`<footer class="p13-actions">${d?btn('document',icon('document')+' Xem chứng từ','p13-primary'):''}${panel===2&&d?.status==='waiting'&&['inbound','outbound'].includes(d.type)?btn('waiting','Các phiếu chờ Web','p13-context-link'):''}${panel===4?btn('web','Hướng dẫn xử lý trên Web','p13-secondary'):''}</footer>`:''}</div></section>`;
+  root.querySelector('.p13-scroll').scrollTop=positions.get(key())||0;renderedHash=location.hash;document.title='P13 · '+titles[panel];if(focus)root.querySelector('h1')?.focus({preventScroll:true});onSize();}
+  async function markRead(id){const r=eventById(id);if(!r||r.read||!canReadPreview(getState()))return;const requestEpoch=epoch,scope=scopeKey(getState());const trigger=root.querySelector('[data-p13=mark-read]');if(trigger){trigger.disabled=true;trigger.setAttribute('aria-busy','true');}const result=await store.markRead(id,{fail:scenario==='read-error'});if(disposed||scopeKey(getState())!==scope)return;if(result.kind==='verified'){pages.markRead(id);onUnread();if(active&&panel===1){pendingReadSync=true;syncList();return;}}if(!active||epoch!==requestEpoch||eventId!==id)return;if(trigger?.isConnected){trigger.disabled=false;trigger.removeAttribute('aria-busy');}if(result.kind==='verified'){if(trigger===document.activeElement)root.querySelector('h1')?.focus({preventScroll:true});trigger?.remove();}else if(result.kind!=='stale'){if(trigger?.isConnected)trigger.hidden=false;info('Chưa đánh dấu đã đọc','Thông báo vẫn được giữ là chưa đọc. Bạn có thể đọc nội dung và thử đánh dấu lại.');}}
+- function show(){if(disposed)return;if(active&&location.hash===renderedHash&&root.querySelector('.p13-app'))return;remember();active=true;review.hidden=false;const q=new URLSearchParams(location.hash.split('?')[1]);panel=[1,2,3,4].includes(Number(q.get('panel')))?Number(q.get('panel')):1;eventId=q.get('event');docId=q.get('doc');epoch++;render(true);restoreOrigin();if(panel===2)void markRead(eventId);if(panel===1&&!pages.snapshot(filter).loaded&&!pages.snapshot(filter).busy&&!pages.snapshot(filter).error)void loadPage();}
++ function show(){if(disposed)return;if(active&&location.hash===renderedHash&&root.querySelector('.p13-app'))return;filterMotion=null;remember();active=true;motion.activate();review.hidden=false;const q=new URLSearchParams(location.hash.split('?')[1]);panel=[1,2,3,4].includes(Number(q.get('panel')))?Number(q.get('panel')):1;eventId=q.get('event');docId=q.get('doc');epoch++;render(true);restoreOrigin();onPanelTransition(routeKey());if(panel===4){const d=detailDocument();if(d)motion.state(root.querySelector('[data-p13-waiting-state]'),JSON.stringify([d.id,d.version,d.status]));}if(panel===2)void markRead(eventId);if(panel===1&&!pages.snapshot(filter).loaded&&!pages.snapshot(filter).busy&&!pages.snapshot(filter).error)void loadPage();}
+  function click(e){if(!active||disposed||!root.contains(e.target)||screen.querySelector('.app-modal-host'))return;const b=e.target.closest('button');if(!b)return;const a=b.dataset.p13;if(a==='back'){remember();if(history.state?.p13)history.back();else if(panel===1)onHome();else navigate(panel===4?3:1,{},true);return;}if(!canReadPreview(getState()))return;
+- if(b.dataset.p13Filter){remember();filter=b.dataset.p13Filter;render();root.querySelector(`[data-p13-filter="${filter}"]`)?.focus();if(!pages.snapshot(filter).loaded&&!pages.snapshot(filter).busy)void loadPage();}
+- if(b.dataset.p13Type){remember();type=b.dataset.p13Type;render();root.querySelector(`[data-p13-type="${type}"]`)?.focus();}
++ if(b.dataset.p13Filter){if(filter===b.dataset.p13Filter)return;remember();motion.cancel();filter=b.dataset.p13Filter;filterMotion=filter;render();root.querySelector(`[data-p13-filter="${filter}"]`)?.focus();filterSettled();if(!pages.snapshot(filter).loaded&&!pages.snapshot(filter).busy)void loadPage();}
++ if(b.dataset.p13Type){if(type===b.dataset.p13Type)return;remember();type=b.dataset.p13Type;render();root.querySelector(`[data-p13-type="${type}"]`)?.focus();motion.list(root.querySelector('.p13-records'));}
+  if(b.dataset.p13Event){rememberOrigin(b);navigate(2,{event:b.dataset.p13Event});}
+  if(b.dataset.p13Doc){rememberOrigin(b);navigate(4,{doc:b.dataset.p13Doc});}
+  if(a==='waiting')navigate(3);
+@@ -142,5 +147,5 @@
+  root.addEventListener('toggle',onMetadataToggle,true);
+  root.addEventListener('click',click);review.querySelector('#p13-scenario').onchange=e=>{scenario=e.target.value;remember();render();};
+  review.querySelector('#p13-dataset').onchange=e=>{store.useReviewDataset(e.target.value);pages.reset();positions.clear();expandedMetadata.clear();returnFocus.clear();pendingReadSync=false;pendingPageSync=false;onUnread();if(panel===1){render();void loadPage();}else navigate(1);};
+- return {show,hide(){if(!active)return;remember();active=false;epoch++;review.hidden=true;feedback.clear();screen.classList.remove('p13-detail-screen','p13-inbox-screen');},dispose(){disposed=true;active=false;epoch++;pages.dispose();lifecycleObserver.disconnect();feedback.dispose();review.remove();expandedMetadata.clear();returnFocus.clear();root.removeEventListener('toggle',onMetadataToggle,true);root.removeEventListener('click',click);}};
++ return {show,routeKey,setMotionMode:value=>motion.setMode(value),cancelMotion(){filterMotion=null;motion.cancel();},hide(){filterMotion=null;motion.hide();if(!active)return;remember();active=false;epoch++;review.hidden=true;feedback.clear();screen.classList.remove('p13-detail-screen','p13-inbox-screen');},dispose(){motion.dispose();disposed=true;active=false;epoch++;pages.dispose();lifecycleObserver.disconnect();feedback.dispose();review.remove();expandedMetadata.clear();returnFocus.clear();root.removeEventListener('toggle',onMetadataToggle,true);root.removeEventListener('click',click);}};
+ }
+--- before/docs/flows/home/home.mjs
++++ after/docs/flows/home/home.mjs
+@@ -235,7 +235,7 @@
+   const motionTools=document.createElement('label');
+   motionTools.innerHTML='Motion P02 / AppShell <select id="home-motion-mode"><option value="auto">Tự động theo hệ điều hành</option><option value="reduced">Giảm chuyển động</option><option value="off">Tắt chuyển động</option></select>';
+   const motionSelect=motionTools.querySelector('select');motionSelect.value=motionMode;
+-  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
++  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);notifications?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
+   root.querySelector('.hn-tools > details').append(motionTools);
+   function syncDateRefresh(){
+     clearTimeout(dateRefreshTimer);dateRefreshTimer=null;
+@@ -274,8 +274,8 @@
+     if(['inbound','outbound'].includes(key))lastStockOperation=key;
+     if (disposed || suspended) return;
+     dialogs?.cancelMotion();
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();system?.show('expired',{history:false});return;}
+-    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();system?.show('forbidden');return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();system?.show('forbidden');return;}
+     if(system?.active){system.leave(()=>showRoute({key,id},{push,restore,scannerContext}));return;}
+     const documentResume=history.state?.p12Resume;
+     if(!push&&documentResume?.type===key){
+@@ -336,7 +336,7 @@
+     if (key === 'lookup' && push && !scannerContext?.selectForNfc) nfcProductPicker = false;
+     if (key === 'lookup' && result.context && nfcProductPicker) result.context.selectForNfc = true;
+     if (result.kind === 'blocked' && sessionGuard(state())) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();
+       if(state().session&&state().previewReady){system?.show('forbidden');return;}
+       logout(); return;
+     }
+@@ -495,7 +495,7 @@
+       window.scrollTo(0, 0); destination.querySelector('h1').focus({ preventScroll: true });
+     }
+     if(key!=='attachments'&&(previousKey==='attachments'||attachmentReturnStamp===routeStamp())){const saved=attachmentCallers.get(location.hash);if(saved){const scroll=destination.querySelector(saved.scroll);if(scroll)scroll.scrollTop=saved.top;destination.querySelector(saved.focus)?.focus({preventScroll:true});attachmentReturnStamp=routeStamp();}}
+-    shellMotion.commit(result.kind==='documents'?documents.routeKey():result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
++    shellMotion.commit(result.kind==='notifications'?notifications.routeKey():result.kind==='documents'?documents.routeKey():result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
+     previousKey = result.kind === 'home' ? 'home' : key;
+     currentHash = location.hash;
+     fitPreview();
+@@ -511,7 +511,7 @@
+     const button = event.target.closest('button');
+     if (!button || !root.contains(button)) return;
+     if(button.dataset.p15)return;
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();system?.show('expired',{history:false});return;}
+     if(system?.active&&button.dataset.tab){system.leave(()=>{if(button.isConnected)button.click();});return;}
+     if (button.dataset.tab && dialogs.flow.snapshot().panel) {
+       if (!dialogs.flow.dismissForMenu(button.dataset.tab)) return;
+@@ -531,7 +531,7 @@
+     else if (button.dataset.recentDocument) openHomeDocuments(button.dataset.recentDocument);
+     else if (button.dataset.homeKpi) openKpi(button.dataset.homeKpi);
+     else if (button.classList.contains('hn-name')) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();
+       nameDialog.querySelector('#hn-full-name').textContent = state().session?.actor.name ?? '';
+       nameRoute.begin();nameModal=openAppModal({screen,tools:root.querySelector('.hn-tools'),dialog:nameDialog,initialFocus:'button',dismissOnBackdrop:false,onClose(){nameModal=null;root.append(nameDialog);nameRoute.closed();}});
+     }
+@@ -566,8 +566,8 @@
+     screen, tools: root.querySelector('.hn-tools'), getState: state, motionMode,
+     onFeedback:config=>{void dialogRoute.ready().then(()=>queueMicrotask(()=>{if(!disposed)homeFeedback.show(config);}));},
+     onShow() {
+-      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
++      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();
+       dialogRoute.begin();
+       currentHash = location.hash;
+       dialogCallerTitle = document.title;
+@@ -727,7 +727,7 @@
+       if(lastNavigation?.kind===form.type)history.replaceState({...history.state,p12CreateFrom:createFrom,...(resumeId?{p12Resume:{type:form.type,id:resumeId}}:{})},'',location.hash);
+       if(form.type==='inbound'&&!resume&&lastNavigation?.kind==='inbound')inbound.flow.next();
+     }});
+-  notifications=mountNotifications({root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,store:notificationStore,onHome:goHome,onSize:fitPreview,onUnread:syncUnread,
++  notifications=mountNotifications({motionMode,onPanelTransition:key=>shellMotion.commit(key,destination,screen.querySelector('.hn-nav [aria-current="page"]')),root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,store:notificationStore,onHome:goHome,onSize:fitPreview,onUnread:syncUnread,
+     getDocuments:()=>mergeDocuments(recordedDocuments([{type:'inbound',runs:[...inbound.flow.finishedRuns(),inbound.flow.snapshot()]},{type:'outbound',runs:[...outbound.flow.finishedRuns(),outbound.flow.snapshot()]}],state().session)),
+     onDocument:(id,tab)=>{history.pushState({p12:true,p12From:location.hash},'',`#p02/documents?panel=${tab==='products'?3:2}&doc=${encodeURIComponent(id)}`);showRoute({key:'documents'});}});
+   let draftRestoreFailed=false;
+@@ -755,18 +755,18 @@
+   }
+   function showSystem(error,options={}){
+     const panel=classifySystemError(error);if(!panel)return false;
+-    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
++    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();
+     if(panel==='expired'){expire();return true;}
+     if(suspended||!getState().session)return true;
+     if(panel==='forbidden')systemDenied=true;
+     if(system?.active&&system.kind===panel)return true;
+     return system?.show(panel,{...options,intent:options.intent||(error.kind==='unknown'?'reconcile':'read'),actionLabel:options.actionLabel})===true;
+   }
+-  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
++  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
+   // Explicit prototype controls stay outside product navigation.
+   const systemTools=document.createElement('details');systemTools.className='p15-tools';
+   systemTools.innerHTML='<summary>P15 · Hệ thống</summary><p>Chỉ mô phỏng lỗi hệ thống. Camera kiểm tra API môi trường thực khi bấm; không kết nối WMS.</p><button data-system-demo="connection">P15.S01 · Kết nối</button><button data-system-demo="expired">P15.S02 · Phiên hết hạn</button><button data-system-demo="forbidden">P15.S03 · Không có quyền</button><button data-system-demo="device">P15.S04 · Quyền thiết bị</button><button data-system-demo="deny">Mô phỏng thu hồi quyền</button><button data-system-demo="allow">Khôi phục quyền fixture</button>';
+-  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
++  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
+   root.querySelector('.hn-tools').append(systemTools);
+   root.addEventListener('click', onClick);
+   root.querySelector('#hn-scenario').addEventListener('change', event => {
+@@ -781,11 +781,11 @@
+   if(draftRestoreFailed)homeFeedback.show({title:'Chưa phục hồi đủ phiếu nháp',message:'Bản giữ lại vẫn còn trong dữ liệu của tài khoản này. Chưa thể mở đầy đủ phiếu; cần đối chiếu trước khi tạo phiếu thay thế hoặc đăng xuất từ Tổng kết ca.'});
+   return {
+     dispose() { shellMotion.dispose();motionSelect.onchange=null;warrantySession.dispose();nfcAudit.dispose();disposed = true; system.dispose(); shift.dispose();clearTimeout(dateRefreshTimer); document.removeEventListener('visibilitychange',syncDateRefresh); notifications.dispose();notificationStore.dispose();homeFeedback.dispose();nameRoute.dispose();closeName();dialogRoute.dispose(); if (nameDialog.open) closeName(); inbound.dispose(); outbound.dispose(); lookup.dispose(); nfc.dispose(); historyView.dispose(); warranty.dispose(); profile.dispose(); security.dispose(); documents.dispose(); attachments.dispose(); componentIssue.dispose(); componentHistory.dispose(); componentResume.dispose(); dialogs.dispose(); sizeObserver.disconnect(); window.removeEventListener('resize', fitPreview); window.removeEventListener('popstate', onRoute); window.removeEventListener('hashchange', onRoute); root.removeEventListener('click', onClick); root.replaceChildren(); },
+-    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
+-    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
+-    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
++    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
++    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
++    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
+     resume(){suspended=false;shift.resumeSession();system.hide({restore:false});history.replaceState(null,'',currentHash);showRoute(parseRoute(currentHash));},
+-    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);},
++    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);notifications?.setMotionMode(value);},
+     snapshot() { return { motion:{mode:shellMotion.mode,active:shellMotion.activeCount},scenario, homeScroll, navigation: structuredClone(lastNavigation) }; },
+   };
+ }
+--- before/docs/flows/notifications/motion.mjs
++++ after/docs/flows/notifications/motion.mjs
+@@ -0,0 +1,19 @@
++import {createMotionController} from '../shared/motion/motion-primitives.mjs';
++
++// NotificationFeedback consumes M00; M02 owns route opacity and native scroll stays put.
++export function mountNotificationMotion({root,requested='auto',active=()=>true,media}){
++ let controller=null,disposed=false;
++ const seenStates=new Set();
++ const usable=()=>!disposed&&active()&&!root.closest('[inert]')&&!root.ownerDocument.hidden;
++ function fade(node,name){if(!node||!usable())return;node.dataset.motionPrimitive=name;controller?.dataState(node);}
++ function release(){controller?.dispose();controller=null;}
++ return {
++  activate(){if(!disposed&&!controller)controller=createMotionController({element:root,requested,...(media?{media}:{})});},
++  setMode(value){requested=value;controller?.setMode(value);},
++  list:node=>fade(node,'NotificationList'),
++  state(node,signature){if(!signature||seenStates.has(signature))return;seenStates.add(signature);fade(node,'WaitingWebState');},
++  cancel(){controller?.cancel();},
++  hide:release,
++  dispose(){disposed=true;release();seenStates.clear();},
++ };
++}

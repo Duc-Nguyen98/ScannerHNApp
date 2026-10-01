@@ -1,0 +1,62 @@
+[
+  {
+    "mode": "auto",
+    "geometry": {
+      ".hn-hero": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 183,
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      ".hn-main": {
+        "x": 0,
+        "y": 183,
+        "width": 494,
+        "height": 692,
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      ".hn-kpis": {
+        "x": 20,
+        "y": 183,
+        "width": 454,
+        "height": 98,
+        "background": "rgb(255, 255, 255)"
+      },
+      ".hn-tasks": {
+        "x": 20,
+        "y": 338,
+        "width": 454,
+        "height": 177,
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      ".hn-recent-list": {
+        "x": 20,
+        "y": 661,
+        "width": 454,
+        "height": 197,
+        "background": "rgb(255, 255, 255)"
+      },
+      ".hn-nav": {
+        "x": 0,
+        "y": 875,
+        "width": 494,
+        "height": 75,
+        "background": "rgba(255, 255, 255, 0.98)"
+      },
+      ".hn-scan-circle": {
+        "x": 215.984375,
+        "y": 857,
+        "width": 62,
+        "height": 62,
+        "background": "rgb(0, 115, 153)"
+      }
+    },
+    "errors": [],
+    "checks": [],
+    "failure": {
+      "name": "Home geometry equals pre-motion; effective policy respects OS",
+      "error": "Error: ENOENT: no such file or directory, open 'C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M12\\shell-regression\\before.json'\n    at Object.openSync (node:fs:622:18)\n    at Object.readFileSync (node:fs:488:35)\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p02.cjs:24:122\n    at check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p02.cjs:20:42)\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p02.cjs:24:9"
+    }
+  }
+]

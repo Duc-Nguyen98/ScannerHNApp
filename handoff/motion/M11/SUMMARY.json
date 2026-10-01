@@ -1,0 +1,47 @@
+{
+  "prompt": "MOTION_P11",
+  "normal": "PASS",
+  "os_reduced": "PASS",
+  "off": "PASS",
+  "panels": 4,
+  "node_tests": 68,
+  "motion_browser_groups": 21,
+  "shell_regression_groups": 36,
+  "static_geometry": "PASS12 exact panel-mode comparisons",
+  "domain_equal": true,
+  "operations_per_mode": {
+    "auto": {
+      "password": 2,
+      "revoke": 3,
+      "list": 6,
+      "reconcile": 1
+    },
+    "os-reduced": {
+      "password": 2,
+      "revoke": 3,
+      "list": 6,
+      "reconcile": 1
+    },
+    "off": {
+      "password": 2,
+      "revoke": 3,
+      "list": 6,
+      "reconcile": 1
+    }
+  },
+  "result_signatures_equal": true,
+  "camera_calls_per_mode": [
+    0,
+    0,
+    0
+  ],
+  "source_byte_delta": 3504,
+  "primitive_source_unchanged": true,
+  "visual": "USER_REVIEW_PENDING",
+  "virtualization": "NOT_NEEDED",
+  "fps": "NOT_MEASURED",
+  "hardware": "NOT_RUN",
+  "production": "NOT_RUN",
+  "report": "handoff/motion/M11/REPORT.md",
+  "preflight_repair": "Expiry clears password fields immediately; no credentials captured in evidence"
+}

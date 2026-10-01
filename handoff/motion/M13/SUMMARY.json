@@ -1,0 +1,81 @@
+{
+  "prompt": "MOTION_P13",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "modes": [
+    "auto",
+    "os-reduced",
+    "off"
+  ],
+  "motion_browser_groups": 24,
+  "shell_browser_groups": 36,
+  "node_tests": 27,
+  "geometry_equal": 12,
+  "pixel_equal": 11,
+  "pixel_difference_note": "Auto S04: footer shadow pixels at y868-875; no geometry/style/fixture change, pixel-perfect not claimed. Other11 comparisons identical.",
+  "domain_equal": true,
+  "final_domain": {
+    "readOperations": 4,
+    "hardware": 0,
+    "pageCalls": "9 lÆ°á»£t táº£i trang"
+  },
+  "profile": [
+    {
+      "mode": "auto",
+      "before": {
+        "rows": 20,
+        "nodes": 335,
+        "appendWallMs": 278
+      },
+      "after": {
+        "rows": 20,
+        "nodes": 335,
+        "appendWallMs": 260
+      },
+      "node_delta": 0,
+      "append_wall_delta_ms": -18
+    },
+    {
+      "mode": "os-reduced",
+      "before": {
+        "rows": 20,
+        "nodes": 335,
+        "appendWallMs": 265
+      },
+      "after": {
+        "rows": 20,
+        "nodes": 335,
+        "appendWallMs": 306
+      },
+      "node_delta": 0,
+      "append_wall_delta_ms": 41
+    },
+    {
+      "mode": "off",
+      "before": {
+        "rows": 20,
+        "nodes": 335,
+        "appendWallMs": 267
+      },
+      "after": {
+        "rows": 20,
+        "nodes": 335,
+        "appendWallMs": 285
+      },
+      "node_delta": 0,
+      "append_wall_delta_ms": 18
+    }
+  ],
+  "virtualization": "NOT_ADDED: existing1000-source fixture loads10 then20 rows,335nodes; native pagination retained. Profile is not a full1000-render/hardware benchmark.",
+  "source_delta_bytes": 3003,
+  "hardware": "NOT_RUN",
+  "production": "NOT_RUN",
+  "evidence_root": "D:\\CodexTemp\\ScannerHNApp-M13\\evidence",
+  "shell_evidence": "D:/CodexTemp/ScannerHNApp-M13/shell-regression",
+  "normal": "PASS",
+  "os_reduced": "PASS",
+  "off": "PASS",
+  "flow_regression": "PASS",
+  "visual": "USER_REVIEW_PENDING_SHADOW_DELTA_NOT_PIXEL_PERFECT",
+  "report": "handoff/motion/M13/REPORT.md",
+  "primitive_source_unchanged": true
+}

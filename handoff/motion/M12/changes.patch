@@ -1,0 +1,299 @@
+--- before/docs/flows/documents/documents.mjs
++++ after/docs/flows/documents/documents.mjs
+@@ -1,3 +1,4 @@
++import {mountDocumentsMotion} from './motion.mjs';
+ import {createStatusAnnouncer} from '../shared/status-announcer.mjs';
+ import {createDataRead,listDataState} from '../data-states/model.mjs';
+ import {dataStateView} from '../data-states/view.mjs';
+@@ -29,7 +30,7 @@
+ const button=(a,label,cls='p12-link',attrs='')=>`<button type="button" class="${cls}" data-p12="${a}" ${attrs}>${label}</button>`;
+ const empty=(title,copy)=>`<div class="p12-empty">${tile('documents')}<h2>${title}</h2><p>${copy}</p></div>`;
+ 
+-export function mountDocuments({root,screen,tools,getState,onHome,onSize,onCreate,getPending,onCase,getRecorded=()=>[],getDrafts=()=>[],supplierHistory,readList=null,onSystemError=()=>false,onAttachments}){
++export function mountDocuments({root,screen,tools,getState,onHome,onSize,onCreate,getPending,onCase,getRecorded=()=>[],getDrafts=()=>[],supplierHistory,readList=null,onSystemError=()=>false,onAttachments,motionMode='auto',onPanelTransition=()=>{}}){
+  let active=false,disposed=false,panel=1,docId=null,tab='info',query='',filters=initialFilters(),scenario='ready',modal=null,afterDialog=null,renderedHash='',renderedEntry='',busy=false,attachmentRequest=null,attachmentFileId=null;
+  let dialogFocus=null;
+  let readOnlyPreview=false,rendering=false,searchTimer=null,searchPending=false,composing=false,hasRead=false;
+@@ -40,6 +41,17 @@
+  let form={type:'inbound',supplierId:INBOUND_SUPPLIERS[0].id,note:''},errors={};
+  const documentRows=()=>mergeDocuments(getRecorded());
+  const readDocument=id=>documentRows().find(r=>r.id===id)||null;
++ const motion=mountDocumentsMotion({root,requested:motionMode,active:()=>active&&!disposed&&!sessionGuard(getState())});
++ let pendingFilter=null,feedbackEpoch=0;
++ const routeKey=()=>panel===1?'documents:list':panel===4?'documents:create':'documents:detail:'+docId;
++ function filterChanged(){feedbackEpoch++;motion.cancel();pendingFilter=JSON.stringify(filters);}
++ function filterSettled(){
++  if(pendingFilter!==JSON.stringify(filters)||searchPending||listState().snapshot.status!=='ready')return;
++  const expected=pendingFilter,epoch=feedbackEpoch;pendingFilter=null;
++  // Presentation may wait for history cleanup, never the committed filter/data.
++  void dialogRoute.ready().then(()=>{if(active&&!disposed&&panel===1&&!modal&&epoch===feedbackEpoch&&expected===JSON.stringify(filters))motion.filter(root.querySelector('.p12-records'));});
++ }
++
+  const queries=new Map();
+  const previewObserver=new ResizeObserver(()=>syncTextPreviews());
+  const positions=new Map(),dialogRoute=createDialogRoute({history,location,key:'hnDocumentsDialog'});
+@@ -86,7 +98,7 @@
+ 
+  function modalClosed(){modal=null;dialogRoute.closed();const task=afterDialog,saved=dialogFocus;afterDialog=null;dialogFocus=null;void dialogRoute.ready().then(()=>{if(!active||disposed)return;if(task)task();else restoreDialogFocus(saved);});}
+  function inform(title,message,action=null,label='Đã hiểu',cancel=null){if(modal||!active)return;rememberDialogFocus();dialogRoute.begin();modal=openActionDialog({screen,tools,title,message,confirmLabel:label,cancelLabel:cancel,className:'p12-dialog',onConfirm:()=>afterDialog=action,onClose:modalClosed});}
+- function picker(mode){if(modal)return;rememberDialogFocus();dialogRoute.begin();modal=openHistoryPicker({screen,tools,mode,filters,filterTitle:'Bộ lọc chứng từ',sortTitle:'Sắp xếp chứng từ',day:'',scopeLabel:'Chứng từ · '+(TYPES[filters.type]||'Tất cả'),statusOptions:Object.entries(STATUSES).filter(([s])=>documentRows().some(r=>r.status===s&&(filters.type==='all'||r.type===filters.type))),onClose:modalClosed,onApply:value=>{filters={...value,q:filters.q};positions.set('list',0);render();}});}
++ function picker(mode){if(modal)return;rememberDialogFocus();dialogRoute.begin();modal=openHistoryPicker({screen,tools,mode,filters,filterTitle:'Bộ lọc chứng từ',sortTitle:'Sắp xếp chứng từ',day:'',scopeLabel:'Chứng từ · '+(TYPES[filters.type]||'Tất cả'),statusOptions:Object.entries(STATUSES).filter(([s])=>documentRows().some(r=>r.status===s&&(filters.type==='all'||r.type===filters.type))),onClose:modalClosed,onApply:value=>{const prior=JSON.stringify(filters);filters={...value,q:filters.q};if(prior!==JSON.stringify(filters))filterChanged();positions.set('list',0);render();}});}
+  const canCreate=()=>!readOnlyPreview&&!sessionGuard(getState())&&getState().session?.warehouse?.active===true;
+  const readScope=()=>({actor:getState().session?.actor?.id,warehouse:getState().session?.warehouse?.id});
+  function readPreview({signal}){
+@@ -129,11 +141,11 @@
+   const anchor=[...target.querySelectorAll('[data-p12-doc]')].find(e=>e.getBoundingClientRect().bottom>rect.top);
+   const anchorId=anchor?.dataset.p12Doc,offset=anchor?anchor.getBoundingClientRect().top-rect.top:0,focusedId=document.activeElement?.dataset?.p12Doc;
+   const focusedAction=document.activeElement?.dataset?.p12;
+-  target.innerHTML=listRows();target.setAttribute('aria-busy',String(listState().snapshot.status==='loading'));refreshResultCount();scroll.scrollTop=y;
++  motion.cancel();target.innerHTML=listRows();target.setAttribute('aria-busy',String(listState().snapshot.status==='loading'));refreshResultCount();scroll.scrollTop=y;
+   const same=anchorId&&target.querySelector(`[data-p12-doc="${CSS.escape(anchorId)}"]`);if(same&&scale>0)scroll.scrollTop+=(same.getBoundingClientRect().top-scroll.getBoundingClientRect().top-offset)/scale;
+   if(focusedId&&!modal){const row=target.querySelector(`[data-p12-doc="${CSS.escape(focusedId)}"]`);(row||target).focus({preventScroll:true});}
+   if(!modal&&focusedAction==='retry'&&!root.contains(document.activeElement))target.focus({preventScroll:true});
+-  observeTextPreviews();announceData();
++  observeTextPreviews();announceData();filterSettled();
+  }
+  function listRows(){
+   const {snapshot,rows,kind}=listState();
+@@ -202,6 +214,7 @@
+  }
+ 
+  function render(focus=false){
++  motion.cancel();
+   if(active&&!disposed)saveListFilters();
+   if(active&&panel===1){rendering=true;loadList();rendering=false;}
+   if(!active||disposed)return;const r=readDocument(docId),isDetail=[2,3].includes(panel);screen.classList.toggle('p12-create-screen',panel===4);
+@@ -209,7 +222,7 @@
+   const dock=isDetail&&r?`<div class="p12-detail-dock">${context(r)}${detailTabs(r)}</div>`:'';
+   const content=panel===1?list():panel===4?create():r?`${r.caseId?button('case','Mở hồ sơ bảo hành '+icon('arrow'),'p12-case-link'):''}${panel===3?products(r):detail(r)}`:empty('Không tìm thấy chứng từ','Mã định danh không có trong nguồn được cấp.');
+   root.innerHTML=`<section class="p12-app" data-panel="P12.S0${panel}" data-detail="${isDetail}"><header class="p12-header">${button('back',icon('back'),'p12-back','aria-label="Quay lại"')}<h1 tabindex="-1">${title}</h1>${panel===1&&canCreate()?button('create',icon('x'),'p12-add','aria-label="Tạo chứng từ mới"'):''}</header><div class="p12-body">${panel===4?flowProgress(1):''}${dock}${panel===1?`<div class="p12-controls p12-list-controls">${listControls()}</div>`:''}<div class="p12-scroll" ${isDetail&&r?`id="p12-tab-content" role="tabpanel" tabindex="0" aria-labelledby="p12-tab-${activeTab}"`:''}>${content}</div>${panel===4?`<footer class="p12-footer">${button('continue',(form.type==='inbound'?'Tiếp tục thêm sản phẩm':form.type==='outbound'?'Tiếp tục thông tin xuất':'Tiếp nhận bảo hành')+' '+icon('arrow'),'p12-primary')}</footer>`:''}</div></section>`;
+-  root.querySelector('.p12-scroll').scrollTop=positions.get(key())||0;renderedHash=location.hash;renderedEntry=JSON.stringify(history.state);document.title=`P12 · ${title} · Prototype`;if(focus)root.querySelector('h1').focus({preventScroll:true});onSize();observeTextPreviews();syncAttachmentBusy();if(panel===1){syncScan();announceData();}
++  root.querySelector('.p12-scroll').scrollTop=positions.get(key())||0;renderedHash=location.hash;renderedEntry=JSON.stringify(history.state);document.title=`P12 · ${title} · Prototype`;if(focus)root.querySelector('h1').focus({preventScroll:true});onSize();observeTextPreviews();syncAttachmentBusy();if(panel===1){syncScan();announceData();filterSettled();}if(panel===4)for(const key of ['supplier','note'])motion.validation(root.querySelector('#p12-'+key+'-error'),key,errors[key]||'');
+  }
+ 
+  function customDialog(title,content,footer,onReady){
+@@ -256,16 +269,16 @@
+  async function onClick(e){if(!active)return;const b=e.target.closest('button');if(!b||!root.contains(b))return;
+   if(b.dataset.p16Remove){
+    const k=b.dataset.p16Remove;if(k==='q')filters.q='';if(k==='type')filters.type='all';if(k==='status')filters.status='all';if(k==='date'){filters.from='';filters.to='';}
+-   positions.set('list',0);render();(root.querySelector('[data-p16-remove]')||root.querySelector('#p12-query'))?.focus({preventScroll:true});return;
++   filterChanged();positions.set('list',0);render();(root.querySelector('[data-p16-remove]')||root.querySelector('#p12-query'))?.focus({preventScroll:true});return;
+   }
+   if(b.dataset.p12Resume){if(!busy&&!modal)resumeDraft(b.dataset.p12Resume,b.dataset.resumeId);return;}
+   if(b.dataset.p12Doc){navigate(2,b.dataset.p12Doc);return;}
+-  if(b.dataset.p12Type){filters.type=b.dataset.p12Type;positions.set('list',0);render();root.querySelector(`[data-p12-type="${filters.type}"]`)?.focus();return;}
++  if(b.dataset.p12Type){if(filters.type===b.dataset.p12Type)return;filters.type=b.dataset.p12Type;filterChanged();positions.set('list',0);render();root.querySelector(`[data-p12-type="${filters.type}"]`)?.focus();return;}
+   if(b.dataset.p12CreateType){const type=b.dataset.p12CreateType;if(type!=='inbound'){void continueCreate({type});return;}form.type='inbound';errors={};render();root.querySelector('[data-p12-create-type=inbound]')?.focus();return;}
+   if(b.dataset.p12Tab){navigate(b.dataset.p12Tab==='products'?3:2,docId,b.dataset.p12Tab==='products'?'info':b.dataset.p12Tab);return;}
+   if(b.dataset.p12File||b.dataset.p12Download){const r=readDocument(docId),f=r?.attachments?.find(x=>x.id===(b.dataset.p12File||b.dataset.p12Download));if(f)void openFile(r,f,!!b.dataset.p12Download);return;}
+   if(b.dataset.p12EventMore){const r=readDocument(docId),event=documentEvents(r)?.find(x=>x.id===b.dataset.p12EventMore);if(event)customDialog('Chi tiết hoạt động',`<p><strong>${esc(event.label)}</strong></p><p>${date(event.day||r.day)} · ${esc(event.time)} · ${esc(event.actor)}</p><div class="p12-full-text">${esc(event.description)}</div>`,'<button type="button" data-close>Đóng</button>');return;}
+-  if(b.dataset.p12Line){lineDetail(readDocument(docId)?.lines?.find(x=>x.id===b.dataset.p12Line));return;}
++  if(b.dataset.p12Line){motion.select(b);lineDetail(readDocument(docId)?.lines?.find(x=>x.id===b.dataset.p12Line));return;}
+   const a=b.dataset.p12;
+   if(a==='read-query')customDialog('Từ khóa tìm kiếm',`<div class="p12-full-text">${esc(filters.q)}</div>`,'<button type="button" data-close>Đóng</button>');
+   if(a==='read-note'){const r=readDocument(docId);if(r)customDialog('Ghi chú · '+r.number,`<div class="p12-full-text" tabindex="0" aria-label="Nội dung ghi chú đầy đủ">${esc(r.note||'Chưa có ghi chú.')}</div>`,'<button type="button" data-close>Đóng</button>');}
+@@ -274,7 +287,7 @@
+   if(a==='files')navigate(2,docId,'files');
+   if(a==='attachments'&&onAttachments&&readDocument(docId)){remember();onAttachments(docId);}
+   if(a==='filter'||a==='sort')picker(a==='sort'?'sort':'filter');
+-  if(a==='clear'){filters=initialFilters();positions.set('list',0);render();root.querySelector('#p12-query')?.focus();}
++  if(a==='clear'){filters=initialFilters();filterChanged();positions.set('list',0);render();root.querySelector('#p12-query')?.focus();}
+   if(a==='retry')void loadList();
+   if(a==='edit-query'){const input=root.querySelector('#p12-query');input?.focus();input?.select();}
+   if(a==='scan')scanDialog();
+@@ -283,7 +296,7 @@
+   if(a==='supplier'&&!modal){rememberDialogFocus();dialogRoute.begin();modal=openChoiceDialog({screen,tools,dismissOnBackdrop:false,title:'Nhà cung cấp',className:'p12-supplier-picker',fixedSearch:true,selectionSummary:true,prioritizeSelected:true,recentIds:supplierHistory?.read()||[],resultLabel:'nhà cung cấp',searchLabel:'Tìm nhà cung cấp',searchPlaceholder:'Nhập tên nhà cung cấp',initialFocus:'input[type=search]',options:INBOUND_SUPPLIERS,value:form.supplierId,onClose:modalClosed,onApply:id=>{form.supplierId=id;supplierHistory?.use(id);errors={};render();}});}
+   if(a==='continue')void continueCreate();
+  }
+- function onInput(e){if(!active)return;if(e.target.id==='p12-query'){filters.q=e.target.value;saveListFilters();positions.set('list',0);root.querySelector('.p12-scroll').scrollTop=0;scheduleSearch();}if(e.target.id==='p12-product-query'){query=e.target.value;queries.set(docId,query);root.querySelector('.p12-products').innerHTML=productRows(readDocument(docId));root.querySelector('.p12-product-count').innerHTML=productCount(readDocument(docId));}if(e.target.id==='p12-note'){form.note=e.target.value;root.querySelector('.p12-counter').textContent=form.note.length+'/200 ký tự';}}
++ function onInput(e){if(!active)return;if(e.target.id==='p12-query'){filters.q=e.target.value;filterChanged();saveListFilters();positions.set('list',0);root.querySelector('.p12-scroll').scrollTop=0;scheduleSearch();}if(e.target.id==='p12-product-query'){query=e.target.value;queries.set(docId,query);root.querySelector('.p12-products').innerHTML=productRows(readDocument(docId));root.querySelector('.p12-product-count').innerHTML=productCount(readDocument(docId));}if(e.target.id==='p12-note'){form.note=e.target.value;root.querySelector('.p12-counter').textContent=form.note.length+'/200 ký tự';}}
+  function onKey(e){if(e.target.id==='p12-query'&&e.key==='Enter'){if(e.isComposing||composing)return;e.preventDefault();void loadList();return;}const b=e.target.closest('[data-p12-tab],[data-p12-type]');if(!b||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=[...b.parentElement.children],i=tabs.indexOf(b),target=tabs[e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];target.click();}
+ 
+  function show(){
+@@ -291,6 +304,7 @@
+   if(active&&renderedHash===location.hash&&renderedEntry===JSON.stringify(history.state)&&root.querySelector('.p12-app'))return;
+   backPending=false;
+   if(history.state?.p12From&&!history.state.p12Page)history.replaceState({...history.state,p12Page:{version:1,from:history.state.p12From}},'',location.hash);
++  if(!active||renderedHash!==location.hash){pendingFilter=null;feedbackEpoch++;motion.cancel();}motion.activate(errors);
+   const previousDoc=docId,wasDetail=active&&[2,3].includes(panel);if(active&&location.hash!==renderedHash)remember();active=true;review.hidden=false;dataTools.hidden=false;
+   const q=new URLSearchParams(location.hash.split('?')[1]);panel=[1,2,3,4].includes(Number(q.get('panel')))?Number(q.get('panel')):1;docId=q.get('doc');
+   if(panel===1){
+@@ -305,7 +319,7 @@
+   if(panel===4&&!canCreate()){panel=1;history.replaceState({...history.state},'','#p02/documents');}
+   tab=['info','products','files','events'].includes(q.get('tab'))?q.get('tab'):'info';if(panel===2&&tab==='products')panel=3;if(panel===3)tab='products';
+   if(docId!==previousDoc)query=queries.get(docId)||'';
+-  const keepTabFocus=wasDetail&&previousDoc===docId&&[2,3].includes(panel);render(!keepTabFocus);if(wasDetail&&panel===1&&previousDoc)root.querySelector(`[data-p12-doc="${CSS.escape(previousDoc)}"]`)?.focus({preventScroll:true});if(keepTabFocus)root.querySelector('[data-p12-tab][aria-selected=true]')?.focus({preventScroll:true});
++  const keepTabFocus=wasDetail&&previousDoc===docId&&[2,3].includes(panel);render(!keepTabFocus);onPanelTransition(routeKey());if(wasDetail&&panel===1&&previousDoc)root.querySelector(`[data-p12-doc="${CSS.escape(previousDoc)}"]`)?.focus({preventScroll:true});if(keepTabFocus)root.querySelector('[data-p12-tab][aria-selected=true]')?.focus({preventScroll:true});
+  }
+ 
+  root.addEventListener('click',onClick);root.addEventListener('input',onInput);root.addEventListener('keydown',onKey);root.addEventListener('compositionstart',composition);root.addEventListener('compositionend',composition);review.querySelector('select').onchange=e=>setScenario(e.target.value);
+@@ -327,5 +341,5 @@
+  }
+  dataTools.addEventListener('click',e=>{const value=e.target.closest('[data-p16-demo]')?.dataset.p16Demo;if(value)setScenario(value);});
+  dataTools.querySelector('input').onchange=e=>{readOnlyPreview=e.target.checked;if(panel===4&&!canCreate()){panel=1;history.replaceState({...history.state},'','#p02/documents');}render();};
+- return {show,handleNavigation:()=>dialogRoute.navigation(close,()=>!!modal),hide(){announcement.clear();remember();cancelSearch();composing=false;dataRead.cancel();dataTools.hidden=true;previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;busy=false;active=false;review.hidden=true;close();screen.classList.remove('p12-create-screen');},dispose(){announcement.dispose();disposed=true;cancelSearch();dataRead.dispose();dataTools.remove();previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;active=false;dialogRoute.dispose();close();review.remove();root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('keydown',onKey);root.removeEventListener('compositionstart',composition);root.removeEventListener('compositionend',composition);}};
++ return {show,routeKey,setMotionMode:value=>motion.setMode(value),cancelMotion:()=>{pendingFilter=null;feedbackEpoch++;motion.cancel();},handleNavigation:()=>dialogRoute.navigation(close,()=>!!modal),hide(){feedbackEpoch++;pendingFilter=null;motion.hide();announcement.clear();remember();cancelSearch();composing=false;dataRead.cancel();dataTools.hidden=true;previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;busy=false;active=false;review.hidden=true;close();screen.classList.remove('p12-create-screen');},dispose(){motion.dispose();announcement.dispose();disposed=true;cancelSearch();dataRead.dispose();dataTools.remove();previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;active=false;dialogRoute.dispose();close();review.remove();root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('keydown',onKey);root.removeEventListener('compositionstart',composition);root.removeEventListener('compositionend',composition);}};
+ }
+--- before/docs/flows/documents/style.css
++++ after/docs/flows/documents/style.css
+@@ -1,3 +1,4 @@
++@import url('../shared/motion/motion-tokens.css');
+ @import url('../data-states/style.css');
+ @import url('../data-states/style.css');
+ @import url('../shared/flow-guidance.css');
+@@ -288,3 +289,15 @@
+ #home-app .p12-download[aria-busy=true]{opacity:1}
+ @keyframes p12-file-spin{to{transform:rotate(360deg)}}
+ @media(prefers-reduced-motion:reduce){#home-app .p12-file-spinner{animation:none}}
++
++/* M12: selected feedback never changes row measurements or numeric values. */
++#home-app .p12-product[data-p12-selected=true]{background:var(--p12-selected);box-shadow:inset 0 0 0 1px var(--p12-primary)}
++#home-app [data-hn-motion-mode=off] .p12-file-spinner,
++#home-app [data-hn-motion-mode=reduced] .p12-file-spinner{animation:none}
++
++#home-app [data-document-motion-hidden=true] .p12-file-spinner{animation-play-state:paused}
++
++/* P16 loading indicator rendered inside DocumentList follows this owner's policy. */
++#home-app [data-hn-motion-mode=off] .p12-app .p16-spinner,
++#home-app [data-hn-motion-mode=reduced] .p12-app .p16-spinner{animation:none}
++#home-app [data-document-motion-hidden=true] .p12-app .p16-spinner{animation-play-state:paused}
+--- before/docs/flows/documents/motion.mjs
++++ after/docs/flows/documents/motion.mjs
+@@ -0,0 +1,21 @@
++import {createMotionController} from '../shared/motion/motion-primitives.mjs';
++
++// M12 owns feedback on existing descendants. M02 alone owns route opacity;
++// native scrolling, overlays, data reads and mutations retain their owners.
++export function mountDocumentsMotion({root,requested='auto',active=()=>true,media}){
++ let controller=null,disposed=false;const errors=new Map();
++ const usable=()=>!disposed&&active()&&!root.closest('[inert]');
++ const mark=(node,name)=>{if(node)node.dataset.motionPrimitive=name;return node;};
++ function visibility(){root.dataset.documentMotionHidden=String(root.ownerDocument.hidden);}
++ function release(){if(!controller)return;controller.dispose();controller=null;errors.clear();root.ownerDocument.removeEventListener('visibilitychange',visibility);delete root.dataset.documentMotionHidden;}
++ return {
++  activate(initialErrors={}){if(!disposed&&!controller){for(const [key,value]of Object.entries(initialErrors))errors.set(key,value);controller=createMotionController({element:root,requested,...(media?{media}:{})});root.ownerDocument.addEventListener('visibilitychange',visibility);visibility();}},
++  setMode(value){requested=value;controller?.setMode(value);},
++  filter(node){if(usable())controller?.dataState(mark(node,'DocumentFilter'));},
++  select(row){if(!usable()||!row)return;root.querySelectorAll('[data-p12-selected]').forEach(n=>n.removeAttribute('data-p12-selected'));row.dataset.p12Selected='true';controller?.rowFeedback(mark(row.querySelector('.p12-product-copy'),'DocumentSelection'));},
++  validation(node,key,message){const previous=errors.get(key)||'';errors.set(key,message);if(message&&previous!==message&&usable())controller?.noticeFeedback(mark(node,'DocumentFormError'));},
++  cancel(){controller?.cancel();},
++  hide:release,
++  dispose(){disposed=true;release();},
++ };
++}
+--- before/docs/flows/home/home.mjs
++++ after/docs/flows/home/home.mjs
+@@ -235,7 +235,7 @@
+   const motionTools=document.createElement('label');
+   motionTools.innerHTML='Motion P02 / AppShell <select id="home-motion-mode"><option value="auto">Tự động theo hệ điều hành</option><option value="reduced">Giảm chuyển động</option><option value="off">Tắt chuyển động</option></select>';
+   const motionSelect=motionTools.querySelector('select');motionSelect.value=motionMode;
+-  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
++  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
+   root.querySelector('.hn-tools > details').append(motionTools);
+   function syncDateRefresh(){
+     clearTimeout(dateRefreshTimer);dateRefreshTimer=null;
+@@ -274,8 +274,8 @@
+     if(['inbound','outbound'].includes(key))lastStockOperation=key;
+     if (disposed || suspended) return;
+     dialogs?.cancelMotion();
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();system?.show('expired',{history:false});return;}
+-    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();system?.show('forbidden');return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();system?.show('forbidden');return;}
+     if(system?.active){system.leave(()=>showRoute({key,id},{push,restore,scannerContext}));return;}
+     const documentResume=history.state?.p12Resume;
+     if(!push&&documentResume?.type===key){
+@@ -336,7 +336,7 @@
+     if (key === 'lookup' && push && !scannerContext?.selectForNfc) nfcProductPicker = false;
+     if (key === 'lookup' && result.context && nfcProductPicker) result.context.selectForNfc = true;
+     if (result.kind === 'blocked' && sessionGuard(state())) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
+       if(state().session&&state().previewReady){system?.show('forbidden');return;}
+       logout(); return;
+     }
+@@ -495,7 +495,7 @@
+       window.scrollTo(0, 0); destination.querySelector('h1').focus({ preventScroll: true });
+     }
+     if(key!=='attachments'&&(previousKey==='attachments'||attachmentReturnStamp===routeStamp())){const saved=attachmentCallers.get(location.hash);if(saved){const scroll=destination.querySelector(saved.scroll);if(scroll)scroll.scrollTop=saved.top;destination.querySelector(saved.focus)?.focus({preventScroll:true});attachmentReturnStamp=routeStamp();}}
+-    shellMotion.commit(result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
++    shellMotion.commit(result.kind==='documents'?documents.routeKey():result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
+     previousKey = result.kind === 'home' ? 'home' : key;
+     currentHash = location.hash;
+     fitPreview();
+@@ -511,7 +511,7 @@
+     const button = event.target.closest('button');
+     if (!button || !root.contains(button)) return;
+     if(button.dataset.p15)return;
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();system?.show('expired',{history:false});return;}
+     if(system?.active&&button.dataset.tab){system.leave(()=>{if(button.isConnected)button.click();});return;}
+     if (button.dataset.tab && dialogs.flow.snapshot().panel) {
+       if (!dialogs.flow.dismissForMenu(button.dataset.tab)) return;
+@@ -531,7 +531,7 @@
+     else if (button.dataset.recentDocument) openHomeDocuments(button.dataset.recentDocument);
+     else if (button.dataset.homeKpi) openKpi(button.dataset.homeKpi);
+     else if (button.classList.contains('hn-name')) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
+       nameDialog.querySelector('#hn-full-name').textContent = state().session?.actor.name ?? '';
+       nameRoute.begin();nameModal=openAppModal({screen,tools:root.querySelector('.hn-tools'),dialog:nameDialog,initialFocus:'button',dismissOnBackdrop:false,onClose(){nameModal=null;root.append(nameDialog);nameRoute.closed();}});
+     }
+@@ -566,8 +566,8 @@
+     screen, tools: root.querySelector('.hn-tools'), getState: state, motionMode,
+     onFeedback:config=>{void dialogRoute.ready().then(()=>queueMicrotask(()=>{if(!disposed)homeFeedback.show(config);}));},
+     onShow() {
+-      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
++      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
+       dialogRoute.begin();
+       currentHash = location.hash;
+       dialogCallerTitle = document.title;
+@@ -713,7 +713,7 @@
+     history.pushState({p18From:location.hash},'','#p02/attachments?'+new URLSearchParams(context));showRoute({key:'attachments'});
+   }
+   attachments=mountAttachments({getIssuedDocuments:()=>componentIssue.posted(),root:destination,screen,tools:root.querySelector('.hn-tools'),getState:state,getDocuments:()=>mergeDocuments(getRecorded()),onHome:goHome,onNavigate:openAttachments,onSize:fitPreview,onCase:id=>{history.pushState({p09:true,p09From:location.hash},'','#p02/warranty?panel=3&case='+encodeURIComponent(id));showRoute({key:'warranty'});},onLookup:id=>{history.pushState({p06From:location.hash},'','#p02/lookup?panel=3&item='+encodeURIComponent(id));showRoute({key:'lookup'});}});
+-  documents = mountDocuments({onAttachments:(doc,file)=>openAttachments({panel:file?2:1,doc,...(file?{file}:{})}),onSystemError:showSystem,supplierHistory,getDrafts:()=>[pendingRun('inbound'),pendingRun('outbound')].filter(Boolean),root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,onHome:goHome,onSize:fitPreview,
++  documents = mountDocuments({motionMode,onPanelTransition:key=>shellMotion.commit(key,destination,screen.querySelector('.hn-nav [aria-current="page"]')),onAttachments:(doc,file)=>openAttachments({panel:file?2:1,doc,...(file?{file}:{})}),onSystemError:showSystem,supplierHistory,getDrafts:()=>[pendingRun('inbound'),pendingRun('outbound')].filter(Boolean),root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,onHome:goHome,onSize:fitPreview,
+     onCase:caseId=>{history.pushState({p09:true,p09From:location.hash},'',`#p02/warranty?panel=3&case=${encodeURIComponent(caseId)}`);showRoute({key:'warranty'});},
+     getRecorded,
+     getPending:type=>pendingRun(type)?.document||null,
+@@ -755,18 +755,18 @@
+   }
+   function showSystem(error,options={}){
+     const panel=classifySystemError(error);if(!panel)return false;
+-    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
++    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();
+     if(panel==='expired'){expire();return true;}
+     if(suspended||!getState().session)return true;
+     if(panel==='forbidden')systemDenied=true;
+     if(system?.active&&system.kind===panel)return true;
+     return system?.show(panel,{...options,intent:options.intent||(error.kind==='unknown'?'reconcile':'read'),actionLabel:options.actionLabel})===true;
+   }
+-  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
++  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
+   // Explicit prototype controls stay outside product navigation.
+   const systemTools=document.createElement('details');systemTools.className='p15-tools';
+   systemTools.innerHTML='<summary>P15 · Hệ thống</summary><p>Chỉ mô phỏng lỗi hệ thống. Camera kiểm tra API môi trường thực khi bấm; không kết nối WMS.</p><button data-system-demo="connection">P15.S01 · Kết nối</button><button data-system-demo="expired">P15.S02 · Phiên hết hạn</button><button data-system-demo="forbidden">P15.S03 · Không có quyền</button><button data-system-demo="device">P15.S04 · Quyền thiết bị</button><button data-system-demo="deny">Mô phỏng thu hồi quyền</button><button data-system-demo="allow">Khôi phục quyền fixture</button>';
+-  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
++  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
+   root.querySelector('.hn-tools').append(systemTools);
+   root.addEventListener('click', onClick);
+   root.querySelector('#hn-scenario').addEventListener('change', event => {
+@@ -781,11 +781,11 @@
+   if(draftRestoreFailed)homeFeedback.show({title:'Chưa phục hồi đủ phiếu nháp',message:'Bản giữ lại vẫn còn trong dữ liệu của tài khoản này. Chưa thể mở đầy đủ phiếu; cần đối chiếu trước khi tạo phiếu thay thế hoặc đăng xuất từ Tổng kết ca.'});
+   return {
+     dispose() { shellMotion.dispose();motionSelect.onchange=null;warrantySession.dispose();nfcAudit.dispose();disposed = true; system.dispose(); shift.dispose();clearTimeout(dateRefreshTimer); document.removeEventListener('visibilitychange',syncDateRefresh); notifications.dispose();notificationStore.dispose();homeFeedback.dispose();nameRoute.dispose();closeName();dialogRoute.dispose(); if (nameDialog.open) closeName(); inbound.dispose(); outbound.dispose(); lookup.dispose(); nfc.dispose(); historyView.dispose(); warranty.dispose(); profile.dispose(); security.dispose(); documents.dispose(); attachments.dispose(); componentIssue.dispose(); componentHistory.dispose(); componentResume.dispose(); dialogs.dispose(); sizeObserver.disconnect(); window.removeEventListener('resize', fitPreview); window.removeEventListener('popstate', onRoute); window.removeEventListener('hashchange', onRoute); root.removeEventListener('click', onClick); root.replaceChildren(); },
+-    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
+-    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
+-    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
++    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
++    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
++    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
+     resume(){suspended=false;shift.resumeSession();system.hide({restore:false});history.replaceState(null,'',currentHash);showRoute(parseRoute(currentHash));},
+-    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);},
++    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);},
+     snapshot() { return { motion:{mode:shellMotion.mode,active:shellMotion.activeCount},scenario, homeScroll, navigation: structuredClone(lastNavigation) }; },
+   };
+ }

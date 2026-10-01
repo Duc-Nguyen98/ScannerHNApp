@@ -1,0 +1,188 @@
+{
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        {
+          "name": "Confirmed password check fades160 once; session rows have no entrance/replay",
+          "status": "PASS"
+        },
+        {
+          "name": "Revoke Cancel/Back preserve IDs; confirmation alone performs and verifies one revoke",
+          "status": "PASS"
+        }
+      ],
+      "geometry": {
+        "P11.S01": {
+          "panel": "P11.S01",
+          "frame": [
+            494,
+            950
+          ],
+          "nodes": [
+            {
+              "selector": ".p11-header",
+              "box": [
+                494,
+                88
+              ],
+              "count": 5
+            },
+            {
+              "selector": ".p11-scroll",
+              "box": [
+                494,
+                756
+              ],
+              "count": 58
+            },
+            {
+              "selector": ".p11-footer",
+              "box": [
+                494,
+                118
+              ],
+              "count": 1
+            }
+          ],
+          "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+          "rows": []
+        },
+        "P11.S02": {
+          "panel": "P11.S02",
+          "frame": [
+            494,
+            950
+          ],
+          "nodes": [
+            {
+              "selector": ".p11-header",
+              "box": [
+                494,
+                88
+              ],
+              "count": 5
+            },
+            {
+              "selector": ".p11-scroll",
+              "box": [
+                494,
+                756
+              ],
+              "count": 58
+            },
+            {
+              "selector": ".p11-footer",
+              "box": [
+                494,
+                118
+              ],
+              "count": 1
+            }
+          ],
+          "text": "Đổi mật khẩu\nĐổi mật khẩu\n\nSử dụng mật khẩu theo chính sách bảo mật\ndo hệ thống quy định.\n\nMật khẩu hiện tại *\nMật khẩu mới *\nXác nhận mật khẩu mới *\n\nMật khẩu xác nhận chưa khớp.\n\nMật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.\n\nLưu mật khẩu →",
+          "rows": []
+        },
+        "P11.S03": {
+          "panel": "P11.S03",
+          "frame": [
+            494,
+            950
+          ],
+          "nodes": [
+            {
+              "selector": ".p11-header",
+              "box": [
+                494,
+                88
+              ],
+              "count": 5
+            },
+            {
+              "selector": ".p11-scroll",
+              "box": [
+                494,
+                756
+              ],
+              "count": 53
+            },
+            {
+              "selector": ".p11-footer",
+              "box": [
+                494,
+                118
+              ],
+              "count": 1
+            },
+            {
+              "selector": ".p11-success-mark",
+              "box": [
+                120,
+                120
+              ],
+              "count": 3
+            },
+            {
+              "selector": ".p11-summary",
+              "box": [
+                446,
+                230
+              ],
+              "count": 35
+            }
+          ],
+          "text": "Đã đổi mật khẩu\nMật khẩu đăng nhập đã\nđược cập nhật\n\nBạn có thể sử dụng mật khẩu mới\nđể đăng nhập từ bây giờ.\n\nTài khoản\nMinh Anh\nKho\nKho Hoa Nam\nThời gian cập nhật\n09/09/2026 14:25\n\nNếu bạn nghi ngờ có hoạt động bất thường, hãy đăng xuất khỏi các thiết bị khác.\n\nTài khoản & bảo mật",
+          "rows": []
+        },
+        "P11.S04": {
+          "panel": "P11.S04",
+          "frame": [
+            494,
+            950
+          ],
+          "nodes": [
+            {
+              "selector": ".p11-header",
+              "box": [
+                494,
+                88
+              ],
+              "count": 5
+            },
+            {
+              "selector": ".p11-scroll",
+              "box": [
+                494,
+                799
+              ],
+              "count": 78
+            },
+            {
+              "selector": ".p11-device",
+              "box": [
+                458,
+                273.71875
+              ],
+              "count": 32
+            },
+            {
+              "selector": ".p11-device",
+              "box": [
+                458,
+                357.578125
+              ],
+              "count": 36
+            }
+          ],
+          "text": "Phiên đăng nhập\nThiết bị hiện tại\nĐang hoạt động\niPhone 14 Pro\n\niOS 17.5.1\n\nHà Nội, Việt Nam\nĐăng nhập lúc 09/09/2026 14:25\nỨng dụng: Hoa Nam Scanner\nThiết bị khác\nWindows PC\n\nWindows 11 · Chrome 128.0\n\nHà Nội, Việt Nam\nĐăng nhập lúc 08/09/2026 10:12\nỨng dụng: Web WMS\nĐăng xuất từ xa\n\nNếu phát hiện thiết bị lạ, hãy đăng xuất khỏi thiết bị đó và đổi mật khẩu để tăng cường bảo mật.",
+          "rows": [
+            "fixture-security-current",
+            "fixture-security-windows"
+          ]
+        }
+      },
+      "errors": []
+    }
+  ],
+  "error": "page.selectOption: Timeout 18000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#home-motion-mode')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"home-motion-mode\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    35 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p11.cjs:40:569\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p11.cjs:25:30)\n    at async run (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p11.cjs:40:2)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p11.cjs:33:12"
+}

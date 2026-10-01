@@ -1,0 +1,43 @@
+✔ P03 native Back consumes only modal marker and preserves caller identity (11.435ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.444ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.3702ms)
+✔ disposing a closing modal settles deferred work (0.2958ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.2746ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.3868ms)
+✔ Exception return adopts an existing marker without duplicate browser history (0.3412ms)
+✔ Forward to an owned dismissed dialog consumes the ghost entry and keeps caller data (1.8523ms)
+✔ Unknown stale marker is not allowed to traverse another owner history (0.3559ms)
+✔ A01 combines query/type/status/range without changing source (18.192ms)
+✔ A01 defaults all dates, status/type remain distinct and sort is explicit (1.1226ms)
+✔ A02 quantity11 distinct from3 SKU and5/4/2 serial counts (0.3798ms)
+✔ Exact ID lookup never treats display prefix/number as authority (0.2094ms)
+✔ A03 history uses explicit P08 event mapping; missing data stays missing (0.2932ms)
+✔ Creation validates only P12 owned input; supplier cannot be free text (0.2797ms)
+✔ A04 inbound seeds fresh owner draft once; repeated routing retains ID, metadata and codes (79.4957ms)
+✔ A04 UNKNOWN retains request/session/version even when P12 reopens; no retry mutation (10.6066ms)
+✔ A04 next fresh run accepts new P12 metadata only after verified completion (2.285ms)
+✔ P12 receipt adapter excludes drafts/UNKNOWN/wrong warehouse and never counts scan raw as serial (5.3548ms)
+✔ r02 24 records have coherent explicit lines, serials, quantities, dates and identities (1.172ms)
+✔ r02 warranty rows use the same case states, customer, serial and events as P09 (4.0206ms)
+✔ r02 merging never fabricates attachments or serials for a newly recorded scan (5.1563ms)
+✔ Source sort retains original source order independently of chronological order (0.8786ms)
+✔ M00 harness reuses the served primitive rather than a second implementation (10.0691ms)
+✔ OS reduction cannot be overridden and invalid modes fail to off (0.2784ms)
+✔ all six M00 primitives preserve presentation lifecycle in auto (4.3293ms)
+✔ all six M00 primitives preserve presentation lifecycle in reduced (5.0268ms)
+✔ all six M00 primitives preserve presentation lifecycle in off (5.1706ms)
+✔ rapid replacement, OS change, hidden, detached and security teardown cancel without callbacks (4.6561ms)
+✔ inputs, preview scale roots and disabled targets remain static (4.3734ms)
+✔ P01 label updates apply immediately, do not replay identical text, and cancel on dispose (0.726ms)
+✔ repeated P01 mount/dispose leaves zero media, visibility or pointer/key listeners (9.8285ms)
+✔ Shell reuses one route owner; replacement cancels old effect, repeated identity never replays (3.1619ms)
+✔ OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks (1.738ms)
+✔ Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles (1.3213ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 926.4148

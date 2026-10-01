@@ -1,0 +1,149 @@
+{
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [
+        "Filter commits once at140/80/0, preserves input and final status data",
+        "Date/status Apply fades only committed results; Cancel and rapid taps do not replay obsolete lists",
+        "Notification -> exact document -> products -> Back retains source and11/3 immediately",
+        "Selected product feedback leaves rows,counters and serials unchanged; close never submits",
+        "Form validation is immediate; mount and dismiss do not allocate drafts",
+        "Failing owner request retains draft and request across resume; motion adds zero operations",
+        "Native list Back restores scroll and never replays row/filter entrance"
+      ],
+      "geometry": {
+        "P12.S01": {
+          ".p12-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p12-scroll": [
+            0,
+            351,
+            494,
+            524
+          ],
+          ".p12-detail-dock": null,
+          ".p12-totals": null,
+          ".p12-footer": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "P12.S02": {
+          ".p12-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p12-scroll": [
+            0,
+            254.984375,
+            494,
+            620.015625
+          ],
+          ".p12-detail-dock": [
+            0,
+            74,
+            494,
+            180.984375
+          ],
+          ".p12-totals": null,
+          ".p12-footer": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "P12.S03": {
+          ".p12-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p12-scroll": [
+            0,
+            254.984375,
+            494,
+            620.015625
+          ],
+          ".p12-detail-dock": [
+            0,
+            74,
+            494,
+            180.984375
+          ],
+          ".p12-totals": [
+            24,
+            382.984375,
+            446,
+            100.1875
+          ],
+          ".p12-footer": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "P12.S04": {
+          ".p12-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p12-scroll": [
+            0,
+            119,
+            494,
+            734
+          ],
+          ".p12-detail-dock": null,
+          ".p12-totals": null,
+          ".p12-footer": [
+            0,
+            853,
+            494,
+            97
+          ],
+          ".hn-nav": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "errors": [],
+      "profile": {
+        "nodes": 405,
+        "rows": 24
+      },
+      "domain": {
+        "note": "Motion keeps this draft",
+        "supplier": "fixture-supplier-001",
+        "accepted": [
+          {
+            "sku": "XP-420B",
+            "quantity": 1
+          }
+        ],
+        "outcome": "not-recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      }
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n-3 !== -2\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p12.cjs:62:211\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p12.cjs:16:32)\n    at async runChecks (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p12.cjs:61:2)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p12.cjs:21:13"
+}

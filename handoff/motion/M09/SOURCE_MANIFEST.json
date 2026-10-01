@@ -1,0 +1,1376 @@
+{
+  "scope": "M09 before/after source incl untracked; excludes production bundle claims",
+  "fixture": "Existing shared WARRANTY_SEED/WARRANTY_LEDGER unchanged; BH0012codes/3units",
+  "scoped": [
+    {
+      "file": "docs/flows/warranty/warranty.mjs",
+      "bytes": 50349,
+      "sha256": "b7e0c6141789dbfddbc75f378f334cfb684125b0665c10d5f1dc6a0061343836",
+      "before_bytes": 47203,
+      "before_sha256": "e860e07af0be7be1e6ffd5b76b17ef9416d7bc97f59d5c1fc6de26033484d84e"
+    },
+    {
+      "file": "docs/flows/warranty/style.css",
+      "bytes": 44383,
+      "sha256": "0b03170f6adfcf48eb85e1ee60ae137791124cde820832d01d40bf23fdeb1156",
+      "before_bytes": 43830,
+      "before_sha256": "a01be748ae2737f43b52c60b3ac7d331d290da5c4e4821c891fd543857209891"
+    },
+    {
+      "file": "docs/flows/warranty/warranty-model.mjs",
+      "bytes": 11666,
+      "sha256": "91f63e28d2173dba76f41f26b6724ba5f2dd36f2a8fc5297804e2b7d51361475",
+      "before_bytes": 11666,
+      "before_sha256": "91f63e28d2173dba76f41f26b6724ba5f2dd36f2a8fc5297804e2b7d51361475"
+    },
+    {
+      "file": "docs/flows/shared/warranty-cases.mjs",
+      "bytes": 7640,
+      "sha256": "6c6c0fe0090026c427fc7ba70604c8646cd22411628238324fa4beb65d0fcf26",
+      "before_bytes": 7640,
+      "before_sha256": "6c6c0fe0090026c427fc7ba70604c8646cd22411628238324fa4beb65d0fcf26"
+    },
+    {
+      "file": "docs/flows/home/home.mjs",
+      "bytes": 77015,
+      "sha256": "16c0ceab610168cb1ba2e3aa38a52f6bfd1bee8698054801e7230adec53c3844",
+      "before_bytes": 76604,
+      "before_sha256": "d59b8700f410663a4149ca8511861b48407b1498945bbc1d156bc7bc189936f4"
+    },
+    {
+      "file": "docs/flows/shared/motion/motion-primitives.mjs",
+      "bytes": 3924,
+      "sha256": "496c13bec42ceadc4f19eb31fd28bafcfb55f04e152072d7dc4c168955b22e4b",
+      "before_bytes": 3924,
+      "before_sha256": "496c13bec42ceadc4f19eb31fd28bafcfb55f04e152072d7dc4c168955b22e4b"
+    },
+    {
+      "file": "docs/flows/shared/motion/motion-tokens.css",
+      "bytes": 745,
+      "sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a",
+      "before_bytes": 745,
+      "before_sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a"
+    },
+    {
+      "file": "docs/flows/warranty/motion.mjs",
+      "bytes": 1880,
+      "sha256": "74e3f6af91d1b2265e6a291c2351b40b7fc7f653ebf9b8961580685a6df447be",
+      "before_bytes": 0,
+      "before_sha256": null
+    }
+  ],
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "appSourceHash": "4fc4dace344139fbbfaa9e9b48d961f5b3d6ac8c7da313e7ce454eef77476314",
+  "files": [
+    {
+      "file": "docs/flows/attachments/assets/HoSoNhap_PN-0005.pdf",
+      "sha256": "4850a8ee35460f6bb57a9757c6989e1220cba2a9453eeeedd06f48de10376abb",
+      "bytes": 156728
+    },
+    {
+      "file": "docs/flows/attachments/experience.mjs",
+      "sha256": "db93be350bb7f5d58631bb864b68bcc72abb49bfb44e1bf0d0d34d67cb1e1728",
+      "bytes": 2973
+    },
+    {
+      "file": "docs/flows/attachments/fixture-adapter.mjs",
+      "sha256": "a2d51ae47ff90bf852b31181a48a8663f3d9b23e325d28dcbb17c10866249140",
+      "bytes": 1391
+    },
+    {
+      "file": "docs/flows/attachments/icons.mjs",
+      "sha256": "029ce0ccf331a2583b3a2eb989fcdd2c90fe2243e85363fb4f8bb2b0e9f144f9",
+      "bytes": 930
+    },
+    {
+      "file": "docs/flows/attachments/model.mjs",
+      "sha256": "d8bfd18b493b8a1acf7a356df9e514d966c4685caacfb19bbcc18392b10e2e5a",
+      "bytes": 3757
+    },
+    {
+      "file": "docs/flows/attachments/style.css",
+      "sha256": "fbc377b3ce2f9c12124aab45c6c3be54d94be5fa285d37881fe12cf06334bda6",
+      "bytes": 13821
+    },
+    {
+      "file": "docs/flows/attachments/vendor/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174
+    },
+    {
+      "file": "docs/flows/attachments/vendor/pdf.mjs",
+      "sha256": "43c67d941a73a2d65be72c97f5e68d9a7963df53b219cc1c0aa85f2b8bd1c9bd",
+      "bytes": 810118
+    },
+    {
+      "file": "docs/flows/attachments/vendor/pdf.worker.mjs",
+      "sha256": "08ee175af31a8537ee0ddee910717db78c6751e2016c4ddc3f033d5047ed5aa0",
+      "bytes": 2186232
+    },
+    {
+      "file": "docs/flows/attachments/view.mjs",
+      "sha256": "34d1e141f7decf13c5d9b1bd7211db08818cd663441acf1ebbb31b113bd7f141",
+      "bytes": 39631
+    },
+    {
+      "file": "docs/flows/auth-session/app.mjs",
+      "sha256": "72c2d3af3b85066eaa27dd8c6e2ca59c393dc503c4d05a75c2ec4cb7d1fc9bca",
+      "bytes": 20216
+    },
+    {
+      "file": "docs/flows/auth-session/auth-flow.mjs",
+      "sha256": "c9d8bbbf1b573ea9ed36f97ffb94715dc0a258db248244af278dee84050a1371",
+      "bytes": 6811
+    },
+    {
+      "file": "docs/flows/auth-session/bootstrap.mjs",
+      "sha256": "d553403c56f52387a94dfcdf96d33f0a93b325185433a1144ae2f7d7c862c2f5",
+      "bytes": 1423
+    },
+    {
+      "file": "docs/flows/auth-session/experience.mjs",
+      "sha256": "45616e03c1a6ed406d436e157a2876d3dcd2481082ff6172043072d8f839ad3c",
+      "bytes": 5226
+    },
+    {
+      "file": "docs/flows/auth-session/fixture-adapter.mjs",
+      "sha256": "220bb69e3159075de2e18d450737ccd19af93d818f5471f0786db231e5cb0a15",
+      "bytes": 3060
+    },
+    {
+      "file": "docs/flows/auth-session/ICONS-LICENSE.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "file": "docs/flows/auth-session/index.html",
+      "sha256": "5548ced549a96f9a499084b7adb40705d903aabf3b908028b94a1d03ba62f0c2",
+      "bytes": 5124
+    },
+    {
+      "file": "docs/flows/auth-session/lazy-home.mjs",
+      "sha256": "8f118540d01c9b3528b8f5d2a9832b36bf4ae4eb263692632a048ae5ff524e48",
+      "bytes": 1082
+    },
+    {
+      "file": "docs/flows/auth-session/motion.css",
+      "sha256": "8113db0559513cec77d11c0e6b6ed731eea1296b44ba29b484cd4e1d20c921d3",
+      "bytes": 720
+    },
+    {
+      "file": "docs/flows/auth-session/motion.mjs",
+      "sha256": "8c2f23cb3bd616574f363beeb9283d3e980adb0567f62335d61af9e09e2ac0eb",
+      "bytes": 1245
+    },
+    {
+      "file": "docs/flows/auth-session/preview-account-store.mjs",
+      "sha256": "703b7a6c12599af439da2d3d41ce2106fb36e4dd30e701f341738cd649f9ec6d",
+      "bytes": 3997
+    },
+    {
+      "file": "docs/flows/auth-session/sourced-icons.mjs",
+      "sha256": "e40f728522efa29582d165ab5458918a02b797cf60978ac3f84c9e347a1c9833",
+      "bytes": 1456
+    },
+    {
+      "file": "docs/flows/auth-session/style.css",
+      "sha256": "2993d54e8ddea652553e479f1ad6ace113d939cba37b96cbe405ea130af0079c",
+      "bytes": 11455
+    },
+    {
+      "file": "docs/flows/data-states/model.mjs",
+      "sha256": "714b797aa36e3a40d8f0d58245e4bad898859aae9abba0855b31131dda756da2",
+      "bytes": 2460
+    },
+    {
+      "file": "docs/flows/data-states/README.md",
+      "sha256": "7a21dbfcbd68f86f10d855e5749a7860219eb21c0922c168c43f0c6effdc33b7",
+      "bytes": 2561
+    },
+    {
+      "file": "docs/flows/data-states/style.css",
+      "sha256": "b3291786d913556be3db0ca2fccf1031b54c1dd53faa0d5f7e97f03ca1eb8cd7",
+      "bytes": 6020
+    },
+    {
+      "file": "docs/flows/data-states/view.mjs",
+      "sha256": "cd856b42bab71ca18f146052f4c3c53629bcd9a3a8f4eee9877a966f2427a39a",
+      "bytes": 5129
+    },
+    {
+      "file": "docs/flows/documents/assets/BienBanGiaoNhan_PX-0011.pdf",
+      "sha256": "01bf83845de9e605d6d4f0afc60e6e503c0f727a3db5b7ae795b923d9cdb436a",
+      "bytes": 78783
+    },
+    {
+      "file": "docs/flows/documents/assets/BienBanKiemDem_PN-0005.pdf",
+      "sha256": "082b94de8a13ce38ac34213caff0ddb84129c75bac9aa17ef1a856ca235076a9",
+      "bytes": 79243
+    },
+    {
+      "file": "docs/flows/documents/assets/PhieuNhap_PN-0005.pdf",
+      "sha256": "29186ba3aec77a1397200fd6d07df42b6555cbb9af12ee5db57d157f2a06c459",
+      "bytes": 78924
+    },
+    {
+      "file": "docs/flows/documents/assets/PhieuXuat_PX-0011.pdf",
+      "sha256": "a3af02812a145deaf391f2b330c8960a712691f1f9ea75e3020ffffc968e38b6",
+      "bytes": 78593
+    },
+    {
+      "file": "docs/flows/documents/document-model.mjs",
+      "sha256": "a02e8e6818f97c953c2f5ef34b66eb578f32b92d8dc0b4d086a4c3869e16977d",
+      "bytes": 10094
+    },
+    {
+      "file": "docs/flows/documents/document-progress.mjs",
+      "sha256": "26c0ab2f6b6d997863ef450db54b6fd7c3b46383bdb7768072ebbf2871ba6f83",
+      "bytes": 3358
+    },
+    {
+      "file": "docs/flows/documents/documents.mjs",
+      "sha256": "b47bd4dfa0e5ced5cb6911fcd83c23e3b95cba435933dcf67ad82678323fb601",
+      "bytes": 48039
+    },
+    {
+      "file": "docs/flows/documents/index.html",
+      "sha256": "e570a79fa3d91586ea493a21a6dbb8f352e4e36acb2b7151b7e04008b670d2c8",
+      "bytes": 281
+    },
+    {
+      "file": "docs/flows/documents/style.css",
+      "sha256": "94710d740f4412061098c928f95151b0481a39c0a5417fba3e0967a6510aadda",
+      "bytes": 29820
+    },
+    {
+      "file": "docs/flows/documents/tokens.css",
+      "sha256": "6b12505e298a68ef437e36a6d19b723c0c8835f1fbe7142dd0a808c2dc4e0a82",
+      "bytes": 403
+    },
+    {
+      "file": "docs/flows/history/business-history-data.mjs",
+      "sha256": "08eaf9cda66031507eeae1369708621d840b4110b85324f457cdffbb1b2dfd74",
+      "bytes": 5095
+    },
+    {
+      "file": "docs/flows/history/category-colors.css",
+      "sha256": "1f322185041fa1ec0bc162477bcb1080bf7fe1e0aaab48a97afcfab585379acd",
+      "bytes": 1129
+    },
+    {
+      "file": "docs/flows/history/embedded-history.css",
+      "sha256": "b645dc6033fd8a7d1343b098e8303a1cbd704f47b921bfc7e3ce65414fac91d7",
+      "bytes": 4676
+    },
+    {
+      "file": "docs/flows/history/embedded-history.mjs",
+      "sha256": "ef1280372bcb6519a246ce8ee898df8c115a8ca704a0d7321bedc181c0bdde04",
+      "bytes": 5065
+    },
+    {
+      "file": "docs/flows/history/history-controls.mjs",
+      "sha256": "a0a81548a1ab2ac39d1712df345f6538cb4314f0ae9dd09499386354bb10259e",
+      "bytes": 3287
+    },
+    {
+      "file": "docs/flows/history/history-detail.mjs",
+      "sha256": "0478184eec5ae9fcb98878b95fc2fb7f67ab14de4a0923f41757beb30fc4ebca",
+      "bytes": 5292
+    },
+    {
+      "file": "docs/flows/history/history-model.mjs",
+      "sha256": "15775e5a2e8d7f108c0ea559ffbfab7227b5c97253f86f766827252c65e6b423",
+      "bytes": 2763
+    },
+    {
+      "file": "docs/flows/history/history-picker.mjs",
+      "sha256": "7acd3c740236d5d85b7cdf617e337212703fe9346279c751d4590d1b4c1d4b35",
+      "bytes": 14202
+    },
+    {
+      "file": "docs/flows/history/history-source.mjs",
+      "sha256": "843077fa6b07e5233d2c51b11e38f3319c56cf48a35eb483178d4d885318df11",
+      "bytes": 1852
+    },
+    {
+      "file": "docs/flows/history/history-ux.mjs",
+      "sha256": "d36d2be3284e07f78dafe61a2ed7d92c928257d0bc4213796792e935dc00ddba",
+      "bytes": 878
+    },
+    {
+      "file": "docs/flows/history/history.mjs",
+      "sha256": "eb13ef2c38fea307f69642867f2d2f85cdf3234ff711a0ae7f546f00f22ad8eb",
+      "bytes": 27906
+    },
+    {
+      "file": "docs/flows/history/index.html",
+      "sha256": "dc0f0a1888c47495887294e3aabfd891275e6f43c7b71c0dfb0baf43e57328ed",
+      "bytes": 375
+    },
+    {
+      "file": "docs/flows/history/motion.mjs",
+      "sha256": "ed7e07a90ddaf87b85bab17b2d9c57a24f19d39cf19b678e18aabb72135d332a",
+      "bytes": 943
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-experience.mjs",
+      "sha256": "f5497940f293d05cdcf72ab9deea316dff3195b1db6294ba067eb97b1646ec28",
+      "bytes": 1137
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-fixture.mjs",
+      "sha256": "a7a806ae2198b1b20d092c3456bab431980e1de99b82b1f77d925a04b4037ea8",
+      "bytes": 1573
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-model.mjs",
+      "sha256": "49ee2621833d810a2b1dea02dd1b72d61f4cfc2c436de9c225167b40290b4b40",
+      "bytes": 2401
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-view.mjs",
+      "sha256": "f62a013696303fd01cfb1b413a220432a0691255fc2371b7f3dad5b914a375be",
+      "bytes": 26285
+    },
+    {
+      "file": "docs/flows/history/nfc-audit.css",
+      "sha256": "264811d79a7c9f008e308c5da23fbc21e6f40b16f360232e607be4be8a566ae4",
+      "bytes": 8188
+    },
+    {
+      "file": "docs/flows/history/style.css",
+      "sha256": "52b16768bb414511bc1cc32e30f42c89093e413ccbc0f4ed612b212d0df3cfde",
+      "bytes": 42135
+    },
+    {
+      "file": "docs/flows/history/warranty-session-experience.mjs",
+      "sha256": "8466a7e4e7065c18e78085c54483758cbd6c60e424dff5c4501312fa94d9038f",
+      "bytes": 1989
+    },
+    {
+      "file": "docs/flows/history/warranty-session-fixture.mjs",
+      "sha256": "6e62f6db55560b5141ee64f7a8fed8daa09566b7c269285912d045a5eeda3da9",
+      "bytes": 1499
+    },
+    {
+      "file": "docs/flows/history/warranty-session-model.mjs",
+      "sha256": "0b547e4b32424598793aa0462f402ec15aa19a5de6bf39f5bf6a01b5a5bd47d2",
+      "bytes": 3421
+    },
+    {
+      "file": "docs/flows/history/warranty-session-view.mjs",
+      "sha256": "3e4f7050f63672397326b74d7001bbfeecf940007089ed548e5e3bde9ef29202",
+      "bytes": 27189
+    },
+    {
+      "file": "docs/flows/history/warranty-session.css",
+      "sha256": "23d739c70ebdd16d97f1d42564b363a8814d9f405e445fda138bc2199b011344",
+      "bytes": 8493
+    },
+    {
+      "file": "docs/flows/home/assets.mjs",
+      "sha256": "683dd5c18cf68d973c74d48ebed4d2eba29635ee3f289844c3a2f7aa83e1c2bd",
+      "bytes": 212
+    },
+    {
+      "file": "docs/flows/home/fixture-adapter.mjs",
+      "sha256": "e63d40a1bbee70bd008bd297afa571fa69dcf414f2fb814382895e1e36d51b03",
+      "bytes": 1106
+    },
+    {
+      "file": "docs/flows/home/home-flow.mjs",
+      "sha256": "1b9ae1990fa2ddadab18ce095c47fa9012678464fe3a1c908effc628818d3531",
+      "bytes": 3901
+    },
+    {
+      "file": "docs/flows/home/home.mjs",
+      "sha256": "16c0ceab610168cb1ba2e3aa38a52f6bfd1bee8698054801e7230adec53c3844",
+      "bytes": 77015
+    },
+    {
+      "file": "docs/flows/home/icons.mjs",
+      "sha256": "b41521c650a43415e07b2e9a3365ea573d4f37723ad002f01bbf901571704a88",
+      "bytes": 1954
+    },
+    {
+      "file": "docs/flows/home/index.html",
+      "sha256": "f60818f72a04eba51c053fbcde9e3e7d737f13ac1675861fceaa6435c57d2f89",
+      "bytes": 358
+    },
+    {
+      "file": "docs/flows/home/motion.css",
+      "sha256": "c5e8024e9e4525b6d3cf04becf2b23670d9da06796d290799b57509633b5f786",
+      "bytes": 295
+    },
+    {
+      "file": "docs/flows/home/motion.mjs",
+      "sha256": "d6eb384be4404662897852e2acda5debb879eb443c82e5c6065472b099915afd",
+      "bytes": 1701
+    },
+    {
+      "file": "docs/flows/home/pending-work.mjs",
+      "sha256": "7853bf29c0ea4097c8e97834c7dd8c5cc954b5daa1737a98126a2118bd0c7cd0",
+      "bytes": 770
+    },
+    {
+      "file": "docs/flows/home/recent-documents.mjs",
+      "sha256": "1e49f309ac2274dce797045ddcc67972604a184636c6d290db29c4d10254221f",
+      "bytes": 1521
+    },
+    {
+      "file": "docs/flows/home/style.css",
+      "sha256": "b07df1f18a2e4ad2f200c83f711e408226147e48ef6b2a5fa20f9b023ac9e487",
+      "bytes": 17206
+    },
+    {
+      "file": "docs/flows/home/vietnam-clock.mjs",
+      "sha256": "fc236cd9ef2105ca54880d415a6bbf7b6c455e3c41238d90b799931b319001d6",
+      "bytes": 806
+    },
+    {
+      "file": "docs/flows/inbound/catalogue.mjs",
+      "sha256": "d6c9329d9730422ae78b070bba38b0f804af414fe808a8bb321226fd905da59e",
+      "bytes": 1168
+    },
+    {
+      "file": "docs/flows/inbound/fixture-adapter.mjs",
+      "sha256": "44931fa130a82d6b6e6e649dcda2c0d901a93479c1f7ac11b2c102b8bd401187",
+      "bytes": 3241
+    },
+    {
+      "file": "docs/flows/inbound/icons.mjs",
+      "sha256": "856e7b6fdb8cbcb4e1f678a3d5570962f66e459c7ac2d2d756b7cff264142fcc",
+      "bytes": 1149
+    },
+    {
+      "file": "docs/flows/inbound/inbound-flow.mjs",
+      "sha256": "dcd90ee962552e908288298d95001ec432c3af2bd9c5dc9a37972e162d7ecf70",
+      "bytes": 12320
+    },
+    {
+      "file": "docs/flows/inbound/inbound.mjs",
+      "sha256": "f21d326edc011c7f7fe0cacbf23097a7eabea12b56f85e82d8674016f6c36c7a",
+      "bytes": 30646
+    },
+    {
+      "file": "docs/flows/inbound/index.html",
+      "sha256": "c6729989ca6b8038dcfff788f59720f5f550d385ccbba758398daa6946236bc5",
+      "bytes": 277
+    },
+    {
+      "file": "docs/flows/inbound/manual-entry.mjs",
+      "sha256": "9f73802fa0d7815c80b01e9705c921142b74e6d4848ae18794b8835c8de97e07",
+      "bytes": 3211
+    },
+    {
+      "file": "docs/flows/inbound/motion.css",
+      "sha256": "42ef3114469efa07523cef9120d9de5df374d0f55f393b09201836101beb6b01",
+      "bytes": 646
+    },
+    {
+      "file": "docs/flows/inbound/motion.mjs",
+      "sha256": "d56e76668588fe41bf8488753f7cd662117e099a0aafa50fe2c0ab48c3977248",
+      "bytes": 176
+    },
+    {
+      "file": "docs/flows/inbound/scan-view.mjs",
+      "sha256": "3b390cb20a1aa11b65230c84a680322435f9c0742fa0314d6d33f34356805ee4",
+      "bytes": 1191
+    },
+    {
+      "file": "docs/flows/inbound/select-control.mjs",
+      "sha256": "366c59c3de08f2fca2f853193ea547af1b00ccd3a56ca2ab8861e7ee30b9a216",
+      "bytes": 9470
+    },
+    {
+      "file": "docs/flows/inbound/style.css",
+      "sha256": "a991d40ed28d8fa49dca3537fb7130e0a5995a15847aa9114eb7b9a803efcdb0",
+      "bytes": 24491
+    },
+    {
+      "file": "docs/flows/inbound/validation.mjs",
+      "sha256": "2de88b482795963313ef3f4b4ea69dc1db751e4b7733ddde389a4d77a7c2aca0",
+      "bytes": 960
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/box.png",
+      "sha256": "67771d1a040fd27b8e4385834e753492abc3a844536e235846f53dc81b5af800",
+      "bytes": 1647798
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/cleaning-kit.png",
+      "sha256": "11b672d2ac7caad0f1cb458eae3bb6be52d76cb48911182859c7570858104f38",
+      "bytes": 1191995
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/component.png",
+      "sha256": "dda0c10181477cf6f54dcc78fdbd36cf61148d469cc46a7a02b3f0f3fda78d4a",
+      "bytes": 1177550
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/MANIFEST.json",
+      "sha256": "d17187c7cda33e8c0d7795a835d97ac96a70d1887657281d23c215310af1c56c",
+      "bytes": 2643
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/paper-roll.png",
+      "sha256": "72a5b626c785ef78ab91b9398c3f1fb8dc57d5e491e49b3affaf47e596e7df2d",
+      "bytes": 1300207
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/power-cable.png",
+      "sha256": "f544e281339dba4d28039f95d71944c39c19656b7befa0c775e77653118745ee",
+      "bytes": 1451042
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/printer-black.png",
+      "sha256": "968b189924ab80cebf1e570252fa3e8279eb62ef41e8d5e80457d85887432b7f",
+      "bytes": 1400320
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/printer-white.png",
+      "sha256": "ed1258e696a9f588a31e43c7ac864e36d6fd6fc3a96f4d9919f788e8a0ba8934",
+      "bytes": 1375654
+    },
+    {
+      "file": "docs/flows/lookup/assets/demo/PROMPTS.md",
+      "sha256": "178d8d0c689986bedf3cfac8923cb22a020654d6ed353d2a99605d8883140789",
+      "bytes": 4415
+    },
+    {
+      "file": "docs/flows/lookup/demo-data.mjs",
+      "sha256": "9ab6cb905c8e92177a5b6a50e12af4a3ee0a74be7b33d427868c37233d501c82",
+      "bytes": 5294
+    },
+    {
+      "file": "docs/flows/lookup/fixture-adapter.mjs",
+      "sha256": "d9fb960b0f01a9db06bbbe1a802867cb7d0bbe600ccf914e582be27941459515",
+      "bytes": 5943
+    },
+    {
+      "file": "docs/flows/lookup/icons.mjs",
+      "sha256": "d4ff1730885cb414f88bdf9329ca6b41f8d3e9ab9c56b5df04d074628c1f7d66",
+      "bytes": 880
+    },
+    {
+      "file": "docs/flows/lookup/index.html",
+      "sha256": "6e1a684d9baf4f8c3cc3f96383cb4348e5e50a69fa61086f9e5fbf81db898cdb",
+      "bytes": 333
+    },
+    {
+      "file": "docs/flows/lookup/lookup-flow.mjs",
+      "sha256": "f33b0c31c2e0aefcfd3f2217a655a8c13d054b2d94e4f7067939b2626cf61520",
+      "bytes": 3721
+    },
+    {
+      "file": "docs/flows/lookup/lookup.mjs",
+      "sha256": "2db86e7b4b92a36932d7850956219942a53d8d53bdf0f2b756eac40161f15c84",
+      "bytes": 32646
+    },
+    {
+      "file": "docs/flows/lookup/motion.mjs",
+      "sha256": "d04ab2f6b9944326ffe2dc711a46f3d054b83ac2daa5107a694575caf6412bc0",
+      "bytes": 843
+    },
+    {
+      "file": "docs/flows/lookup/read-owner.mjs",
+      "sha256": "6f8d334489744c5476bc6228739712688a3ffc5bcf66c94515d36575e0444f71",
+      "bytes": 1871
+    },
+    {
+      "file": "docs/flows/lookup/recent-items.mjs",
+      "sha256": "9673f760f3650ab1f8a8c433431e6d5ab7dec9a5d663ab510732364be4ec0e70",
+      "bytes": 2777
+    },
+    {
+      "file": "docs/flows/lookup/style.css",
+      "sha256": "5f2a3e936ee6404ed5692ace22ae425710a2fff4e2d3830beb0cf023fd5acf77",
+      "bytes": 20901
+    },
+    {
+      "file": "docs/flows/nfc/assets/B07-artwork-source.png",
+      "sha256": "63f4b3876547ffec943f0e8f369eb22b48ba715ec38b14c51030a150b19a3b65",
+      "bytes": 1403395
+    },
+    {
+      "file": "docs/flows/nfc/assets/README.md",
+      "sha256": "3ded70c0b8c284a516d83ccf777b8b81deb5a7fea47a4de909edb7987d199a32",
+      "bytes": 1983
+    },
+    {
+      "file": "docs/flows/nfc/demo-tags.mjs",
+      "sha256": "fd121576b5831d3401c73b25b7a2d6e2d1aaf2088cdf0f1cf3281b9450d7954a",
+      "bytes": 1213
+    },
+    {
+      "file": "docs/flows/nfc/fixture-adapter.mjs",
+      "sha256": "c608675b39ed5cf75053a514702101f56b56d726d079d8bb38407ac139967e9b",
+      "bytes": 6204
+    },
+    {
+      "file": "docs/flows/nfc/index.html",
+      "sha256": "7720108e6807a4ae1f50455f8895dbda2907ff8b0c91da8cb278e72567c2b7ef",
+      "bytes": 295
+    },
+    {
+      "file": "docs/flows/nfc/motion.mjs",
+      "sha256": "561f5db865f02cacd9e97c1ac97fafd837d251c04dd9d6b61e5f62a1fc0f8de1",
+      "bytes": 2753
+    },
+    {
+      "file": "docs/flows/nfc/nfc-flow.mjs",
+      "sha256": "27c3a8ded6e1a8c80ef1326391e42bf182bd3e5f9c5378bdbca9c687b2b0e949",
+      "bytes": 10087
+    },
+    {
+      "file": "docs/flows/nfc/nfc.mjs",
+      "sha256": "40f6fb6b47a39c38468f777b0ae314e9afd8eb1b077d507ac09ac973bfa0b6b9",
+      "bytes": 30535
+    },
+    {
+      "file": "docs/flows/nfc/style.css",
+      "sha256": "8f8e04d2dc443f5c94a19dfdb36711b20cf758503bb3d389d398582803d0d741",
+      "bytes": 21184
+    },
+    {
+      "file": "docs/flows/notifications/notification-count.mjs",
+      "sha256": "4108de2576497941ee6801fca8c228c798b1c90edacfaec27d00a8a39e81885a",
+      "bytes": 878
+    },
+    {
+      "file": "docs/flows/notifications/notification-model.mjs",
+      "sha256": "c9bf83a318eefd8910cdeb18549d9fd8795c36aacbad76e8f38a43b31bb42876",
+      "bytes": 6824
+    },
+    {
+      "file": "docs/flows/notifications/notification-pages.mjs",
+      "sha256": "9e3cffc9b2f130f2cc5b54445ef6ec0cdf5c5996a3d2b5591a3ebff8dbf41cd4",
+      "bytes": 2269
+    },
+    {
+      "file": "docs/flows/notifications/notifications.mjs",
+      "sha256": "121fe71f2dac09abeb032d83cec22d3d4153b8a87ca7daef592d6a3f7a72cb74",
+      "bytes": 26232
+    },
+    {
+      "file": "docs/flows/notifications/README.md",
+      "sha256": "dbb9c5b279a300922738cb0b6c352f9555933859c966dbc9bf68ef9b6e0ef3be",
+      "bytes": 5992
+    },
+    {
+      "file": "docs/flows/notifications/style.css",
+      "sha256": "f84de1cb236b93a5eb092eef713347724d94ae6040d8352a5c5d7f2e4c2cbdc0",
+      "bytes": 11645
+    },
+    {
+      "file": "docs/flows/outbound/experience.mjs",
+      "sha256": "765c7d5e894204c7ba3b2c656600ae49169d5d7df025872feddf2a08151a9598",
+      "bytes": 998
+    },
+    {
+      "file": "docs/flows/outbound/fixture-adapter.mjs",
+      "sha256": "03582cc8d25a509a178555a9b22b6afda536ae840a828b9cb1d3a7293b5ffa3d",
+      "bytes": 5383
+    },
+    {
+      "file": "docs/flows/outbound/geography.mjs",
+      "sha256": "d43809ae9dcb608da9e2a85ddb301f672fe60ed60c505a37098d664d740458d5",
+      "bytes": 1898
+    },
+    {
+      "file": "docs/flows/outbound/icons.mjs",
+      "sha256": "28555d8d95280375f3a6f52c8f87ce57c19565fd211be873e3bb88d6bdb9bd5a",
+      "bytes": 1216
+    },
+    {
+      "file": "docs/flows/outbound/index.html",
+      "sha256": "8bbb5d23e6a4a9ae426ece53c518f2e5b0f22ae25984939b8d767bdeb655ef72",
+      "bytes": 361
+    },
+    {
+      "file": "docs/flows/outbound/motion.css",
+      "sha256": "9925fa107d4fc0b6cf6149cb27aa5c9e9b708bbd967669e8c20d3cfef0c22df9",
+      "bytes": 133
+    },
+    {
+      "file": "docs/flows/outbound/motion.mjs",
+      "sha256": "6d1c4065183946d582b9d29a88ac1c441cb636c9f51d7f72db1b2885ae8d54f4",
+      "bytes": 459
+    },
+    {
+      "file": "docs/flows/outbound/outbound-flow.mjs",
+      "sha256": "b8778ceca948ca42f9e546d0636dd0b5beca11c8cc6ad7400e8f83a023a5836f",
+      "bytes": 18513
+    },
+    {
+      "file": "docs/flows/outbound/outbound.mjs",
+      "sha256": "f32fb81cfd1e96bb6ed71edf6d9c5d97d8584d3f90800b65bfc2ab813ec01a02",
+      "bytes": 43253
+    },
+    {
+      "file": "docs/flows/outbound/select-control.mjs",
+      "sha256": "a71c98fa7db593267b03f332b5ec62c2ac3bdcf37b10dd2b2e7fbf0d72f60399",
+      "bytes": 9043
+    },
+    {
+      "file": "docs/flows/outbound/source-review.mjs",
+      "sha256": "159f22315fa4983a2da45d55adbf35cd08b8defcb7c85d0744f1f369006e1d86",
+      "bytes": 1511
+    },
+    {
+      "file": "docs/flows/outbound/style.css",
+      "sha256": "2d28db43ad7113967128a47b663beb6aad4a315752371b9d8e43c0a27f295230",
+      "bytes": 27805
+    },
+    {
+      "file": "docs/flows/outbound/validation.mjs",
+      "sha256": "23eea266a12f8db170329f5da1f86986387ed09a24fa01b8a191a727bf36e9c6",
+      "bytes": 2156
+    },
+    {
+      "file": "docs/flows/profile/icons.mjs",
+      "sha256": "09c22ee919eac4ce8d293e870880e8dabed37faf46587a33b2f369aad82cc54b",
+      "bytes": 1317
+    },
+    {
+      "file": "docs/flows/profile/index.html",
+      "sha256": "572aafc184bd821a8fd2fac15cc7c8ce9bd8d4d2f88783d7ada4b3875d1032d3",
+      "bytes": 311
+    },
+    {
+      "file": "docs/flows/profile/logout-button.mjs",
+      "sha256": "b5f5f5831cd71a41f1af4ae76f355c923a3628ee119a94cd2b7907628bbb400d",
+      "bytes": 368
+    },
+    {
+      "file": "docs/flows/profile/profile-model.mjs",
+      "sha256": "e9687f769c29966be53c0f003c434f27a16cb3c79da15f418559dc67c37a94fa",
+      "bytes": 2704
+    },
+    {
+      "file": "docs/flows/profile/profile.mjs",
+      "sha256": "0d82bf74d84d425b2520b53fd011738dc312d4c58d1902e3b76b2c58090bd325",
+      "bytes": 17596
+    },
+    {
+      "file": "docs/flows/profile/style.css",
+      "sha256": "21327d981c472d6d0cde3b2cce2c0c12d6dcfc50d9dbe59c6f93f461b4c5d4b9",
+      "bytes": 11132
+    },
+    {
+      "file": "docs/flows/recovery-shift/draft-retention.mjs",
+      "sha256": "36d09bdc0df14438dd9463ff49a5c2c63a1f9c1d597eba934cdc146aa2d4679a",
+      "bytes": 1416
+    },
+    {
+      "file": "docs/flows/recovery-shift/model.mjs",
+      "sha256": "b5ef5026c96f8a504ed05ac4742771928cc4c348f3308c61a677124a2c42a00a",
+      "bytes": 6726
+    },
+    {
+      "file": "docs/flows/recovery-shift/presentation.mjs",
+      "sha256": "0760114b36799487814f79cdbba2fafca02bb4a32df4cfdf4b32bd0cf384b876",
+      "bytes": 2434
+    },
+    {
+      "file": "docs/flows/recovery-shift/README.md",
+      "sha256": "9440974cd74eb2b0ab513c8a25ef0dd9b60572bc322e96f2fca42f8d3d08fa31",
+      "bytes": 4517
+    },
+    {
+      "file": "docs/flows/recovery-shift/record-dialog.mjs",
+      "sha256": "7212fc79aa2b2284e81492d373d90e419406e41a6e7b3b2a23e139ef4bbad96d",
+      "bytes": 3414
+    },
+    {
+      "file": "docs/flows/recovery-shift/style.css",
+      "sha256": "b742db2947129a4d69055025a80a0643a5e52f58913d02f30d4902274c762e4e",
+      "bytes": 11765
+    },
+    {
+      "file": "docs/flows/recovery-shift/view.mjs",
+      "sha256": "b76b3bab609acfa0efdb2b577efe45c5b6517ff96247426bcaaf350e820ada01",
+      "bytes": 19894
+    },
+    {
+      "file": "docs/flows/scan-exceptions/experience.mjs",
+      "sha256": "b77795a975c05db5e787408b9fd104db9faa381307e554dbba39a12f64453bf2",
+      "bytes": 7495
+    },
+    {
+      "file": "docs/flows/scan-exceptions/navigation.mjs",
+      "sha256": "a892de1e7e571c510914046a75869756e9009d9e68cbf86581827f503a49e23f",
+      "bytes": 1172
+    },
+    {
+      "file": "docs/flows/scan-exceptions/style.css",
+      "sha256": "bf7169ce5e9bef1197d82c83861dc68618d92ffc8cc7d1e9f6ba230139f38825",
+      "bytes": 6486
+    },
+    {
+      "file": "docs/flows/scan-exceptions/view.mjs",
+      "sha256": "f9b916041914bf1b5992a9249b9694314dacbe72e062ab6c4876cb281c49c00e",
+      "bytes": 9104
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/dialog-flow.mjs",
+      "sha256": "c0ef71dd75877904d3fd54efffe030f8f71269a8f1f23807e26550a6e961bb3e",
+      "bytes": 9384
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/dialogs.mjs",
+      "sha256": "63dafa60fb11029f08b6669f3bbaf206182d9e7f1aebf99b62444cfe639e3848",
+      "bytes": 13968
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/fixture-adapter.mjs",
+      "sha256": "f773b9966bb9719e164d0645bd20b7ddc4ef1e02fde448ca3f455005920ceeb3",
+      "bytes": 2099
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/icons.mjs",
+      "sha256": "0045f7881b95ea2d5542d2804ba325dcc557e91bdc673758567f0cec20f8d817",
+      "bytes": 974
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/motion.mjs",
+      "sha256": "c3bc4d1c9e8328a1f0550258cd7cb9900175c7d5781fd72c0626d3cea944f844",
+      "bytes": 2267
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/stock-owner-adapter.mjs",
+      "sha256": "63918cfc4a70eeb4ba0b43665a7f86970d9c0ad1ae8f9aa944991d18c542bc1f",
+      "bytes": 2416
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/style.css",
+      "sha256": "342514d86241165b214855e8f38d5487a2a6a70e7095624818f62f7da8e5ed1b",
+      "bytes": 7491
+    },
+    {
+      "file": "docs/flows/scanner-screens/app.js",
+      "sha256": "a8a0ef49dd43e91d83098f8239abae527be76d182c12dc4d23650e69dd122df9",
+      "bytes": 5116
+    },
+    {
+      "file": "docs/flows/scanner-screens/index.html",
+      "sha256": "a6e26aa9c06db9941100b21dbbd8d4e037f6cd619a68cdfd1d298723d0b5b1ec",
+      "bytes": 442
+    },
+    {
+      "file": "docs/flows/scanner-screens/style.css",
+      "sha256": "529f05bf88daafd0db7eaa18cedd7138a2c97754eb61815bf4303d871013a969",
+      "bytes": 3871
+    },
+    {
+      "file": "docs/flows/security/icons.mjs",
+      "sha256": "b5c5bb6d609b442a89f41a797f1357080714630f37688b5e198f7498bfa5a1d9",
+      "bytes": 952
+    },
+    {
+      "file": "docs/flows/security/index.html",
+      "sha256": "dde826b0225d30a7ee3698daee185fe1cf9c52ffed98d857d132c92b577e7021",
+      "bytes": 364
+    },
+    {
+      "file": "docs/flows/security/preview-adapter.mjs",
+      "sha256": "8eb1f7192e074a024d20bcbf5318afb8d1f14640f426a6776429080e9db2c2b3",
+      "bytes": 4227
+    },
+    {
+      "file": "docs/flows/security/security-model.mjs",
+      "sha256": "d030a800639c12de75cc88bf8e53417e22218f1190e16329b81dff153e9a64be",
+      "bytes": 5261
+    },
+    {
+      "file": "docs/flows/security/security.mjs",
+      "sha256": "4c3021431560436fadcc70f45c37fe86452c4a7fa0a559eb3aee782bc71c1ffc",
+      "bytes": 18558
+    },
+    {
+      "file": "docs/flows/security/style.css",
+      "sha256": "f4d2ffbff76e24868c6a019dedc725cd2a59d0500af3b272571997d596f66a3f",
+      "bytes": 7889
+    },
+    {
+      "file": "docs/flows/shared/action-dialog.css",
+      "sha256": "c3eef18882a269ce1814786d44696d3964a8146b502db511ef67459d305692ed",
+      "bytes": 1857
+    },
+    {
+      "file": "docs/flows/shared/action-dialog.mjs",
+      "sha256": "6bc2a61cecfde43529e15ea1d66239db54d06ad9efd1d7d1c6f16ceba82f748d",
+      "bytes": 2485
+    },
+    {
+      "file": "docs/flows/shared/action-feedback.mjs",
+      "sha256": "82f8b185628bb36ff4af1f396625fbc6e0bebca44dda7e0f6cb2c3846a5d8659",
+      "bytes": 2880
+    },
+    {
+      "file": "docs/flows/shared/app-modal.mjs",
+      "sha256": "446cbe63a5e3f188d17a1a8e45c11106c75c734e6ce5bab7fdce6a4c91aaf10b",
+      "bytes": 3178
+    },
+    {
+      "file": "docs/flows/shared/app-surfaces.css",
+      "sha256": "7526c68597c6b64fb07ad916abe3895dc6632142276ad01bd6e35bcfa0231342",
+      "bytes": 2912
+    },
+    {
+      "file": "docs/flows/shared/choice-dialog.mjs",
+      "sha256": "df6341967fa24c943cfb3e508f6a9a90616ff12706110cf8d6884cf9085b4af4",
+      "bytes": 4804
+    },
+    {
+      "file": "docs/flows/shared/choice-options.mjs",
+      "sha256": "45aa082e6ab38fccc46a1db1cd34ecee7bc16ab526bde3e9f978f3c3f8c78a50",
+      "bytes": 418
+    },
+    {
+      "file": "docs/flows/shared/detail-tabs.css",
+      "sha256": "d24804fa44200ff734ef71945ab96e989b05f2bf20c06ce123f596f7d3b30dd6",
+      "bytes": 1721
+    },
+    {
+      "file": "docs/flows/shared/dialog-route.mjs",
+      "sha256": "0f18d7d86293407c93ba01a35b5c999a92472d22ec543781889876b1ec7e310f",
+      "bytes": 2370
+    },
+    {
+      "file": "docs/flows/shared/flow-guidance.css",
+      "sha256": "539216890df745bd9a6e1cf4affc6ee7dc95c21f4cc8ddbbd47d110dd250ef74",
+      "bytes": 1278
+    },
+    {
+      "file": "docs/flows/shared/flow-guidance.mjs",
+      "sha256": "275053bb90745835ac5540a4af52a1334a3ee161b5b0e3c5196a45201ee63020",
+      "bytes": 1690
+    },
+    {
+      "file": "docs/flows/shared/form-navigation.mjs",
+      "sha256": "4531cadff1039b4bcc738866bcac8713ed52092a26bd6cdee16a0d2b6140ae2d",
+      "bytes": 2525
+    },
+    {
+      "file": "docs/flows/shared/history-fixtures.js",
+      "sha256": "cdc2ec4b43ff6e36dd6b7cf4320994ac26c08826e2cf4c50d0f2bb842ca3d3b5",
+      "bytes": 5011
+    },
+    {
+      "file": "docs/flows/shared/list-actions.css",
+      "sha256": "d4c5e2afc4c63cf77cadd8666c54446e05d01939486a02e6362424d3c4b8b112",
+      "bytes": 1225
+    },
+    {
+      "file": "docs/flows/shared/list-actions.mjs",
+      "sha256": "9f3f78bf1fbe51fa17c722260de18c60fb7b058ab816c0430d56f28d00725dbc",
+      "bytes": 468
+    },
+    {
+      "file": "docs/flows/shared/motion/motion-primitives.mjs",
+      "sha256": "496c13bec42ceadc4f19eb31fd28bafcfb55f04e152072d7dc4c168955b22e4b",
+      "bytes": 3924
+    },
+    {
+      "file": "docs/flows/shared/motion/motion-tokens.css",
+      "sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a",
+      "bytes": 745
+    },
+    {
+      "file": "docs/flows/shared/motion/scan-flow-feedback.mjs",
+      "sha256": "0d66683d5d3f6e2d9a0aabec1e6bfb8f862c0cf6f681f95ecdd4381c05257b5b",
+      "bytes": 3232
+    },
+    {
+      "file": "docs/flows/shared/operation-icons.css",
+      "sha256": "ec13c113c02718087a142130cca72b75f0d736c981a85a9558ae4fded97de1a5",
+      "bytes": 3888
+    },
+    {
+      "file": "docs/flows/shared/overlay-scroll-lock.mjs",
+      "sha256": "9a32dab38c3192796d602dfd7469ce120d3c3854cd71e6480b3816bf529b2029",
+      "bytes": 816
+    },
+    {
+      "file": "docs/flows/shared/priority-touch.css",
+      "sha256": "f300c492102f3e6dd51d0bd067a8a07519aa3f16905013631d78d6168549b05b",
+      "bytes": 3096
+    },
+    {
+      "file": "docs/flows/shared/priority-touch.mjs",
+      "sha256": "501de783e5ed2f13f5ff8006908168a5b133f2f97defbb21911cd92e4a6ad2c2",
+      "bytes": 2208
+    },
+    {
+      "file": "docs/flows/shared/query-date-policy.mjs",
+      "sha256": "06e9327403a8ba4f6835adf9d93d4b9d71bc7101a4ad15c6e17d0190b852d759",
+      "bytes": 2022
+    },
+    {
+      "file": "docs/flows/shared/readable-text.css",
+      "sha256": "b5acb052fa2b64165c5b39254cac8d99b742506230a11bd18cf383300fbf670f",
+      "bytes": 3415
+    },
+    {
+      "file": "docs/flows/shared/readable-text.mjs",
+      "sha256": "f15bc7432732e9d9d6dbc9c3c05c403894da4b7d00cb2652445d4614df3312ae",
+      "bytes": 5200
+    },
+    {
+      "file": "docs/flows/shared/recent-time.mjs",
+      "sha256": "f98e9bdc6a6c2eb1fddafad8b2abb1157b7f87410a74f422cc67a031bfd9ea9b",
+      "bytes": 630
+    },
+    {
+      "file": "docs/flows/shared/scaled-controls.css",
+      "sha256": "11eed3641dcdbcad5346d48da2c80dd97c508fee9c0c0f24b1c67ca75691c0c8",
+      "bytes": 358
+    },
+    {
+      "file": "docs/flows/shared/scaled-controls.mjs",
+      "sha256": "8083a0081aed1163e3ea3ea85054a503ece63fe3b23352feaad97eeb7c4cc326",
+      "bytes": 4383
+    },
+    {
+      "file": "docs/flows/shared/scan-entry.css",
+      "sha256": "fc35bf5a927b69081b8d2bb0a6b8b02696e0d0e898c86494524a7bd8c3c0a2b4",
+      "bytes": 3675
+    },
+    {
+      "file": "docs/flows/shared/scan-entry.mjs",
+      "sha256": "0664c38e34141a71cb0933dc90baef2c25421f5547f6549fd242458e6b40cd81",
+      "bytes": 2269
+    },
+    {
+      "file": "docs/flows/shared/status-announcer.mjs",
+      "sha256": "e95bf9d7e97c3aff99d31c5e7fc91bea1a0404194a5e0e5f4f38093d23f1def0",
+      "bytes": 1026
+    },
+    {
+      "file": "docs/flows/shared/UI_STANDARD.md",
+      "sha256": "5828fbfedabb8c7b4acd7657e21e496b35741249d3cf81b1a00f20d346b5b02d",
+      "bytes": 48217
+    },
+    {
+      "file": "docs/flows/shared/waiting-web.css",
+      "sha256": "ee02df271c69239bb5257c1edc0a745e24873ec87735c2e63df47869571592f8",
+      "bytes": 2673
+    },
+    {
+      "file": "docs/flows/shared/waiting-web.mjs",
+      "sha256": "0856dcec019e3b75219969bf4f16a5f3ceb0f3e5fda5034342d00056384e7ebd",
+      "bytes": 3729
+    },
+    {
+      "file": "docs/flows/shared/warranty-cases.mjs",
+      "sha256": "6c6c0fe0090026c427fc7ba70604c8646cd22411628238324fa4beb65d0fcf26",
+      "bytes": 7640
+    },
+    {
+      "file": "docs/flows/system/model.mjs",
+      "sha256": "25cc22e296f92c85f4b34400ed58cf7d5e93ff6f609c59d4eca96e3c099c5f08",
+      "bytes": 3272
+    },
+    {
+      "file": "docs/flows/system/presentation.mjs",
+      "sha256": "6eafa6bc2f77b4666921d79953374d22f88433154fd9d935e96b7afec4381029",
+      "bytes": 1860
+    },
+    {
+      "file": "docs/flows/system/README.md",
+      "sha256": "d6165a114ff0e5c9122ece5311ae15f5947f28290aeab344132410912b3858c6",
+      "bytes": 2892
+    },
+    {
+      "file": "docs/flows/system/style.css",
+      "sha256": "e35878708d06f657f53b66266501fb20977ed8fa4b42b044ca6e6fe95349f477",
+      "bytes": 5378
+    },
+    {
+      "file": "docs/flows/system/view.mjs",
+      "sha256": "464e7eb343a227ac48b72383983baddf3f12de6f4775055fbfb1f68138283187",
+      "bytes": 16450
+    },
+    {
+      "file": "docs/flows/warranty/fault-options.mjs",
+      "sha256": "b30b6b86156f9aa7c5fadfb56334ffa7fc07b288464065b94c937c6e9be8897b",
+      "bytes": 1538
+    },
+    {
+      "file": "docs/flows/warranty/index.html",
+      "sha256": "28b17f639922425c5e9c5182cbbd22092669b3326b3027c53fe4f1245e2e642e",
+      "bytes": 306
+    },
+    {
+      "file": "docs/flows/warranty/modal-history.mjs",
+      "sha256": "f74bfa350ecbee665d982d866ca8f23fc3de53e94386404367ac5d3771cffb1e",
+      "bytes": 1231
+    },
+    {
+      "file": "docs/flows/warranty/motion.mjs",
+      "sha256": "74e3f6af91d1b2265e6a291c2351b40b7fc7f653ebf9b8961580685a6df447be",
+      "bytes": 1880
+    },
+    {
+      "file": "docs/flows/warranty/style.css",
+      "sha256": "0b03170f6adfcf48eb85e1ee60ae137791124cde820832d01d40bf23fdeb1156",
+      "bytes": 44383
+    },
+    {
+      "file": "docs/flows/warranty/warranty-model.mjs",
+      "sha256": "91f63e28d2173dba76f41f26b6724ba5f2dd36f2a8fc5297804e2b7d51361475",
+      "bytes": 11666
+    },
+    {
+      "file": "docs/flows/warranty/warranty.mjs",
+      "sha256": "b7e0c6141789dbfddbc75f378f334cfb684125b0665c10d5f1dc6a0061343836",
+      "bytes": 50349
+    },
+    {
+      "file": "docs/flows/warranty-components/DEV_PROPOSAL.md",
+      "sha256": "49589a0090d35a6452d37c7b4cc38a1c2d91c1d3bcbab62a24bbd4e7669fe091",
+      "bytes": 10730
+    },
+    {
+      "file": "docs/flows/warranty-components/flow.js",
+      "sha256": "8aaabad55a23e0786157eda81e7aad9d42ea15f354cb6fac110d3badf407711f",
+      "bytes": 64904
+    },
+    {
+      "file": "docs/flows/warranty-components/fonts/OFL.txt",
+      "sha256": "e0468b7b70bcf81a25f3f2347080e05514562380f54d998711fc356f0c8fda33",
+      "bytes": 4483
+    },
+    {
+      "file": "docs/flows/warranty-components/fonts/public-sans-2090ae7a.woff2",
+      "sha256": "e43b193880fdb1d6adf494192bcdf77b008cafe910b0cb07d44d46a564d1cdae",
+      "bytes": 7576
+    },
+    {
+      "file": "docs/flows/warranty-components/fonts/public-sans-da9f89d3.woff2",
+      "sha256": "1c8a26c0ed4312dacc36670714794c9f4b4a0972ccb45f2936646bd8d444d5f8",
+      "bytes": 18372
+    },
+    {
+      "file": "docs/flows/warranty-components/fonts/public-sans-f631476b.woff2",
+      "sha256": "c1b6da516e0062e9c2f341b3a51dd2d621d946da72f06c6cfe05fd9d2dd8622d",
+      "bytes": 26636
+    },
+    {
+      "file": "docs/flows/warranty-components/handoff.html",
+      "sha256": "04157b57c01440e69e26793d7105db8a6f85c10bd92aa554a6cc7ba39a582cd5",
+      "bytes": 6783
+    },
+    {
+      "file": "docs/flows/warranty-components/HANDOFF.md",
+      "sha256": "ceeb4960c94d8e23767c26f561c907445234a92496b1150c5d01728c0371ed6c",
+      "bytes": 6093
+    },
+    {
+      "file": "docs/flows/warranty-components/history-experience.mjs",
+      "sha256": "abca23a7876b81051c178c0c01716b8226042d98af12c6873f94ea7d472d3f6d",
+      "bytes": 2346
+    },
+    {
+      "file": "docs/flows/warranty-components/history-fixture.mjs",
+      "sha256": "8065f6d7aed3351a6af4f1b397aba109f5ffea1cbca1cf7e64cbd78819f5d9fc",
+      "bytes": 2138
+    },
+    {
+      "file": "docs/flows/warranty-components/history-model.mjs",
+      "sha256": "6ca7575280f2b73803ae0329a319b3b776d96d57749d8154c3827c90a44786bd",
+      "bytes": 3963
+    },
+    {
+      "file": "docs/flows/warranty-components/history-view.mjs",
+      "sha256": "b4b8bbe288d10e74cf06f1f5dc14cd2144c00925e06ec7044e602c7f640323e8",
+      "bytes": 22695
+    },
+    {
+      "file": "docs/flows/warranty-components/history.css",
+      "sha256": "b364d8f80eca52da012dc623f844fbf922ad77a1c248c3a0d4770282383d25d1",
+      "bytes": 5462
+    },
+    {
+      "file": "docs/flows/warranty-components/index.html",
+      "sha256": "d18c94bc313f9e8897d955381e3fa2a48d07fe876861749737501528112d5b8d",
+      "bytes": 948
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-experience.mjs",
+      "sha256": "85a5908f0e3984ddead570fbe1142c178c4b844a85712ff96a66197b3fc65011",
+      "bytes": 1265
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-fixture.mjs",
+      "sha256": "0cb18e8dc72e087f8c4354ed6c79874a17f4fbfe4f5881dbe28e6f146166f7da",
+      "bytes": 3104
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-icons.mjs",
+      "sha256": "40b55c8de49b604efb94336a7434c95b9852e007cb6040bb3e8ea3c4e94447ef",
+      "bytes": 648
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-model.mjs",
+      "sha256": "9bf3116555006f2a6d05f304bd7118b705556a1e3bf2dfaf49fcb02b19728257",
+      "bytes": 7242
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-view.mjs",
+      "sha256": "01a57ddfdaef575b7ee2c71eee5612315f8af0d7d4f90211756ae35520c75564",
+      "bytes": 29105
+    },
+    {
+      "file": "docs/flows/warranty-components/issue.css",
+      "sha256": "b7a5c7da70f8bd6b1346b6dec876a7b6f2e0db1aa6439d16afed8cd5d44a775c",
+      "bytes": 14582
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-experience.mjs",
+      "sha256": "9fecb7fe6f5a2f1cc71dd62d4ef272c38dfdaecf91768c8c7e11667e8092c8d1",
+      "bytes": 1918
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-model.mjs",
+      "sha256": "eece62fb1c354db1ed611ace020362ff407a51176a1342e9155ca5c9de1fbca9",
+      "bytes": 4702
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-view.mjs",
+      "sha256": "f00f1ca473280390d2542f92e6c18393ecad34f43bb1f4672a5b816447a040c1",
+      "bytes": 20053
+    },
+    {
+      "file": "docs/flows/warranty-components/resume.css",
+      "sha256": "ca45b4921c92be7d905ab441022b0d5b323c62b00ec92146ccc9484bc5267330",
+      "bytes": 4604
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/closed.png",
+      "sha256": "876f8ae72b42c89a184eb06e9974da816da2c96d03abc2637661a83aff2ffde3",
+      "bytes": 83602
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/drafts.png",
+      "sha256": "3f687716a9c08e2e233dd9a62083ac0c178e68b7a023221405c17ce95b065347",
+      "bytes": 62676
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/empty.png",
+      "sha256": "dab6a0249f9f301865c65706522c257dbf27bd5479ec2d720d8c7b1c4ce4f900",
+      "bytes": 67475
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/events-unavailable.png",
+      "sha256": "d32d45a70daeb39f493f6e1dcc3b1c50eeaad09f102cfdbd52a0305fbc2e3758",
+      "bytes": 48949
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/history-error.png",
+      "sha256": "dd3ed53191276de93067e8e39ab78296a19631240ebdadba1f9eae54d9f94a00",
+      "bytes": 85700
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/history-hub.png",
+      "sha256": "eda0f9f8cfffc50a05bcebf1719628e277ac3bd102f385f20272ed06b56c24eb",
+      "bytes": 78454
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/history-loading.png",
+      "sha256": "1d67c1a93aa9a61b37623d62ed05f6791cd97ff69f8f775dcfa2e40f754fb6cc",
+      "bytes": 78018
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/history.png",
+      "sha256": "ded945ecfa409b92a90c844b797a65823516a1a2cfbfd1784915a7ae4a668419",
+      "bytes": 77740
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/nfc-detail.png",
+      "sha256": "05e8ba0b297b2f5690d096cbb3dc370fc979bd26a08fdd31b05dc5182f0a9765",
+      "bytes": 78472
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/nfc.png",
+      "sha256": "2a04b7a5cbf112d61f09a42e89f7acdb839d6bd84d3b3bd5650d0ec48d7a1df9",
+      "bytes": 73460
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/post-check.png",
+      "sha256": "689ae77f7bdf89cd2fe67a1f867811ba0e13c393d7815bbef795d6fadeffe0ac",
+      "bytes": 70874
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/quantity-invalid.png",
+      "sha256": "3bb7516db0079acf27bc9b11d696b81a96e1c05d7e285adab5c0525fbabaf606",
+      "bytes": 77787
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/quantity.png",
+      "sha256": "b40f1c92af8b62403d4a891058e7f0075437e3e0ae0e879e4a45ec3e1306a8a3",
+      "bytes": 74739
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/reconcile.png",
+      "sha256": "5e0086c8e9d382b4016dee7a00a3bdf19374aa53dd807a443d698ea5a0d83f6d",
+      "bytes": 84398
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/resume.png",
+      "sha256": "c88aed68bfb3d8a26f1056cac29215cb9b755a7f5223e21ab4ad3a0a8584b3c8",
+      "bytes": 86972
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/review.png",
+      "sha256": "f36127c4604a60820fd6451a48c2d2e728603466d13e80a795975a7b67927e3d",
+      "bytes": 79435
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/scan-error.png",
+      "sha256": "fb3943ea333ac8612553fbec16f4772d9954b757f370fe64214c878c6e30c720",
+      "bytes": 68128
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/scan.png",
+      "sha256": "8049ecce04d278188f2ad08ffb5f10fae61b26a16e3ac9d401990534301c51d0",
+      "bytes": 114474
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/session-detail.png",
+      "sha256": "7985bd0a3a85ae0ab63a733977eee83b3c2097a310f63941145fece3e73ac1bc",
+      "bytes": 67889
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/sessions.png",
+      "sha256": "fcfa9a66ab3a64c1ae97ca8994f56ed42030172ecf03646e1f5548db247eca35",
+      "bytes": 71861
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/success.png",
+      "sha256": "b73e898e479ad428af2a394b04b7c7507148673b328c6f90ec83fb43256db45a",
+      "bytes": 69638
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/waiting-web.png",
+      "sha256": "d341d2c770ef7d25bc4e450f85d2b2e11bfaa11eb5771fb345a0cff00e6b9b32",
+      "bytes": 66477
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/warranty-detail.png",
+      "sha256": "00b0400c6bea3a1620d01bcf70cd9b5c3aa1606f3ef37861180d8683881c21bb",
+      "bytes": 66178
+    },
+    {
+      "file": "docs/flows/warranty-components/screens/warranty.png",
+      "sha256": "a40357abff15bd66826c19adce28c2789d06abfc158918f06bf8a0c4735ed954",
+      "bytes": 65801
+    },
+    {
+      "file": "docs/flows/warranty-components/style.css",
+      "sha256": "91f09657963f1ad45ab968d84010baf7feeb057073ee0968d802cf8ce88adcee",
+      "bytes": 33671
+    }
+  ]
+}

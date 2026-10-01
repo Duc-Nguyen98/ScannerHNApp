@@ -1,0 +1,35 @@
+✔ Shell reuses one route owner; replacement cancels old effect, repeated identity never replays (11.76ms)
+✔ OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks (2.524ms)
+✔ Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles (0.9886ms)
+✔ M13 mode off/hidden states are consumed, not replayed on Back or enable (2.921ms)
+✔ M13 OS policy cancels active opacity; hide/dispose release listener even when repeated (0.7438ms)
+✔ M13 inactive context is static and mode never triggers a domain callback (0.8708ms)
+✔ 10 first, +10 only when requested; 37 ends without extra request (71.9877ms)
+✔ rapid double click shares one request; all and unread cache independently (12.1867ms)
+✔ page failure preserves existing items/cursor, retry does not skip (46.0503ms)
+✔ reading the cursor anchor does not shift offsets or skip unread IDs (47.3678ms)
+✔ page response cannot leak after actor/session/warehouse change (31.4892ms)
+✔ dataset reset/dispose discards in-flight pages (16.6361ms)
+✔ overlapping page IDs merge without duplicate cards (0.5955ms)
+✔ short and empty source do not create fake load-more (14.5077ms)
+✔ cursor cannot be reused across filter or session (47.8443ms)
+✔ equal timestamps use deterministic ID order (48.3542ms)
+✔ read outside loaded unread page decrements total once without loading replacements (88.989ms)
+✔ P13 explicit preview guard fails closed for absent/unverified/production scope (2.3693ms)
+✔ P13 scoped waiting rows reuse P12 IDs and distinguish quantity/SKU (1.5109ms)
+✔ P13 read receipt is asynchronous, deduplicated, and verified before count change (5.1935ms)
+✔ P13 read failure preserves exact list and retry changes only target (38.9354ms)
+✔ P13 late receipt after actor/session/scope change is discarded (24.2085ms)
+✔ P13 disposing a session cancels late read mutation (1.4044ms)
+✔ P13 unknown ID cannot mutate events; returned snapshots cannot mutate source (5.5891ms)
+✔ P13 separate sessions retain isolated unread state and reload starts fresh (5.0888ms)
+✔ P13 notification targets exist in shared P12 dataset and no prefix inference (63.7694ms)
+✔ P13 source exposes no approve/reject/post/network endpoint or invented Web URL (17.3365ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 752.29

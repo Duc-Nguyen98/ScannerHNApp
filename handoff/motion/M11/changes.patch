@@ -1,0 +1,231 @@
+--- before/docs/flows/security/security.mjs
++++ after/docs/flows/security/security.mjs
+@@ -4,31 +4,34 @@
+ import {sessionGuard} from '../home/home-flow.mjs';
+ import {openActionDialog} from '../shared/action-dialog.mjs';
+ import {createDialogRoute} from '../shared/dialog-route.mjs';
++import {mountSecurityMotion} from './motion.mjs';
+ const esc=v=>String(v??'Chưa có dữ liệu').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const icon=n=>`<svg class="p11-icon" viewBox="0 0 24 24" aria-hidden="true">${SECURITY_ICONS[n]}</svg>`;
+ const tile=n=>`<span class="hn-operation-icon" data-hn-operation="documents" data-size="lg">${icon(n)}</span>`;
+ const btn=(action,label,cls='p11-primary')=>`<button type="button" data-p11="${action}" class="${cls}">${label}</button>`;
+ const hint=text=>`<aside class="p11-hint">${icon('info')}<p>${text}</p></aside>`;
+ const formatTime=value=>{if(!value||!Number.isFinite(Date.parse(value)))return 'Chưa có dữ liệu';const parts=Object.fromEntries(new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Ho_Chi_Minh',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(value)).map(p=>[p.type,p.value]));return `${parts.day}/${parts.month}/${parts.year} ${parts.hour}:${parts.minute}`;};
+-export function mountSecurity({root,screen,tools,getState,onSize,onRoute,onBack,logout,accountStore}){
++export function mountSecurity({root,screen,tools,getState,onSize,onRoute,onBack,logout,accountStore,motionMode='auto'}){
+   let active=false,disposed=false,panel=1,flow=null,scenario='preview',renderedHash='',modal=null,afterDialog=null;
+   let fields={current:'',next:'',confirm:''},errors={},listStatus='',scroll=0;
+   const revealed={current:false,next:false,confirm:false};
+   const eyeSelections=new WeakMap();
++  const eyeFrames=new Set();
++  const securityMotion=mountSecurityMotion({root,requested:motionMode,active:()=>active&&!disposed});
+   const labels={current:'Mật khẩu hiện tại',next:'Mật khẩu mới',confirm:'Xác nhận mật khẩu mới'};
+   const modalRoute=createDialogRoute({history,location,key:'hnSecurityDialog'});
+   const review=document.createElement('section');review.className='p11-tools';review.hidden=true;
+   review.innerHTML=`<details><summary>P11 · Kịch bản kiểm chứng</summary><p>PROTOTYPE · P11-r03. Luồng mặc định đã nối dữ liệu thử P01–P11; không kết nối tài khoản thật.</p><label>Kịch bản <select id="p11-scenario">${REVIEW_SCENARIOS.map(([v,t])=>`<option value="${v}">${t}</option>`).join('')}</select></label><p>Đổi mật khẩu mặc định có hiệu lực khi đăng nhập lại trong trang này. Đăng xuất không đặt lại mật khẩu hay khôi phục phiên đã thu hồi. Tải lại trang hoặc Đặt lại fixture sẽ khôi phục dữ liệu ban đầu. Chỉ nhập mật khẩu thử; không lưu vào storage. Thiết bị và vị trí là mẫu B11, không suy từ máy đang dùng. Policy preview chỉ kiểm bắt buộc, giữ phiên hiện tại; policy backend còn chờ contract. Các kịch bản lỗi/B11 riêng không thay tài khoản preview mặc định.</p></details>`;
+   tools.append(review);
+   function init(){flow=createSecurityFlow({adapter:createSecurityAdapter({session:getState().session,scenario,accountStore}),getState});}
+-  function clearSecrets(){fields={current:'',next:'',confirm:''};errors={};for(const k of Object.keys(revealed))revealed[k]=false;for(const i of root.querySelectorAll('.p11-input input')){i.value='';i.type='password';}}
++  function clearSecrets(){for(const id of eyeFrames)cancelAnimationFrame(id);eyeFrames.clear();securityMotion.reset();fields={current:'',next:'',confirm:''};errors={};for(const k of Object.keys(revealed))revealed[k]=false;for(const i of root.querySelectorAll('.p11-input input')){i.value='';i.type='password';}}
+   function field(name){return `<div class="p11-field"><label for="p11-${name}">${labels[name]} <span class="p11-required">*</span></label><div class="p11-input">${icon('lock')}<input id="p11-${name}" name="${name}" type="password" required autocomplete="${name==='current'?'current-password':'new-password'}" autocapitalize="none" spellcheck="false" aria-describedby="p11-${name}-error"><button type="button" class="p11-eye" data-p11-eye="${name}" aria-label="Hiện ${labels[name].toLowerCase()}" aria-pressed="false">${icon('eye-off')}</button></div><p id="p11-${name}-error" class="p11-error" hidden></p></div>`;}
+   function form(){return `<section class="p11-form-copy"><h2>Đổi mật khẩu</h2><p>Sử dụng mật khẩu theo chính sách bảo mật<br class="p11-wide"> do hệ thống quy định.</p></section><form id="p11-form" novalidate>${Object.keys(labels).map(field).join('')}</form>${hint('Mật khẩu cần tuân thủ chính sách bảo mật do hệ thống quy định.')}`;}
+   function success(){const s=getState().session,r=flow.snapshot().receipt;return `<div class="p11-success-content"><div class="p11-success-mark" aria-hidden="true"><span>${icon('check')}</span></div><h2 class="p11-success-title">Mật khẩu đăng nhập đã<br>được cập nhật</h2><p class="p11-success-copy">Bạn có thể sử dụng mật khẩu mới<br>để đăng nhập từ bây giờ.</p><section class="p11-summary">${[['user','Tài khoản',s.actor.name],['house','Kho',s.warehouse.name],['calendar','Thời gian cập nhật',formatTime(r.updatedAt)]].map(([n,l,v])=>`<div>${tile(n)}<span><small>${l}</small><strong data-hn-readable="${esc(l)}" data-hn-readable-kind="value">${esc(v)}</strong></span></div>`).join('')}</section>${hint('Nếu bạn nghi ngờ có hoạt động bất thường, hãy đăng xuất khỏi các thiết bị khác.')}</div>`;}
+   function device(row,current){return `<article class="p11-device" data-session-row="${esc(row.id)}"><div class="p11-device-heading"><h2>${current?'Thiết bị hiện tại':'Thiết bị khác'}</h2>${current?'<span class="p11-active">Đang hoạt động</span>':''}</div><div class="p11-device-name">${tile(row.deviceType==='computer'?'laptop':row.deviceType==='phone'?'smartphone':'shield-check')}<div><strong data-hn-readable="Thiết bị đăng nhập" data-hn-readable-kind="value">${esc(row.device)}</strong><p data-hn-readable="Hệ điều hành" data-hn-readable-kind="value">${esc(row.os)}</p></div></div><ul class="p11-device-meta"><li>${icon('pin')}<span data-hn-readable="Vị trí đăng nhập" data-hn-readable-kind="value">${esc(row.location)}</span></li><li>${icon('clock')}<span>Đăng nhập lúc ${esc(formatTime(row.loggedInAt))}</span></li><li>${icon('globe')}<span data-hn-readable="Ứng dụng đăng nhập" data-hn-readable-kind="value">Ứng dụng: ${esc(row.app)}</span></li></ul>${current?'':`<button type="button" class="p11-revoke" data-p11-revoke="${esc(row.id)}">${icon('log-out')}Đăng xuất từ xa</button>`}</article>`;}
+   function sessions(){const s=flow.snapshot();if(!s.sessions)return `<div class="p11-empty">${tile('shield-check')}<h2>Phiên đăng nhập</h2><p>${s.listBusy?'Đang tải danh sách thiết bị…':listStatus||'Đang tải danh sách thiết bị…'}</p>${s.listBusy?'':btn('reload','Tải lại','p11-secondary')}</div>`;const current=s.sessions.find(x=>x.id===s.currentSessionId),others=s.sessions.filter(x=>x.id!==s.currentSessionId);return `${device(current,true)}${others.length?others.map(x=>device(x,false)).join(''):'<section class="p11-device"><h2>Thiết bị khác</h2><p class="p11-no-others">Không có phiên đăng nhập khác.</p></section>'}${hint('Nếu phát hiện thiết bị lạ, hãy đăng xuất khỏi thiết bị đó và đổi mật khẩu để tăng cường bảo mật.')}`;}
+   function render(focus=false){
+-    if(!active||disposed)return;screen.classList.toggle('p11-form-screen',panel!==4);
++    if(!active||disposed)return;securityMotion.cancel();screen.classList.toggle('p11-form-screen',panel!==4);
+     const title=panel===4?'Phiên đăng nhập':panel===3?'Đã đổi mật khẩu':'Đổi mật khẩu';
+     root.innerHTML=`<section class="p11-app" data-panel="P11.S0${panel}"><header class="p11-header">${btn('back',icon('back'),'p11-back')}<h1 tabindex="-1">${title}</h1></header><div class="p11-body"><div class="p11-scroll" tabindex="0" aria-label="Nội dung ${title}">${panel===4?sessions():panel===3?success():form()}<div class="p11-reconcile" hidden>${btn('reconcile','Đối chiếu kết quả','p11-secondary')}</div></div>${panel!==4?`<footer class="p11-footer">${panel===3?btn('back','Tài khoản &amp; bảo mật'):'<button type="submit" class="p11-primary" form="p11-form" data-p11-save>Lưu mật khẩu '+icon('arrow')+'</button>'}</footer>`:''}</div></section>`;
+     root.querySelector('[data-p11=back]').setAttribute('aria-label','Quay lại Tài khoản & bảo mật');
+@@ -44,13 +47,13 @@
+     input.type=revealed[key]?'text':'password';input.setSelectionRange(...selection);updateEye(key);
+     // Chromium can reset the caret after the password input changes type.
+     // Restore only while the same untouched field still owns focus.
+-    if(document.activeElement===input){const expectedType=input.type,value=input.value;requestAnimationFrame(()=>{
++    if(document.activeElement===input){const expectedType=input.type,value=input.value;const frame=requestAnimationFrame(()=>{eyeFrames.delete(frame);
+       if(active&&!disposed&&input.isConnected&&document.activeElement===input&&input.type===expectedType&&input.value===value)input.setSelectionRange(...selection);
+-    });}
++    });eyeFrames.add(frame);}
+   }
+   function sync(){
+     if(!active||disposed)return;const s=flow.snapshot();
+-    for(const k of Object.keys(labels)){const i=root.querySelector('#p11-'+k),e=root.querySelector('#p11-'+k+'-error');if(i){i.setAttribute('aria-invalid',String(!!errors[k]));i.disabled=s.busy||!!s.pending;i.closest('.p11-input').classList.toggle('p11-invalid',!!errors[k]);e.hidden=!errors[k];e.textContent=errors[k]||'';}}
++    for(const k of Object.keys(labels)){const i=root.querySelector('#p11-'+k),e=root.querySelector('#p11-'+k+'-error');if(i){i.setAttribute('aria-invalid',String(!!errors[k]));i.disabled=s.busy||!!s.pending;i.closest('.p11-input').classList.toggle('p11-invalid',!!errors[k]);e.hidden=!errors[k];e.textContent=errors[k]||'';securityMotion.validation(e,k,errors[k]||'');}}
+     if(panel<3){panel=errors.confirm==='Mật khẩu xác nhận chưa khớp.'?2:1;root.querySelector('.p11-app').dataset.panel=`P11.S0${panel}`;}
+     const save=root.querySelector('[data-p11-save]');if(save){save.disabled=s.busy||!!s.pending;save.textContent=s.busy?'Đang xử lý…':'Lưu mật khẩu →';}
+     root.querySelector('.p11-app')?.setAttribute('aria-busy',String(s.busy||s.listBusy));
+@@ -63,7 +66,7 @@
+     if(result.kind==='expired'){expire();return;}
+     if(result.kind==='changed'){
+       clearSecrets();if(result.receipt.sessionEffect==='reauthenticate'){expire();return;}
+-      if(!active||disposed)return;panel=3;scroll=0;history.replaceState({p11:true},'','#p02/security?panel=3');render(true);return;
++      if(!active||disposed)return;panel=3;scroll=0;history.replaceState({p11:true},'','#p02/security?panel=3');render(true);securityMotion.success(root.querySelector('.p11-success-mark .p11-icon'),result);return;
+     }
+     if(!active||disposed)return;
+     if(result.kind==='invalid')errors=result.errors;
+@@ -81,7 +84,7 @@
+   async function load(){const model=flow;const promise=model.loadSessions();if(active&&panel===4)render();const result=await promise;if(disposed||model!==flow||!active)return;if(result.kind==='expired'){expire();return;}listStatus=result.kind==='blocked'?'Chưa kết nối danh sách phiên đăng nhập. Chưa có thiết bị được xác minh.':result.kind==='unavailable'?'Không tải được danh sách phiên. Vui lòng thử lại.':'';if(panel===4)render();}
+   function closeDialog(){modal?.close();}
+   function dialog(title,copy,{action=null,label='Đã hiểu',cancel=null,tone='neutral',symbol=''}={}){
+-    if(modal||!active||disposed)return;modalRoute.begin();afterDialog=null;
++    if(modal||!active||disposed)return;securityMotion.cancel();modalRoute.begin();afterDialog=null;
+     modal=openActionDialog({screen,tools,title,message:copy,confirmLabel:label,cancelLabel:cancel,tone,symbol,className:'p11-dialog',actionAttribute:'data-p11',
+       onConfirm(){afterDialog=action;},
+       onClose(){modal=null;modalRoute.closed();const task=afterDialog;afterDialog=null;void modalRoute.ready().then(()=>{if(!active||disposed)return;if(task)task();else if(!root.contains(document.activeElement))root.querySelector('h1')?.focus({preventScroll:true});});}});
+@@ -104,10 +107,12 @@
+   const onPointerDown=e=>{const b=e.target.closest('[data-p11-eye]');if(!active||!b||!root.contains(b)||b.disabled)return;const input=root.querySelector('#p11-'+b.dataset.p11Eye);eyeSelections.set(b,[input.selectionStart,input.selectionEnd,input.selectionDirection]);if(document.activeElement===input)e.preventDefault();};
+   root.addEventListener('pointerdown',onPointerDown);root.addEventListener('input',onInput);root.addEventListener('submit',onSubmit);root.addEventListener('click',onClick);
+   return {
+-    show(){if(sessionGuard(getState())){expire();return;}if(!flow)init();const entering=!active;active=true;review.hidden=false;const next=Number(new URLSearchParams(location.hash.split('?')[1]).get('panel'));const oldPanel=panel;panel=next===4?4:next===3&&flow.snapshot().receipt?3:errors.confirm?2:1;if(entering||(oldPanel===4)!==(panel===4)){listStatus='';scroll=0;}if(next===3&&panel!==3)history.replaceState({p11:true},'','#p02/security?panel=1');render(true);if(panel===4&&(entering||oldPanel!==4||!flow.snapshot().sessions)&&!flow.snapshot().listBusy)void load();},
++    show(){if(sessionGuard(getState())){expire();return;}if(!flow)init();const entering=!active;active=true;securityMotion.activate();review.hidden=false;const next=Number(new URLSearchParams(location.hash.split('?')[1]).get('panel'));const oldPanel=panel;panel=next===4?4:next===3&&flow.snapshot().receipt?3:errors.confirm?2:1;if(entering||(oldPanel===4)!==(panel===4)){listStatus='';scroll=0;}if(next===3&&panel!==3)history.replaceState({p11:true},'','#p02/security?panel=1');render(true);if(panel===4&&(entering||oldPanel!==4||!flow.snapshot().sessions)&&!flow.snapshot().listBusy)void load();},
+     beforeLeave,
+     handleNavigation(){if(modalRoute.navigation(closeDialog,()=>!!modal))return true;if(!active||location.hash===renderedHash)return false;if(flow.snapshot().busy){history.replaceState({p11:true},'',renderedHash);sync();return true;}if(Object.values(fields).some(Boolean)){const attempted={hash:location.hash,state:history.state};history.pushState({p11:true},'',renderedHash);beforeLeave(()=>{history.replaceState(attempted.state,'',attempted.hash);onRoute();});return true;}return false;},
+-    hide(){if(active){clearSecrets();scroll=0;}active=false;review.hidden=true;screen.classList.remove('p11-form-screen');closeDialog();},
+-    dispose(){disposed=true;active=false;clearSecrets();flow?.dispose();modalRoute.dispose();closeDialog();review.remove();root.removeEventListener('pointerdown',onPointerDown);root.removeEventListener('input',onInput);root.removeEventListener('submit',onSubmit);root.removeEventListener('click',onClick);}
++    setMotionMode(value){securityMotion.setMode(value);},
++    cancelMotion(){securityMotion.cancel();if(active&&sessionGuard(getState())){clearSecrets();securityMotion.hide();}},
++    hide(){if(active){clearSecrets();scroll=0;}active=false;securityMotion.hide();review.hidden=true;screen.classList.remove('p11-form-screen');closeDialog();},
++    dispose(){disposed=true;active=false;clearSecrets();securityMotion.dispose();flow?.dispose();modalRoute.dispose();closeDialog();review.remove();root.removeEventListener('pointerdown',onPointerDown);root.removeEventListener('input',onInput);root.removeEventListener('submit',onSubmit);root.removeEventListener('click',onClick);}
+   };
+ }
+--- before/docs/flows/security/motion.mjs
++++ after/docs/flows/security/motion.mjs
+@@ -0,0 +1,30 @@
++import {createMotionController} from '../shared/motion/motion-primitives.mjs';
++
++// M11 owns descendant feedback, never passwords, routes, session mutations or
++// overlay lifecycle. Inputs/list geometry and security teardown remain static.
++export function mountSecurityMotion({root,requested='auto',active=()=>true,media}){
++  let controller=null,disposed=false;const errors=new Map(),seenResults=new WeakSet();
++  const usable=()=>!disposed&&active()&&!root.closest('[inert]');
++  const mark=(node,name)=>{if(node)node.dataset.motionPrimitive=name;return node;};
++  function press(e){
++    if(e.type==='keydown'&&(e.repeat||e.isComposing||!['Enter',' '].includes(e.key)))return;
++    const node=e.target.closest?.('[data-p11=back],[data-p11=reload],[data-p11=reconcile],[data-p11-revoke],[data-p11-save]');
++    if(!controller||!usable()||!node||!root.contains(node)||node.disabled||node.closest('[inert],dialog,[hidden]'))return;
++    controller.pressFeedback(mark(node,'SecuritySettingsPress'));
++  }
++  function focus(e){
++    if(!controller||!usable()||!e.target.matches?.('.p11-input input')||e.target.disabled||e.target.closest('[inert]'))return;
++    controller.noticeFeedback(mark(e.target.closest('.p11-field')?.querySelector('label'),'SecureFormFocus'));
++  }
++  root.addEventListener('pointerdown',press);root.addEventListener('keydown',press);root.addEventListener('focusin',focus);
++  return {
++    activate(){if(!disposed&&!controller)controller=createMotionController({element:root,requested,...(media?{media}:{})});},
++    setMode(value){requested=value;controller?.setMode(value);},
++    validation(node,key,message){const prior=errors.get(key)||'';errors.set(key,message);if(prior===message)return;if(message&&usable())controller?.noticeFeedback(mark(node,'SecureFormError'));},
++    reset(){errors.clear();controller?.cancel();},
++    success(node,result){if(!result||seenResults.has(result))return;seenResults.add(result);if(usable())controller?.rowFeedback(mark(node,'SecureSuccess'));},
++    cancel(){controller?.cancel();},
++    hide(){controller?.dispose();controller=null;errors.clear();},
++    dispose(){disposed=true;controller?.dispose();controller=null;errors.clear();root.removeEventListener('pointerdown',press);root.removeEventListener('keydown',press);root.removeEventListener('focusin',focus);},
++  };
++}
+--- before/docs/flows/home/home.mjs
++++ after/docs/flows/home/home.mjs
+@@ -235,7 +235,7 @@
+   const motionTools=document.createElement('label');
+   motionTools.innerHTML='Motion P02 / AppShell <select id="home-motion-mode"><option value="auto">Tự động theo hệ điều hành</option><option value="reduced">Giảm chuyển động</option><option value="off">Tắt chuyển động</option></select>';
+   const motionSelect=motionTools.querySelector('select');motionSelect.value=motionMode;
+-  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
++  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
+   root.querySelector('.hn-tools > details').append(motionTools);
+   function syncDateRefresh(){
+     clearTimeout(dateRefreshTimer);dateRefreshTimer=null;
+@@ -274,8 +274,8 @@
+     if(['inbound','outbound'].includes(key))lastStockOperation=key;
+     if (disposed || suspended) return;
+     dialogs?.cancelMotion();
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();system?.show('expired',{history:false});return;}
+-    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();system?.show('forbidden');return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();system?.show('forbidden');return;}
+     if(system?.active){system.leave(()=>showRoute({key,id},{push,restore,scannerContext}));return;}
+     const documentResume=history.state?.p12Resume;
+     if(!push&&documentResume?.type===key){
+@@ -336,7 +336,7 @@
+     if (key === 'lookup' && push && !scannerContext?.selectForNfc) nfcProductPicker = false;
+     if (key === 'lookup' && result.context && nfcProductPicker) result.context.selectForNfc = true;
+     if (result.kind === 'blocked' && sessionGuard(state())) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
+       if(state().session&&state().previewReady){system?.show('forbidden');return;}
+       logout(); return;
+     }
+@@ -511,7 +511,7 @@
+     const button = event.target.closest('button');
+     if (!button || !root.contains(button)) return;
+     if(button.dataset.p15)return;
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();system?.show('expired',{history:false});return;}
+     if(system?.active&&button.dataset.tab){system.leave(()=>{if(button.isConnected)button.click();});return;}
+     if (button.dataset.tab && dialogs.flow.snapshot().panel) {
+       if (!dialogs.flow.dismissForMenu(button.dataset.tab)) return;
+@@ -531,7 +531,7 @@
+     else if (button.dataset.recentDocument) openHomeDocuments(button.dataset.recentDocument);
+     else if (button.dataset.homeKpi) openKpi(button.dataset.homeKpi);
+     else if (button.classList.contains('hn-name')) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
+       nameDialog.querySelector('#hn-full-name').textContent = state().session?.actor.name ?? '';
+       nameRoute.begin();nameModal=openAppModal({screen,tools:root.querySelector('.hn-tools'),dialog:nameDialog,initialFocus:'button',dismissOnBackdrop:false,onClose(){nameModal=null;root.append(nameDialog);nameRoute.closed();}});
+     }
+@@ -566,8 +566,8 @@
+     screen, tools: root.querySelector('.hn-tools'), getState: state, motionMode,
+     onFeedback:config=>{void dialogRoute.ready().then(()=>queueMicrotask(()=>{if(!disposed)homeFeedback.show(config);}));},
+     onShow() {
+-      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();
++      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
+       dialogRoute.begin();
+       currentHash = location.hash;
+       dialogCallerTitle = document.title;
+@@ -701,7 +701,7 @@
+     onShift:()=>showRoute({key:'shift'},{push:true}),
+     onSecurity:intent=>{securityCaller=intent.returnTo;securityBackPending=false;history.pushState({p11:true,p11From:intent.returnTo},'',`#p02/security?panel=${intent.action==='sessions'?4:1}`);showRoute({key:'security'});},
+     onRoute:()=>showRoute(parseRoute(location.hash),{restore:location.hash==='#home'})});
+-  security = mountSecurity({root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,onSize:fitPreview,logout,accountStore:securityStore,
++  security = mountSecurity({motionMode,root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,onSize:fitPreview,logout,accountStore:securityStore,
+     onBack:()=>{if(securityBackPending)return;if(securityCaller){securityBackPending=true;history.back();}else{history.replaceState({p10:true},'','#p02/profile?panel=4');showRoute({key:'profile'});}},
+     onRoute:()=>showRoute(parseRoute(location.hash),{restore:location.hash==='#home'})});
+   const pendingRun=type=>pendingStockRun(type,(type==='inbound'?inbound:type==='outbound'?outbound:null)?.flow.snapshot(),state().session);
+@@ -755,18 +755,18 @@
+   }
+   function showSystem(error,options={}){
+     const panel=classifySystemError(error);if(!panel)return false;
+-    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();
++    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();
+     if(panel==='expired'){expire();return true;}
+     if(suspended||!getState().session)return true;
+     if(panel==='forbidden')systemDenied=true;
+     if(system?.active&&system.kind===panel)return true;
+     return system?.show(panel,{...options,intent:options.intent||(error.kind==='unknown'?'reconcile':'read'),actionLabel:options.actionLabel})===true;
+   }
+-  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
++  system=mountSystem({screen,onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
+   // Explicit prototype controls stay outside product navigation.
+   const systemTools=document.createElement('details');systemTools.className='p15-tools';
+   systemTools.innerHTML='<summary>P15 · Hệ thống</summary><p>Chỉ mô phỏng lỗi hệ thống. Camera kiểm tra API môi trường thực khi bấm; không kết nối WMS.</p><button data-system-demo="connection">P15.S01 · Kết nối</button><button data-system-demo="expired">P15.S02 · Phiên hết hạn</button><button data-system-demo="forbidden">P15.S03 · Không có quyền</button><button data-system-demo="device">P15.S04 · Quyền thiết bị</button><button data-system-demo="deny">Mô phỏng thu hồi quyền</button><button data-system-demo="allow">Khôi phục quyền fixture</button>';
+-  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
++  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
+   root.querySelector('.hn-tools').append(systemTools);
+   root.addEventListener('click', onClick);
+   root.querySelector('#hn-scenario').addEventListener('change', event => {
+@@ -781,11 +781,11 @@
+   if(draftRestoreFailed)homeFeedback.show({title:'Chưa phục hồi đủ phiếu nháp',message:'Bản giữ lại vẫn còn trong dữ liệu của tài khoản này. Chưa thể mở đầy đủ phiếu; cần đối chiếu trước khi tạo phiếu thay thế hoặc đăng xuất từ Tổng kết ca.'});
+   return {
+     dispose() { shellMotion.dispose();motionSelect.onchange=null;warrantySession.dispose();nfcAudit.dispose();disposed = true; system.dispose(); shift.dispose();clearTimeout(dateRefreshTimer); document.removeEventListener('visibilitychange',syncDateRefresh); notifications.dispose();notificationStore.dispose();homeFeedback.dispose();nameRoute.dispose();closeName();dialogRoute.dispose(); if (nameDialog.open) closeName(); inbound.dispose(); outbound.dispose(); lookup.dispose(); nfc.dispose(); historyView.dispose(); warranty.dispose(); profile.dispose(); security.dispose(); documents.dispose(); attachments.dispose(); componentIssue.dispose(); componentHistory.dispose(); componentResume.dispose(); dialogs.dispose(); sizeObserver.disconnect(); window.removeEventListener('resize', fitPreview); window.removeEventListener('popstate', onRoute); window.removeEventListener('hashchange', onRoute); root.removeEventListener('click', onClick); root.replaceChildren(); },
+-    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
+-    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
+-    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
++    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
++    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
++    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
+     resume(){suspended=false;shift.resumeSession();system.hide({restore:false});history.replaceState(null,'',currentHash);showRoute(parseRoute(currentHash));},
+-    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);},
++    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);},
+     snapshot() { return { motion:{mode:shellMotion.mode,active:shellMotion.activeCount},scenario, homeScroll, navigation: structuredClone(lastNavigation) }; },
+   };
+ }

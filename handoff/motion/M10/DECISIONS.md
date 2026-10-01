@@ -1,0 +1,10 @@
+# MOTION_P10 — decisions before adoption
+
+- FLOW_GATE.json PASS (UI_FIXTURE),24 boards/91 panels; M00 PASS_HARNESS_READY. M01–M09 have adopted the promoted `shared/motion/` primitives. Existing production/hardware limits are not motion blockers or motion PASS.
+- Baseline is current P10-r10 plus later shared feedback/readability/flow fixes and user-approved title “Tài khoản của tôi” centered. Four panels remain. Actual before captures: `before/auto-*`, `os-reduced-*`, `off-*`, same494×950/DPR1 fixture.
+- Source native HTML/CSS/ES modules; reuse M00 `createMotionController`. No React/dependency install, GSAP, smooth scroll or virtualizer. Short settings rows: virtualization NOT_NEEDED.
+- Ownership: SettingsRows press100 opacity only; FormFeedback notice140 on existing22px status slot when its state changes; valid S03 identity refresh140 on read-only content. No input/textarea/avatar/permission-toggle animation. Reduced uses M00 (press0, feedback<=80), off0. No entrance stagger on rows.
+- AppShell M02 remains sole route owner; opt-in P10 panel key, stable for field/query/identity changes. Existing action-dialog/app-modal owns errors/confirmation/focus; no M10 dialog animator. General error remains in existing dialog, not a new inline banner or invented field validation.
+- Preflight found an exception from the profile preview adapter left Save busy forever. Scope repair: catch generic failure, retain draft, release busy in finally, keep route/version guard. Verified retry emits exactly2 calls for2 explicit submits before adding motion; evidence `preflight/save-throw-before.json` and `save-throw-after.json`.
+- Test-only interception holds/rejects existing preview save and changes displayed role to exercise pending/error/identity refresh. It does not modify the source fixture, add permissions, write a real profile, or establish an API policy.
+- Static geometry must match before after settle. Motion request is authorization to implement, not visual acceptance. Trace/WAAPI samples are browser evidence, not a hardware60fps claim.

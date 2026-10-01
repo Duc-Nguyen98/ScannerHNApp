@@ -1,0 +1,4411 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "Settings press100; avatar/permissions static; disabled and off do not animate",
+      "IME/caret/value survive form feedback; no route fade per field value",
+      "Pending fixed slot, reject then retry: one request each, no animation callback mutation",
+      "Read-only identity update fades140 only; mode off/Back grants no permission and no replay",
+      "S04/P11 caller history, rapid navigation, native Back remain exact",
+      "Mode/OS cancellation and10 hide cycles release all consumer effects/listeners",
+      "Compact viewport keeps native scrolling, focus, CTA, and complete data",
+      "Logout cancels motion and protected content immediately; Back cannot revive it"
+    ],
+    "geometry": {
+      "P10.S01": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            227.1875
+          ],
+          ".p10-scroll": [
+            0,
+            215.1875,
+            494,
+            659.8125
+          ],
+          ".p10-footer": null,
+          ".p10-person": [
+            24,
+            86,
+            446,
+            109.1875
+          ],
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 66,
+        "text": "Tài khoản của tôi\nMA\nMinh Anh\n\nNhân viên kho\n\nKho Hoa Nam\n\nChỉnh sửa hồ sơ\nCông việc & quyền\nTài khoản & bảo mật\nKết thúc ca\nKết thúc phiên làm việc hiện tại\nĐăng xuất"
+      },
+      "P10.S02": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            732
+          ],
+          ".p10-footer": [
+            0,
+            808,
+            494,
+            142
+          ],
+          ".p10-person": null,
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "nodes": 82,
+        "text": "Chỉnh sửa hồ sơ\nẢnh đại diện\nMA\nChưa hỗ trợ thay ảnh đại diện\nHọ và tên *\nBiệt danh\nSố điện thoại *\nEmail tài khoản\n\nEmail, vai trò và kho do quản trị viên quản lý\n\nVai trò\nKho làm việc\n\nChức năng lưu hồ sơ chưa sẵn sàng.\n\nLưu thay đổi"
+      },
+      "P10.S03": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            799
+          ],
+          ".p10-footer": null,
+          ".p10-person": null,
+          ".p10-permissions": [
+            20,
+            471.328125,
+            454,
+            220.78125
+          ],
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 92,
+        "text": "Công việc & quyền\nVai trò hiện tại\nNhân viên kho\nThực hiện các nghiệp vụ kho theo phân quyền của quản trị viên.\nKho làm việc\nKho Hoa Nam\nĐược quản lý và thao tác trên dữ liệu của Kho Hoa Nam.\nQuyền truy cập chức năng\n\nCác chức năng được phép sử dụng\n\nNhập kho\n?\nXuất kho\n?\nBảo hành\n?\nThẻ NFC\n?\nChứng từ\n?\nTra cứu\n?\n\n? Chưa xác minh quyền của từng chức năng.\n\nQuyền do quản trị viên cấp\n\nVui lòng liên hệ quản trị viên nếu cần thay đổi quyền truy cập."
+      },
+      "P10.S04": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            799
+          ],
+          ".p10-footer": null,
+          ".p10-person": null,
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 45,
+        "text": "Tài khoản & bảo mật\nĐổi mật khẩu\nPhiên đăng nhập\nThông tin bảo mật\nBảo vệ tài khoản của bạn\n\nHãy sử dụng mật khẩu mạnh và giữ an toàn thiết bị đăng nhập để bảo vệ tài khoản."
+      }
+    },
+    "errors": [],
+    "permissionState": "Nhập kho\n?\nXuất kho\n?\nBảo hành\n?\nThẻ NFC\n?\nChứng từ\n?\nTra cứu\n?",
+    "operations": 2,
+    "hardware": 0,
+    "effects": [
+      {
+        "node": "submit",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "start",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-primary",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-primary",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "node": "p10-scroll",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-back",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-menu",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "node": "p10-logout-button hn-logout-button",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Nguyễn Minh Ánh"
+      },
+      {
+        "name": "Nguyễn Minh Ánh"
+      }
+    ],
+    "frames": [
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 19.5,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 11,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 18.5,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 9.100000008940697,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 10.099999994039536,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 1.300000011920929,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 14.300000011920929,
+        "opacity": "0.821703",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 32.30000001192093,
+        "opacity": "0.91961",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 48.900000005960464,
+        "opacity": "0.963435",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 64.90000000596046,
+        "opacity": "0.986026",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 81.1000000089407,
+        "opacity": "0.996923",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 98,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 114.80000001192093,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 132.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 148,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 164.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 186.30000001192093,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 3.8999999910593033,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 9.099999994039536,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 17.399999991059303,
+        "opacity": "0.731463",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 40.599999994039536,
+        "opacity": "0.854956",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 50.3999999910593,
+        "opacity": "0.915797",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 65.8999999910593,
+        "opacity": "0.951918",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 83.59999999403954,
+        "opacity": "0.974444",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 99.20000000298023,
+        "opacity": "0.988489",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 116.79999999701977,
+        "opacity": "0.996418",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 133.29999999701977,
+        "opacity": "0.999726",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 150.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 166.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 182.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 9.800000011920929,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 6.5,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 24.5,
+        "opacity": "0.82244",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 21.200000002980232,
+        "opacity": "0.731625",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 41.5,
+        "opacity": "0.91953",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 38.29999999701977,
+        "opacity": "0.854543",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 57.30000001192093,
+        "opacity": "0.963395",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 54.099999994039536,
+        "opacity": "0.915841",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 76.80000001192093,
+        "opacity": "0.9861",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 73.5,
+        "opacity": "0.951945",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 99.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 96.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 8.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 108.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 105.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 17.299999997019768,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 124,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 120.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 32.599999994039536,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 141.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 138.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 50.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 157.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 154.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 66.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 173.1000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 169.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 81.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 186.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 98.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 116,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 132.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 151.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 164.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 188.40000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 9,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 6.200000002980232,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 6.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 20.399999991059303,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 17.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 16.599999994039536,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 41,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 38.1000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 37.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 52.19999998807907,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 49.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 48.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 69.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 66.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 65.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 85.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 82.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 81.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 102.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 99.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 99,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 119.19999998807907,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 116.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 115.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 137.69999998807907,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 134.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 134,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 153.19999998807907,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 150.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 149.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 169.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 166.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 165.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 185.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 182.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 181.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 9.600000008940697,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 25.100000008940697,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 40.400000005960464,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 56.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 89.40000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 98,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 7.200000002980232,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 1.6000000089406967,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 7.300000011920929,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 15.400000005960464,
+        "opacity": "0.731362",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 30.600000008940697,
+        "opacity": "0.854414",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 46.6000000089407,
+        "opacity": "0.91577",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 63.20000000298023,
+        "opacity": "0.951732",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 79.80000001192093,
+        "opacity": "0.974433",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 96,
+        "opacity": "0.988483",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 113.1000000089407,
+        "opacity": "0.996414",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 129.80000001192093,
+        "opacity": "0.999733",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 146.30000001192093,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 163.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 179.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 8.600000008940697,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 7.199999988079071,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 6.0999999940395355,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 7.5,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 21,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 10,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 5.9000000059604645,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 21.400000005960464,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 41.20000000298023,
+        "opacity": "0.822006",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 54.5,
+        "opacity": "0.919727",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 74.5,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 6.799999997019768,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 22.900000005960464,
+        "opacity": "0.821437",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 39.29999999701977,
+        "opacity": "0.919508",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 63,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 16.899999991059303,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 28.5,
+        "opacity": "0.821816",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 45.099999994039536,
+        "opacity": "0.919654",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 70.69999998807907,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 12.099999994039536,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 29.599999994039536,
+        "opacity": "0.821247",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 43.599999994039536,
+        "opacity": "0.919435",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 67.70000000298023,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 5.300000011920929,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 21.30000001192093,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 37.6000000089407,
+        "opacity": "0.821949",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 54.20000000298023,
+        "opacity": "0.919705",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 77.90000000596046,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 11.099999994039536,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 27.899999991059303,
+        "opacity": "0.82138",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 42.599999994039536,
+        "opacity": "0.919486",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 63.8999999910593,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 5.200000002980232,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 21.200000002980232,
+        "opacity": "0.82176",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 38.29999999701977,
+        "opacity": "0.919632",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 58.20000000298023,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 1.6000000089406967,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 17.700000002980232,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 33.70000000298023,
+        "opacity": "0.821513",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 49.6000000089407,
+        "opacity": "0.919537",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 68.29999999701977,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 1.5,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 15.299999997019768,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 32.400000005960464,
+        "opacity": "0.821266",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 49,
+        "opacity": "0.919807",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 84,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 7.5,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 23.700000002980232,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 39.400000005960464,
+        "opacity": "0.821968",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 61,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 5.0999999940395355,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 20.099999994039536,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 38.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 51.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 75.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 24,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 87.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 34.80000001192093,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 101.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 49,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 119,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 66.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 135.09999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 82.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 151.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 98.80000001192093,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 168.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 115.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 184.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 131.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 148.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 166.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 182,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 8.599999994039536,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 8.100000008940697,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 5.9000000059604645,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 17.400000005960464,
+        "opacity": "0.731038",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 34.400000005960464,
+        "opacity": "0.85475",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 50.400000005960464,
+        "opacity": "0.915682",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 67.6000000089407,
+        "opacity": "0.951847",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 84.70000000298023,
+        "opacity": "0.974506",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 101,
+        "opacity": "0.988526",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 117.5,
+        "opacity": "0.996404",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 134.79999999701977,
+        "opacity": "0.999722",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 151.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 168.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 185.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 7.600000008940697,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 23,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 40,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 56.1000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 81.29999999701977,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 1.800000011920929,
+        "opacity": "0.7",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 16.30000001192093,
+        "opacity": "0.822458",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 33.70000000298023,
+        "opacity": "0.919537",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 50,
+        "opacity": "0.963213",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 70.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 10.099999994039536,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 88.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 27.799999997019768,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 100.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 40.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 116.80000001192093,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 56,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 143.6000000089407,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "ProfileSettingsPress",
+        "elapsed": 82.70000000298023,
+        "opacity": "",
+        "connected": false
+      }
+    ]
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "Settings press100; avatar/permissions static; disabled and off do not animate",
+      "IME/caret/value survive form feedback; no route fade per field value",
+      "Pending fixed slot, reject then retry: one request each, no animation callback mutation",
+      "Read-only identity update fades140 only; mode off/Back grants no permission and no replay",
+      "S04/P11 caller history, rapid navigation, native Back remain exact",
+      "Mode/OS cancellation and10 hide cycles release all consumer effects/listeners",
+      "Compact viewport keeps native scrolling, focus, CTA, and complete data",
+      "Logout cancels motion and protected content immediately; Back cannot revive it"
+    ],
+    "geometry": {
+      "P10.S01": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            227.1875
+          ],
+          ".p10-scroll": [
+            0,
+            215.1875,
+            494,
+            659.8125
+          ],
+          ".p10-footer": null,
+          ".p10-person": [
+            24,
+            86,
+            446,
+            109.1875
+          ],
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 66,
+        "text": "Tài khoản của tôi\nMA\nMinh Anh\n\nNhân viên kho\n\nKho Hoa Nam\n\nChỉnh sửa hồ sơ\nCông việc & quyền\nTài khoản & bảo mật\nKết thúc ca\nKết thúc phiên làm việc hiện tại\nĐăng xuất"
+      },
+      "P10.S02": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            732
+          ],
+          ".p10-footer": [
+            0,
+            808,
+            494,
+            142
+          ],
+          ".p10-person": null,
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "nodes": 82,
+        "text": "Chỉnh sửa hồ sơ\nẢnh đại diện\nMA\nChưa hỗ trợ thay ảnh đại diện\nHọ và tên *\nBiệt danh\nSố điện thoại *\nEmail tài khoản\n\nEmail, vai trò và kho do quản trị viên quản lý\n\nVai trò\nKho làm việc\n\nChức năng lưu hồ sơ chưa sẵn sàng.\n\nLưu thay đổi"
+      },
+      "P10.S03": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            799
+          ],
+          ".p10-footer": null,
+          ".p10-person": null,
+          ".p10-permissions": [
+            20,
+            471.328125,
+            454,
+            220.78125
+          ],
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 92,
+        "text": "Công việc & quyền\nVai trò hiện tại\nNhân viên kho\nThực hiện các nghiệp vụ kho theo phân quyền của quản trị viên.\nKho làm việc\nKho Hoa Nam\nĐược quản lý và thao tác trên dữ liệu của Kho Hoa Nam.\nQuyền truy cập chức năng\n\nCác chức năng được phép sử dụng\n\nNhập kho\n?\nXuất kho\n?\nBảo hành\n?\nThẻ NFC\n?\nChứng từ\n?\nTra cứu\n?\n\n? Chưa xác minh quyền của từng chức năng.\n\nQuyền do quản trị viên cấp\n\nVui lòng liên hệ quản trị viên nếu cần thay đổi quyền truy cập."
+      },
+      "P10.S04": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            799
+          ],
+          ".p10-footer": null,
+          ".p10-person": null,
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 45,
+        "text": "Tài khoản & bảo mật\nĐổi mật khẩu\nPhiên đăng nhập\nThông tin bảo mật\nBảo vệ tài khoản của bạn\n\nHãy sử dụng mật khẩu mạnh và giữ an toàn thiết bị đăng nhập để bảo vệ tài khoản."
+      }
+    },
+    "errors": [],
+    "permissionState": "Nhập kho\n?\nXuất kho\n?\nBảo hành\n?\nThẻ NFC\n?\nChứng từ\n?\nTra cứu\n?",
+    "operations": 2,
+    "hardware": 0,
+    "effects": [
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "button-label",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "button-label",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "node": "p10-scroll",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "node": "p10-unsaved-status",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Nguyễn Minh Ánh"
+      },
+      {
+        "name": "Nguyễn Minh Ánh"
+      }
+    ],
+    "frames": [
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 4.200000002980232,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 10.099999994039536,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 24.5,
+        "opacity": "0.831257",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 41.5,
+        "opacity": "0.935785",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 57.8999999910593,
+        "opacity": "0.9788",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 74.59999999403954,
+        "opacity": "0.996358",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 91.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 107.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 124.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 141,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 157.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 174.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 3,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 19.799999997019768,
+        "opacity": "0.83246",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 36.79999999701977,
+        "opacity": "0.936219",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 53.29999999701977,
+        "opacity": "0.978661",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 70.29999999701977,
+        "opacity": "0.996367",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 94.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 8.699999988079071,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 108.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 22,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 121,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 34.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 136.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 50.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 153.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 67.19999998807907,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 169.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 83.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 186.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 100.3999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 117.09999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 133.8999999910593,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 150,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 187.09999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 7.200000002980232,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 7.600000008940697,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 25.900000005960464,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 24.900000005960464,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 36.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 35.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 53.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 52.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 70.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 69.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 87.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 86.90000000596046,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 105,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 104,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 120.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 119.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 137.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 136.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 153.6000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 152.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 170.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 169.5,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 186.1000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 1.5,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 9.400000005960464,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 16.599999994039536,
+        "opacity": "0.832171",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 33.70000000298023,
+        "opacity": "0.93574",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 49.5,
+        "opacity": "0.978615",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 66.5,
+        "opacity": "0.996408",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 83.29999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 100.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 116.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 133,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 150.59999999403954,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 166.79999999701977,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileIdentity",
+        "elapsed": 183.20000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 11.700000002980232,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 21.799999997019768,
+        "opacity": "0.831756",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 39,
+        "opacity": "0.935965",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 55.20000000298023,
+        "opacity": "0.978714",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 72.29999999701977,
+        "opacity": "0.996385",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 88.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 105.1000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 123,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 139.1000000089407,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 155.70000000298023,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "ProfileFormFeedback",
+        "elapsed": 171.79999999701977,
+        "opacity": "1",
+        "connected": true
+      }
+    ]
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "Settings press100; avatar/permissions static; disabled and off do not animate",
+      "IME/caret/value survive form feedback; no route fade per field value",
+      "Pending fixed slot, reject then retry: one request each, no animation callback mutation",
+      "Read-only identity update fades140 only; mode off/Back grants no permission and no replay",
+      "S04/P11 caller history, rapid navigation, native Back remain exact",
+      "Mode/OS cancellation and10 hide cycles release all consumer effects/listeners",
+      "Compact viewport keeps native scrolling, focus, CTA, and complete data",
+      "Logout cancels motion and protected content immediately; Back cannot revive it"
+    ],
+    "geometry": {
+      "P10.S01": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            227.1875
+          ],
+          ".p10-scroll": [
+            0,
+            215.1875,
+            494,
+            659.8125
+          ],
+          ".p10-footer": null,
+          ".p10-person": [
+            24,
+            86,
+            446,
+            109.1875
+          ],
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 66,
+        "text": "Tài khoản của tôi\nMA\nMinh Anh\n\nNhân viên kho\n\nKho Hoa Nam\n\nChỉnh sửa hồ sơ\nCông việc & quyền\nTài khoản & bảo mật\nKết thúc ca\nKết thúc phiên làm việc hiện tại\nĐăng xuất"
+      },
+      "P10.S02": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            732
+          ],
+          ".p10-footer": [
+            0,
+            808,
+            494,
+            142
+          ],
+          ".p10-person": null,
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "nodes": 82,
+        "text": "Chỉnh sửa hồ sơ\nẢnh đại diện\nMA\nChưa hỗ trợ thay ảnh đại diện\nHọ và tên *\nBiệt danh\nSố điện thoại *\nEmail tài khoản\n\nEmail, vai trò và kho do quản trị viên quản lý\n\nVai trò\nKho làm việc\n\nChức năng lưu hồ sơ chưa sẵn sàng.\n\nLưu thay đổi"
+      },
+      "P10.S03": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            799
+          ],
+          ".p10-footer": null,
+          ".p10-person": null,
+          ".p10-permissions": [
+            20,
+            471.328125,
+            454,
+            220.78125
+          ],
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 92,
+        "text": "Công việc & quyền\nVai trò hiện tại\nNhân viên kho\nThực hiện các nghiệp vụ kho theo phân quyền của quản trị viên.\nKho làm việc\nKho Hoa Nam\nĐược quản lý và thao tác trên dữ liệu của Kho Hoa Nam.\nQuyền truy cập chức năng\n\nCác chức năng được phép sử dụng\n\nNhập kho\n?\nXuất kho\n?\nBảo hành\n?\nThẻ NFC\n?\nChứng từ\n?\nTra cứu\n?\n\n? Chưa xác minh quyền của từng chức năng.\n\nQuyền do quản trị viên cấp\n\nVui lòng liên hệ quản trị viên nếu cần thay đổi quyền truy cập."
+      },
+      "P10.S04": {
+        "rects": {
+          ".p10-header": [
+            0,
+            0,
+            494,
+            88
+          ],
+          ".p10-scroll": [
+            0,
+            76,
+            494,
+            799
+          ],
+          ".p10-footer": null,
+          ".p10-person": null,
+          ".p10-permissions": null,
+          ".hn-nav": [
+            0,
+            875,
+            494,
+            75
+          ]
+        },
+        "nodes": 45,
+        "text": "Tài khoản & bảo mật\nĐổi mật khẩu\nPhiên đăng nhập\nThông tin bảo mật\nBảo vệ tài khoản của bạn\n\nHãy sử dụng mật khẩu mạnh và giữ an toàn thiết bị đăng nhập để bảo vệ tài khoản."
+      }
+    },
+    "errors": [],
+    "permissionState": "Nhập kho\n?\nXuất kho\n?\nBảo hành\n?\nThẻ NFC\n?\nChứng từ\n?\nTra cứu\n?",
+    "operations": 2,
+    "hardware": 0,
+    "effects": [
+      {
+        "node": "submit",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "start",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Nguyễn Minh Ánh"
+      },
+      {
+        "name": "Nguyễn Minh Ánh"
+      }
+    ],
+    "frames": []
+  }
+]
