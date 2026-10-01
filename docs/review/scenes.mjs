@@ -8,7 +8,7 @@ export function visiblePanels(doc) {
 // Only drive existing UI commands and opt-in fixture tools; never write model state.
 export async function openScene(frame,id,{motion='auto',scenario='default',signal}={}) {
   const w=frame.contentWindow,d=frame.contentDocument;
-  async function wait(fn,label){const start=performance.now();while(!signal?.aborted){const value=fn();if(value)return value;if(performance.now()-start>16000)throw Error('Chưa mở được '+label);await new Promise(r=>setTimeout(r,30));}throw new DOMException('Cancelled','AbortError');}
+  async function wait(fn,label,timeout=16000){const start=performance.now();while(!signal?.aborted){const value=fn();if(value)return value;if(performance.now()-start>timeout)throw Error('Chưa mở được '+label);await new Promise(r=>setTimeout(r,30));}throw new DOMException('Cancelled','AbortError');}
   const el=q=>d.querySelector(q);
   const click=async q=>(await wait(()=>{const b=el(q);return b&&!b.disabled?b:null;},q)).click();
   const input=async(q,value)=>{const n=await wait(()=>el(q),q);n.value=value;n.dispatchEvent(new w.Event('input',{bubbles:true}));};
@@ -23,7 +23,7 @@ export async function openScene(frame,id,{motion='auto',scenario='default',signa
   if(id==='P01.S01')return;
   await input('#username','minhanh');await input('#password','preview');await click('#submit');await wait(()=>el('#start'),'confirmation');
   if(id==='P01.S02')return;
-  await click('#start');let uiRetry=false;await wait(()=>{const home=el('#hn-home:not([hidden])');if(home)return home;const start=el('#start');if(!uiRetry&&start&&!start.disabled&&start.textContent.includes('Thử tải lại')){uiRetry=true;start.click();}return null;},'Home');await select('#home-motion-mode',motion);
+  await click('#start');let uiRetry=false;await wait(()=>{const home=el('#hn-home:not([hidden])');if(home)return home;const start=el('#start');if(!uiRetry&&start&&!start.disabled&&start.textContent.includes('Thử tải lại')){uiRetry=true;start.click();}return null;},'Home',45000);await select('#home-motion-mode',motion);
   const board=id.slice(0,3),n=Number(id.at(-1));
   async function stock(kind,step,{unknown=false,invalid=false}={}){
     const b=kind==='inbound'?'p04':'p05';await click(`.hn-task[data-route=${kind}]`);await wait(()=>el('.'+b+'-app'),b);
