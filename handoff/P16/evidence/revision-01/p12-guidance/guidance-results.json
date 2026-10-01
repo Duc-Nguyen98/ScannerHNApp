@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "Current supplier + session recents are unique; Cancel does not add history; search/count ignores tags",
+      "status": "PASS"
+    },
+    {
+      "name": "P12 information step enters P04 adding step; Back preserves metadata and validates first error",
+      "status": "PASS"
+    },
+    {
+      "name": "Resume card reopens exact ID,step,accepted codes and notes without creating another draft",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN card routes to reconciliation and keeps request; no retry before check",
+      "status": "PASS"
+    },
+    {
+      "name": "Verified not-recorded resume preserves the same request and successful retry stays waiting Web",
+      "status": "PASS"
+    },
+    {
+      "name": "Outbound validates missing shipping info, retains scan progress on resume and sends once",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewports keep progress/tab labels and CTA inside shell, fresh P12 form needs no extra scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Reload creates a fresh session-local supplier history",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "visualAcceptance": "NOT_GRANTED"
+}

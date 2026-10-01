@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "P17.A01 invalid scan retains raw, accepted quantity and draft; S01 renders at five viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "S01 keyboard Quét lại and native Back preserve owner draft",
+      "status": "PASS"
+    },
+    {
+      "name": "P17.A04 UNKNOWN locks resend, stable request, single status read, then exact existing record",
+      "status": "PASS"
+    },
+    {
+      "name": "P17.A05 unavailable status remains UNKNOWN and retains request across Home/resume",
+      "status": "PASS"
+    },
+    {
+      "name": "P17.A02 already exported source reason blocks mutations and preserves current document",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.innerText: Error: strict mode violation: locator('.p07-dialog') resolved to 2 elements:\n    1) <dialog open=\"\" aria-modal=\"true\" class=\"p07-dialog\" aria-labelledby=\"p07-detail-title\">…</dialog> aka getByRole('dialog', { name: 'Quay lại danh sách thẻ Thông' })\n    2) <dialog id=\"hn-name-dialog\" aria-describedby=\"hn-full-name\" aria-labelledby=\"hn-name-dialog-title\" class=\"p07-dialog hn-action-dialog hn-name-dialog\">…</dialog> aka getByLabel('Tên đầy đủ')\n\nCall log:\n\u001b[2m  - waiting for locator('.p07-dialog')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17.cjs:29:470\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17.cjs:6:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17.cjs:29:1"
+}

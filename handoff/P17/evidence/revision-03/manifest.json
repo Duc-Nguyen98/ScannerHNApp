@@ -1,0 +1,78 @@
+{
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "scope": "P16/P17 audit and direct dependencies; preserve P18 active checkpoint",
+  "files": {
+    "docs/flows/data-states/style.css": {
+      "before": "479e77387827e16daf2c5b1a35030cdadb73055371424ba53368bb45ff7283c2",
+      "after": "b3291786d913556be3db0ca2fccf1031b54c1dd53faa0d5f7e97f03ca1eb8cd7",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/data-states/view.mjs": {
+      "before": "cd856b42bab71ca18f146052f4c3c53629bcd9a3a8f4eee9877a966f2427a39a",
+      "after": "cd856b42bab71ca18f146052f4c3c53629bcd9a3a8f4eee9877a966f2427a39a",
+      "edited_in_this_audit": false
+    },
+    "docs/flows/documents/documents.mjs": {
+      "before": "9025fdd9713fc0ea3fce5aca45cb2b2f4fc0d883ae0d29dd652d41849305f721",
+      "after": "b47bd4dfa0e5ced5cb6911fcd83c23e3b95cba435933dcf67ad82678323fb601",
+      "edited_in_this_audit": false
+    },
+    "docs/flows/inbound/inbound.mjs": {
+      "before": "9744564b95ea43d2ffcc9d2677e0adb4f58c1ad5c91553ba87b6d75a74713c71",
+      "after": "ee011e27ce4a2ae2b0c5c8f649a6e11cdf7bf3d6b396624888860cf351b7208e",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/nfc/nfc.mjs": {
+      "before": "9b0b4acdcefc86a94c9bccb4441fbfc4ca07c08f3c81e4c9541f0fd0ff2fa4bc",
+      "after": "06f70f7889b835db423a3a225ae20da5487f5eb3ad3bac57148c0558c8df1d7c",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/outbound/outbound.mjs": {
+      "before": "71dad6a6c63bd635f6194ccd71a5063dd9e4b6fd6ca3283b4986a3a292aeaff5",
+      "after": "8fc4e9385eb01cfc57780d094179eb69252bab937d57dadb53e24d1f26b09052",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/scan-exceptions/experience.mjs": {
+      "before": "5862bbf888b0263d16c38dac05b15cc875a010049f2a821aaf0512d474b2ce28",
+      "after": "b77795a975c05db5e787408b9fd104db9faa381307e554dbba39a12f64453bf2",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/scan-exceptions/style.css": {
+      "before": "7344e2375f3a4d8d4607cb392f92fda74275c8e5b6beb54f9843566436306f54",
+      "after": "bf7169ce5e9bef1197d82c83861dc68618d92ffc8cc7d1e9f6ba230139f38825",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/scan-exceptions/view.mjs": {
+      "before": "3471cbafee43fc658e97f0d5bfef0551b6eeff80f8cd26680a9ce3fba116e40a",
+      "after": "f9b916041914bf1b5992a9249b9694314dacbe72e062ab6c4876cb281c49c00e",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/shared/dialog-route.mjs": {
+      "before": "30c95d42b92c4dbf85e9263b5c031cbe39c5f02a320c5cdae02fbccc71be5b87",
+      "after": "9ee3a6cb56accab21cf8a5053ff77571efd83bede9147e313159744a098bdfe0",
+      "edited_in_this_audit": true
+    },
+    "docs/flows/scan-exceptions/navigation.mjs": {
+      "after": "a892de1e7e571c510914046a75869756e9009d9e68cbf86581827f503a49e23f",
+      "edited_in_this_audit": true
+    }
+  },
+  "fixed_findings": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F10"
+  ],
+  "already_passing": [
+    "F07",
+    "F08",
+    "F09"
+  ],
+  "node_tests": 126,
+  "audit_checks": 10,
+  "browser_regression_groups": 11,
+  "footer_viewports": 4
+}

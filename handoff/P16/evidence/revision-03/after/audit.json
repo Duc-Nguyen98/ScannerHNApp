@@ -1,0 +1,42 @@
+{
+  "observations": [
+    {
+      "case": "long-query",
+      "height": 524,
+      "scroll": 524,
+      "reader": true,
+      "actionTop": 759.765625,
+      "footerTop": 875
+    },
+    {
+      "case": "toolbar-focus",
+      "focus": {
+        "tag": "BUTTON",
+        "action": "scan"
+      }
+    },
+    {
+      "case": "modal-return-after-read",
+      "focus": {
+        "tag": "BUTTON",
+        "action": "sort"
+      }
+    },
+    {
+      "case": "removed-row-focus",
+      "focus": "DIV"
+    },
+    {
+      "case": "back-scroll",
+      "value": 500
+    },
+    {
+      "case": "filter-apply-focus",
+      "focus": {
+        "tag": "BUTTON",
+        "action": "filter"
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "P12-r08",
+  "report": "handoff/P12/REVISION_08.md",
+  "comparison": "handoff/P12/evidence/revision-08/REVIEW.html",
+  "visual_status": "AWAITING_USER_REVIEW",
+  "visual_approved": false,
+  "behavior_status": "PASS_SCOPED_PREVIEW",
+  "integration_status": "BLOCKED_PRODUCTION",
+  "browser_groups": {
+    "create": 7,
+    "history_regression": 5,
+    "p09_choice": 1,
+    "text": 7
+  },
+  "browser_total": 20,
+  "node_tests": "NOT_RERUN_UI_ONLY; previous r07 evidence retained separately",
+  "evidence": "handoff/P12/evidence/revision-08",
+  "scope": "P12.S04 compact form/read-only metadata; shared picker form bounds repair; fixed supplier search and two-button footer"
+}

@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "Four panels and responsive layout in six viewports; real editable controls",
+      "status": "PASS"
+    },
+    {
+      "name": "Editor locks email role warehouse; blocked save keeps draft and old identity",
+      "status": "PASS"
+    },
+    {
+      "name": "Avatar unavailable keeps prior avatar and draft without file or hardware calls",
+      "status": "PASS"
+    },
+    {
+      "name": "Dirty Back uses one contained modal; Escape restores focus, no silent save",
+      "status": "PASS"
+    },
+    {
+      "name": "Browser Back dirty cancel stays editor; confirmed discard returns attempted screen",
+      "status": "PASS"
+    },
+    {
+      "name": "Permissions are six read-only unknowns; cannot toggle or elevate access",
+      "status": "PASS"
+    },
+    {
+      "name": "P11 password and sessions preserve exact caller; security info does not invent devices/2FA",
+      "status": "PASS"
+    },
+    {
+      "name": "End shift is P14 pending; leaves account and draft storage intact",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared scanner dialog can open/close above profile; no overlay stack",
+      "status": "PASS"
+    },
+    {
+      "name": "Dialog keyboard focus cycles inside and Enter activates button",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout invokes P01, preserves draft storage; browser Back cannot restore session",
+      "status": "PASS"
+    }
+  ],
+  "error": "page.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#scenario')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"scenario\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at login (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_profile.cjs:11:134)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_profile.cjs:27:90\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_profile.cjs:8:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_profile.cjs:27:1",
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "name": "Pending module gives loading feedback",
+      "status": "PASS"
+    },
+    {
+      "name": "Slow import explains explicit reload without automatic restart",
+      "status": "PASS"
+    },
+    {
+      "name": "Successful import removes loading state",
+      "status": "PASS"
+    },
+    {
+      "name": "Rejected import exposes recovery instead of blank page",
+      "status": "PASS"
+    },
+    {
+      "name": "User-triggered retry reloads and recovers",
+      "status": "PASS"
+    }
+  ]
+}

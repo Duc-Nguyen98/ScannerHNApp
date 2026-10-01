@@ -1,0 +1,46 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P11",
+  "prompt_status": "P11_R03_BALANCED_RESULT_AND_ACTION_DIALOGS",
+  "remaining_panel_ids": [
+    "P11.S01",
+    "P11.S02",
+    "P11.S03",
+    "P11.S04"
+  ],
+  "blockers": [
+    "P11 actual visual review pending; exact Designer font and pixel match not verified.",
+    "Production password policy/change/receipt/reconciliation contract missing; shared in-memory preview functional; production adapter not available.",
+    "Production post-password-change session policy unknown; explicit keep/reauthenticate fixtures only.",
+    "Production login-session list/current ID/metadata/revoke/reconciliation missing; no real devices inferred.",
+    "P15 is pending; P11 expiration uses existing P01 logout guard.",
+    "P10 accepted temporarily; profile/save/upload/grants and P14 integration blockers retained in handoff/P11/INPUT_RUN_STATE.json. Prior boards and production/hardware limitations are unchanged."
+  ],
+  "next_action": "P11 r03 temporarily accepted by user; additional synchronized states deferred. Continue P12; preserve production blockers.",
+  "latest_revision": {
+    "id": "P11-r03",
+    "report": "handoff/P11/REVISION_03.md",
+    "browser_groups": {
+      "layout_dialog": 7,
+      "p11_regression": 20,
+      "default_preview": 11,
+      "profile": 12,
+      "dialogs": 16
+    },
+    "browser_total": 66,
+    "dialog_route_tests": 6,
+    "p11_logic_tests": "NOT_RERUN_UI_ONLY_R02_EVIDENCE_RETAINED",
+    "visual_status": "USER_REVIEW_PENDING",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "evidence": "handoff/P11/evidence/revision-03"
+  },
+  "user_temporary_acceptance": {
+    "date": "2026-09-28",
+    "revision": "P11-r03",
+    "status": "USER_TEMPORARILY_ACCEPTED",
+    "note": "Additional synchronized states deferred; no production acceptance."
+  }
+}

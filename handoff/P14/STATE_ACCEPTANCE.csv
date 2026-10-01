@@ -1,0 +1,20 @@
+id,status,evidence,limitations
+P14.A01,PASS_PROTOTYPE,evidence/revision-01/browser-results.json; evidence/revision-01/node-tests.txt,No OTP/2FA/reset side effect; production BLOCKED
+P14.A02,PASS_PROTOTYPE,evidence/revision-01/browser-results.json; evidence/revision-01/node-tests.txt,No receipt on failure or missing channel; production BLOCKED
+P14.A03,PASS_PROTOTYPE,evidence/revision-01/browser-results.json; evidence/revision-01/node-tests.txt,Unfinished guard and exact owner resume; production BLOCKED
+P14.A04,PASS_PROTOTYPE,evidence/revision-01/browser-results.json; evidence/revision-01/node-tests.txt,Failed/unknown save blocks end; reconcile before retry; production BLOCKED
+P14.A05,PASS_PROTOTYPE,evidence/revision-01/browser-results.json; evidence/revision-01/node-tests.txt,Explicit aggregate30 not loaded rows; production BLOCKED
+P14.r03.F01,PASS_PROTOTYPE,evidence/revision-03/upgrade-results.json; evidence/revision-03/node-tests.txt,UNKNOWN banner and CTA consistent; visual user review pending; production BLOCKED
+P14.r03.F02,PASS_PROTOTYPE,evidence/revision-03/upgrade-results.json; evidence/revision-03/node-tests.txt,Summary count and detail use closing snapshot; visual user review pending; production BLOCKED
+P14.r03.F03,PASS_PROTOTYPE,evidence/revision-03/upgrade-results.json; evidence/revision-03/node-tests.txt,Long record full reader preserves data; visual user review pending; production BLOCKED
+P14.r03.F04,PASS_PROTOTYPE,evidence/revision-03/upgrade-results.json; evidence/revision-03/node-tests.txt,Back restores scroll and focus; visual user review pending; production BLOCKED
+P14.r03.F05,PASS_PROTOTYPE,evidence/revision-03/upgrade-results.json; evidence/revision-03/node-tests.txt,Recovery-specific pending copy; visual user review pending; production BLOCKED
+P14.r05.L01,PASS_PROTOTYPE,evidence/revision-05/logout-results.json; evidence/revision-05/node-tests.txt,History detail Back restores summary/scroll/focus; durableWMS remainsBLOCKED
+P14.r05.L02,PASS_PROTOTYPE,evidence/revision-05/logout-results.json; evidence/revision-05/node-tests.txt,Logout confirm/cancel/back/auth teardown; durableWMS remainsBLOCKED
+P14.r05.L03,PASS_PROTOTYPE,evidence/revision-05/logout-results.json; evidence/revision-05/node-tests.txt,Scoped draft retained/restored across same-page P14 logout/login; durableWMS remainsBLOCKED
+P14.r05.L04,PASS_PROTOTYPE,evidence/revision-05/logout-results.json; evidence/revision-05/node-tests.txt,Retention failure blocks logout; reload resets fixture; durableWMS remainsBLOCKED
+P14.r06.Q01,PASS_PROTOTYPE,evidence/revision-06/after/audit-results.json; evidence/revision-06/after/micro-results.json; evidence/revision-06/node-tests.txt,Recovery focus/caret and required validation; production/native NOT_ACCEPTED
+P14.r06.Q02,PASS_PROTOTYPE,evidence/revision-06/after/audit-results.json; evidence/revision-06/after/micro-results.json; evidence/revision-06/node-tests.txt,Unique Vietnam-date fixture receipt; production/native NOT_ACCEPTED
+P14.r06.Q03,PASS_PROTOTYPE,evidence/revision-06/after/audit-results.json; evidence/revision-06/after/micro-results.json; evidence/revision-06/node-tests.txt,Keyboard disclosure and dialog spacing; production/native NOT_ACCEPTED
+P14.r06.Q04,PASS_PROTOTYPE,evidence/revision-06/after/audit-results.json; evidence/revision-06/after/micro-results.json; evidence/revision-06/node-tests.txt,P15 reauthentication/late request reconciliation; production/native NOT_ACCEPTED
+P14.r06.Q05,PASS_PROTOTYPE,evidence/revision-06/after/audit-results.json; evidence/revision-06/after/micro-results.json; evidence/revision-06/node-tests.txt,Read-cache refresh does not dirty saved draft; production/native NOT_ACCEPTED

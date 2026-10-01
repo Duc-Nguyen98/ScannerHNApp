@@ -1,0 +1,28 @@
+{
+  "phase": "after-p16",
+  "findings": [
+    {
+      "id": "F07",
+      "name": "Async list completion restores focused toolbar action",
+      "passed": true
+    },
+    {
+      "id": "F08",
+      "name": "When focused record disappears focus stays in the document list",
+      "passed": true
+    },
+    {
+      "id": "F09",
+      "name": "Long no-results description is limited to 3 lines with full-text reader",
+      "passed": true,
+      "height": 81,
+      "lineHeight": 27
+    },
+    {
+      "id": "F10",
+      "name": "Full query reader touch target is at least 44 CSS px",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

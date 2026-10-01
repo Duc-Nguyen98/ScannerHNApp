@@ -1,0 +1,43 @@
+✔ fixture receipts are unique across controller mounts and use Vietnam date (75.2828ms)
+✔ late response after expiry preserves original request for explicit reconciliation (59.3207ms)
+✔ same-owner reauthentication rebinds guard, foreign actor/warehouse cannot (12.5227ms)
+✔ rebound in-flight write is never auto-accepted; same request must be checked (50.4239ms)
+✔ read-only geography refresh does not dirty a saved draft or block verified end (64.9238ms)
+✔ real note/version/codes changes still dirty the checkpoint (1.6121ms)
+✔ inbound checkpoint survives logout owner disposal and restores exact identity/note/codes (6.6001ms)
+✔ outbound checkpoint survives logout owner disposal and restores exact identity/note/codes (99.9963ms)
+✔ store is account/warehouse/namespace scoped and clones records (1.7948ms)
+✔ busy/UNKNOWN/foreign source blocks logout retention without overwriting prior snapshot (0.6776ms)
+✔ new page/reset creates an empty store; restoration rejects missing permissions (0.7379ms)
+✔ UNKNOWN end overrides saved/ready banner and selects reconciliation (1.3643ms)
+✔ busy, permissions, owner UNKNOWN, unsaved and ready have distinct actions (0.372ms)
+✔ Recovery pending copy has no stock document language (0.2784ms)
+✔ Summary rows, identity and start time remain the closing snapshot (58.7305ms)
+✔ Current list stays current before a verified closing receipt (4.5309ms)
+✔ A01 recovery only records support request; username is not display name (40.7062ms)
+✔ A02 empty recovery does not call adapter (0.7706ms)
+✔ A02 error cannot create receipt (5.7697ms)
+✔ A02 blocked cannot create receipt (9.2368ms)
+✔ A02 unknown cannot create receipt (0.8306ms)
+✔ A03 unfinished blocks end and preserves exact source (0.4515ms)
+✔ A04 successful save preserves IDs/version/codes; end keeps auth and draft (14.354ms)
+✔ A04 failed save never allows end (1.3106ms)
+✔ A04 unknown save keeps request, rejects retry until reconciliation (13.5675ms)
+✔ unresolved UNKNOWN remains blocked even after mode changes (15.138ms)
+✔ double submission sends once (15.9935ms)
+✔ source changes after save invalidate checkpoint (1.2389ms)
+✔ source unknown cannot be saved by shift (0.2526ms)
+✔ source busy cannot be saved by shift (0.0849ms)
+✔ source saveUnknown cannot be saved by shift (0.081ms)
+✔ actor/warehouse/permission guards and session expiry reject writes (0.2857ms)
+✔ late receipt after logout/disposal cannot create summary (15.0814ms)
+✔ A05 aggregate is defined separate 12+6+4+3+5=30, not loaded rows (17.5849ms)
+✔ mismatched adapter receipt cannot signal success (0.7714ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 597.9994

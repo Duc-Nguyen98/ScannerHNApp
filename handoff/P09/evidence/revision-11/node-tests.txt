@@ -1,0 +1,38 @@
+✔ Business sample extension has unique IDs, complete calendar dates, known statuses and immutable data (3.5238ms)
+✔ Every session reconciles code counts, duplicates and quantity with its data (2.3944ms)
+✔ Shared business filtering combines query/type/date/status and stable sort without mutation (2.1516ms)
+✔ Eight complete warranty cases cover the four already approved stages with unique serials (4.1355ms)
+✔ Confirmed repair text belongs only to handed-over or awaiting-handover cases (0.6669ms)
+✔ Ledger quantities, case references and event chronology reconcile without invented missing-as-zero (58.3061ms)
+✔ Profile and history read the same authored case/events; no demo badge text in case content (31.7057ms)
+✔ 18 unique user-requested choices include Other and produce explicit labels (1.4621ms)
+✔ Other is required, rejects whitespace and excessive length; cached description survives switching (5.9534ms)
+✔ Confirmation uses selected canonical label and excludes hidden Other text (89.609ms)
+✔ Other custom description is confirmed exactly and survives UNKNOWN without blind retry (2.7156ms)
+✔ No request or writes for empty Other; busy/disposed guard fault selection (0.8343ms)
+✔ Per-case drafts survive A → B → A without crossing customers or result text (44.1902ms)
+✔ Completed results remain immutable when another dialog opens; unresolved same-case update is not success (39.8314ms)
+✔ Repair retry request stays stable after unrelated intake edits and another case visit (10.3588ms)
+✔ Adapter rejection releases busy, retains UNKNOWN and forbids blind resubmit (2.3265ms)
+✔ Write-then-throw reconciles by exact request event without a second write (51.5263ms)
+✔ Unverified failed write remains UNKNOWN until matching source appears; reconcile never reposts (5.1979ms)
+✔ Dirty draft keeps observed version and cannot overwrite a changed case or another case ID (2.8664ms)
+✔ Stopped warehouse allows warranty reads while write guard and account permission still apply (0.8638ms)
+✔ Invalid replacement serial preserves the selected product, draft and retry request (67.883ms)
+✔ A01 exact serial opens the same case; SKU/code never inferred; intake never posts components (2.4594ms)
+✔ A01 new serial intake keeps partner identity; duplicate request and duplicate serial do not create another case (30.9085ms)
+✔ A02 ledger filters POSTED and exact case, deduplicates ID, counts quantity separately from codes (0.4015ms)
+✔ A03 update receipt waits for confirmation; handover is not returned, history uses same source (4.5166ms)
+✔ A04 closed, permission, warehouse and expired session guards apply at handler and after await (1.7564ms)
+✔ A05 case switch cannot carry customer/serial/events or update fields (1.9077ms)
+✔ UNKNOWN blocks new writes and selection; reconcile keeps request/session/version and commits once (53.9784ms)
+✔ Failure retains update draft and request identity; stale version and dispose cannot commit (37.1188ms)
+✔ Repair update rejects whitespace/malformed/overlong values before requesting; accepts 200 characters (4.2669ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5047.4833

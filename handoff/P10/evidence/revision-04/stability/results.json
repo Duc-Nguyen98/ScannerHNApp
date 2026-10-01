@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "name": "UI Back consumes child history; native Back then returns Home, never reopens editor",
+      "status": "PASS"
+    },
+    {
+      "name": "External hash navigation while a P10 dialog is open reaches matching Home view",
+      "status": "PASS"
+    },
+    {
+      "name": "Forward after cancelling native dirty Back retains draft and never duplicates discard dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "S01 scroll/focus returns to invoking menu after child Back",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate route delivery does not remount focused editor or jump scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "No-op Save is disabled; edit enables it; reverting disables it without new validation rules",
+      "status": "PASS"
+    },
+    {
+      "name": "Repeated menu click does not add duplicate page entries",
+      "status": "PASS"
+    },
+    {
+      "name": "P11 Back followed by P10 Back returns S01 and next Back reaches Home",
+      "status": "PASS"
+    }
+  ],
+  "passed": 8,
+  "failed": 0
+}

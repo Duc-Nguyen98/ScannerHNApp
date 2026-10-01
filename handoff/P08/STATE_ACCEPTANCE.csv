@@ -1,0 +1,11 @@
+id,scope,visual_status,behavior_status,integration_status,evidence,notes
+P08.S01,List/search/category/date/status/sort/pagination,IN_PROGRESS,PASS,BLOCKED,evidence/P08-S01-494x1000.png; evidence/browser-results.json,Fixture only; B08 original order preserved by default; sort user-controlled
+P08.S02,Exact document/timeline/copy/tabs/attachments,IN_PROGRESS,PASS,BLOCKED,evidence/P08-S02-494x1000.png; evidence/browser-results.json,Only seeded events get ticks; P12/P18 context pending
+P08.S03,Shared session19=18+1 and19 scan events,IN_PROGRESS,PASS,BLOCKED,evidence/P08-S03-494x1000.png; evidence/browser-results.json,Quantity17 excludes duplicate and NFC; no stock movement
+P08.S04,Day aggregate and category drilldown,IN_PROGRESS,PASS,BLOCKED,evidence/P08-S04-494x1000.png; evidence/browser-results.json,30 unique fixture activity IDs; unknown date is unavailable not0
+P08.A01,Combined search/date/status/category,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json; evidence/node-tests.txt,Fixture read filtering only
+P08.A02,Record/document/event identity,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json; evidence/node-tests.txt,LS-0001/PN-0005 exactly; Gửi phiếu lên Web not Post
+P08.A03,19=18+1 and quantity dedup,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json; evidence/node-tests.txt,Shared immutable session PQ-0001
+P08.A04,Day scope and total provenance,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json; evidence/node-tests.txt,09/09=30;08/09=8;production definition UNKNOWN
+P08.A05,P22/P23 exact IDs and Back context,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Prototype links PASS; real event source/permissions not integrated
+P08.RUNTIME,Loading/empty/error/unavailable/retry/modal/focus/back/logout,IN_PROGRESS,PASS,BLOCKED,evidence/browser-results.json; evidence/render-metrics.json,6 viewports; no native scrollbar; internal keyboard scroll

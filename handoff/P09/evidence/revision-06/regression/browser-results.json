@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "name": "S01 list/search/status/sort/cancel and responsive",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 A01 serial validation, retained draft, keyboard and intake confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 A02 POSTED ledger count and shared case timeline, six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "S04 A03 confirmed update is waiting handover, not closed; modal focus trap",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 closed case blocks writes, A05 case data never leaks",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN preserves request, blocks retry and reconciles once",
+      "status": "PASS"
+    },
+    {
+      "name": "Failure preserves result draft and retry request; deep success link cannot fabricate receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "Native Back restores query/scroll and detail tabs, new serial creates exactly one case",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 context bridge keeps exact serial; P08 reads same case/events after update",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 modal coexistence, logout and native Back cannot restore warranty",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "hardware": "NOT_RUN",
+  "production": "NOT_RUN"
+}

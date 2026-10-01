@@ -1,0 +1,68 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P10",
+  "prompt_status": "P10_R10_EDGE_AUDIT_FIXED",
+  "latest_revision": {
+    "id": "P10-r10",
+    "report": "handoff/P10/REVISION_10.md",
+    "scope": "P10 UI interaction audit; Home/P14 return edge; retain P18/global work",
+    "before_audit": {
+      "failed": 5,
+      "passed": 2
+    },
+    "browser_groups": {
+      "edge": 7,
+      "profile": 12,
+      "ergonomics": 8
+    },
+    "browser_total": 27,
+    "node_passed": 31,
+    "visual_status": "ACTUAL_REVIEW_PENDING",
+    "behavior_status": "PASS_TESTED_PROTOTYPE",
+    "integration_status": "BLOCKED",
+    "physical_keyboard_touch": "NOT_RUN",
+    "evidence": "handoff/P10/evidence/revision-10"
+  },
+  "p10_revision": {
+    "id": "P10-r10",
+    "report": "handoff/P10/REVISION_10.md",
+    "scope": "P10 UI interaction audit; Home/P14 return edge; retain P18/global work",
+    "before_audit": {
+      "failed": 5,
+      "passed": 2
+    },
+    "browser_groups": {
+      "edge": 7,
+      "profile": 12,
+      "ergonomics": 8
+    },
+    "browser_total": 27,
+    "node_passed": 31,
+    "visual_status": "ACTUAL_REVIEW_PENDING",
+    "behavior_status": "PASS_TESTED_PROTOTYPE",
+    "integration_status": "BLOCKED",
+    "physical_keyboard_touch": "NOT_RUN",
+    "evidence": "handoff/P10/evidence/revision-10"
+  },
+  "remaining_panel_ids": [
+    "P10.S01",
+    "P10.S02",
+    "P10.S03",
+    "P10.S04"
+  ],
+  "blockers": [
+    "P10 profile PATCH/validation/avatar upload contract missing: blocked adapter, no success or identity mutation.",
+    "Per-function permission mapping unknown; six read-only unknowns, no grants inferred.",
+    "Prior P01–P09 production/hardware blockers preserved in handoff/P10/INPUT_RUN_STATE.json; P09 r09 temporarily accepted by user.",
+    "P11 password/session routes implemented in prototype; security backend and P14 remain blocked. Exact Designer font remains unverified despite temporary visual acceptance."
+  ],
+  "next_action": "Review actual r10; keep centered Tài khoản của tôi title and footer lock. Real backend/device blockers unchanged.",
+  "user_decision": "2026-09-28: user temporarily accepted P10 r02; synchronized states deferred.",
+  "p11_dependency": {
+    "report": "handoff/P11/REPORT.md",
+    "navigation": "PASS_PROTOTYPE",
+    "integration": "BLOCKED_SECURITY_BACKEND"
+  }
+}

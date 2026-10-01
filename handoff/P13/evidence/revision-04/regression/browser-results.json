@@ -1,0 +1,471 @@
+{
+  "checks": [
+    {
+      "name": "A01 Home bell reaches S01; unread filter backed by three events",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 Notification resolves exact P12 ID, read acknowledgment updates shared badge",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 Mark-read failure keeps event/count/filter and reports in modal",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 All filter retains read/unread events; load-error retry retains filter",
+      "status": "PASS"
+    },
+    {
+      "name": "A01/A02 S03 lists only scoped waiting stock documents; filter and Back survive",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 Web guidance without fabricated URL; keyboard/backdrop/Back/focus",
+      "status": "PASS"
+    },
+    {
+      "name": "P13 product CTA opens P12 S03 exact ID and Back restores waiting filter",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 Missing/cross-scope ID exposes no document action",
+      "status": "PASS"
+    },
+    {
+      "name": "Four panels fit locked shell and footer across six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Readable note 250/2000 Unicode/newlines/unbroken preserved; dialog Back restores",
+      "status": "PASS"
+    },
+    {
+      "name": "Waiting list scroll restored and header/footer remain fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "Home/P03/P13 share locked footer; scan cancel restores P13 and all-read hides badge",
+      "status": "PASS"
+    },
+    {
+      "name": "Late mark-read receipt after fast Back updates list and badge together",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout then Back cannot restore notifications",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P13.S01",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 933,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S01",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 933,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S01",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 933,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S01",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 933,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S01",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 933,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S01",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 933,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S02",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 734,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S02",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 734,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S02",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 734,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S02",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 734,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S02",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 734,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S02",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 734,
+      "scrollHeight": 734,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S03",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 799,
+      "scrollHeight": 873,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S03",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 799,
+      "scrollHeight": 873,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S03",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 799,
+      "scrollHeight": 873,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S03",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 799,
+      "scrollHeight": 873,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S03",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 799,
+      "scrollHeight": 873,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S03",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 799,
+      "scrollHeight": 873,
+      "within": true,
+      "footer": "grid"
+    },
+    {
+      "panel": "P13.S04",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 715,
+      "scrollHeight": 964,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S04",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 715,
+      "scrollHeight": 964,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S04",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 715,
+      "scrollHeight": 964,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S04",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 715,
+      "scrollHeight": 964,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S04",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 715,
+      "scrollHeight": 964,
+      "within": true,
+      "footer": "none"
+    },
+    {
+      "panel": "P13.S04",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "height": 715,
+      "scrollHeight": 964,
+      "within": true,
+      "footer": "none"
+    }
+  ],
+  "errors": []
+}

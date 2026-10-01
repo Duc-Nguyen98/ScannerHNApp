@@ -1,0 +1,47 @@
+{
+  "phase": "before",
+  "viewport": [
+    494,
+    950
+  ],
+  "dpr": 1,
+  "engine": "Chromium",
+  "servedStatus": 200,
+  "cacheControl": "no-store",
+  "sourceSha256": "6456d00b450ff084ca4ee9f1f27f4744de0c5b90b6f168fc2901d5757f87eab7",
+  "revision": "r06",
+  "routes": [
+    [
+      "history",
+      "#p02/history-list"
+    ],
+    [
+      "list",
+      "#p02/documents"
+    ],
+    [
+      "info",
+      "#p02/documents?panel=2&doc=p12-stock-PX-0011"
+    ],
+    [
+      "products",
+      "#p02/documents?panel=3&doc=p12-stock-PX-0011"
+    ],
+    [
+      "files",
+      "#p02/documents?panel=2&doc=p12-stock-PX-0011&tab=files"
+    ],
+    [
+      "events-posted",
+      "#p02/documents?panel=2&doc=p12-stock-PX-0011&tab=events"
+    ],
+    [
+      "events-waiting",
+      "#p02/documents?panel=2&doc=fixture-inbound-0005&tab=events"
+    ],
+    [
+      "create",
+      "#p02/documents?panel=4"
+    ]
+  ]
+}

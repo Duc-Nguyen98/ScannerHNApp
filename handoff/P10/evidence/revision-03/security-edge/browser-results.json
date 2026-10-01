@@ -1,0 +1,640 @@
+{
+  "checks": [
+    {
+      "name": "P10 routes to security; default blocked save retains fields without success",
+      "status": "PASS"
+    },
+    {
+      "name": "Default sessions do not invent devices; retry stays blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "S01 genuine password form in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 mismatch local field error, aria and focus; S02 six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 three independent eye toggles retain values and conceal on second click",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 busy blocks duplicate submits; verified success S03 six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "S04 separates current and other fixture sessions in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Revoke confirmation contained, focus trapped; Escape and Back preserve rows",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 server rejection keeps both sessions with feedback",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN revoke holds row and disables retry until authoritative reconciliation",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing metadata does not infer device location or OS",
+      "status": "PASS"
+    },
+    {
+      "name": "Session read failure and reload shown without false empty result",
+      "status": "PASS"
+    },
+    {
+      "name": "Server current-password error is separate from mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "Generic server rejection never opens success",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN password change requires reconcile and preserves request over Back/reentry",
+      "status": "PASS"
+    },
+    {
+      "name": "Dirty Back cancel keeps fields; confirm clears them; no password storage",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 scanner dialog restores security session route and footer",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 fixture reauthentication clears auth, preserves unrelated storage; Back cannot revive success",
+      "status": "PASS"
+    },
+    {
+      "name": "Expired response returns through P01 guard",
+      "status": "PASS"
+    },
+    {
+      "name": "Other actor identity in success comes from session",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "P11-S01-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 1
+    },
+    {
+      "name": "P11-S01-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.728744939271255
+    },
+    {
+      "name": "P11-S01-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.8704453441295547
+    },
+    {
+      "name": "P11-S01-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.9473684210526315
+    },
+    {
+      "name": "P11-S01-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.44210525080259994
+    },
+    {
+      "name": "P11-S01-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.9894737830528846
+    },
+    {
+      "name": "P11-S02-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 1
+    },
+    {
+      "name": "P11-S02-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.728744939271255
+    },
+    {
+      "name": "P11-S02-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.8704453441295547
+    },
+    {
+      "name": "P11-S02-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.9473684210526315
+    },
+    {
+      "name": "P11-S02-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.44210525080259994
+    },
+    {
+      "name": "P11-S02-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        756,
+        756,
+        0
+      ],
+      "scale": 0.9894737830528846
+    },
+    {
+      "name": "P11-S03-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        764,
+        756,
+        0
+      ],
+      "scale": 1
+    },
+    {
+      "name": "P11-S03-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        764,
+        756,
+        0
+      ],
+      "scale": 0.728744939271255
+    },
+    {
+      "name": "P11-S03-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        764,
+        756,
+        0
+      ],
+      "scale": 0.8704453441295547
+    },
+    {
+      "name": "P11-S03-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        764,
+        756,
+        0
+      ],
+      "scale": 0.9473684210526315
+    },
+    {
+      "name": "P11-S03-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        764,
+        756,
+        0
+      ],
+      "scale": 0.44210525080259994
+    },
+    {
+      "name": "P11-S03-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        764,
+        756,
+        0
+      ],
+      "scale": 0.9894737830528846
+    },
+    {
+      "name": "P11-S04-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        799,
+        799,
+        0
+      ],
+      "scale": 1
+    },
+    {
+      "name": "P11-S04-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        799,
+        799,
+        0
+      ],
+      "scale": 0.728744939271255
+    },
+    {
+      "name": "P11-S04-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        799,
+        799,
+        0
+      ],
+      "scale": 0.8704453441295547
+    },
+    {
+      "name": "P11-S04-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        799,
+        799,
+        0
+      ],
+      "scale": 0.9473684210526315
+    },
+    {
+      "name": "P11-S04-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        799,
+        799,
+        0
+      ],
+      "scale": 0.44210525080259994
+    },
+    {
+      "name": "P11-S04-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "dpr": 1,
+      "font": "Arial, sans-serif",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "pageOverflow": false,
+      "footerInside": true,
+      "contentAboveFooter": true,
+      "scroll": [
+        799,
+        799,
+        0
+      ],
+      "scale": 0.9894737830528846
+    }
+  ],
+  "errors": [],
+  "external": []
+}

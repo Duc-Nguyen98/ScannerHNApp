@@ -1,0 +1,37 @@
+{
+  "stage": "before",
+  "results": [
+    {
+      "name": "01-back-history",
+      "status": "PASS"
+    },
+    {
+      "name": "02-recovery-error-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'' !== 'p14-username'\n",
+      "url": "http://localhost:8766/flows/auth-session/#recovery",
+      "errors": []
+    },
+    {
+      "name": "03-unique-receipt",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n'RQ-20260928-001'",
+      "url": "http://localhost:8766/flows/auth-session/#login",
+      "errors": []
+    },
+    {
+      "name": "04-details-keyboard",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'BUTTON'\n- 'SUMMARY'\n",
+      "url": "http://localhost:8766/flows/auth-session/#p02/shift",
+      "errors": []
+    },
+    {
+      "name": "05-reauth-save",
+      "status": "FAIL",
+      "error": "TimeoutError: page.waitForFunction: Timeout 3000ms exceeded.",
+      "url": "http://localhost:8766/flows/auth-session/#p02/shift",
+      "errors": []
+    }
+  ]
+}

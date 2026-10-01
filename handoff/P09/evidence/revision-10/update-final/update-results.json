@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "Update dialog identifies exact case/serial; one border per field, fixed actions at six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Inline required/length validation, counters and focus; no request for blank result",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel/browser Back preserve update draft and caller tab",
+      "status": "PASS"
+    },
+    {
+      "name": "Failed save opens feedback dialog, retains request; retry success commits once despite double click",
+      "status": "PASS"
+    },
+    {
+      "name": "Result has View case + Return to list; footer fits six sizes; filtered list context survives",
+      "status": "PASS"
+    },
+    {
+      "name": "Waiting-handover case also has Return to list; list Back never loops into result",
+      "status": "PASS"
+    },
+    {
+      "name": "Direct case route without an earlier warranty list safely normalizes to list",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN dialog freezes inputs and reconciles same request; closing then reconciling from list keeps navigation sound",
+      "status": "PASS"
+    },
+    {
+      "name": "Back during save cannot be revived by a late result; confirmed waiting case keeps list exit",
+      "status": "PASS"
+    },
+    {
+      "name": "Forward over a dismissed dialog cannot corrupt the return-list depth",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 intake origin without list returns to management list, then original lookup rather than result",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "production": "NOT_RUN"
+}

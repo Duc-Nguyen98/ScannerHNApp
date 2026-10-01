@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "name": "Unavailable status dock opens/focuses reconciliation details without a read or record",
+      "status": "PASS"
+    },
+    {
+      "name": "Native Back/Forward and Escape do not replay scan or add duplicate exception history",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.click: Error: strict mode violation: locator('.p17-reason .hn-read-more') resolved to 2 elements:\n    1) <button type=\"button\" class=\"hn-read-more\" aria-haspopup=\"dialog\" data-hn-read-trigger=\"\" aria-label=\"Xem đầy đủ mã đã đọc\">Xem đầy đủ</button> aka getByRole('button', { name: 'Xem đầy đủ mã đã đọc' })\n    2) <button hidden=\"\" type=\"button\" class=\"hn-read-more\" aria-haspopup=\"dialog\" data-hn-read-trigger=\"\" aria-label=\"Xem đầy đủ lý do kiểm tra mã\">Xem đầy đủ</button> aka getByLabel('Xem đầy đủ lý do kiểm tra mã')\n\nCall log:\n\u001b[2m  - waiting for locator('.p17-reason .hn-read-more')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17_navigation_r03.cjs:15:432\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17_navigation_r03.cjs:6:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17_navigation_r03.cjs:15:1"
+}

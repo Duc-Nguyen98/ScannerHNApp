@@ -1,0 +1,11 @@
+id,requirement,behavior_status,evidence,integration_status
+P16.A01,Delay loading / verified empty / filtered empty / reject-null error,PASS,evidence/revision-01/browser-results.json; evidence/revision-01/node-tests.txt,BLOCKED
+P16.A02,Retry preserves filters with one pending read,PASS,evidence/revision-01/reads/results.json; evidence/revision-01/node-tests.txt,BLOCKED
+P16.A03,Clear restores list and edit query restores focus,PASS,evidence/revision-01/browser-results.json,BLOCKED
+P16.A04,Late success or failure cannot replace current query,PASS,evidence/revision-01/reads/results.json; evidence/revision-01/node-tests.txt,BLOCKED
+P16.A05,Readonly CTA route and action guards; status semantics and keyboard focus,PASS,evidence/revision-01/browser-results.json; evidence/revision-01/reads/results.json,BLOCKED
+P16.EXTRA01,Cache isolated by query actor warehouse; no rows leaked after dispose,PASS,evidence/revision-01/node-tests.txt,BLOCKED
+P16.EXTRA02,P15 classified network expired forbidden edges,PASS,evidence/revision-01/reads/results.json,BLOCKED
+P16.EXTRA03,P12 tab Back form resume and footer regression,PASS,evidence/revision-01/p12-tabs; evidence/revision-01/p12-guidance; evidence/revision-01/footer-regression,BLOCKED
+P16.R02,Six user-authorized UX improvements including debounce IME and ID scroll anchor,PASS,evidence/revision-02/ux-results.json; evidence/revision-02/reads-regression/results.json,BLOCKED
+P16.R03,Long query reader and toolbar dialog lost-row focus fixes,PASS,evidence/revision-03/audit-results.json,BLOCKED

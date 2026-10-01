@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "Inbound context, capability-aware primary and manual return preserve filters/raw/scroll/selection",
+      "status": "PASS"
+    },
+    {
+      "name": "Outbound blocked return restores input selection, filter, position and all accepted codes",
+      "status": "PASS"
+    },
+    {
+      "name": "Scoped copy has whitelisted identity only; success/failure dialogs restore focus and preserve request",
+      "status": "PASS"
+    },
+    {
+      "name": "Checking title, pending focus, single flight and persistent verified announcement",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable status does not imply work; delayed clipboard completion after exit opens nothing",
+      "status": "PASS"
+    },
+    {
+      "name": "Late reconciliation cannot announce a result for a different newly allocated document",
+      "status": "PASS"
+    },
+    {
+      "name": "P16 retry keeps keyboard position in list and announces short loading/result text",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

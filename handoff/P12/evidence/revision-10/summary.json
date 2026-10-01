@@ -1,0 +1,19 @@
+{
+  "id": "P12-r10",
+  "report": "handoff/P12/REVISION_10.md",
+  "comparison": "handoff/P12/evidence/revision-10/REVIEW.html",
+  "visual_status": "AWAITING_USER_REVIEW",
+  "behavior_status": "PASS_SCOPED_PREVIEW",
+  "integration_status": "BLOCKED_PRODUCTION",
+  "browser_groups": {
+    "polish": 8,
+    "attachment": 2,
+    "guidance_regression": 8,
+    "create_regression": 7,
+    "choice_regression": 1
+  },
+  "browser_total": 26,
+  "layout_observations": 36,
+  "scope": "Five reproduced defects: implicit search Apply, filtered counter, unbroken code overflow, escaped copy feedback, uncancellable silent PDF read. Keyboard focus repair included.",
+  "evidence": "handoff/P12/evidence/revision-10"
+}

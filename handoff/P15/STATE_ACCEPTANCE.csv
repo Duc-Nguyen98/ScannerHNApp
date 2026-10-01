@@ -1,0 +1,6 @@
+acceptance_id,requirement,behavior_status,integration_status,evidence
+P15.A01,UNKNOWN preserves request and only reads status without mutation replay,PASS,BLOCKED,evidence/revision-01/browser-results.json; evidence/revision-01/edge-results.json; evidence/revision-01/node-tests.txt
+P15.A02,Expired auth blocks active owner mutation and late success,PASS,BLOCKED,evidence/revision-01/node-tests.txt; evidence/revision-01/edge-results.json
+P15.A03,Forbidden direct route and direct owner mutation both guarded,PASS,BLOCKED,evidence/revision-01/node-tests.txt; evidence/revision-01/browser-results.json
+P15.A04,Denied camera has guidance; unsupported NFC never ready; hardware state distinct,PASS,NOT_RUN,evidence/revision-01/edge-results.json; evidence/revision-01/node-tests.txt
+P15.A05,Back restores caller context and same-page drafts preserve identity,PASS,BLOCKED,evidence/revision-01/browser-results.json; evidence/revision-01/edge-results.json

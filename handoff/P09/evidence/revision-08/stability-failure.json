@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "name": "Search preserves the focused input/IME composition instead of replacing it per keystroke",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid open-case and open-dialog events create one step and one overlay",
+      "status": "PASS"
+    },
+    {
+      "name": "A → B → A retains independent repair drafts; cancel does not write",
+      "status": "PASS"
+    },
+    {
+      "name": "Opening/canceling a later edit does not erase or replace the last confirmed result",
+      "status": "PASS"
+    },
+    {
+      "name": "Stopped warehouse remains readable; forged update cannot bypass guard",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed intake offers Open case after Back, without a duplicate request or extra write",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN banner names the pending case; narrow layout and Return/Back retain request",
+      "status": "PASS"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     check: 'Rapid open-case and open-dialog events create one step and one overlay',\n+     message: \"Cannot read properties of null (reading 'focus')\",\n+     stack: \"TypeError: Cannot read properties of null (reading 'focus')\\n\" +\n+       '    at render (http://127.0.0.1:8766/flows/warranty/warranty.mjs:80:1768)\\n' +\n+       '    at nav (http://127.0.0.1:8766/flows/warranty/warranty.mjs:38:30)\\n' +\n+       '    at HTMLDivElement.onClick (http://127.0.0.1:8766/flows/warranty/warranty.mjs:129:307)'\n+   }\n+ ]\n- []\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_stability.cjs:20:8",
+  "errors": [
+    {
+      "check": "Rapid open-case and open-dialog events create one step and one overlay",
+      "message": "Cannot read properties of null (reading 'focus')",
+      "stack": "TypeError: Cannot read properties of null (reading 'focus')\n    at render (http://127.0.0.1:8766/flows/warranty/warranty.mjs:80:1768)\n    at nav (http://127.0.0.1:8766/flows/warranty/warranty.mjs:38:30)\n    at HTMLDivElement.onClick (http://127.0.0.1:8766/flows/warranty/warranty.mjs:129:307)"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "case": "P09 intake → lookup → header Back",
+    "actual": "#home",
+    "expected": "P09.S02"
+  },
+  {
+    "case": "Intake → confirmed existing case → header Back",
+    "actual": "#p02/warranty?panel=1",
+    "expected": "P09.S02"
+  },
+  {
+    "case": "Case Events tab → update → result → view case",
+    "actual": "#p02/warranty?panel=3&case=BH-001&tab=info",
+    "expected": "P09.S03 tab=events"
+  },
+  {
+    "case": "Fault picker open → browser Back",
+    "actual": {
+      "hash": "#p02/warranty",
+      "dialogs": 1,
+      "panel": "P09.S01"
+    },
+    "expected": "Same P09.S02; dialog closed only"
+  }
+]

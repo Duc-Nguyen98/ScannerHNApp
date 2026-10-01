@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "name": "Short datasets show actual 3/5 and no dead load-more button",
+      "status": "PASS"
+    },
+    {
+      "name": "Both filters load only10; source unread24 does not become visible-count10; no auto-load",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid repeated load sends one page; rows append without scroll jump and focus first added",
+      "status": "PASS"
+    },
+    {
+      "name": "Each tab preserves loaded pages and scroll; detail Back preserves count/context",
+      "status": "PASS"
+    },
+    {
+      "name": "Load-more failure retains20 rows/cursor/scroll; dialog, retry same page then end37",
+      "status": "PASS"
+    },
+    {
+      "name": "Reading an unread row removes only that row; next explicit page does not skip",
+      "status": "PASS"
+    },
+    {
+      "name": "Load result after tab switch never appends into the other filter",
+      "status": "PASS"
+    },
+    {
+      "name": "Load-more is reachable above footer and controls do not overflow at six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout with pending page cannot repopulate UI after Back",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "moreBottom": 827.03125,
+      "navTop": 875,
+      "dockTop": 76,
+      "moreTop": 779.03125
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "moreBottom": 602.69482421875,
+      "navTop": 637.6517944335938,
+      "dockTop": 55.384613037109375,
+      "moreTop": 567.715087890625
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "moreBottom": 719.885498046875,
+      "navTop": 761.6397094726562,
+      "dockTop": 66.15384674072266,
+      "moreTop": 678.1041259765625
+    },
+    {
+      "viewport": [
+        459,
+        874
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "moreBottom": 719.885498046875,
+      "navTop": 761.6397094726562,
+      "dockTop": 66.15384674072266,
+      "moreTop": 678.1041259765625
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "moreBottom": 783.5032958984375,
+      "navTop": 828.9473876953125,
+      "dockTop": 72,
+      "moreTop": 738.0296020507812
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "width": 494,
+      "scrollWidth": 494,
+      "moreBottom": 365.6348571777344,
+      "navTop": 386.84210205078125,
+      "dockTop": 33.599998474121094,
+      "moreTop": 344.413818359375
+    }
+  ],
+  "errors": []
+}

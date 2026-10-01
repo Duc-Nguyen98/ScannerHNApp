@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "Long query 250/2000/unbroken/Unicode is three lines with exact full reader; short has no extra link",
+      "status": "PASS"
+    },
+    {
+      "name": "Reader Back/backdrop/focus and six viewport geometry; recovery CTA remains reachable",
+      "status": "PASS"
+    },
+    {
+      "name": "Toolbar scan and sort keep DOM identity and keyboard focus when request settles",
+      "status": "PASS"
+    },
+    {
+      "name": "Open sort remains focused during read completion; Escape returns to same trigger",
+      "status": "PASS"
+    },
+    {
+      "name": "Focused row disappearing moves focus to list region, never BODY; busy/announcement remains accessible",
+      "status": "PASS"
+    },
+    {
+      "name": "Apply filter and sort restore semantic trigger after render; Cancel does not change query",
+      "status": "PASS"
+    },
+    {
+      "name": "Long query with all filters has no clipped art; scrolling reaches CTA; removal and browser Back work",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "scroll": 524,
+      "client": 524,
+      "actionBottom": 815.765625,
+      "navTop": 875,
+      "top": 351
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "overflow": false,
+      "scroll": 524,
+      "client": 524,
+      "actionBottom": 594.4850463867188,
+      "navTop": 637.6517944335938,
+      "top": 255.7894744873047
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "overflow": false,
+      "scroll": 524,
+      "client": 524,
+      "actionBottom": 710.0794067382812,
+      "navTop": 761.6397094726562,
+      "top": 305.5263366699219
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "scroll": 524,
+      "client": 524,
+      "actionBottom": 772.8306274414062,
+      "navTop": 828.9473876953125,
+      "top": 332.5263366699219
+    },
+    {
+      "width": 340,
+      "height": 420,
+      "overflow": false,
+      "scroll": 524,
+      "client": 524,
+      "actionBottom": 360.6542663574219,
+      "navTop": 386.84210205078125,
+      "top": 155.178955078125
+    },
+    {
+      "width": 1869,
+      "height": 940,
+      "overflow": false,
+      "scroll": 524,
+      "client": 524,
+      "actionBottom": 807.1786499023438,
+      "navTop": 865.7894897460938,
+      "top": 347.3052673339844
+    }
+  ],
+  "errors": []
+}

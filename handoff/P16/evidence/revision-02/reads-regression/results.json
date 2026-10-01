@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "A04 out-of-order read responses never replace B with A",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 retry uses one pending request with identical filters; source error code only",
+      "status": "PASS"
+    },
+    {
+      "name": "P15 network boundary retries read and closes only after verified source response",
+      "status": "PASS"
+    },
+    {
+      "name": "long Unicode query stays in input without injection, header/footer stay fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "401 expiry blocks caller and clears authenticated document route",
+      "status": "PASS"
+    },
+    {
+      "name": "403 reaches P15 forbidden and direct create route remains guarded",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

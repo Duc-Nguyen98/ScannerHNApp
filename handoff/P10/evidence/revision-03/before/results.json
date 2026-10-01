@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "name": "UI Back consumes child history; native Back then returns Home, never reopens editor",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 4500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#hn-home:visible') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "External hash navigation while a P10 dialog is open reaches matching Home view",
+      "status": "PASS"
+    },
+    {
+      "name": "Forward after cancelling native dirty Back retains draft and never duplicates discard dialog",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 4500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#hn-home:visible') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "S01 scroll/focus returns to invoking menu after child Back",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "name": "Duplicate route delivery does not remount focused editor or jump scroll",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "name": "No-op Save is disabled; edit enables it; reverting disables it without new validation rules",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "name": "Repeated menu click does not add duplicate page entries",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 4500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#hn-home:visible') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "P11 Back followed by P10 Back returns S01 and next Back reaches Home",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 4500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#hn-home:visible') to be visible\u001b[22m\n",
+      "errors": []
+    }
+  ],
+  "passed": 1,
+  "failed": 7
+}

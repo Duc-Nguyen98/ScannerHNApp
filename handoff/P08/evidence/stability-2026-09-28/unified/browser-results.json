@@ -1,0 +1,396 @@
+{
+  "revision": "P08-r19 shared regression",
+  "checks": [
+    {
+      "name": "Shared full shell/search/filter on all history lists; per-business source statuses",
+      "status": "PASS"
+    },
+    {
+      "name": "NFC type/status/date/search combined; invalid status cleared on type switch; Back restores",
+      "status": "PASS"
+    },
+    {
+      "name": "Warranty year/status/timeline consistent and searchable; empty/errors not false success",
+      "status": "PASS"
+    },
+    {
+      "name": "Session records complete with actor/codes/counts, same detail and context on Back",
+      "status": "PASS"
+    },
+    {
+      "name": "Daily uses same search/filter template; statuses/query change full aggregate and drilldown",
+      "status": "PASS"
+    },
+    {
+      "name": "P05 source/recipient/group share dialog radio UI; Cancel/Apply and source confirmation preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "Legacy history routes use shared views; unknown IDs fail closed; logout cannot restore protected views",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "scene": "history-general",
+      "w": 494,
+      "h": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "history-general",
+      "w": 360,
+      "h": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "history-general",
+      "w": 430,
+      "h": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "history-general",
+      "w": 1440,
+      "h": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "history-general",
+      "w": 340,
+      "h": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "history-general",
+      "w": 1869,
+      "h": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "documents",
+      "w": 494,
+      "h": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "documents",
+      "w": 360,
+      "h": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "documents",
+      "w": 430,
+      "h": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "documents",
+      "w": 1440,
+      "h": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "documents",
+      "w": 340,
+      "h": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "documents",
+      "w": 1869,
+      "h": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "nfc",
+      "w": 494,
+      "h": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "nfc",
+      "w": 360,
+      "h": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "nfc",
+      "w": 430,
+      "h": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "nfc",
+      "w": 1440,
+      "h": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "nfc",
+      "w": 340,
+      "h": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "nfc",
+      "w": 1869,
+      "h": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "warranty",
+      "w": 494,
+      "h": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "warranty",
+      "w": 360,
+      "h": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "warranty",
+      "w": 430,
+      "h": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "warranty",
+      "w": 1440,
+      "h": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "warranty",
+      "w": 340,
+      "h": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "warranty",
+      "w": 1869,
+      "h": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "sessions",
+      "w": 494,
+      "h": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "sessions",
+      "w": 360,
+      "h": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "sessions",
+      "w": 430,
+      "h": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "sessions",
+      "w": 1440,
+      "h": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "sessions",
+      "w": 340,
+      "h": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    },
+    {
+      "scene": "sessions",
+      "w": 1869,
+      "h": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "nav": true,
+      "bad": []
+    }
+  ],
+  "errors": []
+}

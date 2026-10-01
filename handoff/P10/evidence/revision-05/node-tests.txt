@@ -1,0 +1,38 @@
+✔ valid fixture always stops at confirmation before the P02 boundary (23.8141ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (0.947ms)
+✔ invalid and empty credentials never expose confirmation or Home (28.844ms)
+✔ repeated login has a single in-flight adapter request (0.6969ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (1.1327ms)
+✔ permission and warehouse guards block start even when called directly (13.7202ms)
+✔ unknown login, unknown shift and thrown request never produce success (33.2954ms)
+✔ expired start returns to login (14.2204ms)
+✔ logout and back/hash guard cannot restore protected screen (1.6093ms)
+✔ late login response after logout is ignored and fixture is revoked (12.9436ms)
+✔ late start response cannot recreate logout session; start double-click guarded (1.0382ms)
+✔ recovery is a P14 pending boundary only (0.3713ms)
+✔ P03 native Back consumes only modal marker and preserves caller identity (7.5231ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.4273ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.7313ms)
+✔ disposing a closing modal settles deferred work (0.5481ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.9165ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.8965ms)
+✔ P01 fixture session supplies Home identity and warehouse, only after start (40.3592ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (13.7147ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (5.628ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (150.8644ms)
+✔ active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped (31.8213ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (32.9103ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (14.0805ms)
+✔ P10 reads identity from session, B10 contact isolated by actor AND namespace (2.1662ms)
+✔ P10 allowlist rejects forged immutable identity and preserves Vietnamese raw input (1.1835ms)
+✔ P10 does not infer individual grants from warehouseOperations or a role label (0.3612ms)
+✔ P10 missing profile/upload contracts return BLOCKED and never mutate input/session (1.0672ms)
+✔ P10 routes password/session to exact P11 panels, shift P14 with caller and identity (0.2694ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 568.7421

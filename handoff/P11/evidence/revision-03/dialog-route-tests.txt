@@ -1,0 +1,14 @@
+✔ P03 native Back consumes only modal marker and preserves caller identity (11.0832ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.4866ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.4809ms)
+✔ disposing a closing modal settles deferred work (0.3281ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.6954ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.4236ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 291.4013

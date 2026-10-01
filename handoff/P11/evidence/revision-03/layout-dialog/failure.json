@@ -1,0 +1,244 @@
+{
+  "message": "page.waitForFunction: Timeout 30000ms exceeded.",
+  "checks": [
+    {
+      "name": "S03 fits and real mouse wheel cannot move content/header/footer/page in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmation dialog stays inside app with locked background and explicit cancel in six viewports",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "kind": "success-fit",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 76,
+      "footer": 832
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 55.384613037109375,
+      "footer": 606.3157958984375
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 66.15384674072266,
+      "footer": 724.2105712890625
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 72,
+      "footer": 788.2105712890625
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 33.599998474121094,
+      "footer": 367.8315734863281
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 75.20000457763672,
+      "footer": 823.2421264648438
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 76,
+      "footer": 875,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 55.384613037109375,
+      "footer": 637.6517944335938,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 66.15384674072266,
+      "footer": 761.6397094726562,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 72,
+      "footer": 828.9473876953125,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 33.599998474121094,
+      "footer": 386.84210205078125,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 75.20000457763672,
+      "footer": 865.7894897460938,
+      "within": true,
+      "overlay": 1
+    }
+  ],
+  "errors": []
+}

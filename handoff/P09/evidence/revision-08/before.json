@@ -1,0 +1,27 @@
+[
+  {
+    "case": "Change case1 → case7 → case1",
+    "expected": "Nháp riêng hồ sơ 1",
+    "actual": ""
+  },
+  {
+    "case": "Open update after confirmed receipt, then cancel in UI",
+    "before": {
+      "caseId": "BH-001",
+      "kind": "update",
+      "requestId": "9b70a996-bc63-443f-92de-505997e60a8f",
+      "version": 2
+    },
+    "after": null
+  },
+  {
+    "case": "Unexpected adapter rejection",
+    "rejected": true,
+    "busy": true,
+    "unknown": false
+  },
+  {
+    "case": "Read warranty list while warehouse stopped",
+    "navigation": "warehouse-stopped"
+  }
+]

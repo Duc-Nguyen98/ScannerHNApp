@@ -1,0 +1,45 @@
+{
+  "phase": "before",
+  "checks": [
+    {
+      "name": "F01 no-source guidance restores focus to its CTA",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(await a('retry').evaluate(e=>e===document.activeElement))\n"
+    },
+    {
+      "name": "F02 pending camera keeps scroll and indicates busy without dropping focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 40\n"
+    },
+    {
+      "name": "F03 granted camera copy no longer asks user to grant again",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /Cấp quyền để/. Input:\n\n'Camera\\n' +\n  'Đã cho phép camera\\n' +\n  '\\n' +\n  'Cấp quyền để quét mã vạch, QR code và chụp hình sản phẩm.'\n"
+    },
+    {
+      "name": "F04 denied NFC instructions specifically explain permissions",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /quyền NFC/. Input:\n\n'Sử dụng thiết bị hỗ trợ NFC\\n' +\n  '\\n' +\n  'Cần thiết bị có NFC và môi trường chạy ứng dụng hỗ trợ đọc thẻ. Kiểm tra cài đặt NFC hoặc hỏi quản trị thiết bị. Có NFC trên máy không bảo đảm trình duyệt hiện tại hỗ trợ. Phiếu đang làm vẫn được giữ trên trang này.\\n' +\n  '\\n' +\n  'Đóng'\n"
+    },
+    {
+      "name": "F05 read 403 activates caller guard, not just presentation",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "name": "F06 camera action cannot run from detached/hidden panel",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "F07 closing system state consumes temporary history entry",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be strictly unequal to:\n\n'audit'"
+    },
+    {
+      "name": "F08 no runtime browser errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

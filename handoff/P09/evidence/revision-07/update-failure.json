@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "Update dialog identifies exact case/serial; one border per field, fixed actions at six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Inline required/length validation, counters and focus; no request for blank result",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel/browser Back preserve update draft and caller tab",
+      "status": "PASS"
+    }
+  ],
+  "error": "page.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p09-mode]')\u001b[22m\n\u001b[2m    - locator resolved to <select data-p09-mode=\"\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at mode (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:10:154)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:20:507\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:11:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:20:1",
+  "errors": []
+}

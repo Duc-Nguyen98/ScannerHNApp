@@ -1,0 +1,71 @@
+{
+  "message": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.p03-dialog[open]') to be visible\u001b[22m\n",
+  "checks": [
+    {
+      "name": "P10 routes to security; default blocked save retains fields without success",
+      "status": "PASS"
+    },
+    {
+      "name": "Default sessions do not invent devices; retry stays blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "S01 genuine password form in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 mismatch local field error, aria and focus; S02 six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 three independent eye toggles retain values and conceal on second click",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 busy blocks duplicate submits; verified success S03 six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "S04 separates current and other fixture sessions in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Revoke confirmation contained, focus trapped; Escape and Back preserve rows",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 server rejection keeps both sessions with feedback",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN revoke holds row and disables retry until authoritative reconciliation",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing metadata does not infer device location or OS",
+      "status": "PASS"
+    },
+    {
+      "name": "Session read failure and reload shown without false empty result",
+      "status": "PASS"
+    },
+    {
+      "name": "Server current-password error is separate from mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "Generic server rejection never opens success",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN password change requires reconcile and preserves request over Back/reentry",
+      "status": "PASS"
+    },
+    {
+      "name": "Dirty Back cancel keeps fields; confirm clears them; no password storage",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "external": []
+}

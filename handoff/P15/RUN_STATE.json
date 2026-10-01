@@ -1,0 +1,41 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P15",
+  "completed_panel_ids": [
+    "P15.S01",
+    "P15.S02",
+    "P15.S03",
+    "P15.S04"
+  ],
+  "remaining_panel_ids": [],
+  "next_action": "Review r03; production limits remain. Other prompts follow their own current checkpoints.",
+  "report": "handoff/P15/REVISION_03.md",
+  "review": "handoff/P15/REVIEW_03.html",
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node": 123,
+  "browser_groups": 12,
+  "regression_groups": 11,
+  "hardware": "NOT_RUN",
+  "evidence": "handoff/P15/evidence/revision-03",
+  "revision": "P15-r03",
+  "node_passed": 129,
+  "ux_browser_groups": 6,
+  "p15_regression_groups": 12,
+  "footer_viewports": 4,
+  "user_acceptance_20260929": {
+    "status": "TEMPORARILY_ACCEPTED",
+    "evidence": "handoff/P15/USER_ACCEPTANCE_2026-09-29.md",
+    "scope": "Current P15 UI; later states may be added; no production integration sign-off"
+  },
+  "prompt_status": "P15_R03_AUDITED_USER_REVIEW_PENDING",
+  "reproduced_findings_resolved": 7,
+  "audit_groups": 8,
+  "navigation_groups": 4,
+  "ux_groups": 6,
+  "p14_regression_groups": 7,
+  "browser_total": 41
+}

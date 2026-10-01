@@ -1,0 +1,58 @@
+{
+  "phase": "before",
+  "findings": [
+    {
+      "id": "F01",
+      "name": "Unavailable status has an actionable route to reconciliation details",
+      "passed": false
+    },
+    {
+      "id": "F02",
+      "name": "Reconciliation summary touch target is at least 44 CSS px",
+      "passed": false
+    },
+    {
+      "id": "F03",
+      "name": "Explicit manual correction brings focused input into the visible scroll area",
+      "passed": false,
+      "top": -190.828125,
+      "bottom": -138.828125,
+      "scrollTop": 108,
+      "scrollBottom": 829,
+      "focused": true
+    },
+    {
+      "id": "F04",
+      "name": "Native Back closes the exception before leaving the owner",
+      "passed": false
+    },
+    {
+      "id": "F05",
+      "name": "Pending clipboard from a departed view cannot lock copy after re-entry",
+      "passed": false
+    },
+    {
+      "id": "F06",
+      "name": "Unresponsive clipboard ends with a usable manual-copy fallback",
+      "passed": false
+    },
+    {
+      "id": "F07",
+      "name": "Async list completion restores focused toolbar action",
+      "passed": true
+    },
+    {
+      "id": "F08",
+      "name": "When focused record disappears focus stays in the document list",
+      "passed": true
+    },
+    {
+      "id": "F09",
+      "name": "Long no-results description is limited to 3 lines with full-text reader",
+      "passed": false,
+      "height": 81,
+      "lineHeight": 27
+    }
+  ],
+  "errors": []
+}

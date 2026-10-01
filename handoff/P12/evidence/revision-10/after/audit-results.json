@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "Search Enter must not silently Apply a hidden supplier selection",
+      "status": "PASS"
+    },
+    {
+      "name": "Product result counter updates for no match and totals remain document-wide",
+      "status": "PASS"
+    },
+    {
+      "name": "Long document numbers stay within the card text column",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy result shows literal document code, not escaped HTML entities",
+      "status": "PASS"
+    },
+    {
+      "name": "Slow PDF has visible busy state; Back cancels read and leaves the document",
+      "status": "PASS"
+    },
+    {
+      "name": "PDF timeout and failed retry preserve context; successful retry downloads real PDF once",
+      "status": "PASS"
+    },
+    {
+      "name": "Supplier Enter with a match moves focus without committing; IME Enter is not cancelled",
+      "status": "PASS"
+    },
+    {
+      "name": "All four panels and detail tabs fit horizontally; footer remains available at six viewports",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

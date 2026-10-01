@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "name": "history-general stable input, live results, empty/reset and detail Back",
+      "status": "PASS"
+    },
+    {
+      "name": "history-daily stable input, live results, empty/reset and detail Back",
+      "status": "PASS"
+    },
+    {
+      "name": "documents stable input, live results, empty/reset and detail Back",
+      "status": "PASS"
+    },
+    {
+      "name": "nfc stable input, live results, empty/reset and detail Back",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('[data-action=\"warranty\"]')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_search_stability.cjs:11:113"
+}

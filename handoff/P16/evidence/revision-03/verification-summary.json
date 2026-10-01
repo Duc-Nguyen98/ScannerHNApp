@@ -1,0 +1,33 @@
+{
+  "audit": {
+    "artifact": "audit-results.json",
+    "passed": 7,
+    "errors": []
+  },
+  "p12_tabs": {
+    "artifact": "p12-tabs/tabs-results.json",
+    "passed": 9,
+    "errors": []
+  },
+  "ux": {
+    "artifact": "ux-local-transport/ux-results.json",
+    "passed": 7,
+    "errors": []
+  },
+  "startup": {
+    "artifact": "startup-results.json",
+    "passed": 5,
+    "errors": []
+  },
+  "footer": {
+    "artifact": "footer/results.json",
+    "passed": 4,
+    "errors": []
+  },
+  "p17_regression": {
+    "artifact": "p17-local-transport/results.json",
+    "passed": 7,
+    "errors": [],
+    "transport": "Source files served by request interception; assertion mapped to current owner actions"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "name": "Search Enter must not silently Apply a hidden supplier selection",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "name": "Product result counter updates for no match and totals remain document-wide",
+      "status": "FAIL",
+      "error": "The input did not match the regular expression /0/. Input:\n\n'Sản phẩm2 dòng'\n"
+    },
+    {
+      "name": "Long document numbers stay within the card text column",
+      "status": "FAIL",
+      "error": "{\"parent\":332.578125,\"rects\":[296.203125,332.59375],\"wrap\":\"normal\",\"overflow\":0}"
+    },
+    {
+      "name": "Copy result shows literal document code, not escaped HTML entities",
+      "status": "FAIL",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok((await p.locator('.app-modal-host').textContent()).includes('PX<&-0011'))\n"
+    },
+    {
+      "name": "Slow PDF has visible busy state; Back cancels read and leaves the document",
+      "status": "FAIL",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   busy: null,\n+   left: 0\n-   busy: 'true',\n-   left: 1\n  }\n"
+    },
+    {
+      "name": "All four panels and detail tabs fit horizontally; footer remains available at six viewports",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

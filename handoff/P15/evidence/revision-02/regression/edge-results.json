@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Camera hardware failure then verified live-track grant, streams stopped",
+      "status": "PASS"
+    },
+    {
+      "name": "Expiry during dialog cancels overlay, shows exactly S02; all viewports retain nav",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN request/lines survive expiry and same-account auth; no automatic replay, read settles",
+      "status": "PASS"
+    },
+    {
+      "name": "Reload requires login and resets page-memory fixture",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

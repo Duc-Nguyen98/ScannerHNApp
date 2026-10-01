@@ -1,0 +1,70 @@
+{
+  "revision": "P12-r06",
+  "baseline": {
+    "path": "design/01_Main/BOARDS/01_UPDATED_BOARDS/10_chung_tu.png",
+    "commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+    "sha256": "bb73f81c628986d6a763d4a846f19229e60898ef016eb02022926603bea776ad"
+  },
+  "visual_acceptance": {
+    "status": "AWAITING_USER_REVIEW",
+    "user_approved": false,
+    "pixel_match_claim": false
+  },
+  "decisions": [
+    {
+      "area": "AppShell",
+      "source": "User locked494x950 + UI_STANDARD",
+      "kind": "USER_LOCKED",
+      "action": "Preserve uniform scale, header and footer."
+    },
+    {
+      "area": "S01 add",
+      "source": "B12 header; existing DIALOG_ICONS.x geometry rotated45",
+      "kind": "SOURCE_BASED_REPAIR",
+      "action": "44px control,24px centered SVG; remove typography-dependent plus glyph."
+    },
+    {
+      "area": "S01 filters",
+      "source": "B12 two controls; shared history-picker/choice-dialog",
+      "kind": "SOURCE_BASED_REPAIR",
+      "action": "Two equal48px controls; explicit icon/label/caret; status shortcut uses draft/apply."
+    },
+    {
+      "area": "S01 sort",
+      "source": "P12 requires sorting; P08 history-controls result toolbar",
+      "kind": "ADAPTATION_REVIEW_REQUIRED",
+      "action": "Named Mới nhất/Cũ nhất/Thứ tự ban đầu control in results row; no ambiguous download-like arrow."
+    },
+    {
+      "area": "S04 inbound selected",
+      "source": "B12 active filled tile + approved operation-icons palette",
+      "kind": "SOURCE_BASED_REPAIR",
+      "action": "Filled active tile, constant1px border; preserve pastel operation glyph."
+    },
+    {
+      "area": "S04 note input",
+      "source": "B12 form hierarchy; HN-readable-content-v1",
+      "kind": "ADAPTATION_REVIEW_REQUIRED",
+      "action": "112px fixed editor with scroll;200-char policy unchanged.112px is implementation measure, not claimed original Designer CSS."
+    },
+    {
+      "area": "S04 date",
+      "source": "P12 required/editable date depends on contract; existing P04 owner assigns fixture date",
+      "kind": "BACKEND_POLICY_UNVERIFIED",
+      "action": "Non-editable output Chưa tạo phiếu, no fabricated date or new date picker."
+    },
+    {
+      "area": "S04 outbound/warranty",
+      "source": "P12 requirement reuseP05/P09; no B12 image for intermediate forms",
+      "kind": "DEFAULT_PROPOSAL_REVIEW_REQUIRED",
+      "action": "Direct existing owner flow from type choice; remove invented intermediate forms; header/browser Back preservesP12 entry.",
+      "user_choice_received": false
+    },
+    {
+      "area": "S02/S03",
+      "source": "Prior explicit user requests: persistent4 tabs, neutral color hierarchy, long note readers",
+      "kind": "PRIOR_REQUEST_RETAINED",
+      "action": "No rollback of accepted behavior/contract to older image-only states."
+    }
+  ]
+}

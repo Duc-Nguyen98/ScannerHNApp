@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "name": "Case tabs match approved P08 detail tab styles exactly, including active underline",
+      "status": "PASS"
+    },
+    {
+      "name": "All three tabs: six viewports, equal tab widths, stable footer, no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "POSTED ledger distinguishes1 document/2 codes/3 parts; pending actions disabled; footer contextual",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard tab order and sticky tabs preserve accessible content and own scroll positions",
+      "status": "PASS"
+    },
+    {
+      "name": "Long identifiers and model wrap without clipping or shifting footer",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed case is read-only; authored empty ledger displays zero correctly",
+      "status": "PASS"
+    }
+  ],
+  "reference": {
+    "active": {
+      "fontSize": "17px",
+      "lineHeight": "22.95px",
+      "color": "rgb(0, 104, 135)",
+      "backgroundColor": "rgb(237, 248, 252)",
+      "backgroundImage": "none",
+      "borderRadius": "8px 8px 0px 0px",
+      "borderBottomWidth": "0px",
+      "paddingTop": "10px",
+      "paddingBottom": "10px",
+      "boxShadow": "rgb(0, 123, 157) 0px -3px 0px 0px inset",
+      "fontWeight": "600",
+      "minHeight": "48px"
+    },
+    "inactive": {
+      "fontSize": "17px",
+      "lineHeight": "22.95px",
+      "color": "rgb(89, 113, 147)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "backgroundImage": "none",
+      "borderRadius": "8px 8px 0px 0px",
+      "borderBottomWidth": "0px",
+      "paddingTop": "10px",
+      "paddingBottom": "10px",
+      "boxShadow": "none",
+      "fontWeight": "400",
+      "minHeight": "48px"
+    }
+  },
+  "errors": [],
+  "externalRequests": [],
+  "production": "NOT_RUN"
+}

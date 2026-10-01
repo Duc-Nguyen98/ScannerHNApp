@@ -1,0 +1,45 @@
+{
+  "phase": "before",
+  "checks": [
+    {
+      "name": "A01-load-more-focus",
+      "status": "FAIL",
+      "message": "focus must stay on request control while loading",
+      "errors": []
+    },
+    {
+      "name": "A02-late-load-steals-focus",
+      "status": "FAIL",
+      "message": "late page may not steal focus from newly selected control",
+      "errors": []
+    },
+    {
+      "name": "A03-reader-survives-read-receipt",
+      "status": "FAIL",
+      "message": "late mark-read must not destroy an unrelated reader\n\n0 !== 1\n",
+      "errors": []
+    },
+    {
+      "name": "A04-back-restores-row-focus",
+      "status": "FAIL",
+      "message": "Back should restore originating row, not header",
+      "errors": []
+    },
+    {
+      "name": "A05-deep-link-back-no-loop",
+      "status": "FAIL",
+      "message": "fallback Back must not push a new forward entry\n\n5 !== 4\n",
+      "errors": []
+    },
+    {
+      "name": "A06-empty-message-overlaid-by-late-page",
+      "status": "FAIL",
+      "message": "pending page may not append rows into explicitly selected empty/error state\n\n20 !== 0\n",
+      "errors": []
+    },
+    {
+      "name": "A07-row-title-scroll-and-footer",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "checks": [
+    {
+      "name": "A01 four states, unknown count, fixed controls and footer at five viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 edit query focuses/selects input; clear restores verified source and all filters",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 failed retry retains query/type/date, null does not mean empty and no invented code",
+      "status": "PASS"
+    },
+    {
+      "name": "stale cache keeps exact rows; changed query cannot display old results",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 readonly hides create, rejects synthetic action and direct create route",
+      "status": "PASS"
+    },
+    {
+      "name": "empty CTA enters existing P12 form, preserves 200 limit and routes to P04 owner",
+      "status": "PASS"
+    },
+    {
+      "name": "pending completion cannot replace destination and Back keeps list context",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "panel": "P16.S01",
+      "controls": {
+        "x": 0,
+        "y": 74,
+        "width": 494,
+        "height": 244,
+        "top": 74,
+        "right": 494,
+        "bottom": 318,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 875,
+        "width": 494,
+        "height": 75,
+        "top": 875,
+        "right": 494,
+        "bottom": 950,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 318,
+        "width": 494,
+        "height": 557,
+        "top": 318,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      },
+      "busy": "true",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "panel": "P16.S02",
+      "controls": {
+        "x": 0,
+        "y": 74,
+        "width": 494,
+        "height": 244,
+        "top": 74,
+        "right": 494,
+        "bottom": 318,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 875,
+        "width": 494,
+        "height": 75,
+        "top": 875,
+        "right": 494,
+        "bottom": 950,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 318,
+        "width": 494,
+        "height": 557,
+        "top": 318,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "panel": "P16.S03",
+      "controls": {
+        "x": 0,
+        "y": 74,
+        "width": 494,
+        "height": 244,
+        "top": 74,
+        "right": 494,
+        "bottom": 318,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 875,
+        "width": 494,
+        "height": 75,
+        "top": 875,
+        "right": 494,
+        "bottom": 950,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 318,
+        "width": 494,
+        "height": 557,
+        "top": 318,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "panel": "P16.S04",
+      "controls": {
+        "x": 0,
+        "y": 74,
+        "width": 494,
+        "height": 244,
+        "top": 74,
+        "right": 494,
+        "bottom": 318,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 875,
+        "width": 494,
+        "height": 75,
+        "top": 875,
+        "right": 494,
+        "bottom": 950,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 318,
+        "width": 494,
+        "height": 557,
+        "top": 318,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "panel": "P16.S01",
+      "controls": {
+        "x": 0,
+        "y": 53.9271240234375,
+        "width": 360,
+        "height": 177.8137664794922,
+        "top": 53.9271240234375,
+        "right": 360,
+        "bottom": 231.7408905029297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 637.6517944335938,
+        "width": 360,
+        "height": 54.6558837890625,
+        "top": 637.6517944335938,
+        "right": 360,
+        "bottom": 692.3076782226562,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 231.7408905029297,
+        "width": 360,
+        "height": 405.910888671875,
+        "top": 231.7408905029297,
+        "right": 360,
+        "bottom": 637.6517791748047,
+        "left": 0
+      },
+      "busy": "true",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "panel": "P16.S02",
+      "controls": {
+        "x": 0,
+        "y": 53.9271240234375,
+        "width": 360,
+        "height": 177.8137664794922,
+        "top": 53.9271240234375,
+        "right": 360,
+        "bottom": 231.7408905029297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 637.6517944335938,
+        "width": 360,
+        "height": 54.6558837890625,
+        "top": 637.6517944335938,
+        "right": 360,
+        "bottom": 692.3076782226562,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 231.7408905029297,
+        "width": 360,
+        "height": 405.910888671875,
+        "top": 231.7408905029297,
+        "right": 360,
+        "bottom": 637.6517791748047,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "panel": "P16.S03",
+      "controls": {
+        "x": 0,
+        "y": 53.9271240234375,
+        "width": 360,
+        "height": 177.8137664794922,
+        "top": 53.9271240234375,
+        "right": 360,
+        "bottom": 231.7408905029297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 637.6517944335938,
+        "width": 360,
+        "height": 54.6558837890625,
+        "top": 637.6517944335938,
+        "right": 360,
+        "bottom": 692.3076782226562,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 231.7408905029297,
+        "width": 360,
+        "height": 405.910888671875,
+        "top": 231.7408905029297,
+        "right": 360,
+        "bottom": 637.6517791748047,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "panel": "P16.S04",
+      "controls": {
+        "x": 0,
+        "y": 53.9271240234375,
+        "width": 360,
+        "height": 177.8137664794922,
+        "top": 53.9271240234375,
+        "right": 360,
+        "bottom": 231.7408905029297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 637.6517944335938,
+        "width": 360,
+        "height": 54.6558837890625,
+        "top": 637.6517944335938,
+        "right": 360,
+        "bottom": 692.3076782226562,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 231.7408905029297,
+        "width": 360,
+        "height": 405.910888671875,
+        "top": 231.7408905029297,
+        "right": 360,
+        "bottom": 637.6517791748047,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "panel": "P16.S01",
+      "controls": {
+        "x": 0,
+        "y": 64.41295623779297,
+        "width": 430,
+        "height": 212.388671875,
+        "top": 64.41295623779297,
+        "right": 430,
+        "bottom": 276.80162811279297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 761.6397094726562,
+        "width": 430,
+        "height": 65.28338623046875,
+        "top": 761.6397094726562,
+        "right": 430,
+        "bottom": 826.923095703125,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 276.8016357421875,
+        "width": 430,
+        "height": 484.83807373046875,
+        "top": 276.8016357421875,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      },
+      "busy": "true",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "panel": "P16.S02",
+      "controls": {
+        "x": 0,
+        "y": 64.41295623779297,
+        "width": 430,
+        "height": 212.388671875,
+        "top": 64.41295623779297,
+        "right": 430,
+        "bottom": 276.80162811279297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 761.6397094726562,
+        "width": 430,
+        "height": 65.28338623046875,
+        "top": 761.6397094726562,
+        "right": 430,
+        "bottom": 826.923095703125,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 276.8016357421875,
+        "width": 430,
+        "height": 484.83807373046875,
+        "top": 276.8016357421875,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "panel": "P16.S03",
+      "controls": {
+        "x": 0,
+        "y": 64.41295623779297,
+        "width": 430,
+        "height": 212.388671875,
+        "top": 64.41295623779297,
+        "right": 430,
+        "bottom": 276.80162811279297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 761.6397094726562,
+        "width": 430,
+        "height": 65.28338623046875,
+        "top": 761.6397094726562,
+        "right": 430,
+        "bottom": 826.923095703125,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 276.8016357421875,
+        "width": 430,
+        "height": 484.83807373046875,
+        "top": 276.8016357421875,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "panel": "P16.S04",
+      "controls": {
+        "x": 0,
+        "y": 64.41295623779297,
+        "width": 430,
+        "height": 212.388671875,
+        "top": 64.41295623779297,
+        "right": 430,
+        "bottom": 276.80162811279297,
+        "left": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 761.6397094726562,
+        "width": 430,
+        "height": 65.28338623046875,
+        "top": 761.6397094726562,
+        "right": 430,
+        "bottom": 826.923095703125,
+        "left": 0
+      },
+      "overflow": false,
+      "body": {
+        "x": 0,
+        "y": 276.8016357421875,
+        "width": 430,
+        "height": 484.83807373046875,
+        "top": 276.8016357421875,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "panel": "P16.S01",
+      "controls": {
+        "x": 486,
+        "y": 70.10526275634766,
+        "width": 468,
+        "height": 231.15789794921875,
+        "top": 70.10526275634766,
+        "right": 954,
+        "bottom": 301.2631607055664,
+        "left": 486
+      },
+      "nav": {
+        "x": 486,
+        "y": 828.9473876953125,
+        "width": 468,
+        "height": 71.0526123046875,
+        "top": 828.9473876953125,
+        "right": 954,
+        "bottom": 900,
+        "left": 486
+      },
+      "overflow": false,
+      "body": {
+        "x": 486,
+        "y": 301.2631530761719,
+        "width": 468,
+        "height": 527.6842041015625,
+        "top": 301.2631530761719,
+        "right": 954,
+        "bottom": 828.9473571777344,
+        "left": 486
+      },
+      "busy": "true",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "panel": "P16.S02",
+      "controls": {
+        "x": 486,
+        "y": 70.10526275634766,
+        "width": 468,
+        "height": 231.15789794921875,
+        "top": 70.10526275634766,
+        "right": 954,
+        "bottom": 301.2631607055664,
+        "left": 486
+      },
+      "nav": {
+        "x": 486,
+        "y": 828.9473876953125,
+        "width": 468,
+        "height": 71.0526123046875,
+        "top": 828.9473876953125,
+        "right": 954,
+        "bottom": 900,
+        "left": 486
+      },
+      "overflow": false,
+      "body": {
+        "x": 486,
+        "y": 301.2631530761719,
+        "width": 468,
+        "height": 527.6842041015625,
+        "top": 301.2631530761719,
+        "right": 954,
+        "bottom": 828.9473571777344,
+        "left": 486
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "panel": "P16.S03",
+      "controls": {
+        "x": 486,
+        "y": 70.10526275634766,
+        "width": 468,
+        "height": 231.15789794921875,
+        "top": 70.10526275634766,
+        "right": 954,
+        "bottom": 301.2631607055664,
+        "left": 486
+      },
+      "nav": {
+        "x": 486,
+        "y": 828.9473876953125,
+        "width": 468,
+        "height": 71.0526123046875,
+        "top": 828.9473876953125,
+        "right": 954,
+        "bottom": 900,
+        "left": 486
+      },
+      "overflow": false,
+      "body": {
+        "x": 486,
+        "y": 301.2631530761719,
+        "width": 468,
+        "height": 527.6842041015625,
+        "top": 301.2631530761719,
+        "right": 954,
+        "bottom": 828.9473571777344,
+        "left": 486
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "panel": "P16.S04",
+      "controls": {
+        "x": 486,
+        "y": 70.10526275634766,
+        "width": 468,
+        "height": 231.15789794921875,
+        "top": 70.10526275634766,
+        "right": 954,
+        "bottom": 301.2631607055664,
+        "left": 486
+      },
+      "nav": {
+        "x": 486,
+        "y": 828.9473876953125,
+        "width": 468,
+        "height": 71.0526123046875,
+        "top": 828.9473876953125,
+        "right": 954,
+        "bottom": 900,
+        "left": 486
+      },
+      "overflow": false,
+      "body": {
+        "x": 486,
+        "y": 301.2631530761719,
+        "width": 468,
+        "height": 527.6842041015625,
+        "top": 301.2631530761719,
+        "right": 954,
+        "bottom": 828.9473571777344,
+        "left": 486
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "panel": "P16.S01",
+      "controls": {
+        "x": 60.796875,
+        "y": 32.715789794921875,
+        "width": 218.39999389648438,
+        "height": 107.87368774414062,
+        "top": 32.715789794921875,
+        "right": 279.1968688964844,
+        "bottom": 140.5894775390625,
+        "left": 60.796875
+      },
+      "nav": {
+        "x": 60.796875,
+        "y": 386.84210205078125,
+        "width": 218.39999389648438,
+        "height": 33.15789794921875,
+        "top": 386.84210205078125,
+        "right": 279.1968688964844,
+        "bottom": 420,
+        "left": 60.796875
+      },
+      "overflow": false,
+      "body": {
+        "x": 60.796875,
+        "y": 140.5894775390625,
+        "width": 218.39999389648438,
+        "height": 246.25262451171875,
+        "top": 140.5894775390625,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      },
+      "busy": "true",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "panel": "P16.S02",
+      "controls": {
+        "x": 60.796875,
+        "y": 32.715789794921875,
+        "width": 218.39999389648438,
+        "height": 107.87368774414062,
+        "top": 32.715789794921875,
+        "right": 279.1968688964844,
+        "bottom": 140.5894775390625,
+        "left": 60.796875
+      },
+      "nav": {
+        "x": 60.796875,
+        "y": 386.84210205078125,
+        "width": 218.39999389648438,
+        "height": 33.15789794921875,
+        "top": 386.84210205078125,
+        "right": 279.1968688964844,
+        "bottom": 420,
+        "left": 60.796875
+      },
+      "overflow": false,
+      "body": {
+        "x": 60.796875,
+        "y": 140.5894775390625,
+        "width": 218.39999389648438,
+        "height": 246.25262451171875,
+        "top": 140.5894775390625,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "panel": "P16.S03",
+      "controls": {
+        "x": 60.796875,
+        "y": 32.715789794921875,
+        "width": 218.39999389648438,
+        "height": 107.87368774414062,
+        "top": 32.715789794921875,
+        "right": 279.1968688964844,
+        "bottom": 140.5894775390625,
+        "left": 60.796875
+      },
+      "nav": {
+        "x": 60.796875,
+        "y": 386.84210205078125,
+        "width": 218.39999389648438,
+        "height": 33.15789794921875,
+        "top": 386.84210205078125,
+        "right": 279.1968688964844,
+        "bottom": 420,
+        "left": 60.796875
+      },
+      "overflow": false,
+      "body": {
+        "x": 60.796875,
+        "y": 140.5894775390625,
+        "width": 218.39999389648438,
+        "height": 246.25262451171875,
+        "top": 140.5894775390625,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "panel": "P16.S04",
+      "controls": {
+        "x": 60.796875,
+        "y": 32.715789794921875,
+        "width": 218.39999389648438,
+        "height": 107.87368774414062,
+        "top": 32.715789794921875,
+        "right": 279.1968688964844,
+        "bottom": 140.5894775390625,
+        "left": 60.796875
+      },
+      "nav": {
+        "x": 60.796875,
+        "y": 386.84210205078125,
+        "width": 218.39999389648438,
+        "height": 33.15789794921875,
+        "top": 386.84210205078125,
+        "right": 279.1968688964844,
+        "bottom": 420,
+        "left": 60.796875
+      },
+      "overflow": false,
+      "body": {
+        "x": 60.796875,
+        "y": 140.5894775390625,
+        "width": 218.39999389648438,
+        "height": 246.25262451171875,
+        "top": 140.5894775390625,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      },
+      "busy": "false",
+      "font": "Arial, sans-serif",
+      "screen": {
+        "width": 494,
+        "height": 950
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,40 @@
+{
+  "stage": "before",
+  "results": [
+    {
+      "name": "01-back-history",
+      "status": "FAIL",
+      "error": "TimeoutError: page.fill: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+      "url": "http://localhost:8766/flows/auth-session/",
+      "errors": []
+    },
+    {
+      "name": "02-recovery-error-focus",
+      "status": "FAIL",
+      "error": "TimeoutError: page.goto: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8766/flows/auth-session/\", waiting until \"load\"\u001b[22m\n",
+      "url": "http://localhost:8766/flows/auth-session/",
+      "errors": []
+    },
+    {
+      "name": "03-unique-receipt",
+      "status": "FAIL",
+      "error": "TimeoutError: page.click: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#forgot')\u001b[22m\n",
+      "url": "http://localhost:8766/flows/auth-session/",
+      "errors": []
+    },
+    {
+      "name": "04-details-keyboard",
+      "status": "FAIL",
+      "error": "TimeoutError: page.fill: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+      "url": "http://localhost:8766/flows/auth-session/",
+      "errors": []
+    },
+    {
+      "name": "05-reauth-save",
+      "status": "FAIL",
+      "error": "TimeoutError: page.fill: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+      "url": "http://localhost:8766/flows/auth-session/",
+      "errors": []
+    }
+  ]
+}

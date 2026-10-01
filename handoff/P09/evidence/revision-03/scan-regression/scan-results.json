@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "name": "P04/P05 current upgraded manual dimensions remain the source",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 idle camera/actions/header align and hardware stays disabled",
+      "status": "PASS"
+    },
+    {
+      "name": "Inline form matches P04/P05 measured geometry; empty/invalid are local only",
+      "status": "PASS"
+    },
+    {
+      "name": "Valid clears code/focus; same serial is not a second product; draft fields survive",
+      "status": "PASS"
+    },
+    {
+      "name": "Escape/Collapse/Back preserve raw and fault; unverified replacement cannot submit",
+      "status": "PASS"
+    },
+    {
+      "name": "IME Enter does not select or submit; changing serial updates exact context only",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewports preserve shell, input/CTA geometry, internal scroll and footer",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN locks manual selection while retaining request and draft; no camera requests",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "sourceGeometry": {
+    "P04": {
+      "camera": 128,
+      "input": 52,
+      "button": 52,
+      "width": 126,
+      "radius": "8px"
+    },
+    "P05": {
+      "camera": 128,
+      "input": 52,
+      "button": 52,
+      "width": 126,
+      "radius": "8px"
+    }
+  },
+  "hardware": "NOT_RUN",
+  "production": "NOT_RUN"
+}

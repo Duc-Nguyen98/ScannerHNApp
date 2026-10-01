@@ -1,0 +1,44 @@
+✔ P03 native Back consumes only modal marker and preserves caller identity (8.384ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.4992ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.3912ms)
+✔ disposing a closing modal settles deferred work (0.2634ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.29ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.4001ms)
+✔ A01 combines query/type/status/range without changing source (3.8319ms)
+✔ A01 defaults all dates, status/type remain distinct and sort is explicit (0.7915ms)
+✔ A02 quantity11 distinct from3 SKU and5/4/2 serial counts (0.4474ms)
+✔ Exact ID lookup never treats display prefix/number as authority (0.2397ms)
+✔ A03 history uses explicit P08 event mapping; missing data stays missing (0.3116ms)
+✔ Creation validates only P12 owned input; supplier cannot be free text (0.285ms)
+✔ A04 inbound seeds fresh owner draft once; repeated routing retains ID, metadata and codes (19.0112ms)
+✔ A04 UNKNOWN retains request/session/version even when P12 reopens; no retry mutation (19.8261ms)
+✔ A04 next fresh run accepts new P12 metadata only after verified completion (4.6179ms)
+✔ P12 receipt adapter excludes drafts/UNKNOWN/wrong warehouse and never counts scan raw as serial (3.2572ms)
+✔ r02 24 records have coherent explicit lines, serials, quantities, dates and identities (1.0558ms)
+✔ r02 warranty rows use the same case states, customer, serial and events as P09 (1.7931ms)
+✔ r02 merging never fabricates attachments or serials for a newly recorded scan (3.927ms)
+✔ P01 fixture session supplies Home identity and warehouse, only after start (53.0985ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (13.9223ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (16.2453ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (139.187ms)
+✔ active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped (15.9742ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (33.1818ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (29.7769ms)
+✔ P13 explicit preview guard fails closed for absent/unverified/production scope (2.1532ms)
+✔ P13 scoped waiting rows reuse P12 IDs and distinguish quantity/SKU (0.6281ms)
+✔ P13 read receipt is asynchronous, deduplicated, and verified before count change (7.5721ms)
+✔ P13 read failure preserves exact list and retry changes only target (9.8948ms)
+✔ P13 late receipt after actor/session/scope change is discarded (46.9825ms)
+✔ P13 disposing a session cancels late read mutation (0.7884ms)
+✔ P13 unknown ID cannot mutate events; returned snapshots cannot mutate source (0.4515ms)
+✔ P13 separate sessions retain isolated unread state and reload starts fresh (1.0677ms)
+✔ P13 notification targets exist in shared P12 dataset and no prefix inference (0.7647ms)
+✔ P13 source exposes no approve/reject/post/network endpoint or invented Web URL (3.0168ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 608.4619

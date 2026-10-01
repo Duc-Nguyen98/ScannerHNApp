@@ -1,0 +1,46 @@
+✔ A01 delay, empty success, filtered empty, reject and null remain distinct (2.279ms)
+✔ A02 pending retry is single-flight and preserves full filters (0.6916ms)
+✔ A04 late success and late failure cannot replace newest query (1.5406ms)
+✔ stale cache only survives the same scope and query; errors never become empty (0.511ms)
+✔ cancel/dispose ignores completion and does not leak session rows (0.4028ms)
+✔ timeout ends loading; retry can recover with a new read (21.4771ms)
+✔ A05 readonly empty has no create and all four states expose status semantics (5.8998ms)
+✔ invalid array response and thrown non-error values cannot signal empty success (0.4231ms)
+✔ P03 native Back consumes only modal marker and preserves caller identity (7.387ms)
+✔ P03 UI close settles before routing and does not overwrite parent state (0.4302ms)
+✔ busy or stopped dialog re-arms the marker while preserving caller entry (0.3419ms)
+✔ disposing a closing modal settles deferred work (0.2456ms)
+✔ separate P10 modal owner never strips an active P03 marker (0.2803ms)
+✔ quick reopen while previous marker is closing creates one new marker (0.6093ms)
+✔ Waiting Web has current event, warning and no claim to completion or stock mutation (2.0978ms)
+✔ Posted requires explicit matching event; event-only or status-only never completes (1.494ms)
+✔ Every stock fixture has corroborated current state and exactly its existing events (2.3321ms)
+✔ Warranty ready remains warning; returned alone is terminal; component receipts are not case completion (0.8193ms)
+✔ A verified repair update without separate ready event still means waiting handover (0.3487ms)
+✔ Unsorted event timestamps select current lifecycle step without relabelling auxiliary events (0.2817ms)
+✔ Unknown and missing source have no fabricated steps or success (0.2798ms)
+✔ A01 combines query/type/status/range without changing source (4.5391ms)
+✔ A01 defaults all dates, status/type remain distinct and sort is explicit (1.047ms)
+✔ A02 quantity11 distinct from3 SKU and5/4/2 serial counts (0.3848ms)
+✔ Exact ID lookup never treats display prefix/number as authority (0.2246ms)
+✔ A03 history uses explicit P08 event mapping; missing data stays missing (0.2962ms)
+✔ Creation validates only P12 owned input; supplier cannot be free text (0.2873ms)
+✔ A04 inbound seeds fresh owner draft once; repeated routing retains ID, metadata and codes (25.0045ms)
+✔ A04 UNKNOWN retains request/session/version even when P12 reopens; no retry mutation (16.1006ms)
+✔ A04 next fresh run accepts new P12 metadata only after verified completion (8.5673ms)
+✔ P12 receipt adapter excludes drafts/UNKNOWN/wrong warehouse and never counts scan raw as serial (5.2493ms)
+✔ r02 24 records have coherent explicit lines, serials, quantities, dates and identities (1.1806ms)
+✔ r02 warranty rows use the same case states, customer, serial and events as P09 (2.1445ms)
+✔ r02 merging never fabricates attachments or serials for a newly recorded scan (5.404ms)
+✔ Source sort retains original source order independently of chronological order (1.8133ms)
+✔ Recent suppliers are bounded, deduplicated, copied and scoped to one owner (2.0781ms)
+✔ Resume excludes recorded/foreign records and preserves UNKNOWN and not-recorded identity (0.4473ms)
+✔ Review quantity and SKU count remain distinct, missing source is not zero (0.5636ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 665.0057

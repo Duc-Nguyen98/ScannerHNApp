@@ -1,0 +1,291 @@
+{
+  "checks": [
+    {
+      "name": "Caps0/1/9/10/99/100/999/1000 retain exact count, source pages stay10",
+      "status": "PASS"
+    },
+    {
+      "name": "Reading across thresholds updates9+ to9 and99+ to99; raw counts preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "1000-source loads10 then20 without bulk DOM or unread changes",
+      "status": "PASS"
+    },
+    {
+      "name": "End has one truthful status, button is absent, unread is not cleared by loading",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown remains unknown; no fake zero or source truncation",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "n": 0,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 0,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 0,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 1,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 1,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 1,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 9,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 9,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 9,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 10,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 10,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 10,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 99,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 99,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 99,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 100,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 100,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 100,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 999,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 999,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 999,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 1000,
+      "viewport": [
+        494,
+        950
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 1000,
+      "viewport": [
+        360,
+        800
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    },
+    {
+      "n": 1000,
+      "viewport": [
+        1440,
+        900
+      ],
+      "badgeWidth": "22px",
+      "badgeHeight": "18px",
+      "inside": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": []
+}

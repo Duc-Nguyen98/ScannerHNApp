@@ -1,0 +1,6 @@
+"acceptance_id","behavior_status","integration_status","evidence","limits"
+"P10.A01","PASS_SAFE_BOUNDARY_ONLY","BLOCKED","tests/profile.test.mjs; evidence/revision-01/browser-results.json","Allowlist and readonly verified. Actual save and identity synchronization await profile contract; no success claimed."
+"P10.A02","PASS","BLOCKED","evidence/revision-01/browser-results.json","Six read-only UNKNOWN grants; real per-capability source pending."
+"P10.A03","PASS","NOT_RUN","evidence/revision-01/browser-results.json","UI Back/browser Back/Escape and discard keep or drop draft explicitly; no implicit send."
+"P10.A04","PASS_PENDING_INTENTS","BLOCKED","evidence/revision-01/browser-results.json; evidence/revision-01/home-regression/browser-results.json; evidence/revision-01/dialog-regression/browser-results.json","P11.S01/P11.S04/P14 caller context verified. Destination screens pending; logout P01 fixture independent from shift."
+"P10.A05","PASS_BLOCKED_FALLBACK","BLOCKED","tests/profile.test.mjs; evidence/revision-01/browser-results.json","Avatar unchanged on missing adapter; real upload/error integration NOT_RUN."

@@ -1,0 +1,355 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "S01/S03/S04: four viewports, fixed caller footer, no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry without source cannot claim success; modal Back/Escape/backdrop and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Contact uses missing-configuration guidance; no external message or role change",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 revoked fixture permission guards deep link and visible caller; restore only explicit fixture control",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 no auto camera request; denial and hardware error remain usable; NFC API missing is unsupported",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 caller DOM/input/scroll/focus survives system Back",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 owner UNKNOWN enters current P15/P17 boundary; read check settles same request, no record replay/inventory change",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 and A02: expire nulls auth, blocks nav/Back, reauthentication restores exact same-account draft",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P15.S01",
+      "viewport": [
+        494,
+        950
+      ],
+      "bodyOverflow": false,
+      "navTop": 875,
+      "bottom": 875,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 875,
+        "top": 0,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S01",
+      "viewport": [
+        360,
+        800
+      ],
+      "bodyOverflow": false,
+      "navTop": 637.6517944335938,
+      "bottom": 637.6517944335938,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 637.6517944335938,
+        "top": 0,
+        "right": 360,
+        "bottom": 637.6517944335938,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S01",
+      "viewport": [
+        430,
+        932
+      ],
+      "bodyOverflow": false,
+      "navTop": 761.6397094726562,
+      "bottom": 761.6397094726562,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 761.6397094726562,
+        "top": 0,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S01",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bodyOverflow": false,
+      "navTop": 828.9473876953125,
+      "bottom": 828.9473876953125,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 486,
+        "y": 0,
+        "width": 468,
+        "height": 828.9473876953125,
+        "top": 0,
+        "right": 954,
+        "bottom": 828.9473876953125,
+        "left": 486
+      }
+    },
+    {
+      "panel": "P15.S01",
+      "viewport": [
+        340,
+        420
+      ],
+      "bodyOverflow": false,
+      "navTop": 386.84210205078125,
+      "bottom": 386.84210205078125,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 386.84210205078125,
+        "top": 0,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      }
+    },
+    {
+      "panel": "P15.S03",
+      "viewport": [
+        494,
+        950
+      ],
+      "bodyOverflow": false,
+      "navTop": 875,
+      "bottom": 875,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 875,
+        "top": 0,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S03",
+      "viewport": [
+        360,
+        800
+      ],
+      "bodyOverflow": false,
+      "navTop": 637.6517944335938,
+      "bottom": 637.6517944335938,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 637.6517944335938,
+        "top": 0,
+        "right": 360,
+        "bottom": 637.6517944335938,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S03",
+      "viewport": [
+        430,
+        932
+      ],
+      "bodyOverflow": false,
+      "navTop": 761.6397094726562,
+      "bottom": 761.6397094726562,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 761.6397094726562,
+        "top": 0,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S03",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bodyOverflow": false,
+      "navTop": 828.9473876953125,
+      "bottom": 828.9473876953125,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 486,
+        "y": 0,
+        "width": 468,
+        "height": 828.9473876953125,
+        "top": 0,
+        "right": 954,
+        "bottom": 828.9473876953125,
+        "left": 486
+      }
+    },
+    {
+      "panel": "P15.S03",
+      "viewport": [
+        340,
+        420
+      ],
+      "bodyOverflow": false,
+      "navTop": 386.84210205078125,
+      "bottom": 386.84210205078125,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 386.84210205078125,
+        "top": 0,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      }
+    },
+    {
+      "panel": "P15.S04",
+      "viewport": [
+        494,
+        950
+      ],
+      "bodyOverflow": false,
+      "navTop": 875,
+      "bottom": 875,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 875,
+        "top": 0,
+        "right": 494,
+        "bottom": 875,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S04",
+      "viewport": [
+        360,
+        800
+      ],
+      "bodyOverflow": false,
+      "navTop": 637.6517944335938,
+      "bottom": 637.6517944335938,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 637.6517944335938,
+        "top": 0,
+        "right": 360,
+        "bottom": 637.6517944335938,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S04",
+      "viewport": [
+        430,
+        932
+      ],
+      "bodyOverflow": false,
+      "navTop": 761.6397094726562,
+      "bottom": 761.6397094726562,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 761.6397094726562,
+        "top": 0,
+        "right": 430,
+        "bottom": 761.6397094726562,
+        "left": 0
+      }
+    },
+    {
+      "panel": "P15.S04",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bodyOverflow": false,
+      "navTop": 828.9473876953125,
+      "bottom": 828.9473876953125,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 486,
+        "y": 0,
+        "width": 468,
+        "height": 828.9473876953125,
+        "top": 0,
+        "right": 954,
+        "bottom": 828.9473876953125,
+        "left": 486
+      }
+    },
+    {
+      "panel": "P15.S04",
+      "viewport": [
+        340,
+        420
+      ],
+      "bodyOverflow": false,
+      "navTop": 386.84210205078125,
+      "bottom": 386.84210205078125,
+      "navBg": "rgba(255, 255, 255, 0.98)",
+      "rect": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 386.84210205078125,
+        "top": 0,
+        "right": 279.1968688964844,
+        "bottom": 386.84210205078125,
+        "left": 60.796875
+      }
+    }
+  ],
+  "errors": []
+}

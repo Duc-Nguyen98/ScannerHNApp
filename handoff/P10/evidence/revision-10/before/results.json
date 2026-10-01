@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "name": "Compact-height account menu has disjoint hit areas for adjacent actions",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n3 !== 0\n",
+      "errors": []
+    },
+    {
+      "name": "Partially clipped avatar cannot project a hit area into the next form field",
+      "status": "PASS"
+    },
+    {
+      "name": "Closing software-keyboard viewport clears added blank scroll room even after Done",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n488 !== 0\n",
+      "errors": []
+    },
+    {
+      "name": "Avatar response is ignored when the route changes before the result arrives",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n",
+      "errors": []
+    },
+    {
+      "name": "Shift Back consumes the actual caller entry instead of re-opening Shift on native Back",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#hn-home:visible') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "Compact confirmation targets stay within their action footer, away from explanatory text",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid avatar then navigation away and re-entry does not resurrect an old dialog",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n",
+      "errors": []
+    }
+  ],
+  "passed": 2,
+  "failed": 5
+}

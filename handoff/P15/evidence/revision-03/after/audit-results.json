@@ -1,0 +1,38 @@
+{
+  "phase": "after",
+  "checks": [
+    {
+      "name": "F01 no-source guidance restores focus to its CTA",
+      "status": "PASS"
+    },
+    {
+      "name": "F02 pending camera keeps scroll and indicates busy without dropping focus",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 granted camera copy no longer asks user to grant again",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 denied NFC instructions specifically explain permissions",
+      "status": "PASS"
+    },
+    {
+      "name": "F05 read 403 activates caller guard, not just presentation",
+      "status": "PASS"
+    },
+    {
+      "name": "F06 camera action cannot run from detached/hidden panel",
+      "status": "PASS"
+    },
+    {
+      "name": "F07 closing system state consumes temporary history entry",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 no runtime browser errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,100 @@
+{
+  "id": "p12-stock-PX-0011",
+  "number": "PX-0011",
+  "type": "outbound",
+  "day": "2026-09-27",
+  "time": "09:20",
+  "partner": "Cửa hàng An Bình",
+  "status": "posted",
+  "warehouseId": "fixture-hoa-nam",
+  "warehouse": "Kho Hoa Nam",
+  "actor": "Lan Nguyễn",
+  "version": "p12-data-r02",
+  "note": "Giao hàng cho Cửa hàng An Bình. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+  "lines": [
+    {
+      "id": "p12-stock-PX-0011:line:0",
+      "name": "Đầu in ZD421",
+      "sku": "ZD421",
+      "quantity": 3,
+      "serialCount": 3,
+      "unit": "Cái",
+      "image": null,
+      "serials": [
+        "SN-ZD421-120011-1001",
+        "SN-ZD421-120011-1002",
+        "SN-ZD421-120011-1003"
+      ]
+    },
+    {
+      "id": "p12-stock-PX-0011:line:1",
+      "name": "Máy quét DS2208",
+      "sku": "DS2208",
+      "quantity": 4,
+      "serialCount": 4,
+      "unit": "Cái",
+      "image": null,
+      "serials": [
+        "SN-DS2208-120011-2001",
+        "SN-DS2208-120011-2002",
+        "SN-DS2208-120011-2003",
+        "SN-DS2208-120011-2004"
+      ]
+    }
+  ],
+  "historyRecordId": null,
+  "events": [
+    {
+      "id": "p12-stock-PX-0011:created",
+      "day": "2026-09-27",
+      "time": "08:00",
+      "label": "Tạo chứng từ",
+      "actor": "Lan Nguyễn",
+      "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+    },
+    {
+      "id": "p12-stock-PX-0011:checked",
+      "day": "2026-09-27",
+      "time": "08:15",
+      "label": "Kiểm tra sản phẩm",
+      "actor": "Lan Nguyễn",
+      "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+    },
+    {
+      "id": "p12-stock-PX-0011:sent",
+      "day": "2026-09-27",
+      "time": "09:20",
+      "label": "Gửi phiếu lên Web",
+      "actor": "Lan Nguyễn",
+      "description": "Phiếu đã gửi, chưa ghi sổ."
+    },
+    {
+      "id": "p12-stock-PX-0011:posted",
+      "day": "2026-09-27",
+      "time": "17:30",
+      "label": "Đã ghi sổ trên Web",
+      "actor": "Lan Nguyễn",
+      "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+    }
+  ],
+  "attachments": [
+    {
+      "id": "p12-px0011-receipt",
+      "title": "Phiếu xuất kho",
+      "kind": "receipt",
+      "name": "PhieuXuat_PX-0011.pdf",
+      "size": "PDF",
+      "pages": 1,
+      "url": "file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/documents/assets/PhieuXuat_PX-0011.pdf"
+    },
+    {
+      "id": "p12-px0011-handover",
+      "title": "Biên bản giao nhận",
+      "kind": "handover",
+      "name": "BienBanGiaoNhan_PX-0011.pdf",
+      "size": "PDF",
+      "pages": 1,
+      "url": "file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/documents/assets/BienBanGiaoNhan_PX-0011.pdf"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+✔ 18 unique user-requested choices include Other and produce explicit labels (1.4853ms)
+✔ Other is required, rejects whitespace and excessive length; cached description survives switching (29.7479ms)
+✔ Confirmation uses selected canonical label and excludes hidden Other text (30.4498ms)
+✔ Other custom description is confirmed exactly and survives UNKNOWN without blind retry (24.8416ms)
+✔ No request or writes for empty Other; busy/disposed guard fault selection (23.5158ms)
+✔ Per-case drafts survive A → B → A without crossing customers or result text (24.4462ms)
+✔ Completed results remain immutable when another dialog opens; unresolved same-case update is not success (63.4267ms)
+✔ Repair retry request stays stable after unrelated intake edits and another case visit (3.216ms)
+✔ Adapter rejection releases busy, retains UNKNOWN and forbids blind resubmit (1.6229ms)
+✔ Write-then-throw reconciles by exact request event without a second write (3.4186ms)
+✔ Unverified failed write remains UNKNOWN until matching source appears; reconcile never reposts (24.3438ms)
+✔ Dirty draft keeps observed version and cannot overwrite a changed case or another case ID (1.3208ms)
+✔ Stopped warehouse allows warranty reads while write guard and account permission still apply (0.8983ms)
+✔ A01 exact serial opens the same case; SKU/code never inferred; intake never posts components (10.7412ms)
+✔ A01 new serial intake keeps partner identity; duplicate request and duplicate serial do not create another case (47.2621ms)
+✔ A02 ledger filters POSTED and exact case, deduplicates ID, counts quantity separately from codes (0.3128ms)
+✔ A03 update receipt waits for confirmation; handover is not returned, history uses same source (2.2079ms)
+✔ A04 closed, permission, warehouse and expired session guards apply at handler and after await (26.0582ms)
+✔ A05 case switch cannot carry customer/serial/events or update fields (1.0274ms)
+✔ UNKNOWN blocks new writes and selection; reconcile keeps request/session/version and commits once (21.2438ms)
+✔ Failure retains update draft and request identity; stale version and dispose cannot commit (35.6216ms)
+✔ Repair update rejects whitespace/malformed/overlong values before requesting; accepts 200 characters (9.0504ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1220.304

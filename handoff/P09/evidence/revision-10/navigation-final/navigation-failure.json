@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "name": "Intake → lookup → header/browser Back restores exact draft/manual/scroll, never Home",
+      "status": "PASS"
+    },
+    {
+      "name": "Nested P06 product/stock/history Back follows its own steps then returns to P09",
+      "status": "PASS"
+    },
+    {
+      "name": "Choose serial in P06 returns to original intake, consumes bridge and keeps fields",
+      "status": "PASS"
+    },
+    {
+      "name": "Browser Back closes fault/filter/confirmation overlays before leaving the current step",
+      "status": "PASS"
+    }
+  ],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p09=\"back\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-p09=\"back\" class=\"p09-icon-button\" aria-label=\"Trở về màn trước\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"app-modal-host\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"app-modal-host\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    55 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"app-modal-host\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at back (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:12:46)\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:21:252\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:13:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:21:1",
+  "errors": []
+}

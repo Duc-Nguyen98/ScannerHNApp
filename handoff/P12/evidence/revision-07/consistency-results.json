@@ -1,0 +1,1507 @@
+{
+  "checks": [
+    {
+      "name": "History and Documents use identical rendered search/category/date/sort controls",
+      "status": "PASS"
+    },
+    {
+      "name": "One picker combines date/status; invalid range, Reset/Cancel/Apply/Clear preserve correct scopes",
+      "status": "PASS"
+    },
+    {
+      "name": "Sorting source/oldest/newest and keyboard category switching are functional",
+      "status": "PASS"
+    },
+    {
+      "name": "One header Back after repeated tabs restores list filters, scroll and original record focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Browser Back leaves detail in one step; Forward restores latest tab and product query",
+      "status": "PASS"
+    },
+    {
+      "name": "Direct/legacy deep link header Back returns to list rather than another tab",
+      "status": "PASS"
+    },
+    {
+      "name": "KPI caller retains waiting scope and Home remains separate from ordinary list state",
+      "status": "PASS"
+    },
+    {
+      "name": "PDF dialog browser Back closes only overlay; following header Back leaves document",
+      "status": "PASS"
+    },
+    {
+      "name": "Timeline waiting/posted/ready/returned labels correspond to actual lifecycle events",
+      "status": "PASS"
+    },
+    {
+      "name": "Unverified timeline never shows a success marker or fabricated event",
+      "status": "PASS"
+    },
+    {
+      "name": "Four detail tabs keep shared palette, single line,48px height and fixed dock across six viewports",
+      "status": "PASS"
+    }
+  ],
+  "measurements": [
+    {
+      "selector": ".p08-search",
+      "actual": {
+        "height": "50px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "12px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "50px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "12px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-search label",
+      "actual": {
+        "height": "50px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "10px",
+        "borderRadius": "10px",
+        "backgroundColor": "rgb(241, 248, 255)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "50px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "10px",
+        "borderRadius": "10px",
+        "backgroundColor": "rgb(241, 248, 255)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-search input",
+      "actual": {
+        "height": "46px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "normal",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "17px",
+        "lineHeight": "22.95px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "46px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "normal",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "17px",
+        "lineHeight": "22.95px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-search>button",
+      "actual": {
+        "height": "50px",
+        "paddingTop": "1px",
+        "paddingBottom": "1px",
+        "gap": "normal",
+        "borderRadius": "10px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(120deg, rgb(0, 126, 170), rgb(3, 72, 101))",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "50px",
+        "paddingTop": "1px",
+        "paddingBottom": "1px",
+        "gap": "normal",
+        "borderRadius": "10px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(120deg, rgb(0, 126, 170), rgb(3, 72, 101))",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-tabs button[aria-selected=true]",
+      "actual": {
+        "height": "44px",
+        "paddingTop": "12px",
+        "paddingBottom": "12px",
+        "gap": "normal",
+        "borderRadius": "10px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(120deg, rgb(0, 132, 169), rgb(0, 85, 116))",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "44px",
+        "paddingTop": "12px",
+        "paddingBottom": "12px",
+        "gap": "normal",
+        "borderRadius": "10px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(120deg, rgb(0, 132, 169), rgb(0, 85, 116))",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-tabs button[aria-selected=false]",
+      "actual": {
+        "height": "44px",
+        "paddingTop": "12px",
+        "paddingBottom": "12px",
+        "gap": "normal",
+        "borderRadius": "10px",
+        "backgroundColor": "rgb(237, 247, 254)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "44px",
+        "paddingTop": "12px",
+        "paddingBottom": "12px",
+        "gap": "normal",
+        "borderRadius": "10px",
+        "backgroundColor": "rgb(237, 247, 254)",
+        "backgroundImage": "none",
+        "color": "rgb(6, 21, 104)",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-filter-summary button",
+      "actual": {
+        "height": "44px",
+        "paddingTop": "10px",
+        "paddingBottom": "10px",
+        "gap": "8px",
+        "borderRadius": "10px",
+        "backgroundColor": "rgb(240, 247, 255)",
+        "backgroundImage": "none",
+        "color": "rgb(66, 101, 143)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "44px",
+        "paddingTop": "10px",
+        "paddingBottom": "10px",
+        "gap": "8px",
+        "borderRadius": "10px",
+        "backgroundColor": "rgb(240, 247, 255)",
+        "backgroundImage": "none",
+        "color": "rgb(66, 101, 143)",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-filter-summary button span",
+      "actual": {
+        "height": "22px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "normal",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(66, 101, 143)",
+        "fontSize": "15px",
+        "lineHeight": "22px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "22px",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "gap": "normal",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(66, 101, 143)",
+        "fontSize": "15px",
+        "lineHeight": "22px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "selector": ".p08-results-toolbar [aria-label^=\"Sắp xếp\"]",
+      "actual": {
+        "height": "44px",
+        "paddingTop": "1px",
+        "paddingBottom": "1px",
+        "gap": "4px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(0, 107, 145)",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      },
+      "reference": {
+        "height": "44px",
+        "paddingTop": "1px",
+        "paddingBottom": "1px",
+        "gap": "4px",
+        "borderRadius": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "color": "rgb(0, 107, 145)",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "400",
+        "boxShadow": "none"
+      }
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "tab": "info",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        24,
+        205.984375,
+        446,
+        48
+      ],
+      "columns": [
+        [
+          24,
+          97.515625
+        ],
+        [
+          125.515625,
+          131.671875
+        ],
+        [
+          261.1875,
+          107.28125
+        ],
+        [
+          372.46875,
+          97.53125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "tab": "products",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        24,
+        205.984375,
+        446,
+        48
+      ],
+      "columns": [
+        [
+          24,
+          97.515625
+        ],
+        [
+          125.515625,
+          131.671875
+        ],
+        [
+          261.1875,
+          107.28125
+        ],
+        [
+          372.46875,
+          97.53125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "tab": "files",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        24,
+        205.984375,
+        446,
+        48
+      ],
+      "columns": [
+        [
+          24,
+          97.515625
+        ],
+        [
+          125.515625,
+          131.671875
+        ],
+        [
+          261.1875,
+          107.28125
+        ],
+        [
+          372.46875,
+          97.53125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "tab": "events",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        24,
+        205.984375,
+        446,
+        48
+      ],
+      "columns": [
+        [
+          24,
+          97.515625
+        ],
+        [
+          125.515625,
+          131.671875
+        ],
+        [
+          261.1875,
+          107.28125
+        ],
+        [
+          372.46875,
+          97.53125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "tab": "info",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        17.489877700805664,
+        150.1100616455078,
+        325.0202331542969,
+        34.979766845703125
+      ],
+      "columns": [
+        [
+          17.489877700805664,
+          71.06401824951172
+        ],
+        [
+          91.4688720703125,
+          95.95521545410156
+        ],
+        [
+          190.3390655517578,
+          78.18067932128906
+        ],
+        [
+          271.4347229003906,
+          71.07537841796875
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "tab": "products",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        17.489877700805664,
+        150.1100616455078,
+        325.0202331542969,
+        34.979766845703125
+      ],
+      "columns": [
+        [
+          17.489877700805664,
+          71.06401824951172
+        ],
+        [
+          91.4688720703125,
+          95.95521545410156
+        ],
+        [
+          190.3390655517578,
+          78.18067932128906
+        ],
+        [
+          271.4347229003906,
+          71.07537841796875
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "tab": "files",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        17.489877700805664,
+        150.1100616455078,
+        325.0202331542969,
+        34.979766845703125
+      ],
+      "columns": [
+        [
+          17.489877700805664,
+          71.06401824951172
+        ],
+        [
+          91.4688720703125,
+          95.95521545410156
+        ],
+        [
+          190.3390655517578,
+          78.18067932128906
+        ],
+        [
+          271.4347229003906,
+          71.07537841796875
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "tab": "events",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        17.489877700805664,
+        150.1100616455078,
+        325.0202331542969,
+        34.979766845703125
+      ],
+      "columns": [
+        [
+          17.489877700805664,
+          71.06401824951172
+        ],
+        [
+          91.4688720703125,
+          95.95521545410156
+        ],
+        [
+          190.3390655517578,
+          78.18067932128906
+        ],
+        [
+          271.4347229003906,
+          71.07537841796875
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "tab": "info",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        20.890689849853516,
+        179.2981414794922,
+        388.2186279296875,
+        41.78138732910156
+      ],
+      "columns": [
+        [
+          20.890689849853516,
+          84.88201904296875
+        ],
+        [
+          109.2544937133789,
+          114.6131820678711
+        ],
+        [
+          227.34945678710938,
+          93.3824462890625
+        ],
+        [
+          324.21368408203125,
+          84.8956298828125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "tab": "products",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        20.890689849853516,
+        179.2981414794922,
+        388.2186279296875,
+        41.78138732910156
+      ],
+      "columns": [
+        [
+          20.890689849853516,
+          84.88201904296875
+        ],
+        [
+          109.2544937133789,
+          114.6131820678711
+        ],
+        [
+          227.34945678710938,
+          93.3824462890625
+        ],
+        [
+          324.21368408203125,
+          84.8956298828125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "tab": "files",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        20.890689849853516,
+        179.2981414794922,
+        388.2186279296875,
+        41.78138732910156
+      ],
+      "columns": [
+        [
+          20.890689849853516,
+          84.88201904296875
+        ],
+        [
+          109.2544937133789,
+          114.6131820678711
+        ],
+        [
+          227.34945678710938,
+          93.3824462890625
+        ],
+        [
+          324.21368408203125,
+          84.8956298828125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "tab": "events",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        20.890689849853516,
+        179.2981414794922,
+        388.2186279296875,
+        41.78138732910156
+      ],
+      "columns": [
+        [
+          20.890689849853516,
+          84.88201904296875
+        ],
+        [
+          109.2544937133789,
+          114.6131820678711
+        ],
+        [
+          227.34945678710938,
+          93.3824462890625
+        ],
+        [
+          324.21368408203125,
+          84.8956298828125
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "tab": "info",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        508.7368469238281,
+        195.14309692382812,
+        422.5263366699219,
+        45.47367858886719
+      ],
+      "columns": [
+        [
+          508.7368469238281,
+          92.38320922851562
+        ],
+        [
+          604.9095458984375,
+          124.74176025390625
+        ],
+        [
+          733.4407958984375,
+          101.6348876953125
+        ],
+        [
+          838.8651123046875,
+          92.3980712890625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "tab": "products",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        508.7368469238281,
+        195.14309692382812,
+        422.5263366699219,
+        45.47367858886719
+      ],
+      "columns": [
+        [
+          508.7368469238281,
+          92.38320922851562
+        ],
+        [
+          604.9095458984375,
+          124.74176025390625
+        ],
+        [
+          733.4407958984375,
+          101.6348876953125
+        ],
+        [
+          838.8651123046875,
+          92.3980712890625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "tab": "files",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        508.7368469238281,
+        195.14309692382812,
+        422.5263366699219,
+        45.47367858886719
+      ],
+      "columns": [
+        [
+          508.7368469238281,
+          92.38320922851562
+        ],
+        [
+          604.9095458984375,
+          124.74176025390625
+        ],
+        [
+          733.4407958984375,
+          101.6348876953125
+        ],
+        [
+          838.8651123046875,
+          92.3980712890625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "tab": "events",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        508.7368469238281,
+        195.14309692382812,
+        422.5263366699219,
+        45.47367858886719
+      ],
+      "columns": [
+        [
+          508.7368469238281,
+          92.38320922851562
+        ],
+        [
+          604.9095458984375,
+          124.74176025390625
+        ],
+        [
+          733.4407958984375,
+          101.6348876953125
+        ],
+        [
+          838.8651123046875,
+          92.3980712890625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "tab": "info",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        71.40740203857422,
+        91.06678009033203,
+        197.178955078125,
+        21.221046447753906
+      ],
+      "columns": [
+        [
+          71.40740203857422,
+          43.11217498779297
+        ],
+        [
+          116.28799438476562,
+          58.21282958984375
+        ],
+        [
+          176.2692413330078,
+          47.42961120605469
+        ],
+        [
+          225.46726989746094,
+          43.11909484863281
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "tab": "products",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        71.40740203857422,
+        91.06678009033203,
+        197.178955078125,
+        21.221046447753906
+      ],
+      "columns": [
+        [
+          71.40740203857422,
+          43.11217498779297
+        ],
+        [
+          116.28799438476562,
+          58.21282958984375
+        ],
+        [
+          176.2692413330078,
+          47.42961120605469
+        ],
+        [
+          225.46726989746094,
+          43.11909484863281
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "tab": "files",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        71.40740203857422,
+        91.06678009033203,
+        197.178955078125,
+        21.221046447753906
+      ],
+      "columns": [
+        [
+          71.40740203857422,
+          43.11217498779297
+        ],
+        [
+          116.28799438476562,
+          58.21282958984375
+        ],
+        [
+          176.2692413330078,
+          47.42961120605469
+        ],
+        [
+          225.46726989746094,
+          43.11909484863281
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "tab": "events",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        71.40740203857422,
+        91.06678009033203,
+        197.178955078125,
+        21.221046447753906
+      ],
+      "columns": [
+        [
+          71.40740203857422,
+          43.11217498779297
+        ],
+        [
+          116.28799438476562,
+          58.21282958984375
+        ],
+        [
+          176.2692413330078,
+          47.42961120605469
+        ],
+        [
+          225.46726989746094,
+          43.11909484863281
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "tab": "info",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        713.8411254882812,
+        203.8161163330078,
+        441.30523681640625,
+        47.49473571777344
+      ],
+      "columns": [
+        [
+          713.8411254882812,
+          96.4891357421875
+        ],
+        [
+          814.2881469726562,
+          130.285888671875
+        ],
+        [
+          948.5319213867188,
+          106.15191650390625
+        ],
+        [
+          1058.641845703125,
+          96.5045166015625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "tab": "products",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        713.8411254882812,
+        203.8161163330078,
+        441.30523681640625,
+        47.49473571777344
+      ],
+      "columns": [
+        [
+          713.8411254882812,
+          96.4891357421875
+        ],
+        [
+          814.2881469726562,
+          130.285888671875
+        ],
+        [
+          948.5319213867188,
+          106.15191650390625
+        ],
+        [
+          1058.641845703125,
+          96.5045166015625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "tab": "files",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        713.8411254882812,
+        203.8161163330078,
+        441.30523681640625,
+        47.49473571777344
+      ],
+      "columns": [
+        [
+          713.8411254882812,
+          96.4891357421875
+        ],
+        [
+          814.2881469726562,
+          130.285888671875
+        ],
+        [
+          948.5319213867188,
+          106.15191650390625
+        ],
+        [
+          1058.641845703125,
+          96.5045166015625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "tab": "events",
+      "height": 48,
+      "tabHeights": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "lineHeights": [
+        23,
+        23,
+        23,
+        23
+      ],
+      "dock": [
+        713.8411254882812,
+        203.8161163330078,
+        441.30523681640625,
+        47.49473571777344
+      ],
+      "columns": [
+        [
+          713.8411254882812,
+          96.4891357421875
+        ],
+        [
+          814.2881469726562,
+          130.285888671875
+        ],
+        [
+          948.5319213867188,
+          106.15191650390625
+        ],
+        [
+          1058.641845703125,
+          96.5045166015625
+        ]
+      ],
+      "overflow": false,
+      "shell": [
+        494,
+        950
+      ]
+    }
+  ],
+  "errors": [],
+  "visualAcceptance": "NOT_GRANTED"
+}

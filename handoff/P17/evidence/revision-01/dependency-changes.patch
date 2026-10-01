@@ -1,0 +1,345 @@
+--- before/docs/flows/auth-session/index.html
++++ after/docs/flows/auth-session/index.html
+@@ -24,6 +24,7 @@
+   <link rel="stylesheet" href="../shared/scan-entry.css?v=p09-r02">
+   <link rel="stylesheet" href="../history/category-colors.css?v=p08-r17">
+   <link rel="stylesheet" href="../system/style.css?v=p15-r01">
++  <link rel="stylesheet" href="../scan-exceptions/style.css?v=p17-r01">
+   <link rel="stylesheet" href="../shared/app-surfaces.css?v=20260927">
+   <link rel="stylesheet" href="../shared/action-dialog.css?v=hn-feedback-v1">
+   <link rel="stylesheet" href="../shared/operation-icons.css?v=hn-approved-v1">
+--- before/docs/flows/inbound/fixture-adapter.mjs
++++ after/docs/flows/inbound/fixture-adapter.mjs
+@@ -11,6 +11,7 @@
+     namespace: INBOUND_NAMESPACE, fixture: true,
+     reserveDocumentIdentity(doc){const m=/^fixture-inbound-0005(?:-run-(\d+))?$/.exec(doc?.documentId||'');if(m)generation=Math.max(generation,Number(m[1]||1));},
+     setOutcome(value) { outcome = value; },
++    canCheck() { return outcome !== 'status-unavailable'; },
+     metrics() { return { recordCalls: calls, inventoryDelta: 0 }; },
+     makeDocument(session) {
+       // Unique local run identities; PN-0005 remains the B04 display sample.
+@@ -23,13 +24,13 @@
+     },
+     validate(raw) {
+       const index = serials.indexOf(raw);
+-      return index < 0 ? { kind: 'invalid', reason: 'Mã chưa có trong nguồn sản phẩm fixture. P06/P17 chưa tích hợp.' }
++      return index < 0 ? { kind: 'invalid', reason: 'Không tìm thấy mã trong danh mục sản phẩm đang dùng.' }
+         : { kind: 'valid', raw, serial: serials[index], sku: index < 5 ? 'XP-420B' : index < 9 ? 'ZD421' : 'DS2208', quantity: 1 };
+     },
+     async record(request) {
+       calls++; const selected = outcome; await wait();
+-      if (selected === 'failed') return { kind: 'rejected' };
+-      if (selected === 'unknown') return { kind: 'unknown' };
++      if (selected === 'failed') return {kind:'rejected',request:structuredClone(request),retryAllowed:true};
++      if (['unknown','status-unavailable','not-recorded'].includes(selected)) return { kind: 'unknown' };
+       const receipt = { kind: 'recorded', request: structuredClone(request) };
+       receipts.set(request.requestId, receipt);
+       return selected === 'timeout-recorded' ? { kind: 'unknown' } : structuredClone(receipt);
+@@ -38,7 +39,7 @@
+       await wait();
+       const receipt = receipts.get(request.requestId);
+       if (receipt) return structuredClone(receipt);
+-      return { kind: outcome === 'not-recorded' ? 'not-recorded' : 'unknown' };
++      return { kind: outcome === 'not-recorded' ? 'not-recorded' : 'unknown', request:structuredClone(request), retryAllowed:outcome === 'not-recorded' };
+     },
+   };
+ }
+--- before/docs/flows/inbound/inbound-flow.mjs
++++ after/docs/flows/inbound/inbound-flow.mjs
+@@ -7,7 +7,7 @@
+ export function createInboundFlow({ adapter, getState, onChange = () => {}, onStopped = () => {}, timeoutMs = 4000 }) {
+   let disposed = false, sequence = 0, active = false;
+   const finishedRuns = [];
+-  const emptyRun = () => ({ step: 1, document: null, attempts: [], accepted: [], busy: false, unknown: false, request: null, recorded: false, outcome: null, message: '' });
++  const emptyRun = () => ({ step: 1, document: null, attempts: [], accepted: [], busy: false, unknown: false, request: null, recorded: false, outcome: null, message: '', exception:null });
+   let state = emptyRun();
+   const snapshot = () => structuredClone(state);
+   const emit = changes => { if (!disposed) { state = { ...state, ...changes }; onChange(snapshot()); } };
+@@ -30,7 +30,7 @@
+     if (!sessionOK()) { emit({ busy: false, unknown: true, message: 'Phiên đã thay đổi. Cần đối chiếu kết quả gửi; giữ nguyên phiếu.' }); return; }
+     if (result?.kind === 'recorded' && JSON.stringify(result.request) === JSON.stringify(state.request)) {
+       emit({ busy: false, unknown: false, recorded: true, outcome: 'recorded', step: 4, message: '' });
+-    } else if ((checking && result?.kind === 'not-recorded') || (!checking && result?.kind === 'rejected')) {
++    } else if (((checking && result?.kind === 'not-recorded') || (!checking && result?.kind === 'rejected')) && result.retryAllowed === true && JSON.stringify(result.request) === JSON.stringify(state.request)) {
+       emit({ busy: false, unknown: false, outcome: 'not-recorded', message: checking ? 'Đã xác nhận chưa ghi nhận. Có thể thử lại cùng yêu cầu.' : 'Phiếu chưa được ghi nhận. Dữ liệu được giữ nguyên.' });
+     } else emit({ busy: false, unknown: true, outcome: null, message: 'Chưa xác định kết quả gửi. Giữ nguyên phiếu và yêu cầu; kiểm tra trạng thái trước khi thử lại.' });
+   }
+@@ -39,6 +39,7 @@
+     if (checking ? !state.unknown : state.unknown || state.step !== 3 || !state.accepted.length) return false;
+     if (!checking && !metadataOK()) { emit({message:Object.values(fieldErrors())[0] || 'Thiếu thông tin định danh phiếu.'}); return false; }
+     if (adapter.fixture !== true) { emit({ message: 'Thiếu contract metadata/record/status đã duyệt. Chưa gửi phiếu.' }); return false; }
++    if (checking && (typeof adapter.check !== 'function' || adapter.canCheck?.() === false)) { emit({busy:false,unknown:true,message:'Chưa có nguồn tra trạng thái khả dụng. Giữ nguyên yêu cầu để đối chiếu Web.'}); return false; }
+     if (!state.request) state.request = { requestId: `${INBOUND_NAMESPACE}-request-${++sequence}`, document: structuredClone(state.document), lines: structuredClone(state.accepted) };
+     emit({ busy: true, outcome: null, message: checking ? 'Đang kiểm tra trạng thái…' : 'Đang gửi phiếu…' });
+     let timer, result;
+@@ -50,6 +51,7 @@
+   }
+   return {
+     snapshot,
++    canCheck() { return typeof adapter.check === 'function' && adapter.canCheck?.() !== false; },
+     restorePreview(checkpoint) {
+       if(disposed||state.document||adapter.fixture!==true||!canRestorePreview(checkpoint,getState(),INBOUND_NAMESPACE)||!Array.isArray(checkpoint.accepted)||!Array.isArray(checkpoint.attempts)||![1,2,3,4].includes(checkpoint.step))return false;
+       const copy=structuredClone(checkpoint);delete copy.operation;delete copy.source;delete copy.geography;
+@@ -106,15 +108,16 @@
+       if (state.message === fieldErrors().note) state.message = '';
+       state.document.note = String(value); return true;
+     },
++    dismissException() { if (!guard(false) || !state.exception) return false; emit({exception:null,message:''}); return true; },
+     next() {
+       if (!editable()) return false;
+       if (!metadataOK()) { emit({ message: Object.values(fieldErrors())[0] || 'Thiếu thông tin phiếu bắt buộc. Chưa thể tiếp tục.' }); return false; }
+       if (state.step === 1) emit({ step: 2, message: '' });
+-      else if (state.step === 2 && state.accepted.length) emit({ step: 3, message: '' });
++      else if (state.step === 2 && state.accepted.length) emit({ step: 3, message: '', exception:null });
+       else { emit({ message: 'Cần ít nhất một mã hợp lệ trước khi kiểm tra phiếu.' }); return false; }
+       return true;
+     },
+-    back() { if (state.busy || state.unknown || state.recorded || state.request || !guard(false)) return false; emit({ step: Math.max(1, state.step - 1), message: '' }); return true; },
++    back() { if (state.busy || state.unknown || state.recorded || state.request || !guard(false)) return false; emit({ step: Math.max(1, state.step - 1), message: '', exception:null }); return true; },
+     scan(raw, source = 'manual', time = new Date().toLocaleTimeString('vi-VN', { hour12: false })) {
+       if (!editable() || state.request || state.step !== 2 || !['manual', 'camera-fixture'].includes(source)) return false;
+       if (!metadataOK()) { emit({message:Object.values(fieldErrors())[0] || 'Thông tin phiếu chưa hợp lệ.'}); return false; }
+@@ -135,7 +138,7 @@
+       const accepted = kind === 'valid' ? [...state.accepted, { raw, sku: result.sku, quantity: result.quantity,
+         ...(typeof result.serial==='string'&&result.serial.trim()?{serial:result.serial}:{}),
+       }] : state.accepted;
+-      emit({ attempts: [...state.attempts, attempt], accepted, message: kind === 'invalid' ? result.reason : '' });
++      emit({ attempts: [...state.attempts, attempt], accepted, exception:kind==='invalid'?{panel:'P17.S01',raw,reason:result.reason}:null, message: kind === 'invalid' ? result.reason : '' });
+       return kind;
+     },
+     fixtureBatch() {
+--- before/docs/flows/inbound/inbound.mjs
++++ after/docs/flows/inbound/inbound.mjs
+@@ -1,3 +1,4 @@
++import {renderScanException} from '../scan-exceptions/view.mjs';
+ import {flowProgress,reviewTotals} from '../shared/flow-guidance.mjs';
+ import { createActionFeedback } from '../shared/action-feedback.mjs';
+ import { selectMarkup, mountSelectControls } from './select-control.mjs?v=p04-r07';
+@@ -47,7 +48,7 @@
+     }
+   }
+   const review = document.createElement('details'); review.className = 'p04-tools'; review.hidden = true;
+-  review.innerHTML = `<summary>Kịch bản kiểm tra P04 · 4 panel</summary><p>Fixture riêng, trong bộ nhớ tab; không kết nối WMS. Đóng/reload tab sẽ mất nháp. Mã PN-0005 và thời gian là mẫu B04, không phải giá trị server.</p><label>Kết quả gửi <select data-p04-outcome><option value="confirmed">Xác nhận record</option><option value="failed">Từ chối</option><option value="unknown">UNKNOWN</option><option value="timeout-recorded">Timeout nhưng đã record</option><option value="not-recorded">Kiểm tra: chưa record</option></select></label>${button('batch', 'Nạp 12 lượt quét B04 (fixture)')}<p>Camera và đèn thật chưa tích hợp. Nạp lượt quét dùng chung pipeline với Nhập tay. Các mã fixture: HN12345–HN12355.</p><pre data-p04-snapshot></pre>`;
++  review.innerHTML = `<summary>Kịch bản kiểm tra P04 · 4 panel</summary><p>Fixture riêng, trong bộ nhớ tab; không kết nối WMS. Đóng/reload tab sẽ mất nháp. Mã PN-0005 và thời gian là mẫu B04, không phải giá trị server.</p><label>Kết quả gửi <select data-p04-outcome><option value="confirmed">Xác nhận record</option><option value="failed">Từ chối</option><option value="unknown">UNKNOWN</option><option value="timeout-recorded">Timeout nhưng đã record</option><option value="not-recorded">Kiểm tra: chưa record</option><option value="status-unavailable">Thiếu nguồn tra trạng thái</option></select></label>${button('batch', 'Nạp 12 lượt quét B04 (fixture)')}<p>Camera và đèn thật chưa tích hợp. Nạp lượt quét dùng chung pipeline với Nhập tay. Các mã fixture: HN12345–HN12355.</p><pre data-p04-snapshot></pre>`;
+   tools.append(review);
+   const title = (head, sub) => `<div class="p04-section-title"><h2>${head}</h2><p>${sub}</p></div>`;
+   const row = (name, label, value, extra = '') => `<div class="p04-summary-row"><span class="p04-tile hn-operation-icon" data-hn-operation="${['document','box'].includes(name)?'inbound':'documents'}">${icon(name)}</span><div><small>${label}</small><strong>${esc(value)}</strong>${extra}</div></div>`;
+@@ -70,6 +71,11 @@
+     review.querySelector('[data-p04-snapshot]').textContent = JSON.stringify({ ...s, metrics: adapter.metrics() }, null, 2);
+     const count = s.accepted.reduce((n, row) => n + row.quantity, 0);
+     const contextCard = `<section class="p04-scan-context" aria-label="Phiếu đang nhập"><span class="hn-operation-icon" data-hn-operation="inbound" data-size="sm" aria-hidden="true">${icon('document')}</span><div><strong>${resuming?'Tiếp tục phiếu dở · ':''}${esc(d.number)}</strong><p>${esc(d.type)}</p><span class="p04-context-supplier" data-hn-readable="Nhà cung cấp của phiếu ${esc(d.number)}" data-hn-readable-kind="value">${esc(d.supplier)}</span>${resuming?`<small>Đã giữ ${s.accepted.length} mã hợp lệ</small>`:''}</div>${button('context','Chi tiết','p04-context-more')}</section>`;
++    if (s.unknown || s.exception) {
++      previousMessage=s.message;
++      renderScanException({root,owner:'p04',state:s,canCheck:flow.canCheck(),onSize});
++      return;
++    }
+     let body, footer;
+     if (s.step === 1) {
+       body = `${resuming?contextCard:''}${title('Thông tin phiếu nhập', 'Vui lòng nhập đầy đủ thông tin trước khi quét mã')}
+@@ -173,6 +179,7 @@
+     const s = flow.snapshot();
+     if (action === 'next') { if(s.step===1)Object.keys(flow.fieldErrors()).forEach(n=>touched.add(n)); if(!flow.next()){syncErrors();root.querySelector('[aria-invalid="true"]')?.focus();} }
+     else if (action === 'back') { if (s.step === 1 || s.step === 4) onBack(); else flow.back(); }
++    else if (action === 'exception-back' || action === 'exception-manual') { manual=action==='exception-manual'; if(!flow.dismissException())return; render(flow.snapshot()); root.querySelector(manual?'#p04-code':'[data-p04=manual]')?.focus({preventScroll:true}); }
+     else if (action === 'home') onHome();
+     else if (action === 'new-run') { feedback.clear(); flow.newRun(); }
+     else if (action === 'context') feedback.show({title:'Phiếu đang nhập',message:`Mã phiếu: ${s.document.number}\nLoại nhập: ${s.document.type}\nNhà cung cấp: ${s.document.supplier}\nMã NCC: ${s.document.supplierCode}\nKho: ${s.document.warehouseName}\n${s.accepted.length} mã hợp lệ · ${s.accepted.reduce((n,a)=>n+a.quantity,0)} sản phẩm`,confirmLabel:'Đóng',className:'hn-readable-dialog'});
+@@ -228,7 +235,7 @@
+     root.querySelector('#p04-code')?.focus();
+     if (codeError) root.querySelector('#p04-code')?.select();
+   });
+-  review.querySelector('select').addEventListener('change', event => adapter.setOutcome(event.target.value));
++  review.querySelector('select').addEventListener('change', event => {adapter.setOutcome(event.target.value);render(flow.snapshot());});
+   return {
+     flow,
+     show(context, options) { visible = true;resuming=leftWithDraft||resuming;leftWithDraft=false; review.hidden = false; if (!flow.start(context, options)) { visible = false; review.hidden = true; return false; } render(flow.snapshot()); return true; },
+--- before/docs/flows/nfc/nfc-flow.mjs
++++ after/docs/flows/nfc/nfc-flow.mjs
+@@ -26,6 +26,7 @@
+   update({busy:false,unknown:true,message:'Chưa xác định kết quả liên kết. Giữ UID và yêu cầu; kiểm tra kết quả trước khi thử lại.'});
+  }
+  return {
++  dismissException(){if(!scope()||state.busy||state.unknown||state.dependency?.panel!=='P17.S03')return false;update({panel:2,dependency:null,message:''});return true;},
+   snapshot,scope,product,list:()=>adapter.list(scope(),state),detail:id=>adapter.detail(scope(),id),readTags:()=>adapter.readTags(scope()),
+   canContinue:()=>!state.busy&&!state.unknown&&writeOK()&&adapter.capabilities().read===true&&!!product()&&!!state.read?.uid&&!['linked','locked'].includes(adapter.mapping(scope(),state.read?.uid)?.status),
+   resetFilters(){if(!scope())return false;update({query:'',tab:'all'});return true;},
+--- before/docs/flows/nfc/nfc.mjs
++++ after/docs/flows/nfc/nfc.mjs
+@@ -1,3 +1,4 @@
++import {renderScanException} from '../scan-exceptions/view.mjs';
+ import { openAppModal } from '../shared/app-modal.mjs';
+ import { createActionFeedback } from '../shared/action-feedback.mjs';
+ import { createDialogRoute } from '../shared/dialog-route.mjs';
+@@ -85,6 +86,7 @@
+  async function reconcile(){const previous=location.hash;await flow.reconcile();saveRoute(previous);}
+  function render({focus=true,notifyMessage=false}={}){
+   if(!active||disposed)return;detailModal?.close({restoreFocus:false});const s=flow.snapshot();
++  if(s.panel!==1&&s.dependency?.panel==='P17.S03'){screen.classList.add('p07-wizard');renderScanException({root,owner:'p07',state:s,tag:flow.detail(s.dependency.tagId),onSize});lastPanel=s.panel;updateTools();return;}
+   const oldScroll=root.querySelector('.p07-scroll')?.scrollTop||0,oldFocus=document.activeElement?.dataset.p07;
+   const same=lastPanel===s.panel;
+   screen.classList.toggle('p07-wizard',s.panel!==1);
+@@ -108,6 +110,8 @@
+   if(b.dataset.p07Tag){showDetail(b.dataset.p07Tag);return;}
+   if(b.dataset.p07Tab){listTop=0;flow.tab(b.dataset.p07Tab);root.querySelector(`[data-p07-tab="${b.dataset.p07Tab}"]`)?.focus({preventScroll:true});return;}
+   const a=b.dataset.p07,s=flow.snapshot();
++  if(a==='exception-detail'){const id=flow.snapshot().dependency?.tagId;if(id)showDetail(id);return;}
++  if(a==='exception-cancel'){if(flow.dismissException()){history.replaceState(history.state,'',hashFor(2));root.querySelector('h1')?.focus({preventScroll:true});}return;}
+   if(a==='begin'||a==='new-link')beginNext();
+   if(a==='back'){if(s.panel===1){onHome();return;}const parent=s.panel===4?1:s.panel-1;if(history.state?.p07From===hashFor(parent))history.back();else if(flow.panel(parent))history.replaceState(null,'',hashFor(parent));}
+   if(['product','change-product'].includes(a)&&!s.busy&&!s.unknown)onChooseProduct({itemId:s.itemId});
+--- before/docs/flows/outbound/fixture-adapter.mjs
++++ after/docs/flows/outbound/fixture-adapter.mjs
+@@ -26,6 +26,7 @@
+     namespace: OUTBOUND_NAMESPACE, fixture: true,
+     reserveDocumentIdentity(doc){const m=/^fixture-outbound-0005-(\d+)$/.exec(doc?.documentId||'');if(m)generation=Math.max(generation,Number(m[1]||1));},
+     setOutcome(value) { outcome = value; },
++    canCheck() { return outcome !== 'status-unavailable'; },
+     metrics() { return { recordCalls:calls, inventoryDelta:0, records:receipts.size }; },
+     makeDocument(session, sourceId = 'new') {
+       const source = OUTBOUND_SOURCES.find(s => s.id === sourceId);
+@@ -38,7 +39,7 @@
+         note:sourceId === 'board-0005' ? 'Xuất hàng theo đơn đặt hàng số\nDH-2026-0009 ngày 09/09/2026' : '' };
+     },
+     validate(raw, document) {
+-      if (raw === 'HN99999') return { kind:'blocked', reason:'Đã xuất hoặc đang thuộc phiếu khác.', product:{sku:'XP-420B',name:'Máy in nhiệt XP-420B',unit:'Cái'}, relatedDocument:{number:'PX-0004',status:'Đã ghi sổ',createdAt:'09/09/2026',readable:true} };
++      if (raw === 'HN99999') return { kind:'blocked', reason:'Sản phẩm đã được xuất theo phiếu PX-0004.', product:{code:'HN99999',sku:'XP-420B',name:'Máy in nhiệt XP-420B',unit:'Cái'}, relatedDocument:{type:'Xuất kho',number:'PX-0004',status:'Đã ghi sổ',createdAt:'09/09/2026',readable:true} };
+       if (raw === 'HN-WRONG-WAREHOUSE') return {kind:'invalid',reason:'Mã không thuộc kho đang thao tác (fixture).'};
+       if (!document?.warehouseId || !catalogue.has(raw)) return {kind:'invalid',reason:'Không tìm thấy mã hợp lệ trong nguồn sản phẩm fixture.'};
+       const group = OUTBOUND_GROUPS.find(g => g.id === document.groupId);
+@@ -48,14 +49,14 @@
+     async record(request) {
+       calls++; const selected=outcome; await wait();
+       if (receipts.has(request.requestId)) return structuredClone(receipts.get(request.requestId));
+-      if (selected === 'failed') return {kind:'rejected'};
+-      if (selected === 'unknown') return {kind:'unknown'};
++      if (selected === 'failed') return {kind:'rejected',request:structuredClone(request),retryAllowed:true};
++      if (['unknown','status-unavailable','not-recorded'].includes(selected)) return {kind:'unknown'};
+       const receipt={kind:'recorded',request:structuredClone(request), sentAt:'09/09/2026 14:32'};
+       receipts.set(request.requestId,receipt);
+       return selected === 'timeout-recorded' ? {kind:'unknown'} : structuredClone(receipt);
+     },
+     async check(request) {
+-      await wait(); return receipts.has(request.requestId) ? structuredClone(receipts.get(request.requestId)) : {kind:outcome==='not-recorded'?'not-recorded':'unknown'};
++      await wait(); return receipts.has(request.requestId) ? structuredClone(receipts.get(request.requestId)) : {kind:outcome==='not-recorded'?'not-recorded':'unknown',request:structuredClone(request),retryAllowed:outcome === 'not-recorded'};
+     },
+   };
+ }
+--- before/docs/flows/outbound/outbound-flow.mjs
++++ after/docs/flows/outbound/outbound-flow.mjs
+@@ -38,7 +38,7 @@
+     if (write && getState().session.warehouse.active !== true) { onStopped(); return false; }
+     return true;
+   }
+-  const editable = () => guard() && !state.busy && !state.unknown && !state.recorded && !state.exception;
++  const editable = () => guard() && !state.busy && !state.unknown && !state.recorded && state.exception?.panel!=='P17.S02';
+   function fieldErrors() {
+     const d = state.document, errors = outboundFieldErrors(d);
+     if(d && (!geo.provinces.some(p=>p.id===d.provinceId&&p.name===d.provinceName)||d.geographyVersion!==GEOGRAPHY_VERSION))errors.province='Vui lòng chọn Tỉnh/Thành phố hợp lệ.';
+@@ -57,7 +57,7 @@
+     if (!sessionOK()) { emit({ busy: false, unknown: true, message: 'Phiên đã thay đổi. Cần đối chiếu kết quả gửi; giữ nguyên phiếu.' }); return; }
+     if (result?.kind === 'recorded' && JSON.stringify(result.request) === JSON.stringify(state.request)) {
+       emit({ busy: false, unknown: false, recorded: true, sentAt: result.sentAt, outcome: 'recorded', step: 4, message: '' });
+-    } else if ((checking && result?.kind === 'not-recorded') || (!checking && result?.kind === 'rejected')) {
++    } else if (((checking && result?.kind === 'not-recorded') || (!checking && result?.kind === 'rejected')) && result.retryAllowed === true && JSON.stringify(result.request) === JSON.stringify(state.request)) {
+       emit({ busy: false, unknown: false, outcome: 'not-recorded', message: checking ? 'Đã xác nhận chưa ghi nhận. Có thể thử lại cùng yêu cầu.' : 'Phiếu chưa được ghi nhận. Dữ liệu được giữ nguyên.' });
+     } else emit({ busy: false, unknown: true, outcome: null, message: 'Chưa xác định kết quả gửi. Giữ nguyên phiếu và yêu cầu; kiểm tra trạng thái trước khi thử lại.' });
+   }
+@@ -67,6 +67,7 @@
+     if (!checking && !metadataOK()) { emit({ message: Object.values(fieldErrors())[0] || 'Thiếu thông tin định danh phiếu nguồn. Chưa thể gửi.' }); return false; }
+     if (!checking && state.accepted.reduce((n, l) => n + l.quantity, 0) !== state.document.planned) return false;
+     if (adapter.fixture !== true) { emit({ message: 'Thiếu contract metadata/record/status đã duyệt. Chưa gửi phiếu.' }); return false; }
++    if (checking && (typeof adapter.check !== 'function' || adapter.canCheck?.() === false)) { emit({busy:false,unknown:true,message:'Chưa có nguồn tra trạng thái khả dụng. Giữ nguyên yêu cầu để đối chiếu Web.'}); return false; }
+     if (!state.request) state.request = { requestId: `${OUTBOUND_NAMESPACE}-request-${++sequence}`, document: structuredClone(state.document), lines: structuredClone(state.accepted) };
+     emit({ busy: true, outcome: null, message: checking ? 'Đang kiểm tra trạng thái…' : 'Đang gửi phiếu…' });
+     let timer, result;
+@@ -78,6 +79,7 @@
+   }
+   return {
+     snapshot,
++    canCheck() { return typeof adapter.check === 'function' && adapter.canCheck?.() !== false; },
+     restorePreview(checkpoint) {
+       if(disposed||state.document||adapter.fixture!==true||!canRestorePreview(checkpoint,getState(),OUTBOUND_NAMESPACE)||!Array.isArray(checkpoint.accepted)||!Array.isArray(checkpoint.attempts)||![1,2,3,4].includes(checkpoint.step))return false;
+       const copy=structuredClone(checkpoint);delete copy.operation;delete copy.source;delete copy.geography;
+@@ -174,21 +176,24 @@
+       if (!editable()) return false;
+       if (!metadataOK()) { emit({ message: Object.values(fieldErrors())[0] || 'Thiếu thông tin định danh phiếu nguồn. Chưa thể tiếp tục.' }); return false; }
+       if (state.step === 1) emit({ step: state.returnToReview ? 3 : 2, returnToReview:false, message: '' });
+-      else if (state.step === 2 && state.accepted.length) emit({ step: 3, message: '' });
++      else if (state.step === 2 && state.accepted.length) emit({ step: 3, message: '',exception:null });
+       else { emit({ message: 'Cần ít nhất một mã hợp lệ trước khi kiểm tra phiếu.' }); return false; }
+       return true;
+     },
+-    back() { if (state.busy || state.unknown || state.recorded || state.exception || !guard(false)) return false; emit({ step: Math.max(1, state.step - 1), message: '' }); return true; },
++    back() { if (state.busy || state.unknown || state.recorded || state.exception?.panel==='P17.S02' || !guard(false)) return false; emit({ step: Math.max(1, state.step - 1), message: '', exception:null }); return true; },
+     scan(raw, source = 'manual', time = new Date().toLocaleTimeString('vi-VN', { hour12: false })) {
+       if (!editable() || state.request || state.step !== 2 || !['manual', 'camera-fixture'].includes(source)) return false;
+       if (!metadataOK()) { emit({message:Object.values(fieldErrors())[0] || 'Thông tin phiếu chưa hợp lệ.'}); return false; }
+       if (manualCodeError(raw)) { emit({ message: manualCodeError(raw) }); return false; }
+-      let result = adapter.validate(raw, state.document);
++      let result;
++      try { result=adapter.validate(raw,state.document); } catch { result=null; }
++      if(!result||!['valid','invalid','blocked'].includes(result.kind)||(result.kind==='valid'&&(result.raw!==raw||typeof result.sku!=='string'||!result.sku.trim()||!Number.isSafeInteger(result.quantity)||result.quantity<=0))) result={kind:'invalid',reason:'Chưa xác minh được mã sản phẩm. Vui lòng kiểm tra lại.'};
++      if(['invalid','blocked'].includes(result.kind)&&(typeof result.reason!=='string'||!result.reason.trim())) result={...result,reason:'Chưa xác định nguyên nhân từ nguồn kiểm tra mã.'};
+       if (result.kind === 'valid' && !state.accepted.some(row => row.raw === raw) && state.accepted.reduce((n,l) => n+l.quantity,0) + result.quantity > state.document.planned) result = { kind: 'invalid', reason: 'Đã đủ số lượng yêu cầu. Không thêm mã vượt kế hoạch.' }; // Raw is intentionally preserved, never uppercased/truncated.
+       const kind = result.kind === 'valid' && state.accepted.some(row => row.raw === raw) ? 'duplicate' : result.kind;
+       const attempt = { raw, source, time, kind, ...(result.reason ? { reason: result.reason } : {}) };
+       const accepted = kind === 'valid' ? [...state.accepted, { raw, sku: result.sku, quantity: result.quantity }] : state.accepted;
+-      emit({ attempts: [...state.attempts, attempt], accepted, exception: kind === 'blocked' ? { panel: 'P17.S02', raw, reason: result.reason, product: result.product, relatedDocument: result.relatedDocument, documentId: state.document.documentId, scanSessionId: state.document.scanSessionId, version: state.document.version } : null, message: kind === 'invalid' ? result.reason : '' });
++      emit({ attempts: [...state.attempts, attempt], accepted, exception: kind === 'blocked' ? { panel: 'P17.S02', raw, reason: result.reason, product: result.product, relatedDocument: result.relatedDocument, documentId: state.document.documentId, scanSessionId: state.document.scanSessionId, version: state.document.version } : kind==='invalid'?{panel:'P17.S01',raw,reason:result.reason}:null, message: kind === 'invalid' ? result.reason : '' });
+       return kind;
+     },
+     fixtureBatch() {
+--- before/docs/flows/outbound/outbound.mjs
++++ after/docs/flows/outbound/outbound.mjs
+@@ -1,4 +1,5 @@
+ import {filterAttempts, deliveryIsValid, createDraftExitGuard} from './experience.mjs';
++import {renderScanException} from '../scan-exceptions/view.mjs';
+ import {flowProgress,reviewTotals} from '../shared/flow-guidance.mjs';
+ import { createActionFeedback } from '../shared/action-feedback.mjs';
+ import { selectMarkup, mountSelectControls } from './select-control.mjs?v=p05-r09';
+@@ -67,7 +68,7 @@
+     }
+   }
+   const review = document.createElement('details'); review.className = 'p05-tools'; review.hidden = true;
+-  review.innerHTML = `<summary>Kịch bản kiểm tra P05 · 4 panel</summary><p>Fixture riêng, trong bộ nhớ tab; không kết nối WMS. Đóng/reload tab sẽ mất nháp. Mã PX-0005 và thời gian là mẫu B05, không phải giá trị server.</p><p>Danh mục địa giới: provinces.open-api.vn v1, trước 07/2025, có cấp Quận/Huyện. Chọn tỉnh → quận/huyện → địa chỉ chi tiết. Đổi tỉnh/quận sẽ xóa thông tin địa chỉ phụ thuộc.</p><label>Kết quả gửi <select data-p05-outcome><option value="confirmed">Xác nhận record</option><option value="failed">Từ chối</option><option value="unknown">UNKNOWN</option><option value="timeout-recorded">Timeout nhưng đã record</option><option value="not-recorded">Kiểm tra: chưa record</option></select></label>${button('batch', 'Nạp 7/10 + 1 trùng (fixture)')}<p>Phiếu mới mặc định 1; bộ mẫu 7/10 yêu cầu chọn PX-0005 mẫu 10 SP hoặc nhập số lượng 10 và nhóm Máy in nhiệt. Camera và đèn thật chưa tích hợp. Nạp lượt quét dùng chung pipeline với Nhập tay. Các mã fixture: HN12345–HN12354; bổ sung HN12352, HN12353, HN12354 bằng Nhập tay để đủ 10. HN99999: không thể xuất; HN-WRONG-WAREHOUSE: sai kho.</p><pre data-p05-snapshot></pre>`;
++  review.innerHTML = `<summary>Kịch bản kiểm tra P05 · 4 panel</summary><p>Fixture riêng, trong bộ nhớ tab; không kết nối WMS. Đóng/reload tab sẽ mất nháp. Mã PX-0005 và thời gian là mẫu B05, không phải giá trị server.</p><p>Danh mục địa giới: provinces.open-api.vn v1, trước 07/2025, có cấp Quận/Huyện. Chọn tỉnh → quận/huyện → địa chỉ chi tiết. Đổi tỉnh/quận sẽ xóa thông tin địa chỉ phụ thuộc.</p><label>Kết quả gửi <select data-p05-outcome><option value="confirmed">Xác nhận record</option><option value="failed">Từ chối</option><option value="unknown">UNKNOWN</option><option value="timeout-recorded">Timeout nhưng đã record</option><option value="not-recorded">Kiểm tra: chưa record</option><option value="status-unavailable">Thiếu nguồn tra trạng thái</option></select></label>${button('batch', 'Nạp 7/10 + 1 trùng (fixture)')}<p>Phiếu mới mặc định 1; bộ mẫu 7/10 yêu cầu chọn PX-0005 mẫu 10 SP hoặc nhập số lượng 10 và nhóm Máy in nhiệt. Camera và đèn thật chưa tích hợp. Nạp lượt quét dùng chung pipeline với Nhập tay. Các mã fixture: HN12345–HN12354; bổ sung HN12352, HN12353, HN12354 bằng Nhập tay để đủ 10. HN99999: không thể xuất; HN-WRONG-WAREHOUSE: sai kho.</p><pre data-p05-snapshot></pre>`;
+   tools.append(review);
+   const title = (head, sub) => `<div class="p05-section-title"><h2>${head}</h2><p>${sub}</p></div>`;
+   const row = (name, label, value, extra = '') => `<div class="p05-summary-row"><span class="p05-tile hn-operation-icon" data-hn-operation="${['document','up'].includes(name)?'outbound':'documents'}">${icon(name)}</span><div><small>${label}</small><strong>${esc(value)}</strong>${extra}</div></div>`;
+@@ -102,12 +103,13 @@
+     const frozen = !!s.request;
+     const shippingValid=deliveryIsValid(flow.fieldErrors());
+     if(!shippingValid)shippingOpen=true;
++    if (s.unknown || s.exception) {
++      previousMessage=s.message;
++      renderScanException({root,owner:'p05',state:s,canCheck:flow.canCheck(),onSize});
++      return;
++    }
+     let body, footer;
+-    if (s.exception) {
+-      const e = s.exception;
+-      body = `${warning('Mã không thể xuất', 'Sản phẩm này không thể xuất kho. Vui lòng kiểm tra thông tin bên dưới.')}<h2 class="p05-list-title">Nguyên nhân</h2><p class="p05-reason">${esc(e.reason)}</p><div class="p05-exception-card"><h2>${icon('box')} Thông tin sản phẩm</h2>${row('scan','Mã sản phẩm',e.raw)}${row('box','Tên sản phẩm',e.product?.name || 'Chưa xác định')}${row('box','Đơn vị tính',e.product?.unit || 'Chưa xác định')}</div>${e.relatedDocument?.readable ? `<div class="p05-exception-card"><h2>${icon('document')} Phiếu liên quan</h2>${row('document','Số phiếu',e.relatedDocument.number)}${row('up','Loại phiếu','Xuất kho')}${row('clock','Trạng thái',e.relatedDocument.status)}${row('calendar','Ngày tạo',e.relatedDocument.createdAt)}</div>` : ''}${info('Giữ nguyên phiếu đang soạn', '<p>Vui lòng quét mã khác để tiếp tục xuất kho.</p>')}`;
+-      footer = button('exception-back', `${icon('scan')} Quét mã khác`, 'p05-primary');
+-    } else if (s.step === 1) {
++    if (s.step === 1) {
+       body = `${title('Thông tin phiếu xuất', 'Kiểm tra và nhập thông tin giao hàng')}
+         ${frozen ? info('Thông tin phiếu đã khóa', '<p>Yêu cầu gửi đã được tạo. Giữ nguyên thông tin để đối chiếu hoặc thử lại cùng yêu cầu.</p>') : ''}
+         <label class="p05-field">Kho xuất<span class="p05-input locked">${icon('house')}<input aria-label="Kho xuất" value="${esc(d.warehouseName)}" readonly>${icon('lock')}</span></label>
+@@ -250,7 +252,7 @@
+         (invalid || root.querySelector('[data-p05="retry-provinces"], [data-p05="retry-districts"]') || root.querySelector('h1'))?.focus();
+       }
+     }
+-    else if (action === 'exception-back' || (action === 'back' && s.exception)) { codeValue='';codeError='';codeTone='idle';flow.dismissException(); manual = false; render(flow.snapshot()); root.querySelector('[data-p05="manual"]')?.focus(); }
++    else if (action === 'exception-back' || action === 'exception-manual' || (action === 'back' && s.exception)) { manual=action==='exception-manual';if(!flow.dismissException())return;render(flow.snapshot()); root.querySelector(manual?'#p05-code':'[data-p05=manual]')?.focus({preventScroll:true}); }
+     else if (action === 'edit-review') {shippingOpen=true;if(flow.editDelivery())root.querySelector('[data-p05-select="recipient"]')?.focus();}
+     else if (action === 'edit-shipping') setShipping(true,true);
+     else if (action === 'complete-shipping') {if(deliveryIsValid(flow.fieldErrors()))setShipping(false,true);}
+@@ -339,7 +341,7 @@
+     if (flow.snapshot().exception) root.querySelector('h1')?.focus(); else scanFocus();
+     if (codeError) root.querySelector('#p05-code')?.select();
+   });
+-  listen(review.querySelector('select'), 'change', event => adapter.setOutcome(event.target.value));
++  listen(review.querySelector('select'), 'change', event => {adapter.setOutcome(event.target.value);render(flow.snapshot());});
+   return {
+     flow,
+     show(context, options) { visible = true; review.hidden = false; if (!flow.start(context, options)) { visible = false; review.hidden = true; return false; } render(flow.snapshot()); void flow.loadProvinces(); return true; },

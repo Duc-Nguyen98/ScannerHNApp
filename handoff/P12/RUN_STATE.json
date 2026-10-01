@@ -1,0 +1,202 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P12",
+  "prompt_status": "P12_R10_POLISH_VISUAL_REVIEW_REQUIRED",
+  "remaining_panel_ids": [
+    "P12.S01",
+    "P12.S02",
+    "P12.S03",
+    "P12.S04"
+  ],
+  "next_action": "Review r10 screenshots and test search/keyboard/long identifiers/PDF slow-error-retry; preserve owner UNKNOWN reconciliation and P16/P17/P18 routes.",
+  "latest_revision": {
+    "id": "P12-r10",
+    "report": "handoff/P12/REVISION_10.md",
+    "comparison": "handoff/P12/evidence/revision-10/REVIEW.html",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PREVIEW",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "browser_groups": {
+      "polish": 8,
+      "attachment": 2,
+      "guidance_regression": 8,
+      "create_regression": 7,
+      "choice_regression": 1
+    },
+    "browser_total": 26,
+    "layout_observations": 36,
+    "scope": "Five reproduced defects: implicit search Apply, filtered counter, unbroken code overflow, escaped copy feedback, uncancellable silent PDF read. Keyboard focus repair included.",
+    "evidence": "handoff/P12/evidence/revision-10"
+  },
+  "implemented_panel_ids": [
+    "P12.S01",
+    "P12.S02",
+    "P12.S03",
+    "P12.S04"
+  ],
+  "blockers": [
+    "Visual user review pending; exact font and ZD421/DS2208 images unavailable",
+    "Production document/permission/API contract missing",
+    "Date edit policy unknown; readonly boundary retained",
+    "P12 r02 local test data and two local PDFs functional. Real WMS/P18 backend/hardware and exact product images remain unverified."
+  ],
+  "p12_revision_r01": {
+    "id": "P12-r01",
+    "report": "handoff/P12/REPORT.md",
+    "behavior_status": "PASS_PROTOTYPE",
+    "visual_status": "USER_REVIEW_PENDING",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_passed": 56,
+    "browser_groups": 18,
+    "history_regression_groups": 5,
+    "layout_captures": 24,
+    "dialog_captures": 6,
+    "legacy_home_inbound_suites": "NOT_PASS_STALE_INLINE_DEPENDENCY_ASSERTIONS",
+    "evidence": "handoff/P12/evidence/revision-01"
+  },
+  "p12_revision_r02": {
+    "id": "P12-r02",
+    "report": "handoff/P12/REVISION_02.md",
+    "visual_status": "USER_REVIEW_PENDING",
+    "behavior_status": "PASS_REALISTIC_TEST_DATA",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_passed": 59,
+    "browser_groups": 12,
+    "layout_cases": 24,
+    "documents": 24,
+    "pdfs": 2,
+    "evidence": "handoff/P12/evidence/revision-02",
+    "user_decision": "Realistic test data; no demo badge inside app. Not real WMS data."
+  },
+  "p12_revision_r03": {
+    "id": "P12-r03",
+    "report": "handoff/P12/REVISION_03.md",
+    "proposal": "handoff/P12/UI_UX_REVISION_03.md",
+    "scope": "P12 persistent4 tabs on S02/S03; shared P08/P09 style; explicit file empty state and timeline; per-document query/per-tab scroll",
+    "visual_status": "USER_REVIEW_PENDING",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "browser_groups": {
+      "tabs": 9,
+      "data_regression": 12
+    },
+    "browser_total": 21,
+    "viewport_cases": 48,
+    "node_tests": "NOT_RERUN_UI_ONLY;59/59 r02 retained",
+    "evidence": "handoff/P12/evidence/revision-03"
+  },
+  "p12_revision_r04": {
+    "id": "P12-r04",
+    "report": "handoff/P12/REVISION_04.md",
+    "scope": "Unified P12 tokens/typography/layout; PX-0011 two PDF files, open actual PDF and download",
+    "visual_status": "USER_REVIEW_PENDING",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_passed": 59,
+    "browser_groups": {
+      "theme_download": 6,
+      "tabs_regression": 9,
+      "data_regression": 12
+    },
+    "browser_total": 27,
+    "local_pdf_count": 4,
+    "new_pdfs": 2,
+    "evidence": "handoff/P12/evidence/revision-04",
+    "test_case": "PX-0011 -> Tài liệu (2)"
+  },
+  "p12_revision_r05": {
+    "id": "P12-r05",
+    "report": "handoff/P12/REVISION_05.md",
+    "scope": "Readable P12 spacing; bounded2-line note and3-line event preview with full text dialogs; long-name handling;200-char input policy retained",
+    "visual_status": "USER_REVIEW_PENDING",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_passed": 59,
+    "browser_groups": {
+      "text_spacing": 7,
+      "tabs_regression": 9,
+      "data_regression": 12
+    },
+    "browser_total": 28,
+    "evidence": "handoff/P12/evidence/revision-05",
+    "test_case": "PN-0010 -> Ghi chú -> Xem đầy đủ (749 characters)"
+  },
+  "p12_consistency_revision": {
+    "id": "P12-r07",
+    "report": "handoff/P12/REVISION_07.md",
+    "comparison": "handoff/P12/evidence/revision-07/REVIEW.md",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "visual_approved": false,
+    "behavior_status": "PASS_SCOPED_PREVIEW",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_passed": 41,
+    "browser_groups": {
+      "consistency": 11,
+      "tabs": 9,
+      "data": 12,
+      "text": 7,
+      "history_regression": 5
+    },
+    "browser_total": 44,
+    "evidence": "handoff/P12/evidence/revision-07",
+    "scope": "Shared History search/filter controls, stable counted detail tabs, page-level Back and evidence-backed timeline; four panel IDs retained"
+  },
+  "p12_create_revision": {
+    "id": "P12-r08",
+    "report": "handoff/P12/REVISION_08.md",
+    "comparison": "handoff/P12/evidence/revision-08/REVIEW.html",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "visual_approved": false,
+    "behavior_status": "PASS_SCOPED_PREVIEW",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "browser_groups": {
+      "create": 7,
+      "history_regression": 5,
+      "p09_choice": 1,
+      "text": 7
+    },
+    "browser_total": 20,
+    "node_tests": "NOT_RERUN_UI_ONLY; previous r07 evidence retained separately",
+    "evidence": "handoff/P12/evidence/revision-08",
+    "scope": "P12.S04 compact form/read-only metadata; shared picker form bounds repair; fixed supplier search and two-button footer"
+  },
+  "p12_guidance_revision": {
+    "id": "P12-r09",
+    "report": "handoff/P12/REVISION_09.md",
+    "comparison": "handoff/P12/evidence/revision-09/REVIEW.html",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PREVIEW",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_passed": 75,
+    "browser_groups": {
+      "guidance": 8,
+      "create_regression": 7,
+      "p09_choices": 1
+    },
+    "browser_total": 16,
+    "scope": "Five approved proposals: progress, supplier MRU/count, exact draft resume, review totals, validation/busy audit",
+    "evidence": "handoff/P12/evidence/revision-09",
+    "visual_limit": "P05 lacks before capture this revision; after provided without visual sign-off"
+  },
+  "p12_polish_revision": {
+    "id": "P12-r10",
+    "report": "handoff/P12/REVISION_10.md",
+    "comparison": "handoff/P12/evidence/revision-10/REVIEW.html",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PREVIEW",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "browser_groups": {
+      "polish": 8,
+      "attachment": 2,
+      "guidance_regression": 8,
+      "create_regression": 7,
+      "choice_regression": 1
+    },
+    "browser_total": 26,
+    "layout_observations": 36,
+    "scope": "Five reproduced defects: implicit search Apply, filtered counter, unbroken code overflow, escaped copy feedback, uncancellable silent PDF read. Keyboard focus repair included.",
+    "evidence": "handoff/P12/evidence/revision-10"
+  }
+}

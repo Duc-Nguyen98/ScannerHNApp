@@ -1,0 +1,155 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P16",
+  "prompt_status": "P16_R03_AUDIT_FIXED_VISUAL_REVIEW_PENDING",
+  "completed_panel_ids": [
+    "P16.S01",
+    "P16.S02",
+    "P16.S03",
+    "P16.S04"
+  ],
+  "remaining_panel_ids": [
+    "P18.S01",
+    "P18.S02",
+    "P18.S03",
+    "P18.S04",
+    "P19.S01",
+    "P19.S02",
+    "P19.S03",
+    "P19.S04",
+    "P20.S01",
+    "P20.S02",
+    "P20.S03",
+    "P20.S04",
+    "P21.S01",
+    "P21.S02",
+    "P21.S03",
+    "P21.S04",
+    "P22.S01",
+    "P22.S02",
+    "P22.S03",
+    "P22.S04",
+    "P23.S01",
+    "P23.S02",
+    "P23.S03",
+    "P23.S04",
+    "P24.S01",
+    "P24.S02",
+    "P24.S03",
+    "P24.S04"
+  ],
+  "next_action": "Review P16 r03 visual changes; startup transport performance and production integration remain unverified. Preserve latest P17/P18 work.",
+  "latest_revision": {
+    "id": "P16-r03",
+    "report": "handoff/P16/REVISION_03.md",
+    "review": "handoff/P16/REVIEW_03.html",
+    "evidence": "handoff/P16/evidence/revision-03",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_tests": 38,
+    "browser_completed_checks": 39,
+    "p17_regression": "7/7 PASS with assertion matched to current owner UI; source-file transport.",
+    "scope": "P16/P12 focus and long-query fixes; explicit startup recovery; preserve newer P17/P18 source"
+  },
+  "blockers": [
+    "Visual user review pending; no raster threshold/sign-off.",
+    "Production read, auth and permission contracts missing; adapter tests are fixtures."
+  ],
+  "artifact_paths": [
+    "handoff/P16/REPORT.md",
+    "handoff/P16/REVIEW.html",
+    "handoff/P16/evidence/revision-01",
+    "handoff/P16/REVISION_02.md",
+    "handoff/P16/REVIEW_02.html",
+    "handoff/P16/evidence/revision-02",
+    "handoff/P16/RECHECK_AFTER_P17.md",
+    "handoff/P16/REVIEW_CURRENT.html",
+    "handoff/P16/REVISION_03.md",
+    "handoff/P16/REVIEW_03.html",
+    "handoff/P16/evidence/revision-03"
+  ],
+  "shared_components_changed": [
+    "P16: read lifecycle and data-state view consumed only by P12; P12 controls dock/guard; Home passes existing P15 error callback. Locked footer/dialog components unchanged."
+  ],
+  "p16_revision_r02": {
+    "id": "P16-r02",
+    "report": "handoff/P16/REVISION_02.md",
+    "review": "handoff/P16/REVIEW_02.html",
+    "evidence": "handoff/P16/evidence/revision-02",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_tests": 38,
+    "browser_groups": {
+      "ux": 7,
+      "async_reads": 6,
+      "p12_tabs": 9,
+      "footer_viewports": 4
+    },
+    "scope": "Six user-authorized UX improvements; preserve 4 panels, scope cache, read-only retry and footer lock"
+  },
+  "recheck_after_p17": {
+    "ui_revision": "P16-r02",
+    "application_source_changed": false,
+    "report": "handoff/P16/RECHECK_AFTER_P17.md",
+    "review": "handoff/P16/REVIEW_CURRENT.html",
+    "evidence": "handoff/P16/evidence/recheck-after-p17",
+    "node_tests": 38,
+    "browser_groups": 15,
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION"
+  },
+  "accessibility_followup": {
+    "id": "P17-r02",
+    "report": "handoff/P17/REVISION_02.md",
+    "review": "handoff/P17/REVIEW_02.html",
+    "evidence": "handoff/P17/evidence/revision-02",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_tests": 122,
+    "browser_groups": {
+      "ux": 7,
+      "p17": 6,
+      "p16": 7,
+      "footer_viewports": 4
+    },
+    "scope": "Six user-authorized UX improvements in P16/P17; model/request/backend semantics unchanged"
+  },
+  "p16_revision_r03": {
+    "id": "P16-r03",
+    "report": "handoff/P16/REVISION_03.md",
+    "review": "handoff/P16/REVIEW_03.html",
+    "evidence": "handoff/P16/evidence/revision-03",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_tests": 38,
+    "browser_completed_checks": 39,
+    "p17_regression": "7/7 PASS with assertion matched to current owner UI; source-file transport.",
+    "scope": "P16/P12 focus and long-query fixes; explicit startup recovery; preserve newer P17/P18 source"
+  },
+  "p17_r03_touch_target_audit": {
+    "id": "P17-r03",
+    "report": "handoff/P17/REVISION_03.md",
+    "review": "handoff/P17/REVIEW_03.html",
+    "evidence": "handoff/P17/evidence/revision-03",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "fixed_findings": 7,
+    "audit_checks": 10,
+    "node_tests": 126,
+    "browser_groups": {
+      "p17_regression": 6,
+      "navigation_long_content": 5,
+      "footer_viewports": 4
+    },
+    "scope": "P16/P17 and direct P04/P05/P07 UI lifecycle; preserve other chats/P18 checkpoint"
+  }
+}

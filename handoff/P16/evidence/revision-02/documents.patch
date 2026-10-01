@@ -1,0 +1,128 @@
+--- r01
+
++++ r02
+
+@@ -32,3 +32,3 @@
+
+  let active=false,disposed=false,panel=1,docId=null,tab='info',query='',filters=initialFilters(),scenario='ready',modal=null,afterDialog=null,renderedHash='',renderedEntry='',busy=false,attachmentRequest=null;
+- let readOnlyPreview=false,rendering=false;
++ let readOnlyPreview=false,rendering=false,searchTimer=null,searchPending=false,composing=false,hasRead=false;
+  let kpiMode=false,recentMode=false,normalFilters=initialFilters(),backPending=false;
+@@ -48,3 +48,3 @@
+
+   if(busy||modal||backPending||(p===panel&&id===docId&&(p===3||t===tab)))return;
+-  remember();
++  remember();cancelSearch();dataRead.cancel();
+   const sameDocument=[2,3].includes(panel)&&[2,3].includes(p)&&id===docId;
+@@ -80,4 +80,27 @@
+
+  const dataRead=createDataRead({read:readList||readPreview,onChange:()=>{if(!rendering)refreshData();},onError:error=>{if(active&&!disposed)onSystemError(error,{read:async()=>{if(await loadList())return {kind:'verified'};throw dataRead.snapshot().error||new Error('Read unavailable');},intent:'read'});}});
+- function loadList(options){if(!active||disposed||panel!==1)return;return dataRead.load({scope:readScope(),filters:{...filters}},options);}
+- function listState(){const snapshot=dataRead.snapshot(),rows=snapshot.rows?selectDocuments(filters,snapshot.rows):[];return {snapshot,rows,kind:listDataState(snapshot,rows)};}
++ function cancelSearch(){clearTimeout(searchTimer);searchTimer=null;searchPending=false;}
++ function loadList(options){if(!active||disposed||panel!==1)return;cancelSearch();return dataRead.load({scope:readScope(),filters:{...filters}},options);}
++ function listState(){
++  const snapshot=searchPending?{status:'loading',rows:null,error:null}:dataRead.snapshot();
++  const rows=snapshot.rows?selectDocuments(filters,snapshot.rows):[];
++  if(snapshot.status==='ready')hasRead=true;
++  const kind=listDataState(snapshot,rows);
++  return {snapshot,rows,kind:searchPending||(hasRead&&kind==='loading'&&scenario!=='loading')?'searching':kind};
++ }
++ function scanAvailable(){const s=listState().snapshot;return !searchPending&&Array.isArray(s.rows);}
++ function syncScan(){
++  const scan=root.querySelector('.p12-list-controls [data-p12=scan]');if(!scan)return;
++  const available=scanAvailable();scan.setAttribute('aria-disabled',String(!available));
++  scan.title=available?'Tìm chứng từ bằng mã':'Danh sách chưa sẵn sàng để tìm bằng mã';
++  scan.setAttribute('aria-describedby','p16-scan-help');
++  root.querySelector('#p16-scan-help')?.remove();
++  {const hint=document.createElement('p');hint.id='p16-scan-help';hint.className='p16-scan-help';hint.textContent=available?'':'Chờ danh sách tải xong để tìm bằng mã.';scan.closest('.p12-list-controls').append(hint);}
++  if(available)scan.removeAttribute('aria-describedby');
++ }
++ function scheduleSearch(){
++  cancelSearch();dataRead.cancel();searchPending=true;refreshData();
++  if(!composing)searchTimer=setTimeout(()=>void loadList(),250);
++ }
++ function composition(e){if(e.target.id!=='p12-query')return;composing=e.type==='compositionstart';if(composing){cancelSearch();dataRead.cancel();searchPending=true;}else scheduleSearch();}
++
+  function refreshData(){
+@@ -85,5 +108,9 @@
+
+   const target=root.querySelector('.p12-records');if(!target)return;
+-  const scroll=root.querySelector('.p12-scroll'),y=scroll.scrollTop;
++  const scroll=root.querySelector('.p12-scroll'),y=scroll.scrollTop,rect=scroll.getBoundingClientRect(),scale=rect.height/scroll.clientHeight;
++  const anchor=[...target.querySelectorAll('[data-p12-doc]')].find(e=>e.getBoundingClientRect().bottom>rect.top);
++  const anchorId=anchor?.dataset.p12Doc,offset=anchor?anchor.getBoundingClientRect().top-rect.top:0,focusedId=document.activeElement?.dataset?.p12Doc;
+   const focusedAction=document.activeElement?.dataset?.p12;
+-  target.innerHTML=listRows();target.setAttribute('aria-busy',String(dataRead.snapshot().status==='loading'));refreshResultCount();scroll.scrollTop=y;
++  target.innerHTML=listRows();target.setAttribute('aria-busy',String(listState().snapshot.status==='loading'));refreshResultCount();scroll.scrollTop=y;
++  const same=anchorId&&target.querySelector(`[data-p12-doc="${CSS.escape(anchorId)}"]`);if(same&&scale>0)scroll.scrollTop+=(same.getBoundingClientRect().top-scroll.getBoundingClientRect().top-offset)/scale;
++  if(focusedId)target.querySelector(`[data-p12-doc="${CSS.escape(focusedId)}"]`)?.focus({preventScroll:true});
+   if(focusedAction==='retry'&&!root.contains(document.activeElement))root.querySelector('.p16-action,.p12-record,h1')?.focus({preventScroll:true});
+@@ -92,3 +119,3 @@
+
+   const {snapshot,rows,kind}=listState();
+-  const state=dataStateView({kind,query:filters.q,canCreate:canCreate(),errorCode:snapshot.error?.code});
++  const state=dataStateView({kind,query:filters.q,canCreate:canCreate(),errorCode:snapshot.error?.code,filters,types:TYPES,statuses:STATUSES});
+   return state+(['ready','refreshing','stale'].includes(kind)?rows.map(r=>`<button type="button" class="p12-record" data-p12-doc="${esc(r.id)}">${tile(r.type)}<span class="p12-record-copy"><strong>${esc(r.number)}</strong><span>${TYPES[r.type]}</span><small>${esc(r.partner)}</small></span><span class="p12-record-meta"><time>${date(r.day)} ${esc(r.time)}</time>${badge(r)}</span>${icon('chevron')}</button>`).join(''):'');
+@@ -102,3 +129,3 @@
+
+   const template=document.createElement('template');template.innerHTML=listControls();
+-  root.querySelector('.p08-results-toolbar')?.replaceWith(template.content.querySelector('.p08-results-toolbar'));
++  root.querySelector('.p08-results-toolbar')?.replaceWith(template.content.querySelector('.p08-results-toolbar'));syncScan();
+  }
+@@ -149,3 +176,3 @@
+
+   root.innerHTML=`<section class="p12-app" data-panel="P12.S0${panel}" data-detail="${isDetail}"><header class="p12-header">${button('back',icon('back'),'p12-back','aria-label="Quay lại"')}<h1 tabindex="-1">${title}</h1>${panel===1&&canCreate()?button('create',icon('x'),'p12-add','aria-label="Tạo chứng từ mới"'):''}</header><div class="p12-body">${panel===4?flowProgress(1):''}${dock}${panel===1?`<div class="p12-controls p12-list-controls">${listControls()}</div>`:''}<div class="p12-scroll" ${isDetail&&r?`id="p12-tab-content" role="tabpanel" tabindex="0" aria-labelledby="p12-tab-${activeTab}"`:''}>${content}</div>${panel===4?`<footer class="p12-footer">${button('continue',(form.type==='inbound'?'Tiếp tục thêm sản phẩm':form.type==='outbound'?'Tiếp tục thông tin xuất':'Tiếp nhận bảo hành')+' '+icon('arrow'),'p12-primary')}</footer>`:''}</div></section>`;
+-  root.querySelector('.p12-scroll').scrollTop=positions.get(key())||0;renderedHash=location.hash;renderedEntry=JSON.stringify(history.state);document.title=`P12 · ${title} · Prototype`;if(focus)root.querySelector('h1').focus({preventScroll:true});onSize();observeTextPreviews();
++  root.querySelector('.p12-scroll').scrollTop=positions.get(key())||0;renderedHash=location.hash;renderedEntry=JSON.stringify(history.state);document.title=`P12 · ${title} · Prototype`;if(focus)root.querySelector('h1').focus({preventScroll:true});onSize();observeTextPreviews();if(panel===1)syncScan();
+  }
+@@ -159,3 +186,3 @@
+
+  function scanDialog(){
+-  if(panel===1&&!Array.isArray(dataRead.snapshot().rows))return inform('Chưa thể tìm chứng từ','Danh sách chưa được tải thành công. Hãy thử lại sau khi dữ liệu sẵn sàng.');
++  if(panel===1&&!scanAvailable()){root.querySelector('[data-p12=scan]')?.focus({preventScroll:true});return;}
+   const inProducts=panel===3;customDialog(inProducts?'Tìm sản phẩm bằng mã':'Tìm chứng từ bằng mã',`<p>${inProducts?'Nhập SKU, serial hoặc mã sản phẩm thuộc chứng từ này.':'Nhập mã chứng từ hoặc dùng máy quét bàn phím.'}</p><form id="p12-scan-form"><label for="p12-scan-code">${inProducts?'SKU / Serial / Mã sản phẩm':'Mã chứng từ'}</label><input id="p12-scan-code" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="p12-scan-error"><p id="p12-scan-error" class="p12-error" role="alert"></p></form>`, '<button type="button" data-close>Hủy</button><button type="submit" form="p12-scan-form">Tìm mã</button>',d=>{
+@@ -181,2 +208,6 @@
+
+  async function onClick(e){if(!active)return;const b=e.target.closest('button');if(!b||!root.contains(b))return;
++  if(b.dataset.p16Remove){
++   const k=b.dataset.p16Remove;if(k==='q')filters.q='';if(k==='type')filters.type='all';if(k==='status')filters.status='all';if(k==='date'){filters.from='';filters.to='';}
++   positions.set('list',0);render();(root.querySelector('[data-p16-remove]')||root.querySelector('#p12-query'))?.focus({preventScroll:true});return;
++  }
+   if(b.dataset.p12Resume){if(!busy&&!modal)resumeDraft(b.dataset.p12Resume,b.dataset.resumeId);return;}
+@@ -204,4 +235,4 @@
+
+  }
+- function onInput(e){if(!active)return;if(e.target.id==='p12-query'){filters.q=e.target.value;saveListFilters();positions.set('list',0);root.querySelector('.p12-scroll').scrollTop=0;void loadList();}if(e.target.id==='p12-product-query'){query=e.target.value;queries.set(docId,query);root.querySelector('.p12-products').innerHTML=productRows(readDocument(docId));}if(e.target.id==='p12-note'){form.note=e.target.value;root.querySelector('.p12-counter').textContent=form.note.length+'/200 ký tự';}}
+- function onKey(e){const b=e.target.closest('[data-p12-tab],[data-p12-type]');if(!b||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=[...b.parentElement.children],i=tabs.indexOf(b),target=tabs[e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];target.click();}
++ function onInput(e){if(!active)return;if(e.target.id==='p12-query'){filters.q=e.target.value;saveListFilters();positions.set('list',0);root.querySelector('.p12-scroll').scrollTop=0;scheduleSearch();}if(e.target.id==='p12-product-query'){query=e.target.value;queries.set(docId,query);root.querySelector('.p12-products').innerHTML=productRows(readDocument(docId));}if(e.target.id==='p12-note'){form.note=e.target.value;root.querySelector('.p12-counter').textContent=form.note.length+'/200 ký tự';}}
++ function onKey(e){if(e.target.id==='p12-query'&&e.key==='Enter'){if(e.isComposing||composing)return;e.preventDefault();void loadList();return;}const b=e.target.closest('[data-p12-tab],[data-p12-type]');if(!b||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=[...b.parentElement.children],i=tabs.indexOf(b),target=tabs[e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];target.click();}
+ 
+@@ -221,2 +252,3 @@
+
+   }
++  if(panel!==1){cancelSearch();dataRead.cancel();}
+   if(panel===4&&!canCreate()){panel=1;history.replaceState({...history.state},'','#p02/documents');}
+@@ -227,5 +259,5 @@
+
+ 
+- root.addEventListener('click',onClick);root.addEventListener('input',onInput);root.addEventListener('keydown',onKey);review.querySelector('select').onchange=e=>setScenario(e.target.value);
++ root.addEventListener('click',onClick);root.addEventListener('input',onInput);root.addEventListener('keydown',onKey);root.addEventListener('compositionstart',composition);root.addEventListener('compositionend',composition);review.querySelector('select').onchange=e=>setScenario(e.target.value);
+  const dataTools=document.createElement('details');dataTools.className='p16-tools';dataTools.hidden=true;
+- dataTools.innerHTML='<summary>P16 · Trạng thái dữ liệu · r01</summary><p>Fixture chỉ đọc trên nguồn P12. Loading chờ 8 giây; lỗi không tự thành công khi retry. Không kết nối WMS. Reload đặt lại fixture.</p><button type="button" data-p16-demo="loading">P16.S01 · Đang tải</button><button type="button" data-p16-demo="empty">P16.S02 · Chưa có chứng từ</button><button type="button" data-p16-demo="no-results">P16.S03 · Không tìm thấy</button><button type="button" data-p16-demo="error">P16.S04 · Lỗi tải</button><button type="button" data-p16-demo="ready">Nguồn sẵn sàng</button><button type="button" data-p16-demo="stale">Lỗi cập nhật / giữ cache</button><button type="button" data-p16-demo="null">Response null</button><label><input type="checkbox" id="p16-readonly"> Chỉ xem (fixture thu hẹp quyền tạo)</label>';
++ dataTools.innerHTML='<summary>P16 · Trạng thái dữ liệu · r02</summary><p>Fixture chỉ đọc trên nguồn P12. Loading chờ 8 giây; lỗi không tự thành công khi retry. Không kết nối WMS. Reload đặt lại fixture.</p><button type="button" data-p16-demo="loading">P16.S01 · Đang tải</button><button type="button" data-p16-demo="empty">P16.S02 · Chưa có chứng từ</button><button type="button" data-p16-demo="no-results">P16.S03 · Không tìm thấy</button><button type="button" data-p16-demo="error">P16.S04 · Lỗi tải</button><button type="button" data-p16-demo="ready">Nguồn sẵn sàng</button><button type="button" data-p16-demo="stale">Lỗi cập nhật / giữ cache</button><button type="button" data-p16-demo="null">Response null</button><button type="button" data-p16-demo="refresh">Cập nhật chậm / giữ danh sách</button><button type="button" data-p16-demo="recover">Nguồn phục hồi / giữ vị trí</button><label><input type="checkbox" id="p16-readonly"> Chỉ xem (fixture thu hẹp quyền tạo)</label>';
+  tools.append(dataTools);
+@@ -233,3 +265,5 @@
+
+   if(!active||disposed||modal||busy)return;
+-    // Snapshot reset uses the controller's lifecycle; business data is never modified.
++    // Read-only preview updates use the same cache/context and preserve scroll.
++  if(value==='refresh'||value==='recover'){scenario=value==='refresh'?'loading':'ready';review.querySelector('select').value=scenario;void loadList({force:true});return;}
++  // Snapshot reset uses the controller's lifecycle; business data is never modified.
+   scenario=value==='no-results'?'ready':value==='stale'?'error':value;
+@@ -244,3 +278,3 @@
+
+  dataTools.querySelector('input').onchange=e=>{readOnlyPreview=e.target.checked;if(panel===4&&!canCreate()){panel=1;history.replaceState({...history.state},'','#p02/documents');}render();};
+- return {show,handleNavigation:()=>dialogRoute.navigation(close,()=>!!modal),hide(){remember();dataRead.cancel();dataTools.hidden=true;previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;busy=false;active=false;review.hidden=true;close();screen.classList.remove('p12-create-screen');},dispose(){disposed=true;dataRead.dispose();dataTools.remove();previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;active=false;dialogRoute.dispose();close();review.remove();root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('keydown',onKey);}};
++ return {show,handleNavigation:()=>dialogRoute.navigation(close,()=>!!modal),hide(){remember();cancelSearch();composing=false;dataRead.cancel();dataTools.hidden=true;previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;busy=false;active=false;review.hidden=true;close();screen.classList.remove('p12-create-screen');},dispose(){disposed=true;cancelSearch();dataRead.dispose();dataTools.remove();previewObserver.disconnect();attachmentRequest?.abort();attachmentRequest=null;active=false;dialogRoute.dispose();close();review.remove();root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('keydown',onKey);root.removeEventListener('compositionstart',composition);root.removeEventListener('compositionend',composition);}};
+ }

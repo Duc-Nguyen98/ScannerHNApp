@@ -1,0 +1,33 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "id": "P13-r07",
+  "report": "handoff/P13/REVISION_07.md",
+  "audit": "handoff/P13/AUDIT_REVISION_07.md",
+  "scope": "P13 UI/UX lifecycle audit:7 reproduced defects fixed; in-place async updates, focus/back restoration, overlay preservation, invalid S04 action guard.",
+  "implemented_panel_ids": [
+    "P13.S01",
+    "P13.S02",
+    "P13.S03",
+    "P13.S04"
+  ],
+  "migrated_panel_ids": [
+    "P13.S03",
+    "P13.S04"
+  ],
+  "visual_status": "R06_TEMPORARY_ACCEPTANCE_PRESERVED_AUDIT_STATES_REVIEW_PENDING",
+  "behavior_status": "PASS_AUDITED_PROTOTYPE",
+  "integration_status": "BLOCKED_PRODUCTION",
+  "node_passed": 21,
+  "browser_groups": {
+    "targeted_audit": 8,
+    "p13_regression": 14,
+    "pagination": 9,
+    "detail_nav": 5
+  },
+  "browser_total": 36,
+  "reproduced_defects_fixed": 7,
+  "evidence": "handoff/P13/evidence/revision-07",
+  "preview_test_origin": "http://127.0.0.1:8781"
+}

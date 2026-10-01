@@ -1,0 +1,10 @@
+{
+  "checks": [
+    {
+      "name": "P04/P05 current upgraded manual dimensions remain the source",
+      "status": "PASS"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Chưa có sản phẩm/. Input:\n\n'Chưa xác định sản phẩmQuét hoặc nhập serial để xem thông tin.'\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_scan.cjs:17:404\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_scan.cjs:8:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_scan.cjs:17:1",
+  "errors": []
+}

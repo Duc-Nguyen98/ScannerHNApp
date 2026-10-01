@@ -1,0 +1,412 @@
+{
+  "error": "locator.evaluate: Error: strict mode violation: locator('.hn-tools>details') resolved to 5 elements:\n    1) <details>…</details> aka getByText('Kịch bản kiểm tra P02Hiển th')\n    2) <details class=\"p03-tools\">…</details> aka getByText('Kịch bản kiểm tra P03 · 4 panel Fixture riêng, chỉ lưu trong bộ nhớ tab. Không')\n    3) <details hidden=\"\" class=\"p04-tools\">…</details> aka getByText('Kịch bản kiểm tra P04 · 4 panelFixture riêng, trong bộ nhớ tab; không kết nối')\n    4) <details hidden=\"\" class=\"p05-tools\">…</details> aka getByText('Kịch bản kiểm tra P05 · 4 panelFixture riêng, trong bộ nhớ tab; không kết nối')\n    5) <details hidden=\"\" class=\"p06-tools\">…</details> aka getByText('Kịch bản kiểm tra P06 · 4 panelDEMO — ảnh minh họa AI và dữ liệu mẫu, không phả')\n\nCall log:\n\u001b[2m  - waiting for locator('.hn-tools>details')\u001b[22m\n",
+  "checks": [
+    {
+      "name": "24 complete records, eight per operation, no demo badges in app",
+      "status": "PASS"
+    },
+    {
+      "name": "List query and scroll survive document Back with real long dataset",
+      "status": "PASS"
+    },
+    {
+      "name": "Scoped document code input accepts exact match and preserves inline validation",
+      "status": "PASS"
+    },
+    {
+      "name": "Serial lists reconcile quantity11/SKU3 and can be searched with keyboard scanner",
+      "status": "PASS"
+    },
+    {
+      "name": "Two PDFs preview and download actual bytes, no fake success or extra overlay",
+      "status": "PASS"
+    },
+    {
+      "name": "Direct PDF download and network failure retain context with real result handling",
+      "status": "PASS"
+    },
+    {
+      "name": "Every static stock document has actual lines and explicit event history",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 shared status updates P12 and exact case navigation remains read-only after return",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewports retain 494x950 shell; long lists scroll and short panels fit",
+      "status": "PASS"
+    },
+    {
+      "name": "Dialog focus/backdrop/Back work at small viewport and preserve entered data",
+      "status": "PASS"
+    },
+    {
+      "name": "P12 fresh inbound, record receipt, list merge and result Back preserve one owner draft",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 2605,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 2605,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 2605,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 2605,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 2605,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 2605,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 762,
+      "content": 762,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 762,
+      "content": 762,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 762,
+      "content": 762,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 762,
+      "content": 762,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 762,
+      "content": 762,
+      "width": 494,
+      "contentWidth": 494
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 762,
+      "content": 762,
+      "width": 494,
+      "contentWidth": 494
+    }
+  ],
+  "errors": []
+}

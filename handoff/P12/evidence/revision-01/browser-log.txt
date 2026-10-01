@@ -1,0 +1,19 @@
+PASS A01 correct type/query/partner/status scope and distinct badges
+PASS A01 shared filter dates validate, cancel is draft-only, apply combines scope
+PASS A01 loading/empty/error/retry use same list without mutation
+PASS A01 sorting is applied explicitly
+PASS A03 detail preserves document context through file dialog and Back
+PASS A02 quantity11/SKU3, scoped search, immutable row detail
+PASS A05 posted documents expose no approve/post/delete/edit controls; unknown lines remain unknown
+PASS All four panels fit without extra scroll across six viewports; capture geometry
+PASS A04 supplier dialog keyboard/backdrop/Escape and metadata stays in P12 until continuing
+PASS A04 inbound uses sole P04 draft and continues scan; returning preserves form and existing draft
+PASS A04 outbound reuses P05 required metadata; warranty reaches P09 intake
+PASS P04 verified receipt opens exact P12 document with live lines; no draft or duplicate record
+PASS P05 verified receipt reaches P12 by ID; unknown date/serial stays unknown, no inventory delta
+PASS Action dialog traps focus, restores trigger, Back/Escape closes before route; six sizes
+PASS Copy result appears only after clipboard verification and has no fake cancel
+PASS Long content remains internally scrollable, header/nav fixed; list Back restores scroll
+PASS Real long-list fixture pagination scope preserves query and scroll on detail Back
+PASS Logout followed by browser Back cannot restore P12 authenticated route
+18 groups PASS

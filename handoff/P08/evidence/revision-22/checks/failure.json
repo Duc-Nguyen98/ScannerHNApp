@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "name": "history-general: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "history-daily: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "documents: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "nfc: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "warranty: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "sessions: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Today navigates only; quick-range uses click-time VN day; validation and native Back retain committed state",
+      "status": "PASS"
+    },
+    {
+      "name": "Six independent in-session contexts retain query/date/sort/loaded rows/scroll when reopened from hub",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty/no-match/error sources distinct; recovery retains operation and sort",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewport dialogs: footer accessible at either scroll end, 44px targets, no horizontal overflow or autofocus input",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.waitFor: Error: strict mode violation: locator('.hn-action-dialog') resolved to 2 elements:\n    1) <dialog open=\"\" aria-modal=\"true\" data-tone=\"success\" class=\"p07-dialog hn-action-dialog \" aria-labelledby=\"hn-action-15ea6196-8d4c-4b7b-9971-288dd58dfa21\" aria-describedby=\"hn-action-15ea6196-8d4c-4b7b-9971-288dd58dfa21-message\">…</dialog> aka getByRole('dialog', { name: 'Đã sao chép mã' })\n    2) <dialog id=\"hn-name-dialog\" aria-describedby=\"hn-full-name\" aria-labelledby=\"hn-name-dialog-title\" class=\"p07-dialog hn-action-dialog hn-name-dialog\">…</dialog> aka getByLabel('Tên đầy đủ')\n\nCall log:\n\u001b[2m  - waiting for locator('.hn-action-dialog') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:51:543\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:10:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:50:2"
+}

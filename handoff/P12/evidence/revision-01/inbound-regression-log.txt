@@ -1,0 +1,16 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.textContent: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('.p04-feedback')
+
+    at C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_inbound.cjs:27:386
+    at async check (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_inbound.cjs:11:32)
+    at async C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_inbound.cjs:27:2 {
+  log: [ "  - waiting for locator('.p04-feedback')" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

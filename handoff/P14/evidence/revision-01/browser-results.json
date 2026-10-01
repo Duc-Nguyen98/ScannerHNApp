@@ -1,0 +1,510 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "A01 recovery route, no extra credential/OTP fields; required username",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 recovery failure stays on form, text retained; modal Back/trap/backdrop",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 missing integration blocks receipt and no account existence disclosure",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 successful fixture receipt uses username/system ID/time; fits six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "long250/2000 usernames safely render, full reader retains Unicode and HTML text",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 profile reaches S03; one real preview draft blocks end",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 continue opens exact P04 draft and Back retains it",
+      "status": "PASS"
+    },
+    {
+      "name": "save confirmation Cancel and Escape preserve blocked shift",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 failed draft save retains source ID and blocks end",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 save timeout blocks retry; reconciliation keeps request and unlocks end",
+      "status": "PASS"
+    },
+    {
+      "name": "saved draft edited in P04 becomes unfinished again",
+      "status": "PASS"
+    },
+    {
+      "name": "end failure leaves summary closed and saved draft intact",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 verified end shows aggregate30, preserves one draft and auth, fixed Home CTA",
+      "status": "PASS"
+    },
+    {
+      "name": "summary header, Home CTA and locked menu stay fixed while scrolling",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout then Back/deep-link cannot restore summary or auth",
+      "status": "PASS"
+    },
+    {
+      "name": "late recovery response after Back does not reopen receipt",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P14.S01",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S01",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S01",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S01",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S01",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S01",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S02",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S02",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S02",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S02",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S02",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S02",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        862,
+        862
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S03",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        787,
+        787
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S03",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        787,
+        787
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S03",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        787,
+        787
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S03",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        787,
+        787
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S03",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        787,
+        787
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S03",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        787,
+        787
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S04",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        695,
+        810
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S04",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        695,
+        810
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S04",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        695,
+        810
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S04",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        695,
+        810
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S04",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        695,
+        810
+      ],
+      "within": true
+    },
+    {
+      "panel": "P14.S04",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "scroller": [
+        494,
+        494,
+        695,
+        810
+      ],
+      "within": true
+    }
+  ],
+  "pageErrors": [],
+  "viewportUnit": "CSS px",
+  "DPR": 1,
+  "zoom": 1,
+  "font": "Arial",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "hardwareKeyboard": "NOT_RUN; viewport340x420 simulation only"
+}

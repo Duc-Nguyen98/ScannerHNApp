@@ -1,0 +1,243 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Receipt three columns and date; native clipboard gets exact complete ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewport geometries: aligned columns,44px copy,56px dock, short content no scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Clipboard denied/unavailable uses one failure dialog with source ID; Back/focus/backdrop",
+      "status": "PASS"
+    },
+    {
+      "name": "Long 250 source values:2 lines, full reader, exact copy, stable dock and no HTML injection",
+      "status": "PASS"
+    },
+    {
+      "name": "Long 2200 source values:2 lines, full reader, exact copy, stable dock and no HTML injection",
+      "status": "PASS"
+    },
+    {
+      "name": "Pinned login CTA returns to login; Back never fabricates a receipt",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "within": true,
+      "labels": [
+        99,
+        99,
+        99
+      ],
+      "values": [
+        99,
+        99,
+        99
+      ],
+      "button": [
+        44,
+        44
+      ],
+      "copyCentered": true,
+      "scroll": [
+        494,
+        494,
+        770,
+        770
+      ],
+      "dockBelow": true,
+      "ctaHeight": 56,
+      "dividerLeft": "58px"
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "within": true,
+      "labels": [
+        72.14574432373047,
+        72.14574432373047,
+        72.14574432373047
+      ],
+      "values": [
+        72.14574432373047,
+        72.14574432373047,
+        72.14574432373047
+      ],
+      "button": [
+        44,
+        44
+      ],
+      "copyCentered": true,
+      "scroll": [
+        494,
+        494,
+        770,
+        770
+      ],
+      "dockBelow": true,
+      "ctaHeight": 56,
+      "dividerLeft": "58px"
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "within": true,
+      "labels": [
+        86.1740951538086,
+        86.1740951538086,
+        86.1740951538086
+      ],
+      "values": [
+        86.1740951538086,
+        86.1740951538086,
+        86.1740951538086
+      ],
+      "button": [
+        44,
+        44
+      ],
+      "copyCentered": true,
+      "scroll": [
+        494,
+        494,
+        770,
+        770
+      ],
+      "dockBelow": true,
+      "ctaHeight": 56,
+      "dividerLeft": "58px"
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "within": true,
+      "labels": [
+        579.7894897460938,
+        579.7894897460938,
+        579.7894897460938
+      ],
+      "values": [
+        579.7894897460938,
+        579.7894897460938,
+        579.7894897460938
+      ],
+      "button": [
+        44,
+        44
+      ],
+      "copyCentered": true,
+      "scroll": [
+        494,
+        494,
+        770,
+        770
+      ],
+      "dockBelow": true,
+      "ctaHeight": 56,
+      "dividerLeft": "58px"
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "within": true,
+      "labels": [
+        104.56529235839844,
+        104.56529235839844,
+        104.56529235839844
+      ],
+      "values": [
+        104.56529235839844,
+        104.56529235839844,
+        104.56529235839844
+      ],
+      "button": [
+        44,
+        44
+      ],
+      "copyCentered": true,
+      "scroll": [
+        494,
+        494,
+        770,
+        770
+      ],
+      "dockBelow": true,
+      "ctaHeight": 56,
+      "dividerLeft": "58px"
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "within": true,
+      "labels": [
+        788.0516357421875,
+        788.0516357421875,
+        788.0516357421875
+      ],
+      "values": [
+        788.0516357421875,
+        788.0516357421875,
+        788.0516357421875
+      ],
+      "button": [
+        44,
+        44
+      ],
+      "copyCentered": true,
+      "scroll": [
+        494,
+        494,
+        770,
+        770
+      ],
+      "dockBelow": true,
+      "ctaHeight": 56,
+      "dividerLeft": "58px"
+    }
+  ],
+  "errors": [],
+  "sourceInjection": "Long receipt IDs only in isolated browser route override; production files and fixture adapter unchanged."
+}

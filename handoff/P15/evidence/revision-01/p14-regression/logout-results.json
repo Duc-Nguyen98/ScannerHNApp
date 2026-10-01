@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Summary replaces Home CTA with History + existing P10 logout; six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "History opens existing P08; nested Back and return preserve summary, count, scroll, focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout confirms once; Cancel/Back/Escape/backdrop preserve summary and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed logout reaches login; Back cannot revive protected session or late P14 handlers",
+      "status": "PASS"
+    },
+    {
+      "name": "Same-account login restores exact draft ID and note into owner",
+      "status": "PASS"
+    },
+    {
+      "name": "Reload deliberately resets prototype retained data and requires login",
+      "status": "PASS"
+    },
+    {
+      "name": "Retention failure keeps session and summary; does not claim logout success",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "labels": [
+        "Xem lịch sử",
+        "Đăng xuất"
+      ],
+      "heights": [
+        56,
+        56
+      ],
+      "within": true,
+      "widths": [
+        446,
+        446
+      ],
+      "background": "rgb(180, 35, 24)",
+      "noOverflow": true
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "labels": [
+        "Xem lịch sử",
+        "Đăng xuất"
+      ],
+      "heights": [
+        56,
+        56
+      ],
+      "within": true,
+      "widths": [
+        446,
+        446
+      ],
+      "background": "rgb(180, 35, 24)",
+      "noOverflow": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "labels": [
+        "Xem lịch sử",
+        "Đăng xuất"
+      ],
+      "heights": [
+        56,
+        56
+      ],
+      "within": true,
+      "widths": [
+        446,
+        446
+      ],
+      "background": "rgb(180, 35, 24)",
+      "noOverflow": true
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "labels": [
+        "Xem lịch sử",
+        "Đăng xuất"
+      ],
+      "heights": [
+        56,
+        56
+      ],
+      "within": true,
+      "widths": [
+        446,
+        446
+      ],
+      "background": "rgb(180, 35, 24)",
+      "noOverflow": true
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "labels": [
+        "Xem lịch sử",
+        "Đăng xuất"
+      ],
+      "heights": [
+        56,
+        56
+      ],
+      "within": true,
+      "widths": [
+        446,
+        446
+      ],
+      "background": "rgb(180, 35, 24)",
+      "noOverflow": true
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "labels": [
+        "Xem lịch sử",
+        "Đăng xuất"
+      ],
+      "heights": [
+        56,
+        56
+      ],
+      "within": true,
+      "widths": [
+        446,
+        446
+      ],
+      "background": "rgb(180, 35, 24)",
+      "noOverflow": true
+    }
+  ],
+  "errors": []
+}

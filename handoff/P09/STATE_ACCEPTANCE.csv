@@ -1,0 +1,6 @@
+id,condition,visual,behavior,integration,evidence,limitation
+P09.A01,Exact serial opens existing or creates sample case without component issue,IN_PROGRESS,PASS,BLOCKED,tests/warranty.test.mjs; evidence/revision-01/browser-results.json,Production intake and serial/customer contract unavailable
+P09.A02,Only exact-case POSTED documents counted with drafts excluded,IN_PROGRESS,PASS,BLOCKED,tests/warranty.test.mjs; evidence/revision-01/browser-results.json,Snapshot of latest legacy fixture page; production ledger and draft resume pending
+P09.A03,Confirmed update waits for handover and never closes case,IN_PROGRESS,PASS,BLOCKED,tests/warranty.test.mjs; evidence/revision-01/P09-S04-494x1000.png,Adapter fixture receipt only; real update/close policy pending
+P09.A04,Closed case cannot update or issue through handler or deep link,IN_PROGRESS,PASS,BLOCKED,tests/warranty.test.mjs; evidence/revision-01/closed-case.png,Backend guards not verified; P19 write route pending for every case
+P09.A05,Case selection isolates customer serial timeline and update draft,IN_PROGRESS,PASS,BLOCKED,tests/warranty.test.mjs; evidence/revision-01/browser-results.json,Shared in-memory design source; no production event calls

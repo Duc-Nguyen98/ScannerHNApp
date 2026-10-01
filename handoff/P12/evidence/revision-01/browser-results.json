@@ -1,0 +1,463 @@
+{
+  "checks": [
+    {
+      "name": "A01 correct type/query/partner/status scope and distinct badges",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 shared filter dates validate, cancel is draft-only, apply combines scope",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 loading/empty/error/retry use same list without mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 sorting is applied explicitly",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 detail preserves document context through file dialog and Back",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 quantity11/SKU3, scoped search, immutable row detail",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 posted documents expose no approve/post/delete/edit controls; unknown lines remain unknown",
+      "status": "PASS"
+    },
+    {
+      "name": "All four panels fit without extra scroll across six viewports; capture geometry",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 supplier dialog keyboard/backdrop/Escape and metadata stays in P12 until continuing",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 inbound uses sole P04 draft and continues scan; returning preserves form and existing draft",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 outbound reuses P05 required metadata; warranty reaches P09 intake",
+      "status": "PASS"
+    },
+    {
+      "name": "P04 verified receipt opens exact P12 document with live lines; no draft or duplicate record",
+      "status": "PASS"
+    },
+    {
+      "name": "P05 verified receipt reaches P12 by ID; unknown date/serial stays unknown, no inventory delta",
+      "status": "PASS"
+    },
+    {
+      "name": "Action dialog traps focus, restores trigger, Back/Escape closes before route; six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy result appears only after clipboard verification and has no fake cancel",
+      "status": "PASS"
+    },
+    {
+      "name": "Long content remains internally scrollable, header/nav fixed; list Back restores scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Real long-list fixture pagination scope preserves query and scroll on detail Back",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout followed by browser Back cannot restore P12 authenticated route",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S01",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S02",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S03",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 799,
+      "scroll": 799,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 762,
+      "scroll": 762,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 762,
+      "scroll": 762,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 762,
+      "scroll": 762,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 762,
+      "scroll": 762,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 762,
+      "scroll": 762,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    },
+    {
+      "panel": "P12.S04",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "client": 762,
+      "scroll": 762,
+      "width": 494,
+      "contentWidth": 494,
+      "within": true
+    }
+  ],
+  "errors": []
+}

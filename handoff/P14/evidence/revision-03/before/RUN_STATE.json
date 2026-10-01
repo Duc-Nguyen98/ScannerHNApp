@@ -1,0 +1,68 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P14",
+  "revision": "P14-r02",
+  "implemented_panel_ids": [
+    "P14.S01",
+    "P14.S02",
+    "P14.S03",
+    "P14.S04"
+  ],
+  "completed_panel_ids": [],
+  "remaining_panel_ids": [],
+  "visual_status": "USER_REVIEW_PENDING",
+  "behavior_status": "KNOWN_ISSUES_IN_ADDITIONAL_STATES",
+  "integration_status": "BLOCKED_PRODUCTION",
+  "node_tests": 49,
+  "p14_node_tests": 19,
+  "browser_groups": {
+    "p14": 16,
+    "p10_regression": 12,
+    "p13_regression": 14,
+    "footer_viewports": 4
+  },
+  "legacy_home_suite": "FAIL_STALE_P13_PENDING_ASSERTION; see evidence",
+  "shared_components_changed": [],
+  "dependency_changes": [
+    "P01 recovery entry",
+    "Home P14 route/lifecycle and existing exact-ID resume bridge",
+    "P10 shift entry",
+    "auth entry P14 stylesheet"
+  ],
+  "blockers": [
+    "Recovery delivery/verification contract unavailable",
+    "End-shift policy, checkpoint persistence/reconciliation and aggregate contract unavailable",
+    "P21 legacy/component resume not verified"
+  ],
+  "artifact_paths": [
+    "handoff/P14/REPORT.md",
+    "handoff/P14/REVIEW.html",
+    "handoff/P14/evidence/revision-01"
+  ],
+  "next_action": "Review proposed fixes in AUDIT_REMAINING_2026-09-29.md; no source changes applied.",
+  "report": "handoff/P14/REVISION_02.md",
+  "scope": "P14.S02 three-column metadata and pinned login CTA",
+  "p14_r02_browser_groups": {
+    "receipt": 6,
+    "p14_regression": 16
+  },
+  "p14_r02_evidence": "handoff/P14/evidence/revision-02",
+  "p14_remaining_audit_20260929": {
+    "report": "handoff/P14/AUDIT_REMAINING_2026-09-29.md",
+    "source_revision": "P14-r02",
+    "application_changed": false,
+    "proposed_revision": "P14-r03 (NOT_IMPLEMENTED)",
+    "reproduced_findings": [
+      "F01 state copy mismatch",
+      "F02 summary snapshot/list mismatch",
+      "F03 long row lacks reader",
+      "F04 scroll lost on Back",
+      "F05 recovery copy mentions stock draft"
+    ],
+    "scope": "S01/S03/S04",
+    "evidence": "handoff/P14/evidence/audit-remaining-2026-09-29"
+  }
+}

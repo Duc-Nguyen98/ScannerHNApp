@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "name": "Same serial with whitespace closes replacement without changing draft/request/receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "Escape and Collapse cancel only unverified replacement, preserve item/fault/note and unlock CTA",
+      "status": "PASS"
+    },
+    {
+      "name": "No-match and matching search Enter cannot silently select a hidden fault or close picker",
+      "status": "PASS"
+    },
+    {
+      "name": "Known open and closed cases open without entering another fault or creating request",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing P18 handoff bridge returns exact case and tab without affecting P09 draft",
+      "status": "PASS"
+    },
+    {
+      "name": "2000+ identity characters remain fully readable; footer and inputs accessible at six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Validation is not duplicated, textarea Enter does not submit, Escape returns focus and preserves edits",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "width": 494,
+      "height": 1000,
+      "footerInside": true,
+      "bodyHeight": 627,
+      "contextScrollable": true,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "footerInside": true,
+      "bodyHeight": 627,
+      "contextScrollable": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "footerInside": true,
+      "bodyHeight": 627,
+      "contextScrollable": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "footerInside": true,
+      "bodyHeight": 627,
+      "contextScrollable": true,
+      "overflow": false
+    },
+    {
+      "width": 340,
+      "height": 420,
+      "footerInside": true,
+      "bodyHeight": 627,
+      "contextScrollable": true,
+      "overflow": false
+    },
+    {
+      "width": 1869,
+      "height": 940,
+      "footerInside": true,
+      "bodyHeight": 627,
+      "contextScrollable": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

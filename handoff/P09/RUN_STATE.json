@@ -1,0 +1,31 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P09",
+  "latest_revision": {
+    "id": "P09-r11",
+    "report": "handoff/P09/REVISION_11.md",
+    "verification": "30/30 targeted Node;45/45 browser groups PASS. Reproduced bugs have before/after probes; visual approval pending.",
+    "visual_status": "IN_PROGRESS",
+    "behavior_status": "PASS_P09_FIXTURE",
+    "integration_status": "BLOCKED"
+  },
+  "tests": {
+    "targeted_node_total": 30,
+    "targeted_node_passed": 30,
+    "browser_groups": {
+      "audit": 7,
+      "ux": 6,
+      "update": 11,
+      "regression": 10,
+      "navigation": 11
+    },
+    "browser_total": 45,
+    "full_repo_final": "NOT_RUN_CONCURRENT_EDITS",
+    "real_device_keyboard": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN"
+  },
+  "next_action": "User visual review P09-r11; real-device keyboard, hardware and WMS still unverified."
+}

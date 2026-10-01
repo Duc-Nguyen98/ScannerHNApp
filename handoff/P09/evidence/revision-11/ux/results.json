@@ -1,0 +1,751 @@
+{
+  "checks": [
+    {
+      "name": "Quick filters and dialog share selection, query-scoped counts and Cancel semantics",
+      "status": "PASS"
+    },
+    {
+      "name": "Successful serial collapses scanner and focuses fault; invalid replacement retains product and draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Searchable fault picker supports no accents, current choice, Other-only input and retained text",
+      "status": "PASS"
+    },
+    {
+      "name": "Profile sections keep all data and long content readers retain exact text and Back focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Update dialog fits six sizes, explains disabled save, validates fields and retains draft on Back",
+      "status": "PASS"
+    },
+    {
+      "name": "Filtered-out updated case has direct view without changing caller filter, query or tab Back",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "list",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "list",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "list",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "list",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "list",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "list",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "selected",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "selected",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "selected",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "selected",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "selected",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "selected",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "other",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "other",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "other",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "other",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "other",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "other",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "fault-picker",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "fault-picker",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "fault-picker",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "fault-picker",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "fault-picker",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "fault-picker",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "reader",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "reader",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "reader",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "reader",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "reader",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "reader",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "profile-long",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "profile-long",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "profile-long",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "profile-long",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "profile-long",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "profile-long",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "update-empty",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "update-empty",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "update-empty",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "update-empty",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "update-empty",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "update-empty",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "result",
+      "width": 494,
+      "height": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "result",
+      "width": 360,
+      "height": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "result",
+      "width": 430,
+      "height": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "result",
+      "width": 1440,
+      "height": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "result",
+      "width": 340,
+      "height": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    },
+    {
+      "name": "result",
+      "width": 1869,
+      "height": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true,
+      "dialogInside": true,
+      "dialogOverflow": false,
+      "touch": true,
+      "dialogFooter": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,348 @@
+✖ malformed authenticated payload cannot crash or leave login busy (2.3514ms)
+✖ only literal true grants warehouse/permission access; role text cannot grant it (5.3362ms)
+✖ access revoked while start is pending never opens Home (1.706ms)
+✖ adapter validation exception fails closed and releases busy (0.5028ms)
+✖ navigation intent is not replayed by hash/session revalidation (1.3703ms)
+✖ same-screen logout signals input reset even without a screen transition (0.8038ms)
+✖ local logout clears protected state even if adapter cleanup throws (0.6962ms)
+✔ confirmation actions have distinct sourced chevron, play and logout icons (1.7343ms)
+✔ login uses user, eye and shield-check shapes rather than unrelated glyphs (0.4097ms)
+✔ loading label updates cannot delete the new leading play icon (0.7573ms)
+✔ verified repository icon geometry remains intact and attributed (24.6146ms)
+✔ locked board and auth adapter are unchanged (11.1146ms)
+✔ valid fixture always stops at confirmation before the P02 boundary (62.8895ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (2.4156ms)
+✔ invalid and empty credentials never expose confirmation or Home (59.8661ms)
+✔ repeated login has a single in-flight adapter request (0.6233ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (1.0767ms)
+✔ permission and warehouse guards block start even when called directly (11.5117ms)
+✔ unknown login, unknown shift and thrown request never produce success (36.1508ms)
+✔ expired start returns to login (9.4168ms)
+✔ logout and back/hash guard cannot restore protected screen (16.7317ms)
+✔ late login response after logout is ignored and fixture is revoked (14.6681ms)
+✔ late start response cannot recreate logout session; start double-click guarded (15.8957ms)
+✔ recovery is a P14 pending boundary only (0.4081ms)
+✔ Business sample extension has unique IDs, complete calendar dates, known statuses and immutable data (3.4154ms)
+✔ Every session reconciles code counts, duplicates and quantity with its data (0.6119ms)
+✔ Shared business filtering combines query/type/date/status and stable sort without mutation (63.5696ms)
+✔ P08 r05 processing/waiting are not completion; unknown fails closed (2.9646ms)
+✔ P08 r05 exact events and sources preserved; escaped and absent data honest (2.9271ms)
+✔ P08 custom date parser validates exact calendar dates, blank and leap years (4.4436ms)
+✔ Filter draft defaults to actual Vietnam today without changing committed all-days filters (38.6107ms)
+✔ Live validation flags both reverse endpoints, permits equality/empty, blocks invalid calendar dates (1.3019ms)
+✔ Each calendar intersects global90-day boundary with the opposite valid endpoint (26.8021ms)
+✔ Reset draft has actual Vietnam today in both fields, including midnight/year boundary (10.8138ms)
+✔ All history filters start unbounded, including documents; aggregate covers48 unique activities (2.8103ms)
+✔ Range aggregate includes both endpoints and carries query/status into exact drilldown (27.186ms)
+✔ Unavailable and unmatched results remain distinct; all-days keeps older dates accessible (0.3908ms)
+✔ P08.r02 documents entry/clear retains inbound-outbound scope over shared source (11.2274ms)
+✖ P08.r02 missing session identity stays missing; baseline/fixtures/P07 retained (16.0948ms)
+✔ P08.A01 combined query/date/status retains operation scope (0.4348ms)
+✔ P08.A02 exact immutable record/document/event identity; no Post tick (0.485ms)
+✔ P08.A03 19=18+1; duplicate and NFC do not add quantity; event IDs deduplicated (1.4083ms)
+✔ P08.A04 total 30 from full disjoint fixture, not list page, missing is not zero (0.8265ms)
+✔ P08.A05 single shared source with exact event/session links and no auth secrets (1.9626ms)
+✔ sort is stable and direction works without mutating source (38.8258ms)
+✔ P01 fixture session supplies Home identity and warehouse, only after start (47.2742ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (168.4501ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (47.8976ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (153.3309ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (15.0885ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (17.3092ms)
+✔ P04.A01 12 attempts = 11 valid + 1 duplicate, 5+4+2 quantities; manual same pipeline (87.4371ms)
+✔ P04.A02 note/back retain document/session/version/codes; resume does not invent another document (18.0652ms)
+✔ P04.A03 record exactly once, receipt only success; no inventory mutation (8.3568ms)
+✔ P04.A04 unknown retains frozen payload, no blind retry, check receipt completes (13.7759ms)
+✔ actual timeout and late record require explicit reconciliation (146.5765ms)
+✔ not-recorded reconciliation permits retry with same request and document (199.1044ms)
+✔ rejection retains data and explicit retry, metadata cannot be relaxed by proposal (3.816ms)
+✔ warehouse stop/unknown guard scan and record; confirmed auth is retained (0.8873ms)
+✔ session change, missing permission, mismatch receipt, disposal cannot manufacture success (22.8412ms)
+✔ production adapter blocked without approved contract; blank scan/review cannot send (1.1045ms)
+✔ completed run re-entry starts clean with unique identities, retains prior record receipt (45.508ms)
+✔ confirmed rejection and confirmed not-recorded can start fresh after exit, never on same-page retry (30.8461ms)
+✔ draft and UNKNOWN re-entry preserve data and refuse blind new record (2.5773ms)
+✔ exit while sending preserves in-flight run; later confirmed completion permits fresh re-entry (13.0901ms)
+✔ explicit document context never becomes new run; guards cannot clear completed data (2.5101ms)
+✔ old receipt cannot confirm a subsequent run with a different request or scan session (57.751ms)
+✔ P05 parity: whitespace code is not an attempt; long note is retained and blocked, never truncated (1.9457ms)
+✔ P05 parity: explicit picker starts new run on same terminal route but preserves UNKNOWN and drafts (100.1526ms)
+✔ metadata whitespace/malformed note blocks next and scan at controller boundary (0.5814ms)
+✔ inbound catalogue has three types and fifteen unique searchable supplier fixtures (0.654ms)
+✔ type and supplier selection persists through review/request with unchanged draft identity (63.3554ms)
+✔ catalogue rejects forged identities and locks type after scan and all metadata after request (1.9914ms)
+✔ new attempt resets catalogue defaults; mismatched catalogue name/id cannot validate (1.9522ms)
+✔ A01 independent code/name/SKU/serial search, scope, aggregate counts and immutable clear (3.0082ms)
+✔ A02 stock uses supplied totals with 12/10/1/1 and 6+3+2+1 positions (1.676ms)
+✔ A03 real zero distinct from missing, SKU never substitutes serial (49.2233ms)
+✔ A04 print and warranty fail closed regardless of role, even if print capability true no implementation (49.2606ms)
+✔ A05 inclusive type/range, invalid range and signed events independent of current stock (1.0656ms)
+✔ list context/scroll retained on detail and stock/history; IDs cannot open outside scope (15.6966ms)
+✔ capability-guarded document link identifies exact event and does not invent a matching document (1.5074ms)
+✔ session revoked hides data and actions; stopped warehouse remains read-only accessible (0.9241ms)
+✔ list scan context drops the previously viewed item while preserving query/category (59.5138ms)
+✔ invalid or impossible dates keep the committed filters and events; valid correction clears error (30.9271ms)
+✔ demo fills each catalogue item with coherent locations and distinct scoped history (2.2907ms)
+✔ missing-data scenario is reversible and does not erase demo inventory or event fixtures (1.1304ms)
+✔ P07.A01 unread and unsupported are gated without device calls (6.478ms)
+✔ P07.A02 reading and prepare never create a mapping or receipt (256.3785ms)
+✔ P07.A03 conflict preserves current mapping and provides P17.S03 context (3.3617ms)
+✔ P07.A04 duplicate confirm yields one confirmed mapping and same tag detail/list (79.0043ms)
+✔ UNKNOWN preserves request and blocks blind retry; reconcile uses same receipt (34.0266ms)
+✔ Known failure retry retains request; fresh successful attempt resets read and identity (161.2122ms)
+✔ read permission, unsupported, read error and locked are distinct (65.2354ms)
+✔ warehouse stop and capability denial gate handlers, keep UID/session (35.2658ms)
+✔ P06 product selection carries exact independent fields and clears old UID (23.224ms)
+✔ adapter search status and counts remain separate; no audit inferred from current tags (23.3477ms)
+✔ invalid/expired scope hides data and late receipt cannot revive disposed flow (68.4574ms)
+✔ receipt must match UID/item/actor/warehouse/request; prepare or malformed cannot succeed (3.0526ms)
+✔ five consecutive links keep product and create distinct requests, preserve existing tag IDs/labels (162.1507ms)
+✔ changing demo UID invalidates prior read; busy/UNKNOWN cannot change it or product (62.7062ms)
+✔ scenario change at read step invalidates old UID; linked tag never fabricates a fresh success (47.3787ms)
+✔ UNKNOWN terminal reconciliation unlocks recovery without discarding the request (63.321ms)
+✔ known failure retries same request in place; begin from list creates a fresh attempt (30.3481ms)
+✔ late confirmation preserves list navigation and confirms mapping without stealing screen (112.0729ms)
+✔ UNKNOWN can be reconciled while warehouse writes are stopped (67.4194ms)
+✔ receipt nested actor mismatch is UNKNOWN; late reconciliation cannot clear a changed session (74.8842ms)
+✖ NFC search accepts product code and uppercase Vietnamese Đ (65.5235ms)
+✔ geography gates all three steps and verifies district parent; changes clear dependent fields only (53.0174ms)
+✔ geography is preserved in frozen request through UNKNOWN and cannot be edited (65.2898ms)
+✔ late districts do not overwrite a new province, changed source, or disposed flow (98.791ms)
+✔ client uses v1 bounded reads, coalesces/cache reads, omits credentials and rejects incorrect parent (63.7849ms)
+✔ client timeout/error can retry and failed data is never cached (90.7648ms)
+✔ P05 new quantity defaults to1; strict integer input rejects malformed values at next, scan and send (227.3016ms)
+✔ P05 walk-in details required, captured on receipt, no customer entity invented (60.051ms)
+✔ P05 source and group options validate IDs; group filters scans; scans lock source/group (2.0791ms)
+✔ P05 quantity cannot fall below accepted; correction preserves all scans; upper bound prevents extra scans (1.5577ms)
+✔ P05 phone format accepts VN mobile/landline, rejects malformed input without rewriting (4.9629ms)
+✔ P05 required source fields are null-safe, whitespace-only address rejected and notes bounded (1.7476ms)
+✔ P05 send revalidates metadata before making a request; correction preserves draft codes (6.2496ms)
+✔ P05 empty manual/camera input is not a scan; padded nonempty codes remain exact invalid attempts (1.4942ms)
+✔ P05.A01 seven of ten: duplicate unchanged, groups 5+2, cannot send incomplete or reduce below accepted (1.3718ms)
+✔ P05.A02/A03 only explicit additional scans and confirmed receipt unlock waiting Web; inventory unchanged (44.3755ms)
+✔ P05.A04 cannot-export opens contextual P17.S02, preserves exact draft, scans blocked until dismissed (3.276ms)
+✔ P05.A05 double send + timeout preserve frozen request and reconcile one receipt (25.7956ms)
+✔ unknown then authoritative not-recorded can retry only same request (48.3946ms)
+✔ real timeout and late result cannot manufacture success (78.2585ms)
+✔ required metadata stays required, notes/back preserve identity and quantity (24.964ms)
+✔ wrong warehouse/unknown/raw codes never enter accepted; manual and fixture share validation (2.5124ms)
+✔ warehouse stopped, revoked permission, actor mismatch guard writes without clearing draft (7.0302ms)
+✔ mismatched receipt and adapter exception remain UNKNOWN, real adapter disabled (13.5873ms)
+✔ Home/picker lifecycle retains draft/UNKNOWN/sending; terminal reentry creates distinct clean run (32.1815ms)
+✔ confirmed failure preserved for explicit retry or archived on fresh reentry; resume mismatch refused (6.3417ms)
+✔ explicit next outbound attempt resets terminal even when previous screen stayed active (12.391ms)
+✔ explicit next attempt never resets draft, pending, UNKNOWN or explicit document resume (91.441ms)
+✔ 90-day inclusive boundary in Vietnam: today and day90 valid, day91/future locked (62.8735ms)
+✔ Calendar-day arithmetic crosses Vietnam midnight, leap/month/year boundaries (1.2698ms)
+✔ P03 operation chooser has no default and passes exact operation/actor/warehouse (3.7389ms)
+✔ Resume retains exact document, scan session, version and codes (1.7036ms)
+✔ Unfinished document precedes picker and close/cancel never discards it (19.2713ms)
+✔ Backdrop is a no-op on every panel, including failed and UNKNOWN saves (26.0439ms)
+✔ Explicit footer navigation preserves document/UNKNOWN and rejects invalid or busy navigation (2.4991ms)
+✔ Only confirmed discard removes permitted unsaved local fixture; other namespaces untouched (1.033ms)
+✔ Server-recorded, posted, uncertain, saved and foreign documents cannot be discarded (4.6557ms)
+✔ Save waits for receipt, rejects double submit and blocks dismiss while saving (0.7141ms)
+✔ Failed save retains data and permits explicit retry (5.8279ms)
+✔ Timeout retains data and prevents blind retry/discard; late receipt is reconciled (16.8956ms)
+✔ Mismatched save receipt never exits or overwrites document (0.7702ms)
+✔ A receipt from an earlier fixture scan session cannot resolve a different uncertain document (2.1629ms)
+✔ Warehouse stop/unknown guards handlers and cannot be dismissed to bypass writes (1.9428ms)
+✔ Stopped warehouse preserves established session/read-only Home/history/lookup, P01 start remains required (0.6517ms)
+✔ No configured contact is fabricated; configured channel is returned for user action only (0.6782ms)
+✔ Auth loss and dispose prevent asynchronous save completion navigating into previous session (1.3573ms)
+✔ Approved operation palette is centralized and shared by app/history/embedded entrypoints (5.8722ms)
+✔ Future contributors are directed to the approved design standard and reusable variants (3.4153ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (28.6043ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (4.5028ms)
+✔ invalid fixture page does not partially update data or claim completion (6.8183ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (34.5102ms)
+✔ late rejection after Back never replaces the destination scene (14.2614ms)
+✔ detached preview cannot be repainted by a stale read (4.693ms)
+✔ closed case stays read-only after failure and successful retry (34.167ms)
+✔ empty and static loading scenes do not start a read (7.2382ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (49.471ms)
+✔ new issue preserves saved-document routing without recording history (14.1385ms)
+✔ 18 unique user-requested choices include Other and produce explicit labels (2.5975ms)
+✔ Other is required, rejects whitespace and excessive length; cached description survives switching (19.0681ms)
+✔ Confirmation uses selected canonical label and excludes hidden Other text (36.7522ms)
+✔ Other custom description is confirmed exactly and survives UNKNOWN without blind retry (12.1243ms)
+✔ No request or writes for empty Other; busy/disposed guard fault selection (1.2773ms)
+✔ Per-case drafts survive A → B → A without crossing customers or result text (20.058ms)
+✔ Completed results remain immutable when another dialog opens; unresolved same-case update is not success (62.9554ms)
+✔ Repair retry request stays stable after unrelated intake edits and another case visit (3.8392ms)
+✔ Adapter rejection releases busy, retains UNKNOWN and forbids blind resubmit (2.1811ms)
+✔ Write-then-throw reconciles by exact request event without a second write (23.1198ms)
+✔ Unverified failed write remains UNKNOWN until matching source appears; reconcile never reposts (9.5514ms)
+✔ Dirty draft keeps observed version and cannot overwrite a changed case or another case ID (1.5653ms)
+✔ Stopped warehouse allows warranty reads while write guard and account permission still apply (1.0687ms)
+✔ A01 exact serial opens the same case; SKU/code never inferred; intake never posts components (23.0054ms)
+✔ A01 new serial intake keeps partner identity; duplicate request and duplicate serial do not create another case (50.3791ms)
+✔ A02 ledger filters POSTED and exact case, deduplicates ID, counts quantity separately from codes (0.4146ms)
+✔ A03 update receipt waits for confirmation; handover is not returned, history uses same source (3.9504ms)
+✔ A04 closed, permission, warehouse and expired session guards apply at handler and after await (16.4167ms)
+✔ A05 case switch cannot carry customer/serial/events or update fields (1.0558ms)
+✔ UNKNOWN blocks new writes and selection; reconcile keeps request/session/version and commits once (4.8094ms)
+✔ Failure retains update draft and request identity; stale version and dispose cannot commit (13.7628ms)
+✔ Repair update rejects whitespace/malformed/overlong values before requesting; accepts 200 characters (15.7476ms)
+ℹ tests 186
+ℹ suites 0
+ℹ pass 177
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6692.5115
+
+✖ failing tests:
+
+test at tests\auth-session-stability.test.mjs:8:1
+✖ malformed authenticated payload cannot crash or leave login busy (2.3514ms)
+  TypeError: Cannot read properties of undefined (reading 'active')
+      at guardMessage (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:9:26)
+      at Object.login (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:29:64)
+      at async TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:11:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests\auth-session-stability.test.mjs:18:1
+✖ only literal true grants warehouse/permission access; role text cannot grant it (5.3362ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:25:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:28:1
+✖ access revoked while start is pending never opens Home (1.706ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:35:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:39:1
+✖ adapter validation exception fails closed and releases busy (0.5028ms)
+  Error: unavailable
+      at adapter.isValid (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:40:65)
+      at Object.login (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:27:55)
+      at async TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:41:41)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests\auth-session-stability.test.mjs:44:1
+✖ navigation intent is not replayed by hash/session revalidation (1.3703ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   returnTo: 'P01',
+  +   target: 'P14'
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:47:33)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { target: 'P14', returnTo: 'P01' },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:49:1
+✖ same-screen logout signals input reset even without a screen transition (0.8038ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== NaN
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:52:25)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: NaN,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:54:1
+✖ local logout clears protected state even if adapter cleanup throws (0.6962ms)
+  Error: cleanup failed
+      at adapter.logout (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:56:34)
+      at Object.logout (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:13:13)
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:57:8)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests\history.test.mjs:15:1
+✖ P08.r02 missing session identity stays missing; baseline/fixtures/P07 retained (16.0948ms)
+  AssertionError [ERR_ASSERTION]: ../docs/flows/nfc/nfc.mjs
+  + actual - expected
+  
+  + '9510bab12c5bd93ddb1a4cc8fc0e9b6e3402acd953a615b4e38b0a395ee7b371'
+  - '77285a3fdab56bd7b53b32b56aecf48545f2ff37894e4f8e8236ba0803de8d49'
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/history.test.mjs:23:59)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '9510bab12c5bd93ddb1a4cc8fc0e9b6e3402acd953a615b4e38b0a395ee7b371',
+    expected: '77285a3fdab56bd7b53b32b56aecf48545f2ff37894e4f8e8236ba0803de8d49',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\nfc.test.mjs:82:1
+✖ NFC search accepts product code and uppercase Vietnamese Đ (65.5235ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/nfc.test.mjs:83:52)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

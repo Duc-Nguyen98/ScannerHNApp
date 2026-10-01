@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "Update dialog identifies exact case/serial; one border per field, fixed actions at six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Inline required/length validation, counters and focus; no request for blank result",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel/browser Back preserve update draft and caller tab",
+      "status": "PASS"
+    },
+    {
+      "name": "Failed save opens feedback dialog, retains request; retry success commits once despite double click",
+      "status": "PASS"
+    },
+    {
+      "name": "Result has View case + Return to list; footer fits six sizes; filtered list context survives",
+      "status": "PASS"
+    },
+    {
+      "name": "Waiting-handover case also has Return to list; list Back never loops into result",
+      "status": "PASS"
+    }
+  ],
+  "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-id=BH-001]')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:23:120\n    at check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:11:37)\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_update.cjs:23:7",
+  "errors": []
+}

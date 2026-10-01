@@ -1,0 +1,32 @@
+✔ UNKNOWN end overrides saved/ready banner and selects reconciliation (1.4406ms)
+✔ busy, permissions, owner UNKNOWN, unsaved and ready have distinct actions (0.5123ms)
+✔ Recovery pending copy has no stock document language (0.2978ms)
+✔ Summary rows, identity and start time remain the closing snapshot (23.9133ms)
+✔ Current list stays current before a verified closing receipt (0.7947ms)
+✔ A01 recovery only records support request; username is not display name (7.7004ms)
+✔ A02 empty recovery does not call adapter (0.6853ms)
+✔ A02 error cannot create receipt (9.8327ms)
+✔ A02 blocked cannot create receipt (1.4434ms)
+✔ A02 unknown cannot create receipt (1.4918ms)
+✔ A03 unfinished blocks end and preserves exact source (0.4725ms)
+✔ A04 successful save preserves IDs/version/codes; end keeps auth and draft (12.1567ms)
+✔ A04 failed save never allows end (15.271ms)
+✔ A04 unknown save keeps request, rejects retry until reconciliation (15.5666ms)
+✔ unresolved UNKNOWN remains blocked even after mode changes (30.8508ms)
+✔ double submission sends once (15.2918ms)
+✔ source changes after save invalidate checkpoint (1.3058ms)
+✔ source unknown cannot be saved by shift (0.2862ms)
+✔ source busy cannot be saved by shift (0.0862ms)
+✔ source saveUnknown cannot be saved by shift (0.0764ms)
+✔ actor/warehouse/permission guards and session expiry reject writes (0.2846ms)
+✔ late receipt after logout/disposal cannot create summary (15.5431ms)
+✔ A05 aggregate is defined separate 12+6+4+3+5=30, not loaded rows (17.469ms)
+✔ mismatched adapter receipt cannot signal success (1.8145ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 359.8544

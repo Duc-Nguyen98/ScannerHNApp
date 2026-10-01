@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "S03 controls grouped in dock, one row resume, no duplicate hint; six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "S04 warehouse spans top; date/time two columns with16/18 typography and20/12 spacing",
+      "status": "PASS"
+    },
+    {
+      "name": "S04 footer remains fixed while new metadata and draft content scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Overnight uses full-width time field and preserves both dates",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "group": true,
+      "heights": [
+        56,
+        56
+      ],
+      "gap": 12,
+      "widths": [
+        446,
+        446
+      ],
+      "noOverflow": true,
+      "within": true
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "group": true,
+      "heights": [
+        56,
+        56
+      ],
+      "gap": 12,
+      "widths": [
+        446,
+        446
+      ],
+      "noOverflow": true,
+      "within": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "group": true,
+      "heights": [
+        56,
+        56
+      ],
+      "gap": 12,
+      "widths": [
+        446,
+        446
+      ],
+      "noOverflow": true,
+      "within": true
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "group": true,
+      "heights": [
+        56,
+        56
+      ],
+      "gap": 12,
+      "widths": [
+        446,
+        446
+      ],
+      "noOverflow": true,
+      "within": true
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "group": true,
+      "heights": [
+        56,
+        56
+      ],
+      "gap": 12,
+      "widths": [
+        446,
+        446
+      ],
+      "noOverflow": true,
+      "within": true
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "group": true,
+      "heights": [
+        56,
+        56
+      ],
+      "gap": 12,
+      "widths": [
+        446,
+        446
+      ],
+      "noOverflow": true,
+      "within": true
+    },
+    {
+      "warehouse": [
+        41,
+        412
+      ],
+      "date": [
+        41,
+        285,
+        198
+      ],
+      "time": [
+        255,
+        285,
+        198
+      ],
+      "padding": "16px",
+      "fonts": [
+        "16px",
+        "18px"
+      ],
+      "gap": 20,
+      "kpiGap": 12
+    }
+  ],
+  "errors": []
+}

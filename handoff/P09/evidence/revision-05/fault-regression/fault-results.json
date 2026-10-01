@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "name": "18 searchable options; no default; accent-insensitive results and empty search state",
+      "status": "PASS"
+    },
+    {
+      "name": "Standard symptom selection hides textarea; Cancel/Escape leave selection unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Other opens immediately; all17 standard choices hide it; reselecting the same option closes picker",
+      "status": "PASS"
+    },
+    {
+      "name": "Other reveals required text, preserves cached draft through choices and Back",
+      "status": "PASS"
+    },
+    {
+      "name": "Fault and form layout at six viewports; dialog inside app with keyboard focus trap",
+      "status": "PASS"
+    },
+    {
+      "name": "Other whitespace invalidates CTA and forced handler cannot submit; 200-char limit and correct confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN freezes fault selection/text and reconciliation persists the correct symptom",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "production": "NOT_RUN"
+}

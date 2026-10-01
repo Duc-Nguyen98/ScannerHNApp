@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "name": "Inbound context, capability-aware primary and manual return preserve filters/raw/scroll/selection",
+      "status": "PASS"
+    },
+    {
+      "name": "Outbound blocked return restores input selection, filter, position and all accepted codes",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17_experience.cjs:19:859\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17_experience.cjs:8:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p17_experience.cjs:19:1"
+}
