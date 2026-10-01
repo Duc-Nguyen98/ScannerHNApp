@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none'; base-uri 'self'">
+<style>.preview-tools,.hn-tools{display:none!important}body{overflow:hidden}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:,">
+  <title>P01 · Hoa Nam Scanner · Prototype</title>
+  <link rel="stylesheet" href="./style.css?v=audit-r07">
+  <link rel="stylesheet" href="./motion.css?v=M01-r01">
+  <link rel="stylesheet" href="../shared/list-actions.css?v=ux-r15">
+  <link rel="stylesheet" href="../home/style.css?v=p02-audit-r16">
+  <link rel="stylesheet" href="../home/motion.css?v=M02-r01">
+  <link rel="stylesheet" href="../scanner-dialogs/style.css?v=p03-frame-r08">
+  <link rel="stylesheet" href="../inbound/motion.css?v=M04-r01">
+  <link rel="stylesheet" href="../inbound/style.css?v=p04-ui-r09">
+  <link rel="stylesheet" href="../outbound/motion.css?v=M05-r01">
+  <link rel="stylesheet" href="../outbound/style.css?v=p05-r11">
+  <link rel="stylesheet" href="../lookup/style.css?v=p06-polish-20260929">
+  <link rel="stylesheet" href="../nfc/style.css?v=p07-r13">
+  <link rel="stylesheet" href="../history/style.css?v=p08-r19">
+  <link rel="stylesheet" href="../history/nfc-audit.css?v=p22-r01">
+  <link rel="stylesheet" href="../history/warranty-session.css?v=p23-r01">
+  <link rel="stylesheet" href="../warranty/style.css?v=p09-r11">
+  <link rel="stylesheet" href="../profile/style.css?v=p10-r10">
+  <link rel="stylesheet" href="../security/style.css?v=p11-r01">
+  <link rel="stylesheet" href="../documents/style.css?v=p12-r10">
+  <link rel="stylesheet" href="../recovery-shift/style.css?v=p14-r01">
+  <link rel="stylesheet" href="../notifications/style.css?v=p13-r07">
+  <link rel="stylesheet" href="../shared/scan-entry.css?v=p09-r02">
+  <link rel="stylesheet" href="../history/category-colors.css?v=p08-r17">
+  <link rel="stylesheet" href="../system/style.css?v=p15-r01">
+  <link rel="stylesheet" href="../scan-exceptions/style.css?v=p17-r01">
+  <link rel="stylesheet" href="../attachments/style.css?v=p18-r01">
+  <link rel="stylesheet" href="../warranty-components/issue.css?v=p19-r01">
+  <link rel="stylesheet" href="../warranty-components/history.css?v=p20-r01">
+  <link rel="stylesheet" href="../warranty-components/resume.css?v=p21-r01">
+  <link rel="stylesheet" href="../shared/app-surfaces.css?v=20260927">
+  <link rel="stylesheet" href="../shared/action-dialog.css?v=hn-feedback-v1">
+  <link rel="stylesheet" href="../shared/operation-icons.css?v=hn-approved-v1">
+  <link rel="stylesheet" href="../shared/readable-text.css?v=hn-readable-v1">
+  <link rel="stylesheet" href="../shared/priority-touch.css?v=ux-20260930">
+</head>
+<body>
+  <main id="app" aria-label="Hoa Nam Scanner"></main>
+  <aside class="preview-tools" aria-label="Công cụ prototype">
+    <strong>P01 · PROTOTYPE — không kết nối WMS</strong>
+    <p>Chỉ nhập dữ liệu thử. Tài khoản ban đầu: <code>minhanh</code> / <code>preview</code>. Nếu đã đổi mật khẩu ở P11, dùng mật khẩu mới trong trang này. Tải lại trang hoặc Đặt lại fixture sẽ khôi phục dữ liệu ban đầu.</p>
+    <details>
+      <summary>Kịch bản kiểm tra</summary>
+      <label for="motion-mode">Motion P01 (không đặt lại dữ liệu)</label>
+      <select id="motion-mode">
+        <option value="auto">Tự động theo hệ điều hành</option>
+        <option value="reduced">Giảm chuyển động</option>
+        <option value="off">Tắt chuyển động</option>
+      </select>
+      <label for="scenario">Kịch bản fixture (đặt lại phiên khi đổi)</label>
+      <select id="scenario">
+        <option value="valid">Phiên hợp lệ · Minh Anh</option>
+        <option value="other-user">Danh tính khác · Lan Nguyễn</option>
+        <option value="denied">Không có quyền thao tác</option>
+        <option value="warehouse-stopped">Kho ngừng hoạt động</option>
+        <option value="auth-unknown">Đăng nhập chưa xác định</option>
+        <option value="start-unknown">Bắt đầu ca chưa xác định</option>
+        <option value="expired">Phiên hết hạn khi bắt đầu</option>
+      </select>
+      <button type="button" id="reset">Đặt lại fixture</button>
+      <p>Độ trễ mô phỏng 450ms. Không tạo ca thật. P02 đã nối prototype; P14 đã nối prototype; kênh recovery/kết thúc ca thật chưa tích hợp.</p>
+    </details>
+    <a href="../../">Thư viện thiết kế</a>
+  </aside>
+  <noscript>Prototype cần JavaScript. Không có xác thực production tại trang này.</noscript>
+  <aside id="preview-startup-status" class="preview-tools" role="status">
+    <p>Đang mở giao diện Hoa Nam Scanner… Nếu cần tải lại preview, dữ liệu thử trong trang sẽ được đặt lại.</p>
+    <button type="button" onclick="location.reload()">Tải lại preview</button>
+  </aside>
+  <script type="module" src="./bootstrap.mjs?v=motion-M05-r01"></script>
+</body>
+</html>

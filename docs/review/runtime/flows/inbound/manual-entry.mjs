@@ -1,0 +1,46 @@
+// Preserve the connected input while counters/list repaint during continuous entry.
+// The caller still owns values, validation, navigation and every scan mutation.
+export function renderManualEntry(root, html, prefix, {preserveCamera=false}={}) {
+  const current=root.querySelector(`.${prefix}-app`), form=root.querySelector(`.${prefix}-manual`);
+  const template=document.createElement('template');template.innerHTML=html;
+  const next=template.content.firstElementChild;
+  const nextForm=next.querySelector(`.${prefix}-manual`);
+  const camera=preserveCamera&&current?.querySelector(`.${prefix}-camera`),nextCamera=next.querySelector(`.${prefix}-camera`);
+  if(preserveCamera&&camera&&nextCamera&&current?.dataset.panel===next.dataset.panel){
+    const content=camera.parentElement,nextContent=nextCamera.parentElement;
+    const kept=new Map([[nextCamera,camera]]);if(form&&nextForm)kept.set(nextForm,form);
+    const oldNodes=new Set(kept.values()),nextChildren=[...nextContent.children];
+    for(const child of [...content.children])if(!oldNodes.has(child))child.remove();
+    for(let i=0;i<nextChildren.length;i++){
+      const child=nextChildren[i];if(kept.has(child))continue;
+      const nextAnchor=nextChildren.slice(i+1).find(n=>kept.has(n));
+      content.insertBefore(child,nextAnchor?kept.get(nextAnchor):null);
+    }
+    current.className=next.className;current.setAttribute('aria-busy',next.getAttribute('aria-busy'));
+    for(const part of ['header','footer','live-progress']){const prior=current.querySelector(`.${prefix}-${part}`),fresh=next.querySelector(`.${prefix}-${part}`);if(prior&&fresh)prior.replaceChildren(...fresh.childNodes);}
+    return;
+  }
+  if(!form || !nextForm || current?.dataset.panel!==next.dataset.panel){root.replaceChildren(template.content);return;}
+  const content=form.parentElement,nextContent=nextForm.parentElement;
+  for(const child of [...content.children])if(child!==form)child.remove();
+  let after=false,anchor=form;
+  for(const child of [...nextContent.children]){
+    if(child===nextForm){after=true;continue;}
+    if(after){anchor.after(child);anchor=child;}else form.before(child);
+  }
+  current.className=next.className;current.setAttribute('aria-busy',next.getAttribute('aria-busy'));
+  for(const part of ['header','footer','live-progress']){
+    const prior=current.querySelector(`.${prefix}-${part}`),fresh=next.querySelector(`.${prefix}-${part}`);
+    if(prior&&fresh)prior.replaceChildren(...fresh.childNodes);
+  }
+}
+
+export function revealManualInput(root,prefix,{focus=true}={}){
+  const input=root.querySelector(`#${prefix}-code`);if(!input || input.disabled)return;
+  if(focus)input.focus({preventScroll:true});
+  const area=root.querySelector(`.${prefix}-scroll`),row=input.closest(`.${prefix}-code-row`);if(!area||!row)return;
+  const a=area.getBoundingClientRect(),scale=a.height/area.offsetHeight;
+  const bottom=Math.min(a.bottom,window.visualViewport?window.visualViewport.offsetTop+window.visualViewport.height:a.bottom);
+  const b=row.getBoundingClientRect();if(b.bottom>bottom)area.scrollTop+=(b.bottom-bottom+8)/scale;
+  const updated=row.getBoundingClientRect();if(updated.top<a.top)area.scrollTop-=(a.top-updated.top+8)/scale;
+}

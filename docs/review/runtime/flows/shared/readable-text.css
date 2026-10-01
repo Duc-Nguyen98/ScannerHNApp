@@ -1,0 +1,36 @@
+/* HN-readable-content-v1. Explicit markers only; never password/input data. */
+#app [data-hn-readable].hn-readable-excerpt,
+#home-app [data-hn-readable].hn-readable-excerpt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--hn-readable-lines,2);max-height:calc(var(--hn-readable-lines,2)*var(--hn-readable-leading,1.5em));overflow:hidden;overflow-wrap:anywhere;white-space:pre-line;min-width:0;line-height:1.5}
+#app [data-hn-readable].hn-readable-excerpt[data-hn-readable-kind=value],
+#home-app [data-hn-readable].hn-readable-excerpt[data-hn-readable-kind=value]{line-height:var(--hn-readable-value-leading,inherit)}
+#app button.hn-read-more,#home-app button.hn-read-more{display:block;min-height:40px;margin:6px 0 0;padding:6px 2px;border:0;background:transparent;color:#006887;font:600 15px/24px Arial,sans-serif;text-align:left;cursor:pointer}
+.hn-read-more[hidden]{display:none!important}
+#app .hn-readable-dialog .app-modal-body p,#home-app .hn-readable-dialog .app-modal-body p{white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;line-height:1.6}
+#app .hn-readable-dialog .app-modal-body,#home-app .hn-readable-dialog .app-modal-body{overscroll-behavior:contain}
+#home-app .hn-note-section{margin:16px 0 24px!important;padding:12px 14px;border:1px solid #dce9ef;border-radius:12px;background:#f7fbfe;white-space:normal}
+#home-app .hn-note-section h3{margin:0 0 8px;font:600 16px/24px Arial,sans-serif;color:#203f60}
+#home-app .hn-note-section p{margin:0;line-height:1.5}
+#home-app .p08-detail-note{margin-bottom:24px}
+#home-app .p08-detail-note h2{margin-bottom:10px}
+#home-app .p09-long-row>dt{margin-bottom:8px}
+#home-app .p09-app .p09-case-kv>.p09-long-row{display:block;padding:14px 0}
+#home-app .p09-app .p09-case-kv>.p09-long-row>dd{padding:0;margin:0;max-width:100%;line-height:1.5}
+#home-app .p09-event-description{line-height:1.5}
+#home-app :is(.p04-app,.p05-app,.p09-app) textarea{resize:none;overflow-y:auto;line-height:1.5;overscroll-behavior:contain}
+#home-app .p09-update-dialog textarea{resize:none;overflow-y:auto;line-height:1.5}
+/* Source/confirmation content already has a reader: keep it whole and scrollable. */
+#home-app .p03-dialog.modal{display:flex;flex-direction:column;overflow:auto}
+#home-app .p03-dialog.modal>#p03-description{min-height:0;overflow:auto;overscroll-behavior:contain;overflow-wrap:anywhere;white-space:pre-line;line-height:1.5}
+#home-app .p03-dialog.modal>.p03-actions,#home-app .p03-dialog.modal>.p03-emblem,#home-app .p03-dialog.modal>h2{flex-shrink:0}
+#home-app .p07-dialog .app-modal-body,#home-app .p07-dialog .app-modal-body dd{overflow-wrap:anywhere;white-space:normal}
+#home-app .p07-dialog .app-modal-body dd{line-height:1.5}
+#app .identity>div{flex:1;min-width:0}
+#app .confirmation .auth-greeting-name{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#home-app .p10-person>div,#home-app .p11-device-name>div,#home-app .p11-device-meta li>span{min-width:0}
+#home-app .p10-person strong,#home-app .p11-device-meta li>span{overflow-wrap:anywhere}
+#home-app .p07-product>span{min-width:0}
+
+#home-app .p06-event-wrap{min-width:0}
+#home-app .p06-event-wrap>.hn-read-more{margin:4px 12px 12px}
+#home-app .p03-dialog p,#home-app .p03-dialog dd{overflow-wrap:anywhere}
+#home-app .p10-header .hn-read-more{color:inherit;text-decoration:underline;text-underline-offset:3px}

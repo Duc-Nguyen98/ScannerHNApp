@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light"><link rel="icon" href="data:,">
+<title>ScannerHNApp | Public Preview</title><link rel="stylesheet" href="./review.css">
+</head>
+<body>
+<header class="bar"><strong>ScannerHNApp</strong><nav aria-label="Chế độ xem"><a id="app-link" href="?view=app">App Preview</a><a id="review-link" href="?view=review">Review Mode</a></nav><button id="toggle" aria-expanded="false" aria-controls="controls" title="Mở công cụ review">Công cụ</button></header>
+<div class="workspace">
+<aside id="controls" hidden>
+<h1>UI/UX Review</h1><p class="muted">Dữ liệu mô phỏng. Không kết nối WMS, camera, NFC, email hoặc SMS thật.</p>
+<p class="meta" id="build"></p>
+<label for="board">Board</label><select id="board"></select>
+<label for="panel">Panel</label><select id="panel"></select>
+<p id="disposition" class="muted"></p>
+<label for="scenario">Kịch bản</label><select id="scenario"><option value="default">Mẫu của panel</option><option value="other-user">Danh tính Lan Nguyễn</option></select>
+<label for="motion">Motion</label><select id="motion"><option value="auto">Auto (theo OS)</option><option value="reduced">Reduced</option><option value="off">Off</option></select>
+<div class="actions"><button id="previous" title="Panel trước" aria-label="Panel trước">&#8592;</button><button id="launch">Mở mẫu</button><button id="next" title="Panel tiếp" aria-label="Panel tiếp">&#8594;</button></div>
+<div class="actions"><button id="copy">Sao chép link</button><button id="bug">Mẫu ghi lỗi</button></div>
+<button id="reset">Khôi phục dữ liệu mẫu</button>
+<details><summary>Mô phỏng tác vụ</summary><div class="actions"><button id="scan-fixture">Nạp mã mẫu</button><button id="nfc-fixture">Đọc NFC mẫu</button></div><label for="outcome">Kết quả gửi / Post</label><select id="outcome"><option value="confirmed">Xác nhận</option><option value="unknown">UNKNOWN</option><option value="failed">Thất bại</option></select></details>
+<details><summary>Đăng nhập và giới hạn</summary><p>Demo: <code>minhanh</code> / <code>preview</code>. App Preview đăng nhập thủ công; Review Mode tự đăng nhập demo để mở panel.</p><p>Mỗi mẫu chạy trong bộ nhớ trang riêng. Refresh dựng lại seed, không giữ nháp phát sinh. Đổi mẫu/reset sẽ hỏi trước. Danh tính Lan cũng dùng tài khoản demo trên; không phải cấp quyền thật.</p><p>Home “Xem tất cả” mở P12 theo chốt mới. Tab Lịch sử mở hub P22. B08 và B23 có namespace khác nhau; không trộn cùng mã PQ.</p></details>
+<p id="status" role="status" aria-live="polite">Đang tải...</p><textarea id="clipboard" aria-label="Nội dung sao chép" hidden readonly></textarea>
+</aside>
+<main><iframe id="app" title="Hoa Nam Scanner preview" referrerpolicy="no-referrer" allow="camera 'none'; microphone 'none'" src="about:blank"></iframe><p id="app-guide">Demo: minhanh / preview · Dữ liệu chỉ trong trang · Mở Công cụ để chọn mẫu</p></main>
+</div>
+<dialog id="confirm" aria-labelledby="confirm-title"><h2 id="confirm-title">Đặt lại phiên mô phỏng?</h2><p>Nháp và thay đổi demo đang làm sẽ mất. Dữ liệu ở tab khác và gallery không bị thay đổi.</p><form method="dialog"><button value="cancel" autofocus>Hủy</button><button value="reset">Đặt lại</button></form></dialog>
+<script type="module" src="./review.mjs"></script>
+</body></html>

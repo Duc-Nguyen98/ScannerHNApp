@@ -1,0 +1,72 @@
+/* P17 B17 adapted to the approved 494×950 owner shell; no footer restyle. */
+#home-app .p17-app {height:100%;min-height:0;display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(110deg,#073b52,#005d84);color:#061570;font:16px/1.5 Arial,sans-serif;}
+.p17-app * {box-sizing:border-box;min-width:0;}
+.p17-icon {width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.p17-header {height:63px;padding:4px 16px 14px 8px;display:flex;align-items:center;gap:10px;flex-shrink:0;color:white;}
+#home-app .p17-header h1 {font:700 22px/32px Arial,sans-serif;margin:0;}
+#home-app .p17-header button {width:44px;min-height:44px;border:0;background:none;color:inherit;padding:8px;}
+.p17-sheet {display:flex;flex-direction:column;flex:1;min-height:0;margin-top:-14px;border-radius:18px 18px 0 0;padding:18px 18px 20px;background:linear-gradient(130deg,#fff,#f2fbff);}
+.p17-scroll {flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:none;display:flex;flex-direction:column;gap:16px;}
+.p17-scroll>* {flex-shrink:0;}
+#home-app .p17-app h2 {font:700 19px/27px Arial,sans-serif;margin:0;}
+#home-app .p17-app p {margin:0;line-height:1.5;}
+.p17-card {padding:18px;border:1px solid #dcecf5;border-radius:14px;background:#ffffffec;}
+.p17-card h2 {display:flex;gap:12px;align-items:center;margin-bottom:14px!important;}
+.p17-card dl,.p17-identity dl {margin:0;display:grid;gap:12px;}
+.p17-row {display:grid;grid-template-columns:40% minmax(0,1fr);gap:12px;align-items:start;}
+.p17-row dt {color:#486791;}.p17-row dd {margin:0;overflow-wrap:anywhere;}.p17-row dd>span {white-space:pre-wrap;}
+.p17-warning {display:flex;gap:16px;border-radius:14px;background:#fff2df;padding:20px;color:#486791;}
+.p17-warning h2 {color:#c72b15;margin-bottom:6px!important;}
+.p17-warning-symbol {display:grid;place-items:center;border-radius:50%;width:48px;height:48px;flex-shrink:0;background:#e95600;color:white;font:bold 34px/1 Arial;}
+.p17-small {padding:16px;align-items:flex-start;}.p17-small .p17-warning-symbol {width:32px;height:32px;font-size:24px;}
+.p17-reason>p {color:#486791;margin-top:8px!important;white-space:pre-wrap;overflow-wrap:anywhere;}
+.p17-info {display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:12px;background:#eaf6ff;color:#244d7e;}
+.p17-info svg {color:#007bd1;}
+.p17-footer {display:grid;gap:12px;flex-shrink:0;padding-top:18px;}
+#home-app .p17-button {display:flex;justify-content:center;align-items:center;gap:12px;min-height:56px;border-radius:12px;border:1px solid transparent;font:600 18px/25px Arial,sans-serif;padding:12px;cursor:pointer;}
+#home-app .p17-primary {background:linear-gradient(110deg,#0084b7,#00618b);color:white;}
+#home-app .p17-secondary {background:white;color:#061570;border-color:#bedbf1;}
+#home-app .p17-button:disabled {background:#e1eaf0;color:#657e92;border-color:transparent;cursor:default;opacity:1;}
+.p17-footer-hint {text-align:center;color:#486791;font-size:14px;}
+.p17-camera {height:250px;position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(#00253422,#00253444),url('../../assets/scanner-approved/01_backgrounds/bg_warehouse_main_4k_enhanced.jpg') center/cover;}
+.p17-camera>span {position:absolute;bottom:10px;left:10px;background:#002e48dc;color:white;border-radius:5px;padding:4px 8px;font-size:13px;}
+.p17-reticle {position:absolute;inset:32px 54px;border:4px solid #ee343b;border-radius:16px;clip-path:polygon(0 0,22% 0,22% 4%,4% 4%,4% 22%,0 22%,0 78%,4% 78%,4% 96%,22% 96%,22% 100%,0 100%,100% 100%,78% 100%,78% 96%,96% 96%,96% 78%,100% 78%,100% 22%,96% 22%,96% 4%,78% 4%,78% 0,100% 0,100% 100%,0 100%);}
+.p17-verifying {text-align:center;padding:20px 16px 12px;}
+.p17-clock {display:grid;place-items:center;width:84px;height:84px;margin:0 auto 20px;background:#e2f5ff;border-radius:50%;color:#007dff;}.p17-clock svg{width:44px;height:44px;}
+.p17-verifying p {color:#486791;margin-top:12px!important;}
+.p17-identity {border:1px solid #dcecf5;background:white;border-radius:12px;padding:12px;font-size:14px;}.p17-identity summary {cursor:pointer;min-height:36px;line-height:36px;}.p17-identity dl {padding-top:12px;}
+.p17-app :focus-visible {outline:3px solid #008cff;outline-offset:2px;}
+#home-app .hn-screen:has(.p17-app[data-panel="P17.S01"])>.hn-nav {display:grid;flex-shrink:0;}
+#home-app .hn-screen:has(.p17-app[data-panel="P17.S01"]) #hn-destination {height:auto;}
+.p17-app[data-panel="P17.S01"] .p17-sheet {padding-bottom:26px;}
+/* Explicitly isolate metadata from the larger P07 detail typography. */
+#home-app .p17-app .p17-card dl,#home-app .p17-app .p17-identity dl {padding:0;display:grid;gap:12px;}
+#home-app .p17-app dl>.p17-row {display:grid;grid-template-columns:40% minmax(0,1fr);align-items:start;padding:0;min-height:0;border:0;gap:12px;}
+#home-app .p17-app .p17-row dt,#home-app .p17-app .p17-row dd {font-size:16px;line-height:24px;}
+#home-app .p17-app .p17-button {font:600 18px/25px Arial,sans-serif;}
+.p17-context {display:flex;align-items:center;gap:12px;flex-shrink:0;min-height:44px;margin-bottom:14px;padding:10px 12px;border:1px solid #dcecf5;border-radius:12px;background:#f1f8fc;}
+.p17-context>div {display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;flex:1;}
+.p17-context strong {font-size:16px;}.p17-context span:not(.hn-operation-icon) {font-size:14px;color:#486791;}
+.p17-identity .p17-button {margin-top:12px;width:100%;}
+#home-app .p17-app [aria-disabled=true] {cursor:default;}
+.p17-app[data-panel="P17.S01"] .p17-camera {height:212px;}
+.p17-app[data-panel="P17.S02"] .p17-scroll {gap:12px;}
+.p17-app[data-panel="P17.S02"] .p17-card {padding:14px;}
+#home-app .p17-app[data-panel="P17.S02"] .p17-card dl {gap:8px;}
+.p17-app[data-panel="P17.S02"] .p17-card h2 {margin-bottom:10px!important;}
+.p17-app[data-panel="P17.S04"] .p17-verifying {padding-top:12px;padding-bottom:8px;}
+.p17-app[data-panel="P17.S04"] .p17-clock {margin-bottom:12px;}
+.p17-app[data-panel="P17.S04"] .p17-verifying p {margin-top:8px!important;}
+.p17-app[data-panel="P17.S02"] .p17-warning {padding:18px;}
+.p17-app[data-panel="P17.S02"] .p17-info {padding:14px;}
+.p17-app[data-panel="P17.S04"] .p17-verifying {padding-bottom:0;}
+/* r03 audit: disclosure is a full touch target; preserve the fixed dock. */
+.p17-identity {padding:8px 12px;}
+.p17-identity summary {min-height:44px;line-height:24px;padding:10px 0;}
+.p17-button[aria-busy=true] {cursor:progress!important;}
+/* M17: same 24px icon slot, only a pending status read drives this indicator. */
+.p17-status-spinner{display:inline-block;width:24px;height:24px;flex-shrink:0;border:2px solid #ffffff66;border-top-color:currentColor;border-radius:50%;}
+.p17-status-spinner[data-running=true]{animation:p17-status-turn .9s linear infinite;}
+[inert] .p17-status-spinner{animation-play-state:paused!important;}
+@keyframes p17-status-turn{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.p17-status-spinner[data-running=true]{animation:none}}

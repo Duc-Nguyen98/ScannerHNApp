@@ -1,0 +1,736 @@
+{
+  "build": "final-609a0a807a6b",
+  "fixture": "hn-flow-gate-2026-09-30-v1",
+  "tokens": "MOTION_CONTRACT-v1.0 / M00",
+  "sourceHash": "9138cf689297094c291963dfdf9c04041728c338e71691c84185d448cd1a2fe9",
+  "panels": [
+    {
+      "id": "P01.S01",
+      "board": "P01",
+      "boardTitle": "Đăng nhập",
+      "title": "Đăng nhập",
+      "disposition": "ORIGINAL",
+      "note": ""
+    },
+    {
+      "id": "P01.S02",
+      "board": "P01",
+      "boardTitle": "Đăng nhập",
+      "title": "Xác nhận phiên làm việc",
+      "disposition": "ORIGINAL",
+      "note": ""
+    },
+    {
+      "id": "P02.S01",
+      "board": "P02",
+      "boardTitle": "Trang chủ",
+      "title": "Trang chủ đã khóa",
+      "disposition": "ORIGINAL",
+      "note": ""
+    },
+    {
+      "id": "P03.S01",
+      "board": "P03",
+      "boardTitle": "Dialog quét",
+      "title": "Chọn tác vụ quét",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P03.S02",
+      "board": "P03",
+      "boardTitle": "Dialog quét",
+      "title": "Phiếu chưa hoàn tất",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P03.S03",
+      "board": "P03",
+      "boardTitle": "Dialog quét",
+      "title": "Kho tạm dừng",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P03.S04",
+      "board": "P03",
+      "boardTitle": "Dialog quét",
+      "title": "Xác nhận bỏ phiếu",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P04.S01",
+      "board": "P04",
+      "boardTitle": "Nhập kho",
+      "title": "Thông tin phiếu nhập",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P04.S02",
+      "board": "P04",
+      "boardTitle": "Nhập kho",
+      "title": "Quét hàng nhập",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P04.S03",
+      "board": "P04",
+      "boardTitle": "Nhập kho",
+      "title": "Kiểm tra phiếu",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P04.S04",
+      "board": "P04",
+      "boardTitle": "Nhập kho",
+      "title": "Đã gửi phiếu nhập — chờ Web",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P05.S01",
+      "board": "P05",
+      "boardTitle": "Xuất kho",
+      "title": "Thông tin phiếu xuất",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P05.S02",
+      "board": "P05",
+      "boardTitle": "Xuất kho",
+      "title": "Quét hàng xuất",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P05.S03",
+      "board": "P05",
+      "boardTitle": "Xuất kho",
+      "title": "Kiểm tra phiếu xuất — thiếu hàng",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P05.S04",
+      "board": "P05",
+      "boardTitle": "Xuất kho",
+      "title": "Đã gửi phiếu xuất — chờ Web",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P06.S01",
+      "board": "P06",
+      "boardTitle": "Tra cứu",
+      "title": "Tra cứu sản phẩm",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P06.S02",
+      "board": "P06",
+      "boardTitle": "Tra cứu",
+      "title": "Thông tin sản phẩm",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P06.S03",
+      "board": "P06",
+      "boardTitle": "Tra cứu",
+      "title": "Tồn kho sản phẩm",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P06.S04",
+      "board": "P06",
+      "boardTitle": "Tra cứu",
+      "title": "Lịch sử giao dịch",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P07.S01",
+      "board": "P07",
+      "boardTitle": "NFC",
+      "title": "Thẻ NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P07.S02",
+      "board": "P07",
+      "boardTitle": "NFC",
+      "title": "Đọc thẻ NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P07.S03",
+      "board": "P07",
+      "boardTitle": "NFC",
+      "title": "Xác minh liên kết",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P07.S04",
+      "board": "P07",
+      "boardTitle": "NFC",
+      "title": "Đã liên kết thẻ NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P08.S01",
+      "board": "P08",
+      "boardTitle": "Lịch sử",
+      "title": "Lịch sử danh sách",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P08.S02",
+      "board": "P08",
+      "boardTitle": "Lịch sử",
+      "title": "Chi tiết lịch sử",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P08.S03",
+      "board": "P08",
+      "boardTitle": "Lịch sử",
+      "title": "Phiên quét tham chiếu",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P08.S04",
+      "board": "P08",
+      "boardTitle": "Lịch sử",
+      "title": "Hoạt động theo ngày",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P09.S01",
+      "board": "P09",
+      "boardTitle": "Bảo hành",
+      "title": "Bảo hành danh sách",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P09.S02",
+      "board": "P09",
+      "boardTitle": "Bảo hành",
+      "title": "Tiếp nhận bảo hành",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P09.S03",
+      "board": "P09",
+      "boardTitle": "Bảo hành",
+      "title": "Hồ sơ bảo hành",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P09.S04",
+      "board": "P09",
+      "boardTitle": "Bảo hành",
+      "title": "Kết quả sửa chữa",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P10.S01",
+      "board": "P10",
+      "boardTitle": "Cá nhân",
+      "title": "Cá nhân",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P10.S02",
+      "board": "P10",
+      "boardTitle": "Cá nhân",
+      "title": "Chỉnh sửa hồ sơ",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P10.S03",
+      "board": "P10",
+      "boardTitle": "Cá nhân",
+      "title": "Công việc & quyền",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P10.S04",
+      "board": "P10",
+      "boardTitle": "Cá nhân",
+      "title": "Tài khoản & bảo mật",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P11.S01",
+      "board": "P11",
+      "boardTitle": "Bảo mật",
+      "title": "Đổi mật khẩu",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P11.S02",
+      "board": "P11",
+      "boardTitle": "Bảo mật",
+      "title": "Xác thực thông tin — lỗi",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P11.S03",
+      "board": "P11",
+      "boardTitle": "Bảo mật",
+      "title": "Đã đổi mật khẩu",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P11.S04",
+      "board": "P11",
+      "boardTitle": "Bảo mật",
+      "title": "Phiên đăng nhập",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P12.S01",
+      "board": "P12",
+      "boardTitle": "Chứng từ",
+      "title": "Chứng từ — Danh sách",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P12.S02",
+      "board": "P12",
+      "boardTitle": "Chứng từ",
+      "title": "Chi tiết chứng từ",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P12.S03",
+      "board": "P12",
+      "boardTitle": "Chứng từ",
+      "title": "Sản phẩm trong chứng từ",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P12.S04",
+      "board": "P12",
+      "boardTitle": "Chứng từ",
+      "title": "Tạo chứng từ mới",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P13.S01",
+      "board": "P13",
+      "boardTitle": "Thông báo",
+      "title": "Danh sách thông báo",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P13.S02",
+      "board": "P13",
+      "boardTitle": "Thông báo",
+      "title": "Chi tiết thông báo",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P13.S03",
+      "board": "P13",
+      "boardTitle": "Thông báo",
+      "title": "Theo dõi phiếu chờ xử lý trên Web",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P13.S04",
+      "board": "P13",
+      "boardTitle": "Thông báo",
+      "title": "Chi tiết phiếu chờ xử lý trên Web",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P14.S01",
+      "board": "P14",
+      "boardTitle": "Khôi phục / Ca",
+      "title": "Khôi phục tài khoản",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P14.S02",
+      "board": "P14",
+      "boardTitle": "Khôi phục / Ca",
+      "title": "Yêu cầu đã tiếp nhận",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P14.S03",
+      "board": "P14",
+      "boardTitle": "Khôi phục / Ca",
+      "title": "Kết thúc ca",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P14.S04",
+      "board": "P14",
+      "boardTitle": "Khôi phục / Ca",
+      "title": "Tổng kết ca",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P15.S01",
+      "board": "P15",
+      "boardTitle": "Hệ thống",
+      "title": "Mất kết nối / chưa thể đồng bộ",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P15.S02",
+      "board": "P15",
+      "boardTitle": "Hệ thống",
+      "title": "Phiên đăng nhập hết hạn",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P15.S03",
+      "board": "P15",
+      "boardTitle": "Hệ thống",
+      "title": "Không có quyền thực hiện",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P15.S04",
+      "board": "P15",
+      "boardTitle": "Hệ thống",
+      "title": "Quyền thiết bị Camera và NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P16.S01",
+      "board": "P16",
+      "boardTitle": "Trạng thái dữ liệu",
+      "title": "Đang tải chứng từ",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P16.S02",
+      "board": "P16",
+      "boardTitle": "Trạng thái dữ liệu",
+      "title": "Chưa có chứng từ",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P16.S03",
+      "board": "P16",
+      "boardTitle": "Trạng thái dữ liệu",
+      "title": "Không tìm thấy kết quả",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P16.S04",
+      "board": "P16",
+      "boardTitle": "Trạng thái dữ liệu",
+      "title": "Không tải được dữ liệu",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P17.S01",
+      "board": "P17",
+      "boardTitle": "Ngoại lệ quét",
+      "title": "Ngoại lệ quét — panel 1 (tên chi tiết chờ P tương ứng)",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P17.S02",
+      "board": "P17",
+      "boardTitle": "Ngoại lệ quét",
+      "title": "Mã không thể xuất",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P17.S03",
+      "board": "P17",
+      "boardTitle": "Ngoại lệ quét",
+      "title": "Ngoại lệ quét — panel 3 (tên chi tiết chờ P tương ứng)",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P17.S04",
+      "board": "P17",
+      "boardTitle": "Ngoại lệ quét",
+      "title": "Ngoại lệ quét — panel 4 (tên chi tiết chờ P tương ứng)",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P18.S01",
+      "board": "P18",
+      "boardTitle": "Tệp / Bàn giao",
+      "title": "Đính kèm bàn giao — panel 1 (tên chi tiết chờ P tương ứng)",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P18.S02",
+      "board": "P18",
+      "boardTitle": "Tệp / Bàn giao",
+      "title": "Đính kèm bàn giao — panel 2 (tên chi tiết chờ P tương ứng)",
+      "disposition": "LEGACY_ADAPTED",
+      "note": ""
+    },
+    {
+      "id": "P18.S03",
+      "board": "P18",
+      "boardTitle": "Tệp / Bàn giao",
+      "title": "Đính kèm bàn giao — panel 3 (tên chi tiết chờ P tương ứng)",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P18.S04",
+      "board": "P18",
+      "boardTitle": "Tệp / Bàn giao",
+      "title": "Đính kèm bàn giao — panel 4 (tên chi tiết chờ P tương ứng)",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P19.S01",
+      "board": "P19",
+      "boardTitle": "Xuất linh kiện",
+      "title": "17 · Xuất linh kiện bảo hành — panel 1 (tên chi tiết chờ P tương ứng)",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P19.S02",
+      "board": "P19",
+      "boardTitle": "Xuất linh kiện",
+      "title": "17 · Xuất linh kiện bảo hành — panel 2 (tên chi tiết chờ P tương ứng)",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P19.S03",
+      "board": "P19",
+      "boardTitle": "Xuất linh kiện",
+      "title": "17 · Xuất linh kiện bảo hành — panel 3 (tên chi tiết chờ P tương ứng)",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P19.S04",
+      "board": "P19",
+      "boardTitle": "Xuất linh kiện",
+      "title": "17 · Xuất linh kiện bảo hành — panel 4 (tên chi tiết chờ P tương ứng)",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P20.S01",
+      "board": "P20",
+      "boardTitle": "Lịch sử linh kiện",
+      "title": "Phiếu linh kiện đã xuất",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P20.S02",
+      "board": "P20",
+      "boardTitle": "Lịch sử linh kiện",
+      "title": "Tải thêm lịch sử",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P20.S03",
+      "board": "P20",
+      "boardTitle": "Lịch sử linh kiện",
+      "title": "Lỗi tải lịch sử",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P20.S04",
+      "board": "P20",
+      "boardTitle": "Lịch sử linh kiện",
+      "title": "Chưa có phiếu xuất",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P21.S01",
+      "board": "P21",
+      "boardTitle": "Tiếp tục phiếu",
+      "title": "Phiếu đang thực hiện",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P21.S02",
+      "board": "P21",
+      "boardTitle": "Tiếp tục phiếu",
+      "title": "Tiếp tục đúng phiếu",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P21.S03",
+      "board": "P21",
+      "boardTitle": "Tiếp tục phiếu",
+      "title": "Cần đối chiếu trên Web",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P21.S04",
+      "board": "P21",
+      "boardTitle": "Tiếp tục phiếu",
+      "title": "Kiểm tra kết quả xuất",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P22.S01",
+      "board": "P22",
+      "boardTitle": "Lịch sử NFC",
+      "title": "Lịch sử thao tác",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P22.S02",
+      "board": "P22",
+      "boardTitle": "Lịch sử NFC",
+      "title": "Lịch sử NFC",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P22.S03",
+      "board": "P22",
+      "boardTitle": "Lịch sử NFC",
+      "title": "Chi tiết thao tác NFC",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P22.S04",
+      "board": "P22",
+      "boardTitle": "Lịch sử NFC",
+      "title": "Nguồn lịch sử chưa khả dụng",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P23.S01",
+      "board": "P23",
+      "boardTitle": "Bảo hành / Phiên",
+      "title": "Lịch sử bảo hành",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P23.S02",
+      "board": "P23",
+      "boardTitle": "Bảo hành / Phiên",
+      "title": "Quá trình xử lý hồ sơ",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P23.S03",
+      "board": "P23",
+      "boardTitle": "Bảo hành / Phiên",
+      "title": "Lịch sử phiên quét",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P23.S04",
+      "board": "P23",
+      "boardTitle": "Bảo hành / Phiên",
+      "title": "Chi tiết phiên quét",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P24.S01",
+      "board": "P24",
+      "boardTitle": "Trạng thái Scanner",
+      "title": "Số lượng vượt tồn",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P24.S02",
+      "board": "P24",
+      "boardTitle": "Trạng thái Scanner",
+      "title": "Mã hộp chưa thể xuất",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P24.S03",
+      "board": "P24",
+      "boardTitle": "Trạng thái Scanner",
+      "title": "Chờ xử lý trên Web",
+      "disposition": "CURRENT",
+      "note": ""
+    },
+    {
+      "id": "P24.S04",
+      "board": "P24",
+      "boardTitle": "Trạng thái Scanner",
+      "title": "Hồ sơ đã trả khách",
+      "disposition": "CURRENT",
+      "note": ""
+    }
+  ]
+}
