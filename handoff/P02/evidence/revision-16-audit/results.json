@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "name": "Baseline keeps three newest documents, locked footer and enlarged View all hit area without layout shift",
+      "status": "PASS"
+    },
+    {
+      "name": "Midnight/date refresh keeps current keyboard focus and inner scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Live row removed by newer data falls back safely; refresh does not steal focus from another control",
+      "status": "PASS"
+    },
+    {
+      "name": "Full-name modal keeps focus during refresh, traps Tab and returns on Escape/Back",
+      "status": "PASS"
+    },
+    {
+      "name": "Active/stopped/unknown warehouse labels have distinct honest colors; write guard still blocks",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown KPI uses Vietnamese, disables actions and preserves confirmed shift",
+      "status": "PASS"
+    },
+    {
+      "name": "Short/normal/unbroken names fit and full identity remains readable",
+      "status": "PASS"
+    },
+    {
+      "name": "Unbroken document number wraps without overlapping date/status or changing source",
+      "status": "PASS"
+    },
+    {
+      "name": "Home pending-work scroll, Back and P03 cancel retain context without covering the last row",
+      "status": "PASS"
+    },
+    {
+      "name": "Small text and status labels have at least 4.5 contrast on Home surfaces",
+      "status": "PASS"
+    }
+  ],
+  "metrics": {
+    "warehouse": {
+      "stopped": {
+        "text": "Kho tạm dừng",
+        "background": "rgb(107, 73, 25)",
+        "dot": "rgb(255, 209, 122)"
+      },
+      "unknown": {
+        "text": "Chưa xác minh",
+        "background": "rgb(67, 89, 105)",
+        "dot": "rgb(196, 212, 223)"
+      },
+      "active": {
+        "text": "Đang hoạt động",
+        "background": "rgba(7, 130, 72, 0.61)",
+        "dot": "rgb(40, 212, 92)"
+      }
+    },
+    "contrast": [
+      {
+        "name": "secondary",
+        "color": "rgb(89, 117, 134)",
+        "background": "rgb(255,255,255)",
+        "ratio": 4.868400875034902
+      },
+      {
+        "name": "green",
+        "color": "rgb(8, 115, 79)",
+        "background": "rgb(232, 255, 244)",
+        "ratio": 5.605194937228992
+      },
+      {
+        "name": "amber",
+        "color": "rgb(135, 80, 9)",
+        "background": "rgb(255, 247, 223)",
+        "ratio": 6.16731224365955
+      },
+      {
+        "name": "blue",
+        "color": "rgb(9, 102, 187)",
+        "background": "rgb(228, 245, 255)",
+        "ratio": 5.180477014696681
+      }
+    ]
+  },
+  "errors": [],
+  "scope": "P02 plus navigation/dialog integration; no production/backend/hardware claims"
+}

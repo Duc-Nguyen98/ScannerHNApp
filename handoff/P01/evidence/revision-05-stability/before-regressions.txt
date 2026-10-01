@@ -1,0 +1,126 @@
+Command: node --test tests/auth-session-stability.test.mjs BEFORE fix
+✖ malformed authenticated payload cannot crash or leave login busy (1.6385ms)
+✖ only literal true grants warehouse/permission access; role text cannot grant it (2.3736ms)
+✖ access revoked while start is pending never opens Home (0.5681ms)
+✖ adapter validation exception fails closed and releases busy (0.2656ms)
+✖ navigation intent is not replayed by hash/session revalidation (1.2728ms)
+✖ same-screen logout signals input reset even without a screen transition (0.5347ms)
+✖ local logout clears protected state even if adapter cleanup throws (0.3643ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 156.5062
+
+✖ failing tests:
+
+test at tests\auth-session-stability.test.mjs:8:1
+✖ malformed authenticated payload cannot crash or leave login busy (1.6385ms)
+  TypeError: Cannot read properties of undefined (reading 'active')
+      at guardMessage (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:9:26)
+      at Object.login (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:29:64)
+      at async TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:11:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests\auth-session-stability.test.mjs:18:1
+✖ only literal true grants warehouse/permission access; role text cannot grant it (2.3736ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:25:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:28:1
+✖ access revoked while start is pending never opens Home (0.5681ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:35:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:39:1
+✖ adapter validation exception fails closed and releases busy (0.2656ms)
+  Error: unavailable
+      at adapter.isValid (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:40:65)
+      at Object.login (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:27:55)
+      at async TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:41:41)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests\auth-session-stability.test.mjs:44:1
+✖ navigation intent is not replayed by hash/session revalidation (1.2728ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   returnTo: 'P01',
+  +   target: 'P14'
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:47:33)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { target: 'P14', returnTo: 'P01' },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:49:1
+✖ same-screen logout signals input reset even without a screen transition (0.5347ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== NaN
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:52:25)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: NaN,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\auth-session-stability.test.mjs:54:1
+✖ local logout clears protected state even if adapter cleanup throws (0.3643ms)
+  Error: cleanup failed
+      at adapter.logout (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:56:34)
+      at Object.logout (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/docs/flows/auth-session/auth-flow.mjs:13:13)
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/auth-session-stability.test.mjs:57:8)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

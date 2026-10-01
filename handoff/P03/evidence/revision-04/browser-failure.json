@@ -1,0 +1,11 @@
+{
+  "error": "P03-S01-394 footer DOM and computed appearance must match locked P02\n+ actual - expected\n... Skipped lines\n\n  {\n    children: [\n      {\n        style: {\n          alignItems: 'center',\n...\n      boxShadow: 'rgba(23, 72, 96, 0.02) 0px -5px 18px 0px',\n+     color: 'rgb(8, 11, 112)',\n-     color: 'rgb(8, 53, 78)',\n      fill: 'rgb(0, 0, 0)',\n      fontFamily: 'Arial, sans-serif',\n      fontSize: '16px',\n      fontWeight: '400',\n      gap: 'normal',\n",
+  "checks": [
+    {
+      "name": "Opening from external tools scrolls app into view and restores caller focus",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:8766/flows/auth-session/#home"
+}

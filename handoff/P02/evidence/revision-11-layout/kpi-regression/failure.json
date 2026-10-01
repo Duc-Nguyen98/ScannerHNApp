@@ -1,0 +1,10 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Tất cả (24)'\n- 'Tất cả (5)'\n           ^\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_home_kpi.cjs:18:122\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_home_kpi.cjs:7:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_home_kpi.cjs:16:3",
+  "checks": [
+    {
+      "name": "KPI counts use the complete shared fixtures; footer remains locked",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

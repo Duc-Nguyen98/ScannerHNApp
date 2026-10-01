@@ -1,0 +1,44 @@
+✔ malformed authenticated payload cannot crash or leave login busy (7.7614ms)
+✔ only literal true grants warehouse/permission access; role text cannot grant it (1.3187ms)
+✔ access revoked while start is pending never opens Home (0.8639ms)
+✔ adapter validation exception fails closed and releases busy (0.9149ms)
+✔ navigation intent is not replayed by hash/session revalidation (0.3423ms)
+✔ same-screen logout signals input reset even without a screen transition (0.2743ms)
+✔ local logout clears protected state even if adapter cleanup throws (0.3796ms)
+✔ confirmation actions have distinct sourced chevron, play and logout icons (1.6878ms)
+✔ login uses user, eye and shield-check shapes rather than unrelated glyphs (0.3585ms)
+✔ loading label updates cannot delete the new leading play icon (0.2017ms)
+✔ verified repository icon geometry remains intact and attributed (2.2358ms)
+✔ locked board remains unchanged; auth behavior is covered by executable regressions (2.2226ms)
+✔ valid fixture always stops at confirmation before the P02 boundary (91.2247ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (2.3412ms)
+✔ invalid and empty credentials never expose confirmation or Home (48.9399ms)
+✔ repeated login has a single in-flight adapter request (0.671ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (1.9631ms)
+✔ permission and warehouse guards block start even when called directly (13.6596ms)
+✔ unknown login, unknown shift and thrown request never produce success (48.2479ms)
+✔ expired start returns to login (14.5297ms)
+✔ logout and back/hash guard cannot restore protected screen (2.6822ms)
+✔ late login response after logout is ignored and fixture is revoked (14.7868ms)
+✔ late start response cannot recreate logout session; start double-click guarded (1.2895ms)
+✔ recovery is a P14 pending boundary only (0.891ms)
+✔ P01 fixture session supplies Home identity and warehouse, only after start (53.845ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (11.4104ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (15.2245ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (153.7207ms)
+✔ active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped (15.8453ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (16.1159ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (31.4826ms)
+✔ Vietnam clock uses UTC+7, 24 hours and seconds including midnight/day rollover (2.3206ms)
+✔ Shift timestamp is captured on confirmation, remains fixed, and resets on logout/new shift (52.3451ms)
+✔ The fixture returns one immutable start receipt per session (30.6524ms)
+✔ Denied/UNKNOWN/expired/malformed confirmation never creates a start time (109.5428ms)
+✔ Late confirmation after logout cannot resurrect the prior start time (15.5637ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 772.6479

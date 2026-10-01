@@ -1,0 +1,10 @@
+id,scope,status,evidence,limitation
+P02.S01,Home layout and fixture behavior,IN_PROGRESS,evidence/P02-S01-494.png,Visual FAIL assets pending; integration BLOCKED
+P02.A01,Visual baseline and immutable checksum,FAIL,evidence/comparison-S01.png; evidence/baseline-comparison.json,Checksum PASS only; exact assets absent
+P02.A02,History hub and Back restoration,PASS,evidence/browser-results.json,Prototype only
+P02.A03,Navigation mapping and document/case context,PASS,../../tests/home.test.mjs; evidence/browser-results.json,Destination integration BLOCKED except existing history fixture
+P02.A04,Direct route and action guard,PASS,../../tests/home.test.mjs; evidence/browser-results.json,Existing fixture warehouseOperations only; backend UNKNOWN
+P02.A05,Long name and multi-digit badge responsive,PASS,evidence/P02-long-name-360.png; evidence/render-metrics.json,Not a reference visual PASS
+P02.RUNTIME.UNKNOWN,Unknown KPI and data source,PASS,evidence/P02-unknown-360.png; evidence/browser-results.json,No API mapping
+P02.RUNTIME.LOGOUT,Logout Back reload invalidates Home,PASS,evidence/browser-results.json,Real session revocation BLOCKED
+P02.RUNTIME.KEYBOARD,Focus and Enter navigation,PASS,evidence/keyboard-focus.png; evidence/browser-results.json,Real mobile keyboard NOT_RUN

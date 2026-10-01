@@ -1,0 +1,26 @@
+{
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.hn-clear-filters') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_home_ux.cjs:34:168\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_home_ux.cjs:9:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_home_ux.cjs:32:3",
+  "checks": [
+    {
+      "name": "Home stays clean without drafts and uses Vietnam relative time",
+      "status": "PASS"
+    },
+    {
+      "name": "Consecutive manual input retains focus; duplicate/invalid never increase accepted codes",
+      "status": "PASS"
+    },
+    {
+      "name": "Resume shortcut opens the exact document/session/version/codes without a new run",
+      "status": "PASS"
+    },
+    {
+      "name": "Home inner scroll and focus return from recent detail; footer stays visible",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown resume retains request and requires reconciliation, with no blind resend",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

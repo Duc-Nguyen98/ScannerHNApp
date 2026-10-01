@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "name": "Home stays clean without drafts and uses Vietnam relative time",
+      "status": "PASS"
+    },
+    {
+      "name": "Consecutive manual input retains focus; duplicate/invalid never increase accepted codes",
+      "status": "PASS"
+    },
+    {
+      "name": "Resume shortcut opens the exact document/session/version/codes without a new run",
+      "status": "PASS"
+    },
+    {
+      "name": "Home inner scroll and focus return from recent detail; footer stays visible",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown resume retains request and requires reconciliation, with no blind resend",
+      "status": "PASS"
+    },
+    {
+      "name": "No-result recovery works in Documents, Warranty, NFC and Lookup without mutating data",
+      "status": "PASS"
+    },
+    {
+      "name": "History empty results offer recovery and retain business scope",
+      "status": "PASS"
+    },
+    {
+      "name": "Unread notification empty state can return to All without inventing notifications",
+      "status": "PASS"
+    },
+    {
+      "name": "Tile feedback preserves geometry and footer locked paint",
+      "status": "PASS"
+    },
+    {
+      "name": "Outbound scanning and resume preserve exact data; two drafts stay separate on a small screen",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout removes draft shortcuts and protected Back cannot restore them",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "fixtureClock": "2026-09-28T01:15:20Z",
+  "realHardware": "NOT_RUN"
+}

@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "name": "Home shows exactly the three newest source documents, no hardcoded April rows",
+      "status": "PASS"
+    },
+    {
+      "name": "Each recent row opens exact P12 doc ID and header Back returns to focused Home row",
+      "status": "PASS"
+    },
+    {
+      "name": "View all opens full P12 list newest first, clears stale query, and keeps its own state on Back",
+      "status": "PASS"
+    },
+    {
+      "name": "History nav remains the history hub, independently of View all",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared source updates refresh top three; removed-row focus falls back to section heading",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN shows no fake rows; new View all resets latest view instead of stale search",
+      "status": "PASS"
+    }
+  ],
+  "initial": [
+    {
+      "id": "p12-stock-PX-0011",
+      "number": "PX-0011",
+      "text": "PX-0011Xuất kho27/09 09:20Đã ghi sổ"
+    },
+    {
+      "id": "p12-stock-PN-0011",
+      "number": "PN-0011",
+      "text": "PN-0011Nhập kho26/09 09:20Đã ghi sổ"
+    },
+    {
+      "id": "p12-stock-PX-0010",
+      "number": "PX-0010",
+      "text": "PX-0010Xuất kho25/09 14:35Chờ xử lý trên Web"
+    }
+  ],
+  "errors": [],
+  "viewports": 4,
+  "fixtureClock": "2026-09-29T01:15:20Z"
+}

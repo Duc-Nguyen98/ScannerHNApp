@@ -1,0 +1,22 @@
+Command: node --test tests/*.mjs tests/*.cjs
+Final snapshot: 655 tests, 654 pass, 1 fail, exit 1.
+Fail: tests/outbound-source-review.test.mjs:6
+source preview values exactly match committed document without reserving identities
+actual: fixture-outbound-0005-5
+expected: fixture-outbound-0005-4
+Isolated run: 3 tests, 2 pass, 1 fail (same assertion).
+
+Focused: node --test tests/auth-session*.mjs tests/home*.mjs tests/vietnam-clock.test.mjs
+70 tests, 70 pass, 0 fail, exit 0.
+Only 8 new tests in auth-session-lifecycle-r08.test.mjs authored in this revision.
+Other repository work is concurrent; whole-repository test count is a snapshot.
+
+Follow-up verification 2026-09-30 after user confirmation to address P05:
+The test correction was already present in the workspace at inspection.
+Expected next ID now uses OUTBOUND_SOURCES.length + 1; no hardcoded count of 4.
+No test/runtime/UI source edits were needed or made in this follow-up.
+Isolated command: node --test tests/outbound-source-review.test.mjs
+Result: 3 tests, 3 pass, 0 fail, exit 0.
+Full command: node --test tests/*.mjs tests/*.cjs
+Result: 655 tests, 655 pass, 0 fail, exit 0 (9281.188 ms).
+Prior failure above is retained as historical evidence; it is now resolved.

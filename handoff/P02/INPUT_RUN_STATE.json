@@ -1,0 +1,80 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P01",
+  "prompt_status": "REVISION_04_HEADER_VERIFIED_FULL_EVIDENCE_ADDED_NO_APP_CHANGE",
+  "completed_panel_ids": [],
+  "implemented_panel_ids": [
+    "P01.S01",
+    "P01.S02"
+  ],
+  "remaining_panel_ids": [
+    "P01.S01",
+    "P01.S02"
+  ],
+  "shared_components_changed": [
+    "P01 createAuthFlow (new)",
+    "P01 fixture adapter (new)",
+    "P01 hero/card/forms (new)"
+  ],
+  "existing_work_preserved": [
+    "docs/flows/warranty-components/flow.js",
+    "tests/warranty-component-history.test.cjs",
+    "../contract-work"
+  ],
+  "blockers": [
+    "Visible mismatch remains: exact hero/logo/font/texture and raster icon details. Visual FAIL; known asset issue, no unapproved replacement.",
+    "Production source/auth/session/shift/revocation/reconciliation and credential policy unavailable.",
+    "P02 and P14 editable routes absent; preview navigation contracts only.",
+    "Real mobile keyboard/platform E2E NOT_RUN."
+  ],
+  "artifact_paths": [
+    "handoff/CONTRACT_CONTEXT.md",
+    "handoff/P01/CONTEXT.md",
+    "handoff/P01/REPORT.md",
+    "handoff/P01/STATE_ACCEPTANCE.csv",
+    "handoff/P01/evidence",
+    "SCREEN_COVERAGE.csv",
+    "docs/flows/auth-session/",
+    "handoff/P01/REVISION_02.md",
+    "handoff/P01/evidence/revision-02",
+    "handoff/P01/REVISION_03.md",
+    "handoff/P01/evidence/revision-03",
+    "handoff/P01/REVISION_04.md",
+    "handoff/P01/evidence/revision-04"
+  ],
+  "next_action": "User will handle subsequent source/asset updates. Keep P01 visual FAIL; ask and obtain confirmation before any new substitution/scope change. Do not execute other prompts.",
+  "run_command": "python scripts/serve_preview.py",
+  "preview_url": "http://127.0.0.1:8766/flows/auth-session/",
+  "tests": {
+    "node": 27,
+    "passed": 27,
+    "failed": 0,
+    "scope": "12 auth fixture + 10 existing history + 5 structural/immutability; not pixel acceptance",
+    "browser": "Revision03 computed colors/stroke; login-confirmation-logout; 360px badge/no overflow. Evidence revision-03/browser-checks.json and confirmation-metrics.json; full-scene visual still FAIL.",
+    "production": "NOT_RUN"
+  },
+  "coverage": {
+    "baseline_panels": 91,
+    "implemented_P01": 2,
+    "unstarted_other_prompts": 89
+  },
+  "baseline_sha256": "260e483a6447af2fb84cd5c1a5c5f5d75bd1a756ec6e37d69e0743aea5bd5853",
+  "current_revision": "04",
+  "visual_status": "FAIL",
+  "last_user_confirmation": "Người dùng xác nhận phần vừa sửa giống thiết kế, yêu cầu bổ sung background header. Giữ nguyên màu/icon revision03; không coi là xác nhận pixel-identical toàn bộ.",
+  "revision_files_changed": [
+    "docs/flows/auth-session/style.css",
+    "handoff/P01/measure_palette.py",
+    "handoff/P01/REVISION_03.md",
+    "handoff/P01/REPORT.md",
+    "handoff/P01/evidence/revision-03",
+    "SCREEN_COVERAGE.csv",
+    "RUN_STATE.json",
+    "handoff/P01/STATE_ACCEPTANCE.csv"
+  ],
+  "last_user_request": "Kiểm tra background header bị mất và bổ sung theo thiết kế.",
+  "header_check": "Header and both background assets present (HTTP200); previous evidence was card-only at scrollY276. Added contiguous full-screen evidence; app CSS/JS unchanged. Preview restored to top."
+}

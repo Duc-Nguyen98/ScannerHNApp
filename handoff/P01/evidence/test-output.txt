@@ -1,0 +1,32 @@
+Commands: node --check app.mjs/auth-flow.mjs/fixture-adapter.mjs (full docs/flows/auth-session paths); node --test tests/auth-session.test.mjs tests/warranty-component-history.test.cjs; git diff --check
+✔ valid fixture always stops at confirmation before the P02 boundary (12.4577ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (1.2183ms)
+✔ invalid and empty credentials never expose confirmation or Home (27.871ms)
+✔ repeated login has a single in-flight adapter request (0.9108ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (1.5713ms)
+✔ permission and warehouse guards block start even when called directly (13.8858ms)
+✔ unknown login, unknown shift and thrown request never produce success (31.4934ms)
+✔ expired start returns to login (13.806ms)
+✔ logout and back/hash guard cannot restore protected screen (1.0842ms)
+✔ late login response after logout is ignored and fixture is revoked (14.4389ms)
+✔ late start response cannot recreate logout session; start double-click guarded (15.4316ms)
+✔ recovery is a P14 pending boundary only (0.4285ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (14.0527ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (2.892ms)
+✔ invalid fixture page does not partially update data or claim completion (1.632ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (2.8434ms)
+✔ late rejection after Back never replaces the destination scene (5.3166ms)
+✔ detached preview cannot be repainted by a stale read (1.5935ms)
+✔ closed case stays read-only after failure and successful retry (2.1109ms)
+✔ empty and static loading scenes do not start a read (3.6712ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (2.0174ms)
+✔ new issue preserves saved-document routing without recording history (10.5643ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 287.0037
+warning: in the working copy of 'docs/flows/warranty-components/flow.js', LF will be replaced by CRLF the next time Git touches it

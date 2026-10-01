@@ -1,0 +1,1074 @@
+{
+  "gate_status": "READY_FOR_FINAL",
+  "scope": "UI_FIXTURE",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "app_source_hash": "9138cf689297094c291963dfdf9c04041728c338e71691c84185d448cd1a2fe9",
+  "working_diff_hash": "9c736e2bae52d5b27bfa000fd0923b56ce0dc64b1c60e29a65fdbafb378b9e08",
+  "source_manifest": "handoff/motion/M24/SOURCE_MANIFEST.json",
+  "fixture_version": "hn-flow-gate-2026-09-30-v1",
+  "fixture_manifest": "handoff/flow/FIXTURE_MANIFEST.json",
+  "token_version": "MOTION_CONTRACT-v1.0 / M00",
+  "token_sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a",
+  "normal_result": "PASS",
+  "reduced_result": "PASS",
+  "off_result": "PASS",
+  "board_count": 24,
+  "panel_count": 91,
+  "decisions": {
+    "APPLIED": 67,
+    "STATIC_BY_DESIGN": 11,
+    "REUSED": 13
+  },
+  "raw_decisions": {
+    "APPLIED": 66,
+    "STATIC_BY_DESIGN": 11,
+    "REUSED": 13,
+    "APPLIED;STATIC_BY_DESIGN_INPUTS_ROWS_EXIT": 1
+  },
+  "tested_flows": [
+    {
+      "id": "J01",
+      "mode": "auto",
+      "boards": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P09"
+      ],
+      "name": "Entry and P03 actions remain clickable at three viewports",
+      "status": "PASS",
+      "domain_summary": [
+        {
+          "action": "inbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        }
+      ],
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J01-trace.zip"
+    },
+    {
+      "id": "J02",
+      "mode": "auto",
+      "boards": [
+        "P04",
+        "P08",
+        "P12",
+        "P24"
+      ],
+      "name": "Verified stock receipt shares history and document identity; Back/Forward retain result",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "fixture-inbound-0005",
+        "historyId": "receipt:fixture-inbound-0005",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J02-trace.zip"
+    },
+    {
+      "id": "J03",
+      "mode": "auto",
+      "boards": [
+        "P02",
+        "P08",
+        "P12",
+        "P18"
+      ],
+      "name": "History explicit B08 mapping opens document and real PDF; caller tab/filter/focus restored",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "fixture-inbound-0005",
+        "recordId": "LS-0001",
+        "pdfNonblank": true
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J03-trace.zip"
+    },
+    {
+      "id": "J04",
+      "mode": "auto",
+      "boards": [
+        "P08",
+        "P22",
+        "P23"
+      ],
+      "name": "History missing/invalid IDs never choose first record; legacy session stays B08",
+      "status": "PASS",
+      "domain_summary": {
+        "legacyScanCount": "19",
+        "missingAndInvalidCases": 4,
+        "defaultEventSources": "unavailable, not fabricated"
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J04-trace.zip"
+    },
+    {
+      "id": "J05",
+      "mode": "auto",
+      "boards": [
+        "P01",
+        "P02",
+        "P12"
+      ],
+      "name": "Refresh reauth gate and logout Back do not reveal old documents",
+      "status": "PASS",
+      "domain_summary": {
+        "preRefreshHash": "#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "refresh": "reauth required; page-memory receipt not durable",
+        "logout": "no authenticated DOM"
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J05-trace.zip"
+    },
+    {
+      "id": "J06",
+      "mode": "auto",
+      "boards": [
+        "P04",
+        "P15",
+        "P17",
+        "P24"
+      ],
+      "name": "UNKNOWN stock write only checks same request, no duplicate record",
+      "status": "PASS",
+      "domain_summary": {
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J06-trace.zip"
+    },
+    {
+      "id": "J07",
+      "mode": "auto",
+      "boards": [
+        "P09",
+        "P19",
+        "P20"
+      ],
+      "name": "Entry warranty to component Post and shared case/history",
+      "status": "PASS",
+      "domain_summary": {
+        "caseId": "BH-001",
+        "receiptId": "XLK-DEMO-0001",
+        "commits": 1
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J07-trace.zip"
+    },
+    {
+      "id": "J08",
+      "mode": "auto",
+      "boards": [
+        "P03",
+        "P04",
+        "P14"
+      ],
+      "name": "Legacy P03 draft cannot masquerade as a verified live owner",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "PN-0001",
+        "dependency": "P03 legacy draft has no matching P04 owner; retained and blocked"
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J08-trace.zip"
+    },
+    {
+      "id": "J09",
+      "mode": "auto",
+      "boards": [
+        "P09",
+        "P20",
+        "P23",
+        "P24"
+      ],
+      "name": "Closed case read-only history and timeline use the same case identity",
+      "status": "PASS",
+      "domain_summary": {
+        "caseId": "BH-002",
+        "readOnly": true
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J09-trace.zip"
+    },
+    {
+      "id": "J10",
+      "mode": "auto",
+      "boards": [
+        "P05",
+        "P08",
+        "P12",
+        "P17",
+        "P24"
+      ],
+      "name": "Outbound record and UNKNOWN reconciliation share receipt identity without Post",
+      "status": "PASS",
+      "domain_summary": {
+        "firstDocumentId": "fixture-outbound-0005-1",
+        "secondDocumentId": "fixture-outbound-0005-2",
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J10-trace.zip"
+    },
+    {
+      "id": "J11",
+      "mode": "auto",
+      "boards": [
+        "P09",
+        "P19",
+        "P21"
+      ],
+      "name": "Live component draft resumes exact document/session/version through P21",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "DRAFT-DEMO-94236bbd-acc3-4cd5-8cef-399d586e11f4",
+        "scanSessionId": "d6e1d219-e515-4266-8c64-79ef4a82afae",
+        "version": 2,
+        "commits": 0
+      },
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J11-trace.zip"
+    },
+    {
+      "id": "J12",
+      "mode": "auto",
+      "boards": [
+        "P03",
+        "P04",
+        "P05",
+        "P14"
+      ],
+      "name": "P03 and P14 share live stock owners; resume/save/cancel/discard retain exact identity",
+      "status": "PASS",
+      "domain_summary": [
+        {
+          "operation": "inbound",
+          "documentId": "fixture-inbound-0005",
+          "scanSessionId": "fixture-inbound-scan-0005",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        },
+        {
+          "operation": "outbound",
+          "documentId": "fixture-outbound-0005-1",
+          "scanSessionId": "fixture-outbound-scan-0005-1",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        }
+      ],
+      "evidence": "handoff/motion/M24/release/auto/results.json",
+      "trace": "handoff/motion/M24/release/auto/J12-trace.zip"
+    },
+    {
+      "id": "J01",
+      "mode": "os-reduced",
+      "boards": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P09"
+      ],
+      "name": "Entry and P03 actions remain clickable at three viewports",
+      "status": "PASS",
+      "domain_summary": [
+        {
+          "action": "inbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        }
+      ],
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J01-trace.zip"
+    },
+    {
+      "id": "J02",
+      "mode": "os-reduced",
+      "boards": [
+        "P04",
+        "P08",
+        "P12",
+        "P24"
+      ],
+      "name": "Verified stock receipt shares history and document identity; Back/Forward retain result",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "fixture-inbound-0005",
+        "historyId": "receipt:fixture-inbound-0005",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J02-trace.zip"
+    },
+    {
+      "id": "J03",
+      "mode": "os-reduced",
+      "boards": [
+        "P02",
+        "P08",
+        "P12",
+        "P18"
+      ],
+      "name": "History explicit B08 mapping opens document and real PDF; caller tab/filter/focus restored",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "fixture-inbound-0005",
+        "recordId": "LS-0001",
+        "pdfNonblank": true
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J03-trace.zip"
+    },
+    {
+      "id": "J04",
+      "mode": "os-reduced",
+      "boards": [
+        "P08",
+        "P22",
+        "P23"
+      ],
+      "name": "History missing/invalid IDs never choose first record; legacy session stays B08",
+      "status": "PASS",
+      "domain_summary": {
+        "legacyScanCount": "19",
+        "missingAndInvalidCases": 4,
+        "defaultEventSources": "unavailable, not fabricated"
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J04-trace.zip"
+    },
+    {
+      "id": "J05",
+      "mode": "os-reduced",
+      "boards": [
+        "P01",
+        "P02",
+        "P12"
+      ],
+      "name": "Refresh reauth gate and logout Back do not reveal old documents",
+      "status": "PASS",
+      "domain_summary": {
+        "preRefreshHash": "#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "refresh": "reauth required; page-memory receipt not durable",
+        "logout": "no authenticated DOM"
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J05-trace.zip"
+    },
+    {
+      "id": "J06",
+      "mode": "os-reduced",
+      "boards": [
+        "P04",
+        "P15",
+        "P17",
+        "P24"
+      ],
+      "name": "UNKNOWN stock write only checks same request, no duplicate record",
+      "status": "PASS",
+      "domain_summary": {
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J06-trace.zip"
+    },
+    {
+      "id": "J07",
+      "mode": "os-reduced",
+      "boards": [
+        "P09",
+        "P19",
+        "P20"
+      ],
+      "name": "Entry warranty to component Post and shared case/history",
+      "status": "PASS",
+      "domain_summary": {
+        "caseId": "BH-001",
+        "receiptId": "XLK-DEMO-0001",
+        "commits": 1
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J07-trace.zip"
+    },
+    {
+      "id": "J08",
+      "mode": "os-reduced",
+      "boards": [
+        "P03",
+        "P04",
+        "P14"
+      ],
+      "name": "Legacy P03 draft cannot masquerade as a verified live owner",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "PN-0001",
+        "dependency": "P03 legacy draft has no matching P04 owner; retained and blocked"
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J08-trace.zip"
+    },
+    {
+      "id": "J09",
+      "mode": "os-reduced",
+      "boards": [
+        "P09",
+        "P20",
+        "P23",
+        "P24"
+      ],
+      "name": "Closed case read-only history and timeline use the same case identity",
+      "status": "PASS",
+      "domain_summary": {
+        "caseId": "BH-002",
+        "readOnly": true
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J09-trace.zip"
+    },
+    {
+      "id": "J10",
+      "mode": "os-reduced",
+      "boards": [
+        "P05",
+        "P08",
+        "P12",
+        "P17",
+        "P24"
+      ],
+      "name": "Outbound record and UNKNOWN reconciliation share receipt identity without Post",
+      "status": "PASS",
+      "domain_summary": {
+        "firstDocumentId": "fixture-outbound-0005-1",
+        "secondDocumentId": "fixture-outbound-0005-2",
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J10-trace.zip"
+    },
+    {
+      "id": "J11",
+      "mode": "os-reduced",
+      "boards": [
+        "P09",
+        "P19",
+        "P21"
+      ],
+      "name": "Live component draft resumes exact document/session/version through P21",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "DRAFT-DEMO-13747630-9f68-448d-8dd5-c77860b66fa2",
+        "scanSessionId": "8ac2ed15-8f16-44b1-adc9-de000e8362a8",
+        "version": 2,
+        "commits": 0
+      },
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J11-trace.zip"
+    },
+    {
+      "id": "J12",
+      "mode": "os-reduced",
+      "boards": [
+        "P03",
+        "P04",
+        "P05",
+        "P14"
+      ],
+      "name": "P03 and P14 share live stock owners; resume/save/cancel/discard retain exact identity",
+      "status": "PASS",
+      "domain_summary": [
+        {
+          "operation": "inbound",
+          "documentId": "fixture-inbound-0005",
+          "scanSessionId": "fixture-inbound-scan-0005",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        },
+        {
+          "operation": "outbound",
+          "documentId": "fixture-outbound-0005-1",
+          "scanSessionId": "fixture-outbound-scan-0005-1",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        }
+      ],
+      "evidence": "handoff/motion/M24/release/os-reduced/results.json",
+      "trace": "handoff/motion/M24/release/os-reduced/J12-trace.zip"
+    },
+    {
+      "id": "J01",
+      "mode": "off",
+      "boards": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P09"
+      ],
+      "name": "Entry and P03 actions remain clickable at three viewports",
+      "status": "PASS",
+      "domain_summary": [
+        {
+          "action": "inbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        }
+      ],
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J01-trace.zip"
+    },
+    {
+      "id": "J02",
+      "mode": "off",
+      "boards": [
+        "P04",
+        "P08",
+        "P12",
+        "P24"
+      ],
+      "name": "Verified stock receipt shares history and document identity; Back/Forward retain result",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "fixture-inbound-0005",
+        "historyId": "receipt:fixture-inbound-0005",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J02-trace.zip"
+    },
+    {
+      "id": "J03",
+      "mode": "off",
+      "boards": [
+        "P02",
+        "P08",
+        "P12",
+        "P18"
+      ],
+      "name": "History explicit B08 mapping opens document and real PDF; caller tab/filter/focus restored",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "fixture-inbound-0005",
+        "recordId": "LS-0001",
+        "pdfNonblank": true
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J03-trace.zip"
+    },
+    {
+      "id": "J04",
+      "mode": "off",
+      "boards": [
+        "P08",
+        "P22",
+        "P23"
+      ],
+      "name": "History missing/invalid IDs never choose first record; legacy session stays B08",
+      "status": "PASS",
+      "domain_summary": {
+        "legacyScanCount": "19",
+        "missingAndInvalidCases": 4,
+        "defaultEventSources": "unavailable, not fabricated"
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J04-trace.zip"
+    },
+    {
+      "id": "J05",
+      "mode": "off",
+      "boards": [
+        "P01",
+        "P02",
+        "P12"
+      ],
+      "name": "Refresh reauth gate and logout Back do not reveal old documents",
+      "status": "PASS",
+      "domain_summary": {
+        "preRefreshHash": "#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "refresh": "reauth required; page-memory receipt not durable",
+        "logout": "no authenticated DOM"
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J05-trace.zip"
+    },
+    {
+      "id": "J06",
+      "mode": "off",
+      "boards": [
+        "P04",
+        "P15",
+        "P17",
+        "P24"
+      ],
+      "name": "UNKNOWN stock write only checks same request, no duplicate record",
+      "status": "PASS",
+      "domain_summary": {
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J06-trace.zip"
+    },
+    {
+      "id": "J07",
+      "mode": "off",
+      "boards": [
+        "P09",
+        "P19",
+        "P20"
+      ],
+      "name": "Entry warranty to component Post and shared case/history",
+      "status": "PASS",
+      "domain_summary": {
+        "caseId": "BH-001",
+        "receiptId": "XLK-DEMO-0001",
+        "commits": 1
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J07-trace.zip"
+    },
+    {
+      "id": "J08",
+      "mode": "off",
+      "boards": [
+        "P03",
+        "P04",
+        "P14"
+      ],
+      "name": "Legacy P03 draft cannot masquerade as a verified live owner",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "PN-0001",
+        "dependency": "P03 legacy draft has no matching P04 owner; retained and blocked"
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J08-trace.zip"
+    },
+    {
+      "id": "J09",
+      "mode": "off",
+      "boards": [
+        "P09",
+        "P20",
+        "P23",
+        "P24"
+      ],
+      "name": "Closed case read-only history and timeline use the same case identity",
+      "status": "PASS",
+      "domain_summary": {
+        "caseId": "BH-002",
+        "readOnly": true
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J09-trace.zip"
+    },
+    {
+      "id": "J10",
+      "mode": "off",
+      "boards": [
+        "P05",
+        "P08",
+        "P12",
+        "P17",
+        "P24"
+      ],
+      "name": "Outbound record and UNKNOWN reconciliation share receipt identity without Post",
+      "status": "PASS",
+      "domain_summary": {
+        "firstDocumentId": "fixture-outbound-0005-1",
+        "secondDocumentId": "fixture-outbound-0005-2",
+        "inventoryDelta": 0
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J10-trace.zip"
+    },
+    {
+      "id": "J11",
+      "mode": "off",
+      "boards": [
+        "P09",
+        "P19",
+        "P21"
+      ],
+      "name": "Live component draft resumes exact document/session/version through P21",
+      "status": "PASS",
+      "domain_summary": {
+        "documentId": "DRAFT-DEMO-d326669c-da40-482f-8177-98cf76416dbe",
+        "scanSessionId": "84f2759e-b742-425c-bc80-2ce163491d0c",
+        "version": 2,
+        "commits": 0
+      },
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J11-trace.zip"
+    },
+    {
+      "id": "J12",
+      "mode": "off",
+      "boards": [
+        "P03",
+        "P04",
+        "P05",
+        "P14"
+      ],
+      "name": "P03 and P14 share live stock owners; resume/save/cancel/discard retain exact identity",
+      "status": "PASS",
+      "domain_summary": [
+        {
+          "operation": "inbound",
+          "documentId": "fixture-inbound-0005",
+          "scanSessionId": "fixture-inbound-scan-0005",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        },
+        {
+          "operation": "outbound",
+          "documentId": "fixture-outbound-0005-1",
+          "scanSessionId": "fixture-outbound-scan-0005-1",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        }
+      ],
+      "evidence": "handoff/motion/M24/release/off/results.json",
+      "trace": "handoff/motion/M24/release/off/J12-trace.zip"
+    }
+  ],
+  "domain_parity": "PASS; generated UUIDs normalized for cross-mode summaries; each journey asserts exact identity within its own mode.",
+  "coverage_gaps": [],
+  "known_issues": [
+    "Motion visual acceptance remains user review pending.",
+    "Production WMS/API/permissions and physical camera/NFC/keyboard unverified; fixture-only gate.",
+    "Page-memory/durable persistence limitations remain per business owner; no production persistence claim.",
+    "Target-device FPS/input-latency/dropped-frames not measured; native scrolling and deferred virtualization preserved."
+  ],
+  "evidence": [
+    "handoff/motion/MOTION_COVERAGE.csv",
+    "handoff/motion/M24/RUNTIME_STATE_INVENTORY.json",
+    "handoff/motion/M24/SUMMARY.json",
+    "handoff/motion/M24/node-tests.txt",
+    "handoff/motion/M24/evidence/results.json",
+    "handoff/flow/FLOW_GATE.json"
+  ],
+  "business_tracking_unchanged": true,
+  "public_deployed": false
+}

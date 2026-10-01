@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "KPI counts use the complete shared fixtures; footer remains locked",
+      "status": "PASS"
+    },
+    {
+      "name": "Waiting KPI resets stale search, opens only waiting Web documents, and Back restores focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard opens waiting list; detail Back keeps KPI filter/search; normal entry keeps its own filter",
+      "status": "PASS"
+    },
+    {
+      "name": "Open-warranty KPI excludes returned cases and overrides old search without losing normal view",
+      "status": "PASS"
+    },
+    {
+      "name": "Returning Home recomputes open count; zero opens honest empty list",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN is not clickable and cannot silently open all records",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "source": "Complete local fixture dataset; not production totals"
+}

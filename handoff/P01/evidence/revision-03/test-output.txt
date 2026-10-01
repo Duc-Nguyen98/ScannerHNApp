@@ -1,0 +1,47 @@
+Commands: node --test tests/auth-session.test.mjs tests/auth-session-visual-contract.test.mjs tests/warranty-component-history.test.cjs; git diff --check; Get-FileHash app.mjs and sourced-icons.mjs
+✔ confirmation actions have distinct sourced chevron, play and logout icons (1.3756ms)
+✔ login uses user, eye and shield-check shapes rather than unrelated glyphs (0.3456ms)
+✔ loading label updates cannot delete the new leading play icon (0.199ms)
+✔ verified repository icon geometry remains intact and attributed (0.7179ms)
+✔ locked board, auth adapter and existing history implementation are unchanged (7.7899ms)
+✔ valid fixture always stops at confirmation before the P02 boundary (17.7796ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (0.8591ms)
+✔ invalid and empty credentials never expose confirmation or Home (27.4858ms)
+✔ repeated login has a single in-flight adapter request (0.7214ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (2.6503ms)
+✔ permission and warehouse guards block start even when called directly (11.7742ms)
+✔ unknown login, unknown shift and thrown request never produce success (32.2906ms)
+✔ expired start returns to login (30.343ms)
+✔ logout and back/hash guard cannot restore protected screen (1.1165ms)
+✔ late login response after logout is ignored and fixture is revoked (13.9556ms)
+✔ late start response cannot recreate logout session; start double-click guarded (15.1778ms)
+✔ recovery is a P14 pending boundary only (0.5888ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (12.3282ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (9.2911ms)
+✔ invalid fixture page does not partially update data or claim completion (1.9033ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (1.8882ms)
+✔ late rejection after Back never replaces the destination scene (2.0897ms)
+✔ detached preview cannot be repainted by a stale read (1.7592ms)
+✔ closed case stays read-only after failure and successful retry (2.0161ms)
+✔ empty and static loading scenes do not start a read (6.5942ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (1.7345ms)
+✔ new issue preserves saved-document routing without recording history (7.082ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 316.3079
+warning: in the working copy of 'docs/flows/warranty-components/flow.js', LF will be replaced by CRLF the next time Git touches it
+[
+  {
+    "Path": "C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\auth-session\\app.mjs",
+    "Hash": "EBCE68D4B94B5554BF92200FA2DE2EAF530F83E58228538EFB140CEA398A0284"
+  },
+  {
+    "Path": "C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\auth-session\\sourced-icons.mjs",
+    "Hash": "E40F728522EFA29582D165AB5458918A02B797CF60978AC3F84C9E347A1C9833"
+  }
+]

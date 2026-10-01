@@ -1,0 +1,52 @@
+[
+  {
+    "id": "eye-value-preserved",
+    "pass": true,
+    "characters": 9
+  },
+  {
+    "id": "invalid-stays-login",
+    "pass": true
+  },
+  {
+    "id": "start-loading-preserves-icon",
+    "iconPresent": true,
+    "busy": "true",
+    "label": "Đang kiểm tra…"
+  },
+  {
+    "id": "P02-pending-icon-present",
+    "pass": true
+  },
+  {
+    "id": "logout-hash-guard",
+    "pass": true
+  },
+  {
+    "id": "denied",
+    "blocked": true,
+    "iconPresent": true,
+    "message": "Tài khoản không có quyền thao tác kho."
+  },
+  {
+    "id": "warehouse-stopped",
+    "blocked": true,
+    "iconPresent": true,
+    "message": "Kho đang ngừng hoạt động. Không thể bắt đầu ca làm việc."
+  },
+  {
+    "id": "start-unknown",
+    "blocked": true,
+    "iconPresent": true,
+    "message": "Chưa xác định kết quả bắt đầu ca. Cần đối chiếu phiên trước khi thử lại; tích hợp đang chờ."
+  },
+  {
+    "id": "keyboard-reduced-viewport",
+    "note": "Not a physical keyboard E2E",
+    "focus": "submit",
+    "top": 232.60000610351562,
+    "bottom": 298.6000061035156,
+    "viewportHeight": 400,
+    "outline": "solid"
+  }
+]

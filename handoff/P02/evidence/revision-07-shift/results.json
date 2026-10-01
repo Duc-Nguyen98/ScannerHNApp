@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "name": "Double start confirms once; Home shows confirmation timestamp in Vietnam time",
+      "status": "PASS"
+    },
+    {
+      "name": "Shift time does not tick with current device time",
+      "status": "PASS"
+    },
+    {
+      "name": "Lookup and Home navigation preserves the exact start receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "KPI UNKNOWN and name re-render do not replace a known start receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "3 viewports keep clock/icon aligned and no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears old shift; next successful confirmation gets a new receipt",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "firstReceipt": {
+    "timestamp": "2026-09-28T13:09:00.395Z",
+    "text": "20:09:00"
+  },
+  "timezone": "America/New_York browser, Asia/Ho_Chi_Minh display",
+  "production": "NOT_RUN"
+}

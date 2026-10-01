@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "id": "eye",
+      "pass": true,
+      "detail": "Exact value and trailing spaces preserved; CDP DOM read, fixture only."
+    },
+    {
+      "id": "invalid-login",
+      "pass": true,
+      "detail": "Observed error and #login after wrong fixture password."
+    },
+    {
+      "id": "navigation-P02",
+      "pass": true,
+      "detail": "Confirmation retained; explicit pending, no real shift."
+    },
+    {
+      "id": "logout-hash-guard",
+      "pass": true,
+      "detail": "Forced #confirmation returned to #login without session."
+    },
+    {
+      "id": "denied",
+      "panel": "P01.S02",
+      "message": "Tài khoản không có quyền thao tác kho.",
+      "startDisabled": true,
+      "heading": "Chào bạn,Minh Anh",
+      "focus": "heading"
+    },
+    {
+      "id": "warehouse-stopped",
+      "panel": "P01.S02",
+      "message": "Kho đang ngừng hoạt động. Không thể bắt đầu ca làm việc.",
+      "startDisabled": true,
+      "heading": "Chào bạn,Minh Anh",
+      "focus": "heading"
+    },
+    {
+      "id": "other-user",
+      "panel": "P01.S02",
+      "message": "",
+      "startDisabled": false,
+      "heading": "Chào bạn,Lan Nguyễn",
+      "focus": "heading"
+    },
+    {
+      "id": "start-unknown",
+      "panel": "P01.S02",
+      "message": "Chưa xác định kết quả bắt đầu ca. Cần đối chiếu phiên trước khi thử lại; tích hợp đang chờ.",
+      "startDisabled": true,
+      "heading": "Chào bạn,Minh Anh",
+      "focus": "message"
+    },
+    {
+      "id": "expired",
+      "panel": "P01.S01",
+      "message": "Phiên đã hết hạn. Vui lòng đăng nhập lại.",
+      "heading": "Quản lý khoHoa Nam",
+      "focus": "username"
+    },
+    {
+      "id": "auth-unknown",
+      "panel": "P01.S01",
+      "message": "Chưa xác định được kết quả đăng nhập. Chưa có phiên được xác nhận.",
+      "heading": "Quản lý khoHoa Nam",
+      "focus": "message"
+    },
+    {
+      "id": "recovery",
+      "pass": true
+    },
+    {
+      "id": "keyboard-resized-viewport",
+      "note": "Synthetic viewport shrink, not a hardware keyboard test",
+      "input": {
+        "focus": "password",
+        "height": 400,
+        "field": {
+          "x": 72.80000305175781,
+          "y": 280,
+          "width": 204.40000915527344,
+          "height": 48.400001525878906,
+          "top": 280,
+          "right": 277.20001220703125,
+          "bottom": 328.4000015258789,
+          "left": 72.80000305175781
+        }
+      },
+      "cta": {
+        "focus": "submit",
+        "height": 400,
+        "cta": {
+          "x": 32,
+          "y": 232.1999969482422,
+          "width": 296,
+          "height": 66,
+          "top": 232.1999969482422,
+          "right": 328,
+          "bottom": 298.1999969482422,
+          "left": 32
+        },
+        "outline": "solid"
+      }
+    },
+    {
+      "id": "browser-back-after-logout",
+      "url": "http://127.0.0.1:8766/flows/auth-session/#login",
+      "panel": "P01.S01"
+    }
+  ],
+  "console": []
+}

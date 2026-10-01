@@ -1,0 +1,233 @@
+{
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "modes": [
+    "auto",
+    "os-reduced",
+    "off"
+  ],
+  "motion_groups": 24,
+  "release_journeys": 36,
+  "m19_dependency_groups": 21,
+  "p24_regression_groups": 11,
+  "node_tests": 765,
+  "geometry_equal": [
+    {
+      "panel": "P24.S01",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 325
+    },
+    {
+      "panel": "P24.S02",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 256
+    },
+    {
+      "panel": "P24.S03-inbound",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 256
+    },
+    {
+      "panel": "P24.S03-outbound",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 255
+    },
+    {
+      "panel": "P24.S04",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 303
+    },
+    {
+      "panel": "P24.S01",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 325
+    },
+    {
+      "panel": "P24.S02",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 256
+    },
+    {
+      "panel": "P24.S03-inbound",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 256
+    },
+    {
+      "panel": "P24.S03-outbound",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 255
+    },
+    {
+      "panel": "P24.S04",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 303
+    },
+    {
+      "panel": "P24.S01",
+      "mode": "off",
+      "equal": true,
+      "nodes": 325
+    },
+    {
+      "panel": "P24.S02",
+      "mode": "off",
+      "equal": true,
+      "nodes": 256
+    },
+    {
+      "panel": "P24.S03-inbound",
+      "mode": "off",
+      "equal": true,
+      "nodes": 256
+    },
+    {
+      "panel": "P24.S03-outbound",
+      "mode": "off",
+      "equal": true,
+      "nodes": 255
+    },
+    {
+      "panel": "P24.S04",
+      "mode": "off",
+      "equal": true,
+      "nodes": 303
+    }
+  ],
+  "layout_combinations": 25,
+  "footer_viewports": 4,
+  "operations": [
+    {
+      "mode": "auto",
+      "inbound": {
+        "number": "PN-0005",
+        "documentId": "fixture-inbound-0005",
+        "accepted": 12,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "outbound": {
+        "number": "PX-0004",
+        "documentId": "fixture-outbound-0005-2",
+        "accepted": 10,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "issue": {
+        "post": 1,
+        "commits": 0,
+        "check": 0,
+        "counts": {
+          "codes": 2,
+          "quantity": 3
+        }
+      },
+      "history": {
+        "ids": [
+          "XLK-0002",
+          "XLK-DEMO-OLDER"
+        ],
+        "reads": 2
+      }
+    },
+    {
+      "mode": "os-reduced",
+      "inbound": {
+        "number": "PN-0005",
+        "documentId": "fixture-inbound-0005",
+        "accepted": 12,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "outbound": {
+        "number": "PX-0004",
+        "documentId": "fixture-outbound-0005-2",
+        "accepted": 10,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "issue": {
+        "post": 1,
+        "commits": 0,
+        "check": 0,
+        "counts": {
+          "codes": 2,
+          "quantity": 3
+        }
+      },
+      "history": {
+        "ids": [
+          "XLK-0002",
+          "XLK-DEMO-OLDER"
+        ],
+        "reads": 2
+      }
+    },
+    {
+      "mode": "off",
+      "inbound": {
+        "number": "PN-0005",
+        "documentId": "fixture-inbound-0005",
+        "accepted": 12,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "outbound": {
+        "number": "PX-0004",
+        "documentId": "fixture-outbound-0005-2",
+        "accepted": 10,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "issue": {
+        "post": 1,
+        "commits": 0,
+        "check": 0,
+        "counts": {
+          "codes": 2,
+          "quantity": 3
+        }
+      },
+      "history": {
+        "ids": [
+          "XLK-0002",
+          "XLK-DEMO-OLDER"
+        ],
+        "reads": 2
+      }
+    }
+  ],
+  "domain_parity": "PASS",
+  "source_bytes_delta": 548,
+  "app_source_hash": "9138cf689297094c291963dfdf9c04041728c338e71691c84185d448cd1a2fe9",
+  "working_diff_hash": "9c736e2bae52d5b27bfa000fd0923b56ce0dc64b1c60e29a65fdbafb378b9e08",
+  "visual": "USER_REVIEW_PENDING",
+  "integration": "BLOCKED_PRODUCTION; business tracking unchanged",
+  "performance": {
+    "long_tasks": "Raw entries retained in before/results.json and evidence/results.json; workloads differ, no causal before/after speed inference.",
+    "frame_samples": "Actual opacity/transform observations in evidence/results.json; trace ZIPs for all modes.",
+    "hardware_fps": "NOT_MEASURED",
+    "input_latency": "NOT_MEASURED separately",
+    "virtualization": "DEFERRED per M00; no new provider/scroller/virtualizer"
+  }
+}

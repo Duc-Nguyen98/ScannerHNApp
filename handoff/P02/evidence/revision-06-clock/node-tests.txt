@@ -1,0 +1,17 @@
+✔ P01 fixture session supplies Home identity and warehouse, only after start (81.3233ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (19.0233ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (29.6821ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (152.5325ms)
+✔ active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped (16.2382ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (7.5901ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (35.8901ms)
+✔ Vietnam clock uses UTC+7, 24 hours and seconds including midnight/day rollover (1.2457ms)
+✔ Clock aligns seconds, catches up after throttling and cancels work on hide/dispose (4.2974ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 952.2959

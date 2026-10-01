@@ -1,0 +1,41 @@
+✔ confirmation actions have distinct sourced chevron, play and logout icons (1.3839ms)
+✔ login uses user, eye and shield-check shapes rather than unrelated glyphs (0.3416ms)
+✔ loading label updates cannot delete the new leading play icon (0.1815ms)
+✔ verified repository icon geometry remains intact and attributed (1.9157ms)
+✔ locked board, auth adapter and existing history implementation are unchanged (4.1054ms)
+✔ valid fixture always stops at confirmation before the P02 boundary (18.2079ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (1.2748ms)
+✔ invalid and empty credentials never expose confirmation or Home (27.4754ms)
+✔ repeated login has a single in-flight adapter request (0.6465ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (1.4152ms)
+✔ permission and warehouse guards block start even when called directly (29.0754ms)
+✔ unknown login, unknown shift and thrown request never produce success (48.0449ms)
+✔ expired start returns to login (14.9332ms)
+✔ logout and back/hash guard cannot restore protected screen (0.8963ms)
+✔ late login response after logout is ignored and fixture is revoked (14.9718ms)
+✔ late start response cannot recreate logout session; start double-click guarded (0.84ms)
+✔ recovery is a P14 pending boundary only (0.4156ms)
+✔ P01 fixture session supplies Home identity and warehouse, only after start (55.6153ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (13.2696ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (16.5895ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (173.558ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (15.6861ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (15.884ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (7.9029ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (7.1408ms)
+✔ invalid fixture page does not partially update data or claim completion (3.7023ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (2.1488ms)
+✔ late rejection after Back never replaces the destination scene (3.6641ms)
+✔ detached preview cannot be repainted by a stale read (2.3672ms)
+✔ closed case stays read-only after failure and successful retry (2.2019ms)
+✔ empty and static loading scenes do not start a read (3.9534ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (2.1158ms)
+✔ new issue preserves saved-document routing without recording history (6.667ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 483.3114

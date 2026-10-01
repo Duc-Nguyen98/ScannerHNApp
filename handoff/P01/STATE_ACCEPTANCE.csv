@@ -1,0 +1,25 @@
+state_id,panel_id,state,visual_status,behavior_status,integration_status,evidence,notes
+P01.S01.default,P01.S01,Đăng nhập mặc định,FAIL,PASS,BLOCKED,evidence/revision-02/P01-S01-438.jpg,Revision02 sửa geometry; hero/logo/font vẫn khác LOCKED
+P01.S01.eye,P01.S01,Hiện/ẩn mật khẩu,FAIL,PASS,BLOCKED,evidence/revision-02/browser-checks.json,Lucide Eye đã có; giữ nguyên giá trị; chưa pixel identical
+P01.S01.submitting,P01.S01,Đang gửi,NOT_RUN,PASS,BLOCKED,../../tests/auth-session.test.mjs; evidence/test-output.txt,Single-flight; trạng thái ngoài baseline
+P01.S01.error,P01.S01,Sai thông tin,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Không vào confirmation/Home; focus thông báo
+P01.S01.unknown,P01.S01,Đăng nhập chưa xác định,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Không tạo session từ UNKNOWN
+P01.S01.recovery,P01.S01,Quên mật khẩu P14,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Chỉ pending navigation; chưa gửi recovery
+P01.S02.default,P01.S02,Xác nhận Minh Anh,FAIL,PASS,BLOCKED,evidence/revision-02/P01-S02-438.jpg,Card và sourced icons đã sửa; hero/logo/font/texture còn khác
+P01.S02.identity,P01.S02,Danh tính Lan Nguyễn,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Bind name/initials từ adapter
+P01.S02.denied,P01.S02,Thiếu quyền,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Guard cả nút và controller; role không cấp quyền
+P01.S02.warehouse,P01.S02,Kho ngừng hoạt động,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Không bắt đầu
+P01.S02.start,P01.S02,Đang kiểm tra ca,NOT_RUN,PASS,BLOCKED,evidence/test-output.txt,Single-flight và bỏ kết quả stale sau logout
+P01.S02.unknown,P01.S02,Kết quả ca chưa xác định,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Khóa retry mù; cần contract đối chiếu
+P01.S02.expired,P01.S02,Hết phiên,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Quay lại login
+P01.S02.logout,P01.S02,Đăng xuất và Back,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Không phục hồi màn bảo vệ bằng Back/hash
+P01.S02.P02,P01.S02,Điểm nối Trang chủ,NOT_RUN,PASS,BLOCKED,evidence/browser-results.json,Không route Home giả; chưa có P02
+P01.keyboard,P01.S01,Focus và viewport360x400,NOT_RUN,PASS,BLOCKED,evidence/keyboard-360x400.png; evidence/browser-results.json,Chỉ mô phỏng thu nhỏ viewport; keyboard thiết bị thật NOT_RUN
+P01.revision02.icons,P01.S02,Icon đúng loại và giữ Play khi loading,FAIL,PASS,BLOCKED,evidence/revision-02/browser-checks.json; evidence/revision-02/test-output.txt,Chevron-right CirclePlay LogOut từ repo; chưa exact raster
+P01.revision02.keyboard,P01.S01,Focus sau sửa icon,NOT_RUN,PASS,BLOCKED,evidence/revision-02/keyboard-360x400.jpg; evidence/revision-02/browser-checks.json,CTA nhìn thấy và có outline; physical keyboard NOT_RUN
+P01.revision03.color.login,P01.S01,Màu và nét icon login,FAIL,PASS,BLOCKED,evidence/revision-03/login-card.png; REVISION_03.md,Đã tăng độ đậm và sửa sắc xanh; visual toàn panel chưa đạt LOCKED
+P01.revision03.color.confirmation,P01.S02,Màu và nét icon confirmation,FAIL,PASS,BLOCKED,evidence/revision-03/confirmation-card.png; REVISION_03.md,Đã sửa màu CTA avatar icon status; giữ nguyên geometry và JS
+P01.r05.payload,P01.S01,Malformed/adapter error,NOT_RUN,PASS,BLOCKED,evidence/revision-05-stability/node-tests.txt,Không crash/không treo busy; chưa có production contract
+P01.r05.lifecycle,P01.S01,Logout cùng màn/rời trang,NOT_RUN,PASS,BLOCKED,evidence/revision-05-stability/browser-checks.json,Xóa credential và mask; không phục hồi response cũ
+P01.r05.guard,P01.S02,Strict flags/guard sau await,NOT_RUN,PASS,BLOCKED,evidence/revision-05-stability/node-tests.txt,Chỉ true; quyền/kho thay đổi lúc pending không vào Home
+P01.r05.home,P01.S02,Điểm nối Home hiện hành,NOT_RUN,PASS,BLOCKED,evidence/revision-05-stability/browser-checks.json,Home và5 route smoke; không full nghiệp vụ production

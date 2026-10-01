@@ -1,0 +1,40 @@
+✔ A01 combines query/type/status/range without changing source (2.6194ms)
+✔ A01 defaults all dates, status/type remain distinct and sort is explicit (1.0266ms)
+✔ A02 quantity11 distinct from3 SKU and5/4/2 serial counts (0.3974ms)
+✔ Exact ID lookup never treats display prefix/number as authority (0.46ms)
+✔ A03 history uses explicit P08 event mapping; missing data stays missing (0.3624ms)
+✔ Creation validates only P12 owned input; supplier cannot be free text (0.2884ms)
+✔ A04 inbound seeds fresh owner draft once; repeated routing retains ID, metadata and codes (20.2552ms)
+✔ A04 UNKNOWN retains request/session/version even when P12 reopens; no retry mutation (10.3818ms)
+✔ A04 next fresh run accepts new P12 metadata only after verified completion (1.8139ms)
+✔ P12 receipt adapter excludes drafts/UNKNOWN/wrong warehouse and never counts scan raw as serial (2.6288ms)
+✔ r02 24 records have coherent explicit lines, serials, quantities, dates and identities (1.104ms)
+✔ r02 warranty rows use the same case states, customer, serial and events as P09 (1.7928ms)
+✔ r02 merging never fabricates attachments or serials for a newly recorded scan (3.1077ms)
+✔ KPI count uses the same complete fixture source/status selection as destination lists (4.8153ms)
+✔ Open grouping excludes returned/unknown statuses and follows case updates (1.5887ms)
+✔ Confirmed local records are deduplicated and unknown KPI source never falls back to a fake count (1.3121ms)
+✔ P01 fixture session supplies Home identity and warehouse, only after start (42.6738ms)
+✔ every Home destination keeps its prompt mapping; history uses the existing hub (12.6339ms)
+✔ recent document and case IDs cannot be dropped, swapped or invented (16.9545ms)
+✔ direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions (171.2616ms)
+✔ active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped (15.6957ms)
+✔ UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts (16.7519ms)
+✔ navigation rejects inherited keys/malformed routes and carries no credential/session token (14.9636ms)
+✔ A01 exact serial opens the same case; SKU/code never inferred; intake never posts components (8.8184ms)
+✔ A01 new serial intake keeps partner identity; duplicate request and duplicate serial do not create another case (15.4931ms)
+✔ A02 ledger filters POSTED and exact case, deduplicates ID, counts quantity separately from codes (0.2983ms)
+✔ A03 update receipt waits for confirmation; handover is not returned, history uses same source (4.3303ms)
+✔ A04 closed, permission, warehouse and expired session guards apply at handler and after await (2.0758ms)
+✔ A05 case switch cannot carry customer/serial/events or update fields (0.9782ms)
+✔ UNKNOWN blocks new writes and selection; reconcile keeps request/session/version and commits once (2.5792ms)
+✔ Failure retains update draft and request identity; stale version and dispose cannot commit (4.3294ms)
+✔ Repair update rejects whitespace/malformed/overlong values before requesting; accepts 200 characters (3.1114ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 518.8567

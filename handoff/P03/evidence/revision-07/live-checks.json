@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-27",
+  "browser": "Existing Codex in-app browser tab 5",
+  "before": {
+    "backdrop": "Returned to Home",
+    "footer": "Inert; no navigation"
+  },
+  "after": {
+    "backdrop": "Three pointer clicks preserve P03.S01 and #home",
+    "home": "Pointer click returns #home",
+    "documents": "Pointer click opens #p02/documents, explicit P12 dependency",
+    "profile": "Pointer click opens #p02/profile, explicit P10 dependency",
+    "history": "Pointer click opens #p02/history and visible history hub",
+    "scan": "Opens/retains picker",
+    "inbound": "Pointer click opens #p02/inbound and P04 step1"
+  },
+  "change": "Version full module import chain p03-backdrop-r07 and reload existing tab",
+  "integration": "Local fixture only; no backend test"
+}

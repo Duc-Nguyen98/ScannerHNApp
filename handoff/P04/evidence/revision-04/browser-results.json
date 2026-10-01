@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "browser": "Codex in-app browser",
+  "checks": [
+    {
+      "name": "Success → Home action → fresh S01",
+      "status": "PASS",
+      "prior": "fixture-inbound-0005",
+      "next": "fixture-inbound-0005-run-2"
+    },
+    {
+      "name": "Success → Home → Quét mã → Nhập kho fresh",
+      "status": "PASS",
+      "prior": "fixture-inbound-0005-run-2",
+      "next": "fixture-inbound-0005-run-3"
+    },
+    {
+      "name": "Confirmed failure → Home → picker resets; manual/expanded UI reset",
+      "status": "PASS",
+      "prior": "fixture-inbound-0005-run-3",
+      "next": "fixture-inbound-0005-run-4"
+    },
+    {
+      "name": "Unfinished draft → native Back → Home action resumes unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN → Back → picker preserves request and disables send",
+      "status": "PASS"
+    },
+    {
+      "name": "Reconciled record → Home action fresh; no extra record call",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed failure → Home action fresh",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "finalState": {
+    "step": 1,
+    "documentId": "fixture-inbound-0005-run-6",
+    "accepted": 0,
+    "request": null,
+    "metrics": {
+      "recordCalls": 5,
+      "inventoryDelta": 0
+    }
+  }
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "id": "lifecycle-clears-credentials",
+    "passwordLength": 0,
+    "type": "password",
+    "pressed": "false",
+    "url": "#login"
+  },
+  {
+    "id": "recovery-no-replay",
+    "hash": "#login",
+    "replayed": 0
+  },
+  {
+    "id": "eye-preserves-exact-value",
+    "exact": true,
+    "type": "text"
+  },
+  {
+    "id": "confirmation-before-home",
+    "hash": "http://127.0.0.1:8771/flows/auth-session/#confirmation"
+  },
+  {
+    "id": "denied",
+    "pending": {
+      "busy": "true",
+      "eyeDisabled": true
+    },
+    "hash": "#confirmation",
+    "heading": "Chào bạn,Minh Anh",
+    "message": "Tài khoản chưa có quyền thao tác kho được xác nhận.",
+    "disabled": true,
+    "focus": "heading"
+  },
+  {
+    "id": "warehouse-stopped",
+    "pending": {
+      "busy": "true",
+      "eyeDisabled": true
+    },
+    "hash": "#confirmation",
+    "heading": "Chào bạn,Minh Anh",
+    "message": "Kho ngừng hoạt động hoặc chưa xác minh. Không thể bắt đầu ca làm việc.",
+    "disabled": true,
+    "focus": "heading"
+  },
+  {
+    "id": "auth-unknown",
+    "pending": {
+      "busy": "true",
+      "eyeDisabled": true
+    },
+    "hash": "#login",
+    "heading": "Quản lý khoHoa Nam",
+    "message": "Chưa xác định được kết quả đăng nhập. Chưa có phiên được xác nhận.",
+    "focus": "message"
+  },
+  {
+    "id": "start-unknown",
+    "pending": {
+      "busy": "true",
+      "eyeDisabled": true
+    },
+    "hash": "#confirmation",
+    "heading": "Chào bạn,Minh Anh",
+    "message": "Chưa xác định kết quả bắt đầu ca. Cần đối chiếu phiên trước khi thử lại; tích hợp đang chờ.",
+    "disabled": true,
+    "focus": "message"
+  },
+  {
+    "id": "expired",
+    "pending": {
+      "busy": "true",
+      "eyeDisabled": true
+    },
+    "hash": "#login",
+    "heading": "Quản lý khoHoa Nam",
+    "message": "Phiên đã hết hạn. Vui lòng đăng nhập lại.",
+    "focus": "username"
+  },
+  {
+    "id": "other-user",
+    "pending": {
+      "busy": "true",
+      "eyeDisabled": true
+    },
+    "hash": "#confirmation",
+    "heading": "Chào bạn,Lan Nguyễn",
+    "message": "",
+    "disabled": false,
+    "focus": "heading"
+  },
+  {
+    "id": "logout-during-login",
+    "passwordLength": 0,
+    "hash": "#login"
+  },
+  {
+    "id": "late-login-not-restored",
+    "panel": "P01.S01",
+    "hash": "#login"
+  },
+  {
+    "id": "home-smoke-inbound",
+    "url": "http://127.0.0.1:8771/flows/auth-session/#p02/inbound",
+    "homeVisible": false
+  },
+  {
+    "id": "home-smoke-outbound",
+    "url": "http://127.0.0.1:8771/flows/auth-session/#p02/outbound",
+    "homeVisible": false
+  },
+  {
+    "id": "home-smoke-lookup",
+    "url": "http://127.0.0.1:8771/flows/auth-session/#p02/lookup",
+    "homeVisible": false
+  },
+  {
+    "id": "home-smoke-nfc",
+    "url": "http://127.0.0.1:8771/flows/auth-session/#p02/nfc",
+    "homeVisible": false
+  },
+  {
+    "id": "home-smoke-warranty",
+    "url": "http://127.0.0.1:8771/flows/auth-session/#p02/warranty",
+    "homeVisible": false
+  },
+  {
+    "id": "back-after-home-logout",
+    "url": "http://127.0.0.1:8771/flows/auth-session/#login",
+    "login": true,
+    "home": 0
+  },
+  {
+    "id": "startup-failure-visible",
+    "retryVisible": true,
+    "message": "Chưa tải được giao diện prototype. Kiểm tra máy chủ preview rồi tải lại trang.\n\nTải lại preview",
+    "source": "Existing concurrent bootstrap; not authored in P01 audit"
+  },
+  {
+    "id": "startup-retry-restores-login",
+    "visible": true
+  }
+]

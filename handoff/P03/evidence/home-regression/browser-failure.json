@@ -1,0 +1,35 @@
+{
+  "message": "locator.click: Error: strict mode violation: locator('.hn-tools summary') resolved to 2 elements:\n    1) <summary>Kịch bản kiểm tra P02</summary> aka getByText('Kịch bản kiểm tra P02')\n    2) <summary>Kịch bản kiểm tra P03 · 4 panel</summary> aka getByText('Kịch bản kiểm tra P03 · 4')\n\nCall log:\n\u001b[2m  - waiting for locator('.hn-tools summary')\u001b[22m\n",
+  "checks": [
+    {
+      "label": "Unauthenticated direct P02 route returns to P01",
+      "status": "PASS"
+    },
+    {
+      "label": "P01 login → confirmation → P02 uses existing session",
+      "status": "PASS"
+    },
+    {
+      "label": "All recent rows remain above the navigation within the fitted app screen",
+      "status": "PASS"
+    },
+    {
+      "label": "Xem tất cả opens existing P22 hub; native Back preserves Home scroll/focus/tab",
+      "status": "PASS"
+    },
+    {
+      "label": "Existing hub exit returns to the same Home, without modifying hub source",
+      "status": "PASS"
+    },
+    {
+      "label": "Every task, scanner CTA, bell, avatar and nav resolves correct pending target",
+      "status": "PASS"
+    },
+    {
+      "label": "All recent IDs persist in navigation context and pending destination",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:8766/flows/auth-session/#home"
+}

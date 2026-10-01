@@ -1,0 +1,37 @@
+Commands: node --check docs/flows/auth-session/app.mjs; node --check docs/flows/auth-session/sourced-icons.mjs; node --test tests/auth-session.test.mjs tests/auth-session-visual-contract.test.mjs tests/warranty-component-history.test.cjs; git diff --check
+✔ confirmation actions have distinct sourced chevron, play and logout icons (1.7336ms)
+✔ login uses user, eye and shield-check shapes rather than unrelated glyphs (0.3471ms)
+✔ loading label updates cannot delete the new leading play icon (0.2094ms)
+✔ verified repository icon geometry remains intact and attributed (0.6718ms)
+✔ locked board, auth adapter and existing history implementation are unchanged (6.4715ms)
+✔ valid fixture always stops at confirmation before the P02 boundary (8.4939ms)
+✔ credentials are passed byte-for-byte; no trim, casefold or password policy (0.9606ms)
+✔ invalid and empty credentials never expose confirmation or Home (26.0122ms)
+✔ repeated login has a single in-flight adapter request (0.5735ms)
+✔ session identity is supplied by adapter, not hardcoded role/name UI (15.1335ms)
+✔ permission and warehouse guards block start even when called directly (23.0842ms)
+✔ unknown login, unknown shift and thrown request never produce success (40.2934ms)
+✔ expired start returns to login (2.9255ms)
+✔ logout and back/hash guard cannot restore protected screen (1.9611ms)
+✔ late login response after logout is ignored and fixture is revoked (25.3065ms)
+✔ late start response cannot recreate logout session; start double-click guarded (15.8712ms)
+✔ recovery is a P14 pending boundary only (0.3782ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (7.4956ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (3.1465ms)
+✔ invalid fixture page does not partially update data or claim completion (1.6912ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (1.8523ms)
+✔ late rejection after Back never replaces the destination scene (1.9883ms)
+✔ detached preview cannot be repainted by a stale read (1.3949ms)
+✔ closed case stays read-only after failure and successful retry (1.8044ms)
+✔ empty and static loading scenes do not start a read (3.0981ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (2.3761ms)
+✔ new issue preserves saved-document routing without recording history (7.5499ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 320.73
+warning: in the working copy of 'docs/flows/warranty-components/flow.js', LF will be replaced by CRLF the next time Git touches it

@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "Unauthenticated direct P02 route returns to P01",
+      "status": "PASS"
+    },
+    {
+      "label": "P01 login → confirmation → P02 uses existing session",
+      "status": "PASS"
+    },
+    {
+      "label": "All recent rows remain above the navigation within the fitted app screen",
+      "status": "PASS"
+    },
+    {
+      "label": "Xem tất cả opens existing P22 hub; native Back preserves Home scroll/focus/tab",
+      "status": "PASS"
+    },
+    {
+      "label": "Existing hub exit returns to the same Home, without modifying hub source",
+      "status": "PASS"
+    },
+    {
+      "label": "Every task, scanner CTA, bell, avatar and nav resolves correct pending target",
+      "status": "PASS"
+    },
+    {
+      "label": "All recent IDs persist in navigation context and pending destination",
+      "status": "PASS"
+    },
+    {
+      "label": "Long name + five digit badge responsive without overflow",
+      "status": "PASS"
+    },
+    {
+      "label": "Unknown adapter does not display mock KPI as live results",
+      "status": "PASS"
+    },
+    {
+      "label": "Keyboard focus and Enter open route; Home never starts camera",
+      "status": "PASS"
+    },
+    {
+      "label": "Logout then Back/direct route never restores Home",
+      "status": "PASS"
+    },
+    {
+      "label": "Denied, stopped and UNKNOWN sessions cannot open Home by hash",
+      "status": "PASS"
+    },
+    {
+      "label": "Alternate P01 actor reaches Home without hardcoded Minh Anh",
+      "status": "PASS"
+    },
+    {
+      "label": "Reload requires a new fixture session, no persisted credentials",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "conditions": "Chromium headless, DPR1, zoom1, local fixture; no real mobile keyboard/hardware/backend"
+}

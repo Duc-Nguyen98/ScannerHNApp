@@ -1,0 +1,67 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P02",
+  "prompt_status": "REVISION_03_EXTERNAL_TOOLS_AND_FITTED_FULL_HOME",
+  "completed_panel_ids": [],
+  "implemented_panel_ids": ["P01.S01", "P01.S02", "P02.S01"],
+  "remaining_panel_ids": ["P02.S01"],
+  "previous_prompt": {
+    "id": "P01",
+    "user_status": "Tạm chốt; bổ sung state sau theo chỉ thị mới",
+    "visual_status": "FAIL",
+    "behavior_status": "PASS",
+    "integration_status": "BLOCKED",
+    "checkpoint": "handoff/P02/INPUT_RUN_STATE.json"
+  },
+  "shared_components_changed": [
+    "P01 entrypoint: mount/dispose Home with in-memory session",
+    "P02 Home/AppShell and guarded navigation (new)",
+    "Existing P22 history hub reused without changing source"
+  ],
+  "existing_work_preserved": [
+    "P01 CSS/auth-flow/fixture-adapter/icons",
+    "docs/flows/warranty-components/flow.js",
+    "tests/warranty-component-history.test.cjs",
+    "../contract-work"
+  ],
+  "blockers": [
+    "Repository warehouse image/icons restored to address user report. Exact B02 hero/logo/font/texture still unverified; visual FAIL.",
+    "KPI/badge/shift API and label mapping UNKNOWN; keep locked labels without approval actions.",
+    "P04/P05/P06/P07/P09/P10/P12/P13 implementations missing; routes preserve P/ID but show pending.",
+    "Production auth/session/backend/permissions UNKNOWN; real device keyboard and hardware NOT_RUN."
+  ],
+  "artifact_paths": [
+    "handoff/P02/CONTEXT.md",
+    "handoff/P02/REPORT.md",
+    "handoff/P02/STATE_ACCEPTANCE.csv",
+    "handoff/P02/evidence",
+    "handoff/P01/P02_DEPENDENCY_UPDATE.md",
+    "SCREEN_COVERAGE.csv",
+    "docs/flows/home/",
+    "tests/home.test.mjs",
+    "scripts/check_home.cjs"
+  ],
+  "next_action": "Review restored Home against B02; exact asset/font/texture and backend dependencies remain unresolved. Do not begin P03–P24.",
+  "run_command": "python scripts/serve_preview.py",
+  "preview_url": "http://127.0.0.1:8766/flows/home/",
+  "preview_instructions": "Redirects to P01. Fixture minhanh / preview, confirm start to enter P02. No session persists on reload.",
+  "visual_status": "FAIL",
+  "behavior_status": "PASS",
+  "integration_status": "BLOCKED",
+  "tests": {
+    "node_total": 33,
+    "node_passed": 33,
+    "node_failed": 0,
+    "browser_groups_passed": 14,
+    "browser_errors": 0,
+    "external_requests": 0,
+    "scope": "27 prior regression + 6 Home tests; fixture/browser only",
+    "production": "NOT_RUN"
+  },
+  "coverage": { "baseline_panels": 91, "implemented_panels": 3, "other_panels_not_started": 88 },
+  "baseline_sha256": "ed0d7b90fdb66778cab0ff53b9537785e55ec60227d7666e5d7693f42eb15ef8",
+  "last_user_request": "Đưa khối khoanh đỏ ra ngoài app và chỉnh preview hiển thị trọn Home. Completed: external tools panel, proportional full-screen fit, nav in app flow, 33 Node / 14 browser groups PASS with 7 captures."
+}

@@ -1,0 +1,39 @@
+{
+  "message": "P02-unknown-360 horizontal overflow\n\nfalse !== true\n",
+  "checks": [
+    {
+      "label": "Unauthenticated direct P02 route returns to P01",
+      "status": "PASS"
+    },
+    {
+      "label": "P01 login → confirmation → P02 uses existing session",
+      "status": "PASS"
+    },
+    {
+      "label": "All recent rows can scroll fully above fixed bottom navigation",
+      "status": "PASS"
+    },
+    {
+      "label": "Xem tất cả opens existing P22 hub; native Back preserves Home scroll/focus/tab",
+      "status": "PASS"
+    },
+    {
+      "label": "Existing hub exit returns to the same Home, without modifying hub source",
+      "status": "PASS"
+    },
+    {
+      "label": "Every task, scanner CTA, bell, avatar and nav resolves correct pending target",
+      "status": "PASS"
+    },
+    {
+      "label": "All recent IDs persist in navigation context and pending destination",
+      "status": "PASS"
+    },
+    {
+      "label": "Long name + five digit badge responsive without overflow",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:8766/flows/auth-session/#home"
+}

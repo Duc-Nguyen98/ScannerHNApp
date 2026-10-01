@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Opening from external tools scrolls app into view and restores caller focus",
+      "status": "PASS"
+    },
+    {
+      "name": "A01/A05 S01 opens from scan tab, one overlay, focus trap + Esc restore caller",
+      "status": "PASS"
+    },
+    {
+      "name": "S01 all operations retain context, destination remains explicit dependency, no default/camera",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 unfinished continue retains document/session/version/codes through Home route boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 cancel discard keeps data, confirmation removes only unsaved fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "Save confirms result before exit, stored fixture can resume exact document",
+      "status": "PASS"
+    },
+    {
+      "name": "Save failure remains in dialog with unchanged data; retry explicit",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN save retains identity, disables blind resubmit/discard and supports reconciliation boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 S03 blocks Esc/backdrop/deep link writes after Home, preserves session/read access",
+      "status": "PASS"
+    },
+    {
+      "name": "Server/POSTED cannot be removed in S04",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 caller return by backdrop/native Back; Home document IDs/history unaffected",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 four panels responsive at 360×800, 430×932, 1440×900; keyboard height 394×420",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout/Back invalidates P03 and cannot restore fixture session",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "conditions": "Chromium headless, DPR1, zoom1, local fixtures. Keyboard height simulated by viewport; real mobile keyboard/hardware/backend NOT_RUN."
+}
