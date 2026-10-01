@@ -1,0 +1,2094 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      {
+        "name": "S01 field error is immediate, fixed geometry and140ms/full or <=80ms reduced",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 sequence12 produces11 accepted and one duplicate, exactly11 one-shot event effects",
+        "status": "PASS"
+      },
+      {
+        "name": "Manual input/camera identity survives feedback; duplicate text immediate and never animates",
+        "status": "PASS"
+      },
+      {
+        "name": "Filter/repaint/Back never replays existing rows and counters stay final",
+        "status": "PASS"
+      },
+      {
+        "name": "Current accepted-list profile stays small; camera/reticle geometry is static",
+        "status": "PASS"
+      },
+      {
+        "name": "Leave scan with delayed callback cannot add data while away or after re-entry",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 fade starts only after confirmed record, one operation, no replay on document Back",
+        "status": "PASS"
+      },
+      {
+        "name": "Real frame trace for accepted row160ms, immediate quantity and no camera motion",
+        "status": "PASS"
+      },
+      {
+        "name": "UNKNOWN never fades success or enables resend; checking keeps original request",
+        "status": "PASS"
+      },
+      {
+        "name": "Mode change and OS reduced cancel live effects without changing domain state",
+        "status": "PASS"
+      },
+      {
+        "name": "Hidden page cancels feedback and consumes events without replay on visibility restore",
+        "status": "PASS"
+      },
+      {
+        "name": "Permission guard cancels P04 effects immediately without dropping the scoped draft",
+        "status": "PASS"
+      },
+      {
+        "name": "Compact viewports, native focus/scroll, cancellation and logout leave no owned animations",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 14,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.854922",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 28,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915959",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 43,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951961",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 60,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974541",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 75,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988526",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 91,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996425",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 106,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999733",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 122,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 139,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 155,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 172,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 187,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 203,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 220,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 235,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p04-field-error",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 4,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.808614",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 29,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.926994",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 49,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.926994",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 66,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.956201",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 82,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.975688",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 99,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.988357",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 114,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.995917",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 130,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.999468",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 145,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 162,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 179,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 193,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 209,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 225,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 241,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "ScanFeedback",
+            "node": "p04-attempt-code",
+            "duration": 160,
+            "frames": [
+              {
+                "opacity": 0.6
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      }
+    ],
+    "layouts": [
+      {
+        "viewport": [
+          360,
+          800
+        ],
+        "size": [
+          494,
+          950
+        ],
+        "overflow": false,
+        "footer": true
+      },
+      {
+        "viewport": [
+          360,
+          420
+        ],
+        "size": [
+          494,
+          950
+        ],
+        "overflow": false,
+        "footer": true
+      }
+    ],
+    "panels": [
+      {
+        "id": "P04.S01",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            742
+          ],
+          ".p04-footer": [
+            16,
+            854,
+            462,
+            69
+          ],
+          ".p04-section-title": [
+            16,
+            112,
+            462,
+            60
+          ],
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S02",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            717
+          ],
+          ".p04-footer": [
+            16,
+            829,
+            462,
+            94
+          ],
+          ".p04-section-title": null,
+          ".p04-camera": [
+            16,
+            272.984375,
+            462,
+            160
+          ],
+          ".p04-counter": [
+            16,
+            504.984375,
+            462,
+            146
+          ],
+          ".p04-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S03",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            742
+          ],
+          ".p04-footer": [
+            16,
+            854,
+            462,
+            69
+          ],
+          ".p04-section-title": [
+            16,
+            112,
+            462,
+            60
+          ],
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": [
+            16,
+            652,
+            462,
+            236
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S04",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            67,
+            462,
+            689
+          ],
+          ".p04-footer": [
+            16,
+            763,
+            462,
+            136
+          ],
+          ".p04-section-title": null,
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": null,
+          ".hn-waiting-hero": [
+            36,
+            87,
+            422,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "listProfile": {
+      "accepted": 11,
+      "renderedScanRows": 11,
+      "domNodes": 187,
+      "cameraAnimations": 0
+    },
+    "domain": {
+      "step": 2,
+      "document": {
+        "namespace": "hn-inbound-preview-v1",
+        "documentId": "fixture-inbound-0005-run-3",
+        "number": "PN-0005",
+        "scanSessionId": "fixture-inbound-scan-0005-run-3",
+        "version": 1,
+        "actorId": "fixture-minhanh",
+        "actorName": "Minh Anh",
+        "actorRole": "Nhân viên kho",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouseName": "Kho Hoa Nam",
+        "createdAt": "09/09/2026 08:32",
+        "typeId": "products",
+        "type": "Nhập sản phẩm",
+        "supplierId": "fixture-supplier-001",
+        "supplier": "Công ty Minh Phát",
+        "supplierCode": "NCC-001",
+        "note": ""
+      },
+      "attempts": [
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:15",
+          "raw": "HN12345",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:16",
+          "raw": "HN12346",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:17",
+          "raw": "HN12347",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:18",
+          "raw": "HN12348",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:19",
+          "raw": "HN12349",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        }
+      ],
+      "accepted": [
+        {
+          "raw": "HN12345",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12345"
+        },
+        {
+          "raw": "HN12346",
+          "sku": "DS2208",
+          "quantity": 1,
+          "serial": "HN12346"
+        },
+        {
+          "raw": "HN12347",
+          "sku": "DS2208",
+          "quantity": 1,
+          "serial": "HN12347"
+        },
+        {
+          "raw": "HN12348",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12348"
+        },
+        {
+          "raw": "HN12349",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12349"
+        }
+      ],
+      "busy": false,
+      "unknown": false,
+      "request": null,
+      "recorded": false,
+      "outcome": null,
+      "message": "",
+      "exception": null
+    },
+    "operations": {
+      "record": 2,
+      "check": 1,
+      "camera": 0
+    }
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      {
+        "name": "S01 field error is immediate, fixed geometry and140ms/full or <=80ms reduced",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 sequence12 produces11 accepted and one duplicate, exactly11 one-shot event effects",
+        "status": "PASS"
+      },
+      {
+        "name": "Manual input/camera identity survives feedback; duplicate text immediate and never animates",
+        "status": "PASS"
+      },
+      {
+        "name": "Filter/repaint/Back never replays existing rows and counters stay final",
+        "status": "PASS"
+      },
+      {
+        "name": "Current accepted-list profile stays small; camera/reticle geometry is static",
+        "status": "PASS"
+      },
+      {
+        "name": "Leave scan with delayed callback cannot add data while away or after re-entry",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 fade starts only after confirmed record, one operation, no replay on document Back",
+        "status": "PASS"
+      },
+      {
+        "name": "Real frame trace for accepted row160ms, immediate quantity and no camera motion",
+        "status": "PASS"
+      },
+      {
+        "name": "UNKNOWN never fades success or enables resend; checking keeps original request",
+        "status": "PASS"
+      },
+      {
+        "name": "Mode change and OS reduced cancel live effects without changing domain state",
+        "status": "PASS"
+      },
+      {
+        "name": "Hidden page cancels feedback and consumes events without replay on visibility restore",
+        "status": "PASS"
+      },
+      {
+        "name": "Permission guard cancels P04 effects immediately without dropping the scoped draft",
+        "status": "PASS"
+      },
+      {
+        "name": "Compact viewports, native focus/scroll, cancellation and logout leave no owned animations",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 8,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.936237",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 21,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.978779",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 36,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996445",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 52,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 68,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 83,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 100,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 115,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 131,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 149,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 164,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 180,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 195,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 211,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 228,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 244,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p04-field-error",
+            "duration": 80,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 11,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 25,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 39,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 56,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 72,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 87,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 103,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 120,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 136,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 151,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 168,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 184,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 199,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 215,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 232,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      }
+    ],
+    "layouts": [
+      {
+        "viewport": [
+          360,
+          800
+        ],
+        "size": [
+          494,
+          950
+        ],
+        "overflow": false,
+        "footer": true
+      },
+      {
+        "viewport": [
+          360,
+          420
+        ],
+        "size": [
+          494,
+          950
+        ],
+        "overflow": false,
+        "footer": true
+      }
+    ],
+    "panels": [
+      {
+        "id": "P04.S01",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            742
+          ],
+          ".p04-footer": [
+            16,
+            854,
+            462,
+            69
+          ],
+          ".p04-section-title": [
+            16,
+            112,
+            462,
+            60
+          ],
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S02",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            717
+          ],
+          ".p04-footer": [
+            16,
+            829,
+            462,
+            94
+          ],
+          ".p04-section-title": null,
+          ".p04-camera": [
+            16,
+            272.984375,
+            462,
+            160
+          ],
+          ".p04-counter": [
+            16,
+            504.984375,
+            462,
+            146
+          ],
+          ".p04-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S03",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            742
+          ],
+          ".p04-footer": [
+            16,
+            854,
+            462,
+            69
+          ],
+          ".p04-section-title": [
+            16,
+            112,
+            462,
+            60
+          ],
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": [
+            16,
+            652,
+            462,
+            236
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S04",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            67,
+            462,
+            689
+          ],
+          ".p04-footer": [
+            16,
+            763,
+            462,
+            136
+          ],
+          ".p04-section-title": null,
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": null,
+          ".hn-waiting-hero": [
+            36,
+            87,
+            422,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "listProfile": {
+      "accepted": 11,
+      "renderedScanRows": 11,
+      "domNodes": 187,
+      "cameraAnimations": 0
+    },
+    "domain": {
+      "step": 2,
+      "document": {
+        "namespace": "hn-inbound-preview-v1",
+        "documentId": "fixture-inbound-0005-run-3",
+        "number": "PN-0005",
+        "scanSessionId": "fixture-inbound-scan-0005-run-3",
+        "version": 1,
+        "actorId": "fixture-minhanh",
+        "actorName": "Minh Anh",
+        "actorRole": "Nhân viên kho",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouseName": "Kho Hoa Nam",
+        "createdAt": "09/09/2026 08:32",
+        "typeId": "products",
+        "type": "Nhập sản phẩm",
+        "supplierId": "fixture-supplier-001",
+        "supplier": "Công ty Minh Phát",
+        "supplierCode": "NCC-001",
+        "note": ""
+      },
+      "attempts": [
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:15",
+          "raw": "HN12345",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:16",
+          "raw": "HN12346",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:17",
+          "raw": "HN12347",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:18",
+          "raw": "HN12348",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:19",
+          "raw": "HN12349",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        }
+      ],
+      "accepted": [
+        {
+          "raw": "HN12345",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12345"
+        },
+        {
+          "raw": "HN12346",
+          "sku": "DS2208",
+          "quantity": 1,
+          "serial": "HN12346"
+        },
+        {
+          "raw": "HN12347",
+          "sku": "DS2208",
+          "quantity": 1,
+          "serial": "HN12347"
+        },
+        {
+          "raw": "HN12348",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12348"
+        },
+        {
+          "raw": "HN12349",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12349"
+        }
+      ],
+      "busy": false,
+      "unknown": false,
+      "request": null,
+      "recorded": false,
+      "outcome": null,
+      "message": "",
+      "exception": null
+    },
+    "operations": {
+      "record": 2,
+      "check": 1,
+      "camera": 0
+    }
+  },
+  {
+    "mode": "off",
+    "checks": [
+      {
+        "name": "S01 field error is immediate, fixed geometry and140ms/full or <=80ms reduced",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 sequence12 produces11 accepted and one duplicate, exactly11 one-shot event effects",
+        "status": "PASS"
+      },
+      {
+        "name": "Manual input/camera identity survives feedback; duplicate text immediate and never animates",
+        "status": "PASS"
+      },
+      {
+        "name": "Filter/repaint/Back never replays existing rows and counters stay final",
+        "status": "PASS"
+      },
+      {
+        "name": "Current accepted-list profile stays small; camera/reticle geometry is static",
+        "status": "PASS"
+      },
+      {
+        "name": "Leave scan with delayed callback cannot add data while away or after re-entry",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 fade starts only after confirmed record, one operation, no replay on document Back",
+        "status": "PASS"
+      },
+      {
+        "name": "Real frame trace for accepted row160ms, immediate quantity and no camera motion",
+        "status": "PASS"
+      },
+      {
+        "name": "UNKNOWN never fades success or enables resend; checking keeps original request",
+        "status": "PASS"
+      },
+      {
+        "name": "Mode change and OS reduced cancel live effects without changing domain state",
+        "status": "PASS"
+      },
+      {
+        "name": "Hidden page cancels feedback and consumes events without replay on visibility restore",
+        "status": "PASS"
+      },
+      {
+        "name": "Permission guard cancels P04 effects immediately without dropping the scoped draft",
+        "status": "PASS"
+      },
+      {
+        "name": "Compact viewports, native focus/scroll, cancellation and logout leave no owned animations",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 16,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 32,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 46,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 62,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 78,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 94,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 110,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 127,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 142,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 159,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 175,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 190,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 206,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 222,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 238,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 20,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 35,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 47,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 62,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 79,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 94,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 111,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 127,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 142,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 159,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 174,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 190,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 206,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 222,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 238,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      }
+    ],
+    "layouts": [
+      {
+        "viewport": [
+          360,
+          800
+        ],
+        "size": [
+          494,
+          950
+        ],
+        "overflow": false,
+        "footer": true
+      },
+      {
+        "viewport": [
+          360,
+          420
+        ],
+        "size": [
+          494,
+          950
+        ],
+        "overflow": false,
+        "footer": true
+      }
+    ],
+    "panels": [
+      {
+        "id": "P04.S01",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            742
+          ],
+          ".p04-footer": [
+            16,
+            854,
+            462,
+            69
+          ],
+          ".p04-section-title": [
+            16,
+            112,
+            462,
+            60
+          ],
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S02",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            717
+          ],
+          ".p04-footer": [
+            16,
+            829,
+            462,
+            94
+          ],
+          ".p04-section-title": null,
+          ".p04-camera": [
+            16,
+            272.984375,
+            462,
+            160
+          ],
+          ".p04-counter": [
+            16,
+            504.984375,
+            462,
+            146
+          ],
+          ".p04-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S03",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            112,
+            462,
+            742
+          ],
+          ".p04-footer": [
+            16,
+            854,
+            462,
+            69
+          ],
+          ".p04-section-title": [
+            16,
+            112,
+            462,
+            60
+          ],
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": [
+            16,
+            652,
+            462,
+            236
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P04.S04",
+        "geometry": {
+          ".p04-header": [
+            0,
+            0,
+            494,
+            67
+          ],
+          ".p04-sheet": [
+            0,
+            53,
+            494,
+            897
+          ],
+          ".p04-scroll": [
+            16,
+            67,
+            462,
+            689
+          ],
+          ".p04-footer": [
+            16,
+            763,
+            462,
+            136
+          ],
+          ".p04-section-title": null,
+          ".p04-camera": null,
+          ".p04-counter": null,
+          ".p04-products": null,
+          ".hn-waiting-hero": [
+            36,
+            87,
+            422,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "listProfile": {
+      "accepted": 11,
+      "renderedScanRows": 11,
+      "domNodes": 187,
+      "cameraAnimations": 0
+    },
+    "domain": {
+      "step": 2,
+      "document": {
+        "namespace": "hn-inbound-preview-v1",
+        "documentId": "fixture-inbound-0005-run-3",
+        "number": "PN-0005",
+        "scanSessionId": "fixture-inbound-scan-0005-run-3",
+        "version": 1,
+        "actorId": "fixture-minhanh",
+        "actorName": "Minh Anh",
+        "actorRole": "Nhân viên kho",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouseName": "Kho Hoa Nam",
+        "createdAt": "09/09/2026 08:32",
+        "typeId": "products",
+        "type": "Nhập sản phẩm",
+        "supplierId": "fixture-supplier-001",
+        "supplier": "Công ty Minh Phát",
+        "supplierCode": "NCC-001",
+        "note": ""
+      },
+      "attempts": [
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:15",
+          "raw": "HN12345",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:16",
+          "raw": "HN12346",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:17",
+          "raw": "HN12347",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:18",
+          "raw": "HN12348",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-inbound-scan-0005-run-3:event:19",
+          "raw": "HN12349",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        }
+      ],
+      "accepted": [
+        {
+          "raw": "HN12345",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12345"
+        },
+        {
+          "raw": "HN12346",
+          "sku": "DS2208",
+          "quantity": 1,
+          "serial": "HN12346"
+        },
+        {
+          "raw": "HN12347",
+          "sku": "DS2208",
+          "quantity": 1,
+          "serial": "HN12347"
+        },
+        {
+          "raw": "HN12348",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12348"
+        },
+        {
+          "raw": "HN12349",
+          "sku": "XP-420B",
+          "quantity": 1,
+          "serial": "HN12349"
+        }
+      ],
+      "busy": false,
+      "unknown": false,
+      "request": null,
+      "recorded": false,
+      "outcome": null,
+      "message": "",
+      "exception": null
+    },
+    "operations": {
+      "record": 2,
+      "check": 1,
+      "camera": 0
+    }
+  }
+]

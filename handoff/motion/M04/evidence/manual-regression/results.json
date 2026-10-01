@@ -1,0 +1,880 @@
+{
+  "before": false,
+  "checks": [
+    {
+      "name": "p04 continuous entry preserves input DOM, focus and counts",
+      "status": "PASS"
+    },
+    {
+      "name": "p04 IME Enter and form submit never add an unfinished composition",
+      "status": "PASS"
+    },
+    {
+      "name": "p04 collapse/reopen and review Back preserve draft",
+      "status": "PASS"
+    },
+    {
+      "name": "p04 UNKNOWN remains in P17 with same request; manual and source cannot bypass",
+      "status": "PASS"
+    },
+    {
+      "name": "P05 source cancel preserves complete original document",
+      "status": "PASS"
+    },
+    {
+      "name": "P05 long replacement details remain full text in one scrollable dialog at six viewports; Escape and Back cancel",
+      "status": "PASS"
+    },
+    {
+      "name": "P05 stale confirmation keeps newer draft and requires a new decision",
+      "status": "PASS"
+    },
+    {
+      "name": "p05 continuous entry preserves input DOM, focus and counts",
+      "status": "PASS"
+    },
+    {
+      "name": "p05 IME Enter and form submit never add an unfinished composition",
+      "status": "PASS"
+    },
+    {
+      "name": "p05 collapse/reopen and review Back preserve draft",
+      "status": "PASS"
+    },
+    {
+      "name": "p05 UNKNOWN remains in P17 with same request; manual and source cannot bypass",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "p": "p04",
+      "viewport": [
+        340,
+        420
+      ],
+      "app": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 420,
+        "bottom": 420,
+        "right": 279.1968688964844
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 67.87055969238281,
+        "y": 74.05953979492188,
+        "width": 204.2526092529297,
+        "height": 297.3088684082031,
+        "bottom": 371.368408203125,
+        "right": 272.1231689453125
+      },
+      "manual": {
+        "x": 67.87055969238281,
+        "y": 166.45263671875,
+        "width": 204.2526092529297,
+        "height": 87.17762756347656,
+        "bottom": 253.63026428222656,
+        "right": 272.1231689453125
+      },
+      "counter": {
+        "x": 67.87055969238281,
+        "y": 257.1671142578125,
+        "width": 204.2526092529297,
+        "height": 64.54736328125,
+        "bottom": 321.7144775390625,
+        "right": 272.1231689453125
+      },
+      "latest": {
+        "x": 68.31266784667969,
+        "y": 360.1776428222656,
+        "width": 203.36842346191406,
+        "height": 26.788818359375,
+        "bottom": 386.9664611816406,
+        "right": 271.68109130859375
+      },
+      "header": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 54.16480255126953,
+        "bottom": 54.16480255126953,
+        "right": 279.1968688964844
+      },
+      "footer": {
+        "x": 67.87055969238281,
+        "y": 371.368408203125,
+        "width": 204.2526092529297,
+        "height": 41.55792236328125,
+        "bottom": 412.92633056640625,
+        "right": 272.1231689453125
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p04",
+      "viewport": [
+        390,
+        844
+      ],
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 750,
+        "bottom": 750,
+        "right": 390
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 12.631579399108887,
+        "y": 97.67269897460938,
+        "width": 364.7368469238281,
+        "height": 565.4852294921875,
+        "bottom": 663.1579284667969,
+        "right": 377.368426322937
+      },
+      "manual": {
+        "x": 12.631579399108887,
+        "y": 262.6603698730469,
+        "width": 364.7368469238281,
+        "height": 155.67434692382812,
+        "bottom": 418.334716796875,
+        "right": 377.368426322937
+      },
+      "counter": {
+        "x": 12.631579399108887,
+        "y": 424.6505126953125,
+        "width": 364.7368469238281,
+        "height": 115.26318359375,
+        "bottom": 539.9136962890625,
+        "right": 377.368426322937
+      },
+      "latest": {
+        "x": 13.421052932739258,
+        "y": 608.597900390625,
+        "width": 363.15789794921875,
+        "height": 47.837158203125,
+        "bottom": 656.43505859375,
+        "right": 376.578950881958
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 62.146385192871094,
+        "bottom": 62.146385192871094,
+        "right": 390
+      },
+      "footer": {
+        "x": 12.631579399108887,
+        "y": 663.1578979492188,
+        "width": 364.7368469238281,
+        "height": 74.2105712890625,
+        "bottom": 737.3684692382812,
+        "right": 377.368426322937
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p04",
+      "viewport": [
+        494,
+        1000
+      ],
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "bottom": 950,
+        "right": 494
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 16,
+        "y": 112,
+        "width": 462,
+        "height": 717,
+        "bottom": 829,
+        "right": 478
+      },
+      "manual": {
+        "x": 16,
+        "y": 320.984375,
+        "width": 462,
+        "height": 197.1875,
+        "bottom": 518.171875,
+        "right": 478
+      },
+      "counter": {
+        "x": 16,
+        "y": 526.171875,
+        "width": 462,
+        "height": 146,
+        "bottom": 672.171875,
+        "right": 478
+      },
+      "latest": {
+        "x": 17,
+        "y": 759.171875,
+        "width": 460,
+        "height": 60.59375,
+        "bottom": 819.765625,
+        "right": 477
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 67,
+        "bottom": 67,
+        "right": 494
+      },
+      "footer": {
+        "x": 16,
+        "y": 829,
+        "width": 462,
+        "height": 94,
+        "bottom": 923,
+        "right": 478
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p04",
+      "viewport": [
+        768,
+        1024
+      ],
+      "app": {
+        "x": 137,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "bottom": 950,
+        "right": 631
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 153,
+        "y": 112,
+        "width": 462,
+        "height": 717,
+        "bottom": 829,
+        "right": 615
+      },
+      "manual": {
+        "x": 153,
+        "y": 320.984375,
+        "width": 462,
+        "height": 197.1875,
+        "bottom": 518.171875,
+        "right": 615
+      },
+      "counter": {
+        "x": 153,
+        "y": 526.171875,
+        "width": 462,
+        "height": 146,
+        "bottom": 672.171875,
+        "right": 615
+      },
+      "latest": {
+        "x": 154,
+        "y": 759.171875,
+        "width": 460,
+        "height": 60.59375,
+        "bottom": 819.765625,
+        "right": 614
+      },
+      "header": {
+        "x": 137,
+        "y": 0,
+        "width": 494,
+        "height": 67,
+        "bottom": 67,
+        "right": 631
+      },
+      "footer": {
+        "x": 153,
+        "y": 829,
+        "width": 462,
+        "height": 94,
+        "bottom": 923,
+        "right": 615
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p04",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "app": {
+        "x": 473,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "bottom": 950,
+        "right": 967
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 489,
+        "y": 112,
+        "width": 462,
+        "height": 717,
+        "bottom": 829,
+        "right": 951
+      },
+      "manual": {
+        "x": 489,
+        "y": 320.984375,
+        "width": 462,
+        "height": 197.1875,
+        "bottom": 518.171875,
+        "right": 951
+      },
+      "counter": {
+        "x": 489,
+        "y": 526.171875,
+        "width": 462,
+        "height": 146,
+        "bottom": 672.171875,
+        "right": 951
+      },
+      "latest": {
+        "x": 490,
+        "y": 759.171875,
+        "width": 460,
+        "height": 60.59375,
+        "bottom": 819.765625,
+        "right": 950
+      },
+      "header": {
+        "x": 473,
+        "y": 0,
+        "width": 494,
+        "height": 67,
+        "bottom": 67,
+        "right": 967
+      },
+      "footer": {
+        "x": 489,
+        "y": 829,
+        "width": 462,
+        "height": 94,
+        "bottom": 923,
+        "right": 951
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p04",
+      "viewport": [
+        1869,
+        940
+      ],
+      "app": {
+        "x": 690.09375,
+        "y": 0,
+        "width": 488.800048828125,
+        "height": 940,
+        "bottom": 940,
+        "right": 1178.893798828125
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 705.9253540039062,
+        "y": 111.2694091796875,
+        "width": 457.13677978515625,
+        "height": 709.0042724609375,
+        "bottom": 820.273681640625,
+        "right": 1163.0621337890625
+      },
+      "manual": {
+        "x": 705.9253540039062,
+        "y": 318.053955078125,
+        "width": 457.13677978515625,
+        "height": 195.11181640625,
+        "bottom": 513.165771484375,
+        "right": 1163.0621337890625
+      },
+      "counter": {
+        "x": 705.9253540039062,
+        "y": 521.0816040039062,
+        "width": 457.13677978515625,
+        "height": 144.463134765625,
+        "bottom": 665.5447387695312,
+        "right": 1163.0621337890625
+      },
+      "latest": {
+        "x": 706.914794921875,
+        "y": 751.6289672851562,
+        "width": 455.157958984375,
+        "height": 59.9559326171875,
+        "bottom": 811.5848999023438,
+        "right": 1162.07275390625
+      },
+      "header": {
+        "x": 690.09375,
+        "y": 0,
+        "width": 488.800048828125,
+        "height": 66.74309539794922,
+        "bottom": 66.74309539794922,
+        "right": 1178.893798828125
+      },
+      "footer": {
+        "x": 705.9253540039062,
+        "y": 820.273681640625,
+        "width": 457.13677978515625,
+        "height": 93.01055908203125,
+        "bottom": 913.2842407226562,
+        "right": 1163.0621337890625
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p05",
+      "viewport": [
+        340,
+        420
+      ],
+      "app": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 420,
+        "bottom": 420,
+        "right": 279.1968688964844
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 70.523193359375,
+        "y": 96.6069107055664,
+        "width": 198.9473876953125,
+        "height": 260.6141357421875,
+        "bottom": 357.2210464477539,
+        "right": 269.4705810546875
+      },
+      "manual": {
+        "x": 70.523193359375,
+        "y": 150.1016387939453,
+        "width": 198.9473876953125,
+        "height": 111.72138977050781,
+        "bottom": 261.8230285644531,
+        "right": 269.4705810546875
+      },
+      "counter": {
+        "x": 70.523193359375,
+        "y": 265.35986328125,
+        "width": 198.9473876953125,
+        "height": 50.84210205078125,
+        "bottom": 316.20196533203125,
+        "right": 269.4705810546875
+      },
+      "latest": {
+        "x": 70.96529388427734,
+        "y": 362.6230163574219,
+        "width": 198.06314086914062,
+        "height": 23.873687744140625,
+        "bottom": 386.4967041015625,
+        "right": 269.02843475341797
+      },
+      "header": {
+        "x": 60.796875,
+        "y": 0,
+        "width": 218.39999389648438,
+        "height": 56.375328063964844,
+        "bottom": 56.375328063964844,
+        "right": 279.1968688964844
+      },
+      "footer": {
+        "x": 70.523193359375,
+        "y": 357.2210388183594,
+        "width": 198.9473876953125,
+        "height": 53.052642822265625,
+        "bottom": 410.273681640625,
+        "right": 269.4705810546875
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p05",
+      "viewport": [
+        390,
+        844
+      ],
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 750,
+        "bottom": 750,
+        "right": 390
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 17.36842155456543,
+        "y": 137.9358673095703,
+        "width": 355.26318359375,
+        "height": 499.95892333984375,
+        "bottom": 637.8947906494141,
+        "right": 372.63160514831543
+      },
+      "manual": {
+        "x": 17.36842155456543,
+        "y": 233.46217346191406,
+        "width": 355.26318359375,
+        "height": 164.92601013183594,
+        "bottom": 398.38818359375,
+        "right": 372.63160514831543
+      },
+      "counter": {
+        "x": 17.36842155456543,
+        "y": 404.7039489746094,
+        "width": 355.26318359375,
+        "height": 90.78948974609375,
+        "bottom": 495.4934387207031,
+        "right": 372.63160514831543
+      },
+      "latest": {
+        "x": 18.157896041870117,
+        "y": 578.38818359375,
+        "width": 353.6842346191406,
+        "height": 42.631591796875,
+        "bottom": 621.019775390625,
+        "right": 371.84213066101074
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 66.09375,
+        "bottom": 66.09375,
+        "right": 390
+      },
+      "footer": {
+        "x": 17.36842155456543,
+        "y": 637.894775390625,
+        "width": 355.26318359375,
+        "height": 94.73681640625,
+        "bottom": 732.631591796875,
+        "right": 372.63160514831543
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p05",
+      "viewport": [
+        494,
+        1000
+      ],
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "bottom": 950,
+        "right": 494
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 22,
+        "y": 163,
+        "width": 450,
+        "height": 645,
+        "bottom": 808,
+        "right": 472
+      },
+      "manual": {
+        "x": 22,
+        "y": 284,
+        "width": 450,
+        "height": 197.1875,
+        "bottom": 481.1875,
+        "right": 472
+      },
+      "counter": {
+        "x": 22,
+        "y": 489.1875,
+        "width": 450,
+        "height": 115,
+        "bottom": 604.1875,
+        "right": 472
+      },
+      "latest": {
+        "x": 23,
+        "y": 709.1875,
+        "width": 448,
+        "height": 54,
+        "bottom": 763.1875,
+        "right": 471
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 72,
+        "bottom": 72,
+        "right": 494
+      },
+      "footer": {
+        "x": 22,
+        "y": 808,
+        "width": 450,
+        "height": 120,
+        "bottom": 928,
+        "right": 472
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p05",
+      "viewport": [
+        768,
+        1024
+      ],
+      "app": {
+        "x": 137,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "bottom": 950,
+        "right": 631
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 159,
+        "y": 163,
+        "width": 450,
+        "height": 645,
+        "bottom": 808,
+        "right": 609
+      },
+      "manual": {
+        "x": 159,
+        "y": 284,
+        "width": 450,
+        "height": 197.1875,
+        "bottom": 481.1875,
+        "right": 609
+      },
+      "counter": {
+        "x": 159,
+        "y": 489.1875,
+        "width": 450,
+        "height": 115,
+        "bottom": 604.1875,
+        "right": 609
+      },
+      "latest": {
+        "x": 160,
+        "y": 709.1875,
+        "width": 448,
+        "height": 54,
+        "bottom": 763.1875,
+        "right": 608
+      },
+      "header": {
+        "x": 137,
+        "y": 0,
+        "width": 494,
+        "height": 72,
+        "bottom": 72,
+        "right": 631
+      },
+      "footer": {
+        "x": 159,
+        "y": 808,
+        "width": 450,
+        "height": 120,
+        "bottom": 928,
+        "right": 609
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p05",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "app": {
+        "x": 473,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "bottom": 950,
+        "right": 967
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 495,
+        "y": 163,
+        "width": 450,
+        "height": 645,
+        "bottom": 808,
+        "right": 945
+      },
+      "manual": {
+        "x": 495,
+        "y": 284,
+        "width": 450,
+        "height": 197.1875,
+        "bottom": 481.1875,
+        "right": 945
+      },
+      "counter": {
+        "x": 495,
+        "y": 489.1875,
+        "width": 450,
+        "height": 115,
+        "bottom": 604.1875,
+        "right": 945
+      },
+      "latest": {
+        "x": 496,
+        "y": 709.1875,
+        "width": 448,
+        "height": 54,
+        "bottom": 763.1875,
+        "right": 944
+      },
+      "header": {
+        "x": 473,
+        "y": 0,
+        "width": 494,
+        "height": 72,
+        "bottom": 72,
+        "right": 967
+      },
+      "footer": {
+        "x": 495,
+        "y": 808,
+        "width": 450,
+        "height": 120,
+        "bottom": 928,
+        "right": 945
+      },
+      "horizontal": false
+    },
+    {
+      "p": "p05",
+      "viewport": [
+        1869,
+        940
+      ],
+      "app": {
+        "x": 690.09375,
+        "y": 0,
+        "width": 488.800048828125,
+        "height": 940,
+        "bottom": 940,
+        "right": 1178.893798828125
+      },
+      "shell": [
+        494,
+        950
+      ],
+      "cameraHeight": 40,
+      "scroll": {
+        "x": 711.8621826171875,
+        "y": 161.73257446289062,
+        "width": 445.26318359375,
+        "height": 637.76220703125,
+        "bottom": 799.4947814941406,
+        "right": 1157.1253662109375
+      },
+      "manual": {
+        "x": 711.8621826171875,
+        "y": 281.4588928222656,
+        "width": 445.26318359375,
+        "height": 195.5601806640625,
+        "bottom": 477.0190734863281,
+        "right": 1157.1253662109375
+      },
+      "counter": {
+        "x": 711.8621826171875,
+        "y": 484.93487548828125,
+        "width": 445.26318359375,
+        "height": 113.78948974609375,
+        "bottom": 598.724365234375,
+        "right": 1157.1253662109375
+      },
+      "latest": {
+        "x": 712.8516235351562,
+        "y": 702.6190795898438,
+        "width": 443.28424072265625,
+        "height": 53.43157958984375,
+        "bottom": 756.0506591796875,
+        "right": 1156.1358642578125
+      },
+      "header": {
+        "x": 690.09375,
+        "y": 0,
+        "width": 488.800048828125,
+        "height": 71.69046020507812,
+        "bottom": 71.69046020507812,
+        "right": 1178.893798828125
+      },
+      "footer": {
+        "x": 711.8621826171875,
+        "y": 799.4947509765625,
+        "width": 445.26318359375,
+        "height": 118.73681640625,
+        "bottom": 918.2315673828125,
+        "right": 1157.1253662109375
+      },
+      "horizontal": false
+    }
+  ],
+  "errors": []
+}

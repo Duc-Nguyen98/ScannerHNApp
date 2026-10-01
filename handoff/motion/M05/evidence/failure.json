@@ -1,0 +1,753 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      {
+        "name": "S01 validation immediate, CTA fixed and FormFeedback140/80/0",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 seed7/10 and1duplicate: exactly7 new row events160ms, camera/counter static",
+        "status": "PASS"
+      },
+      {
+        "name": "S03 missing3 appears immediately and cannot send; notice140ms/no row replay on Back",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate feedback is immediate and manual input stays connected",
+        "status": "PASS"
+      },
+      {
+        "name": "new camera-fixture scan preserves visible row anchor and does not replay through filter",
+        "status": "PASS"
+      },
+      {
+        "name": "accepted final row: real RAF opacity changes only in auto and counter immediately10",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 only after matched receipt; rapid send once; Back fromP12 never replays result",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 15,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.85475",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 26,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915863",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 41,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951901",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 56,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951901",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 72,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974504",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 88,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988503",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 105,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996427",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 120,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 136,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 153,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 169,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 185,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 200,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 216,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 234,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-field-error",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          },
+          {
+            "owner": "FormFeedback",
+            "node": "p05-input",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "missing-three",
+        "samples": [
+          {
+            "ms": 15,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915786",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 36,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951854",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 41,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951854",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 58,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974474",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 74,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988508",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 90,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996427",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 106,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 122,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 137,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 153,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 169,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 186,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 202,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 218,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 233,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-warning",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 12,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.808325",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 28,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.882241",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 44,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.926889",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 60,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.956131",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 76,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.975641",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 92,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.988328",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 109,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.995901",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 124,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.999463",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 139,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 156,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 171,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 188,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 204,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 220,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 235,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "ScanFeedback",
+            "node": "p05-attempt-code",
+            "duration": 160,
+            "frames": [
+              {
+                "opacity": 0.6
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false
+          }
+        ]
+      }
+    ],
+    "layouts": [],
+    "panels": [
+      {
+        "id": "P05.S01",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S02",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            102,
+            494,
+            848
+          ],
+          ".p05-scroll": [
+            22,
+            163,
+            450,
+            645
+          ],
+          ".p05-footer": [
+            22,
+            808,
+            450,
+            120
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": [
+            22,
+            236,
+            450,
+            220
+          ],
+          ".p05-counter": [
+            22,
+            528,
+            450,
+            115
+          ],
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S03",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": [
+            22,
+            910.578125,
+            450,
+            134
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S04",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            817
+          ],
+          ".p05-scroll": [
+            22,
+            74,
+            450,
+            636
+          ],
+          ".p05-footer": [
+            22,
+            717,
+            450,
+            136
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": [
+            42,
+            94,
+            410,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "anchor": {
+      "id": "fixture-outbound-scan-0005-1:event:9",
+      "offset": 157.78125,
+      "delta": 0,
+      "scroll": {
+        "top": 443,
+        "height": 1088,
+        "client": 645
+      }
+    },
+    "listProfile": {
+      "rows": 4,
+      "nodes": 142,
+      "accepted": 10
+    }
+  }
+]

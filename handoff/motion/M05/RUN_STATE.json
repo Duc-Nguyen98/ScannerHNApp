@@ -1,0 +1,55 @@
+{
+  "current_prompt": "MOTION_P05",
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "completed_panel_ids": [
+    "P05.S01",
+    "P05.S02",
+    "P05.S03",
+    "P05.S04"
+  ],
+  "remaining_panel_ids": [],
+  "verification": {
+    "prompt": "MOTION_P05",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 64,
+    "motion_browser_groups": 39,
+    "p04_regression_groups": 39,
+    "shell_regression_groups": 36,
+    "manual_regression_groups": 11,
+    "browser_total": 125,
+    "domain_equal_across_modes": true,
+    "operations_per_mode": {
+      "record": 3,
+      "check": 1,
+      "camera": 0
+    },
+    "list_profiles": {
+      "auto": {
+        "rows": 4,
+        "nodes": 142,
+        "accepted": 10
+      },
+      "os-reduced": {
+        "rows": 4,
+        "nodes": 142,
+        "accepted": 10
+      },
+      "off": {
+        "rows": 4,
+        "nodes": 142,
+        "accepted": 10
+      }
+    },
+    "source_byte_delta": 5041,
+    "static_geometry": "PASS12panel-mode combinations against actual before",
+    "visual": "USER_REVIEW_PENDING",
+    "hardware": "NOT_RUN",
+    "production": "NOT_RUN",
+    "fps": "NOT_MEASURED",
+    "report": "handoff/motion/M05/REPORT.md"
+  },
+  "next_action": "User review; hardware/production unverified; no deploy."
+}
