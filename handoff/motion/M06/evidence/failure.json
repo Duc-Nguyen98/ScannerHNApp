@@ -1,0 +1,209 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "four panels settle to pre-motion geometry and identical fixture content",
+      "SearchFeedback targets results only; input stays connected with caret/IME",
+      "latest B response wins even when cancelled A resolves after the fade",
+      "tab feedback never translates layout or replaces the search input",
+      "list-detail-stock-Back keeps query anchor/focus; shell owns one route fade",
+      "stock never counts through intermediate values",
+      "history append keeps existing DOM and scroll; error changes footer only",
+      "rapid navigation, mode/OS changes and hidden state cancel local animations",
+      "in-flight search leaving route cannot repaint Home or issue camera calls"
+    ],
+    "errors": [],
+    "geometry": {
+      "1": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": null,
+        ".p06-stock-strip": null
+      },
+      "2": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92
+        ],
+        ".p06-body": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".p06-scroll": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100,
+          458,
+          119.625
+        ],
+        ".p06-stock-strip": null
+      },
+      "3": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          110
+        ],
+        ".p06-stock-strip": [
+          19,
+          308.21875,
+          456,
+          102
+        ]
+      },
+      "4": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          121.625
+        ],
+        ".p06-stock-strip": null
+      }
+    },
+    "feedbackFrames": [
+      0.855064,
+      0.916038,
+      0.95201,
+      0.974572,
+      0.988544,
+      0.996434,
+      0.999736,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "domain": {
+      "stock": [
+        12,
+        10,
+        1,
+        1
+      ],
+      "history": 7,
+      "hardware": 0,
+      "reads": {
+        "search": 30,
+        "history": 5
+      }
+    },
+    "failure": {
+      "name": "logout cancels motion and removes protected content immediately",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.hn-action-dialog[open] [data-action-dialog=confirm]')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p06.cjs:34:222\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p06.cjs:18:34)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p06.cjs:34:1"
+    }
+  }
+]

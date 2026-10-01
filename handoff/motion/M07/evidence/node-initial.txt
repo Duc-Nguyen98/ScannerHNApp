@@ -1,0 +1,30 @@
+✔ P07.A01 unread and unsupported are gated without device calls (5.5734ms)
+✔ P07.A02 reading and prepare never create a mapping or receipt (13.9921ms)
+✔ P07.A03 conflict preserves current mapping and provides P17.S03 context (3.3294ms)
+✔ P07.A04 duplicate confirm yields one confirmed mapping and same tag detail/list (29.857ms)
+✔ UNKNOWN preserves request and blocks blind retry; reconcile uses same receipt (45.0355ms)
+✔ Known failure retry retains request; fresh successful attempt resets read and identity (63.6318ms)
+✔ read permission, unsupported, read error and locked are distinct (31.2408ms)
+✔ warehouse stop and capability denial gate handlers, keep UID/session (1.7194ms)
+✔ P06 product selection carries exact independent fields and clears old UID (14.7379ms)
+✔ adapter search status and counts remain separate; no audit inferred from current tags (1.539ms)
+✔ invalid/expired scope hides data and late receipt cannot revive disposed flow (60.5602ms)
+✔ receipt must match UID/item/actor/warehouse/request; prepare or malformed cannot succeed (15.2966ms)
+✔ five consecutive links keep product and create distinct requests, preserve existing tag IDs/labels (156.7018ms)
+✔ changing demo UID invalidates prior read; busy/UNKNOWN cannot change it or product (62.3131ms)
+✔ scenario change at read step invalidates old UID; linked tag never fabricates a fresh success (46.3816ms)
+✔ UNKNOWN terminal reconciliation unlocks recovery without discarding the request (35.4906ms)
+✔ known failure retries same request in place; begin from list creates a fresh attempt (57.7592ms)
+✔ late confirmation preserves list navigation and confirms mapping without stealing screen (32.2924ms)
+✔ UNKNOWN can be reconciled while warehouse writes are stopped (31.3285ms)
+✔ receipt nested actor mismatch is UNKNOWN; late reconciliation cannot clear a changed session (15.4634ms)
+✔ NFC search accepts product code and uppercase Vietnamese Đ (0.7968ms)
+✔ Clear NFC filters is atomic, read-only and session guarded (0.3071ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 907.1623

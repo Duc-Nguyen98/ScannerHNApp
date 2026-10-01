@@ -1,0 +1,47 @@
+✔ late A cannot commit after B; cancellation belongs to read owner (4.8178ms)
+✔ sync fixture remains synchronous and repeated render reads are deduplicated (0.3143ms)
+✔ error retains only the same scoped query cache, never another result set (0.3961ms)
+✔ hide/dispose ignore late read and reject malformed payload without throwing (1.584ms)
+✔ recent store is unique MRU max3 and returns current source objects rather than copied values (6.6653ms)
+✔ categories stay separate; invalid category/id/warehouse cannot be remembered or substituted (0.4135ms)
+✔ read error and removed source rows hide entries without turning failure into deletion or using stale data (2.5398ms)
+✔ actor, warehouse, auth session, logout, denial and explicit clear all invalidate previous IDs (1.2332ms)
+✔ missing auth session is never treated as an authorized durable recent scope (0.3499ms)
+✔ selection rereads list and exact item; names/SKUs/codes never substitute ID (1.7395ms)
+✔ selection rejects source unavailable, thrown read, deleted detail and scope/category mismatch (0.6171ms)
+✔ flow default All dates and selection source guard preserve current query/category/scroll on failure (3.1576ms)
+✔ direct deep-link open also rejects unavailable or deleted current source and keeps prior state (2.7297ms)
+✔ P06 read failure and retry cannot mutate inventory or signed event fixtures (6.5679ms)
+✔ P06 reuses P08 draft/validation semantics without committing picker draft (2.9446ms)
+✔ A01 independent code/name/SKU/serial search, scope, aggregate counts and immutable clear (1.75ms)
+✔ A02 stock uses supplied totals with 12/10/1/1 and 6+3+2+1 positions (0.8079ms)
+✔ A03 real zero distinct from missing, SKU never substitutes serial (0.4127ms)
+✔ A04 print and warranty fail closed regardless of role, even if print capability true no implementation (3.249ms)
+✔ A05 inclusive type/range, invalid range and signed events independent of current stock (0.5147ms)
+✔ list context/scroll retained on detail and stock/history; IDs cannot open outside scope (3.0725ms)
+✔ capability-guarded document link identifies exact event and does not invent a matching document (1.3325ms)
+✔ session revoked hides data and actions; stopped warehouse remains read-only accessible (1.2499ms)
+✔ list scan context drops the previously viewed item while preserving query/category (0.5101ms)
+✔ invalid or impossible dates keep the committed filters and events; valid correction clears error (47.9902ms)
+✔ demo fills each catalogue item with coherent locations and distinct scoped history (2.0557ms)
+✔ missing-data scenario is reversible and does not erase demo inventory or event fixtures (2.2668ms)
+✔ M00 harness reuses the served primitive rather than a second implementation (4.2537ms)
+✔ OS reduction cannot be overridden and invalid modes fail to off (1.6545ms)
+✔ all six M00 primitives preserve presentation lifecycle in auto (1.7388ms)
+✔ all six M00 primitives preserve presentation lifecycle in reduced (0.5621ms)
+✔ all six M00 primitives preserve presentation lifecycle in off (0.4438ms)
+✔ rapid replacement, OS change, hidden, detached and security teardown cancel without callbacks (1.7131ms)
+✔ inputs, preview scale roots and disabled targets remain static (0.6531ms)
+✔ P01 label updates apply immediately, do not replay identical text, and cancel on dispose (0.9151ms)
+✔ repeated P01 mount/dispose leaves zero media, visibility or pointer/key listeners (1.2784ms)
+✔ Shell reuses one route owner; replacement cancels old effect, repeated identity never replays (6.054ms)
+✔ OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks (3.5938ms)
+✔ Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles (1.8007ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 485.7926

@@ -1,0 +1,650 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "four panels settle to pre-motion geometry and identical fixture content",
+      "SearchFeedback targets results only; input stays connected with caret/IME",
+      "latest B response wins even when cancelled A resolves after the fade",
+      "tab feedback never translates layout or replaces the search input",
+      "list-detail-stock-Back keeps query anchor/focus; shell owns one route fade",
+      "stock never counts through intermediate values",
+      "history append keeps existing DOM and scroll; error changes footer only",
+      "rapid navigation, mode/OS changes and hidden state cancel local animations",
+      "invalid ID does not auto-open a product; print remains blocked in every mode",
+      "in-flight search leaving route cannot repaint Home or issue camera calls",
+      "repeated Home/lookup cycles do not accumulate motion listeners",
+      "logout cancels motion and removes protected content immediately"
+    ],
+    "errors": [],
+    "geometry": {
+      "1": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": null,
+        ".p06-stock-strip": null
+      },
+      "2": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92
+        ],
+        ".p06-body": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".p06-scroll": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100,
+          458,
+          119.625
+        ],
+        ".p06-stock-strip": null
+      },
+      "3": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          110
+        ],
+        ".p06-stock-strip": [
+          19,
+          308.21875,
+          456,
+          102
+        ]
+      },
+      "4": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          121.625
+        ],
+        ".p06-stock-strip": null
+      }
+    },
+    "initialProfile": {
+      "nodes": 120,
+      "rows": 5,
+      "scrollController": "native"
+    },
+    "feedbackFrames": [
+      0.915983,
+      0.951976,
+      0.974551,
+      0.988531,
+      0.996428,
+      0.999734,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "listProfile": {
+      "nodes": 62,
+      "rows": 1,
+      "scrollController": "native"
+    },
+    "domain": {
+      "stock": [
+        12,
+        10,
+        1,
+        1
+      ],
+      "history": 7,
+      "hardware": 0,
+      "reads": {
+        "search": 36,
+        "history": 7
+      }
+    }
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "four panels settle to pre-motion geometry and identical fixture content",
+      "SearchFeedback targets results only; input stays connected with caret/IME",
+      "latest B response wins even when cancelled A resolves after the fade",
+      "tab feedback never translates layout or replaces the search input",
+      "list-detail-stock-Back keeps query anchor/focus; shell owns one route fade",
+      "stock never counts through intermediate values",
+      "history append keeps existing DOM and scroll; error changes footer only",
+      "rapid navigation, mode/OS changes and hidden state cancel local animations",
+      "invalid ID does not auto-open a product; print remains blocked in every mode",
+      "in-flight search leaving route cannot repaint Home or issue camera calls",
+      "repeated Home/lookup cycles do not accumulate motion listeners",
+      "logout cancels motion and removes protected content immediately"
+    ],
+    "errors": [],
+    "geometry": {
+      "1": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": null,
+        ".p06-stock-strip": null
+      },
+      "2": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92
+        ],
+        ".p06-body": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".p06-scroll": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100,
+          458,
+          119.625
+        ],
+        ".p06-stock-strip": null
+      },
+      "3": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          110
+        ],
+        ".p06-stock-strip": [
+          19,
+          308.21875,
+          456,
+          102
+        ]
+      },
+      "4": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          121.625
+        ],
+        ".p06-stock-strip": null
+      }
+    },
+    "initialProfile": {
+      "nodes": 120,
+      "rows": 5,
+      "scrollController": "native"
+    },
+    "feedbackFrames": [
+      0.978741,
+      0.978741,
+      0.996432,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "listProfile": {
+      "nodes": 62,
+      "rows": 1,
+      "scrollController": "native"
+    },
+    "domain": {
+      "stock": [
+        12,
+        10,
+        1,
+        1
+      ],
+      "history": 7,
+      "hardware": 0,
+      "reads": {
+        "search": 36,
+        "history": 7
+      }
+    }
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "four panels settle to pre-motion geometry and identical fixture content",
+      "SearchFeedback targets results only; input stays connected with caret/IME",
+      "latest B response wins even when cancelled A resolves after the fade",
+      "tab feedback never translates layout or replaces the search input",
+      "list-detail-stock-Back keeps query anchor/focus; shell owns one route fade",
+      "stock never counts through intermediate values",
+      "history append keeps existing DOM and scroll; error changes footer only",
+      "rapid navigation, mode/OS changes and hidden state cancel local animations",
+      "invalid ID does not auto-open a product; print remains blocked in every mode",
+      "in-flight search leaving route cannot repaint Home or issue camera calls",
+      "repeated Home/lookup cycles do not accumulate motion listeners",
+      "logout cancels motion and removes protected content immediately"
+    ],
+    "errors": [],
+    "geometry": {
+      "1": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": null,
+        ".p06-stock-strip": null
+      },
+      "2": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92
+        ],
+        ".p06-body": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".p06-scroll": [
+          0,
+          82,
+          494,
+          769
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100,
+          458,
+          119.625
+        ],
+        ".p06-stock-strip": null
+      },
+      "3": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          110
+        ],
+        ".p06-stock-strip": [
+          19,
+          308.21875,
+          456,
+          102
+        ]
+      },
+      "4": {
+        ".hn-screen": [
+          0,
+          0,
+          494,
+          950
+        ],
+        ".p06-header": [
+          0,
+          0,
+          494,
+          92.59375
+        ],
+        ".p06-body": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".p06-scroll": [
+          0,
+          82.59375,
+          494,
+          768.40625
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".p06-hero": [
+          18,
+          100.59375,
+          458,
+          121.625
+        ],
+        ".p06-stock-strip": null
+      }
+    },
+    "initialProfile": {
+      "nodes": 120,
+      "rows": 5,
+      "scrollController": "native"
+    },
+    "feedbackFrames": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "listProfile": {
+      "nodes": 62,
+      "rows": 1,
+      "scrollController": "native"
+    },
+    "domain": {
+      "stock": [
+        12,
+        10,
+        1,
+        1
+      ],
+      "history": 7,
+      "hardware": 0,
+      "reads": {
+        "search": 36,
+        "history": 7
+      }
+    }
+  }
+]
