@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "Home recent Xem tất cả remains P12",
+      "status": "PASS"
+    },
+    {
+      "name": "Date draft Reset/Cancel/Apply, bounds Vietnam",
+      "status": "PASS"
+    },
+    {
+      "name": "Scroll retained when returning from event; keyboard tabs",
+      "status": "PASS"
+    },
+    {
+      "name": "Read timeout15 seconds keeps query; duplicate retry blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "Read completion does not steal focus from external tools",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 dependency exact event retained; old NFC URL migrates",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-screen-id=\"P23.S01\"]') to be visible\u001b[22m\n\n    at eval (<anonymous>:19:354)\n    at async test (<anonymous>:10:29)\n    at async eval (<anonymous>:19:1)"
+}

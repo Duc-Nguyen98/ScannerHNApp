@@ -1,0 +1,376 @@
+--- /dev/null
++++ b/docs/flows/history/nfc-audit-motion.mjs
+@@ -0,0 +1,24 @@
++import {createMotionController} from '../shared/motion/motion-primitives.mjs';
++
++// A consumer of M00, not a route/scroll/data provider. No business callbacks.
++export function mountNfcAuditMotion({root,requested='auto',active=()=>true,media,hub=false}){
++ let controller=null,disposed=false,filterKey=null;
++ const available=()=>!disposed&&active()&&!root.closest('[inert],[hidden]');
++ function press(e){
++  if(!hub||!available()||e.type==='keydown'&&(e.repeat||e.isComposing||!['Enter',' '].includes(e.key)))return;
++  const node=e.target.closest?.('.history-link,.phone-header button,.phone-footer button');
++  if(!node||!root.contains(node)||node.disabled||node.getAttribute('aria-disabled')==='true')return;
++  node.dataset.motionPrimitive='HistoryHub';controller?.pressFeedback(node);
++ }
++ function release(){controller?.dispose();controller=null;root.removeEventListener('pointerdown',press);root.removeEventListener('keydown',press);filterKey=null;}
++ return {
++  activate(){if(disposed||controller)return;controller=createMotionController({element:root,requested,...(media?{media}:{})});if(hub){root.addEventListener('pointerdown',press);root.addEventListener('keydown',press);}},
++  setMode(value){requested=value;controller?.setMode(value);},
++  seed(key){filterKey=key;},
++  filter(key,node,tab){const changed=filterKey!==null&&filterKey!==key;filterKey=key;if(!changed||!available())return;controller?.cancel();if(node){node.dataset.motionPrimitive='NfcAuditFilter';controller?.dataState(node);}if(tab){tab.dataset.motionPrimitive='NfcAuditIndicator';controller?.noticeFeedback(tab);}},
++  cancel(){controller?.cancel();},
++  hide:release,
++  dispose(){disposed=true;release();},
++ };
++}
++
+--- /dev/null
++++ b/docs/flows/history/nfc-audit-motion.css
+@@ -0,0 +1,4 @@
++/* M22 hub iframe opt-in. No scale, geometry, stagger or second scroll owner. */
++.phone[data-hn-motion-mode] .history-link{transition:background-color var(--hn-motion-press) var(--hn-motion-ease-standard)}
++.phone[data-hn-motion-mode] .history-link:active:not(:disabled){background-color:#e4f0f5}
++
+diff --git a/handoff/motion/M22/before/source/docs/flows/history/nfc-audit-view.mjs b/docs/flows/history/nfc-audit-view.mjs
+index f978188..b8d72e4 100644
+--- a/handoff/motion/M22/before/source/docs/flows/history/nfc-audit-view.mjs
++++ b/docs/flows/history/nfc-audit-view.mjs
+@@ -1,3 +1,4 @@
++import {mountNfcAuditMotion} from './nfc-audit-motion.mjs';
+ import {AUDIT_TYPES,auditScope,scopeKey,normalizeAudit,auditFilters,selectAudit,findAudit,auditDay} from './nfc-audit-model.mjs';
+ import {readAuditFixture} from './nfc-audit-fixture.mjs';
+ import {historyControls} from './history-controls.mjs';
+@@ -18,7 +19,7 @@ const tile=(name='nfc',size='md')=>`<span class="hn-operation-icon" data-hn-oper
+ const blank=(title,copy)=>`<section class="p22-empty">${tile('history','lg')}<h2>${title}</h2><p>${copy}</p></section>`;
+ const notice=text=>`<div class="p22-notice">${icon('alert')}<span>${text}</span></div>`;
+ const value=(label,v,lines=2)=>`<div class="p22-kv"><span>${label}</span><div><strong data-hn-readable="${label}" data-hn-readable-kind="value" data-hn-lines="${lines}">${esc(v||null)}</strong></div></div>`;
+-export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSize,readSource=null}){
++export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSize,readSource=null,motionMode='auto'}){
+   let active=false,disposed=false,mode='unavailable',scene='nfc',eventId='',filters=auditFilters(),source={kind:'unavailable',items:[]},identity='',generation=0,timer=null,readTimer=null,composing=false,modal=null,backPending=false;
+   let renderedHash='',view={top:0,focus:null},abort=null,viewedId='',readOutcome='ready',copyEpoch=0,copyBusy=false,deferredPaint=false,readFocus=null;
+   const expanded=new Set();
+@@ -30,7 +31,10 @@ export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSi
+   const allowed=()=>active&&!disposed&&!!auditScope(getState())&&scopeKey(auditScope(getState()))===identity;
+   const feedback=createActionFeedback({getScreen:()=>screen,tools,isActive:allowed,key:'hnP22Copy'});
+   const occupied=()=>!!screen.querySelector('.app-modal-host,dialog[open]');
+-  const observer=new MutationObserver(()=>{if(deferredPaint&&allowed()&&!occupied()){deferredPaint=false;paintRead();}});
++  const motion=mountNfcAuditMotion({root,requested:motionMode,active:()=>allowed()&&!occupied()});
++  const filterKey=()=>JSON.stringify(filters);
++  const animateFilter=()=>motion.filter(filterKey(),root.querySelector('.p22-results'),root.querySelector('[data-p22-type][aria-selected="true"]'));
++  const observer=new MutationObserver(()=>{if(occupied())motion.cancel();if(deferredPaint&&allowed()&&!occupied()){deferredPaint=false;paintRead();}});
+   observer.observe(screen,{childList:true,subtree:true});
+   const outcome=document.createElement('label');outcome.innerHTML='Lần tải lại <select data-p22-read-outcome><option value="ready">Bình thường</option><option value="error">Lỗi đọc</option><option value="slow">Đọc chậm</option><option value="timeout">Treo15giây</option></select>';review.append(outcome);
+   outcome.querySelector('select').onchange=e=>{readOutcome=e.target.value;};
+@@ -63,7 +67,7 @@ export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSi
+     if(!rows.length)return blank(!source.complete?'Chưa tìm thấy trong dữ liệu đã tải':filters.q||filters.type!=='all'||filters.from||filters.to||filters.status!=='all'?'Không có kết quả phù hợp':'Chưa có thao tác',source.readIssue?'Kết quả của lần đọc trước. Chưa xác minh lại nguồn hiện tại.':!source.complete?'Chưa xác minh toàn bộ lịch sử. Bạn có thể tải lại hoặc điều chỉnh bộ lọc.':'Nguồn đã xác nhận kết quả đọc. Bạn có thể thay đổi bộ lọc hoặc tải lại.')+`<div class="p22-empty-actions">${filters.q?'<button data-p22="clear-query">Xóa từ khóa</button>':''}<button data-p22="filter">Điều chỉnh bộ lọc</button></div>`;
+     let day;
+     return rows.map(e=>{
+-      const key=auditDay(e),group=key!==day?`<h3 class="p22-group">${key?esc(recentTimeLabel(key,'').replace(/ · $/,'')):'Thời điểm chưa xác minh'}<span>${rows.filter(r=>auditDay(r)===key).length} thao tác</span></h3>`:'';day=key;
++      const key=auditDay(e),group=key!==day?`<h3 class="p22-group" data-p22-day="${esc(key||'unknown')}">${key?esc(recentTimeLabel(key,'').replace(/ · $/,'')):'Thời điểm chưa xác minh'}<span>${rows.filter(r=>auditDay(r)===key).length} thao tác</span></h3>`:'';day=key;
+       return group+`<button class="p22-card p22-event ${viewedId===e.id?'p22-viewed':''}" data-p22-event="${esc(e.id)}"><span class="p22-row"><span class="p22-event-name">${tile()}<strong>${esc(e.type)}</strong></span>${badge(e)}</span><div class="p22-identifiers"><p><span class="p22-field-label">UID</span><span>${esc(e.uid||null)}</span></p><p><span class="p22-field-label">Serial</span><span>${esc(e.serial||null)}</span></p></div><span class="p22-row"><time>${key?esc(e.time):'Chưa xác minh giờ'}${viewedId===e.id?' · Vừa xem':''}</time><span class="p22-actor">${esc(e.actor||null)} →</span></span></button>`;
+     }).join('')+`<p class="p22-end">${source.complete?'Đã hiển thị hết thao tác trong nguồn đã đọc.':'Đã hiển thị các thao tác đã tải; chưa xác minh hết dữ liệu.'}</p>`;
+   }
+@@ -101,17 +105,31 @@ export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSi
+       if(p.selector.includes('data-hn-read-trigger'))requestAnimationFrame(()=>{if(allowed()&&document.activeElement===target)root.querySelector(p.selector)?.focus({preventScroll:true});});
+     }
+   }
++  function updateResults(){
++    const list=root.querySelector('.p22-results');if(!list)return;
++    const template=document.createElement('template');template.innerHTML=results();
++    const key=n=>n.nodeType!==1?null:n.dataset.p22Event?'event:'+n.dataset.p22Event:n.hasAttribute('data-p22-day')?'day:'+n.dataset.p22Day:n.matches('.p22-end')?'end':null;
++    const old=new Map([...list.children].map(n=>[key(n),n]).filter(([k])=>k));
++    let cursor=list.firstChild;
++    for(const fresh of [...template.content.childNodes]){
++      const prior=old.get(key(fresh));
++      if(prior&&key(fresh)?.startsWith('day:'))prior.innerHTML=fresh.innerHTML;
++      const node=prior&&prior.outerHTML===fresh.outerHTML?prior:fresh;
++      if(node!==cursor)list.insertBefore(node,cursor);else cursor=cursor.nextSibling;
++    }
++    while(cursor){const next=cursor.nextSibling;cursor.remove();cursor=next;}
++  }
+   function paintRead(){
+     if(!allowed())return;if(occupied()){deferredPaint=true;return;}
+     const p=uiPosition();
+     if(source.kind==='ready'&&scene!=='nfc-detail'&&root.querySelector('.p22-results')){
+       // Keep search/IME and filter DOM connected during read responses.
+-      if(!composing)root.querySelector('.p22-results').innerHTML=results();
++      if(!composing)updateResults();
+       const count=root.querySelector('.p22-count');if(count&&!composing)count.textContent=countLabel();
+       const status=root.querySelector('.p22-read-status');if(status)status.textContent=readStatus();
+       const reload=root.querySelector('[data-p22=reload]');if(reload){reload.disabled=!!source.refreshing;reload.textContent=source.refreshing?'Đang tải…':'Tải lại';}
+       const clear=root.querySelector('.p22-query-clear');if(clear)clear.hidden=!filters.q;
+-      save();syncSnapshot();
++      save();syncSnapshot();if(!composing)animateFilter();
+     }else render();
+     restorePosition(p);
+     if(readFocus&&!source.refreshing&&source.kind!=='loading'){
+@@ -122,22 +140,22 @@ export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSi
+   }
+   function render({focus=false,restore=false}={}){
+     if(!allowed())return;
+-    clearTimeout(timer);composing=false;
++    clearTimeout(timer);composing=false;motion.cancel();
+     const detailPage=scene==='nfc-detail',unavailable=source.kind==='unavailable',panel=unavailable?'P22.S04':detailPage?'P22.S03':'P22.S02';
+     const content=source.kind==='loading'?blank('Đang tải lịch sử…','Đang đọc nguồn sự kiện. Không thực hiện thao tác ghi.'):unavailable?blank('Chưa có dữ liệu lịch sử','Danh sách thao tác hiện chưa khả dụng. Bạn có thể kiểm tra lại sau.')+notice('Bạn vẫn có thể sử dụng các chức năng quét mã.'):source.kind==='error'?blank('Không tải được lịch sử','Nguồn đọc bị lỗi hoặc hết thời gian chờ. Bộ lọc vẫn được giữ; tải lại chỉ đọc lịch sử.'):detailPage?detail():`<div class="p22-results">${results()}</div>`;
+     root.innerHTML=`<section class="p22-app" data-panel="${panel}"><header class="p08-header"><button data-p22="back" aria-label="${detailPage?'Về lịch sử NFC':'Về lịch sử thao tác'}">${icon('back')}</button><h1 tabindex="-1">${detailPage?'Chi tiết thao tác NFC':'Lịch sử NFC'}</h1></header>${source.kind==='ready'&&!detailPage?`<div class="p22-dock">${controls()}<p class="p22-read-status" role="status">${readStatus()}</p></div>`:''}<div class="p22-scroll ${source.kind==='ready'&&!detailPage?'p22-list-scroll':''}">${content}</div><footer class="p22-footer">${source.kind!=='ready'?`<button class="p22-primary" data-p22="reload" ${source.kind==='loading'?'disabled':''}>${source.kind==='loading'?'Đang tải…':'Tải lại lịch sử'}</button>`:''}<button data-p22="back">${detailPage?'Về lịch sử NFC':'Về lịch sử thao tác'}</button></footer></section>`;
+     renderedHash=location.hash;syncSnapshot();
+     if(restore&&!detailPage){root.querySelector('.p22-scroll').scrollTop=view.top;root.querySelector(view.focus||'h1')?.focus({preventScroll:true});}
+     else if(focus)root.querySelector('h1')?.focus({preventScroll:true});
+-    onSize();
++    onSize();animateFilter();
+   }
+   function refreshResults(){
+     if(!allowed()||source.kind!=='ready'||scene==='nfc-detail')return;
+     if(occupied()){deferredPaint=true;return;}
+-    save();root.querySelector('.p22-results').innerHTML=results();
++    save();updateResults();
+     root.querySelector('.p22-count').textContent=countLabel();
+     root.querySelector('.p22-query-clear').hidden=!filters.q;
+-    syncSnapshot();
++    syncSnapshot();animateFilter();
+   }
+   async function load({preserve=true}={}){
+     if(!allowed()||occupied()||source.refreshing||source.kind==='loading')return;
+@@ -181,17 +199,17 @@ export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSi
+   root.addEventListener('click',click);root.addEventListener('input',input);root.addEventListener('keydown',key);root.addEventListener('compositionstart',composition);root.addEventListener('compositionend',composition);window.addEventListener('popstate',pickerNav,true);window.addEventListener('hashchange',pickerNav,true);
+   function cancelRead(){generation++;abort?.abort();clearTimeout(readTimer);copyEpoch++;copyBusy=false;deferredPaint=false;readFocus=null;if(source.refreshing)source={...source,refreshing:false,readIssue:'interrupted'};if(source.kind==='loading')source={kind:'unavailable',items:[]};}
+   review.querySelector('[data-p22-source]').onchange=e=>{if(!allowed()||occupied())return;cancelRead();mode=e.target.value;viewedId='';expanded.clear();void load({preserve:false});};
+-  function hide(){remember();active=false;cancelRead();feedback.clear();clearTimeout(timer);composing=false;modal?.close({restoreFocus:false});review.hidden=true;renderedHash='';}
+-  return {show(){
++  function hide(){motion.hide();remember();active=false;cancelRead();feedback.clear();clearTimeout(timer);composing=false;modal?.close({restoreFocus:false});review.hidden=true;renderedHash='';}
++  return {routeKey:()=>`nfc-audit:${scene==='nfc-detail'?'detail:'+eventId:'list'}`,setMotionMode:value=>motion.setMode(value),cancelMotion:()=>motion.cancel(),show(){
+     const scope=auditScope(getState());if(!scope)return;const nextIdentity=scopeKey(scope);
+     if(identity&&identity!==nextIdentity){cancelRead();filters=auditFilters();view={top:0,focus:null};source={kind:'unavailable',items:[]};mode='unavailable';viewedId='';expanded.clear();review.querySelector('select').value=mode;}
+-    identity=nextIdentity;active=true;backPending=false;review.hidden=false;
++    identity=nextIdentity;active=true;motion.activate();backPending=false;review.hidden=false;
+     if(renderedHash===location.hash&&root.querySelector('.p22-app'))return;
+     cancelRead();feedback.clear();
+     remember();const q=new URLSearchParams(location.hash.split('?')[1]);scene=q.get('scene')||'nfc';eventId=q.get('event')||'';
+     const saved=history.state?.p22;if(saved?.journey===journey){filters={...saved.filters};view=saved.view||view;}
+     if(validateQueryRange(filters)){filters.from='';filters.to='';}
+-    composing=false;clearTimeout(timer);render({focus:true,restore:scene==='nfc'});
++    motion.seed(filterKey());composing=false;clearTimeout(timer);render({focus:true,restore:scene==='nfc'});
+     if(source.kind==='loading')void load();
+-  },hide,dispose(){hide();disposed=true;feedback.dispose();observer.disconnect();document.removeEventListener('focusin',releaseReadFocus,true);document.removeEventListener('pointerdown',releaseReadFocus,true);root.removeEventListener('toggle',toggle,true);route.dispose();review.remove();root.removeEventListener('click',click);root.removeEventListener('input',input);root.removeEventListener('keydown',key);root.removeEventListener('compositionstart',composition);root.removeEventListener('compositionend',composition);window.removeEventListener('popstate',pickerNav,true);window.removeEventListener('hashchange',pickerNav,true);}};
++  },hide,dispose(){hide();motion.dispose();disposed=true;feedback.dispose();observer.disconnect();document.removeEventListener('focusin',releaseReadFocus,true);document.removeEventListener('pointerdown',releaseReadFocus,true);root.removeEventListener('toggle',toggle,true);route.dispose();review.remove();root.removeEventListener('click',click);root.removeEventListener('input',input);root.removeEventListener('keydown',key);root.removeEventListener('compositionstart',composition);root.removeEventListener('compositionend',composition);window.removeEventListener('popstate',pickerNav,true);window.removeEventListener('hashchange',pickerNav,true);}};
+ }
+diff --git a/handoff/motion/M22/before/source/docs/flows/history/embedded-history.mjs b/docs/flows/history/embedded-history.mjs
+index 16b728b..c5286b7 100644
+--- a/handoff/motion/M22/before/source/docs/flows/history/embedded-history.mjs
++++ b/docs/flows/history/embedded-history.mjs
+@@ -1,6 +1,8 @@
++import {mountNfcAuditMotion} from './nfc-audit-motion.mjs';
+ // P08-approved host edges only. Existing P22/P23 read renderers remain the source.
+ import {initialFilters} from './history-model.mjs';
+-export function connectHistoryFrame({frame,getBlocked,onLogout,onHome,onRoute}) {
++export function connectHistoryFrame({frame,getBlocked,onLogout,onHome,onRoute,motionMode='auto'}) {
++  let motion=null,disposed=false,clickHandler=null,doc=null;
+   const query=new URLSearchParams(location.hash.split('?')[1]);
+   const allowed=['history-hub','nfc','nfc-detail','events-unavailable','sessions','session-detail','warranty'];
+   const scene=allowed.includes(query.get('scene'))?query.get('scene'):'history-hub';
+@@ -26,22 +28,26 @@ export function connectHistoryFrame({frame,getBlocked,onLogout,onHome,onRoute})
+     onRoute('history-list');
+   }
+   function back(fallback){if(history.state?.returnTo||history.state?.embeddedBack)history.back();else if(fallback==='exit')onHome();else openScene(fallback);}
+-  frame.addEventListener('load',()=>{
++  function loaded(){
+     // A superseded iframe must not restore history, redirect or revoke a session.
+-    if(!frame.isConnected)return;
++    if(disposed||!frame.isConnected)return;
+     if(getBlocked()){frame.remove();onLogout();return;}
+     if(['nfc','warranty','sessions'].includes(scene)){
+       const old=history.state||{};
+       history.replaceState({p08:{filters:{...initialFilters(),from:'',to:'',q:old.embeddedView?.q||''},limit:6,tab:'info',allCodes:false},p08Back:!!(old.returnTo||old.embeddedBack)},'','#p02/history-list?panel=1&business='+scene);
+       onRoute('history-list');return;
+     }
+-    const doc=frame.contentDocument,saved=history.state?.embeddedView;
++    doc=frame.contentDocument;const saved=history.state?.embeddedView;
++    if(scene==='history-hub'){
++      for(const url of ['../shared/motion/motion-tokens.css','../history/nfc-audit-motion.css']){const link=doc.createElement('link');link.rel='stylesheet';link.href=url;doc.head.append(link);}
++      motion=mountNfcAuditMotion({root:doc.querySelector('.phone'),requested:motionMode,hub:true,media:window.matchMedia('(prefers-reduced-motion: reduce)'),active:()=>!disposed&&frame.isConnected&&!getBlocked()&&!frame.closest('[inert],[hidden]')});motion.activate();
++    }
+     if(saved?.filter){const btn=[...doc.querySelectorAll('[data-action="filter"]')].find(b=>b.dataset.value===saved.filter);btn?.click();}
+     if(saved?.q){const input=doc.querySelector('[data-search]');if(input){input.value=saved.q;input.dispatchEvent(new frame.contentWindow.Event('input',{bubbles:true}));}}
+     const body=doc.querySelector('.body');if(body){body.tabIndex=0;body.setAttribute('aria-label','Nội dung lịch sử');body.scrollTop=saved?.top||0;}
+     const savedFocus=saved?.session?doc.querySelector(`[data-session="${CSS.escape(saved.session)}"]`):saved?.event?doc.querySelector(`[data-event="${CSS.escape(saved.event)}"]`):saved?.action?doc.querySelector(`.history-link[data-action="${CSS.escape(saved.action)}"]`):null;
+     if(savedFocus)savedFocus.focus({preventScroll:true});else{const heading=doc.querySelector('h1');heading?.setAttribute('tabindex','-1');heading?.focus({preventScroll:true});}
+-    doc.addEventListener('click',event=>{
++    clickHandler=event=>{
+       if(!frame.isConnected)return;
+       if(getBlocked()){event.preventDefault();event.stopImmediatePropagation();onLogout();return;}
+       const button=event.target.closest('[data-action]');if(!button)return;
+@@ -57,7 +63,9 @@ export function connectHistoryFrame({frame,getBlocked,onLogout,onHome,onRoute})
+       if(button.closest('.phone-header')||button.closest('.phone-footer'))return back(action);
+       if(action==='nfc-detail')return openScene(action,{event:button.dataset.event});
+       openScene(action);
+-    },true);
+-  });
++    };doc.addEventListener('click',clickHandler,true);
++  }
++  frame.addEventListener('load',loaded,{once:true});
+   frame.src='../warranty-components/?'+args;
++  return {setMotionMode(value){motionMode=value;motion?.setMode(value);},cancelMotion(){motion?.cancel();},dispose(){disposed=true;motion?.dispose();frame.removeEventListener('load',loaded);if(clickHandler)doc?.removeEventListener('click',clickHandler,true);}};
+ }
+diff --git a/handoff/motion/M22/before/source/docs/flows/home/home.mjs b/docs/flows/home/home.mjs
+index 738faf5..9821d83 100644
+--- a/handoff/motion/M22/before/source/docs/flows/home/home.mjs
++++ b/docs/flows/home/home.mjs
+@@ -66,7 +66,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+   let lookup;
+   let nfc;
+   let historyView;
+-  let nfcAudit;
++  let nfcAudit,historyFrame;
+   let warrantySession;
+   let warranty;
+   let profile;
+@@ -235,7 +235,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+   const motionTools=document.createElement('label');
+   motionTools.innerHTML='Motion P02 / AppShell <select id="home-motion-mode"><option value="auto">Tự động theo hệ điều hành</option><option value="reduced">Giảm chuyển động</option><option value="off">Tắt chuyển động</option></select>';
+   const motionSelect=motionTools.querySelector('select');motionSelect.value=motionMode;
+-  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);notifications?.setMotionMode(motionSelect.value);shift?.setMotionMode(motionSelect.value);attachments?.setMotionMode(motionSelect.value);componentIssue?.setMotionMode(motionSelect.value);componentHistory?.setMotionMode(motionSelect.value);componentResume?.setMotionMode(motionSelect.value);system?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
++  motionSelect.onchange=()=>{shellMotion.setMode(motionSelect.value);dialogs?.setMotionMode(motionSelect.value);inbound?.setMotionMode(motionSelect.value);outbound?.setMotionMode(motionSelect.value);lookup?.setMotionMode(motionSelect.value);nfc?.setMotionMode(motionSelect.value);historyView?.setMotionMode(motionSelect.value);nfcAudit?.setMotionMode(motionSelect.value);historyFrame?.setMotionMode(motionSelect.value);warranty?.setMotionMode(motionSelect.value);profile?.setMotionMode(motionSelect.value);security?.setMotionMode(motionSelect.value);documents?.setMotionMode(motionSelect.value);notifications?.setMotionMode(motionSelect.value);shift?.setMotionMode(motionSelect.value);attachments?.setMotionMode(motionSelect.value);componentIssue?.setMotionMode(motionSelect.value);componentHistory?.setMotionMode(motionSelect.value);componentResume?.setMotionMode(motionSelect.value);system?.setMotionMode(motionSelect.value);onMotionMode(motionSelect.value);};
+   root.querySelector('.hn-tools > details').append(motionTools);
+   function syncDateRefresh(){
+     clearTimeout(dateRefreshTimer);dateRefreshTimer=null;
+@@ -274,8 +274,8 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+     if(['inbound','outbound'].includes(key))lastStockOperation=key;
+     if (disposed || suspended) return;
+     dialogs?.cancelMotion();
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system?.show('expired',{history:false});return;}
+-    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system?.show('forbidden');return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(systemDenied){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system?.show('forbidden');return;}
+     if(system?.active){system.leave(()=>showRoute({key,id},{push,restore,scannerContext}));return;}
+     const documentResume=history.state?.p12Resume;
+     if(!push&&documentResume?.type===key){
+@@ -336,7 +336,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+     if (key === 'lookup' && push && !scannerContext?.selectForNfc) nfcProductPicker = false;
+     if (key === 'lookup' && result.context && nfcProductPicker) result.context.selectForNfc = true;
+     if (result.kind === 'blocked' && sessionGuard(state())) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
+       if(state().session&&state().previewReady){system?.show('forbidden');return;}
+       logout(); return;
+     }
+@@ -349,6 +349,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+     if (push && result.kind==='shift' && location.hash!==routeHash(key,id)) {shiftCaller=location.hash;shiftBackPending=false;}
+     if (push && location.hash !== routeHash(key, id)) history.pushState(key==='warranty'?{p09:true,p09From:location.hash}:key==='documents'?{p12:true,p12From:location.hash}:null, '', routeHash(key, id));
+     currentHash = location.hash;
++    historyFrame?.dispose();historyFrame=null;
+     lastNavigation = result;
+     screen.classList.toggle('p02-home-screen',result.kind==='home');
+     inbound?.hide({ leave: result.kind !== 'inbound' });
+@@ -480,7 +481,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+       document.title = 'P22 · Lịch sử thao tác · Prototype';
+       destination.className = 'hn-hub';
+       destination.innerHTML = '<iframe title="Lịch sử thao tác"></iframe>';
+-      connectHistoryFrame({frame:destination.querySelector('iframe'),getBlocked:()=>disposed||sessionGuard(state()),onLogout:logout,onHome:goHome,onRoute:key=>showRoute({key})});
++      historyFrame=connectHistoryFrame({motionMode:motionSelect.value,frame:destination.querySelector('iframe'),getBlocked:()=>disposed||sessionGuard(state()),onLogout:logout,onHome:goHome,onRoute:key=>showRoute({key})});
+       embeddedRouteStamp = routeStamp();
+       window.scrollTo(0, 0);
+     } else {
+@@ -495,7 +496,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+       window.scrollTo(0, 0); destination.querySelector('h1').focus({ preventScroll: true });
+     }
+     if(key!=='attachments'&&(previousKey==='attachments'||attachmentReturnStamp===routeStamp())){const saved=attachmentCallers.get(location.hash);if(saved){const scroll=destination.querySelector(saved.scroll);if(scroll)scroll.scrollTop=saved.top;destination.querySelector(saved.focus)?.focus({preventScroll:true});attachmentReturnStamp=routeStamp();}}
+-    shellMotion.commit(result.kind==='component-resume'?componentResume.routeKey():result.kind==='shift'?shift.routeKey():result.kind==='notifications'?notifications.routeKey():result.kind==='documents'?documents.routeKey():result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
++    shellMotion.commit(result.kind==='nfc-audit'?nfcAudit.routeKey():result.kind==='component-resume'?componentResume.routeKey():result.kind==='shift'?shift.routeKey():result.kind==='notifications'?notifications.routeKey():result.kind==='documents'?documents.routeKey():result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
+     previousKey = result.kind === 'home' ? 'home' : key;
+     currentHash = location.hash;
+     fitPreview();
+@@ -511,7 +512,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+     const button = event.target.closest('button');
+     if (!button || !root.contains(button)) return;
+     if(button.dataset.p15)return;
+-    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system?.show('expired',{history:false});return;}
++    if(getState().sessionExpired){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system?.show('expired',{history:false});return;}
+     if(system?.active&&button.dataset.tab){system.leave(()=>{if(button.isConnected)button.click();});return;}
+     if (button.dataset.tab && dialogs.flow.snapshot().panel) {
+       if (!dialogs.flow.dismissForMenu(button.dataset.tab)) return;
+@@ -531,7 +532,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+     else if (button.dataset.recentDocument) openHomeDocuments(button.dataset.recentDocument);
+     else if (button.dataset.homeKpi) openKpi(button.dataset.homeKpi);
+     else if (button.classList.contains('hn-name')) {
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
+       nameDialog.querySelector('#hn-full-name').textContent = state().session?.actor.name ?? '';
+       nameRoute.begin();nameModal=openAppModal({screen,tools:root.querySelector('.hn-tools'),dialog:nameDialog,initialFocus:'button',dismissOnBackdrop:false,onClose(){nameModal=null;root.append(nameDialog);nameRoute.closed();}});
+     }
+@@ -566,8 +567,8 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+     screen, tools: root.querySelector('.hn-tools'), getState: state, motionMode,
+     onFeedback:config=>{void dialogRoute.ready().then(()=>queueMicrotask(()=>{if(!disposed)homeFeedback.show(config);}));},
+     onShow() {
+-      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
+-      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
++      inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
++      shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
+       dialogRoute.begin();
+       currentHash = location.hash;
+       dialogCallerTitle = document.title;
+@@ -673,7 +674,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+       showRoute({key:'lookup'},{push:true,scannerContext:{selectForNfc:true}});
+       history.replaceState({...history.state,p07PickerReturn:{journey:nfcPickerJourney,hash:callerHash}},'',location.hash);
+     }});
+-  nfcAudit=mountNfcAudit({root:destination,screen,tools:root.querySelector('.hn-tools'),getState:state,onHome:goHome,onSize:fitPreview,onNavigate:(hash,data,replace=false)=>{if(disposed||sessionGuard(state()))return;history[replace?'replaceState':'pushState'](data,'',hash);showRoute({key:'history'});}});
++  nfcAudit=mountNfcAudit({motionMode,root:destination,screen,tools:root.querySelector('.hn-tools'),getState:state,onHome:goHome,onSize:fitPreview,onNavigate:(hash,data,replace=false)=>{if(disposed||sessionGuard(state()))return;history[replace?'replaceState':'pushState'](data,'',hash);showRoute({key:'history'});}});
+   warrantySession=mountWarrantySession({root:destination,screen,tools:root.querySelector('.hn-tools'),getState:state,onSize:fitPreview,getReceipts:()=>[...WARRANTY_LEDGER,...(componentIssue?.posted()||[])],onComponents:(caseId,receiptId)=>{if(disposed||sessionGuard(state()))return;if(receiptId&&![...WARRANTY_LEDGER,...componentIssue.posted()].some(r=>r.id===receiptId&&r.caseId===caseId&&r.status==='POSTED'&&r.warehouse==='Kho Hoa Nam'))return;openComponentHistory({case:caseId});if(receiptId)componentHistory.focusLinkedReceipt(caseId,receiptId);},onNavigate:(hash,data,replace=false)=>{if(disposed||sessionGuard(state()))return;history[replace?'replaceState':'pushState'](data,'',hash);showRoute({key:'history'});}});
+   historyView = mountHistory({motionMode,onPanelTransition:key=>shellMotion.commit(key,destination,screen.querySelector('.hn-nav [aria-current="page"]')),root:destination,tools:root.querySelector('.hn-tools'),screen,getState:state,onSize:fitPreview,getRecorded,getDocuments:()=>mergeDocuments(getRecorded()),getDocumentReferences:()=>DOCUMENTS,
+     onDocument:id=>{if(sessionGuard(state()))return;history.pushState({p12:true,p12From:location.hash},'','#p02/documents?'+new URLSearchParams({panel:2,doc:id}));showRoute({key:'documents'});},
+@@ -755,18 +756,18 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+   }
+   function showSystem(error,options={}){
+     const panel=classifySystemError(error);if(!panel)return false;
+-    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
++    shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();
+     if(panel==='expired'){expire();return true;}
+     if(suspended||!getState().session)return true;
+     if(panel==='forbidden')systemDenied=true;
+     if(system?.active&&system.kind===panel)return true;
+     return system?.show(panel,{...options,intent:options.intent||(error.kind==='unknown'?'reconcile':'read'),actionLabel:options.actionLabel})===true;
+   }
+-  system=mountSystem({screen,motionMode,onShow:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();},onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
++  system=mountSystem({screen,motionMode,onShow:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();},onForbidden:()=>{shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();systemDenied=true;},getContext:systemContext,tools:root.querySelector('.hn-tools'),onHome:goHome,onLogin:logout,onExpire:expire,onNfc:()=>showRoute({key:'nfc'},{push:true}),isExpired:()=>!!getState().sessionExpired});
+   // Explicit prototype controls stay outside product navigation.
+   const systemTools=document.createElement('details');systemTools.className='p15-tools';
+   systemTools.innerHTML='<summary>P15 · Hệ thống</summary><p>Chỉ mô phỏng lỗi hệ thống. Camera kiểm tra API môi trường thực khi bấm; không kết nối WMS.</p><button data-system-demo="connection">P15.S01 · Kết nối</button><button data-system-demo="expired">P15.S02 · Phiên hết hạn</button><button data-system-demo="forbidden">P15.S03 · Không có quyền</button><button data-system-demo="device">P15.S04 · Quyền thiết bị</button><button data-system-demo="deny">Mô phỏng thu hồi quyền</button><button data-system-demo="allow">Khôi phục quyền fixture</button>';
+-  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
++  systemTools.addEventListener('click',e=>{const action=e.target.dataset.systemDemo;if(!action)return;shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();if(action==='expired')expire();else if(action==='deny'){systemDenied=true;system.show('forbidden');}else if(action==='allow'){systemDenied=false;system.hide();}else system.show(action);});
+   root.querySelector('.hn-tools').append(systemTools);
+   root.addEventListener('click', onClick);
+   root.querySelector('#hn-scenario').addEventListener('change', event => {
+@@ -780,12 +781,12 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
+   showRoute(parseRoute(location.hash));
+   if(draftRestoreFailed)homeFeedback.show({title:'Chưa phục hồi đủ phiếu nháp',message:'Bản giữ lại vẫn còn trong dữ liệu của tài khoản này. Chưa thể mở đầy đủ phiếu; cần đối chiếu trước khi tạo phiếu thay thế hoặc đăng xuất từ Tổng kết ca.'});
+   return {
+-    dispose() { shellMotion.dispose();motionSelect.onchange=null;warrantySession.dispose();nfcAudit.dispose();disposed = true; system.dispose(); shift.dispose();clearTimeout(dateRefreshTimer); document.removeEventListener('visibilitychange',syncDateRefresh); notifications.dispose();notificationStore.dispose();homeFeedback.dispose();nameRoute.dispose();closeName();dialogRoute.dispose(); if (nameDialog.open) closeName(); inbound.dispose(); outbound.dispose(); lookup.dispose(); nfc.dispose(); historyView.dispose(); warranty.dispose(); profile.dispose(); security.dispose(); documents.dispose(); attachments.dispose(); componentIssue.dispose(); componentHistory.dispose(); componentResume.dispose(); dialogs.dispose(); sizeObserver.disconnect(); window.removeEventListener('resize', fitPreview); window.removeEventListener('popstate', onRoute); window.removeEventListener('hashchange', onRoute); root.removeEventListener('click', onClick); root.replaceChildren(); },
+-    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
+-    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
+-    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system.suspendMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
++    dispose() { historyFrame?.dispose();shellMotion.dispose();motionSelect.onchange=null;warrantySession.dispose();nfcAudit.dispose();disposed = true; system.dispose(); shift.dispose();clearTimeout(dateRefreshTimer); document.removeEventListener('visibilitychange',syncDateRefresh); notifications.dispose();notificationStore.dispose();homeFeedback.dispose();nameRoute.dispose();closeName();dialogRoute.dispose(); if (nameDialog.open) closeName(); inbound.dispose(); outbound.dispose(); lookup.dispose(); nfc.dispose(); historyView.dispose(); warranty.dispose(); profile.dispose(); security.dispose(); documents.dispose(); attachments.dispose(); componentIssue.dispose(); componentHistory.dispose(); componentResume.dispose(); dialogs.dispose(); sizeObserver.disconnect(); window.removeEventListener('resize', fitPreview); window.removeEventListener('popstate', onRoute); window.removeEventListener('hashchange', onRoute); root.removeEventListener('click', onClick); root.replaceChildren(); },
++    enforce() { if(suspended||getState().sessionExpired)return;if(sessionGuard(state())){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();if(state().session)system.show('forbidden');else logout();} },
++    showExpired(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();if(system.active&&system.kind==='expired')return;shift.hide();if(dialogs.flow.snapshot().panel)dialogs.flow.cancel('back');dialogs.cancelMotion();homeFeedback.clear();system.hide({restore:false});system.show('expired',{history:false});},
++    suspend(){shellMotion.cancel();dialogs?.cancelMotion();inbound?.cancelMotion();outbound?.cancelMotion();lookup?.cancelMotion();nfc?.cancelMotion();historyView?.cancelMotion();nfcAudit?.cancelMotion();historyFrame?.cancelMotion();warranty?.cancelMotion();profile?.cancelMotion();security?.cancelMotion();documents?.cancelMotion();notifications?.cancelMotion();shift?.cancelMotion();attachments?.cancelMotion();componentIssue?.cancelMotion();componentHistory?.cancelMotion();componentResume?.cancelMotion();system.suspendMotion();suspended=true;shift.hide();nfcAudit.hide();warrantySession.hide();},
+     resume(){suspended=false;shift.resumeSession();system.hide({restore:false});history.replaceState(null,'',currentHash);showRoute(parseRoute(currentHash));},
+-    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);notifications?.setMotionMode(value);shift?.setMotionMode(value);attachments?.setMotionMode(value);system?.setMotionMode(value);},
++    setMotionMode(value){motionSelect.value=value;shellMotion.setMode(value);dialogs?.setMotionMode(value);inbound?.setMotionMode(value);outbound?.setMotionMode(value);lookup?.setMotionMode(value);nfc?.setMotionMode(value);historyView?.setMotionMode(value);nfcAudit?.setMotionMode(value);historyFrame?.setMotionMode(value);warranty?.setMotionMode(value);profile?.setMotionMode(value);security?.setMotionMode(value);documents?.setMotionMode(value);notifications?.setMotionMode(value);shift?.setMotionMode(value);attachments?.setMotionMode(value);system?.setMotionMode(value);},
+     snapshot() { return { motion:{mode:shellMotion.mode,active:shellMotion.activeCount},scenario, homeScroll, navigation: structuredClone(lastNavigation) }; },
+   };
+ }
+diff --git a/handoff/motion/M22/before/source/docs/flows/home/motion.mjs b/docs/flows/home/motion.mjs
+index 748cd54..bda005a 100644
+--- a/handoff/motion/M22/before/source/docs/flows/home/motion.mjs
++++ b/docs/flows/home/motion.mjs
+@@ -6,8 +6,10 @@ export function mountShellMotion({screen,requested='auto',media}) {
+   let routeKey=null,selectedTab=null,disposed=false;
+   function press(event) {
+     if(event.type==='keydown'&&(event.repeat||event.isComposing||!['Enter',' '].includes(event.key)))return;
+-    const button=event.target.closest?.('#hn-home button');
++    const hub=!!screen.querySelector('.hn-hub iframe');
++    const button=event.target.closest?.(hub?'#hn-home button,.hn-nav button':'#hn-home button');
+     if(!button||!screen.contains(button)||button.closest('[hidden], [inert], dialog')||button.disabled||button.getAttribute('aria-disabled')==='true')return;
++    if(hub&&button.closest('.hn-nav'))button.dataset.motionPrimitive='HistoryHubNav';
+     motion.pressFeedback(button);
+   }
+   screen.addEventListener('pointerdown',press);

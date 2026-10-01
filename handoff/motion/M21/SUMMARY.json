@@ -1,0 +1,137 @@
+{
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "modes": [
+    "auto",
+    "os-reduced",
+    "off"
+  ],
+  "motionGroups": 18,
+  "regressionGroups": 40,
+  "nodeTests": 166,
+  "geometry": [
+    {
+      "panel": "P21.S01",
+      "mode": "auto",
+      "equal": true,
+      "beforeNodes": 36,
+      "afterNodes": 36
+    },
+    {
+      "panel": "P21.S02",
+      "mode": "auto",
+      "equal": true,
+      "beforeNodes": 87,
+      "afterNodes": 87
+    },
+    {
+      "panel": "P21.S03",
+      "mode": "auto",
+      "equal": true,
+      "beforeNodes": 49,
+      "afterNodes": 49
+    },
+    {
+      "panel": "P21.S04",
+      "mode": "auto",
+      "equal": true,
+      "beforeNodes": 46,
+      "afterNodes": 46
+    },
+    {
+      "panel": "P21.S01",
+      "mode": "os-reduced",
+      "equal": true,
+      "beforeNodes": 36,
+      "afterNodes": 36
+    },
+    {
+      "panel": "P21.S02",
+      "mode": "os-reduced",
+      "equal": true,
+      "beforeNodes": 87,
+      "afterNodes": 87
+    },
+    {
+      "panel": "P21.S03",
+      "mode": "os-reduced",
+      "equal": true,
+      "beforeNodes": 49,
+      "afterNodes": 49
+    },
+    {
+      "panel": "P21.S04",
+      "mode": "os-reduced",
+      "equal": true,
+      "beforeNodes": 46,
+      "afterNodes": 46
+    },
+    {
+      "panel": "P21.S01",
+      "mode": "off",
+      "equal": true,
+      "beforeNodes": 36,
+      "afterNodes": 36
+    },
+    {
+      "panel": "P21.S02",
+      "mode": "off",
+      "equal": true,
+      "beforeNodes": 87,
+      "afterNodes": 87
+    },
+    {
+      "panel": "P21.S03",
+      "mode": "off",
+      "equal": true,
+      "beforeNodes": 49,
+      "afterNodes": 49
+    },
+    {
+      "panel": "P21.S04",
+      "mode": "off",
+      "equal": true,
+      "beforeNodes": 46,
+      "afterNodes": 46
+    }
+  ],
+  "layoutCombinations": 20,
+  "footerViewports": 4,
+  "sourceBytesDelta": 4409,
+  "scopedSourceHash": "7e6f4ed570d7f05dded4c1251f8158d9268f79776775ffba2b3dab4583317c56",
+  "performance": {
+    "scope": "Single Chromium local emulation captures; no target-device benchmark or FPS claim",
+    "beforeCaptureMs": [
+      {
+        "mode": "auto",
+        "ms": 5936
+      },
+      {
+        "mode": "os-reduced",
+        "ms": 5634
+      },
+      {
+        "mode": "off",
+        "ms": 4998
+      }
+    ],
+    "afterCaptureMs": [
+      {
+        "mode": "auto",
+        "ms": 5826
+      },
+      {
+        "mode": "os-reduced",
+        "ms": 6796
+      },
+      {
+        "mode": "off",
+        "ms": 5746
+      }
+    ],
+    "longTasks": "Raw entries in before/results.json and evidence/results.json. After includes additional interactions; totals are not comparable.",
+    "inputLatency": "NOT_MEASURED separately; no imposed wait on actions",
+    "virtualization": "NOT_ADDED; native list retained, M00 provides no qualifying P21 stress decision"
+  },
+  "visual": "USER_REVIEW_PENDING for new motion; prior P21 temporary acceptance preserved",
+  "integration": "NOT_RUN production/hardware; business tracking unchanged"
+}

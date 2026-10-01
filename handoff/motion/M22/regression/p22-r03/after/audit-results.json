@@ -1,0 +1,79 @@
+{
+  "phase": "after",
+  "checks": [
+    {
+      "id": "01",
+      "name": "Deep-link Back fallback must not invent a caller",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "02",
+      "name": "Leaving a refresh is not a read failure",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "03",
+      "name": "Cached detail exposes the source warning",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "04",
+      "name": "A long UID never hides the serial row",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "05",
+      "name": "Long actor is compact on card with full detail path",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "06",
+      "name": "IME lifecycle resets after a tab replaces its input",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "07",
+      "name": "Pending query does not repaint underneath a picker",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "08",
+      "name": "Reload keyboard focus survives request completion",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "09",
+      "name": "Incomplete empty is not a confirmed empty history",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "10",
+      "name": "Invalid optional data is unknown, not object text or fake copy action",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "11",
+      "name": "Active status filter has visible filter indicator",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "12",
+      "name": "Source change does not strand focus in document body",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "passed": 12,
+  "total": 12
+}

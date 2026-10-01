@@ -1,0 +1,50 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P22",
+  "revision": "P22-r03",
+  "completed_panel_ids": [
+    "P22.S01",
+    "P22.S02",
+    "P22.S03",
+    "P22.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual": "USER_TEMPORARILY_ACCEPTED",
+  "user_acceptance": "User temporarily accepted P22 r03 in P23 request2026-09-30; synchronization states deferred. Evidence: handoff/P22/TEMPORARY_ACCEPTANCE.md. Production unverified.",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node_tests": 90,
+  "p22_node_tests": 34,
+  "browser_groups": 43,
+  "layout_combinations": 40,
+  "footer_viewports": 4,
+  "shared_components_changed": [
+    "None in r03; scoped P22 adapter reuses shared controls/picker/dialog/reader"
+  ],
+  "blockers": [
+    "Real NFC event source, authorization and mapping unconfirmed; no proposed API called.",
+    "Fixture only; physical hardware and durable persistence unverified. P23/P24 full boards incomplete."
+  ],
+  "artifact_paths": [
+    "handoff/P22/REPORT.md",
+    "handoff/P22/REVIEW.html",
+    "handoff/P22/DESIGN_TRACE.md",
+    "handoff/P22/STATE_ACCEPTANCE.csv",
+    "handoff/P22/evidence/revision-01",
+    "handoff/P22/REVISION_02.md",
+    "handoff/P22/REVIEW_02.html",
+    "handoff/P22/REVISION_02_CONTEXT.md",
+    "handoff/P22/evidence/revision-02",
+    "handoff/P22/REVISION_03.md",
+    "handoff/P22/REVISION_03_CONTEXT.md",
+    "handoff/P22/REVIEW_03.html",
+    "handoff/P22/STATE_ACCEPTANCE_03.csv",
+    "handoff/P22/evidence/revision-03"
+  ],
+  "next_action": "Preserve temporary acceptance of P22 r03. Additional synchronization states deferred; P23 continued in its own report. Production source/hardware remain unverified.",
+  "report": "handoff/P22/REVISION_03.md",
+  "review": "handoff/P22/REVIEW_03.html",
+  "reproduced_fixed_cases": 12
+}

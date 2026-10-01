@@ -1,0 +1,60 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P23",
+  "revision": "P23-r03",
+  "completed_panel_ids": [
+    "P23.S01",
+    "P23.S02",
+    "P23.S03",
+    "P23.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual": "USER_TEMPORARILY_ACCEPTED",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node_tests": 149,
+  "p23_node_tests": 37,
+  "browser_groups": {
+    "p23_main": 9,
+    "p23_edges": 7,
+    "p23_ux": 8,
+    "p23_audit": 14,
+    "p23_guards": 4,
+    "p22": 7,
+    "p20": 7,
+    "p09": 11
+  },
+  "layout_combinations": 50,
+  "footer_viewports": 4,
+  "shared_components_changed": [
+    "None in r03; P23 adapter/model/experience/CSS only"
+  ],
+  "blockers": [
+    "Production session/event schema, mapping, authorization, cursor and retention unverified.",
+    "Hardware NOT_RUN; preview page memory only. P24 incomplete."
+  ],
+  "artifact_paths": [
+    "handoff/P23/REPORT.md",
+    "handoff/P23/REVIEW.html",
+    "handoff/P23/DESIGN_TRACE.md",
+    "handoff/P23/STATE_ACCEPTANCE.csv",
+    "handoff/P23/evidence/revision-01",
+    "handoff/P23/REVISION_02.md",
+    "handoff/P23/REVIEW_02.html",
+    "handoff/P23/REVISION_02_CONTEXT.md",
+    "handoff/P23/evidence/revision-02",
+    "handoff/P23/REVISION_03.md",
+    "handoff/P23/REVIEW_03.html",
+    "handoff/P23/REVISION_03_CONTEXT.md",
+    "handoff/P23/evidence/revision-03"
+  ],
+  "next_action": "P24 implementation; future synchronization states deferred.",
+  "report": "handoff/P23/REVISION_03.md",
+  "review": "handoff/P23/REVIEW_03.html",
+  "run_state": "handoff/P23/RUN_STATE.json",
+  "reproduced_fixed_cases": 13,
+  "header_raster_panels": 4,
+  "user_acceptance": "User temporarily accepts P23 r03 in P24 request; synchronized states deferred. Not production acceptance."
+}

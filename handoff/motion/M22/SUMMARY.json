@@ -1,0 +1,133 @@
+{
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "modes": [
+    "auto",
+    "os-reduced",
+    "off"
+  ],
+  "motionGroups": 21,
+  "regressionGroups": 43,
+  "shellGroups": 36,
+  "nodeTests": 100,
+  "geometry": [
+    {
+      "panel": "P22.S01",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 80
+    },
+    {
+      "panel": "P22.S04",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 22
+    },
+    {
+      "panel": "P22.S02",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 127
+    },
+    {
+      "panel": "P22.S03",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 80
+    },
+    {
+      "panel": "P22.S01",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 80
+    },
+    {
+      "panel": "P22.S04",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 22
+    },
+    {
+      "panel": "P22.S02",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 127
+    },
+    {
+      "panel": "P22.S03",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 80
+    },
+    {
+      "panel": "P22.S01",
+      "mode": "off",
+      "equal": true,
+      "nodes": 80
+    },
+    {
+      "panel": "P22.S04",
+      "mode": "off",
+      "equal": true,
+      "nodes": 22
+    },
+    {
+      "panel": "P22.S02",
+      "mode": "off",
+      "equal": true,
+      "nodes": 127
+    },
+    {
+      "panel": "P22.S03",
+      "mode": "off",
+      "equal": true,
+      "nodes": 80
+    }
+  ],
+  "layoutCombinations": 40,
+  "footerViewports": 4,
+  "operations": [
+    {
+      "mode": "auto",
+      "ids": [
+        "NFC-E003",
+        "NFC-E002",
+        "NFC-E001",
+        "NFC-B08-004"
+      ],
+      "reads": 8,
+      "writes": 0
+    },
+    {
+      "mode": "os-reduced",
+      "ids": [
+        "NFC-E003",
+        "NFC-E002",
+        "NFC-E001",
+        "NFC-B08-004"
+      ],
+      "reads": 8,
+      "writes": 0
+    },
+    {
+      "mode": "off",
+      "ids": [
+        "NFC-E003",
+        "NFC-E002",
+        "NFC-E001",
+        "NFC-B08-004"
+      ],
+      "reads": 8,
+      "writes": 0
+    }
+  ],
+  "sourceBytesDelta": 5777,
+  "scopedSourceHash": "d9611a312dd9abf2b4a7371fce69f57e13d7bf6c8e7cc4807aad0965d99cd007",
+  "performance": {
+    "longTasks": "Raw entries in before/results.json and evidence/results.json; workloads differ, no speed/FPS inference",
+    "inputLatency": "NOT_MEASURED separately",
+    "droppedFrames": "NOT_MEASURED on target hardware",
+    "virtualization": "DEFERRED per M00; native list and stable DOM retained, no library added"
+  },
+  "visual": "USER_REVIEW_PENDING for motion; P22 r03 temporary acceptance preserved",
+  "integration": "BLOCKED_PRODUCTION / hardware NOT_RUN; business tracking unchanged"
+}
