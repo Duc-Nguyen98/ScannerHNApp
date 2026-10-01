@@ -1,0 +1,804 @@
+{
+  "checks": [
+    {
+      "name": "P06 four IDs, six viewports, stable header/nav and readable long content",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 feedback dialog backdrop, focus trap, six viewport containment, Escape focus restore",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 native Back closes dialog without losing query/category/scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 missing serial and blocked document use dialog; range validation stays at field",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P06.S01",
+      "width": 1869,
+      "height": 940,
+      "clientHeight": 768,
+      "scrollHeight": 835,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 940
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 91.61907958984375
+        },
+        {
+          "top": 865.7894897460938,
+          "bottom": 940
+        }
+      ]
+    },
+    {
+      "panel": "P06.S01",
+      "width": 1495,
+      "height": 752,
+      "clientHeight": 768,
+      "scrollHeight": 835,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 551.984375,
+        "right": 943.0244140625,
+        "top": 0,
+        "bottom": 752
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 73.2952651977539
+        },
+        {
+          "top": 692.631591796875,
+          "bottom": 752
+        }
+      ]
+    },
+    {
+      "panel": "P06.S01",
+      "width": 685,
+      "height": 872,
+      "clientHeight": 768,
+      "scrollHeight": 835,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 115.78125,
+        "right": 569.2212524414062,
+        "top": 0,
+        "bottom": 872
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 84.99131774902344
+        },
+        {
+          "top": 803.1578979492188,
+          "bottom": 872
+        }
+      ]
+    },
+    {
+      "panel": "P06.S01",
+      "width": 494,
+      "height": 1000,
+      "clientHeight": 768,
+      "scrollHeight": 835,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 494,
+        "top": 0,
+        "bottom": 950
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 92.59375
+        },
+        {
+          "top": 875,
+          "bottom": 950
+        }
+      ]
+    },
+    {
+      "panel": "P06.S01",
+      "width": 360,
+      "height": 800,
+      "clientHeight": 768,
+      "scrollHeight": 835,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 360,
+        "top": 0,
+        "bottom": 692.3076782226562
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 67.47722625732422
+        },
+        {
+          "top": 637.6517944335938,
+          "bottom": 692.3076782226562
+        }
+      ]
+    },
+    {
+      "panel": "P06.S01",
+      "width": 340,
+      "height": 420,
+      "clientHeight": 768,
+      "scrollHeight": 835,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 60.796875,
+        "right": 279.1968688964844,
+        "top": 0,
+        "bottom": 420
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 40.93618392944336
+        },
+        {
+          "top": 386.84210205078125,
+          "bottom": 420
+        }
+      ]
+    },
+    {
+      "panel": "P06.S02",
+      "width": 1869,
+      "height": 940,
+      "clientHeight": 769,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 940
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 91.03157806396484
+        },
+        {
+          "top": 865.7894897460938,
+          "bottom": 940
+        }
+      ]
+    },
+    {
+      "panel": "P06.S02",
+      "width": 1495,
+      "height": 752,
+      "clientHeight": 769,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 551.984375,
+        "right": 943.0244140625,
+        "top": 0,
+        "bottom": 752
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 72.82526397705078
+        },
+        {
+          "top": 692.631591796875,
+          "bottom": 752
+        }
+      ]
+    },
+    {
+      "panel": "P06.S02",
+      "width": 685,
+      "height": 872,
+      "clientHeight": 769,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 115.78125,
+        "right": 569.2212524414062,
+        "top": 0,
+        "bottom": 872
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 84.4463119506836
+        },
+        {
+          "top": 803.1578979492188,
+          "bottom": 872
+        }
+      ]
+    },
+    {
+      "panel": "P06.S02",
+      "width": 494,
+      "height": 1000,
+      "clientHeight": 769,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 494,
+        "top": 0,
+        "bottom": 950
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 92
+        },
+        {
+          "top": 875,
+          "bottom": 950
+        }
+      ]
+    },
+    {
+      "panel": "P06.S02",
+      "width": 360,
+      "height": 800,
+      "clientHeight": 769,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 360,
+        "top": 0,
+        "bottom": 692.3076782226562
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 67.0445327758789
+        },
+        {
+          "top": 637.6517944335938,
+          "bottom": 692.3076782226562
+        }
+      ]
+    },
+    {
+      "panel": "P06.S02",
+      "width": 340,
+      "height": 420,
+      "clientHeight": 769,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 60.796875,
+        "right": 279.1968688964844,
+        "top": 0,
+        "bottom": 420
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 40.673683166503906
+        },
+        {
+          "top": 386.84210205078125,
+          "bottom": 420
+        }
+      ]
+    },
+    {
+      "panel": "P06.S03",
+      "width": 1869,
+      "height": 940,
+      "clientHeight": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 940
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 91.61907958984375
+        },
+        {
+          "top": 865.7894897460938,
+          "bottom": 940
+        }
+      ]
+    },
+    {
+      "panel": "P06.S03",
+      "width": 1495,
+      "height": 752,
+      "clientHeight": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 551.984375,
+        "right": 943.0244140625,
+        "top": 0,
+        "bottom": 752
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 73.2952651977539
+        },
+        {
+          "top": 692.631591796875,
+          "bottom": 752
+        }
+      ]
+    },
+    {
+      "panel": "P06.S03",
+      "width": 685,
+      "height": 872,
+      "clientHeight": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 115.78125,
+        "right": 569.2212524414062,
+        "top": 0,
+        "bottom": 872
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 84.99131774902344
+        },
+        {
+          "top": 803.1578979492188,
+          "bottom": 872
+        }
+      ]
+    },
+    {
+      "panel": "P06.S03",
+      "width": 494,
+      "height": 1000,
+      "clientHeight": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 494,
+        "top": 0,
+        "bottom": 950
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 92.59375
+        },
+        {
+          "top": 875,
+          "bottom": 950
+        }
+      ]
+    },
+    {
+      "panel": "P06.S03",
+      "width": 360,
+      "height": 800,
+      "clientHeight": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 360,
+        "top": 0,
+        "bottom": 692.3076782226562
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 67.47722625732422
+        },
+        {
+          "top": 637.6517944335938,
+          "bottom": 692.3076782226562
+        }
+      ]
+    },
+    {
+      "panel": "P06.S03",
+      "width": 340,
+      "height": 420,
+      "clientHeight": 768,
+      "scrollHeight": 768,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 60.796875,
+        "right": 279.1968688964844,
+        "top": 0,
+        "bottom": 420
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 40.93618392944336
+        },
+        {
+          "top": 386.84210205078125,
+          "bottom": 420
+        }
+      ]
+    },
+    {
+      "panel": "P06.S04",
+      "width": 1869,
+      "height": 940,
+      "clientHeight": 768,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 940
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 91.61907958984375
+        },
+        {
+          "top": 865.7894897460938,
+          "bottom": 940
+        }
+      ]
+    },
+    {
+      "panel": "P06.S04",
+      "width": 1495,
+      "height": 752,
+      "clientHeight": 768,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 551.984375,
+        "right": 943.0244140625,
+        "top": 0,
+        "bottom": 752
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 73.2952651977539
+        },
+        {
+          "top": 692.631591796875,
+          "bottom": 752
+        }
+      ]
+    },
+    {
+      "panel": "P06.S04",
+      "width": 685,
+      "height": 872,
+      "clientHeight": 768,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 115.78125,
+        "right": 569.2212524414062,
+        "top": 0,
+        "bottom": 872
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 84.99131774902344
+        },
+        {
+          "top": 803.1578979492188,
+          "bottom": 872
+        }
+      ]
+    },
+    {
+      "panel": "P06.S04",
+      "width": 494,
+      "height": 1000,
+      "clientHeight": 768,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 494,
+        "top": 0,
+        "bottom": 950
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 92.59375
+        },
+        {
+          "top": 875,
+          "bottom": 950
+        }
+      ]
+    },
+    {
+      "panel": "P06.S04",
+      "width": 360,
+      "height": 800,
+      "clientHeight": 768,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 360,
+        "top": 0,
+        "bottom": 692.3076782226562
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 67.47722625732422
+        },
+        {
+          "top": 637.6517944335938,
+          "bottom": 692.3076782226562
+        }
+      ]
+    },
+    {
+      "panel": "P06.S04",
+      "width": 340,
+      "height": 420,
+      "clientHeight": 768,
+      "scrollHeight": 887,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 60.796875,
+        "right": 279.1968688964844,
+        "top": 0,
+        "bottom": 420
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 40.93618392944336
+        },
+        {
+          "top": 386.84210205078125,
+          "bottom": 420
+        }
+      ]
+    },
+    {
+      "panel": "P07.S01",
+      "width": 1869,
+      "height": 940,
+      "clientHeight": 787,
+      "scrollHeight": 3950,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 940
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 75.20000457763672
+        },
+        {
+          "top": 865.7894897460938,
+          "bottom": 940
+        }
+      ]
+    },
+    {
+      "panel": "P07.S01",
+      "width": 1495,
+      "height": 752,
+      "clientHeight": 787,
+      "scrollHeight": 3950,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 551.984375,
+        "right": 943.0244140625,
+        "top": 0,
+        "bottom": 752
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 60.15999984741211
+        },
+        {
+          "top": 692.631591796875,
+          "bottom": 752
+        }
+      ]
+    },
+    {
+      "panel": "P07.S01",
+      "width": 685,
+      "height": 872,
+      "clientHeight": 787,
+      "scrollHeight": 3950,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 115.78125,
+        "right": 569.2212524414062,
+        "top": 0,
+        "bottom": 872
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 69.76000213623047
+        },
+        {
+          "top": 803.1578979492188,
+          "bottom": 872
+        }
+      ]
+    },
+    {
+      "panel": "P07.S01",
+      "width": 494,
+      "height": 1000,
+      "clientHeight": 787,
+      "scrollHeight": 3950,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 494,
+        "top": 0,
+        "bottom": 950
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 76
+        },
+        {
+          "top": 875,
+          "bottom": 950
+        }
+      ]
+    },
+    {
+      "panel": "P07.S01",
+      "width": 360,
+      "height": 800,
+      "clientHeight": 787,
+      "scrollHeight": 3950,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 0,
+        "right": 360,
+        "top": 0,
+        "bottom": 692.3076782226562
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 55.384613037109375
+        },
+        {
+          "top": 637.6517944335938,
+          "bottom": 692.3076782226562
+        }
+      ]
+    },
+    {
+      "panel": "P07.S01",
+      "width": 340,
+      "height": 420,
+      "clientHeight": 787,
+      "scrollHeight": 3950,
+      "scrollWidth": 494,
+      "clientWidth": 494,
+      "outerOverflow": false,
+      "screen": {
+        "left": 60.796875,
+        "right": 279.1968688964844,
+        "top": 0,
+        "bottom": 420
+      },
+      "fixed": [
+        {
+          "top": 0,
+          "bottom": 33.599998474121094
+        },
+        {
+          "top": 386.84210205078125,
+          "bottom": 420
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: P07.S02 no short-page scroll\n    at matrix (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_dialog_sync_p06_p07.cjs:20:137)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_dialog_sync_p06_p07.cjs:46:158\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_dialog_sync_p06_p07.cjs:12:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_dialog_sync_p06_p07.cjs:46:3"
+}

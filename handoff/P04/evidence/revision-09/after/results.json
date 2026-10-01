@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "name": "Back from review restores scan position and expanded list",
+      "status": "PASS"
+    },
+    {
+      "name": "Filtering immediately reveals a matching row without another scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual filter rerender preserves unsent raw input",
+      "status": "PASS"
+    },
+    {
+      "name": "Collapsing an expanded SKU keeps its trigger visible and focused",
+      "status": "PASS"
+    },
+    {
+      "name": "SKU disclosure retains all eleven accepted codes",
+      "status": "PASS"
+    },
+    {
+      "name": "P17 invalid-code round trip preserves raw input, accepted rows, filter and scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "P17 UNKNOWN blocks new-run and preserves exact request until reconciliation",
+      "status": "PASS"
+    },
+    {
+      "name": "Long selected supplier stays compact in form with a full reader outside trigger",
+      "status": "PASS"
+    },
+    {
+      "name": "Long supplier in review is compact with full-text reader, not an enormous row",
+      "status": "PASS"
+    },
+    {
+      "name": "Long serial has a separate reader, intact quantity and no row overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Long result metadata stays compact and full reader works at six viewports",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

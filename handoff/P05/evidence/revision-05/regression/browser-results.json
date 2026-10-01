@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "name": "S01 metadata session lock, required phone/address and notes",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 S02 seven of ten, one duplicate, no implicit completion",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 missing three, groups 5+2, send disabled, back retains identity",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 P17.S02 keeps draft and accepted codes, focus returns",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 add three by manual pipeline, keyboard and no loss after invalid",
+      "status": "PASS"
+    },
+    {
+      "name": "A02/A05 record once; result 10/10 waiting Web, no stock mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "fresh reentry from Home and picker; no auto camera or previous IDs substituted",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN navigation preserves request; reconcile does not record twice",
+      "status": "PASS"
+    },
+    {
+      "name": "draft survives Home Back and long note/manual reduced viewport CTA stays accessible",
+      "status": "PASS"
+    },
+    {
+      "name": "warehouse stop uses P03, no write/no logout; restoring returns correct shell",
+      "status": "PASS"
+    },
+    {
+      "name": "P04 regression: 12/11+1 and waiting-Web unaffected",
+      "status": "PASS"
+    },
+    {
+      "name": "logout/back hides outbound and inbound session data",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

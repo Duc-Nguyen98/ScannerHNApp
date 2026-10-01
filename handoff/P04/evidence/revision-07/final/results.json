@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "name": "End opens supplier popup and reveals focused last option",
+      "status": "PASS",
+      "details": {
+        "text": "Công ty Thành CôngNCC-015",
+        "top": 786.84375,
+        "bottom": 846.234375,
+        "listTop": 586.375,
+        "listBottom": 846
+      }
+    },
+    {
+      "name": "Opening and pressing Enter with no search preserves current supplier",
+      "status": "PASS",
+      "details": "NCC-008"
+    },
+    {
+      "name": "Supplier search clear is keyboard reachable and never commits a selection",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual blank is inline; valid clears input; invalid raw stays safe",
+      "status": "PASS"
+    },
+    {
+      "name": "Collapsing invalid manual input shows user-facing feedback, not fixture/dependency jargon",
+      "status": "PASS",
+      "details": "Không tìm thấy sản phẩm. Kiểm tra lại mã và thử lại."
+    },
+    {
+      "name": "Confirmed rejection stays on review instead of opening a frozen scan form",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit retry uses same payload and records once more, then new run clears state",
+      "status": "PASS"
+    },
+    {
+      "name": "IME confirmation cannot accidentally submit a raw code",
+      "status": "PASS"
+    },
+    {
+      "name": "Source guards retain manual text and P03 focus, then resume exact draft",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN only exposes status check, preserves request across native Back and picker",
+      "status": "PASS"
+    },
+    {
+      "name": "Result palette and responsive shell match shared system; no clipping",
+      "status": "PASS"
+    },
+    {
+      "name": "Denied note edit restores visible value and counter without losing P03 focus",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

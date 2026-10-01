@@ -1,0 +1,43 @@
+✔ P08 r05 processing/waiting are not completion; unknown fails closed (2.711ms)
+✔ P08 r05 exact events and sources preserved; escaped and absent data honest (0.7967ms)
+✔ P08 custom date parser validates exact calendar dates, blank and leap years (3.9578ms)
+✔ P08.r02 documents entry/clear retains inbound-outbound scope over shared source (53.9084ms)
+✔ P08.r02 missing session identity stays missing; baseline/fixtures/P07 retained (11.5157ms)
+✔ P08.A01 combined query/date/status retains operation scope (1.4835ms)
+✔ P08.A02 exact immutable record/document/event identity; no Post tick (1.0313ms)
+✔ P08.A03 19=18+1; duplicate and NFC do not add quantity; event IDs deduplicated (1.3931ms)
+✔ P08.A04 total 30 from full disjoint fixture, not list page, missing is not zero (0.5895ms)
+✔ P08.A05 single shared source with exact event/session links and no auth secrets (4.0292ms)
+✔ sort is stable and direction works without mutating source (4.4755ms)
+✔ A01 independent code/name/SKU/serial search, scope, aggregate counts and immutable clear (3.0604ms)
+✔ A02 stock uses supplied totals with 12/10/1/1 and 6+3+2+1 positions (1.6953ms)
+✔ A03 real zero distinct from missing, SKU never substitutes serial (0.4936ms)
+✔ A04 print and warranty fail closed regardless of role, even if print capability true no implementation (33.8212ms)
+✔ A05 inclusive type/range, invalid range and signed events independent of current stock (0.9548ms)
+✔ list context/scroll retained on detail and stock/history; IDs cannot open outside scope (5.4466ms)
+✔ capability-guarded document link identifies exact event and does not invent a matching document (3.744ms)
+✔ session revoked hides data and actions; stopped warehouse remains read-only accessible (1.2211ms)
+✔ list scan context drops the previously viewed item while preserving query/category (2.7126ms)
+✔ invalid or impossible dates keep the committed filters and events; valid correction clears error (5.6252ms)
+✔ demo fills each catalogue item with coherent locations and distinct scoped history (1.3772ms)
+✔ missing-data scenario is reversible and does not erase demo inventory or event fixtures (0.6582ms)
+✔ 90-day inclusive boundary in Vietnam: today and day90 valid, day91/future locked (34.1877ms)
+✔ Calendar-day arithmetic crosses Vietnam midnight, leap/month/year boundaries (0.7376ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (12.4736ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (3.6137ms)
+✔ invalid fixture page does not partially update data or claim completion (3.0204ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (5.1494ms)
+✔ late rejection after Back never replaces the destination scene (3.3888ms)
+✔ detached preview cannot be repainted by a stale read (3.2253ms)
+✔ closed case stays read-only after failure and successful retry (2.9248ms)
+✔ empty and static loading scenes do not start a read (5.8613ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (3.5433ms)
+✔ new issue preserves saved-document routing without recording history (15.6095ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 606.7338

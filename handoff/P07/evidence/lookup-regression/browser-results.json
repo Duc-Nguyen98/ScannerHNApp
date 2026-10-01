@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "S01 Home route, count metadata, five items and responsive shell",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 search by code/name/SKU; clear; category+serial; advanced filter has no invented options",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 zero not unknown; missing serial not SKU, missing stock not zero",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 detail correct identity, query/scroll restore by native Back",
+      "status": "PASS"
+    },
+    {
+      "name": "nonzero catalogue scroll restored after native Back under long-content stress",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 disabled print keyboard and direct route; warranty permission guard",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 S03 explicit stock and read-only location rows",
+      "status": "PASS"
+    },
+    {
+      "name": "S04 and A05 seven explicit signed events, inclusive type/date and invalid range",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 scan context, Escape restores focus and one overlay; no camera",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid item deep link rejected; read-only lookup works while warehouse stopped",
+      "status": "PASS"
+    },
+    {
+      "name": "Home/picker re-entry and logout/native Back hides lookup data",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

@@ -1,0 +1,30 @@
+{
+  "p06_ux": {
+    "passed": 10,
+    "errors": [],
+    "evidence": "handoff\\P06\\ux-upgrade-2026-09-29\\evidence\\results.json"
+  },
+  "p09_navigation": {
+    "passed": 11,
+    "errors": [],
+    "evidence": "handoff\\P06\\ux-upgrade-2026-09-29\\evidence\\warranty\\navigation-results.json"
+  },
+  "p07": {
+    "passed": 11,
+    "errors": [],
+    "evidence": "handoff\\P06\\ux-upgrade-2026-09-29\\evidence\\nfc\\browser-results.json"
+  },
+  "p08": {
+    "passed": 5,
+    "errors": [],
+    "evidence": "handoff\\P06\\ux-upgrade-2026-09-29\\evidence\\history\\reset-results.json"
+  },
+  "node": {
+    "passed": 346,
+    "failed": 0,
+    "evidence": "handoff\\P06\\ux-upgrade-2026-09-29\\evidence\\node-final.txt"
+  },
+  "visual": "User review pending; native before/after comparison, no pixel-pass assertion",
+  "integration": "Fixture only; production/hardware NOT_RUN",
+  "mixed_suite_limit": "check_dialog_sync_p06_p07: first4 P06 groups passed; stopped on P07 short-page-scroll legacy assertion during concurrent changes."
+}

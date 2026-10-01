@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "late geography completion preserves shared picker draft and focused option",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "name": "late geography completion preserves note value and caret selection",
+      "status": "FAIL",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    true,\n+   0,\n+   0,\n-   4,\n-   7,\n    'Ghi chú cần giữ vị trí'\n  ]\n"
+    },
+    {
+      "name": "dependent validation focuses available province retry instead of disabled input",
+      "status": "PASS"
+    },
+    {
+      "name": "blocked code return clears stale manual feedback while preserving scan audit",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n'HN99999' !== ''\n"
+    },
+    {
+      "name": "rejected frozen request has clear retry path; return-to-scan does not offer silent no-op scanning",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    }
+  ],
+  "errors": []
+}

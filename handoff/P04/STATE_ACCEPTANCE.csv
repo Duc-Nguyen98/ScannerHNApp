@@ -1,0 +1,6 @@
+id,requirement,visual_status,behavior_status,integration_status,evidence,limitation
+P04.A01,12 attempts create 11 accepted serials and review 5+4+2,NOT_RUN,PASS,BLOCKED,tests/inbound.test.mjs; evidence/browser-results.json,Fixture catalogue only
+P04.A02,Note and back retain document scan session version and codes,NOT_RUN,PASS,BLOCKED,tests/inbound.test.mjs; evidence/browser-results.json,In-memory within confirmed auth session; reload persistence pending
+P04.A03,One confirmed record no Post no inventory change,NOT_RUN,PASS,BLOCKED,tests/inbound.test.mjs; evidence/browser-results.json,Record fixture only; production contract missing
+P04.A04,Timeout retains immutable request and blocks blind retry,NOT_RUN,PASS,BLOCKED,tests/inbound.test.mjs; evidence/P04-timeout.png,Check-status fixture; P17.S04 production boundary pending
+P04.A05,Four layouts and migrated copy trace HANDOFF/P24,FAIL,PASS,BLOCKED,CONTEXT.md; evidence/baseline-comparison.json; ../P03/REPORT.md,Exact assets/font missing; P24 board not implemented

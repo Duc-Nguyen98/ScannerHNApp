@@ -1,0 +1,22 @@
+[
+  {
+    "name": "conflict-detail",
+    "status": "PASS"
+  },
+  {
+    "name": "picker-back",
+    "status": "PASS"
+  },
+  {
+    "name": "picker-cancel-focus",
+    "status": "FAIL",
+    "error": "Focus returns to product action\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "name": "copy-overlap",
+    "status": "FAIL",
+    "error": "Copy feedback must remain inside its touch target, not cover the next row",
+    "errors": []
+  }
+]

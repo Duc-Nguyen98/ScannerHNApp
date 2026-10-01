@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "name": "Context presents exact document/type/supplier; shared dialog Back/focus/no backdrop dismissal",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty filters have reset path without data changes",
+      "status": "PASS"
+    },
+    {
+      "name": "Counter filters display correct subsets, keep all totals and payload unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Latest row highlight is bounded, reduced-motion safe, and input focus remains",
+      "status": "PASS"
+    },
+    {
+      "name": "SKU disclosures only contain matching accepted serials, independent of scan filter",
+      "status": "PASS"
+    },
+    {
+      "name": "Success new-run button returns clean step1 with fresh identity and no extra record",
+      "status": "PASS"
+    },
+    {
+      "name": "Resuming draft identifies document and retained count without creating a new run",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN blocks next-run; explicit reconciliation then enables it",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed failure uses shared dialog and offers guarded new run without retry",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewport matrix keeps context, filters, SKU controls and result CTA in locked shell",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "layout": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": [
+        494,
+        1000
+      ],
+      "layout": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "layout": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "layout": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "layout": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "footer": true
+    }
+  ],
+  "errors": []
+}

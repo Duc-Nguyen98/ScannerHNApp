@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "Home remains P22 hub; P08 is subview; history nav active",
+      "status": "PASS"
+    },
+    {
+      "name": "4 panels at 6 viewports: shell, no overflow, internal scroll and fixed nav",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 query/date/status stay in category; keyboard tabs, filter focus trap/error",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 exact document/timeline/copy/attachments; Back restores query and scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 19/18/1 with 19 rows; A05 P23 uses same PQ-0001, browser Back preserves view",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 date changes full aggregates and category drilldown",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 NFC immutable event ID/date/serial; application Back returns context",
+      "status": "PASS"
+    },
+    {
+      "name": "loading/error/empty/unavailable and retry do not invent data",
+      "status": "PASS"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n488 !== 400\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_revision.cjs:21:833\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_revision.cjs:8:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_revision.cjs:21:2",
+  "errors": []
+}

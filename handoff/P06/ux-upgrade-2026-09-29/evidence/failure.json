@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "Search count, single-result Enter and visible shortcuts",
+      "status": "PASS"
+    },
+    {
+      "name": "Image dialog: loaded full image, next/previous, Back/Escape, one overlay, footer intact",
+      "status": "PASS"
+    },
+    {
+      "name": "Back restores query and highlights the viewed row; multiple and zero results never auto-open",
+      "status": "PASS"
+    },
+    {
+      "name": "IME Enter ignored and category retained on clear",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared P08 date picker, cancel/Back preserve filters and selected item",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared validation blocks reversed/future ranges; Apply combines type/range; clear is outside dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty filtered history offers reset without changing item",
+      "status": "PASS"
+    },
+    {
+      "name": "Read error retains scoped history/list; retry does not write or infer success; Enter blocked on stale results",
+      "status": "PASS"
+    }
+  ],
+  "error": "locator.evaluate: Error: strict mode violation: locator('dialog') resolved to 2 elements:\n    1) <dialog open=\"\" aria-modal=\"true\" aria-labelledby=\"p06-image-title\" class=\"p08-dialog p06-image-dialog\">…</dialog> aka getByRole('dialog', { name: 'Ảnh sản phẩm' })\n    2) <dialog id=\"hn-name-dialog\" aria-describedby=\"hn-full-name\" aria-labelledby=\"hn-name-dialog-title\" class=\"p07-dialog hn-action-dialog hn-name-dialog\">…</dialog> aka getByLabel('Tên đầy đủ')\n\nCall log:\n\u001b[2m  - waiting for locator('dialog')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_ux_upgrade.cjs:20:518\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_ux_upgrade.cjs:6:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_ux_upgrade.cjs:20:1",
+  "errors": []
+}

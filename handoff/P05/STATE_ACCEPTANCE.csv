@@ -1,0 +1,15 @@
+acceptance_id,status,scope,evidence
+P05.A01,PASS,fixture seven of ten duplicate and planned retained,tests/outbound.test.mjs; handoff/P05/evidence/browser-results.json
+P05.A02,PASS,fixture waiting Web no Post or stock mutation,tests/outbound.test.mjs; handoff/P05/evidence/P05-S04-494x1000.png
+P05.A03,PASS,fixture explicit three codes and confirmed receipt,tests/outbound.test.mjs; handoff/P05/evidence/P05-S03-complete.png
+P05.A04,PASS,fixture P17.S02 preserves document and accepted,tests/outbound.test.mjs; handoff/P05/evidence/P17-S02-from-P05.png
+P05.A05,PASS,fixture double send timeout reconciliation,tests/outbound.test.mjs; handoff/P05/evidence/P05-unknown.png
+P05.R03.VALIDATION,PASS,Phone format required fields note200 manual inline errors; visual user review pending backend blocked,handoff/P05/REVISION_03.md; handoff/P05/evidence/revision-03/browser-results.json
+P05.R04.SCAN_UX,PASS,Manual feedback focus collapse raw preservation and 0/partial/full progress; six viewport layouts; visual acceptance pending,handoff/P05/REVISION_04.md; handoff/P05/evidence/revision-04/ux-results.json
+P05.R05.METADATA,PASS,Walk-in receipt; native selectors; planned1–99 default1; invalid raw and below-accepted blocked; backend unverified,handoff/P05/REVISION_05.md; handoff/P05/evidence/revision-05/metadata-results.json
+P05.R06.SELECT_FOCUS,PASS,S01 no inner focus rectangle; keyboard/pointer custom listboxes; 18 viewport cases; visual pending,handoff/P05/REVISION_06.md; handoff/P05/evidence/revision-06/select-results.json
+P05.R07.GEOGRAPHY_POPUP,PASS,5 anchored selects no field/footer movement; ordered geographic gate; API v1 live verified; WMS unverified,handoff/P05/REVISION_07.md; handoff/P05/evidence/revision-07/browser-results.json; handoff/P05/evidence/revision-07/live-api-results.json
+P05.R08.ADDRESS_UI,PASS,User-marked copy removed; aligned form palette; geography/popup regression preserved; visual pending,handoff/P05/REVISION_08.md; handoff/P05/evidence/revision-08/browser-results.json
+P05.R09.STABILITY,PASS,Deferred geography preserves selector draft and note caret; frozen-request feedback; scan recovery; shared icon and lifecycle; visual pending,handoff/P05/REVISION_09.md; handoff/P05/evidence/revision-09/final-stability/stability-results.json
+P05.R10.EXPERIENCE,PASS,Shipping summary; fixed scan count; raw clear; quick edit; nonmutating filters; native reload guard; new UI review pending,handoff/P05/REVISION_10.md; handoff/P05/evidence/revision-10/upgrade-results.json
+P05.R11.MICRO_AUDIT,PASS,Three reproduced popup search/keyboard faults fixed;13 browser groups incl7 natural interaction regressions; visual pending,handoff/P05/REVISION_11.md; handoff/P05/evidence/revision-11/edges-final/results.json

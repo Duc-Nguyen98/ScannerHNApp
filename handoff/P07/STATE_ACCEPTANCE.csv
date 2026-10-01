@@ -1,0 +1,13 @@
+id,scope,status,evidence,limitation
+P07.S01,UI and fixture list/search/tabs/detail,BLOCKED,evidence/browser-results.json,Advanced filter criteria missing; visual pending; production unavailable
+P07.S02,UI and fixture read/P06 selection,PASS,evidence/browser-results.json,Fixture only; visual pending; hardware NOT_RUN
+P07.S03,UI and fixture mapping/confirmation,PASS,evidence/browser-results.json,Fixture only; production contract unavailable
+P07.S04,UI and fixture receipt/detail/list,PASS,evidence/browser-results.json,Fixture only; visual pending; backend NOT_RUN
+P07.A01,Unread/unsupported guard,PASS,evidence/node-tests.txt,Fixture only
+P07.A02,Read does not link,PASS,evidence/node-tests.txt,Fixture only
+P07.A03,No overwrite conflict,PASS,evidence/node-tests.txt,Fixture only
+P07.A04,Single mapping receipt identity,PASS,evidence/node-tests.txt,Fixture only
+P07.A05,Real NFC hardware,NOT_RUN,evidence/browser-results.json,No hardware/production adapter supplied
+P07.RUNTIME,UNKNOWN/reconcile/session/back/focus,PASS,evidence/browser-results.json,Fixture only
+P07.VISUAL,32 captures overflow/readability,PASS,evidence/render-metrics.json,Geometry checks only; full board acceptance IN_PROGRESS
+P07.INTEGRATION,Production mapping and device,BLOCKED,REPORT.md,Missing approved contracts; production E2E NOT_RUN

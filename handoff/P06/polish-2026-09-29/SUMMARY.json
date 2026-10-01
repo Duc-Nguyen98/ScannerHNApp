@@ -1,0 +1,26 @@
+{
+  "new_cases": {
+    "passed": 11,
+    "evidence": "handoff\\P06\\polish-2026-09-29\\evidence\\after-results.json"
+  },
+  "p06_regression": {
+    "passed": 10,
+    "evidence": "handoff\\P06\\polish-2026-09-29\\evidence\\ux-regression\\results.json"
+  },
+  "warranty_navigation": {
+    "passed": 11,
+    "evidence": "handoff\\P06\\polish-2026-09-29\\evidence\\warranty\\navigation-results.json"
+  },
+  "nfc_current": {
+    "passed": 6,
+    "evidence": "handoff\\P06\\polish-2026-09-29\\evidence\\nfc-current\\results.json"
+  },
+  "node": {
+    "passed": 458,
+    "failed": 0,
+    "evidence": "handoff\\P06\\polish-2026-09-29\\evidence\\node-tests.txt"
+  },
+  "visual": "Before/after reviewed; user acceptance pending",
+  "integration": "Fixture only; hardware/backend NOT_RUN",
+  "legacy_nfc_suite": "Stopped on old error-dialog expectation; latest r13 and P06 selection path verified separately."
+}

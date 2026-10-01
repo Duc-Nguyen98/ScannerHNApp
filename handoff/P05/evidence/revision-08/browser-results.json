@@ -1,0 +1,402 @@
+{
+  "checks": [
+    {
+      "name": "province failure locks downstream, explicit retry loads list; no detail data sent to API",
+      "status": "PASS"
+    },
+    {
+      "name": "province popup search matches accents; no-match state, then pick exact province",
+      "status": "PASS"
+    },
+    {
+      "name": "district retry unlocks only level2; chosen district unlocks detail and address preview",
+      "status": "PASS"
+    },
+    {
+      "name": "all5 selects at6 sizes: popup same width, zero movement of form/footer, above/below and keyboard cancel",
+      "status": "PASS"
+    },
+    {
+      "name": "parent changes clear dependent IDs/detail; no stale or invalid district sent; cached reload no network",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard commit and rapid select switching; scroll/resize anchor follows without form movement",
+      "status": "PASS"
+    },
+    {
+      "name": "address persists with document through review/send/UNKNOWN; next attempt resets geographic selections",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "source",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.0068817138671875,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "recipient",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.0068817138671875,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "province",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.0068817138671875,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "district",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.0068817138671875,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "group",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.0068817138671875,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "source",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "recipient",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "province",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "district",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "group",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "source",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "recipient",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "province",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "district",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "group",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "source",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "recipient",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "province",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "district",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "group",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "source",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "recipient",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "province",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "district",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "group",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "source",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.00006103515625,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "recipient",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.00006103515625,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "province",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.00006103515625,
+      "side": "above"
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "district",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.00006103515625,
+      "side": "below"
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "group",
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "widthDiff": 0.00006103515625,
+      "side": "above"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "https://provinces.open-api.vn/api/v1/",
+    "https://provinces.open-api.vn/api/v1/",
+    "https://provinces.open-api.vn/api/v1/p/79?depth=2",
+    "https://provinces.open-api.vn/api/v1/p/79?depth=2",
+    "https://provinces.open-api.vn/api/v1/p/1?depth=2"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "new document defaults1; three styled listboxes and known customer autofill",
+      "status": "PASS"
+    },
+    {
+      "name": "source change requires explicit confirmation; cancel preserves edits and identity",
+      "status": "PASS"
+    },
+    {
+      "name": "walk-in clears old contact; required errors and Vietnamese name preserved as literal text",
+      "status": "PASS"
+    },
+    {
+      "name": "quantity paste and type validation: no truncation/coercion, invalid blocks next,1/99 accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "group selection affects scan validation; source/group locked after attempts",
+      "status": "PASS"
+    },
+    {
+      "name": "lowering below accepted blocked without losing scans; correction keeps identities",
+      "status": "PASS"
+    },
+    {
+      "name": "walk-in receipt uses details and null customerId; fresh attempt returns1",
+      "status": "PASS"
+    },
+    {
+      "name": "walk-in form layout mobile/desktop: fixed shell, no horizontal overflow, CTA remains in shell",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

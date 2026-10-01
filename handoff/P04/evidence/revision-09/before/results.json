@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "name": "Back from review restores scan position and expanded list",
+      "status": "FAIL",
+      "error": "scroll 440 -> 0"
+    },
+    {
+      "name": "Filtering immediately reveals a matching row without another scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual filter rerender preserves caret and does not replay latest animation",
+      "status": "PASS"
+    },
+    {
+      "name": "Collapsing an expanded SKU keeps its trigger visible and focused",
+      "status": "PASS"
+    },
+    {
+      "name": "Data source lacking serial never offers misleading serial count or label",
+      "status": "PASS"
+    },
+    {
+      "name": "Long supplier in review is compact with full-text reader, not an enormous row",
+      "status": "FAIL",
+      "error": "supplier row height=892"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,18 @@
+{
+  "before": false,
+  "checks": [
+    "empty reset clears query/tab",
+    "copy stays in detail; Back closes before route",
+    "next link retains explicit product and requires fresh read",
+    "read error has contextual retry",
+    "UNKNOWN remains pending with reconcile action",
+    "change product reuses P06; preserves independent fields and clears read",
+    "contextual retry executes one read, no link",
+    "choose another tag does not silently reset failure scenario or write",
+    "unavailable states never advertise ready or enable Continue",
+    "24 viewport captures; touch targets44px; no horizontal overflow; reset is atomic",
+    "UI Back returns focus without changing selected NFC",
+    "copy badge resets without reflow; failure uses one dialog then returns to detail"
+  ],
+  "errors": []
+}

@@ -1,0 +1,610 @@
+{
+  "checks": [
+    {
+      "name": "all implemented app owners use shared no-scrollbar policy",
+      "status": "PASS"
+    },
+    {
+      "name": "tabs do not alter content width or frame alignment",
+      "status": "PASS"
+    },
+    {
+      "name": "wheel and keyboard still reach last NFC card; footer stays fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "modal and backdrop confined to app across six sizes; outside tools undimmed",
+      "status": "PASS"
+    },
+    {
+      "name": "long modal body scrolls, background locked, close button always visible, backdrop dismiss",
+      "status": "PASS"
+    },
+    {
+      "name": "touch swipe scrolls content with hidden scrollbar",
+      "status": "PASS"
+    },
+    {
+      "name": "every existing warranty/history scene has no app scrollbar",
+      "status": "PASS"
+    }
+  ],
+  "audits": [
+    {
+      "name": "P01.S01",
+      "scrollers": [],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P01.S02",
+      "scrollers": [],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P02.S01",
+      "scrollers": [],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P04",
+      "scrollers": [
+        {
+          "class": "p04-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 791,
+          "clientHeight": 791
+        },
+        {
+          "class": "",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 81,
+          "clientHeight": 81
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P05",
+      "scrollers": [
+        {
+          "class": "p05-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 799,
+          "clientHeight": 787
+        },
+        {
+          "class": "",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 83,
+          "clientHeight": 83
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P06",
+      "scrollers": [
+        {
+          "class": "p06-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 778,
+          "clientHeight": 768
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P07",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "P03",
+      "scrollers": [
+        {
+          "class": "p03-dialog sheet ",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 416,
+          "clientHeight": 416
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "modal-1869",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        },
+        {
+          "class": "app-modal-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 377,
+          "clientHeight": 377
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "modal-1495",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        },
+        {
+          "class": "app-modal-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 377,
+          "clientHeight": 377
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "modal-685",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        },
+        {
+          "class": "app-modal-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 377,
+          "clientHeight": 377
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "modal-494",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        },
+        {
+          "class": "app-modal-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 377,
+          "clientHeight": 377
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "modal-360",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        },
+        {
+          "class": "app-modal-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 377,
+          "clientHeight": 377
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "modal-340",
+      "scrollers": [
+        {
+          "class": "p07-scroll",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 838,
+          "clientHeight": 787
+        },
+        {
+          "class": "app-modal-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 377,
+          "clientHeight": 377
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-scan",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-quantity",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        },
+        {
+          "class": "sheet",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 493,
+          "clientHeight": 493
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-review",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 658,
+          "clientHeight": 658
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-success",
+      "scrollers": [
+        {
+          "class": "body success-body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-history",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-history-loading",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-history-error",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-empty",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-drafts",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-resume",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 687,
+          "clientHeight": 687
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-reconcile",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 687,
+          "clientHeight": 687
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-post-check",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 687,
+          "clientHeight": 687
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-history-hub",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-nfc",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        },
+        {
+          "class": "filter-row",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 40,
+          "clientHeight": 40
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-nfc-detail",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-events-unavailable",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 687,
+          "clientHeight": 687
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-warranty",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        },
+        {
+          "class": "filter-row",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 40,
+          "clientHeight": 40
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-warranty-detail",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-sessions",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        },
+        {
+          "class": "filter-row",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 40,
+          "clientHeight": 40
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-session-detail",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-quantity-invalid",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        },
+        {
+          "class": "sheet",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 522,
+          "clientHeight": 522
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-scan-error",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 687,
+          "clientHeight": 687
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-waiting-web",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-documents",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    },
+    {
+      "name": "existing-closed",
+      "scrollers": [
+        {
+          "class": "body",
+          "scrollbar": "none",
+          "gutter": "auto",
+          "scrollHeight": 743,
+          "clientHeight": 743
+        }
+      ],
+      "pageScrollbar": "none"
+    }
+  ],
+  "errors": [],
+  "realTouchDevice": "NOT_RUN; Chromium touch emulation tested"
+}

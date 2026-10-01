@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "name": "Back from review restores scan position and expanded list",
+      "status": "PASS"
+    },
+    {
+      "name": "Filtering immediately reveals a matching row without another scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual filter rerender preserves caret and does not replay latest animation",
+      "status": "PASS"
+    },
+    {
+      "name": "Collapsing an expanded SKU keeps its trigger visible and focused",
+      "status": "PASS"
+    },
+    {
+      "name": "SKU disclosure retains all eleven accepted codes",
+      "status": "PASS"
+    },
+    {
+      "name": "Long selected supplier stays compact in form with a full reader outside trigger",
+      "status": "FAIL",
+      "error": "selected supplier height=896"
+    },
+    {
+      "name": "Long supplier in review is compact with full-text reader, not an enormous row",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

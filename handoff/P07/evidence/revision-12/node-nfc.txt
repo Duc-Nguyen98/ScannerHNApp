@@ -1,0 +1,29 @@
+✔ P07.A01 unread and unsupported are gated without device calls (103.374ms)
+✔ P07.A02 reading and prepare never create a mapping or receipt (775.6076ms)
+✔ P07.A03 conflict preserves current mapping and provides P17.S03 context (4.9015ms)
+✔ P07.A04 duplicate confirm yields one confirmed mapping and same tag detail/list (182.4691ms)
+✔ UNKNOWN preserves request and blocks blind retry; reconcile uses same receipt (44.9224ms)
+✔ Known failure retry retains request; fresh successful attempt resets read and identity (240.0231ms)
+✔ read permission, unsupported, read error and locked are distinct (92.0015ms)
+✔ warehouse stop and capability denial gate handlers, keep UID/session (25.3447ms)
+✔ P06 product selection carries exact independent fields and clears old UID (161.2428ms)
+✔ adapter search status and counts remain separate; no audit inferred from current tags (2.0165ms)
+✔ invalid/expired scope hides data and late receipt cannot revive disposed flow (119.8ms)
+✔ receipt must match UID/item/actor/warehouse/request; prepare or malformed cannot succeed (132.1291ms)
+✔ five consecutive links keep product and create distinct requests, preserve existing tag IDs/labels (205.3564ms)
+✔ changing demo UID invalidates prior read; busy/UNKNOWN cannot change it or product (59.7174ms)
+✔ scenario change at read step invalidates old UID; linked tag never fabricates a fresh success (54.4244ms)
+✔ UNKNOWN terminal reconciliation unlocks recovery without discarding the request (115.6861ms)
+✔ known failure retries same request in place; begin from list creates a fresh attempt (85.4158ms)
+✔ late confirmation preserves list navigation and confirms mapping without stealing screen (54.3447ms)
+✔ UNKNOWN can be reconciled while warehouse writes are stopped (44.9393ms)
+✔ receipt nested actor mismatch is UNKNOWN; late reconciliation cannot clear a changed session (11.4482ms)
+✔ NFC search accepts product code and uppercase Vietnamese Đ (0.9428ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3307.5994

@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "name": "S01 Home entry, 30 demo cards, counts30/16/9, search and tabs",
+      "status": "PASS"
+    },
+    {
+      "name": "tag ID detail, Escape/backdrop, focus and clipboard",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 unread CTA disabled; read alone does not map or succeed",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 confirm guarded; S04 only fixture receipt; same tag detail/list; duplicate submit once",
+      "status": "PASS"
+    },
+    {
+      "name": "fresh attempt, P06 pick uses exact item ID and serial; normal P06 remains detail navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "unsupported/permission/read error/conflict/locked are distinct; no overwrite",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN cannot resubmit or select product; reconcile single request",
+      "status": "PASS"
+    },
+    {
+      "name": "warehouse stop blocks confirm and retains UID; restores after active",
+      "status": "PASS"
+    },
+    {
+      "name": "native Back/Forward keeps read identity; protected success deep link does not bypass receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "long text and internal scroll stay above footer; keyboard dialog trap/backdrop",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 scan tab one overlay and focus restore; logout and Back cannot restore NFC",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "hardware": "NOT_RUN"
+}

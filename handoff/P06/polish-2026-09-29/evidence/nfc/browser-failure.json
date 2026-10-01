@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "S01 Home entry, 30 demo cards, counts30/16/9, search and tabs",
+      "status": "PASS"
+    },
+    {
+      "name": "tag ID detail, Escape/backdrop, focus and clipboard",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 unread CTA disabled; read alone does not map or succeed",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 confirm guarded; S04 only fixture receipt; same tag detail/list; duplicate submit once",
+      "status": "PASS"
+    },
+    {
+      "name": "fresh attempt, P06 pick uses exact item ID and serial; normal P06 remains detail navigation",
+      "status": "PASS"
+    }
+  ],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action-dialog=\"confirm\"]')\u001b[22m\n\n    at closeFeedback (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_nfc.cjs:12:183)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_nfc.cjs:25:460\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_nfc.cjs:13:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_nfc.cjs:25:2",
+  "errors": []
+}

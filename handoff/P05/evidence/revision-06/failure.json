@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "all S01 inputs/textarea: no native inner outline, editable values and outer error state retained",
+      "status": "PASS"
+    },
+    {
+      "name": "three custom lists share template, show selected mark and commit exactly once",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard arrows/Home/End move focus without mutating; Enter/Space commit; Escape cancels",
+      "status": "PASS"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_select.cjs:29:414\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_select.cjs:9:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_select.cjs:28:3",
+  "errors": []
+}

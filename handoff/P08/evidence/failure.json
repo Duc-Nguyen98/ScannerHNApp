@@ -1,0 +1,10 @@
+{
+  "checks": [
+    {
+      "name": "Home remains P22 hub; P08 is subview; history nav active",
+      "status": "PASS"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     tag: 'BUTTON',\n+     text: 'Tất cả (48)'\n+   },\n+   {\n+     tag: 'BUTTON',\n+     text: 'Nhập kho'\n+   },\n+   {\n+     tag: 'BUTTON',\n+     text: 'Bảo hành'\n+   }\n+ ]\n- []\n\n    at capture (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history.cjs:10:1251)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history.cjs:14:269\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history.cjs:8:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history.cjs:14:2",
+  "errors": []
+}

@@ -1,0 +1,474 @@
+{
+  "revision": "P08-r17",
+  "checks": [
+    {
+      "name": "Daily categories: one consistent tone for stat/icon/count; adequate contrast; continuous canvas at6 sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "Same business colors across general/import-export/NFC/warranty/session rows; statuses retain their colors",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "w": 494,
+      "h": 1000,
+      "shell": [
+        494,
+        950
+      ],
+      "canvas": [
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)"
+      ],
+      "overflow": false,
+      "nav": true,
+      "tones": [
+        {
+          "key": "inbound",
+          "bg": "rgb(234, 247, 242)",
+          "ink": "rgb(13, 107, 96)",
+          "label": "rgb(13, 107, 96)",
+          "icon": "rgb(13, 107, 96)",
+          "tileBg": "rgb(234, 247, 242)",
+          "tileInk": "rgb(13, 107, 96)",
+          "badgeBg": "rgb(234, 247, 242)",
+          "badgeInk": "rgb(13, 107, 96)"
+        },
+        {
+          "key": "outbound",
+          "bg": "rgb(237, 244, 255)",
+          "ink": "rgb(34, 95, 162)",
+          "label": "rgb(34, 95, 162)",
+          "icon": "rgb(34, 95, 162)",
+          "tileBg": "rgb(237, 244, 255)",
+          "tileInk": "rgb(34, 95, 162)",
+          "badgeBg": "rgb(237, 244, 255)",
+          "badgeInk": "rgb(34, 95, 162)"
+        },
+        {
+          "key": "warranty",
+          "bg": "rgb(255, 245, 230)",
+          "ink": "rgb(149, 96, 26)",
+          "label": "rgb(149, 96, 26)",
+          "icon": "rgb(149, 96, 26)",
+          "tileBg": "rgb(255, 245, 230)",
+          "tileInk": "rgb(149, 96, 26)",
+          "badgeBg": "rgb(255, 245, 230)",
+          "badgeInk": "rgb(149, 96, 26)"
+        },
+        {
+          "key": "nfc",
+          "bg": "rgb(243, 239, 251)",
+          "ink": "rgb(117, 80, 162)",
+          "label": "rgb(117, 80, 162)",
+          "icon": "rgb(117, 80, 162)",
+          "tileBg": "rgb(243, 239, 251)",
+          "tileInk": "rgb(117, 80, 162)",
+          "badgeBg": "rgb(243, 239, 251)",
+          "badgeInk": "rgb(117, 80, 162)"
+        },
+        {
+          "key": "documents",
+          "bg": "rgb(238, 243, 247)",
+          "ink": "rgb(70, 98, 121)",
+          "label": "rgb(70, 98, 121)",
+          "icon": "rgb(70, 98, 121)",
+          "tileBg": "rgb(238, 243, 247)",
+          "tileInk": "rgb(70, 98, 121)",
+          "badgeBg": "rgb(238, 243, 247)",
+          "badgeInk": "rgb(70, 98, 121)"
+        }
+      ]
+    },
+    {
+      "w": 360,
+      "h": 800,
+      "shell": [
+        494,
+        950
+      ],
+      "canvas": [
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)"
+      ],
+      "overflow": false,
+      "nav": true,
+      "tones": [
+        {
+          "key": "inbound",
+          "bg": "rgb(234, 247, 242)",
+          "ink": "rgb(13, 107, 96)",
+          "label": "rgb(13, 107, 96)",
+          "icon": "rgb(13, 107, 96)",
+          "tileBg": "rgb(234, 247, 242)",
+          "tileInk": "rgb(13, 107, 96)",
+          "badgeBg": "rgb(234, 247, 242)",
+          "badgeInk": "rgb(13, 107, 96)"
+        },
+        {
+          "key": "outbound",
+          "bg": "rgb(237, 244, 255)",
+          "ink": "rgb(34, 95, 162)",
+          "label": "rgb(34, 95, 162)",
+          "icon": "rgb(34, 95, 162)",
+          "tileBg": "rgb(237, 244, 255)",
+          "tileInk": "rgb(34, 95, 162)",
+          "badgeBg": "rgb(237, 244, 255)",
+          "badgeInk": "rgb(34, 95, 162)"
+        },
+        {
+          "key": "warranty",
+          "bg": "rgb(255, 245, 230)",
+          "ink": "rgb(149, 96, 26)",
+          "label": "rgb(149, 96, 26)",
+          "icon": "rgb(149, 96, 26)",
+          "tileBg": "rgb(255, 245, 230)",
+          "tileInk": "rgb(149, 96, 26)",
+          "badgeBg": "rgb(255, 245, 230)",
+          "badgeInk": "rgb(149, 96, 26)"
+        },
+        {
+          "key": "nfc",
+          "bg": "rgb(243, 239, 251)",
+          "ink": "rgb(117, 80, 162)",
+          "label": "rgb(117, 80, 162)",
+          "icon": "rgb(117, 80, 162)",
+          "tileBg": "rgb(243, 239, 251)",
+          "tileInk": "rgb(117, 80, 162)",
+          "badgeBg": "rgb(243, 239, 251)",
+          "badgeInk": "rgb(117, 80, 162)"
+        },
+        {
+          "key": "documents",
+          "bg": "rgb(238, 243, 247)",
+          "ink": "rgb(70, 98, 121)",
+          "label": "rgb(70, 98, 121)",
+          "icon": "rgb(70, 98, 121)",
+          "tileBg": "rgb(238, 243, 247)",
+          "tileInk": "rgb(70, 98, 121)",
+          "badgeBg": "rgb(238, 243, 247)",
+          "badgeInk": "rgb(70, 98, 121)"
+        }
+      ]
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "shell": [
+        494,
+        950
+      ],
+      "canvas": [
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)"
+      ],
+      "overflow": false,
+      "nav": true,
+      "tones": [
+        {
+          "key": "inbound",
+          "bg": "rgb(234, 247, 242)",
+          "ink": "rgb(13, 107, 96)",
+          "label": "rgb(13, 107, 96)",
+          "icon": "rgb(13, 107, 96)",
+          "tileBg": "rgb(234, 247, 242)",
+          "tileInk": "rgb(13, 107, 96)",
+          "badgeBg": "rgb(234, 247, 242)",
+          "badgeInk": "rgb(13, 107, 96)"
+        },
+        {
+          "key": "outbound",
+          "bg": "rgb(237, 244, 255)",
+          "ink": "rgb(34, 95, 162)",
+          "label": "rgb(34, 95, 162)",
+          "icon": "rgb(34, 95, 162)",
+          "tileBg": "rgb(237, 244, 255)",
+          "tileInk": "rgb(34, 95, 162)",
+          "badgeBg": "rgb(237, 244, 255)",
+          "badgeInk": "rgb(34, 95, 162)"
+        },
+        {
+          "key": "warranty",
+          "bg": "rgb(255, 245, 230)",
+          "ink": "rgb(149, 96, 26)",
+          "label": "rgb(149, 96, 26)",
+          "icon": "rgb(149, 96, 26)",
+          "tileBg": "rgb(255, 245, 230)",
+          "tileInk": "rgb(149, 96, 26)",
+          "badgeBg": "rgb(255, 245, 230)",
+          "badgeInk": "rgb(149, 96, 26)"
+        },
+        {
+          "key": "nfc",
+          "bg": "rgb(243, 239, 251)",
+          "ink": "rgb(117, 80, 162)",
+          "label": "rgb(117, 80, 162)",
+          "icon": "rgb(117, 80, 162)",
+          "tileBg": "rgb(243, 239, 251)",
+          "tileInk": "rgb(117, 80, 162)",
+          "badgeBg": "rgb(243, 239, 251)",
+          "badgeInk": "rgb(117, 80, 162)"
+        },
+        {
+          "key": "documents",
+          "bg": "rgb(238, 243, 247)",
+          "ink": "rgb(70, 98, 121)",
+          "label": "rgb(70, 98, 121)",
+          "icon": "rgb(70, 98, 121)",
+          "tileBg": "rgb(238, 243, 247)",
+          "tileInk": "rgb(70, 98, 121)",
+          "badgeBg": "rgb(238, 243, 247)",
+          "badgeInk": "rgb(70, 98, 121)"
+        }
+      ]
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "shell": [
+        494,
+        950
+      ],
+      "canvas": [
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)"
+      ],
+      "overflow": false,
+      "nav": true,
+      "tones": [
+        {
+          "key": "inbound",
+          "bg": "rgb(234, 247, 242)",
+          "ink": "rgb(13, 107, 96)",
+          "label": "rgb(13, 107, 96)",
+          "icon": "rgb(13, 107, 96)",
+          "tileBg": "rgb(234, 247, 242)",
+          "tileInk": "rgb(13, 107, 96)",
+          "badgeBg": "rgb(234, 247, 242)",
+          "badgeInk": "rgb(13, 107, 96)"
+        },
+        {
+          "key": "outbound",
+          "bg": "rgb(237, 244, 255)",
+          "ink": "rgb(34, 95, 162)",
+          "label": "rgb(34, 95, 162)",
+          "icon": "rgb(34, 95, 162)",
+          "tileBg": "rgb(237, 244, 255)",
+          "tileInk": "rgb(34, 95, 162)",
+          "badgeBg": "rgb(237, 244, 255)",
+          "badgeInk": "rgb(34, 95, 162)"
+        },
+        {
+          "key": "warranty",
+          "bg": "rgb(255, 245, 230)",
+          "ink": "rgb(149, 96, 26)",
+          "label": "rgb(149, 96, 26)",
+          "icon": "rgb(149, 96, 26)",
+          "tileBg": "rgb(255, 245, 230)",
+          "tileInk": "rgb(149, 96, 26)",
+          "badgeBg": "rgb(255, 245, 230)",
+          "badgeInk": "rgb(149, 96, 26)"
+        },
+        {
+          "key": "nfc",
+          "bg": "rgb(243, 239, 251)",
+          "ink": "rgb(117, 80, 162)",
+          "label": "rgb(117, 80, 162)",
+          "icon": "rgb(117, 80, 162)",
+          "tileBg": "rgb(243, 239, 251)",
+          "tileInk": "rgb(117, 80, 162)",
+          "badgeBg": "rgb(243, 239, 251)",
+          "badgeInk": "rgb(117, 80, 162)"
+        },
+        {
+          "key": "documents",
+          "bg": "rgb(238, 243, 247)",
+          "ink": "rgb(70, 98, 121)",
+          "label": "rgb(70, 98, 121)",
+          "icon": "rgb(70, 98, 121)",
+          "tileBg": "rgb(238, 243, 247)",
+          "tileInk": "rgb(70, 98, 121)",
+          "badgeBg": "rgb(238, 243, 247)",
+          "badgeInk": "rgb(70, 98, 121)"
+        }
+      ]
+    },
+    {
+      "w": 340,
+      "h": 420,
+      "shell": [
+        494,
+        950
+      ],
+      "canvas": [
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)"
+      ],
+      "overflow": false,
+      "nav": true,
+      "tones": [
+        {
+          "key": "inbound",
+          "bg": "rgb(234, 247, 242)",
+          "ink": "rgb(13, 107, 96)",
+          "label": "rgb(13, 107, 96)",
+          "icon": "rgb(13, 107, 96)",
+          "tileBg": "rgb(234, 247, 242)",
+          "tileInk": "rgb(13, 107, 96)",
+          "badgeBg": "rgb(234, 247, 242)",
+          "badgeInk": "rgb(13, 107, 96)"
+        },
+        {
+          "key": "outbound",
+          "bg": "rgb(237, 244, 255)",
+          "ink": "rgb(34, 95, 162)",
+          "label": "rgb(34, 95, 162)",
+          "icon": "rgb(34, 95, 162)",
+          "tileBg": "rgb(237, 244, 255)",
+          "tileInk": "rgb(34, 95, 162)",
+          "badgeBg": "rgb(237, 244, 255)",
+          "badgeInk": "rgb(34, 95, 162)"
+        },
+        {
+          "key": "warranty",
+          "bg": "rgb(255, 245, 230)",
+          "ink": "rgb(149, 96, 26)",
+          "label": "rgb(149, 96, 26)",
+          "icon": "rgb(149, 96, 26)",
+          "tileBg": "rgb(255, 245, 230)",
+          "tileInk": "rgb(149, 96, 26)",
+          "badgeBg": "rgb(255, 245, 230)",
+          "badgeInk": "rgb(149, 96, 26)"
+        },
+        {
+          "key": "nfc",
+          "bg": "rgb(243, 239, 251)",
+          "ink": "rgb(117, 80, 162)",
+          "label": "rgb(117, 80, 162)",
+          "icon": "rgb(117, 80, 162)",
+          "tileBg": "rgb(243, 239, 251)",
+          "tileInk": "rgb(117, 80, 162)",
+          "badgeBg": "rgb(243, 239, 251)",
+          "badgeInk": "rgb(117, 80, 162)"
+        },
+        {
+          "key": "documents",
+          "bg": "rgb(238, 243, 247)",
+          "ink": "rgb(70, 98, 121)",
+          "label": "rgb(70, 98, 121)",
+          "icon": "rgb(70, 98, 121)",
+          "tileBg": "rgb(238, 243, 247)",
+          "tileInk": "rgb(70, 98, 121)",
+          "badgeBg": "rgb(238, 243, 247)",
+          "badgeInk": "rgb(70, 98, 121)"
+        }
+      ]
+    },
+    {
+      "w": 1869,
+      "h": 940,
+      "shell": [
+        494,
+        950
+      ],
+      "canvas": [
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)",
+        "rgb(252, 254, 255)"
+      ],
+      "overflow": false,
+      "nav": true,
+      "tones": [
+        {
+          "key": "inbound",
+          "bg": "rgb(234, 247, 242)",
+          "ink": "rgb(13, 107, 96)",
+          "label": "rgb(13, 107, 96)",
+          "icon": "rgb(13, 107, 96)",
+          "tileBg": "rgb(234, 247, 242)",
+          "tileInk": "rgb(13, 107, 96)",
+          "badgeBg": "rgb(234, 247, 242)",
+          "badgeInk": "rgb(13, 107, 96)"
+        },
+        {
+          "key": "outbound",
+          "bg": "rgb(237, 244, 255)",
+          "ink": "rgb(34, 95, 162)",
+          "label": "rgb(34, 95, 162)",
+          "icon": "rgb(34, 95, 162)",
+          "tileBg": "rgb(237, 244, 255)",
+          "tileInk": "rgb(34, 95, 162)",
+          "badgeBg": "rgb(237, 244, 255)",
+          "badgeInk": "rgb(34, 95, 162)"
+        },
+        {
+          "key": "warranty",
+          "bg": "rgb(255, 245, 230)",
+          "ink": "rgb(149, 96, 26)",
+          "label": "rgb(149, 96, 26)",
+          "icon": "rgb(149, 96, 26)",
+          "tileBg": "rgb(255, 245, 230)",
+          "tileInk": "rgb(149, 96, 26)",
+          "badgeBg": "rgb(255, 245, 230)",
+          "badgeInk": "rgb(149, 96, 26)"
+        },
+        {
+          "key": "nfc",
+          "bg": "rgb(243, 239, 251)",
+          "ink": "rgb(117, 80, 162)",
+          "label": "rgb(117, 80, 162)",
+          "icon": "rgb(117, 80, 162)",
+          "tileBg": "rgb(243, 239, 251)",
+          "tileInk": "rgb(117, 80, 162)",
+          "badgeBg": "rgb(243, 239, 251)",
+          "badgeInk": "rgb(117, 80, 162)"
+        },
+        {
+          "key": "documents",
+          "bg": "rgb(238, 243, 247)",
+          "ink": "rgb(70, 98, 121)",
+          "label": "rgb(70, 98, 121)",
+          "icon": "rgb(70, 98, 121)",
+          "tileBg": "rgb(238, 243, 247)",
+          "tileInk": "rgb(70, 98, 121)",
+          "badgeBg": "rgb(238, 243, 247)",
+          "badgeInk": "rgb(70, 98, 121)"
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "inbound": {
+      "bg": "rgb(234, 247, 242)",
+      "ink": "rgb(13, 107, 96)"
+    },
+    "outbound": {
+      "bg": "rgb(237, 244, 255)",
+      "ink": "rgb(34, 95, 162)"
+    },
+    "warranty": {
+      "bg": "rgb(255, 245, 230)",
+      "ink": "rgb(149, 96, 26)"
+    },
+    "nfc": {
+      "bg": "rgb(243, 239, 251)",
+      "ink": "rgb(117, 80, 162)"
+    },
+    "documents": {
+      "bg": "rgb(238, 243, 247)",
+      "ink": "rgb(70, 98, 121)"
+    },
+    "sessions": {
+      "bg": "rgb(239, 241, 253)",
+      "ink": "rgb(78, 93, 168)"
+    }
+  },
+  "errors": []
+}

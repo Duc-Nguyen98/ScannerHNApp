@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "name": "untouched draft no unload warning; invalid shipping stays expanded; valid blur to quantity collapses without loss",
+      "status": "PASS"
+    },
+    {
+      "name": "edit collapsed shipping: invalid field stays open and blocks step; correction and collapse preserve location",
+      "status": "PASS"
+    },
+    {
+      "name": "clear code only clears pending input/errors; keeps attempts/count and focus, correct text keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "filters exact counts and empty views, audit unchanged; details Back closes modal first",
+      "status": "PASS"
+    },
+    {
+      "name": "progress remains visible while scan list scrolls at6 viewports, shell/footer fixed and controls fit",
+      "status": "PASS"
+    },
+    {
+      "name": "quick shipping edit preserves IDs/scan audit; invalid blocks returning and valid skips directly to review",
+      "status": "PASS"
+    },
+    {
+      "name": "long Unicode shipping summary has full-text route; collapse does not truncate stored details",
+      "status": "PASS"
+    },
+    {
+      "name": "real reload prompt cancel keeps draft and route; no fake saved message",
+      "status": "PASS"
+    },
+    {
+      "name": "pending/UNKNOWN retains warning, quick edit hidden after request; reconcile clears warning and next attempt clean",
+      "status": "PASS"
+    },
+    {
+      "name": "Home keeps unfinished work warning; logout disposes it",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

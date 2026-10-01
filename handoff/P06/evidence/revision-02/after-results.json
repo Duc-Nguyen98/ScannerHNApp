@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "name": "list scan must not carry previously viewed item",
+      "status": "PASS",
+      "itemId": null
+    },
+    {
+      "name": "Escape restores the P06 title",
+      "status": "PASS",
+      "expected": "P06 · Thông tin sản phẩm · Prototype",
+      "actual": "P06 · Thông tin sản phẩm · Prototype"
+    },
+    {
+      "name": "Back from history restores the invoking detail control and scroll",
+      "status": "PASS",
+      "scroll": 87,
+      "focused": true
+    },
+    {
+      "name": "invalid date range keeps the last valid results and editor open",
+      "status": "PASS",
+      "count": 7,
+      "open": true
+    },
+    {
+      "name": "cancelled scan context cannot leak into Home picker tool",
+      "status": "PASS",
+      "panel": 1
+    },
+    {
+      "name": "app Back does not push a bounce to the child panel",
+      "status": "PASS"
+    },
+    {
+      "name": "empty date endpoints show a meaningful range summary",
+      "status": "PASS"
+    },
+    {
+      "name": "long item code and missing-data chip do not overlap",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

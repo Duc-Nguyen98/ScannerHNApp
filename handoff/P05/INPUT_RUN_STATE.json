@@ -1,0 +1,113 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P04",
+  "prompt_status": "PROTOTYPE_IMPLEMENTED_VISUAL_REVIEW_AND_INTEGRATION_PENDING",
+  "completed_panel_ids": [],
+  "implemented_panel_ids": [
+    "P01.S01",
+    "P01.S02",
+    "P02.S01",
+    "P03.S01",
+    "P03.S02",
+    "P03.S03",
+    "P03.S04",
+    "P04.S01",
+    "P04.S02",
+    "P04.S03",
+    "P04.S04"
+  ],
+  "remaining_panel_ids": [
+    "P04.S01",
+    "P04.S02",
+    "P04.S03",
+    "P04.S04"
+  ],
+  "remaining_scope": "4/4 P04 prototype panels implemented; remaining visual acceptance and real integration, not missing UI panels.",
+  "previous_prompt": {
+    "id": "P03",
+    "user_status": "Tạm chốt; bổ sung state sau khi có yêu cầu",
+    "visual_status": "FAIL",
+    "behavior_status": "PASS",
+    "integration_status": "BLOCKED",
+    "checkpoint": "handoff/P04/INPUT_RUN_STATE.json"
+  },
+  "shared_components_changed": [
+    "Home mount routes new inbound to P04; existing document IDs stay pending with unchanged context",
+    "P01 entry loads scoped P04 CSS only",
+    "Shared waiting-web markup/copy for future P24.S03 reuse; P24 NOT_STARTED",
+    "P03 component reused for stopped warehouse; its controller/adapter/CSS unchanged"
+  ],
+  "existing_work_preserved": [
+    "P01 CSS/auth-flow/fixture-adapter/icons",
+    "docs/flows/warranty-components/flow.js",
+    "tests/warranty-component-history.test.cjs",
+    "../contract-work"
+  ],
+  "blockers": [
+    "Visual differs in font/texture/icons/camera and box imagery; review needed, no pixel-perfect claim.",
+    "Approved backend metadata/create/record/status/permissions contract missing; adapter fixture only.",
+    "Real catalogue/camera/torch, P12/P17 and existing-document resume/persistence integration pending.",
+    "PN-0005/date fixtures only; in-memory draft lost on reload/tab close.",
+    "Device keyboard/hardware/backend NOT_RUN."
+  ],
+  "artifact_paths": [
+    "handoff/P04/REPORT.md",
+    "handoff/P04/CONTEXT.md",
+    "handoff/P04/STATE_ACCEPTANCE.csv",
+    "handoff/P04/evidence",
+    "docs/flows/inbound",
+    "docs/flows/shared/waiting-web.mjs",
+    "tests/inbound.test.mjs",
+    "scripts/check_inbound.cjs",
+    "SCREEN_COVERAGE.csv",
+    "handoff/P04/REVISION_02.md",
+    "handoff/P04/REVISION_03.md",
+    "handoff/P03/REVISION_02.md",
+    "handoff/P03/evidence/revision-02",
+    "handoff/P03/REVISION_03.md",
+    "handoff/P03/evidence/revision-03",
+    "handoff/P03/REVISION_04.md",
+    "handoff/P03/evidence/revision-04",
+    "handoff/P03/REVISION_05.md",
+    "handoff/P03/evidence/revision-05",
+    "handoff/P04/REVISION_04.md"
+  ],
+  "next_action": "User review P03 revision05; no new prompt work without instruction.",
+  "run_command": "python scripts/serve_preview.py",
+  "preview_url": "http://127.0.0.1:8766/flows/auth-session/",
+  "preview_instructions": "minhanh / preview → confirm session → Nhập kho. At step 2 open external P04 tools, load 12 fixture scans; review and record. Outcome selector exercises UNKNOWN/status check.",
+  "visual_status": "FAIL",
+  "behavior_status": "PASS",
+  "integration_status": "BLOCKED",
+  "tests": {
+    "node_total": 63,
+    "node_passed": 63,
+    "node_failed": 0,
+    "p04_node_tests": 16,
+    "prior_node_regressions": 47,
+    "p04_browser_groups_passed": 11,
+    "home_browser_regressions_passed": 14,
+    "p03_browser_regressions_passed": 13,
+    "browser_errors": 0,
+    "external_requests": 0,
+    "production": "NOT_RUN",
+    "p04_lifecycle_browser_groups_passed": 7
+  },
+  "coverage": {
+    "baseline_panels": 91,
+    "implemented_panels": 11,
+    "other_panels_not_started": 80
+  },
+  "baseline_sha256": "b0f13c4aff332518a6d5348eac6452dd8e4aa9bf98347568df9e527073c3a67f",
+  "last_user_request": "Làm mới lần nhập kế tiếp sau kết quả thành công hoặc thất bại, cả Home và Quét mã → Nhập kho",
+  "latest_revision": {
+    "id": "P04-r04",
+    "request": "Làm mới lần nhập kế tiếp sau kết quả thành công hoặc thất bại, cả Home và Quét mã → Nhập kho",
+    "report": "handoff/P04/REVISION_04.md",
+    "verification": "63/63 Node PASS; 7 lifecycle browser groups PASS; draft/UNKNOWN retained"
+  },
+  "current_work": "P03 revision05 live verified; local preview available, no-store enabled"
+}

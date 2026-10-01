@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "name": "Three types commit to state, trigger and keyboard focus",
+      "status": "PASS"
+    },
+    {
+      "name": "15 suppliers: anchored menu, autofocus search, codes/count and selection",
+      "status": "PASS"
+    },
+    {
+      "name": "Accent-insensitive token/name/code search, clear and empty recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard selected marker, cancellation and query reset preserve supplier",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   height: 69,\n+   width: 462,\n+   x: 16,\n+   y: 854\n-   height: 54.47369384765625,\n-   width: 364.7368621826172,\n-   x: 64.63157653808594,\n-   y: 674.2105712890625\n  }\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound_catalogue.cjs:14:912\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound_catalogue.cjs:7:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound_catalogue.cjs:14:2"
+}

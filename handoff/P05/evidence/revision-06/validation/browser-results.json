@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "required phone/address: inline errors, first invalid focus, no transition",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed phone blocked; live correction keeps focus/value; tel +84 and landline accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "optional note boundary 200, valid metadata enters scan",
+      "status": "PASS"
+    },
+    {
+      "name": "empty and spaces: custom inline error, no native bubble, no scan attempt",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid raw preserved safely; duplicate does not increment; valid code clears entry",
+      "status": "PASS"
+    },
+    {
+      "name": "metadata edits preserve accepted codes and document identity",
+      "status": "PASS"
+    },
+    {
+      "name": "10/10 sends successfully and next outbound starts clean",
+      "status": "PASS"
+    },
+    {
+      "name": "error layouts at mobile and desktop: fixed app shell, CTA reachable, no horizontal overflow",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

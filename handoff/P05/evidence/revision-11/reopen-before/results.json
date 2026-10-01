@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "province search keeps its anchor/height when results shrink to one or zero",
+      "status": "PASS"
+    },
+    {
+      "name": "ArrowUp from search selects last matching option, not second-last",
+      "status": "PASS"
+    },
+    {
+      "name": "End opens a closed province picker with last option focused AND visibly scrolled into view",
+      "status": "PASS"
+    },
+    {
+      "name": "reopening searched province list reveals current selection rather than stale last scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "six viewports: filtering never shifts popup or form and Back/Escape retain original location",
+      "status": "PASS"
+    },
+    {
+      "name": "field caret survives delayed unrelated repaint of open manual input",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

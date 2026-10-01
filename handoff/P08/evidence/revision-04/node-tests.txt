@@ -1,0 +1,27 @@
+✔ P08 custom date parser validates exact calendar dates, blank and leap years (8.0494ms)
+✔ P08.r02 documents entry/clear retains inbound-outbound scope over shared source (2.2269ms)
+✔ P08.r02 missing session identity stays missing; baseline/fixtures/P07 retained (10.215ms)
+✔ P08.A01 combined query/date/status retains operation scope (0.4012ms)
+✔ P08.A02 exact immutable record/document/event identity; no Post tick (1.1288ms)
+✔ P08.A03 19=18+1; duplicate and NFC do not add quantity; event IDs deduplicated (1.7557ms)
+✔ P08.A04 total 30 from full disjoint fixture, not list page, missing is not zero (0.5393ms)
+✔ P08.A05 single shared source with exact event/session links and no auth secrets (1.3165ms)
+✔ sort is stable and direction works without mutating source (39.8908ms)
+✔ pending read is single-flight; final page deduplicates and keeps current scroll (12.5024ms)
+✔ read failure preserves data, enables retry, and retry succeeds without a write (7.2648ms)
+✔ invalid fixture page does not partially update data or claim completion (9.3712ms)
+✔ navigation away and back invalidates old completion without cancelling a newer read (4.2233ms)
+✔ late rejection after Back never replaces the destination scene (3.6746ms)
+✔ detached preview cannot be repainted by a stale read (3.5196ms)
+✔ closed case stays read-only after failure and successful retry (3.146ms)
+✔ empty and static loading scenes do not start a read (5.9844ms)
+✔ history fixture fields are valid and text is escaped in rendered documents (3.8719ms)
+✔ new issue preserves saved-document routing without recording history (27.8227ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 311.0903

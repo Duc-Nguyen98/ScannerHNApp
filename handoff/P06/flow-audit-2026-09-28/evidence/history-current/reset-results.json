@@ -1,0 +1,26 @@
+{
+  "revision": "P08-r19",
+  "checks": [
+    {
+      "name": "All6 Reset fills today/status All, clears invalid state, Cancel/Apply/Clear have distinct correct effects",
+      "status": "PASS"
+    },
+    {
+      "name": "Reset uses click-time Vietnam day; calendar Today does not reset or change the other endpoint",
+      "status": "PASS"
+    },
+    {
+      "name": "Six sizes after Reset: actual dates remain visible, no overflow, footer/focus intact",
+      "status": "PASS"
+    },
+    {
+      "name": "Audit copy and detail Back use correct source across general/NFC/warranty",
+      "status": "PASS"
+    },
+    {
+      "name": "Live reverse ranges and90-day cutoff remain blocked after Reset; same-day allowed",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

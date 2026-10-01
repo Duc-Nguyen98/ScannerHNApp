@@ -1,0 +1,91 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P03",
+  "prompt_status": "PROTOTYPE_IMPLEMENTED_VISUAL_REVIEW_AND_INTEGRATION_PENDING",
+  "completed_panel_ids": [],
+  "implemented_panel_ids": [
+    "P01.S01",
+    "P01.S02",
+    "P02.S01",
+    "P03.S01",
+    "P03.S02",
+    "P03.S03",
+    "P03.S04"
+  ],
+  "remaining_panel_ids": [
+    "P03.S01",
+    "P03.S02",
+    "P03.S03",
+    "P03.S04"
+  ],
+  "remaining_scope": "Implementation/fixture behavior complete; these panels remain open for visual acceptance and real integration.",
+  "previous_prompt": {
+    "id": "P02",
+    "user_status": "Tạm chốt; bổ sung state sau theo yêu cầu mới",
+    "visual_status": "FAIL",
+    "behavior_status": "PASS",
+    "integration_status": "BLOCKED",
+    "checkpoint": "handoff/P03/INPUT_RUN_STATE.json"
+  },
+  "shared_components_changed": [
+    "P03 one shared modal host/controller + isolated fixture adapter",
+    "P02 scan tab and operation context boundary",
+    "Runtime warehouse route/handler guard separate from established auth session validity",
+    "P01 entry HTML imports scoped P03 stylesheet only"
+  ],
+  "existing_work_preserved": [
+    "P01 CSS/auth-flow/fixture-adapter/icons",
+    "docs/flows/warranty-components/flow.js",
+    "tests/warranty-component-history.test.cjs",
+    "../contract-work"
+  ],
+  "blockers": [
+    "Visual B03 font/icon/texture not exact; actual/crop comparisons saved; no pixel-perfect claim.",
+    "Save/check/cancel APIs and production authorization not supplied; fixture in-memory only, no durable draft persistence.",
+    "Live warehouse status/admin contact channel not configured.",
+    "P04/P05/P06/P09 scanners and P21 resume/P15 source states not integrated with this namespace; only context boundary verified.",
+    "Real device keyboard, hardware and backend NOT_RUN."
+  ],
+  "artifact_paths": [
+    "handoff/P03/REPORT.md",
+    "handoff/P03/CONTEXT.md",
+    "handoff/P03/STATE_ACCEPTANCE.csv",
+    "handoff/P03/evidence",
+    "handoff/P02/P03_DEPENDENCY_UPDATE.md",
+    "SCREEN_COVERAGE.csv",
+    "docs/flows/scanner-dialogs/",
+    "tests/scanner-dialogs.test.mjs",
+    "scripts/check_dialogs.cjs"
+  ],
+  "next_action": "Review P03 actual against B03 and supply missing approved integration/asset inputs when available. Do not begin P04–P24 without user request.",
+  "run_command": "python scripts/serve_preview.py",
+  "preview_url": "http://127.0.0.1:8766/flows/auth-session/",
+  "preview_instructions": "Fixture minhanh / preview, confirm session, Home scan tab opens P03. External P03 scenario controls expose all four panels.",
+  "visual_status": "FAIL",
+  "behavior_status": "PASS",
+  "integration_status": "BLOCKED",
+  "tests": {
+    "node_total": 47,
+    "node_passed": 47,
+    "node_failed": 0,
+    "p03_node_tests": 14,
+    "prior_node_regressions": 33,
+    "p03_browser_groups_passed": 13,
+    "home_browser_regressions_passed": 14,
+    "p03_captures": 21,
+    "home_captures": 7,
+    "browser_errors": 0,
+    "external_requests": 0,
+    "production": "NOT_RUN"
+  },
+  "coverage": {
+    "baseline_panels": 91,
+    "implemented_panels": 7,
+    "other_panels_not_started": 84
+  },
+  "baseline_sha256": "a13e65f782ac8f64048a1a3ea2dfe615a62cdb9c99076d8ba5cdefaeb0901caa",
+  "last_user_request": "P02 tạm chốt; đọc và triển khai P03 — Dialog cố định."
+}

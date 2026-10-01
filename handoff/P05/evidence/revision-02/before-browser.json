@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "name": "confirmed success Home button → Xuất kho creates clean next run",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed success nav Home → Quét mã → Xuất kho creates clean next run",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n4 !== 1\n\n    at fresh (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_lifecycle.cjs:12:59)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_lifecycle.cjs:17:378\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_lifecycle.cjs:7:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_lifecycle.cjs:17:2"
+}

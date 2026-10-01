@@ -1,0 +1,20 @@
+✔ P07.A01 unread and unsupported are gated without device calls (3.7288ms)
+✔ P07.A02 reading and prepare never create a mapping or receipt (6.2827ms)
+✔ P07.A03 conflict preserves current mapping and provides P17.S03 context (3.4862ms)
+✔ P07.A04 duplicate confirm yields one confirmed mapping and same tag detail/list (44.6775ms)
+✔ UNKNOWN preserves request and blocks blind retry; reconcile uses same receipt (44.5242ms)
+✔ Known failure retry retains request; fresh successful attempt resets read and identity (63.2305ms)
+✔ read permission, unsupported, read error and locked are distinct (45.4145ms)
+✔ warehouse stop and capability denial gate handlers, keep UID/session (1.016ms)
+✔ P06 product selection carries exact independent fields and clears old UID (1.8188ms)
+✔ adapter search status and counts remain separate; no audit inferred from current tags (3.092ms)
+✔ invalid/expired scope hides data and late receipt cannot revive disposed flow (54.7101ms)
+✔ receipt must match UID/item/actor/warehouse/request; prepare or malformed cannot succeed (16.4426ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 469.6892

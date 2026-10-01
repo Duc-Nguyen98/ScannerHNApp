@@ -1,0 +1,41 @@
+✔ P05.A01 seven of ten: duplicate unchanged, groups 5+2, cannot send or lower plan (94.6961ms)
+✔ P05.A02/A03 only explicit additional scans and confirmed receipt unlock waiting Web; inventory unchanged (8.5015ms)
+✔ P05.A04 cannot-export opens contextual P17.S02, preserves exact draft, scans blocked until dismissed (1.5926ms)
+✔ P05.A05 double send + timeout preserve frozen request and reconcile one receipt (18.5552ms)
+✔ unknown then authoritative not-recorded can retry only same request (15.5346ms)
+✔ real timeout and late result cannot manufacture success (45.7442ms)
+✔ required metadata stays required, notes/back preserve identity and quantity (1.6808ms)
+✔ wrong warehouse/unknown/raw codes never enter accepted; manual and fixture share validation (1.4289ms)
+✔ warehouse stopped, revoked permission, actor mismatch guard writes without clearing draft (3.3016ms)
+✔ mismatched receipt and adapter exception remain UNKNOWN, real adapter disabled (5.2914ms)
+✔ Home/picker lifecycle retains draft/UNKNOWN/sending; terminal reentry creates distinct clean run (19.7241ms)
+✔ confirmed failure preserved for explicit retry or archived on fresh reentry; resume mismatch refused (15.1889ms)
+✖ explicit next outbound attempt resets terminal even when previous screen stayed active (4.4097ms)
+✔ explicit next attempt never resets draft, pending, UNKNOWN or explicit document resume (6.818ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 453.068
+
+✖ failing tests:
+
+test at tests\outbound.test.mjs:53:1
+✖ explicit next outbound attempt resets terminal even when previous screen stayed active (4.4097ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/outbound.test.mjs:57:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

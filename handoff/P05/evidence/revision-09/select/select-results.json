@@ -1,0 +1,361 @@
+{
+  "checks": [
+    {
+      "name": "all S01 inputs/textarea: no native inner outline, editable values and outer error state retained",
+      "status": "PASS"
+    },
+    {
+      "name": "shared source/recipient/group dialogs: pending radio does not commit until Apply; cancel keeps prior selection",
+      "status": "PASS"
+    },
+    {
+      "name": "province/district keyboard movement does not commit until Enter; Esc/Tab close",
+      "status": "PASS"
+    },
+    {
+      "name": "source confirmation remains separate from picker; applying updates metadata and resets dependent location",
+      "status": "PASS"
+    },
+    {
+      "name": "all selectors remain within scaled app at6 sizes; no horizontal clipping or footer movement",
+      "status": "PASS"
+    },
+    {
+      "name": "scan locks source/group; user inputs and geography validation preserved",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "name": "source",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "recipient",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "group",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "province",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "district",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "source",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "recipient",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "group",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "province",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "district",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "source",
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "recipient",
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "group",
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "province",
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "district",
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "source",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "recipient",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "group",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "province",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "district",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "source",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "recipient",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "group",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "province",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "district",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "source",
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "recipient",
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "group",
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "province",
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    },
+    {
+      "name": "district",
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "inside": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,32 @@
+{
+  "revision": "P08-r10/P06-date-policy",
+  "checks": [
+    {
+      "name": "Filter help/calendar fit six scaled viewports with one overlay and trapped focus",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 calendar blocks future/day91, permits today/day90 and stops boundary months",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 typed outside dates rejected, state preserved, single empty bound normalized; all blank manual",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 daily uses same bounds; validation recalculates after Vietnam midnight",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 min/max and flow validation reject date bypass; manual clear preserves history",
+      "status": "PASS"
+    },
+    {
+      "name": "Older-than90 fixture remains accessible manually; neither source nor result IDs deleted",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "clock": "Frozen 2026-09-27 Vietnam; midnight and 2027-02-01 tested",
+  "integration": "NOT_RUN"
+}

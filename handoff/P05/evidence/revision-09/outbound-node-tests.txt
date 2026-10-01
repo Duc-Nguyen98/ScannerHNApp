@@ -1,0 +1,35 @@
+✔ geography gates all three steps and verifies district parent; changes clear dependent fields only (67.3535ms)
+✔ geography is preserved in frozen request through UNKNOWN and cannot be edited (92.6612ms)
+✔ late districts do not overwrite a new province, changed source, or disposed flow (119.4071ms)
+✔ client uses v1 bounded reads, coalesces/cache reads, omits credentials and rejects incorrect parent (2.1088ms)
+✔ client timeout/error can retry and failed data is never cached (104.2591ms)
+✔ P05 new quantity defaults to1; strict integer input rejects malformed values at next, scan and send (196.501ms)
+✔ P05 walk-in details required, captured on receipt, no customer entity invented (10.7425ms)
+✔ P05 source and group options validate IDs; group filters scans; scans lock source/group (1.843ms)
+✔ P05 quantity cannot fall below accepted; correction preserves all scans; upper bound prevents extra scans (1.8612ms)
+✔ P05 phone format accepts VN mobile/landline, rejects malformed input without rewriting (4.7096ms)
+✔ P05 required source fields are null-safe, whitespace-only address rejected and notes bounded (1.8532ms)
+✔ P05 send revalidates metadata before making a request; correction preserves draft codes (7.4161ms)
+✔ P05 empty manual/camera input is not a scan; padded nonempty codes remain exact invalid attempts (1.5842ms)
+✔ P05.A01 seven of ten: duplicate unchanged, groups 5+2, cannot send incomplete or reduce below accepted (22.5626ms)
+✔ P05.A02/A03 only explicit additional scans and confirmed receipt unlock waiting Web; inventory unchanged (21.4307ms)
+✔ P05.A04 cannot-export opens contextual P17.S02, preserves exact draft, scans blocked until dismissed (2.2823ms)
+✔ P05.A05 double send + timeout preserve frozen request and reconcile one receipt (8.7974ms)
+✔ unknown then authoritative not-recorded can retry only same request (62.637ms)
+✔ real timeout and late result cannot manufacture success (90.232ms)
+✔ required metadata stays required, notes/back preserve identity and quantity (3.2114ms)
+✔ wrong warehouse/unknown/raw codes never enter accepted; manual and fixture share validation (1.3544ms)
+✔ warehouse stopped, revoked permission, actor mismatch guard writes without clearing draft (16.8484ms)
+✔ mismatched receipt and adapter exception remain UNKNOWN, real adapter disabled (40.2371ms)
+✔ Home/picker lifecycle retains draft/UNKNOWN/sending; terminal reentry creates distinct clean run (106.4017ms)
+✔ confirmed failure preserved for explicit retry or archived on fresh reentry; resume mismatch refused (15.0037ms)
+✔ explicit next outbound attempt resets terminal even when previous screen stayed active (7.9496ms)
+✔ explicit next attempt never resets draft, pending, UNKNOWN or explicit document resume (19.3175ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1739.4765

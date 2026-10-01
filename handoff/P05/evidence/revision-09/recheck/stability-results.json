@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "late geography completion preserves shared picker draft and focused option",
+      "status": "PASS"
+    },
+    {
+      "name": "late geography completion preserves note value and caret selection",
+      "status": "PASS"
+    },
+    {
+      "name": "dependent validation focuses available province retry instead of disabled input",
+      "status": "PASS"
+    },
+    {
+      "name": "blocked code return clears stale manual feedback while preserving scan audit",
+      "status": "PASS"
+    },
+    {
+      "name": "rejected frozen request has clear retry path; return-to-scan does not offer silent no-op scanning",
+      "status": "PASS"
+    },
+    {
+      "name": "new attempt after failure is clean; metadata picker cancel preserves input and no stacked overlays",
+      "status": "PASS"
+    },
+    {
+      "name": "source confirmation handles same-source selection; header back labels and view-all states are scoped",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

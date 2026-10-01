@@ -1,0 +1,64 @@
+{
+  "revision": "P08-r02",
+  "checks": [
+    {
+      "name": "Home remains P22 hub; P08 is subview; history nav active",
+      "status": "PASS"
+    },
+    {
+      "name": "4 panels at 6 viewports: shell, no overflow, internal scroll and fixed nav",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 query/date/status stay in category; keyboard tabs, filter focus trap/error",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 exact document/timeline/copy/attachments; Back restores query and scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 19/18/1 with 19 rows; A05 P23 uses same PQ-0001, browser Back preserves view",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 date changes full aggregates and category drilldown",
+      "status": "PASS"
+    },
+    {
+      "name": "A05 NFC immutable event ID/date/serial; application Back returns context",
+      "status": "PASS"
+    },
+    {
+      "name": "loading/error/empty/unavailable and retry do not invent data",
+      "status": "PASS"
+    },
+    {
+      "name": "list pagination/sort and exact list scroll restored after detail Back",
+      "status": "PASS"
+    },
+    {
+      "name": "R02 shared embedded shell, one Back, no fake statusbar, category scoped entry and clear",
+      "status": "PASS"
+    },
+    {
+      "name": "R02 badges for every record; honest missing source; noninteractive grid; technical notes outside app",
+      "status": "PASS"
+    },
+    {
+      "name": "R02 embedded session/NFC layouts, scanner cancel and standalone isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard scroll, P03 one overlay and logout Back cannot restore",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone P22 document reader shares source, no invented quantity or date; unknown event/session fail closed",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "integration": "NOT_RUN"
+}

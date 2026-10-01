@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "name": "Search count, single-result Enter and visible shortcuts",
+      "status": "PASS"
+    },
+    {
+      "name": "Image dialog: loaded full image, next/previous, Back/Escape, one overlay, footer intact",
+      "status": "PASS"
+    },
+    {
+      "name": "Back restores query and highlights the viewed row; multiple and zero results never auto-open",
+      "status": "PASS"
+    },
+    {
+      "name": "IME Enter ignored and category retained on clear",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared P08 date picker, cancel/Back preserve filters and selected item",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared validation blocks reversed/future ranges; Apply combines type/range; clear is outside dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty filtered history offers reset without changing item",
+      "status": "PASS"
+    },
+    {
+      "name": "Read error retains scoped history/list; retry does not write or infer success; Enter blocked on stale results",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive picker/gallery, focus trapping and footer unchanged at six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears modal content and native Back cannot restore protected data",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "fixtureOnly": true,
+  "originalFooter": {
+    "background": "rgba(255, 255, 255, 0.98)",
+    "radius": "23px",
+    "padding": "8px",
+    "minHeight": "75px",
+    "scanWidth": "62px",
+    "scanBackground": "rgb(0, 115, 153)"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "revision": "P08-r04",
+  "checks": [
+    {
+      "name": "Compact list removes redundant controls; no native selects/dates inside P08",
+      "status": "PASS"
+    },
+    {
+      "name": "List/filter/calendar/sort contained in app at six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Filter draft cancel, invalid dates/range, calendar, radio selection and focus trap",
+      "status": "PASS"
+    },
+    {
+      "name": "Clear and sort preserve scope; query/category combine and auto-load gives all48 unique IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Detail Back keeps expanded count and exact scroll; daily custom picker updates groups",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard auto-load retains focus; filter reset cancel, sort ascending, month navigation and detail/session regression",
+      "status": "PASS"
+    },
+    {
+      "name": "Source error/empty/loading preserved; documents scope clear stays scoped; logout guard",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "integration": "NOT_RUN"
+}

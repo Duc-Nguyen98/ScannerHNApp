@@ -1,0 +1,147 @@
+{
+  "revision": "P08-r03",
+  "checks": [
+    {
+      "name": "Requested removals scoped to embedded hub; six entries retained",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewports fixed shell, complete hub content above nav, touch targets and no overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Left icon, text and chevron open same exact list; Back restores row focus",
+      "status": "PASS"
+    },
+    {
+      "name": "All six left icons route to existing destinations without extra notification dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard access, clear focus, reduced motion and header Back to Home",
+      "status": "PASS"
+    },
+    {
+      "name": "Standalone retained notice shortcut; other P08 screens retain r02 label",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "hiddenContent": false,
+      "back": [
+        44,
+        44
+      ],
+      "minRow": 86,
+      "frameBottom": 875,
+      "navTop": 875
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "hiddenContent": false,
+      "back": [
+        44,
+        44
+      ],
+      "minRow": 86,
+      "frameBottom": 637.6517944335938,
+      "navTop": 637.6517944335938
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "hiddenContent": false,
+      "back": [
+        44,
+        44
+      ],
+      "minRow": 86,
+      "frameBottom": 761.6397094726562,
+      "navTop": 761.6397094726562
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "hiddenContent": false,
+      "back": [
+        44,
+        44
+      ],
+      "minRow": 86,
+      "frameBottom": 761.6397094726562,
+      "navTop": 761.6397094726562
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "hiddenContent": false,
+      "back": [
+        44,
+        44
+      ],
+      "minRow": 86,
+      "frameBottom": 386.84210205078125,
+      "navTop": 386.84210205078125
+    },
+    {
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "hiddenContent": false,
+      "back": [
+        44,
+        44
+      ],
+      "minRow": 86,
+      "frameBottom": 865.7894897460938,
+      "navTop": 865.7894897460938
+    }
+  ],
+  "errors": [],
+  "integration": "NOT_RUN"
+}

@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "name": "invalid draft dates disable Apply before submission and preserve records",
+      "status": "FAIL"
+    },
+    {
+      "name": "corrected draft clears stale date errors without applying",
+      "status": "FAIL"
+    },
+    {
+      "name": "Escape cancels unapplied date draft and restores committed values",
+      "status": "FAIL"
+    },
+    {
+      "name": "Home title follows the visible route",
+      "status": "PASS"
+    },
+    {
+      "name": "native Back from P03 keeps the P09 lookup return marker",
+      "status": "FAIL"
+    }
+  ],
+  "errors": []
+}

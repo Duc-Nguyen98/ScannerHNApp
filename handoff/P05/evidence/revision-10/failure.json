@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "name": "untouched draft no unload warning; invalid shipping stays expanded; valid blur to quantity collapses without loss",
+      "status": "PASS"
+    },
+    {
+      "name": "edit collapsed shipping: invalid field stays open and blocks step; correction and collapse preserve location",
+      "status": "PASS"
+    },
+    {
+      "name": "clear code only clears pending input/errors; keeps attempts/count and focus, correct text keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "filters exact counts and empty views, audit unchanged; details Back closes modal first",
+      "status": "PASS"
+    },
+    {
+      "name": "progress remains visible while scan list scrolls at6 viewports, shell/footer fixed and controls fit",
+      "status": "PASS"
+    },
+    {
+      "name": "quick shipping edit preserves IDs/scan audit; invalid blocks returning and valid skips directly to review",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "w": 494,
+      "h": 950,
+      "footerInside": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "error": "locator.waitFor: Error: strict mode violation: locator('.p05-shipping-card [data-hn-read-trigger]') resolved to 2 elements:\n    1) <button hidden=\"\" type=\"button\" class=\"hn-read-more\" aria-haspopup=\"dialog\" data-hn-read-trigger=\"\" aria-label=\"Xem đầy đủ người nhận\">Xem đầy đủ</button> aka getByLabel('Xem đầy đủ người nhận')\n    2) <button type=\"button\" class=\"hn-read-more\" aria-haspopup=\"dialog\" data-hn-read-trigger=\"\" aria-label=\"Xem đầy đủ địa chỉ giao hàng\">Xem đầy đủ</button> aka getByRole('button', { name: 'Xem đầy đủ địa chỉ giao hàng' })\n\nCall log:\n\u001b[2m  - waiting for locator('.p05-shipping-card [data-hn-read-trigger]') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_upgrade.cjs:41:287\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_upgrade.cjs:10:33)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_upgrade.cjs:40:3"
+}

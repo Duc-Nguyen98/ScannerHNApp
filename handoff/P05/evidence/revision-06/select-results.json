@@ -1,0 +1,255 @@
+{
+  "checks": [
+    {
+      "name": "all S01 inputs/textarea: no native inner outline, editable values and outer error state retained",
+      "status": "PASS"
+    },
+    {
+      "name": "three custom lists share template, show selected mark and commit exactly once",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard arrows/Home/End move focus without mutating; Enter/Space commit; Escape cancels",
+      "status": "PASS"
+    },
+    {
+      "name": "outside click/Tab close without commit; only one list opens",
+      "status": "PASS"
+    },
+    {
+      "name": "source confirmation cancel and apply synchronize trigger and selected option",
+      "status": "PASS"
+    },
+    {
+      "name": "walk-in name input inherits no inner outline and correct validation",
+      "status": "PASS"
+    },
+    {
+      "name": "three expanded lists at six viewports stay within scroll region; footer/shell stable",
+      "status": "PASS"
+    },
+    {
+      "name": "post-scan locked source/group cannot open; input validation and accepted scan retained",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "source",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "recipient",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "name": "group",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "source",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "recipient",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "name": "group",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "source",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "recipient",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 494,
+        "height": 1000
+      },
+      "name": "group",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "source",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "recipient",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "name": "group",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "source",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "recipient",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "name": "group",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "source",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "recipient",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "viewport": {
+        "width": 1869,
+        "height": 940
+      },
+      "name": "group",
+      "width": 494,
+      "height": 950,
+      "inside": true,
+      "overflow": false,
+      "footer": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,393 @@
+{
+  "error": "locator.waitFor: Error: strict mode violation: locator('dialog') resolved to 2 elements:\n    1) <dialog open=\"\" aria-modal=\"true\" class=\"p07-dialog\" aria-labelledby=\"p07-detail-title\">…</dialog> aka getByRole('dialog', { name: 'Thông tin thẻ NFC-8A2F' })\n    2) <dialog id=\"hn-name-dialog\" class=\"hn-name-dialog\" aria-describedby=\"hn-full-name\" aria-labelledby=\"hn-name-dialog-title\">…</dialog> aka getByLabel('Tên đầy đủ')\n\nCall log:\n\u001b[2m  - waiting for locator('dialog') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_nfc_alignment.cjs:36:59",
+  "results": [
+    {
+      "name": "S01-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "outer": [
+        {
+          "left": 707.904296875,
+          "right": 1161.083251953125,
+          "top": 79.15789794921875,
+          "bottom": 154.35789489746094
+        },
+        {
+          "left": 707.904296875,
+          "right": 1161.083251953125,
+          "top": 166.23158264160156,
+          "bottom": 211.74737548828125
+        },
+        {
+          "left": 707.904296875,
+          "right": 1161.083251953125,
+          "top": 223.62106323242188,
+          "bottom": 266.75592041015625
+        },
+        {
+          "left": 707.904296875,
+          "right": 1161.083251953125,
+          "top": 278.6296081542969,
+          "bottom": 3947.598114013672
+        }
+      ],
+      "sections": [],
+      "tables": [],
+      "statusOffset": null,
+      "overflow": false,
+      "textOverflow": [],
+      "app": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 865.7894897460938
+      },
+      "scale": 0.9894737830528846
+    },
+    {
+      "name": "S02-unread-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "outer": [
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 80,
+          "bottom": 261.640625
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 275.640625,
+          "bottom": 401.03125
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 688.265625,
+          "bottom": 835.265625
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 862,
+          "bottom": 924
+        }
+      ],
+      "sections": [
+        {
+          "inner": [
+            {
+              "left": 6,
+              "right": 6
+            }
+          ],
+          "labelDelta": null
+        },
+        {
+          "inner": [
+            {
+              "left": 9,
+              "right": 9
+            }
+          ],
+          "labelDelta": null
+        },
+        {
+          "inner": [],
+          "labelDelta": 2
+        }
+      ],
+      "tables": [
+        [
+          {
+            "left": 921.578125,
+            "right": 1148.5,
+            "top": 742.9375,
+            "bottom": 768.578125
+          },
+          {
+            "left": 921.578125,
+            "right": 1148.5,
+            "top": 790.9375,
+            "bottom": 816.578125
+          }
+        ]
+      ],
+      "statusOffset": 113.421875,
+      "overflow": false,
+      "textOverflow": [],
+      "app": {
+        "left": 687.5,
+        "right": 1181.5,
+        "top": 0,
+        "bottom": 950
+      },
+      "scale": 1
+    },
+    {
+      "name": "S02-read-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "outer": [
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 70,
+          "bottom": 251.640625
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 265.640625,
+          "bottom": 391.03125
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 678.265625,
+          "bottom": 825.265625
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 852,
+          "bottom": 914
+        }
+      ],
+      "sections": [
+        {
+          "inner": [
+            {
+              "left": 6,
+              "right": 6
+            }
+          ],
+          "labelDelta": null
+        },
+        {
+          "inner": [
+            {
+              "left": 9,
+              "right": 9
+            }
+          ],
+          "labelDelta": null
+        },
+        {
+          "inner": [],
+          "labelDelta": 2
+        }
+      ],
+      "tables": [
+        [
+          {
+            "left": 921.578125,
+            "right": 1148.5,
+            "top": 732.9375,
+            "bottom": 758.578125
+          },
+          {
+            "left": 921.578125,
+            "right": 1148.5,
+            "top": 780.9375,
+            "bottom": 806.578125
+          }
+        ]
+      ],
+      "statusOffset": 98.71875,
+      "overflow": false,
+      "textOverflow": [],
+      "app": {
+        "left": 687.5,
+        "right": 1181.5,
+        "top": -10,
+        "bottom": 940
+      },
+      "scale": 1
+    },
+    {
+      "name": "S03-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "outer": [
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 80,
+          "bottom": 315
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 329,
+          "bottom": 476
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 490,
+          "bottom": 615.390625
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 629.390625,
+          "bottom": 792.921875
+        },
+        {
+          "left": 705.5,
+          "right": 1163.5,
+          "top": 862,
+          "bottom": 924
+        }
+      ],
+      "sections": [
+        {
+          "inner": [
+            {
+              "left": 1,
+              "right": 1
+            }
+          ],
+          "labelDelta": 2
+        },
+        {
+          "inner": [
+            {
+              "left": 6,
+              "right": 6
+            }
+          ],
+          "labelDelta": null
+        },
+        {
+          "inner": [
+            {
+              "left": 9,
+              "right": 9
+            }
+          ],
+          "labelDelta": null
+        },
+        {
+          "inner": [],
+          "labelDelta": null
+        }
+      ],
+      "tables": [
+        [
+          {
+            "left": 921.578125,
+            "right": 1148.5,
+            "top": 222.671875,
+            "bottom": 248.3125
+          },
+          {
+            "left": 921.578125,
+            "right": 1148.5,
+            "top": 270.671875,
+            "bottom": 296.3125
+          }
+        ]
+      ],
+      "statusOffset": null,
+      "overflow": false,
+      "textOverflow": [],
+      "app": {
+        "left": 687.5,
+        "right": 1181.5,
+        "top": 0,
+        "bottom": 950
+      },
+      "scale": 1
+    },
+    {
+      "name": "S04-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "outer": [
+        {
+          "left": 707.904296875,
+          "right": 1161.083251953125,
+          "top": 322.1510009765625,
+          "bottom": 729.1957397460938
+        },
+        {
+          "left": 707.904296875,
+          "right": 1161.083251953125,
+          "top": 735.178955078125,
+          "bottom": 796.5263061523438
+        }
+      ],
+      "sections": [],
+      "tables": [
+        [
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 337.8279724121094,
+            "bottom": 361.86907958984375
+          },
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 387.4562683105469,
+            "bottom": 433.6523132324219
+          },
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 459.2240295410156,
+            "bottom": 483.26513671875
+          },
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 513.6450805664062,
+            "bottom": 537.6862182617188
+          },
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 568.0661010742188,
+            "bottom": 592.1072387695312
+          },
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 617.6943969726562,
+            "bottom": 663.8904418945312
+          },
+          {
+            "left": 932.4684448242188,
+            "right": 1150.198974609375,
+            "top": 687.6378173828125,
+            "bottom": 715.3430786132812
+          }
+        ]
+      ],
+      "statusOffset": null,
+      "overflow": false,
+      "textOverflow": [],
+      "app": {
+        "left": 690.09375,
+        "right": 1178.893798828125,
+        "top": 0,
+        "bottom": 940
+      },
+      "scale": 0.9894737830528846
+    }
+  ],
+  "errors": []
+}

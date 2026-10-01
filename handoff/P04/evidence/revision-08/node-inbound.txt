@@ -1,0 +1,38 @@
+✔ P04.A01 12 attempts = 11 valid + 1 duplicate, 5+4+2 quantities; manual same pipeline (52.2303ms)
+✔ P04.A02 note/back retain document/session/version/codes; resume does not invent another document (14.9021ms)
+✔ P04.A03 record exactly once, receipt only success; no inventory mutation (165.9783ms)
+✔ P04.A04 unknown retains frozen payload, no blind retry, check receipt completes (37.9608ms)
+✔ actual timeout and late record require explicit reconciliation (123.3253ms)
+✔ not-recorded reconciliation permits retry with same request and document (159.7454ms)
+✔ rejection retains data and explicit retry, metadata cannot be relaxed by proposal (3.6312ms)
+✔ warehouse stop/unknown guard scan and record; confirmed auth is retained (2.1753ms)
+✔ session change, missing permission, mismatch receipt, disposal cannot manufacture success (245.992ms)
+✔ production adapter blocked without approved contract; blank scan/review cannot send (1.0872ms)
+✔ completed run re-entry starts clean with unique identities, retains prior record receipt (257.3822ms)
+✔ confirmed rejection and confirmed not-recorded can start fresh after exit, never on same-page retry (179.7558ms)
+✔ draft and UNKNOWN re-entry preserve data and refuse blind new record (16.5772ms)
+✔ exit while sending preserves in-flight run; later confirmed completion permits fresh re-entry (62.101ms)
+✔ explicit document context never becomes new run; guards cannot clear completed data (3.4652ms)
+✔ old receipt cannot confirm a subsequent run with a different request or scan session (54.3997ms)
+✔ P05 parity: whitespace code is not an attempt; long note is retained and blocked, never truncated (2.5965ms)
+✔ P05 parity: explicit picker starts new run on same terminal route but preserves UNKNOWN and drafts (94.5246ms)
+✔ metadata whitespace/malformed note blocks next and scan at controller boundary (0.5451ms)
+✔ inbound catalogue has three types and fifteen unique searchable supplier fixtures (1.2216ms)
+✔ type and supplier selection persists through review/request with unchanged draft identity (30.5931ms)
+✔ catalogue rejects forged identities and locks type after scan and all metadata after request (10.1156ms)
+✔ new attempt resets catalogue defaults; mismatched catalogue name/id cannot validate (8.2348ms)
+✔ rejected record freezes step changes as well as payload; retry and new run remain explicit (47.0342ms)
+✔ throwing or malformed product validation never crashes or accepts a corrupt line (11.1967ms)
+✔ late receipt after timeout cannot create success until checked; disposed generation cannot update UI (25.6885ms)
+✔ Explicit next-run CTA only resets confirmed outcomes, archives prior receipt and never resends (47.1563ms)
+✔ Next-run CTA respects warehouse/permission guards and preserves P12-seeded document before completion (16.5609ms)
+✔ Scan filters are read-only views: counts, reverse order, invalid filter fallback and empty (2.5478ms)
+✔ SKU disclosure groups only accepted serials; distinct serial count is not quantity (0.9909ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2356.7807
