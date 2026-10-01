@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "name": "PDF text is explicit dialog, no invisible Tab stop, Back/focus/pan restored",
+      "status": "PASS"
+    },
+    {
+      "name": "Viewer byte cache cannot serve an older file version under new metadata",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate downloads show busy feedback, source removal mid-read blocks saving",
+      "status": "PASS"
+    },
+    {
+      "name": "Render failure exits busy state, exposes retry, and retries the same file",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid restored page clamps to an existing PDF page",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

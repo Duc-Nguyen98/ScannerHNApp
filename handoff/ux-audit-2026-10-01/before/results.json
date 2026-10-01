@@ -1,0 +1,54 @@
+{
+  "base": "http://127.0.0.1:8766/review/",
+  "phase": "before",
+  "checks": [
+    {
+      "name": "01-live-link-context",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "02-pending-scenario-not-applied",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "03-mode-switch-preserves-draft",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "04-mobile-drawer-keyboard",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "05-load-controls-locked",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "06-reload-cross-board-follow",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "07-image-retry",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "08-cancel-rapid-launch",
+      "status": "FAIL",
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8766/review/?view=review&flow=closed&panel=P04.S02\", waiting until \"load\"\u001b[22m\n",
+      "errors": []
+    }
+  ]
+}

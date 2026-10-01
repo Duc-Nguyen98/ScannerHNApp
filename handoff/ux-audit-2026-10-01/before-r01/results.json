@@ -1,0 +1,50 @@
+{
+  "base": "http://127.0.0.1:8766/review/",
+  "phase": "before-r01",
+  "checks": [
+    {
+      "name": "01-live-link-context",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'P04.S02'\n- 'P04.S03'\n         ^\n",
+      "errors": []
+    },
+    {
+      "name": "02-pending-scenario-not-applied",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'other-user'\n- 'default'\n",
+      "errors": []
+    },
+    {
+      "name": "03-mode-switch-preserves-draft",
+      "status": "FAIL",
+      "error": "Cannot read properties of undefined (reading 'evaluate')",
+      "errors": []
+    },
+    {
+      "name": "04-mobile-drawer-keyboard",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "name": "05-load-controls-locked",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "name": "06-reload-cross-board-follow",
+      "status": "PASS"
+    },
+    {
+      "name": "07-image-retry",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#flow-retry')\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "08-cancel-rapid-launch",
+      "status": "PASS"
+    }
+  ]
+}

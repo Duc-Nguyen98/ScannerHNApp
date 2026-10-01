@@ -1,0 +1,853 @@
+{
+  "checks": [
+    {
+      "name": "Warehouse/document/NFC/missing/S04 details retain one locked nav at7 viewports; CTA clears scan circle",
+      "status": "PASS"
+    },
+    {
+      "name": "Detail scan entry and Escape/browser Back restore exact panel, ID, scroll and nav",
+      "status": "PASS"
+    },
+    {
+      "name": "Detail menu Home/Documents/Profile/History opens destination and Back restores detail",
+      "status": "PASS"
+    },
+    {
+      "name": "Long detail reader keeps navigation inert, Back closes reader first and returns focus",
+      "status": "PASS"
+    },
+    {
+      "name": "20 loaded rows and All-tab scroll survive opening detail and Back",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "warehouse",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        875,
+        950
+      ],
+      "scanTop": 857,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 950
+    },
+    {
+      "name": "warehouse",
+      "viewport": [
+        465,
+        875
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        805.9210815429688,
+        875
+      ],
+      "scanTop": 789.3421020507812,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 875
+    },
+    {
+      "name": "warehouse",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        637.6517944335938,
+        692.3076782226562
+      ],
+      "scanTop": 624.534423828125,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 692.3076782226562
+    },
+    {
+      "name": "warehouse",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        761.6397094726562,
+        826.923095703125
+      ],
+      "scanTop": 745.9716796875,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 826.923095703125
+    },
+    {
+      "name": "warehouse",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        828.9473876953125,
+        900
+      ],
+      "scanTop": 811.894775390625,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 900
+    },
+    {
+      "name": "warehouse",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        386.84210205078125,
+        420
+      ],
+      "scanTop": 378.88421630859375,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 420
+    },
+    {
+      "name": "warehouse",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        865.7894897460938,
+        940
+      ],
+      "scanTop": 847.9789428710938,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 940
+    },
+    {
+      "name": "document",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        875,
+        950
+      ],
+      "scanTop": 857,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 783,
+          "top": 729
+        },
+        {
+          "bottom": 831,
+          "top": 787
+        }
+      ],
+      "appBottom": 950
+    },
+    {
+      "name": "document",
+      "viewport": [
+        465,
+        875
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        805.9210815429688,
+        875
+      ],
+      "scanTop": 789.3421020507812,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 721.1842041015625,
+          "top": 671.4473876953125
+        },
+        {
+          "bottom": 765.3947143554688,
+          "top": 724.868408203125
+        }
+      ],
+      "appBottom": 875
+    },
+    {
+      "name": "document",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        637.6517944335938,
+        692.3076782226562
+      ],
+      "scanTop": 624.534423828125,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 570.6072998046875,
+          "top": 531.2550659179688
+        },
+        {
+          "bottom": 605.5870361328125,
+          "top": 573.5222778320312
+        }
+      ],
+      "appBottom": 692.3076782226562
+    },
+    {
+      "name": "document",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        761.6397094726562,
+        826.923095703125
+      ],
+      "scanTop": 745.9716796875,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 681.5587158203125,
+          "top": 634.5546875
+        },
+        {
+          "bottom": 723.340087890625,
+          "top": 685.04052734375
+        }
+      ],
+      "appBottom": 826.923095703125
+    },
+    {
+      "name": "document",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        828.9473876953125,
+        900
+      ],
+      "scanTop": 811.894775390625,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 741.7894897460938,
+          "top": 690.631591796875
+        },
+        {
+          "bottom": 787.26318359375,
+          "top": 745.5789794921875
+        }
+      ],
+      "appBottom": 900
+    },
+    {
+      "name": "document",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        386.84210205078125,
+        420
+      ],
+      "scanTop": 378.88421630859375,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 346.1684265136719,
+          "top": 322.29473876953125
+        },
+        {
+          "bottom": 367.38946533203125,
+          "top": 347.93682861328125
+        }
+      ],
+      "appBottom": 420
+    },
+    {
+      "name": "document",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        865.7894897460938,
+        940
+      ],
+      "scanTop": 847.9789428710938,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 774.7579345703125,
+          "top": 721.3263549804688
+        },
+        {
+          "bottom": 822.2526245117188,
+          "top": 778.7158203125
+        }
+      ],
+      "appBottom": 940
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        875,
+        950
+      ],
+      "scanTop": 857,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 950
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        465,
+        875
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        805.9210815429688,
+        875
+      ],
+      "scanTop": 789.3421020507812,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 875
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        637.6517944335938,
+        692.3076782226562
+      ],
+      "scanTop": 624.534423828125,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 692.3076782226562
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        761.6397094726562,
+        826.923095703125
+      ],
+      "scanTop": 745.9716796875,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 826.923095703125
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        828.9473876953125,
+        900
+      ],
+      "scanTop": 811.894775390625,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 900
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        386.84210205078125,
+        420
+      ],
+      "scanTop": 378.88421630859375,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 420
+    },
+    {
+      "name": "nfc",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        865.7894897460938,
+        940
+      ],
+      "scanTop": 847.9789428710938,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 940
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        875,
+        950
+      ],
+      "scanTop": 857,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 950
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        465,
+        875
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        805.9210815429688,
+        875
+      ],
+      "scanTop": 789.3421020507812,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 875
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        637.6517944335938,
+        692.3076782226562
+      ],
+      "scanTop": 624.534423828125,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 692.3076782226562
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        761.6397094726562,
+        826.923095703125
+      ],
+      "scanTop": 745.9716796875,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 826.923095703125
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        828.9473876953125,
+        900
+      ],
+      "scanTop": 811.894775390625,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 900
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        386.84210205078125,
+        420
+      ],
+      "scanTop": 378.88421630859375,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 420
+    },
+    {
+      "name": "missing",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        865.7894897460938,
+        940
+      ],
+      "scanTop": 847.9789428710938,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [],
+      "appBottom": 940
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        494,
+        950
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        875,
+        950
+      ],
+      "scanTop": 857,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 765,
+          "top": 711
+        },
+        {
+          "bottom": 831,
+          "top": 777
+        }
+      ],
+      "appBottom": 950
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        465,
+        875
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        805.9210815429688,
+        875
+      ],
+      "scanTop": 789.3421020507812,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 704.6052856445312,
+          "top": 654.868408203125
+        },
+        {
+          "bottom": 765.3947143554688,
+          "top": 715.6578979492188
+        }
+      ],
+      "appBottom": 875
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        637.6517944335938,
+        692.3076782226562
+      ],
+      "scanTop": 624.534423828125,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 557.4898681640625,
+          "top": 518.1376342773438
+        },
+        {
+          "bottom": 605.5870361328125,
+          "top": 566.2348022460938
+        }
+      ],
+      "appBottom": 692.3076782226562
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        761.6397094726562,
+        826.923095703125
+      ],
+      "scanTop": 745.9716796875,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 665.8906860351562,
+          "top": 618.8866577148438
+        },
+        {
+          "bottom": 723.340087890625,
+          "top": 676.3360595703125
+        }
+      ],
+      "appBottom": 826.923095703125
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        828.9473876953125,
+        900
+      ],
+      "scanTop": 811.894775390625,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 724.7368774414062,
+          "top": 673.5789794921875
+        },
+        {
+          "bottom": 787.26318359375,
+          "top": 736.1052856445312
+        }
+      ],
+      "appBottom": 900
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        386.84210205078125,
+        420
+      ],
+      "scanTop": 378.88421630859375,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 338.2105407714844,
+          "top": 314.33685302734375
+        },
+        {
+          "bottom": 367.38946533203125,
+          "top": 343.5157775878906
+        }
+      ],
+      "appBottom": 420
+    },
+    {
+      "name": "waiting",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "nav": [
+        865.7894897460938,
+        940
+      ],
+      "scanTop": 847.9789428710938,
+      "width": 494,
+      "scrollWidth": 494,
+      "buttons": [
+        {
+          "bottom": 756.9473876953125,
+          "top": 703.5158081054688
+        },
+        {
+          "bottom": 822.2526245117188,
+          "top": 768.821044921875
+        }
+      ],
+      "appBottom": 940
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,6 @@
+PASS Home shows exactly the three newest source documents, no hardcoded April rows
+PASS Each recent row opens exact P12 doc ID and header Back returns to focused Home row
+PASS View all opens full P12 list newest first, clears stale query, and keeps its own state on Back
+PASS History nav remains the history hub, independently of View all
+PASS Shared source updates refresh top three; removed-row focus falls back to section heading
+PASS UNKNOWN shows no fake rows; new View all resets latest view instead of stale search

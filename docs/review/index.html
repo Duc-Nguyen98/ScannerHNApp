@@ -8,9 +8,10 @@
 <body>
 <header class="bar"><strong>ScannerHNApp</strong><nav aria-label="Chế độ xem"><a id="app-link" href="?view=app">App Preview</a><a id="review-link" href="?view=review">Review Mode</a></nav><button id="flow-toggle" aria-expanded="false" aria-controls="flow-pane" title="Đối chiếu luồng nghiệp vụ">Sơ đồ</button><button id="toggle" aria-expanded="false" aria-controls="controls" title="Mở công cụ review">Công cụ</button></header>
 <div class="workspace">
-<aside id="controls" hidden>
-<h1>UI/UX Review</h1><p class="muted">Dữ liệu mô phỏng. Không kết nối WMS, camera, NFC, email hoặc SMS thật.</p>
+<aside id="controls" aria-labelledby="tools-title" hidden>
+<div class="tools-heading"><h1 id="tools-title">UI/UX Review</h1><button id="tools-close" aria-label="Đóng công cụ" title="Đóng công cụ">×</button></div><p class="muted">Dữ liệu mô phỏng. Không kết nối WMS, camera, NFC, email hoặc SMS thật.</p>
 <p class="meta" id="build"></p>
+<p id="current-panel" class="muted" aria-live="polite"></p>
 <label for="board">Board</label><select id="board"></select>
 <label for="panel">Panel</label><select id="panel"></select>
 <p id="disposition" class="muted"></p>
@@ -29,7 +30,7 @@
 <div class="flow-controls"><label class="flow-board-label" for="flow-board">Board <select id="flow-board"></select></label><label class="flow-follow"><input id="flow-follow" type="checkbox" checked> Theo màn đang mở</label>
 <div class="flow-tabs" role="tablist" aria-label="Loại sơ đồ"><button id="flow-user" role="tab" aria-selected="true" aria-controls="flow-viewport">User Flow</button><button id="flow-data" role="tab" aria-selected="false" aria-controls="flow-viewport">Data Flow</button></div>
 <div class="flow-toolbar"><button id="flow-out" title="Thu nhỏ" aria-label="Thu nhỏ">−</button><output id="flow-scale" aria-live="off">100%</output><button id="flow-in" title="Phóng to" aria-label="Phóng to">+</button><button id="flow-fit" title="Vừa chiều ngang">Vừa ngang</button><a id="flow-original" target="_blank" rel="noopener" title="Mở ảnh đầy đủ ở tab riêng" aria-label="Mở ảnh riêng">↗</a><label class="sr-only" for="flow-format">Định dạng tải</label><select id="flow-format" aria-label="Định dạng tải"><option value="png">PNG</option><option value="svg">SVG</option><option value="mmd">Mermaid</option></select><a id="flow-download" download title="Tải sơ đồ">Tải</a></div></div>
-<div id="flow-viewport" role="tabpanel" aria-labelledby="flow-user" tabindex="0"><img id="flow-image" alt="" draggable="false"><p id="flow-message" role="status"></p></div>
+<div id="flow-viewport" role="tabpanel" aria-labelledby="flow-user" tabindex="0"><img id="flow-image" alt="" draggable="false"><p id="flow-message" role="status"></p><button id="flow-retry" type="button" hidden>Thử lại</button></div>
 <footer class="flow-footer"><span id="flow-version"></span><a href="./flows/index.html" target="_blank" rel="noopener">Toàn bộ 50 sơ đồ</a><a href="https://github.com/Duc-Nguyen98/ScannerHNApp/tree/main/design" target="_blank" rel="noopener">Thiết kế gốc</a></footer>
 </section></div><p id="app-guide">Demo: minhanh / preview · Dữ liệu chỉ trong trang · Mở Công cụ để chọn mẫu</p></main>
 </div>

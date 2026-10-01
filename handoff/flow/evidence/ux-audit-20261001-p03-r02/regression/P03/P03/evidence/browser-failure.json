@@ -1,0 +1,59 @@
+{
+  "error": "P03-S01-360x800 footer DOM and computed appearance must match locked P02\n+ actual - expected\n... Skipped lines\n\n  {\n    children: [\n      {\n        style: {\n          alignItems: 'center',\n...\n    },\n+   html: '<button data-route=\"home\" data-tab=\"home\" class=\"\" data-motion-primitive=\"HistoryHubNav\" aria-current=\"page\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"></path><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path></svg><span>Trang chủ</span></button><button data-route=\"documents\" data-tab=\"documents\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"></rect><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><path d=\"M12 11h4\"></path><path d=\"M12 16h4\"></path><path d=\"M8 11h.01\"></path><path d=\"M8 16h.01\"></path></svg><span>Chứng từ</span></button><button data-route=\"lookup\" data-tab=\"lookup\" class=\"hn-scan-tab\"><span class=\"hn-scan-circle\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"></path><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"></path><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"></path><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"></path><path d=\"M7 8h8\"></path><path d=\"M7 12h10\"></path><path d=\"M7 16h6\"></path></svg></span><span>Quét mã</span></button><button data-route=\"history\" data-tab=\"history\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5v5h5M3 10a9 9 0 1 1 1 8M12 7v5l3 2\"></path></svg><span>Lịch sử</span></button><button data-route=\"profile\" data-tab=\"profile\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Cá nhân</span></button>'\n-   html: '<button data-route=\"home\" data-tab=\"home\" class=\"\" aria-current=\"page\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"></path><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path></svg><span>Trang chủ</span></button><button data-route=\"documents\" data-tab=\"documents\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"></rect><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><path d=\"M12 11h4\"></path><path d=\"M12 16h4\"></path><path d=\"M8 11h.01\"></path><path d=\"M8 16h.01\"></path></svg><span>Chứng từ</span></button><button data-route=\"lookup\" data-tab=\"lookup\" class=\"hn-scan-tab\"><span class=\"hn-scan-circle\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"></path><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"></path><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"></path><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"></path><path d=\"M7 8h8\"></path><path d=\"M7 12h10\"></path><path d=\"M7 16h6\"></path></svg></span><span>Quét mã</span></button><button data-route=\"history\" data-tab=\"history\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5v5h5M3 10a9 9 0 1 1 1 8M12 7v5l3 2\"></path></svg><span>Lịch sử</span></button><button data-route=\"profile\" data-tab=\"profile\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Cá nhân</span></button>'\n  }\n",
+  "checks": [
+    {
+      "name": "Opening from external tools scrolls app into view and restores caller focus",
+      "status": "PASS"
+    },
+    {
+      "name": "A01/A05 S01 opens from scan tab, one overlay, focus trap + Esc restore caller",
+      "status": "PASS"
+    },
+    {
+      "name": "S01 all operations retain context, implemented or pending destination remains explicit, no default/camera",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 legacy fixture cannot impersonate a stock owner; retained for review",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 cancel discard keeps data, confirmation removes only unsaved fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "Save confirms result before exit, stored fixture can resume exact document",
+      "status": "PASS"
+    },
+    {
+      "name": "Save failure remains in dialog with unchanged data; retry explicit",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN save retains identity, disables blind resubmit/discard and supports reconciliation boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 S03 blocks Esc/backdrop/deep link writes after Home, preserves session/read access",
+      "status": "PASS"
+    },
+    {
+      "name": "Server/POSTED cannot be removed in S04",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 backdrop never dismisses; explicit close/native Back return to caller",
+      "status": "PASS"
+    },
+    {
+      "name": "Backdrop clicks preserve all four panels, route and document; footer explicitly navigates",
+      "status": "PASS"
+    },
+    {
+      "name": "All five footer controls work; scan remains picker; pending routes remain explicit",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:8766/flows/auth-session/#home"
+}

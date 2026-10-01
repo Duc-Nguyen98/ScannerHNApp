@@ -20,7 +20,10 @@ const base = previewBase;
   const footerStyle = () => page.locator('.hn-nav').evaluate(nav => {
     const properties = ['height', 'minHeight', 'padding', 'borderRadius', 'backgroundColor', 'backgroundImage', 'color', 'fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'gap', 'alignItems', 'justifyContent', 'boxShadow', 'fill', 'stroke', 'strokeWidth', 'marginTop'];
     const read = (el, container = false) => Object.fromEntries(properties.filter(p => !(container && p === 'marginTop')).map(p => [p, getComputedStyle(el)[p]]));
-    return { html: nav.innerHTML, container: read(nav, true), children: [...nav.querySelectorAll('button, svg, span')].map(el => ({ tag: el.tagName, style: read(el) })) };
+    const markup = nav.cloneNode(true);
+    // Motion instrumentation is not footer artwork, structure, or computed style.
+    for (const el of markup.querySelectorAll('[data-motion-primitive]')) el.removeAttribute('data-motion-primitive');
+    return { html: markup.innerHTML, container: read(nav, true), children: [...nav.querySelectorAll('button, svg, span')].map(el => ({ tag: el.tagName, style: read(el) })) };
   });
   const colors = locator => locator.evaluate(el => {
     const s = getComputedStyle(el);
@@ -112,6 +115,9 @@ const base = previewBase;
       assert.equal(await modal().getAttribute('data-panel'), 'P03.S01');
       assert.equal(await page.locator('.p03-dialog').count(), 1);
       await capture('P03-S01-394');
+      // Initial focus is the first task; test wraparound from the actual boundary.
+      assert.equal(await page.locator('[data-p03-operation]').first().evaluate(el => el === document.activeElement), true);
+      await page.locator('[data-p03-back]').focus();
       await page.keyboard.press('Shift+Tab');
       assert.equal(await page.locator('[data-tab="profile"]').evaluate(el => el === document.activeElement), true);
       await page.keyboard.press('Tab');

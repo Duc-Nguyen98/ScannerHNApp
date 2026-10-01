@@ -1,0 +1,8 @@
+PASS UI Back consumes child history; native Back then returns Home, never reopens editor
+PASS External hash navigation while a P10 dialog is open reaches matching Home view
+PASS Forward after cancelling native dirty Back retains draft and never duplicates discard dialog
+PASS S01 scroll/focus returns to invoking menu after child Back
+PASS Duplicate route delivery does not remount focused editor or jump scroll
+PASS No-op Save is disabled; edit enables it; reverting disables it without new validation rules
+PASS Repeated menu click does not add duplicate page entries
+PASS P11 Back followed by P10 Back returns S01 and next Back reaches Home

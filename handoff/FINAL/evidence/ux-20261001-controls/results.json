@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "build": "Build final-a23199ef8256 · Fixture hn-flow-gate-2026-09-30-v1 · Tokens MOTION_CONTRACT-v1.0 / M00 · 24 board / 91 panel",
+  "base": "http://127.0.0.1:8766/review/",
+  "checks": [
+    "Live modes preserve owner data and operation count",
+    "Auto respects OS reduced live",
+    "Reset Escape retains current draft",
+    "Copy link and bug template contain build/panel/context",
+    "Reset confirmation rebuilds same seed; subsequent Escape does not reuse confirmation",
+    "Deep link refresh reconstructs declared scene without persisted sessions",
+    "Controls collapse and app remains visible at 360/390/430/1440",
+    "Manual App Preview login/profile/logout/native Back"
+  ],
+  "errors": [],
+  "external": []
+}

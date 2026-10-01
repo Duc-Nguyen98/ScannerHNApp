@@ -1,0 +1,20 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+false !== true
+
+    at eval (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:53:3), <anonymous>:118:14)
+    at async check (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:53:3), <anonymous>:54:37)
+    at async eval (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:53:3), <anonymous>:112:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

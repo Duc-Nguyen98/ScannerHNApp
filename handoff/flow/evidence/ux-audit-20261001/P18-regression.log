@@ -1,0 +1,5 @@
+PASS PDF text is explicit dialog, no invisible Tab stop, Back/focus/pan restored
+PASS Viewer byte cache cannot serve an older file version under new metadata
+PASS Duplicate downloads show busy feedback, source removal mid-read blocks saving
+PASS Render failure exits busy state, exposes retry, and retries the same file
+PASS Invalid restored page clamps to an existing PDF page

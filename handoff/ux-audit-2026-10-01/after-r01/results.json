@@ -1,0 +1,46 @@
+{
+  "base": "http://127.0.0.1:8766/review/",
+  "phase": "after-r01",
+  "checks": [
+    {
+      "name": "01-live-link-context",
+      "status": "PASS"
+    },
+    {
+      "name": "02-pending-scenario-not-applied",
+      "status": "PASS"
+    },
+    {
+      "name": "03-mode-switch-preserves-draft",
+      "status": "PASS"
+    },
+    {
+      "name": "04-mobile-drawer-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "05-load-controls-locked",
+      "status": "PASS"
+    },
+    {
+      "name": "06-reload-cross-board-follow",
+      "status": "PASS"
+    },
+    {
+      "name": "07-image-retry",
+      "status": "PASS"
+    },
+    {
+      "name": "08-cancel-rapid-launch",
+      "status": "PASS"
+    },
+    {
+      "name": "09-landscape-diagram-space",
+      "status": "PASS"
+    },
+    {
+      "name": "10-mobile-focus-cycle",
+      "status": "PASS"
+    }
+  ]
+}
