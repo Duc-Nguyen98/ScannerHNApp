@@ -12,7 +12,7 @@ const out=process.env.FLOW_REVIEW_EVIDENCE||'D:/ScannerHNApp_Archive_20261001/ev
  await imageReady('P04','User');assert.equal(await page.inputValue('#flow-board'),'P04');checks.push('Default desktop comparison follows the active board');
  for(let n=0;n<=24;n++){
   const board='P'+String(n).padStart(2,'0');await page.selectOption('#flow-board',board);
-  for(const type of ['User','Data']){await page.click(type==='User'?'#flow-user':'#flow-data');await imageReady(board,type);for(const extension of ['png','svg','mmd']){await page.selectOption('#flow-format',extension);const href=await page.locator('#flow-download').getAttribute('href');assert.ok(href.endsWith(board+'_'+type+'_Flow.'+extension));const response=await page.request.get(new URL(href,page.url()).href);assert.equal(response.status(),200);assert.ok((await response.body()).length>100);}}
+  for(const type of ['User','Data']){await page.click(type==='User'?'#flow-user':'#flow-data');await imageReady(board,type);for(const extension of ['png','svg','mmd']){await page.selectOption('#flow-format',extension);const href=await page.locator('#flow-download').getAttribute('href');assert.ok(href.endsWith(board+'_'+type+'_Flow.'+extension));const response=await page.request.get(new URL(href,page.url()).href);assert.equal(response.status(),200,href);assert.ok((await response.body()).length>100);}}
  }
  checks.push('All 50 images and 150 PNG/SVG/Mermaid links load');
  assert.deepEqual((await snapshot()).document,original.document);assert.deepEqual((await snapshot()).accepted,original.accepted);assert.equal(await frame().evaluate(()=>flowWindowToken),originalWindow);checks.push('Changing diagrams does not reload iframe or change the draft');

@@ -36,6 +36,7 @@ Gia cố bổ sung: reset RAF khi thay iframe; một xác nhận tại một th�
 - `before-r02/results.json`: 8 ca thất bại trong 10 ca, tương ứng 7 nhóm lỗi trên (focus mobile có 2 ca).
 - `after-r02/results.json`: 13/13 đạt, gồm lỗi mạng rồi phục hồi, Hủy với lựa chọn chưa áp dụng, giữ nháp, focus, link và sơ đồ.
 - `panels-before/results.json`, `panels-after/results.json`: 91/91 panel ở 1440x950 và 360x800, mỗi lượt 182 ảnh. Không lỗi trang/HTTP và không tràn ngang khung trong những mẫu này.
+- Ảnh dùng cùng seed/viewport; đồng hồ và UUID fixture sinh tại runtime có thể khác. Không dùng so sánh này để tự công nhận pixel-perfect hoặc visual PASS.
 - `flow-viewer-after/results.json`: 7 nhóm đạt; 50 ảnh, 150 đường tải PNG/SVG/Mermaid; đối chiếu 360/390/430/1440.
 - `logic-tests.log`: 765/765 kiểm thử logic đạt.
 - `../FINAL/evidence/ux-20261001-controls/results.json`: 8 nhóm điều khiển, đăng nhập/đăng xuất/Back đạt.
@@ -55,4 +56,12 @@ Thư mục `before` là lần chạy khi server local chưa khởi động, khô
 - Các chức năng đã chủ động khóa do thiếu backend/quyền vẫn giữ nguyên. Không tạo API giả thành công để làm UI có vẻ hoàn chỉnh.
 - Không thêm animation, không đổi policy Post/UNKNOWN, không gửi dữ liệu nghiệp vụ ra dịch vụ thật.
 
-Trạng thái public và commit bàn giao được ghi trong `PUBLIC_RESULT.json` sau khi xác minh GitHub Pages.
+## Public đã xác minh
+
+- GitHub Pages đã build/deploy source `30983f99a67c8bdd6f91fa82d7ed9a10a897c4b8`, build `final-a23199ef8256`.
+- `public/results.json`: 13/13 ca UI/UX đạt trong phiên Chromium mới, kiểm đúng build được phục vụ.
+- `flow-viewer-public-r02/results.json`: 7 nhóm đạt, đủ 50 ảnh / 150 link tải. Lượt đầu gặp một HTTP 503; đã giữ nguyên `flow-viewer-public/failure.json`. Chạy lại nguyên bộ đạt, không sửa source hay hạ assertion. Nguyên nhân hạ tầng cụ thể chưa xác minh.
+- `PUBLIC_BYTES.json`: SHA-256 của 6 tệp shell/catalog trên public trùng bản local đã kiểm tra.
+- `TRACE_SCAN_PUBLIC.json`: 334 ZIP / 2.158 mục text, không phát hiện chữ ký token/private key đã liệt kê; cùng một ZIP M09 cũ không hoàn chỉnh, không xóa hoặc viết đè.
+- `PUBLIC_RESULT.json` ghi code commit và review-tree đã kiểm. Commit bàn giao tiếp theo chỉ thêm report/test/evidence, giữ nguyên review-tree này.
+- Primary checkout/index đang có công việc dở dang được giữ nguyên. Push thực hiện qua index cô lập trong kho archive; không reset/clean worktree của người dùng.

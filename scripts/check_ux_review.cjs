@@ -2,6 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/TAN MIE/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const base=process.env.FINAL_URL||'http://127.0.0.1:8766/review/';
 const phase=process.env.UX_PHASE||'before',out=path.resolve('handoff/ux-audit-2026-10-01/'+phase);
+const expectedBuild=JSON.parse(fs.readFileSync('docs/review/catalog.json')).build;
 fs.mkdirSync(out,{recursive:true});
 (async()=>{
  const browser=await chromium.launch(),checks=[];
@@ -12,10 +13,10 @@ fs.mkdirSync(out,{recursive:true});
   try{await run(page);assert.deepEqual(errors,[]);checks.push({name,status:'PASS'});}catch(e){checks.push({name,status:'FAIL',error:e.message,errors});}
   await page.screenshot({path:path.join(out,name+'.png')}).catch(()=>{});
   await context.tracing.stop({path:path.join(out,name+'.zip')});await context.close();
-  fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({base,phase,checks},null,2));console.log(checks.at(-1));
+  fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({base,phase,expectedBuild,checks},null,2));console.log(checks.at(-1));
  }
  const ready=(p,id)=>p.waitForFunction(id=>document.querySelector('#status')?.textContent.startsWith('Đã mở '+id),id,{timeout:55000});
- const open=async(p,id='P04.S02')=>{await p.goto(base+'?view=review&flow=closed&panel='+id);await ready(p,id);};
+ const open=async(p,id='P04.S02')=>{await p.goto(base+'?view=review&flow=closed&panel='+id);await ready(p,id);assert.ok((await p.locator('#build').textContent()).includes(expectedBuild),'Served build must match the audited source');};
  const frame=p=>p.frames().find(f=>f.url().includes('/auth-session/'));
  const snap=p=>frame(p).locator('[data-p04-snapshot]').textContent().then(JSON.parse);
  await check('01-live-link-context',async p=>{await open(p);await frame(p).locator('[data-p04=next]').first().click();await frame(p).locator('[data-panel="P04.S03"]').waitFor();await p.click('#copy');const link=await p.evaluate(()=>navigator.clipboard.readText());assert.equal(new URL(link).searchParams.get('panel'),'P04.S03');await p.click('#bug');assert.match(await p.evaluate(()=>navigator.clipboard.readText()),/Panel: P04.S03/);});

@@ -15,6 +15,7 @@ const parent=git(['ls-remote','origin','refs/heads/main']).split(/\s/)[0];git(['
 const files=new Set(['RUN_STATE.json','docs/review/index.html','docs/review/review.css','docs/review/review.mjs','docs/review/flow-viewer.mjs','docs/review/catalog.json','handoff/FINAL/BUILD_MANIFEST.json','scripts/check_ux_review.cjs','scripts/audit_ux_panels.cjs','scripts/check_dialogs.cjs','scripts/check_review_flows.cjs','scripts/build_ux_evidence_index.cjs','scripts/publish_ux_audit.cjs']);
 function collect(dir){for(const e of fs.readdirSync(path.join(root,dir),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()))files.add(path.relative(root,path.join(e.parentPath,e.name)).replaceAll('\\','/'));}
 collect(audit);
+files.add('scripts/finalize_ux_audit.cjs');
 for(const [dir,prefix]of [['handoff/FINAL/evidence','ux-20261001'],['handoff/flow/evidence','ux-audit-20261001']])for(const e of fs.readdirSync(path.join(root,dir),{withFileTypes:true}))if(e.isDirectory()&&e.name.startsWith(prefix))collect(dir+'/'+e.name);
 files.delete(audit+'/DELTA_MANIFEST.json');
 const manifest=[...files].sort().map(file=>{const bytes=fs.readFileSync(path.join(root,file));assert.ok(bytes.length<100*1024*1024,file+' exceeds ordinary Git file limit');return {file,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};});

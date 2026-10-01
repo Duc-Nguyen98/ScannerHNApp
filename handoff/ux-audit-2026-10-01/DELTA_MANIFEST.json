@@ -1,11 +1,11 @@
 {
-  "parent": "f15fc4863474a5133b572485e5d6952c0b213d4b",
+  "parent": "30983f99a67c8bdd6f91fa82d7ed9a10a897c4b8",
   "build": "final-a23199ef8256",
   "files": [
     {
       "file": "RUN_STATE.json",
-      "bytes": 139543,
-      "sha256": "a4a44e3beb2c41db3f783f158ef5327638e741ea42a62ceafbebd4e56b7e2b3c"
+      "bytes": 139544,
+      "sha256": "efc963dd724ee02c93b7e516c56fc3ad8e5ac47d550fcdacffea065dfe841dbc"
     },
     {
       "file": "docs/review/catalog.json",
@@ -2498,9 +2498,29 @@
       "sha256": "ebdd76e869bcebabdce96d5715c619106e4aa83c101d985343065481dffb8126"
     },
     {
+      "file": "handoff/ux-audit-2026-10-01/CODE_PUSH.json",
+      "bytes": 341,
+      "sha256": "6426be3f9d592c80544da826da981f757b6d5045325328a8b28b99a658a93102"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/PAGES_BUILD.json",
+      "bytes": 1263,
+      "sha256": "9239b3b0e9ad41f2f6b9fb402af6edb9979bafd78c0fe4933c39c9c70739e336"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/PUBLIC_BYTES.json",
+      "bytes": 994,
+      "sha256": "dddae48b42605b54af067bd5b492f2bacc0b30cf86b7cf8fb202adb30660c519"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/PUBLIC_RESULT.json",
+      "bytes": 11209,
+      "sha256": "8424f4c60b400bb184b4060ea8273730fd2691782d0b0b26a59d9e6fd186330a"
+    },
+    {
       "file": "handoff/ux-audit-2026-10-01/REPORT.md",
-      "bytes": 6157,
-      "sha256": "de3cc774fcc86afd62c125723b1e23d69c7a2eb1eaba5a755d31629a739ad0c4"
+      "bytes": 7454,
+      "sha256": "1fc5636186d5cb9783bf4af3dd74b64322112f24645a8d160e9876220e968210"
     },
     {
       "file": "handoff/ux-audit-2026-10-01/REVIEW.html",
@@ -2511,6 +2531,11 @@
       "file": "handoff/ux-audit-2026-10-01/TRACE_SCAN.json",
       "bytes": 719,
       "sha256": "371e7b88f08cd08b5f69040e24664d75b01767310cd5f44be07cbbd498371c72"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/TRACE_SCAN_PUBLIC.json",
+      "bytes": 719,
+      "sha256": "68af2e390b51add1a3a81b851e56addf1eeff391d299481f20e6d985eecb83a2"
     },
     {
       "file": "handoff/ux-audit-2026-10-01/after-r01/01-live-link-context.png",
@@ -3071,6 +3096,56 @@
       "file": "handoff/ux-audit-2026-10-01/flow-viewer-after/results.json",
       "bytes": 565,
       "sha256": "9403d1a8308db3fbc7120fee81e92df920e8bc3a57040659b9f1e79f73eae9cf"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/1440-app.png",
+      "bytes": 99892,
+      "sha256": "c4ff994db9aba201c5bf2975306dce4fbf72742b1b9052b801a44169f4299ef2"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/1440-flow.png",
+      "bytes": 179661,
+      "sha256": "02d0d93f47a17dd7c61f219464568d3f68fc2a76ddf229a129bfc2b05ac315ec"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/360-app.png",
+      "bytes": 70064,
+      "sha256": "24efc3985d8572dd1b755766d71e85fd041f2c4493756528112a81f1cf8ddde2"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/360-flow.png",
+      "bytes": 63492,
+      "sha256": "c6a3b05d3a03a65063d34ff3f99f12b567e66a381bd244bb2896460d62a057d0"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/390-app.png",
+      "bytes": 76390,
+      "sha256": "7666beaa422216d0b41c7669cea22fd0f7044801a49670e87e024767c41bc48b"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/390-flow.png",
+      "bytes": 65133,
+      "sha256": "4721e71ca085cb7841b6610852bb609856c60e2c0aa048c14a832380d8668ced"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/430-app.png",
+      "bytes": 84753,
+      "sha256": "429974ded04cea848624bd1630c6bd5f6bce29ded00328e0f4dba00ec64ca8a9"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/430-flow.png",
+      "bytes": 69120,
+      "sha256": "f025080c8a84d6167fc831bbd4a3b909d190c017e1e6f3a523d007e4d9e62240"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public-r02/results.json",
+      "bytes": 587,
+      "sha256": "929e79732409c117338ffe85b626b2acd6f2fefe1e8b4843891b76435967a519"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/flow-viewer-public/failure.json",
+      "bytes": 317,
+      "sha256": "bcb59fb77fd147282cd27b2bb756712658849b1c2f223064c2ab7397e6769f46"
     },
     {
       "file": "handoff/ux-audit-2026-10-01/logic-tests.log",
@@ -4928,14 +5003,149 @@
       "sha256": "df4c99208115b6b86171370c14974f00c41738dcd29e03c0a290beca5ec8ecec"
     },
     {
+      "file": "handoff/ux-audit-2026-10-01/public/01-live-link-context.png",
+      "bytes": 141477,
+      "sha256": "76e1f91640ad9d4876c23946fd95bf3889d9ce390876a6748a63aad99d1bd1fe"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/01-live-link-context.zip",
+      "bytes": 5631187,
+      "sha256": "fe4189adc579f3f5994fbf936092065f5a0a2df34e908bbef284d76f371762e9"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/02-pending-scenario-not-applied.png",
+      "bytes": 262444,
+      "sha256": "80a4083e40c8aa920fd6ba4636bd1a335d9bb9ddd16bcb8cd367a0128ed06b82"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/02-pending-scenario-not-applied.zip",
+      "bytes": 5563002,
+      "sha256": "7655e345725a5200d76d3a02bf1e6da3ba67c8b638caab8e8230f709a2146bb5"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/03-mode-switch-preserves-draft.png",
+      "bytes": 263344,
+      "sha256": "2355097db32022f8a745074e78ea6571424caff9e898d849523ed17d07b93974"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/03-mode-switch-preserves-draft.zip",
+      "bytes": 5541352,
+      "sha256": "d9b34d167a4a43ea81842694a80f96fd86839311f038309abffaac6d4feb979d"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/04-mobile-drawer-keyboard.png",
+      "bytes": 147285,
+      "sha256": "71d7623086cde7dec2831dfec96111c31ee487bedd6866d96e6bd5c6568c6172"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/04-mobile-drawer-keyboard.zip",
+      "bytes": 5190558,
+      "sha256": "5b68a314a05de7603b162300ecd0685e970ed5ee691b22e13ea1deb73f969d85"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/05-load-controls-locked.png",
+      "bytes": 143149,
+      "sha256": "6a8cab176b113ab1e934dc2e730f3c2ca34c8c6a6140fb61e411085bbf77db93"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/05-load-controls-locked.zip",
+      "bytes": 5910951,
+      "sha256": "8b7215c9e096cfee8b89eca046a1a4ddac14e10170353f796487eebc55ce43ad"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/06-reload-cross-board-follow.png",
+      "bytes": 210394,
+      "sha256": "2247509c9129b165722791cc073e820d3b7efc7cc4c3167ec7681f0b3311c017"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/06-reload-cross-board-follow.zip",
+      "bytes": 9717870,
+      "sha256": "86b46ee8d5bf705333718db77c0f22ffe3b4158e8da1032c22974ba7ad31323c"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/07-image-retry.png",
+      "bytes": 340476,
+      "sha256": "1f70740d2b2e2f9a8e666bf965241295f3c8da2484dedb8911ba5d89e3fcda77"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/07-image-retry.zip",
+      "bytes": 6182158,
+      "sha256": "7c441827ac96b79d3455fefc75a45234416350a07cb13917c381c795f910411b"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/08-cancel-rapid-launch.png",
+      "bytes": 263419,
+      "sha256": "7c7a814898b7a4f7a39fe949a4618b80c18f07e3ca07d84d9cd706ae33733991"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/08-cancel-rapid-launch.zip",
+      "bytes": 5474832,
+      "sha256": "0ba8503632aa3aa267f9ad2a470fefe76ce56677fdd86135102da90eb8211705"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/09-landscape-diagram-space.png",
+      "bytes": 22413,
+      "sha256": "a582ddf0b0ff705774790074d821920b39595b99ce56e1e22f2d90c2717293a9"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/09-landscape-diagram-space.zip",
+      "bytes": 3410540,
+      "sha256": "8e5eef986fe7f323164ba8969454733578fd48b4760f67993289da0934d73843"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/10-mobile-focus-cycle.png",
+      "bytes": 149739,
+      "sha256": "57bc7d0d0b71e3987d30ab78dbc146d80dcfca03a49ec4bbaf1a0f4cf54c94d8"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/10-mobile-focus-cycle.zip",
+      "bytes": 859979,
+      "sha256": "9d7eb741cc9cbd8a28caa945b258fab0f1ca9eac3f59cb51747d8479b9481505"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/11-cancel-target-keeps-applied-context.png",
+      "bytes": 262162,
+      "sha256": "a1b73a6bdb2179c1093a6ebf13b3565685f422c2d51e834ef5fe511941a663e6"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/11-cancel-target-keeps-applied-context.zip",
+      "bytes": 5606880,
+      "sha256": "e48ab616e0c27a356c99170a52ebd784d6230d87b28cbe1b0f4529ad7b24f3d1"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/12-closed-diagram-refresh-keeps-selection.png",
+      "bytes": 164248,
+      "sha256": "40f7a6c96601c04a3513fa4bd515a9cac53c52370d4081389e59aae4a372e7c0"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/12-closed-diagram-refresh-keeps-selection.zip",
+      "bytes": 600738,
+      "sha256": "71bbb53d45e216599e39f68e419e48f43fc20209332a3221b3567794f24156ff"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/13-runtime-failure-releases-controls.png",
+      "bytes": 261122,
+      "sha256": "baea8b1a43e9702ae2c8ae396e516025266f30dcc63e70893255c1692fcb23b1"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/13-runtime-failure-releases-controls.zip",
+      "bytes": 5986044,
+      "sha256": "a9394dc893a2df05e32c0e96e125ad44af3b7874d8d0c4a4e68b3f8f79d8640f"
+    },
+    {
+      "file": "handoff/ux-audit-2026-10-01/public/results.json",
+      "bytes": 1204,
+      "sha256": "684f4061f77a5796743903853f92f53ee4327264f57d2f5f2bb5e8d87f011123"
+    },
+    {
       "file": "handoff/ux-audit-2026-10-01/report-preview.png",
       "bytes": 63954,
       "sha256": "144ef6ca591962efdde5b2b1183823c26c1a014163f21eeeba88935447b7553b"
     },
     {
       "file": "handoff/ux-audit-2026-10-01/syntax.json",
-      "bytes": 245,
-      "sha256": "5f43f5778e3750d0eb943f0be5780722afb70f09fdd5e56c47a226fc6d41a67f"
+      "bytes": 324,
+      "sha256": "e16fa150bed9b04d6ae9622f98870567039f1a688228f3d279626d0e353aed80"
     },
     {
       "file": "scripts/audit_ux_panels.cjs",
@@ -4954,18 +5164,23 @@
     },
     {
       "file": "scripts/check_review_flows.cjs",
-      "bytes": 5276,
-      "sha256": "560f8525641fff0e4ab12c746fda71f0a03ba0f66f3d06aa13e1083ba2d9a5ad"
+      "bytes": 5281,
+      "sha256": "fdf6be62ffea76ef894bdee572eb766ecc3a4d949d5b2280f847a58aabfeb9ad"
     },
     {
       "file": "scripts/check_ux_review.cjs",
-      "bytes": 7859,
-      "sha256": "50949c5da46232b0efd5fea44861b3e77c6fe41c7674dd4c445ecd1f58dd8a83"
+      "bytes": 8078,
+      "sha256": "a2855d4d6e42d9de309b5ee64b90214bbab45e51f7089db1fd385ceacf28737e"
+    },
+    {
+      "file": "scripts/finalize_ux_audit.cjs",
+      "bytes": 2454,
+      "sha256": "9ae544ffa101040aff79ee6ffaeed3b7a9673f41e7e1ff90d851df808f6a604a"
     },
     {
       "file": "scripts/publish_ux_audit.cjs",
-      "bytes": 5021,
-      "sha256": "7eef4e104c172c814910b7609e932a726533e9569620b10bd5548ce04ae53a4f"
+      "bytes": 5065,
+      "sha256": "603d31ae75a24cad9671c824976e207f1997d5c2b56166269cde8a5c33bfd6e5"
     }
   ]
 }

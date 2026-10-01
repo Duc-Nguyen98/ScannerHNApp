@@ -1,0 +1,408 @@
+{
+  "status": "PASS_PUBLIC_UI_FIXTURE",
+  "verifiedAt": "2026-10-01T11:10:15.478Z",
+  "build": "final-a23199ef8256",
+  "testedCodeCommit": "30983f99a67c8bdd6f91fa82d7ed9a10a897c4b8",
+  "reviewTree": "060c631f01c82c86accb243ccc9f2e428f3d53fd",
+  "pagesBuild": "30983f99a67c8bdd6f91fa82d7ed9a10a897c4b8",
+  "url": "https://duc-nguyen98.github.io/ScannerHNApp/review/?view=review&panel=P01.S01&scenario=default&motion=auto",
+  "publicChecks": [
+    {
+      "name": "01-live-link-context",
+      "status": "PASS"
+    },
+    {
+      "name": "02-pending-scenario-not-applied",
+      "status": "PASS"
+    },
+    {
+      "name": "03-mode-switch-preserves-draft",
+      "status": "PASS"
+    },
+    {
+      "name": "04-mobile-drawer-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "05-load-controls-locked",
+      "status": "PASS"
+    },
+    {
+      "name": "06-reload-cross-board-follow",
+      "status": "PASS"
+    },
+    {
+      "name": "07-image-retry",
+      "status": "PASS"
+    },
+    {
+      "name": "08-cancel-rapid-launch",
+      "status": "PASS"
+    },
+    {
+      "name": "09-landscape-diagram-space",
+      "status": "PASS"
+    },
+    {
+      "name": "10-mobile-focus-cycle",
+      "status": "PASS"
+    },
+    {
+      "name": "11-cancel-target-keeps-applied-context",
+      "status": "PASS"
+    },
+    {
+      "name": "12-closed-diagram-refresh-keeps-selection",
+      "status": "PASS"
+    },
+    {
+      "name": "13-runtime-failure-releases-controls",
+      "status": "PASS"
+    }
+  ],
+  "publicFlowChecks": [
+    "Default desktop comparison follows the active board",
+    "All 50 images and 150 PNG/SVG/Mermaid links load",
+    "Changing diagrams does not reload iframe or change the draft",
+    "Zoom, fit and keyboard tabs work",
+    "Close/reopen preserves the current step and follows app state",
+    "360/390/430/1440 layouts have no horizontal overflow; app survives mobile comparison",
+    "Independent P00 diagram and live panel URL survive refresh"
+  ],
+  "sourceBytes": [
+    {
+      "file": "index.html",
+      "sha256": "c4d432ee85d9ddc9798e1eab0dcf18df4294403a549acc19e0d131b0afcfc756",
+      "status": 200
+    },
+    {
+      "file": "review.mjs",
+      "sha256": "ca6f8e754d77c93f82f6ff39488dde32405284559ca929ff656756fb2d6ed326",
+      "status": 200
+    },
+    {
+      "file": "flow-viewer.mjs",
+      "sha256": "1dd08a0300b7ed961d932e5d639d253a00997ceec0da3be5f775885f87f3db8a",
+      "status": 200
+    },
+    {
+      "file": "review.css",
+      "sha256": "a5ad618354b10a6ff5892cfc00e4f0d1246e1a915fb7b67f7138ab266d028f42",
+      "status": 200
+    },
+    {
+      "file": "scenes.mjs",
+      "sha256": "eb548d78de8499ea9ad195ad7d724df60365d6ef4c0bafd872f0b6ecc337d83c",
+      "status": 200
+    },
+    {
+      "file": "catalog.json",
+      "sha256": "d4cd5ce9d32f02ed11b93e892714586e836f0df7ff566e91d30192aa4aaf78bf",
+      "status": 200
+    }
+  ],
+  "boardRegressions": [
+    {
+      "board": "P01",
+      "command": [
+        "check_flow_audit.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:42:29.801Z",
+      "finished": "2026-10-01T10:42:38.122Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P01-regression.log"
+    },
+    {
+      "board": "P02",
+      "command": [
+        "check_home_recent.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:42:38.123Z",
+      "finished": "2026-10-01T10:42:45.302Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P02-regression.log"
+    },
+    {
+      "board": "P03",
+      "command": [
+        "check_dialogs.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:46:41.676Z",
+      "finished": "2026-10-01T10:47:26.846Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001-p03-r03/P03-regression.log"
+    },
+    {
+      "board": "P04",
+      "command": [
+        "check_inbound.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:42:51.281Z",
+      "finished": "2026-10-01T10:43:12.748Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P04-regression.log"
+    },
+    {
+      "board": "P05",
+      "command": [
+        "check_outbound_lifecycle.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:43:12.750Z",
+      "finished": "2026-10-01T10:43:42.697Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P05-regression.log"
+    },
+    {
+      "board": "P06",
+      "command": [
+        "check_lookup_recent_edges.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:43:42.698Z",
+      "finished": "2026-10-01T10:43:49.664Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P06-regression.log"
+    },
+    {
+      "board": "P07",
+      "command": [
+        "check_nfc_r13.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:43:49.665Z",
+      "finished": "2026-10-01T10:44:16.965Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P07-regression.log"
+    },
+    {
+      "board": "P08",
+      "command": [
+        "check_history_r23.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:44:16.966Z",
+      "finished": "2026-10-01T10:44:28.567Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P08-regression.log"
+    },
+    {
+      "board": "P09",
+      "command": [
+        "check_warranty_navigation.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:44:28.568Z",
+      "finished": "2026-10-01T10:44:48.637Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P09-regression.log"
+    },
+    {
+      "board": "P10",
+      "command": [
+        "check_profile_stability.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:44:48.638Z",
+      "finished": "2026-10-01T10:45:14.526Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P10-regression.log"
+    },
+    {
+      "board": "P11",
+      "command": [
+        "check_security_live_preview.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:45:14.527Z",
+      "finished": "2026-10-01T10:45:32.791Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P11-regression.log"
+    },
+    {
+      "board": "P12",
+      "command": [
+        "check_documents_tabs.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:45:32.792Z",
+      "finished": "2026-10-01T10:45:44.701Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P12-regression.log"
+    },
+    {
+      "board": "P13",
+      "command": [
+        "check_notification_detail_nav.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:45:44.702Z",
+      "finished": "2026-10-01T10:46:01.312Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P13-regression.log"
+    },
+    {
+      "board": "P14",
+      "command": [
+        "check_p14_audit_r06.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:46:01.313Z",
+      "finished": "2026-10-01T10:46:22.879Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P14-regression.log"
+    },
+    {
+      "board": "P15",
+      "command": [
+        "check_p15_navigation_r03.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:46:22.880Z",
+      "finished": "2026-10-01T10:46:28.296Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P15-regression.log"
+    },
+    {
+      "board": "P16",
+      "command": [
+        "check_p16_r03.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:46:28.297Z",
+      "finished": "2026-10-01T10:46:40.206Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P16-regression.log"
+    },
+    {
+      "board": "P17",
+      "command": [
+        "check_p17_navigation_r03.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:46:40.207Z",
+      "finished": "2026-10-01T10:46:59.182Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P17-regression.log"
+    },
+    {
+      "board": "P18",
+      "command": [
+        "check_p18_r03_edges.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:46:59.183Z",
+      "finished": "2026-10-01T10:47:10.953Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P18-regression.log"
+    },
+    {
+      "board": "P19",
+      "command": [
+        "check_p19.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:47:10.954Z",
+      "finished": "2026-10-01T10:47:34.504Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P19-regression.log"
+    },
+    {
+      "board": "P20",
+      "command": [
+        "run_p24_r03.cjs",
+        "regression",
+        "check_p20.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:47:34.505Z",
+      "finished": "2026-10-01T10:47:51.947Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P20-regression.log"
+    },
+    {
+      "board": "P21",
+      "command": [
+        "run_p24_r03.cjs",
+        "regression",
+        "check_p21.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:47:51.948Z",
+      "finished": "2026-10-01T10:48:18.803Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P21-regression.log"
+    },
+    {
+      "board": "P22",
+      "command": [
+        "run_p22_r03.cjs",
+        "check_p22.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:48:18.805Z",
+      "finished": "2026-10-01T10:48:31.438Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P22-regression.log"
+    },
+    {
+      "board": "P23",
+      "command": [
+        "run_p24_r03.cjs",
+        "regression",
+        "check_p23.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:48:31.439Z",
+      "finished": "2026-10-01T10:48:47.979Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P23-regression.log"
+    },
+    {
+      "board": "P24",
+      "command": [
+        "run_p24_r03.cjs",
+        "check_p24.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-10-01T10:48:47.980Z",
+      "finished": "2026-10-01T10:49:14.485Z",
+      "log": "handoff/flow/evidence/ux-audit-20261001/P24-regression.log"
+    }
+  ],
+  "nodeTests": {
+    "pass": 765,
+    "fail": 0
+  },
+  "panelLayouts": {
+    "panels": 91,
+    "viewports": [
+      [
+        1440,
+        950
+      ],
+      [
+        360,
+        800
+      ]
+    ],
+    "beforeAndAfter": true
+  },
+  "journeys": {
+    "modes": [
+      "auto",
+      "os-reduced",
+      "off"
+    ],
+    "perMode": 12,
+    "passed": 36
+  },
+  "diagrams": 50,
+  "downloadLinks": 150,
+  "retainedEvidence": {
+    "allIntermediateLogsAndTraces": true,
+    "firstPublicDownloadRun": "One HTTP 503; no source change; full rerun passed. Origin cause unverified. See flow-viewer-public/failure.json.",
+    "incompleteHistoricalZip": [
+      {
+        "reason": "Incomplete ZIP central directory; retain original bytes",
+        "file": "C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M09\\evidence\\os-reduced-trace.zip",
+        "bytes": 14806913
+      }
+    ]
+  },
+  "preserved": [
+    "docs/flows",
+    "docs/review/runtime",
+    "docs/review/flows",
+    "docs/index.html",
+    "design",
+    "Primary dirty checkout/index"
+  ],
+  "visualAcceptance": "AWAITING_USER_REVIEW",
+  "limits": [
+    "Chromium fixture checks; not universal bug-free certification",
+    "No real backend, camera or NFC certification",
+    "Review links rebuild panel fixtures, not edited drafts"
+  ]
+}
