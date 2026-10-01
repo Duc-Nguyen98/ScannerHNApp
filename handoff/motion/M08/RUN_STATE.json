@@ -1,0 +1,64 @@
+{
+  "current_prompt": "MOTION_P08",
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "remaining_panel_ids": [],
+  "verification": {
+    "prompt": "MOTION_P08",
+    "normal": "PASS",
+    "os_reduced": "PASS",
+    "off": "PASS",
+    "panels": 4,
+    "node_tests": 57,
+    "motion_browser_groups": 30,
+    "shell_regression_groups": 36,
+    "domain_equal": true,
+    "history_records": 48,
+    "scan_reference_sessions": 3,
+    "hardware_calls_per_mode": 0,
+    "initial_profiles": {
+      "auto": {
+        "nodes": 144,
+        "rows": 6,
+        "scroll": "native"
+      },
+      "os-reduced": {
+        "nodes": 144,
+        "rows": 6,
+        "scroll": "native"
+      },
+      "off": {
+        "nodes": 144,
+        "rows": 6,
+        "scroll": "native"
+      }
+    },
+    "append_profiles": {
+      "auto": {
+        "rows": 18,
+        "nodes": 336
+      },
+      "os-reduced": {
+        "rows": 18,
+        "nodes": 336
+      },
+      "off": {
+        "rows": 18,
+        "nodes": 336
+      }
+    },
+    "source_byte_delta": 3965,
+    "static_geometry": "PASS12 panel-mode combinations relative to app shell, exact equality with before",
+    "visual": "USER_REVIEW_PENDING",
+    "virtualization": "NOT_NEEDED current bounded list; long backend list DEFERRED",
+    "fps": "NOT_MEASURED",
+    "production": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "report": "handoff/motion/M08/REPORT.md"
+  },
+  "affected_dependencies": [
+    "M02 shell route key and mode/security cancellation fanout;36 browser regressions PASS",
+    "P08 native append, day scroll and obsolete picker callback guard",
+    "P12 document/P18 attachments/P23 reference edges verified in3modes; source data unchanged"
+  ],
+  "next_action": "User review M08. Do not execute M09 or deploy without request."
+}

@@ -1,0 +1,35 @@
+{
+  "prompt": "MOTION_P09",
+  "normal": "PASS",
+  "os_reduced": "PASS",
+  "off": "PASS",
+  "panels": 4,
+  "node_tests": 69,
+  "motion_browser_groups": 27,
+  "shell_regression_groups": 36,
+  "domain_equal": true,
+  "operations_per_mode": 4,
+  "camera_calls_per_mode": 0,
+  "initial_profiles": {
+    "auto": {
+      "rows": 8,
+      "nodes": 149
+    },
+    "os-reduced": {
+      "rows": 8,
+      "nodes": 149
+    },
+    "off": {
+      "rows": 8,
+      "nodes": 149
+    }
+  },
+  "source_byte_delta": 5990,
+  "static_geometry": "PASS12 exact panel-mode comparisons vs actual before",
+  "visual": "USER_REVIEW_PENDING",
+  "virtualization": "NOT_NEEDED current bounded seed; long backend list DEFERRED",
+  "fps": "NOT_MEASURED",
+  "hardware": "NOT_RUN",
+  "production": "NOT_RUN",
+  "report": "handoff/motion/M09/REPORT.md"
+}

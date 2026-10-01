@@ -1,0 +1,3422 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "filter140/tab140; input stays connected and no shell replay for query/type",
+      "load more appends stable rows; detail Back retains order/count/scroll and no row entrances",
+      "S02 route uses shell once; table ordering and tab keyboard/Back semantics unchanged",
+      "S03 historical events immediate and static; expand/Back never generates or replays events",
+      "S04 dates/counters update immediately; fade content only and retain native scroll",
+      "obsolete deferred date callback cannot replace a newer date or survive leaving module",
+      "mode switch, OS reduction, hidden page and rapid route cancel obsolete animation",
+      "P12 document and P18 attachment edges return correct P08 record; no physical service calls",
+      "ten enter/leave cycles return listener count; error/unknown data modes remain truthful",
+      "logout immediately removes protected history and Back never restores it"
+    ],
+    "geometry": {
+      "P08.S01": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": [
+          18,
+          318,
+          458,
+          686.28125
+        ],
+        ".p08-detail-hero": null,
+        ".p08-counters": null,
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S02": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": [
+          18,
+          92,
+          458,
+          161.9375
+        ],
+        ".p08-counters": null,
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S03": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": null,
+        ".p08-counters": [
+          18,
+          399.390625,
+          458,
+          87.796875
+        ],
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S04": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": null,
+        ".p08-counters": null,
+        ".p08-day-overview": [
+          18,
+          266,
+          458,
+          305
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      }
+    },
+    "errors": [],
+    "profile": {
+      "nodes": 144,
+      "rows": 6,
+      "scroll": "native"
+    },
+    "listProfile": {
+      "rows": 18,
+      "nodes": 336
+    },
+    "labels": [
+      "Kho",
+      "Người thao tác",
+      "Thời gian"
+    ],
+    "timelineIds": [
+      "B08-LS1-E1",
+      "B08-LS1-E2",
+      "B08-LS1-E3",
+      "B08-LS1-E4"
+    ],
+    "counters": [
+      "19",
+      "18",
+      "1"
+    ],
+    "scanIds": [
+      "B08-SCAN-1",
+      "B08-SCAN-2",
+      "B08-SCAN-3",
+      "B08-SCAN-4",
+      "B08-SCAN-5",
+      "B08-SCAN-6",
+      "B08-SCAN-7",
+      "B08-SCAN-8",
+      "B08-SCAN-9",
+      "B08-SCAN-10",
+      "B08-SCAN-11",
+      "B08-SCAN-12",
+      "B08-SCAN-13",
+      "B08-SCAN-14",
+      "B08-SCAN-15",
+      "B08-SCAN-16",
+      "B08-SCAN-17",
+      "B08-SCAN-18",
+      "B08-SCAN-19"
+    ],
+    "dayCounts": [
+      "12",
+      "6",
+      "4",
+      "3",
+      "5",
+      "30"
+    ],
+    "frames": [
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 10,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 25,
+        "opacity": "0.731695",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 40,
+        "opacity": "0.854902",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 56,
+        "opacity": "0.915948",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 71,
+        "opacity": "0.951954",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 88,
+        "opacity": "0.974537",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 103,
+        "opacity": "0.988523",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 120,
+        "opacity": "0.996424",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 136,
+        "opacity": "0.999733",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 152,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 169,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 184,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 8,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 7,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 25,
+        "opacity": "0.731089",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 24,
+        "opacity": "0.731089",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 39,
+        "opacity": "0.854607",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 38,
+        "opacity": "0.854607",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 56,
+        "opacity": "0.915784",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 55,
+        "opacity": "0.915784",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 73,
+        "opacity": "0.951856",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 72,
+        "opacity": "0.951856",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 89,
+        "opacity": "0.974475",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 88,
+        "opacity": "0.974475",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 104,
+        "opacity": "0.988486",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 103,
+        "opacity": "0.988486",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 121,
+        "opacity": "0.996405",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 120,
+        "opacity": "0.996405",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 136,
+        "opacity": "0.999731",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 135,
+        "opacity": "0.999731",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 151,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 150,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 166,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 184,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 183,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 17,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 41,
+        "opacity": "0.854833",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 49,
+        "opacity": "0.854833",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 64,
+        "opacity": "0.915909",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 80,
+        "opacity": "0.95193",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 96,
+        "opacity": "0.974526",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 112,
+        "opacity": "0.988517",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 128,
+        "opacity": "0.99642",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 146,
+        "opacity": "0.999732",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 160,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 177,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 192,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 16,
+        "opacity": "0.731857",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 29,
+        "opacity": "0.854981",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 45,
+        "opacity": "0.915991",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 58,
+        "opacity": "0.915991",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 74,
+        "opacity": "0.951981",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 91,
+        "opacity": "0.974554",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 107,
+        "opacity": "0.988533",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 123,
+        "opacity": "0.996429",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 140,
+        "opacity": "0.999734",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 155,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 170,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 186,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 18,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 31,
+        "opacity": "0.731534",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 48,
+        "opacity": "0.854823",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 63,
+        "opacity": "0.915904",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 78,
+        "opacity": "0.951927",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 97,
+        "opacity": "0.97452",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 111,
+        "opacity": "0.988513",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 127,
+        "opacity": "0.99642",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 143,
+        "opacity": "0.999732",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 160,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 174,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 191,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 27,
+        "opacity": "0.731534",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 32,
+        "opacity": "0.731534",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 48,
+        "opacity": "0.854823",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 65,
+        "opacity": "0.915904",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 80,
+        "opacity": "0.951927",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 97,
+        "opacity": "0.97452",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 113,
+        "opacity": "0.988513",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 129,
+        "opacity": "0.996418",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 144,
+        "opacity": "0.999732",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 161,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 177,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 193,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 13,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 30,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 44,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 61,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 77,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 101,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 112,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 126,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 142,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 157,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 177,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 9,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 22,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 36,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 52,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 73,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 10,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 32,
+        "opacity": "0.854774",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 44,
+        "opacity": "0.915877",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 57,
+        "opacity": "0.915882",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 100,
+        "opacity": "",
+        "connected": false
+      }
+    ],
+    "effects": [
+      {
+        "node": "p08-card p08-day-activities",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "p08-card p08-day-activities",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "p08-list",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "p08-list",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "p08-tab-attachments",
+        "primitive": "HistoryTab",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "node": "hn-main",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "node": "hn-destination",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      }
+    ],
+    "domain": {
+      "ids": [
+        "B08-ACT-1",
+        "B08-ACT-2",
+        "B08-ACT-3",
+        "B08-ACT-4",
+        "B08-ACT-5",
+        "B08-ACT-6",
+        "B08-ACT-7",
+        "B08-ACT-8",
+        "B08-ACT-9",
+        "B08-ACT-10",
+        "B08-ACT-11",
+        "B08-ACT-12",
+        "B08-ACT-13",
+        "B08-ACT-14",
+        "B08-ACT-15",
+        "B08-ACT-16",
+        "B08-ACT-17",
+        "B08-ACT-18",
+        "B08-ACT-19",
+        "B08-ACT-20",
+        "B08-ACT-21",
+        "B08-ACT-22",
+        "B08-ACT-23",
+        "B08-ACT-24",
+        "B08-ACT-25",
+        "B08-ACT-26",
+        "B08-ACT-27",
+        "B08-ACT-28",
+        "B08-ACT-29",
+        "B08-ACT-30",
+        "B08-ACT-31",
+        "B08-ACT-32",
+        "B08-ACT-33",
+        "B08-ACT-34",
+        "B08-ACT-35",
+        "B08-ACT-36",
+        "B08-ACT-37",
+        "B08-ACT-38",
+        "B08-ACT-39",
+        "B08-ACT-40",
+        "B08-ACT-41",
+        "B08-ACT-42",
+        "B08-ACT-43",
+        "B08-ACT-44",
+        "B08-ACT-45",
+        "B08-ACT-46",
+        "B08-ACT-47",
+        "B08-ACT-48"
+      ],
+      "sessions": [
+        {
+          "id": "PQ-0003",
+          "eventIds": [],
+          "total": 2,
+          "accepted": 2,
+          "duplicate": 0
+        },
+        {
+          "id": "PQ-0002",
+          "eventIds": [],
+          "total": 12,
+          "accepted": 12,
+          "duplicate": 0
+        },
+        {
+          "id": "PQ-0001",
+          "eventIds": [
+            "B08-SCAN-1",
+            "B08-SCAN-2",
+            "B08-SCAN-3",
+            "B08-SCAN-4",
+            "B08-SCAN-5",
+            "B08-SCAN-6",
+            "B08-SCAN-7",
+            "B08-SCAN-8",
+            "B08-SCAN-9",
+            "B08-SCAN-10",
+            "B08-SCAN-11",
+            "B08-SCAN-12",
+            "B08-SCAN-13",
+            "B08-SCAN-14",
+            "B08-SCAN-15",
+            "B08-SCAN-16",
+            "B08-SCAN-17",
+            "B08-SCAN-18",
+            "B08-SCAN-19"
+          ],
+          "total": 19,
+          "accepted": 18,
+          "duplicate": 1
+        }
+      ],
+      "hardware": 0
+    }
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "filter140/tab140; input stays connected and no shell replay for query/type",
+      "load more appends stable rows; detail Back retains order/count/scroll and no row entrances",
+      "S02 route uses shell once; table ordering and tab keyboard/Back semantics unchanged",
+      "S03 historical events immediate and static; expand/Back never generates or replays events",
+      "S04 dates/counters update immediately; fade content only and retain native scroll",
+      "obsolete deferred date callback cannot replace a newer date or survive leaving module",
+      "mode switch, OS reduction, hidden page and rapid route cancel obsolete animation",
+      "P12 document and P18 attachment edges return correct P08 record; no physical service calls",
+      "ten enter/leave cycles return listener count; error/unknown data modes remain truthful",
+      "logout immediately removes protected history and Back never restores it"
+    ],
+    "geometry": {
+      "P08.S01": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": [
+          18,
+          318,
+          458,
+          686.28125
+        ],
+        ".p08-detail-hero": null,
+        ".p08-counters": null,
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S02": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": [
+          18,
+          92,
+          458,
+          161.9375
+        ],
+        ".p08-counters": null,
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S03": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": null,
+        ".p08-counters": [
+          18,
+          399.390625,
+          458,
+          87.796875
+        ],
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S04": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": null,
+        ".p08-counters": null,
+        ".p08-day-overview": [
+          18,
+          266,
+          458,
+          305
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      }
+    },
+    "errors": [],
+    "profile": {
+      "nodes": 144,
+      "rows": 6,
+      "scroll": "native"
+    },
+    "listProfile": {
+      "rows": 18,
+      "nodes": 336
+    },
+    "labels": [
+      "Kho",
+      "Người thao tác",
+      "Thời gian"
+    ],
+    "timelineIds": [
+      "B08-LS1-E1",
+      "B08-LS1-E2",
+      "B08-LS1-E3",
+      "B08-LS1-E4"
+    ],
+    "counters": [
+      "19",
+      "18",
+      "1"
+    ],
+    "scanIds": [
+      "B08-SCAN-1",
+      "B08-SCAN-2",
+      "B08-SCAN-3",
+      "B08-SCAN-4",
+      "B08-SCAN-5",
+      "B08-SCAN-6",
+      "B08-SCAN-7",
+      "B08-SCAN-8",
+      "B08-SCAN-9",
+      "B08-SCAN-10",
+      "B08-SCAN-11",
+      "B08-SCAN-12",
+      "B08-SCAN-13",
+      "B08-SCAN-14",
+      "B08-SCAN-15",
+      "B08-SCAN-16",
+      "B08-SCAN-17",
+      "B08-SCAN-18",
+      "B08-SCAN-19"
+    ],
+    "dayCounts": [
+      "12",
+      "6",
+      "4",
+      "3",
+      "5",
+      "30"
+    ],
+    "frames": [
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 10,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 25,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 37,
+        "opacity": "0.832604",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 54,
+        "opacity": "0.936144",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 69,
+        "opacity": "0.978787",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 85,
+        "opacity": "0.996448",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 100,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 117,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 133,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 149,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 166,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 181,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 20,
+        "opacity": "0.833037",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 19,
+        "opacity": "0.833037",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 36,
+        "opacity": "0.936301",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 35,
+        "opacity": "0.936301",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 47,
+        "opacity": "0.936301",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 46,
+        "opacity": "0.936301",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 63,
+        "opacity": "0.978807",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 62,
+        "opacity": "0.978807",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 79,
+        "opacity": "0.996455",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 79,
+        "opacity": "0.996455",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 95,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 94,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 110,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 109,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 128,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 127,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 142,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 141,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 159,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 158,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 175,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 174,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 190,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 189,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 19,
+        "opacity": "0.83215",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 39,
+        "opacity": "0.93598",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 49,
+        "opacity": "0.93598",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 65,
+        "opacity": "0.978665",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 80,
+        "opacity": "0.996406",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 97,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 113,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 129,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 145,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 160,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 176,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 193,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 13,
+        "opacity": "0.832687",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 25,
+        "opacity": "0.936174",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 40,
+        "opacity": "0.978751",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 55,
+        "opacity": "0.978751",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 70,
+        "opacity": "0.996436",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 86,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 102,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 119,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 135,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 150,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 167,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 182,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 23,
+        "opacity": "0.83246",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 43,
+        "opacity": "0.936092",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 51,
+        "opacity": "0.936092",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 67,
+        "opacity": "0.978714",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 83,
+        "opacity": "0.996423",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 98,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 115,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 131,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 147,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 162,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 178,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 195,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 29,
+        "opacity": "0.832769",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 39,
+        "opacity": "0.936204",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 55,
+        "opacity": "0.978764",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 71,
+        "opacity": "0.978764",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 87,
+        "opacity": "0.99644",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 102,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 118,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 135,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 151,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 166,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 183,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 14,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 29,
+        "opacity": "0.832708",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 37,
+        "opacity": "0.832708",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 52,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 69,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 81,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 100,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 116,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 133,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 147,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 162,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 178,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 8,
+        "opacity": "0.65",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 24,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 42,
+        "opacity": "1",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryFilter",
+        "elapsed": 64,
+        "opacity": "",
+        "connected": false
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 13,
+        "opacity": "0.832584",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 31,
+        "opacity": "0.936137",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 45,
+        "opacity": "0.936137",
+        "connected": true
+      },
+      {
+        "primitive": "HistoryTab",
+        "elapsed": 94,
+        "opacity": "",
+        "connected": false
+      }
+    ],
+    "effects": [
+      {
+        "node": "p08-card p08-day-activities",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "p08-card p08-day-activities",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "p08-list",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "p08-list",
+        "primitive": "HistoryFilter",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "p08-tab-attachments",
+        "primitive": "HistoryTab",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "node": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      }
+    ],
+    "domain": {
+      "ids": [
+        "B08-ACT-1",
+        "B08-ACT-2",
+        "B08-ACT-3",
+        "B08-ACT-4",
+        "B08-ACT-5",
+        "B08-ACT-6",
+        "B08-ACT-7",
+        "B08-ACT-8",
+        "B08-ACT-9",
+        "B08-ACT-10",
+        "B08-ACT-11",
+        "B08-ACT-12",
+        "B08-ACT-13",
+        "B08-ACT-14",
+        "B08-ACT-15",
+        "B08-ACT-16",
+        "B08-ACT-17",
+        "B08-ACT-18",
+        "B08-ACT-19",
+        "B08-ACT-20",
+        "B08-ACT-21",
+        "B08-ACT-22",
+        "B08-ACT-23",
+        "B08-ACT-24",
+        "B08-ACT-25",
+        "B08-ACT-26",
+        "B08-ACT-27",
+        "B08-ACT-28",
+        "B08-ACT-29",
+        "B08-ACT-30",
+        "B08-ACT-31",
+        "B08-ACT-32",
+        "B08-ACT-33",
+        "B08-ACT-34",
+        "B08-ACT-35",
+        "B08-ACT-36",
+        "B08-ACT-37",
+        "B08-ACT-38",
+        "B08-ACT-39",
+        "B08-ACT-40",
+        "B08-ACT-41",
+        "B08-ACT-42",
+        "B08-ACT-43",
+        "B08-ACT-44",
+        "B08-ACT-45",
+        "B08-ACT-46",
+        "B08-ACT-47",
+        "B08-ACT-48"
+      ],
+      "sessions": [
+        {
+          "id": "PQ-0003",
+          "eventIds": [],
+          "total": 2,
+          "accepted": 2,
+          "duplicate": 0
+        },
+        {
+          "id": "PQ-0002",
+          "eventIds": [],
+          "total": 12,
+          "accepted": 12,
+          "duplicate": 0
+        },
+        {
+          "id": "PQ-0001",
+          "eventIds": [
+            "B08-SCAN-1",
+            "B08-SCAN-2",
+            "B08-SCAN-3",
+            "B08-SCAN-4",
+            "B08-SCAN-5",
+            "B08-SCAN-6",
+            "B08-SCAN-7",
+            "B08-SCAN-8",
+            "B08-SCAN-9",
+            "B08-SCAN-10",
+            "B08-SCAN-11",
+            "B08-SCAN-12",
+            "B08-SCAN-13",
+            "B08-SCAN-14",
+            "B08-SCAN-15",
+            "B08-SCAN-16",
+            "B08-SCAN-17",
+            "B08-SCAN-18",
+            "B08-SCAN-19"
+          ],
+          "total": 19,
+          "accepted": 18,
+          "duplicate": 1
+        }
+      ],
+      "hardware": 0
+    }
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "filter140/tab140; input stays connected and no shell replay for query/type",
+      "load more appends stable rows; detail Back retains order/count/scroll and no row entrances",
+      "S02 route uses shell once; table ordering and tab keyboard/Back semantics unchanged",
+      "S03 historical events immediate and static; expand/Back never generates or replays events",
+      "S04 dates/counters update immediately; fade content only and retain native scroll",
+      "obsolete deferred date callback cannot replace a newer date or survive leaving module",
+      "mode switch, OS reduction, hidden page and rapid route cancel obsolete animation",
+      "P12 document and P18 attachment edges return correct P08 record; no physical service calls",
+      "ten enter/leave cycles return listener count; error/unknown data modes remain truthful",
+      "logout immediately removes protected history and Back never restores it"
+    ],
+    "geometry": {
+      "P08.S01": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": [
+          18,
+          318,
+          458,
+          686.28125
+        ],
+        ".p08-detail-hero": null,
+        ".p08-counters": null,
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S02": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": [
+          18,
+          92,
+          458,
+          161.9375
+        ],
+        ".p08-counters": null,
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S03": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": null,
+        ".p08-counters": [
+          18,
+          399.390625,
+          458,
+          87.796875
+        ],
+        ".p08-day-overview": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      },
+      "P08.S04": {
+        ".p08-header": [
+          0,
+          0,
+          494,
+          86
+        ],
+        ".p08-scroll": [
+          0,
+          74,
+          494,
+          801
+        ],
+        ".p08-list": null,
+        ".p08-detail-hero": null,
+        ".p08-counters": null,
+        ".p08-day-overview": [
+          18,
+          266,
+          458,
+          305
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ]
+      }
+    },
+    "errors": [],
+    "profile": {
+      "nodes": 144,
+      "rows": 6,
+      "scroll": "native"
+    },
+    "listProfile": {
+      "rows": 18,
+      "nodes": 336
+    },
+    "labels": [
+      "Kho",
+      "Người thao tác",
+      "Thời gian"
+    ],
+    "timelineIds": [
+      "B08-LS1-E1",
+      "B08-LS1-E2",
+      "B08-LS1-E3",
+      "B08-LS1-E4"
+    ],
+    "counters": [
+      "19",
+      "18",
+      "1"
+    ],
+    "scanIds": [
+      "B08-SCAN-1",
+      "B08-SCAN-2",
+      "B08-SCAN-3",
+      "B08-SCAN-4",
+      "B08-SCAN-5",
+      "B08-SCAN-6",
+      "B08-SCAN-7",
+      "B08-SCAN-8",
+      "B08-SCAN-9",
+      "B08-SCAN-10",
+      "B08-SCAN-11",
+      "B08-SCAN-12",
+      "B08-SCAN-13",
+      "B08-SCAN-14",
+      "B08-SCAN-15",
+      "B08-SCAN-16",
+      "B08-SCAN-17",
+      "B08-SCAN-18",
+      "B08-SCAN-19"
+    ],
+    "dayCounts": [
+      "12",
+      "6",
+      "4",
+      "3",
+      "5",
+      "30"
+    ],
+    "frames": [],
+    "effects": [],
+    "domain": {
+      "ids": [
+        "B08-ACT-1",
+        "B08-ACT-2",
+        "B08-ACT-3",
+        "B08-ACT-4",
+        "B08-ACT-5",
+        "B08-ACT-6",
+        "B08-ACT-7",
+        "B08-ACT-8",
+        "B08-ACT-9",
+        "B08-ACT-10",
+        "B08-ACT-11",
+        "B08-ACT-12",
+        "B08-ACT-13",
+        "B08-ACT-14",
+        "B08-ACT-15",
+        "B08-ACT-16",
+        "B08-ACT-17",
+        "B08-ACT-18",
+        "B08-ACT-19",
+        "B08-ACT-20",
+        "B08-ACT-21",
+        "B08-ACT-22",
+        "B08-ACT-23",
+        "B08-ACT-24",
+        "B08-ACT-25",
+        "B08-ACT-26",
+        "B08-ACT-27",
+        "B08-ACT-28",
+        "B08-ACT-29",
+        "B08-ACT-30",
+        "B08-ACT-31",
+        "B08-ACT-32",
+        "B08-ACT-33",
+        "B08-ACT-34",
+        "B08-ACT-35",
+        "B08-ACT-36",
+        "B08-ACT-37",
+        "B08-ACT-38",
+        "B08-ACT-39",
+        "B08-ACT-40",
+        "B08-ACT-41",
+        "B08-ACT-42",
+        "B08-ACT-43",
+        "B08-ACT-44",
+        "B08-ACT-45",
+        "B08-ACT-46",
+        "B08-ACT-47",
+        "B08-ACT-48"
+      ],
+      "sessions": [
+        {
+          "id": "PQ-0003",
+          "eventIds": [],
+          "total": 2,
+          "accepted": 2,
+          "duplicate": 0
+        },
+        {
+          "id": "PQ-0002",
+          "eventIds": [],
+          "total": 12,
+          "accepted": 12,
+          "duplicate": 0
+        },
+        {
+          "id": "PQ-0001",
+          "eventIds": [
+            "B08-SCAN-1",
+            "B08-SCAN-2",
+            "B08-SCAN-3",
+            "B08-SCAN-4",
+            "B08-SCAN-5",
+            "B08-SCAN-6",
+            "B08-SCAN-7",
+            "B08-SCAN-8",
+            "B08-SCAN-9",
+            "B08-SCAN-10",
+            "B08-SCAN-11",
+            "B08-SCAN-12",
+            "B08-SCAN-13",
+            "B08-SCAN-14",
+            "B08-SCAN-15",
+            "B08-SCAN-16",
+            "B08-SCAN-17",
+            "B08-SCAN-18",
+            "B08-SCAN-19"
+          ],
+          "total": 19,
+          "accepted": 18,
+          "duplicate": 1
+        }
+      ],
+      "hardware": 0
+    }
+  }
+]

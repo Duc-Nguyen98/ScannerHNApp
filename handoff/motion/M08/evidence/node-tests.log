@@ -1,0 +1,352 @@
+TAP version 13
+# Subtest: Business sample extension has unique IDs, complete calendar dates, known statuses and immutable data
+ok 1 - Business sample extension has unique IDs, complete calendar dates, known statuses and immutable data
+  ---
+  duration_ms: 4.3474
+  type: 'test'
+  ...
+# Subtest: Every session reconciles code counts, duplicates and quantity with its data
+ok 2 - Every session reconciles code counts, duplicates and quantity with its data
+  ---
+  duration_ms: 0.6133
+  type: 'test'
+  ...
+# Subtest: Shared business filtering combines query/type/date/status and stable sort without mutation
+ok 3 - Shared business filtering combines query/type/date/status and stable sort without mutation
+  ---
+  duration_ms: 2.2313
+  type: 'test'
+  ...
+# Subtest: only verified, scoped receipts enter the shared history source
+ok 4 - only verified, scoped receipts enter the shared history source
+  ---
+  duration_ms: 4.1956
+  type: 'test'
+  ...
+# Subtest: same display number does not merge distinct B08 and current receipts
+ok 5 - same display number does not merge distinct B08 and current receipts
+  ---
+  duration_ms: 0.7231
+  type: 'test'
+  ...
+# Subtest: daily totals and filters include a verified receipt once, without mutating legacy seed
+ok 6 - daily totals and filters include a verified receipt once, without mutating legacy seed
+  ---
+  duration_ms: 1.4239
+  type: 'test'
+  ...
+# Subtest: exact baseline document identity is replaced, not counted twice or given a legacy session
+ok 7 - exact baseline document identity is replaced, not counted twice or given a legacy session
+  ---
+  duration_ms: 0.6631
+  type: 'test'
+  ...
+# Subtest: known documents/files get real links; unmapped details retain unavailable state
+ok 8 - known documents/files get real links; unmapped details retain unavailable state
+  ---
+  duration_ms: 1.2943
+  type: 'test'
+  ...
+# Subtest: Known warranty received/handover states never render as unknown or completed
+ok 9 - Known warranty received/handover states never render as unknown or completed
+  ---
+  duration_ms: 2.8771
+  type: 'test'
+  ...
+# Subtest: Calendar keyboard follows real dates across month/leap boundaries without selecting or exceeding bounds
+ok 10 - Calendar keyboard follows real dates across month/leap boundaries without selecting or exceeding bounds
+  ---
+  duration_ms: 2.1862
+  type: 'test'
+  ...
+# Subtest: P08 r05 processing/waiting are not completion; unknown fails closed
+ok 11 - P08 r05 processing/waiting are not completion; unknown fails closed
+  ---
+  duration_ms: 3.0399
+  type: 'test'
+  ...
+# Subtest: P08 r05 exact events and sources preserved; escaped and absent data honest
+ok 12 - P08 r05 exact events and sources preserved; escaped and absent data honest
+  ---
+  duration_ms: 0.8052
+  type: 'test'
+  ...
+# Subtest: P08 custom date parser validates exact calendar dates, blank and leap years
+ok 13 - P08 custom date parser validates exact calendar dates, blank and leap years
+  ---
+  duration_ms: 10.2236
+  type: 'test'
+  ...
+# Subtest: Filter draft defaults to actual Vietnam today without changing committed all-days filters
+ok 14 - Filter draft defaults to actual Vietnam today without changing committed all-days filters
+  ---
+  duration_ms: 46.0795
+  type: 'test'
+  ...
+# Subtest: Live validation flags both reverse endpoints, permits equality/empty, blocks invalid calendar dates
+ok 15 - Live validation flags both reverse endpoints, permits equality/empty, blocks invalid calendar dates
+  ---
+  duration_ms: 1.5205
+  type: 'test'
+  ...
+# Subtest: Each calendar intersects global90-day boundary with the opposite valid endpoint
+ok 16 - Each calendar intersects global90-day boundary with the opposite valid endpoint
+  ---
+  duration_ms: 4.9446
+  type: 'test'
+  ...
+# Subtest: Reset draft has actual Vietnam today in both fields, including midnight/year boundary
+ok 17 - Reset draft has actual Vietnam today in both fields, including midnight/year boundary
+  ---
+  duration_ms: 1.6993
+  type: 'test'
+  ...
+# Subtest: All history filters start unbounded, including documents; aggregate covers48 unique activities
+ok 18 - All history filters start unbounded, including documents; aggregate covers48 unique activities
+  ---
+  duration_ms: 5.3161
+  type: 'test'
+  ...
+# Subtest: Range aggregate includes both endpoints and carries query/status into exact drilldown
+ok 19 - Range aggregate includes both endpoints and carries query/status into exact drilldown
+  ---
+  duration_ms: 1.8093
+  type: 'test'
+  ...
+# Subtest: Unavailable and unmatched results remain distinct; all-days keeps older dates accessible
+ok 20 - Unavailable and unmatched results remain distinct; all-days keeps older dates accessible
+  ---
+  duration_ms: 0.6525
+  type: 'test'
+  ...
+# Subtest: History search folds uppercase Đ consistently in queries and source data
+ok 21 - History search folds uppercase Đ consistently in queries and source data
+  ---
+  duration_ms: 2.247
+  type: 'test'
+  ...
+# Subtest: Quick ranges contain exactly N calendar days inclusive; respect Vietnam midnight/leap/year and90-day window
+ok 22 - Quick ranges contain exactly N calendar days inclusive; respect Vietnam midnight/leap/year and90-day window
+  ---
+  duration_ms: 41.3801
+  type: 'test'
+  ...
+# Subtest: Remove refinements retains selected operation, document scope and sort without mutating committed object
+ok 23 - Remove refinements retains selected operation, document scope and sort without mutating committed object
+  ---
+  duration_ms: 1.3158
+  type: 'test'
+  ...
+# Subtest: All6 list memory keys are distinct; daily cannot overwrite general or documents
+ok 24 - All6 list memory keys are distinct; daily cannot overwrite general or documents
+  ---
+  duration_ms: 0.2478
+  type: 'test'
+  ...
+# Subtest: Active filter indicator is accessible and history-scoped; P12 remains opt-out
+ok 25 - Active filter indicator is accessible and history-scoped; P12 remains opt-out
+  ---
+  duration_ms: 1.1847
+  type: 'test'
+  ...
+# Subtest: P08.r02 documents entry/clear retains inbound-outbound scope over shared source
+ok 26 - P08.r02 documents entry/clear retains inbound-outbound scope over shared source
+  ---
+  duration_ms: 3.2583
+  type: 'test'
+  ...
+# Subtest: P08.r02 missing session identity stays missing; baseline/fixtures retained
+ok 27 - P08.r02 missing session identity stays missing; baseline/fixtures retained
+  ---
+  duration_ms: 11.7416
+  type: 'test'
+  ...
+# Subtest: P08.A01 combined query/date/status retains operation scope
+ok 28 - P08.A01 combined query/date/status retains operation scope
+  ---
+  duration_ms: 0.7761
+  type: 'test'
+  ...
+# Subtest: P08.A02 exact immutable record/document/event identity; no Post tick
+ok 29 - P08.A02 exact immutable record/document/event identity; no Post tick
+  ---
+  duration_ms: 0.6699
+  type: 'test'
+  ...
+# Subtest: P08.A03 19=18+1; duplicate and NFC do not add quantity; event IDs deduplicated
+ok 30 - P08.A03 19=18+1; duplicate and NFC do not add quantity; event IDs deduplicated
+  ---
+  duration_ms: 1.58
+  type: 'test'
+  ...
+# Subtest: P08.A04 total 30 from full disjoint fixture, not list page, missing is not zero
+ok 31 - P08.A04 total 30 from full disjoint fixture, not list page, missing is not zero
+  ---
+  duration_ms: 1.1672
+  type: 'test'
+  ...
+# Subtest: P08.A05 single shared source with exact event/session links and no auth secrets
+ok 32 - P08.A05 single shared source with exact event/session links and no auth secrets
+  ---
+  duration_ms: 1.5439
+  type: 'test'
+  ...
+# Subtest: sort is stable and direction works without mutating source
+ok 33 - sort is stable and direction works without mutating source
+  ---
+  duration_ms: 23.8812
+  type: 'test'
+  ...
+# Subtest: KPI count uses the same complete fixture source/status selection as destination lists
+ok 34 - KPI count uses the same complete fixture source/status selection as destination lists
+  ---
+  duration_ms: 5.4277
+  type: 'test'
+  ...
+# Subtest: Open grouping excludes returned/unknown statuses and follows case updates
+ok 35 - Open grouping excludes returned/unknown statuses and follows case updates
+  ---
+  duration_ms: 4.312
+  type: 'test'
+  ...
+# Subtest: Confirmed local records are deduplicated and unknown KPI source never falls back to a fake count
+ok 36 - Confirmed local records are deduplicated and unknown KPI source never falls back to a fake count
+  ---
+  duration_ms: 2.6456
+  type: 'test'
+  ...
+# Subtest: Home shows at most three newest actual P12 IDs/statuses, using the same order as View all
+ok 37 - Home shows at most three newest actual P12 IDs/statuses, using the same order as View all
+  ---
+  duration_ms: 6.1695
+  type: 'test'
+  ...
+# Subtest: Calendar order spans months/years and equal timestamps use stable IDs
+ok 38 - Calendar order spans months/years and equal timestamps use stable IDs
+  ---
+  duration_ms: 2.9057
+  type: 'test'
+  ...
+# Subtest: Less than three/empty/missing dates never produce fake rows or render-time timestamps
+ok 39 - Less than three/empty/missing dates never produce fake rows or render-time timestamps
+  ---
+  duration_ms: 1.1346
+  type: 'test'
+  ...
+# Subtest: New confirmed receipt appears on Home once, while another warehouse stays outside scope
+ok 40 - New confirmed receipt appears on Home once, while another warehouse stays outside scope
+  ---
+  duration_ms: 2.1765
+  type: 'test'
+  ...
+# Subtest: Resume shortcuts keep owner identity and exclude another scope/finished/unverified documents
+ok 41 - Resume shortcuts keep owner identity and exclude another scope/finished/unverified documents
+  ---
+  duration_ms: 3.1311
+  type: 'test'
+  ...
+# Subtest: UNKNOWN and busy work never become normal resume/success and multiple owners remain explicit
+ok 42 - UNKNOWN and busy work never become normal resume/success and multiple owners remain explicit
+  ---
+  duration_ms: 0.2943
+  type: 'test'
+  ...
+# Subtest: Relative labels use Vietnam midnight, preserve absolute old dates and include older years
+ok 43 - Relative labels use Vietnam midnight, preserve absolute old dates and include older years
+  ---
+  duration_ms: 0.5116
+  type: 'test'
+  ...
+# Subtest: P01 fixture session supplies Home identity and warehouse, only after start
+ok 44 - P01 fixture session supplies Home identity and warehouse, only after start
+  ---
+  duration_ms: 52.1024
+  type: 'test'
+  ...
+# Subtest: every Home destination keeps its prompt mapping; history uses the existing hub
+ok 45 - every Home destination keeps its prompt mapping; history uses the existing hub
+  ---
+  duration_ms: 15.0971
+  type: 'test'
+  ...
+# Subtest: recent document and case IDs cannot be dropped, swapped or invented
+ok 46 - recent document and case IDs cannot be dropped, swapped or invented
+  ---
+  duration_ms: 16.7517
+  type: 'test'
+  ...
+# Subtest: direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions
+ok 47 - direct routes and actions fail closed for denied, stopped, expired, unknown and logged-out sessions
+  ---
+  duration_ms: 156.2363
+  type: 'test'
+  ...
+# Subtest: active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped
+ok 48 - active session can reopen NFC for inspection/reconciliation while warehouse writes are stopped
+  ---
+  duration_ms: 14.9575
+  type: 'test'
+  ...
+# Subtest: UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts
+ok 49 - UNKNOWN KPI/badge never falls back to board numbers or inferred recent counts
+  ---
+  duration_ms: 33.3349
+  type: 'test'
+  ...
+# Subtest: navigation rejects inherited keys/malformed routes and carries no credential/session token
+ok 50 - navigation rejects inherited keys/malformed routes and carries no credential/session token
+  ---
+  duration_ms: 13.292
+  type: 'test'
+  ...
+# Subtest: Shell reuses one route owner; replacement cancels old effect, repeated identity never replays
+ok 51 - Shell reuses one route owner; replacement cancels old effect, repeated identity never replays
+  ---
+  duration_ms: 3.2567
+  type: 'test'
+  ...
+# Subtest: OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks
+ok 52 - OS/off/hidden and dispose cancel motion without owning navigation or domain callbacks
+  ---
+  duration_ms: 8.9685
+  type: 'test'
+  ...
+# Subtest: Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles
+ok 53 - Ten shell lifecycles leave no pointer/key/media/visibility listeners or active handles
+  ---
+  duration_ms: 1.2575
+  type: 'test'
+  ...
+# Subtest: M08 filter/tab consume the existing140ms primitive, cancellation cleans before hide/reactivate/dispose
+ok 54 - M08 filter/tab consume the existing140ms primitive, cancellation cleans before hide/reactivate/dispose
+  ---
+  duration_ms: 3.0995
+  type: 'test'
+  ...
+# Subtest: M08 OS reduction, off and hidden cancel presentation; inactive owner has no effects
+ok 55 - M08 OS reduction, off and hidden cancel presentation; inactive owner has no effects
+  ---
+  duration_ms: 0.6617
+  type: 'test'
+  ...
+# Subtest: 90-day inclusive boundary in Vietnam: today and day90 valid, day91/future locked
+ok 56 - 90-day inclusive boundary in Vietnam: today and day90 valid, day91/future locked
+  ---
+  duration_ms: 34.3708
+  type: 'test'
+  ...
+# Subtest: Calendar-day arithmetic crosses Vietnam midnight, leap/month/year boundaries
+ok 57 - Calendar-day arithmetic crosses Vietnam midnight, leap/month/year boundaries
+  ---
+  duration_ms: 2.2764
+  type: 'test'
+  ...
+1..57
+# tests 57
+# suites 0
+# pass 57
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1770.7226
