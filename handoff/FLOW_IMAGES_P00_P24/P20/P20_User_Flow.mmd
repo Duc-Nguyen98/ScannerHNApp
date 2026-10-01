@@ -1,0 +1,37 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P20_user_in["P09 / P19 / P21 / P23<br/>Mang đúng Case ID"]:::action
+  P20_user_s1["<b>P20.S01</b><br/>Linh kiện đã xuất<br/>Phiếu POSTED của hồ sơ"]:::panel
+  P20_user_s2["<b>P20.S02</b><br/>Tải thêm lịch sử<br/>Giữ các dòng đã đọc"]:::panel
+  P20_user_s3["<b>P20.S03</b><br/>Lỗi tải thêm<br/>Giữ cursor và cache"]:::panel
+  P20_user_s4["<b>P20.S04</b><br/>Nguồn xác nhận chưa có phiếu"]:::panel
+  P20_user_retry["Thử tải lại cùng context<br/>Chỉ đọc, không Post"]:::action
+  P20_user_detail["Mở rộng phiếu / Xem dòng linh kiện<br/>Không đổi quantity"]:::action
+  P20_user_next["Có phiếu linh kiện đang làm?"]:::guard
+  P20_user_resume["P21 · Tiếp tục / Đối chiếu"]:::action
+  P20_user_issue["P19 · Xuất linh kiện mới<br/>Chỉ khi case mở và được phép"]:::action
+  P20_user_closed["P24.S04 · Hồ sơ đã trả khách<br/>Chỉ đọc; P23 xem quá trình"]:::action
+  P20_user_back["Back đúng caller<br/>Giữ cuộn, focus, phiếu vừa chọn"]:::action
+  P20_user_in -->|"Nguồn có phiếu"| P20_user_s1
+  P20_user_in -->|"Verified empty"| P20_user_s4
+  P20_user_s1 -->|"Tải thêm"| P20_user_s2
+  P20_user_s2 -->|"Thành công / Dedup"| P20_user_s1
+  P20_user_s2 -->|"Lỗi"| P20_user_s3
+  P20_user_s3 --> P20_user_retry
+  P20_user_retry --> P20_user_s2
+  P20_user_s1 --> P20_user_detail
+  P20_user_detail -->|"Thu gọn"| P20_user_s1
+  P20_user_s1 -->|"Xuất / Tiếp tục"| P20_user_next
+  P20_user_s4 --> P20_user_next
+  P20_user_next -->|"Có draft hoặc UNKNOWN"| P20_user_resume
+  P20_user_next -->|"Không draft + Đủ quyền"| P20_user_issue
+  P20_user_s1 -->|"Case đóng"| P20_user_closed
+  P20_user_closed --> P20_user_back
+  P20_user_s1 --> P20_user_back
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

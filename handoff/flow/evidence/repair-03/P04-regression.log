@@ -1,0 +1,20 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'DIV' !== 'BUTTON'
+
+    at eval (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:52:3), <anonymous>:32:644)
+    at async check (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:52:3), <anonymous>:13:32)
+    at async eval (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:52:3), <anonymous>:32:2) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'DIV',
+  expected: 'BUTTON',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

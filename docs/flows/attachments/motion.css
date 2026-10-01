@@ -1,0 +1,25 @@
+/* M18 local descendants only. Geometry, input values and domain state are static. */
+#hn-destination.hn-attachments[data-hn-motion-mode] .p18-app button{
+ transition-property:background-color,color,border-color;
+ transition-duration:var(--hn-motion-press);
+ transition-timing-function:var(--hn-motion-ease-standard);
+}
+#hn-destination.hn-attachments[data-hn-motion-mode] .p18-app .p18-slot{
+ transition-property:border-color,box-shadow;
+ transition-duration:var(--hn-motion-feedback);
+}
+.p18-progress-track{flex:1;min-width:0;height:9px;position:relative;border-radius:8px;background:#e4eef3}
+.p18-progress-track progress{position:absolute;inset:0;margin:0;opacity:0;width:100%;height:9px}
+.p18-progress-fill{display:block;height:9px;background:#0094c4;border-radius:8px;transition:width var(--hn-motion-press) var(--hn-motion-ease-standard)}
+#hn-destination.hn-attachments[data-hn-motion-mode="reduced"] .p18-progress-fill,
+#hn-destination.hn-attachments[data-hn-motion-mode="off"] .p18-progress-fill,
+#hn-destination.hn-attachments[data-hn-motion-mode="reduced"] .p18-app .p18-slot,
+#hn-destination.hn-attachments[data-attachment-motion-hidden="true"] .p18-app button,
+#hn-destination.hn-attachments[data-attachment-motion-hidden="true"] .p18-app .p18-slot,
+#hn-destination.hn-attachments[data-attachment-motion-hidden="true"] .p18-progress-fill,
+#hn-destination.hn-attachments[inert] .p18-app button,
+#hn-destination.hn-attachments[inert] .p18-app .p18-slot,
+#hn-destination.hn-attachments[inert] .p18-progress-fill,
+#hn-destination.hn-attachments[data-hn-motion-mode] .p18-app button:disabled,
+#hn-destination.hn-attachments[data-hn-motion-mode] .p18-app button[aria-disabled="true"]{transition-duration:0ms}
+.p18-page-surface{display:block}

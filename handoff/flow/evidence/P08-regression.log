@@ -1,0 +1,17 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#p08-search') to be visible[22m
+
+    at hub (<anonymous>:8:169)
+    at async eval (<anonymous>:13:98)
+    at async check (<anonymous>:9:31)
+    at async eval (<anonymous>:12:1) {
+  log: [ "  - waiting for locator('#p08-search') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

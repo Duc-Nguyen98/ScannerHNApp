@@ -1,0 +1,6 @@
+PASS Unavailable status dock opens/focuses reconciliation details without a read or record
+PASS Native Back/Forward and Escape do not replay scan or add duplicate exception history
+PASS Long invalid raw uses reader; Back closes reader first; six viewport geometry stays in app
+PASS Outbound blocked-code Back retains document and never records
+PASS NFC detail then exception consumes one Back each; mapping unchanged on return and Forward
+5 groups PASS

@@ -1,0 +1,41 @@
+✔ A01 independent code/name/SKU/serial search, scope, aggregate counts and immutable clear (4.7452ms)
+✔ A02 stock uses supplied totals with 12/10/1/1 and 6+3+2+1 positions (2.0377ms)
+✔ A03 real zero distinct from missing, SKU never substitutes serial (0.3826ms)
+✔ A04 print and warranty fail closed regardless of role, even if print capability true no implementation (52.612ms)
+✔ A05 inclusive type/range, invalid range and signed events independent of current stock (25.1579ms)
+✔ list context/scroll retained on detail and stock/history; IDs cannot open outside scope (1.8477ms)
+✔ capability-guarded document link identifies exact event and does not invent a matching document (1.5022ms)
+✔ session revoked hides data and actions; stopped warehouse remains read-only accessible (3.6716ms)
+✔ list scan context drops the previously viewed item while preserving query/category (8.7487ms)
+✔ invalid or impossible dates keep the committed filters and events; valid correction clears error (17.8919ms)
+✔ demo fills each catalogue item with coherent locations and distinct scoped history (16.4186ms)
+✔ missing-data scenario is reversible and does not erase demo inventory or event fixtures (0.4632ms)
+✔ P07.A01 unread and unsupported are gated without device calls (16.9825ms)
+✔ P07.A02 reading and prepare never create a mapping or receipt (50.6073ms)
+✔ P07.A03 conflict preserves current mapping and provides P17.S03 context (2.7533ms)
+✔ P07.A04 duplicate confirm yields one confirmed mapping and same tag detail/list (42.3694ms)
+✔ UNKNOWN preserves request and blocks blind retry; reconcile uses same receipt (44.9323ms)
+✔ Known failure retry retains request; fresh successful attempt resets read and identity (61.5666ms)
+✔ read permission, unsupported, read error and locked are distinct (15.8046ms)
+✔ warehouse stop and capability denial gate handlers, keep UID/session (16.2336ms)
+✔ P06 product selection carries exact independent fields and clears old UID (3.2795ms)
+✔ adapter search status and counts remain separate; no audit inferred from current tags (1.444ms)
+✔ invalid/expired scope hides data and late receipt cannot revive disposed flow (59.4084ms)
+✔ receipt must match UID/item/actor/warehouse/request; prepare or malformed cannot succeed (64.3954ms)
+✔ five consecutive links keep product and create distinct requests, preserve existing tag IDs/labels (187.7652ms)
+✔ changing demo UID invalidates prior read; busy/UNKNOWN cannot change it or product (62.5971ms)
+✔ scenario change at read step invalidates old UID; linked tag never fabricates a fresh success (45.2095ms)
+✔ UNKNOWN terminal reconciliation unlocks recovery without discarding the request (69.4643ms)
+✔ known failure retries same request in place; begin from list creates a fresh attempt (40.1104ms)
+✔ late confirmation preserves list navigation and confirms mapping without stealing screen (32.0804ms)
+✔ UNKNOWN can be reconciled while warehouse writes are stopped (46.739ms)
+✔ receipt nested actor mismatch is UNKNOWN; late reconciliation cannot clear a changed session (15.7227ms)
+✔ NFC search accepts product code and uppercase Vietnamese Đ (0.6739ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1515.8329

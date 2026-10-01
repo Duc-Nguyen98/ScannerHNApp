@@ -1,0 +1,39 @@
+/* User-approved Hoa Nam operation identity. Source of truth for all app screens. */
+:root{
+ --hn-op-inbound-ink:#0d6b60;--hn-op-inbound-soft:#eaf7f2;--hn-op-inbound-line:#c7e8df;
+ --hn-op-outbound-ink:#225fa2;--hn-op-outbound-soft:#edf4ff;--hn-op-outbound-line:#ccdef7;
+ --hn-op-warranty-ink:#95601a;--hn-op-warranty-soft:#fff5e6;--hn-op-warranty-line:#eedbbb;
+ --hn-op-nfc-ink:#7550a2;--hn-op-nfc-soft:#f3effb;--hn-op-nfc-line:#dfd2f0;
+ --hn-op-documents-ink:#466279;--hn-op-documents-soft:#eef3f7;--hn-op-documents-line:#d2dfe8;
+ --hn-op-sessions-ink:#4e5da8;--hn-op-sessions-soft:#eff1fd;--hn-op-sessions-line:#d4daf7;
+}
+[data-hn-operation="inbound"],[data-history-tone="inbound"]{--hn-operation-ink:var(--hn-op-inbound-ink);--hn-operation-soft:var(--hn-op-inbound-soft);--hn-operation-line:var(--hn-op-inbound-line)}
+[data-hn-operation="outbound"],[data-history-tone="outbound"]{--hn-operation-ink:var(--hn-op-outbound-ink);--hn-operation-soft:var(--hn-op-outbound-soft);--hn-operation-line:var(--hn-op-outbound-line)}
+[data-hn-operation="warranty"],[data-history-tone="warranty"]{--hn-operation-ink:var(--hn-op-warranty-ink);--hn-operation-soft:var(--hn-op-warranty-soft);--hn-operation-line:var(--hn-op-warranty-line)}
+[data-hn-operation="nfc"],[data-history-tone="nfc"]{--hn-operation-ink:var(--hn-op-nfc-ink);--hn-operation-soft:var(--hn-op-nfc-soft);--hn-operation-line:var(--hn-op-nfc-line)}
+[data-hn-operation="documents"],[data-hn-operation="lookup"],[data-history-tone="documents"]{--hn-operation-ink:var(--hn-op-documents-ink);--hn-operation-soft:var(--hn-op-documents-soft);--hn-operation-line:var(--hn-op-documents-line)}
+[data-hn-operation="sessions"],[data-history-tone="sessions"]{--hn-operation-ink:var(--hn-op-sessions-ink);--hn-operation-soft:var(--hn-op-sessions-soft);--hn-operation-line:var(--hn-op-sessions-line)}
+[data-history-tone]{--history-tone-ink:var(--hn-operation-ink);--history-tone-soft:var(--hn-operation-soft);--history-tone-line:var(--hn-operation-line)}
+/* Paint only existing boxes: no width/height changes to accepted layouts. */
+#home-app .hn-screen .hn-operation-icon,
+.phone[data-history-embedded="true"] .hn-operation-icon{
+ background:var(--hn-operation-soft,var(--hn-op-documents-soft));color:var(--hn-operation-ink,var(--hn-op-documents-ink));
+ border-radius:var(--hn-operation-radius,12px);display:grid;place-items:center;flex-shrink:0;
+}
+#home-app .hn-screen .hn-operation-icon>svg[class],
+.phone[data-history-embedded="true"] .hn-operation-icon>svg[class]{fill:none;stroke:currentColor;stroke-width:1.8}
+#home-app .hn-tile.hn-operation-icon{--hn-operation-radius:10px}
+#home-app .p03-tile.hn-operation-icon{--hn-operation-radius:12px}
+#home-app .p04-tile.hn-operation-icon{--hn-operation-radius:10px}
+#home-app .p05-tile.hn-operation-icon{--hn-operation-radius:8px}
+#home-app .p06-event-icon.hn-operation-icon .p06-icon{width:30px;height:30px}
+/* Existing P07 tiles have unambiguous NFC semantics; protect artwork and geometry. */
+#home-app .p07-app .p07-nfc-tile{background:var(--hn-op-nfc-soft);color:var(--hn-op-nfc-ink)}
+#home-app .p07-app .p07-nfc-tile>.p07-icon{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8}
+/* Explicit size variants for NEW components, not automatic resizing of old ones. */
+:where(#home-app,.phone[data-history-embedded="true"]) .hn-operation-icon[data-size="sm"]{width:32px;height:32px;--hn-operation-radius:8px}
+:where(#home-app,.phone[data-history-embedded="true"]) .hn-operation-icon[data-size="md"]{width:44px;height:44px;--hn-operation-radius:10px}
+:where(#home-app,.phone[data-history-embedded="true"]) .hn-operation-icon[data-size="lg"]{width:56px;height:56px;--hn-operation-radius:12px}
+.hn-operation-icon[data-size="sm"]>svg{width:20px;height:20px}
+.hn-operation-icon[data-size="md"]>svg{width:26px;height:26px}
+.hn-operation-icon[data-size="lg"]>svg{width:30px;height:30px}

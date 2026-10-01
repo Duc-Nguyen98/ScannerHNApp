@@ -1,0 +1,36 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P19_data_cases[("Nguồn hồ sơ bảo hành P09<br/>Case ID · Trạng thái · Kho")]:::store
+  P19_data_s1["<b>P19.S01</b><br/>Owner phiếu linh kiện<br/>Document ID · Scan session · Version"]:::panel
+  P19_data_catalog[("Danh mục mã đơn / BOX<br/>SKU · Tồn khả dụng đã xác minh")]:::store
+  P19_data_s2["<b>P19.S02</b><br/>Quantity tạm trong sheet<br/>Hủy không thêm dòng"]:::panel
+  P19_data_validate["Kiểm mã + số lượng + tồn<br/>Case/quyền/kho vẫn hợp lệ"]:::guard
+  P19_data_lines[("Accepted lines của cùng owner<br/>Stable code ID · SKU · Quantity")]:::store
+  P19_data_s3["<b>P19.S03</b><br/>Review từ lines hiện hành"]:::panel
+  P19_data_req["Request Post cố định danh<br/>Case + Document + Session + Version"]:::guard
+  P19_data_adapter["Post / Check adapter mô phỏng"]:::action
+  P19_data_unknown["UNKNOWN giữ nguyên request<br/>Không tạo lệnh Post thứ hai"]:::guard
+  P19_data_receipt[("Receipt POSTED đã xác minh<br/>Case ID · Receipt ID · Request ID")]:::store
+  P19_data_s4["<b>P19.S04</b><br/>Hiển thị Đã xuất<br/>Không dùng trạng thái Chờ Web"]:::panel
+  P19_data_ledger["P09 / P20 nhận đúng receipt<br/>Chỉ ledger POSTED của đúng case"]:::action
+  P19_data_cases --> P19_data_s1
+  P19_data_s1 --> P19_data_validate
+  P19_data_catalog --> P19_data_validate
+  P19_data_s2 --> P19_data_validate
+  P19_data_validate -->|"Hợp lệ"| P19_data_lines
+  P19_data_lines --> P19_data_s3
+  P19_data_s3 --> P19_data_req
+  P19_data_req --> P19_data_adapter
+  P19_data_adapter -->|"Mất phản hồi"| P19_data_unknown
+  P19_data_unknown -->|"Check cùng request"| P19_data_adapter
+  P19_data_adapter -->|"Kết quả hợp lệ"| P19_data_receipt
+  P19_data_receipt --> P19_data_s4
+  P19_data_receipt --> P19_data_ledger
+  P19_data_receipt -->|"Khóa phiếu đã Post"| P19_data_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

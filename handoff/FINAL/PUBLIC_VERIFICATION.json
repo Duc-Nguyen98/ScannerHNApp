@@ -1,0 +1,39 @@
+{
+  "scope": "PUBLIC_UI_FIXTURE",
+  "verifiedAt": "2026-10-01T00:54:20.016Z",
+  "build": "final-2e8357d7f52d",
+  "deployment": {
+    "commit": "74336a0807ee94cf5f4900911254eb4e34e26bfa",
+    "created_at": "2026-10-01T00:50:53Z",
+    "error": {
+      "message": null
+    },
+    "status": "built",
+    "updated_at": "2026-10-01T00:51:44Z"
+  },
+  "app": "https://duc-nguyen98.github.io/ScannerHNApp/review/?view=app",
+  "review": "https://duc-nguyen98.github.io/ScannerHNApp/review/?view=review&panel=P01.S01&motion=auto",
+  "anonymousGitHubSession": true,
+  "publicPanelChecks": 91,
+  "publicReduced": 13,
+  "publicOff": 13,
+  "publicControlChecks": 8,
+  "publicJourneys": 12,
+  "finalStartupChecks": 7,
+  "resolvedIssues": [
+    {
+      "panel": "P19.S02",
+      "issue": "One cold Home module load exceeded original 16s review deadline",
+      "fix": "45s maximum only for UI module load, no minimum wait or domain change",
+      "evidence": "evidence/slow-start.json; evidence/public-bootstrap-final/results.json; evidence/public-final-reduced/results.json; evidence/public-final-off/results.json"
+    }
+  ],
+  "galleryUnchangedFromGit": true,
+  "currentErrors": [],
+  "externalRequests": [],
+  "limitations": [
+    "Demo login is not production authentication",
+    "Physical hardware and visual approval not verified",
+    "Only declared scene links reconstruct after refresh; runtime edits are not durable"
+  ]
+}

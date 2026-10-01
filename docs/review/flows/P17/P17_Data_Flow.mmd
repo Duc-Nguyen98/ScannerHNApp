@@ -1,0 +1,35 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P17_data_input["Raw code / UID<br/>Từ cùng pipeline của owner"]:::action
+  P17_data_owner[("Snapshot P04/P05/P07<br/>Document/Tag ID · Scan session<br/>Accepted · Request · Version")]:::store
+  P17_data_s1["<b>P17.S01</b><br/>Raw + Lý do không hợp lệ"]:::panel
+  P17_data_s2["<b>P17.S02</b><br/>Nguồn từ chối xuất<br/>Sản phẩm / Chứng từ liên quan nếu có"]:::panel
+  P17_data_s3["<b>P17.S03</b><br/>Mapping thẻ đã xác minh<br/>UID + Sản phẩm liên kết"]:::panel
+  P17_data_same["Không thay accepted/quantity<br/>Không tạo phiếu hoặc liên kết khác"]:::guard
+  P17_data_s4["<b>P17.S04</b><br/>Snapshot request UNKNOWN<br/>Chặn lệnh gửi mới"]:::panel
+  P17_data_check["Status read bằng request gốc<br/>Không gọi record/Post lần nữa"]:::action
+  P17_data_result["Receipt có khớp request/scope?"]:::guard
+  P17_data_record[("Kết quả record đã xác minh<br/>Cùng Document ID")]:::store
+  P17_data_notRecorded["Kết quả chưa record + quyền retry<br/>Do adapter/owner quyết định"]:::action
+  P17_data_keep["Không có nguồn / Receipt sai<br/>Giữ nguyên UNKNOWN và dữ liệu"]:::blocked
+  P17_data_input --> P17_data_owner
+  P17_data_owner -->|"Invalid scan"| P17_data_s1
+  P17_data_owner -->|"Không thể xuất"| P17_data_s2
+  P17_data_owner -->|"Conflict NFC"| P17_data_s3
+  P17_data_s1 --> P17_data_same
+  P17_data_s2 --> P17_data_same
+  P17_data_s3 --> P17_data_same
+  P17_data_owner -->|"Ghi chưa rõ"| P17_data_s4
+  P17_data_s4 --> P17_data_check
+  P17_data_check --> P17_data_result
+  P17_data_result -->|"Khớp + đã record"| P17_data_record
+  P17_data_result -->|"Xác minh chưa record"| P17_data_notRecorded
+  P17_data_result -->|"Chưa xác minh"| P17_data_keep
+  P17_data_keep --> P17_data_s4
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

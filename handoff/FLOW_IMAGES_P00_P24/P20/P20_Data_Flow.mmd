@@ -1,0 +1,34 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P20_data_ctx["Case ID + Scope + Caller<br/>Receipt focus nếu được xác minh"]:::action
+  P20_data_source[("Nguồn lịch sử read-only<br/>Seed riêng + P19 receipts POSTED")]:::store
+  P20_data_filter["Đúng case/kho · POSTED<br/>Immutable ID · Không nhận trùng"]:::guard
+  P20_data_store[("Cache lịch sử theo case<br/>Items · Cursor · Has more · Focus")]:::store
+  P20_data_s1["<b>P20.S01</b><br/>Danh sách phiếu đã tải"]:::panel
+  P20_data_s2["<b>P20.S02</b><br/>Một read đang chờ<br/>Không mất cache khi tải tiếp"]:::panel
+  P20_data_s3["<b>P20.S03</b><br/>Read error giữ cursor<br/>Không biến thành empty"]:::panel
+  P20_data_s4["<b>P20.S04</b><br/>Đã đọc và rỗng thật<br/>Không phải nguồn unavailable"]:::panel
+  P20_data_late["Rời màn / Case khác / Scope khác<br/>Hủy read, bỏ response cũ"]:::blocked
+  P20_data_sum["Tổng từ dòng của mỗi receipt<br/>Phân biệt số phiếu / mã / quantity"]:::action
+  P20_data_draft[("P19 live draft của cùng case<br/>Để mở P21, không trộn vào ledger")]:::store
+  P20_data_closed["Case đã trả khách<br/>Khóa xuất mới; vẫn đối chiếu request cũ"]:::guard
+  P20_data_ctx --> P20_data_filter
+  P20_data_source --> P20_data_filter
+  P20_data_filter --> P20_data_store
+  P20_data_store --> P20_data_s1
+  P20_data_s1 -->|"Load more cùng cursor"| P20_data_s2
+  P20_data_s2 -->|"Read"| P20_data_source
+  P20_data_s2 -->|"Lỗi"| P20_data_s3
+  P20_data_s3 -->|"Retry cùng cursor"| P20_data_s2
+  P20_data_store -->|"Verified empty"| P20_data_s4
+  P20_data_store --> P20_data_sum
+  P20_data_late -->|"Không ghi đè cache khác"| P20_data_store
+  P20_data_draft -->|"CTA tiếp tục riêng"| P20_data_s1
+  P20_data_closed -->|"Read-only guard"| P20_data_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

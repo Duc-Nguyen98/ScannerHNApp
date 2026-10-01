@@ -1,0 +1,19 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/TAN MIE/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const out=path.resolve('handoff/P06/flow-audit-2026-09-28/evidence');fs.mkdirSync(out,{recursive:true});const before=process.argv.includes('--before');
+(async()=>{const browser=await chromium.launch({headless:true}),page=await browser.newPage({viewport:{width:494,height:1000}}),checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));await page.clock.setFixedTime(new Date('2026-09-28T06:00:00Z'));
+const p06=a=>page.locator(`[data-p06="${a}"]`).first();
+async function check(name,fn){const ok=await fn();checks.push({name,status:ok?'PASS':'FAIL'});if(!before)assert.ok(ok,name);}
+try{
+await page.goto('http://127.0.0.1:8766/flows/auth-session/');await page.fill('#username','minhanh');await page.fill('#password','preview');await page.click('#submit');await page.click('#start');await page.click('.hn-scanner');await page.click('[data-p06-item="fixture-item-HN12346"]');await p06('history').click();
+await check('invalid draft dates disable Apply before submission and preserve records',async()=>{await page.click('.p06-dates summary');await page.fill('#p06-from','2026-09-09');await page.fill('#p06-to','2026-09-01');const ok=await p06('dates').isDisabled()&&await page.locator('.p06-event').count()===6;await page.locator('.hn-screen').screenshot({path:path.join(out,`${before?'before':'after'}-date-validation.png`)});return ok;});
+await check('corrected draft clears stale date errors without applying',async()=>{if(await p06('dates').isEnabled())await p06('dates').click();await page.fill('#p06-to','2026-09-09');return await p06('dates').isEnabled()&&!await page.locator('#p06-date-error').isVisible();});
+await check('Escape cancels unapplied date draft and restores committed values',async()=>{await page.fill('#p06-from','2026-09-03');await page.keyboard.press('Escape');await page.click('.p06-dates summary');return await page.locator('#p06-from').inputValue()==='2026-09-01';});
+if(!before)await check('P06 shares Vietnam 90-day limits, future rejected and manual all-days works',async()=>{await page.fill('#p06-from','2026-06-29');const old=await p06('dates').isDisabled();await page.fill('#p06-from','2026-06-30');await page.fill('#p06-to','2026-09-29');const future=await p06('dates').isDisabled();await p06('clear-dates').click();const s=JSON.parse(await page.locator('[data-p06-snapshot]').textContent());await page.click('.p06-dates summary');return old&&future&&s.filters.from===''&&s.filters.to===''&&await page.locator('.p06-event').count()===6;});
+await page.keyboard.press('Escape');await page.click('[data-tab="home"]');
+await check('Home title follows the visible route',async()=>await page.title()==='P02 · Hoa Nam Scanner · Prototype');
+await page.click('[data-route="warranty"]');await page.click('[data-p09="begin"]');await page.click('[data-p09="lookup"]');await page.locator('[data-panel="P06.S01"]').waitFor();const caller=await page.evaluate(()=>history.state?.p09Return);
+await check('native Back from P03 keeps the P09 lookup return marker',async()=>{await p06('scan').click();await page.goBack();await page.locator('.p03-dialog').waitFor({state:'detached'});const after=await page.evaluate(()=>history.state?.p09Return);return JSON.stringify(caller)===JSON.stringify(after);});
+if(!before){await p06('back').click();await page.locator('[data-panel="P09.S02"]').waitFor();checks.push({name:'P03 native Back followed by P06 Back returns to original warranty intake',status:'PASS'});}
+fs.writeFileSync(path.join(out,`${before?'before':'after'}-flow-results.json`),JSON.stringify({checks,errors},null,2));assert.deepEqual(errors,[]);console.log(checks);
+}finally{await browser.close();}})();

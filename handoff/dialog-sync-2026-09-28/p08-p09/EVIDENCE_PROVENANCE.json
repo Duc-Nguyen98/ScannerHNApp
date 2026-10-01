@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-28",
+  "scope": "P09 r08 evidence provenance correction",
+  "cause": "check_warranty_stability.cjs ignored the requested evidence environment variable because its output path was hardcoded to revision-08 during the current dialog-sync audit. The script has since gained the output override.",
+  "status": "ORIGINAL_BYTES_NOT_FOUND_IN_SEARCHED_LOCATIONS",
+  "searches": [
+    "git tracked files and git log --all for historical r08 evidence: no tracked originals",
+    "git stash list: empty",
+    "Downloads and Desktop: exact evidence filenames found only in overwritten r08 and current-audit copies; unrelated P05 stability-results.json is not P09 evidence",
+    ".codex: no matching evidence filenames",
+    "ScannerHNApp_24_Prompts_v2.0.zip: no revision-08/stability evidence entries"
+  ],
+  "files": [
+    {
+      "historical_path": "handoff/P09/evidence/revision-08/case-specific-draft.png",
+      "current_audit_copy": "handoff/dialog-sync-2026-09-28/p08-p09/stability-regression/case-specific-draft.png",
+      "current_sha256": "8b0f869d5c3b26c880c245073775967e8a7b28caf22f62212aa74d68c0007738",
+      "original_sha256": null,
+      "last_write_local": "2026-09-28T18:52:11",
+      "original_restored": false
+    },
+    {
+      "historical_path": "handoff/P09/evidence/revision-08/confirmed-result-retained.png",
+      "current_audit_copy": "handoff/dialog-sync-2026-09-28/p08-p09/stability-regression/confirmed-result-retained.png",
+      "current_sha256": "fcff75d104acf7660a3b5d33821740dd6576006740525e518335ca07ef87c141",
+      "original_sha256": null,
+      "last_write_local": "2026-09-28T18:52:13",
+      "original_restored": false
+    },
+    {
+      "historical_path": "handoff/P09/evidence/revision-08/warehouse-read-only.png",
+      "current_audit_copy": "handoff/dialog-sync-2026-09-28/p08-p09/stability-regression/warehouse-read-only.png",
+      "current_sha256": "f0b95c614f7be4f481cfa321f68eec2b5e31f5c5bfbbde6ae41421cdcb7184a8",
+      "original_sha256": null,
+      "last_write_local": "2026-09-28T18:52:16",
+      "original_restored": false
+    },
+    {
+      "historical_path": "handoff/P09/evidence/revision-08/intake-open-existing.png",
+      "current_audit_copy": "handoff/dialog-sync-2026-09-28/p08-p09/stability-regression/intake-open-existing.png",
+      "current_sha256": "ec66efa68a7e490af530a9ffe1a081bb6871edf3879ca83a7d9b297db88dcb15",
+      "original_sha256": null,
+      "last_write_local": "2026-09-28T18:52:18",
+      "original_restored": false
+    },
+    {
+      "historical_path": "handoff/P09/evidence/revision-08/unknown-340x420.png",
+      "current_audit_copy": "handoff/dialog-sync-2026-09-28/p08-p09/stability-regression/unknown-340x420.png",
+      "current_sha256": "8b003f8ca788bb42aca10f1cebf9f8ac4bceff3372fbcf736772dd84ef3022d9",
+      "original_sha256": null,
+      "last_write_local": "2026-09-28T18:52:19",
+      "original_restored": false
+    },
+    {
+      "historical_path": "handoff/P09/evidence/revision-08/stability-results.json",
+      "current_audit_copy": "handoff/dialog-sync-2026-09-28/p08-p09/stability-regression/stability-results.json",
+      "current_sha256": "080b18cdd79f29706836cbe3e191666a7748304891d1dc9afaeebdcaa233c5b1",
+      "original_sha256": null,
+      "last_write_local": "2026-09-28T18:52:20",
+      "original_restored": false
+    }
+  ],
+  "untouched_historical_evidence": [
+    "before.json",
+    "node-tests.txt",
+    "p09-node-tests.txt",
+    "preview-load-probe.json",
+    "preview-open.png",
+    "source-sha256.json",
+    "stability-failure.json",
+    "stability-failure.png",
+    "nested regression/navigation/update/home directories"
+  ],
+  "historical_claims": "Retained as originally reported, not revalidated on the historical r08 source. Current-run results must be attributed to dialog-sync-2026-09-28 only."
+}

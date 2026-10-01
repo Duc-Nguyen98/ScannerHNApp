@@ -1,0 +1,35 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P04_data_s1["<b>P04.S01</b><br/>Metadata<br/>Document ID · Scan session · NCC · Kho"]:::panel
+  P04_data_s2["<b>P04.S02</b><br/>Mã gốc từ nhập tay / fixture camera"]:::panel
+  P04_data_catalog[("Catalogue kiểm mã hiện hành")]:::store
+  P04_data_validate["Validate · Khử trùng<br/>Mã lỗi/trùng không tăng accepted"]:::guard
+  P04_data_state[("Owner inbound-flow<br/>Document/version · Attempts<br/>Accepted rows: SKU + Quantity")]:::store
+  P04_data_s3["<b>P04.S03</b><br/>Review dùng cùng owner<br/>Tổng theo accepted, không theo lượt quét"]:::panel
+  P04_data_request["Request ID cố định<br/>Snapshot document + lines<br/>Chặn gửi trùng"]:::guard
+  P04_data_adapter["Record adapter mô phỏng"]:::action
+  P04_data_unknown["UNKNOWN / Timeout<br/>Giữ cùng request để check"]:::guard
+  P04_data_receipt[("Receipt được xác minh<br/>request khớp · recorded=true")]:::store
+  P04_data_s4["<b>P04.S04</b><br/>Chờ Web · Chưa ghi sổ<br/>Inventory delta = 0"]:::panel
+  P04_data_shared["P12 projection + P08 receipt history<br/>Cùng Document ID, không tổng hợp event giả"]:::action
+  P04_data_s1 --> P04_data_state
+  P04_data_s2 --> P04_data_validate
+  P04_data_catalog --> P04_data_validate
+  P04_data_validate -->|"Hợp lệ: thêm dòng"| P04_data_state
+  P04_data_validate -->|"Lỗi/trùng: giữ raw và lý do"| P04_data_s2
+  P04_data_state --> P04_data_s3
+  P04_data_s3 --> P04_data_request
+  P04_data_request --> P04_data_adapter
+  P04_data_adapter -->|"Chưa rõ"| P04_data_unknown
+  P04_data_unknown -->|"Check cùng request, không record mới"| P04_data_adapter
+  P04_data_adapter -->|"Đã xác minh"| P04_data_receipt
+  P04_data_receipt --> P04_data_state
+  P04_data_receipt --> P04_data_s4
+  P04_data_receipt --> P04_data_shared
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

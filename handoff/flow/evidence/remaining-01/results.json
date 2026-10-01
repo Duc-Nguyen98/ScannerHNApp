@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "id": "R01",
+      "panels": [
+        "P07.S03",
+        "P07.S04"
+      ],
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "R02",
+      "panels": [
+        "P12.S04"
+      ],
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "R03",
+      "panels": [
+        "P13.S03",
+        "P13.S04"
+      ],
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "R04",
+      "panels": [
+        "P15.S03"
+      ],
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "R05",
+      "panels": [
+        "P16.S01",
+        "P16.S04"
+      ],
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "R06",
+      "panels": [
+        "P18.S03",
+        "P18.S04"
+      ],
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "id": "R07",
+      "panels": [
+        "P22.S01"
+      ],
+      "status": "FAIL",
+      "errors": [],
+      "error": "page.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-tab=history]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" data-tab=\"history\" aria-current=\"page\" data-route=\"history\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    23 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate_remaining.cjs:36:12\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate_remaining.cjs:12:6)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate_remaining.cjs:34:2"
+    }
+  ]
+}

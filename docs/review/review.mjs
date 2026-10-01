@@ -1,7 +1,8 @@
 import {openScene,visiblePanels} from './scenes.mjs';
+import {mountFlowViewer} from './flow-viewer.mjs';
 const $=id=>document.getElementById(id),q=new URLSearchParams(location.search);
 const catalog=await fetch('./catalog.json').then(r=>{if(!r.ok)throw Error('Missing catalog');return r.json();});
-const panels=catalog.panels,frame=$('app');let current=null,busy=false,controller=null;
+const panels=catalog.panels,frame=$('app');let current=null,busy=false,controller=null,flowViewer=null;
 const boards=[...new Set(panels.map(p=>p.board))];
 for(const b of boards)$('board').add(new Option(b+' · '+panels.find(p=>p.board===b).boardTitle,b));
 function options(id){const target=panels.find(p=>p.id===id)||panels[0];$('board').value=target.board;$('panel').replaceChildren(...panels.filter(p=>p.board===target.board).map(p=>new Option(p.id+' · '+p.title,p.id)));$('panel').value=target.id;describe();}
@@ -10,21 +11,22 @@ function showTools(show){$('controls').hidden=!show;$('toggle').setAttribute('ar
 options(q.get('panel'));$('motion').value=['auto','reduced','off'].includes(q.get('motion'))?q.get('motion'):'auto';$('scenario').value=q.get('scenario')==='other-user'?'other-user':'default';
 const review=q.get('view')==='review';showTools(review);$(review?'review-link':'app-link').setAttribute('aria-current','page');
 $('build').textContent=`Build ${catalog.build} · Fixture ${catalog.fixture} · Tokens ${catalog.tokens} · 24 board / 91 panel`;
-function url(id=$('panel').value){const u=new URL(location.href);u.search=new URLSearchParams({view:'review',panel:id,scenario:$('scenario').value,motion:$('motion').value});u.hash='';return u;}
+function url(id=$('panel').value){const u=new URL(location.href);u.search=new URLSearchParams({view:'review',panel:id,scenario:$('scenario').value,motion:$('motion').value,...flowViewer?.params()});u.hash='';return u;}
 async function confirmation(){const dialog=$('confirm');dialog.returnValue='cancel';dialog.showModal();return new Promise(r=>dialog.addEventListener('close',()=>r(dialog.returnValue==='reset'),{once:true}));}
 function setMode(){try{for(const sel of ['#motion-mode','#home-motion-mode']){const e=frame.contentDocument.querySelector(sel);if(e){e.value=$('motion').value;e.dispatchEvent(new frame.contentWindow.Event('change',{bubbles:true}));}}}catch{}if(review)history.replaceState(null,'',url(current||$('panel').value));}
 async function launch(id,ask=true){
  if(busy)return;if(ask&&current&&!await confirmation())return;
- controller?.abort();controller=new AbortController();busy=true;$('launch').disabled=true;frame.style.visibility='hidden';$('status').textContent='Đang dựng mẫu '+id+'...';
+ controller?.abort();controller=new AbortController();busy=true;flowViewer?.setBusy(true);$('launch').disabled=true;frame.style.visibility='hidden';$('status').textContent='Đang dựng mẫu '+id+'...';
  try{
   await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Runtime không phản hồi')),16000);frame.onload=()=>{clearTimeout(timer);resolve();};frame.src='./runtime/flows/auth-session/?build='+encodeURIComponent(catalog.build);});
   await openScene(frame,id,{motion:$('motion').value,scenario:$('scenario').value,signal:controller.signal});
   current=id;options(id);history.replaceState(null,'',url(id));$('status').textContent='Đã mở '+id+' · '+visiblePanels(frame.contentDocument).join(', ');frame.style.visibility='visible';
   if(matchMedia('(max-width:700px)').matches)showTools(false);
- }catch(e){$('status').textContent=e.message;frame.style.visibility='visible';showTools(true);}finally{busy=false;$('launch').disabled=false;}
+ }catch(e){$('status').textContent=e.message;frame.style.visibility='visible';showTools(true);}finally{busy=false;flowViewer?.setBusy(false);$('launch').disabled=false;}
 }
 async function copy(text){try{await navigator.clipboard.writeText(text);$('status').textContent='Đã sao chép.';}catch{$('clipboard').hidden=false;$('clipboard').value=text;$('clipboard').focus();$('clipboard').select();$('status').textContent='Có thể sao chép nội dung bên dưới.';}}
 $('toggle').onclick=()=>showTools($('controls').hidden);
+matchMedia('(max-width:700px)').addEventListener('change',event=>{if(event.matches)showTools(false);});
 $('board').onchange=()=>options(panels.find(p=>p.board===$('board').value).id);$('panel').onchange=describe;
 $('motion').onchange=setMode;$('launch').onclick=()=>launch($('panel').value);
 for(const [button,delta]of [['previous',-1],['next',1]])$(button).onclick=()=>{const i=panels.findIndex(p=>p.id===$('panel').value);void launch(panels[(i+delta+panels.length)%panels.length].id);};
@@ -35,4 +37,6 @@ function tool(selector){const e=frame.contentDocument?.querySelector(selector);i
 $('scan-fixture').onclick=()=>{const d=frame.contentDocument;if(d.querySelector('.p04-app'))tool('[data-p04=batch]');else if(d.querySelector('.p05-app'))tool('[data-p05=batch]');else $('status').textContent='Mở bước quét nhập/xuất để nạp mã mẫu.';};
 $('nfc-fixture').onclick=()=>tool('[data-p07-demo-read]');
 $('outcome').onchange=()=>{const d=frame.contentDocument;for(const [sel,v]of [['[data-p04-outcome]',$('outcome').value],['[data-p05-outcome]',$('outcome').value],['[data-p19-outcome]',{confirmed:'ready',failed:'error',unknown:'unknown'}[$('outcome').value]]]){const e=d.querySelector(sel);if(e){e.value=v;e.dispatchEvent(new frame.contentWindow.Event('change',{bubbles:true}));}}};
+flowViewer=mountFlowViewer({frame,catalog,getCurrentPanel:()=>current||$('panel').value,onOpen:()=>{if(matchMedia('(max-width:700px)').matches)showTools(false);},onChange:()=>{if(review)history.replaceState(null,'',url(current||$('panel').value));else{const u=new URL(location.href);for(const key of ['flow','flowBoard','flowFollow'])u.searchParams.delete(key);for(const [key,value]of Object.entries(flowViewer.params()))u.searchParams.set(key,value);history.replaceState(null,'',u);}}});
+window.addEventListener('pagehide',event=>{if(!event.persisted)flowViewer.dispose();});
 if(review)void launch($('panel').value,false);else{frame.src='./runtime/flows/auth-session/?build='+encodeURIComponent(catalog.build);frame.onload=setMode;$('status').textContent='App Preview · đăng nhập demo thủ công.';}

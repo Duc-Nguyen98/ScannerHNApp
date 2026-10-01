@@ -1,0 +1,40 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/TAN MIE/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const out=path.resolve(process.env.HISTORY_EVIDENCE_DIR||'handoff/P08/evidence/revision-23/checks');fs.mkdirSync(out,{recursive:true});
+(async()=>{const b=await chromium.launch({headless:true}),p=await b.newPage({viewport:{width:494,height:1000}}),checks=[],errors=[];p.on('pageerror',e=>errors.push(e.stack));
+const a=n=>p.locator(`[data-p08="${n}"]`).first(),shot=async n=>{await p.mouse.move(0,0);await p.locator('.hn-screen').screenshot({path:path.join(out,n+'.png')});},snap=async()=>JSON.parse(await p.locator('[data-p08-snapshot]').textContent());
+async function hub(scene){await p.click('[data-tab=history]');await p.frameLocator('iframe').locator(`[data-action="${scene}"]`).click();await p.locator('#p08-search').waitFor();}
+async function legacySession(id){await p.evaluate(id=>location.hash='#p02/history-list?panel=3&session='+encodeURIComponent(id),id);await p.locator('.p08-summary').waitFor();await p.waitForFunction(id=>JSON.parse(document.querySelector('[data-p08-snapshot]').textContent).sessionId===id,id);}
+async function check(name,fn){await fn();checks.push({name,status:'PASS'});console.log('PASS '+name);}
+const settle=()=>p.waitForFunction(()=>!history.state?.hnP08Picker&&!document.querySelector('.p08-picker'));
+try{await p.clock.setFixedTime(new Date('2026-09-29T05:00:00Z'));await p.goto('http://127.0.0.1:8766/flows/auth-session/');await p.fill('#username','minhanh');await p.fill('#password','preview');await p.click('#submit');await p.click('#start');
+await check('Current P08 list/day: common edges, no clipped body, last rows reachable above locked footer at6 viewports',async()=>{
+ // Documents/NFC/warranty/sessions are now owned and tested by P12/P22/P23.
+ for(const scene of ['history-general','history-daily']){await hub(scene);
+  for(const [width,height]of [[494,1000],[360,800],[430,932],[1440,900],[340,420],[1869,940]]){
+   await p.setViewportSize({width,height});await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+   const m=await p.locator('.p08-app').evaluate(e=>{const s=e.querySelector('.p08-scroll'),search=e.querySelector('.p08-search'),date=e.querySelector('.p08-filter-summary'),nav=e.closest('.hn-screen').querySelector('.hn-nav');return{overflow:s.scrollWidth>s.clientWidth+1,left:Math.abs(search.getBoundingClientRect().left-date.getBoundingClientRect().left),right:Math.abs(search.getBoundingClientRect().right-date.getBoundingClientRect().right),body:s.getBoundingClientRect().bottom<=nav.getBoundingClientRect().top+1};});assert.ok(!m.overflow&&m.body&&m.left<1&&m.right<1,scene+JSON.stringify(m));
+  }await p.setViewportSize({width:494,height:1000});
+  for(let i=0;i<7;i++){await p.locator('.p08-scroll').evaluate(e=>e.scrollTop=e.scrollHeight);await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));}
+  const end=p.locator(scene==='history-daily'?'.p08-group':'.p08-row').last();await end.scrollIntoViewIfNeeded();const box=await end.boundingBox(),nav=await p.locator('.hn-nav').boundingBox();assert.ok(box.y+box.height<=nav.y+1);await shot(scene+'-bottom');
+ }
+});
+await check('Session type from source, zero duplicates neutral; expanded/collapsed anchor and width stay stable',async()=>{
+ for(const [id,type]of [['PQ-0002','Nhập kho'],['PQ-0003','Xuất linh kiện'],['PQ-0001','Phiên quét mã']]){await legacySession(id);assert.equal(await p.locator('.p08-summary b').textContent(),type);
+  const counts=await p.locator('.p08-counters>div').evaluateAll(es=>es.map(e=>({n:e.querySelector('strong').textContent,bg:getComputedStyle(e).backgroundColor})));if(id!=='PQ-0001')assert.equal(counts[2].bg,counts[0].bg);else assert.notEqual(counts[2].bg,counts[0].bg);
+  if(id==='PQ-0002'){await p.locator('.p08-scroll').evaluate(e=>e.scrollTop=200);const old=await a('codes').boundingBox();await a('codes').click();const next=await a('codes').boundingBox();assert.ok(Math.abs(next.y-old.y)<1);assert.equal(next.width,old.width);assert.equal(await a('codes').getAttribute('aria-expanded'),'true');assert.equal(await p.locator('[data-scan-id]').count(),12);await shot('session-expanded');await a('codes').click();assert.ok(Math.abs((await a('codes').boundingBox()).y-old.y)<1);assert.equal(await p.locator('[data-scan-id]').count(),5);}
+  await p.locator('.p08-scroll').evaluate(e=>e.scrollTop=0);await shot(id);
+ }
+});
+await check('Calendar arrows cross month; endpoints stay draft-only; invalid pair and Reset work',async()=>{
+ await hub('history-general');if(await a('clear').count())await a('clear').click();const initial=await snap();await a('filter').click();await p.fill('[name=from]','01/09/2026');await p.fill('[name=to]','29/09/2026');await p.click('[data-calendar=from]');await p.locator('[data-date="2026-09-01"]').focus();await p.keyboard.press('ArrowLeft');assert.equal(await p.locator('[data-date="2026-08-31"]').evaluate(e=>e===document.activeElement),true);await p.keyboard.press('ArrowRight');assert.equal(await p.locator('[data-date="2026-09-01"]').evaluate(e=>e===document.activeElement),true);await p.keyboard.press('ArrowUp');assert.equal(await p.locator('[data-date="2026-08-25"]').evaluate(e=>e===document.activeElement),true);await shot('calendar-keyboard');await p.keyboard.press('Enter');assert.equal(await p.inputValue('[name=from]'),'25/08/2026');assert.equal(await p.inputValue('[name=to]'),'29/09/2026');assert.deepEqual(await snap(),initial);
+ await p.fill('[name=from]','29/09/2026');await p.fill('[name=to]','01/07/2026');assert.equal(await p.locator('.p08-picker [type=submit]').isDisabled(),true);assert.equal(await p.locator('.p08-date-entry input[aria-invalid=true]').count(),2);await shot('filter-invalid');await p.click('[data-reset]');assert.equal(await p.locator('.p08-date-entry input[aria-invalid=true]').count(),0);await p.goBack();await settle();assert.deepEqual(await snap(),initial);
+});
+await check('Late copy from previous tab visit cannot surface or block copying on new visit',async()=>{
+ await p.locator('.p08-row').first().click();await p.evaluate(()=>{window.copyReleases=[];navigator.clipboard.writeText=()=>new Promise(r=>window.copyReleases.push(r));});await a('copy').click();await p.click('[data-p08-tab=timeline]');await p.click('[data-p08-tab=info]');await a('copy').click();assert.equal(await p.evaluate(()=>window.copyReleases.length),2);await p.evaluate(()=>window.copyReleases[0]());await p.evaluate(()=>new Promise(r=>requestAnimationFrame(r)));assert.equal(await p.locator('.hn-action-dialog[open]').count(),0);assert.equal(await a('copy').isDisabled(),true);await p.evaluate(()=>window.copyReleases[1]());await p.locator('.hn-action-dialog[open]').waitFor();assert.equal(await p.locator('.app-modal-host').count(),1);await p.keyboard.press('Escape');await p.waitForFunction(()=>!history.state?.hnP08Action);assert.equal(await a('copy').evaluate(e=>e===document.activeElement),true);
+});
+await check('Detail tabs / nested session Back preserve selected tab and no horizontal text overlap',async()=>{
+ await p.click('[data-p08-tab=timeline]');await a('session').click();await a('back').click();assert.equal(await p.locator('[data-p08-tab=timeline]').getAttribute('aria-selected'),'true');await legacySession('PQ-0002');const overlap=await p.locator('.p08-code .p08-row-top').evaluateAll(es=>es.some(e=>{const [s,t]=[e.querySelector('strong'),e.querySelector('time')].map(n=>n.getBoundingClientRect());return s.right>t.left+1&&s.bottom>t.top+1&&t.bottom>s.top+1;}));assert.equal(overlap,false);
+});
+assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({checks,errors,revision:'P08-r23'},null,2));
+}catch(e){await p.screenshot({path:path.join(out,'failure.png')});fs.writeFileSync(path.join(out,'failure.json'),JSON.stringify({checks,errors,error:e.stack},null,2));throw e;}finally{await b.close();}})();

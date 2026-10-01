@@ -1,0 +1,9 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const dir='handoff/P23',run=JSON.parse(fs.readFileSync('RUN_STATE.json','utf8')),local=JSON.parse(fs.readFileSync(dir+'/RUN_STATE.json','utf8'));
+assert.equal(run.current_prompt,'P23');assert.equal(run.revision,'P23-r01');assert.equal(new Set(run.implemented_panel_ids).size,run.implemented_panel_ids.length);
+for(const id of local.completed_panel_ids){assert.ok(run.completed_panel_ids.includes(id));assert.ok(run.implemented_panel_ids.includes(id));assert.ok(!run.remaining_panel_ids.includes(id));}
+const csv=fs.readFileSync('SCREEN_COVERAGE.csv','utf8').trim().split(/\r?\n/).slice(1);assert.equal(csv.length,91);assert.equal(new Set(csv.map(l=>l.split(',')[0])).size,24);assert.equal(csv.filter(l=>l.startsWith('"P23",')).length,4);
+const review=fs.readFileSync(dir+'/REVIEW.html','utf8');for(const m of review.matchAll(/(?:src|href)="([^"#]+)"/g)){if(/^https?:/.test(m[1]))continue;assert.ok(fs.existsSync(path.resolve(dir,m[1])),m[1]);}
+const counts={};for(const [label,file]of [['main','after/results.json'],['edges','edges/results.json'],['p22','regression/p22/after/results.json'],['p20','regression/p20/after/results.json'],['p09','regression/p09/navigation-results.json'],['footer','regression/footer/results.json']]){const data=JSON.parse(fs.readFileSync(dir+'/evidence/revision-01/'+file,'utf8'));assert.deepEqual(data.errors,[]);assert.ok(data.checks.every(c=>c.status==='PASS'));counts[label]=data.checks.length;}
+assert.equal(Object.values(counts).reduce((a,b)=>a+b,0),45);
+const result={status:'PASS',panels:91,boards:24,counts,reviewLinks:'all local targets exist',currentPrompt:run.current_prompt};fs.writeFileSync(dir+'/evidence/revision-01/handoff-verification.json',JSON.stringify(result,null,2));console.log(result);

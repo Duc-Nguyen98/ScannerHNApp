@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mountComponentIssueMotion} from '../docs/flows/warranty-components/issue-motion.mjs';
+class Target extends EventTarget{listeners=new Map();addEventListener(t,f,o){super.addEventListener(t,f,o);if(!this.listeners.has(t))this.listeners.set(t,new Set());this.listeners.get(t).add(f);}removeEventListener(t,f,o){super.removeEventListener(t,f,o);this.listeners.get(t)?.delete(f);}get count(){return [...this.listeners.values()].reduce((n,s)=>n+s.size,0);}}
+function setup(mode='auto'){
+ const doc=new Target(),media=new Target(),root=new Target(),effects=[];doc.hidden=false;media.matches=false;root.ownerDocument=doc;root.dataset={};root.getAttribute=()=>null;root.removeAttribute=()=>{};root.contains=n=>n.owner===root;let overlay=false;
+ root.closest=s=>s==='[inert]'?null:{querySelector:()=>overlay};doc.defaultView={getComputedStyle:()=>({getPropertyValue:k=>k.includes('ease')?'linear':'140ms'})};
+ const previous=globalThis.MutationObserver;globalThis.MutationObserver=class{observe(){}disconnect(){}};
+ const node={owner:root,isConnected:true,dataset:{},matches:()=>false,animate(frames,options){let done;const a={frames,options,finished:new Promise(r=>done=r),cancelled:false,cancel(){this.cancelled=true;done();}};effects.push(a);return a;}};
+ const motion=mountComponentIssueMotion({root,requested:mode,media});motion.activate();
+ return {doc,media,root,node,motion,effects,overlay:v=>overlay=v,close(){motion.dispose();if(previous===undefined)delete globalThis.MutationObserver;else globalThis.MutationObserver=previous;}};
+}
+for(const mode of ['auto','reduced','off'])test('M24 '+mode+' rejection uses140/80/off, no transform or mode-change replay',()=>{const f=setup(mode);try{f.motion.rejected(f.node);assert.equal(f.effects.length,mode==='off'?0:1);if(f.effects[0]){assert.equal(f.effects[0].options.duration,mode==='auto'?140:80);assert.ok(f.effects[0].frames.every(x=>!Object.hasOwn(x,'transform')));}const n=f.effects.length;f.motion.setMode('off');f.motion.setMode('auto');assert.equal(f.effects.length,n);f.overlay(true);f.motion.rejected(f.node);assert.equal(f.effects.length,n);}finally{f.close();}});
+test('M24 repeated lifecycle/hidden/OS cancellation releases existing controller listeners',()=>{const f=setup();try{for(let i=0;i<8;i++){f.motion.activate();f.motion.rejected(f.node);f.doc.hidden=true;f.doc.dispatchEvent(new Event('visibilitychange'));assert.equal(f.effects.at(-1).cancelled,true);f.doc.hidden=false;f.motion.rejected(f.node);f.media.matches=true;f.media.dispatchEvent(new Event('change'));assert.equal(f.effects.at(-1).cancelled,true);f.media.matches=false;f.motion.hide();assert.equal(f.doc.count+f.media.count+f.root.count,0);}f.motion.dispose();f.motion.activate();f.motion.rejected(f.node);assert.equal(f.doc.count+f.media.count+f.root.count,0);}finally{f.close();}});
+test('M24 disconnected or camera/input targets cannot animate',()=>{const f=setup();try{f.node.isConnected=false;f.motion.rejected(f.node);f.node.isConnected=true;f.node.matches=()=>true;f.motion.rejected(f.node);assert.equal(f.effects.length,0);}finally{f.close();}});

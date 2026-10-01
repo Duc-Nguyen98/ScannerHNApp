@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "scenario": "normal",
+      "calls": 1,
+      "closed": 1,
+      "whileRich": null,
+      "title": null,
+      "overlays": 0
+    },
+    {
+      "scenario": "clear-open",
+      "calls": 0,
+      "closed": 0,
+      "whileRich": null,
+      "title": null,
+      "overlays": 0
+    },
+    {
+      "scenario": "clear-reactivate",
+      "calls": 0,
+      "closed": 0,
+      "whileRich": null,
+      "title": null,
+      "overlays": 0
+    },
+    {
+      "scenario": "clear-next",
+      "calls": 0,
+      "closed": 0,
+      "whileRich": null,
+      "title": "next",
+      "overlays": 1
+    },
+    {
+      "scenario": "queued-next",
+      "calls": 1,
+      "closed": 1,
+      "whileRich": null,
+      "title": "next",
+      "overlays": 1
+    },
+    {
+      "scenario": "behind-rich",
+      "calls": 0,
+      "closed": 0,
+      "whileRich": 1,
+      "title": "first",
+      "overlays": 1
+    },
+    {
+      "scenario": "dispose-pending",
+      "calls": 0,
+      "closed": 0,
+      "whileRich": null,
+      "title": null,
+      "overlays": 0
+    }
+  ],
+  "errors": []
+}

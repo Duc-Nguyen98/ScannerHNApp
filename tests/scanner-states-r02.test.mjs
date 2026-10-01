@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {quantityChangeText} from '../docs/flows/warranty-components/issue-experience.mjs';
+import {waitingWebResult,waitingWebDocumentLabel} from '../docs/flows/shared/waiting-web.mjs';
+test('Edit comparison applies only to an existing known positive draft quantity',()=>{for(const q of [null,undefined,0,-1,'2',NaN])assert.equal(quantityChangeText(q,'3',12),'');assert.equal(quantityChangeText(2,'3',12),'Đang chọn: 2 linh kiện → Sau xác nhận: 3 linh kiện');});
+test('Invalid/unknown stock never promises a new quantity',()=>{for(const value of ['13','0','-1','1.5','abc','',Infinity])assert.doesNotMatch(quantityChangeText(2,value,12),/Sau xác nhận:/);for(const available of [null,undefined,'12',1])assert.doesNotMatch(quantityChangeText(2,'3',available),/Sau xác nhận:/);});
+test('Comparison is a draft row count, never stock remaining or a Post receipt',()=>{assert.match(quantityChangeText(2,'02',12),/Sau xác nhận: 2/);assert.doesNotMatch(quantityChangeText(2,'3',12),/9|tồn|Đã xuất/);});
+test('Waiting milestones appear only for verified record, never unknown/Post',()=>{for(const state of [{recorded:true,outcome:'posted'},{recorded:true,outcome:'recorded',unknown:true},{step:4}])assert.equal(waitingWebResult({state}),'');const html=waitingWebResult({state:{recorded:true,outcome:'recorded',document:{number:'PN-01'},accepted:[]}});assert.match(html,/Đã gửi phiếu/);assert.match(html,/aria-current="step"/);assert.match(html,/Chờ xử lý trên Web/);assert.match(html,/Chưa ghi sổ · Chưa đổi tồn/);assert.doesNotMatch(html,/Đã ghi sổ/);});
+test('Primary label preserves and escapes full document number',()=>{const n='PN-<"&>'+ '長'.repeat(2000);const label=waitingWebDocumentLabel(n);assert.match(label,/Xem phiếu PN-&lt;&quot;&amp;&gt;/);assert.ok(label.includes('長'.repeat(2000)));});

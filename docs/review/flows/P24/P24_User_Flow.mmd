@@ -1,0 +1,36 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P24_user_context["Trạng thái phát sinh từ owner<br/>Bốn nhánh độc lập, không phải 4 bước"]:::action
+  P24_user_qty["P19 · Sheet số lượng BOX"]:::action
+  P24_user_s1["<b>P24.S01</b><br/>Số lượng sai / Vượt tồn<br/>Lỗi tại ô, không xác nhận"]:::panel
+  P24_user_fix["Sửa số lượng hợp lệ hoặc Hủy<br/>Không cộng dòng khi chưa xác nhận"]:::action
+  P24_user_scan["P19 · Quét BOX chưa thể xuất"]:::action
+  P24_user_s2["<b>P24.S02</b><br/>Thông báo mã hộp bị chặn<br/>Giữ accepted list và phiếu"]:::panel
+  P24_user_retry["Quét mã khác / Sửa mã vừa nhập"]:::action
+  P24_user_record["P04 / P05 · Record đã xác minh"]:::action
+  P24_user_s3["<b>P24.S03</b><br/>CHỜ XỬ LÝ TRÊN WEB<br/>Chưa ghi sổ, chưa đổi tồn"]:::panel
+  P24_user_links["P12 xem phiếu / P08 lịch sử<br/>Cùng receipt, không Post"]:::action
+  P24_user_closed["P09 / P20 · Case đã trả khách"]:::action
+  P24_user_s4["<b>P24.S04</b><br/>Hồ sơ chỉ đọc<br/>Khóa xuất mới"]:::panel
+  P24_user_read["P20 lịch sử / P23 quá trình<br/>UNKNOWN cũ vẫn được đối chiếu"]:::action
+  P24_user_context --> P24_user_qty
+  P24_user_qty -->|"Validation không đạt"| P24_user_s1
+  P24_user_s1 --> P24_user_fix
+  P24_user_fix -->|"Sửa và kiểm lại"| P24_user_qty
+  P24_user_context --> P24_user_scan
+  P24_user_scan --> P24_user_s2
+  P24_user_s2 --> P24_user_retry
+  P24_user_retry -->|"Mã mới cần kiểm nguồn"| P24_user_scan
+  P24_user_context --> P24_user_record
+  P24_user_record --> P24_user_s3
+  P24_user_s3 --> P24_user_links
+  P24_user_context --> P24_user_closed
+  P24_user_closed --> P24_user_s4
+  P24_user_s4 --> P24_user_read
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

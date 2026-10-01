@@ -1,0 +1,32 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+process.chdir(path.resolve(__dirname,'..'));
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const csv=JSON.parse(execFileSync('powershell.exe',['-NoProfile','-Command',"[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); @(Import-Csv SCREEN_COVERAGE.csv) | ConvertTo-Json -Depth 5"],{encoding:'utf8',maxBuffer:10e6}));
+assert.equal(csv.length,91);assert.equal(new Set(csv.map(r=>r.prompt_id)).size,24);
+const gate=JSON.parse(fs.readFileSync('handoff/motion/MOTION_RELEASE_GATE.json'));assert.equal(gate.gate_status,'READY_FOR_FINAL');
+const source=JSON.parse(fs.readFileSync(gate.source_manifest));assert.ok(source.files.every(f=>hash(fs.readFileSync(f.file))===f.after),'M24 source changed; needs scoped revalidation');
+const out='docs/review/runtime',copy=(src,dst)=>{fs.mkdirSync(path.dirname(dst),{recursive:true});fs.copyFileSync(src,dst);};
+const files=fs.readdirSync('docs/flows',{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>path.join(e.parentPath,e.name).replaceAll('\\','/')).filter(f=>!f.includes('/scanner-screens/')&&!f.includes('/screens/')&&(/\.(mjs|js|css|html|woff2|png|jpg|jpeg|webp|svg|pdf|json)$/.test(f)||/LICENSE|OFL/.test(f))&&!f.endsWith('/handoff.html'));
+for(const f of files)copy(f,out+'/'+f.slice(5));
+// Only approved runtime images referenced by the source, never gallery ZIPs or reports.
+const publicAssets=new Set();
+for(const f of files.filter(f=>/\.(mjs|js|css|html)$/.test(f))){const text=fs.readFileSync(f,'utf8');for(const m of text.matchAll(/(?:\.\.\/)*assets\/scanner-approved\/[\w/.-]+\.(?:png|jpg|jpeg|webp|svg)/g)){const asset='docs/'+m[0].slice(m[0].indexOf('assets/'));if(fs.existsSync(asset))publicAssets.add(asset);}}
+for(const f of publicAssets)copy(f,out+'/'+f.slice(5));
+// Bind the existing geography adapter to a declared local fixture read-port.
+const geoFile=out+'/flows/outbound/geography.mjs';let geo=fs.readFileSync(geoFile,'utf8');const original='fetcher = (...args)=>fetch(...args)';assert.ok(geo.includes(original));geo="import {previewGeographyFetch} from './preview-geography.mjs';\n"+geo.replace(original,'fetcher = previewGeographyFetch');fs.writeFileSync(geoFile,geo);
+const fixture={provinces:[{code:79,name:'Thành phố Hồ Chí Minh'},{code:1,name:'Thành phố Hà Nội'}],districts:{79:[{code:760,name:'Quận 1',province_code:79},{code:761,name:'Quận 12',province_code:79}],1:[{code:1,name:'Quận Ba Đình',province_code:1}]}};
+fs.writeFileSync(out+'/flows/outbound/preview-geography.mjs',`// Public preview only: same two-city fixture used by existing geography tests.\nconst fixture=${JSON.stringify(fixture)};\nexport async function previewGeographyFetch(url){const u=new URL(url);if(u.origin!=='https://provinces.open-api.vn')throw Error('Not a fixture read');const id=/\\/p\\/(\\d+)/.exec(u.pathname)?.[1];if(id&&!fixture.districts[id])throw Error('Unknown fixture province');return new Response(JSON.stringify(id?{code:Number(id),districts:fixture.districts[id]}:fixture.provinces),{status:200,headers:{'Content-Type':'application/json'}});}\n`);
+const entry=out+'/flows/auth-session/index.html';let html=fs.readFileSync(entry,'utf8');html=html.replace('<head>','<head>\n<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: blob:; font-src \'self\'; connect-src \'self\'; worker-src \'self\' blob:; media-src \'none\'; object-src \'none\'; base-uri \'self\'">\n<style>.preview-tools,.hn-tools{display:none!important}body{overflow:hidden}</style>');fs.writeFileSync(entry,html);
+const runtimeFiles=fs.readdirSync(out,{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>path.join(e.parentPath,e.name).replaceAll('\\','/')).sort();
+const manifest=runtimeFiles.map(file=>({file,sha256:hash(fs.readFileSync(file)),bytes:fs.statSync(file).size}));
+const flowSource='handoff/FLOW_IMAGES_P00_P24',flowOut='docs/review/flows';
+const flowFiles=fs.readdirSync(flowSource,{recursive:true,withFileTypes:true}).filter(e=>e.isFile()&&/\.(png|svg|mmd|html|json)$/.test(e.name)).map(e=>path.join(e.parentPath,e.name).replaceAll('\\','/')).sort();
+assert.equal(flowFiles.filter(f=>f.endsWith('.png')).length,50);
+for(const f of flowFiles)copy(f,flowOut+'/'+path.relative(flowSource,f).replaceAll('\\','/'));
+const flowManifest=flowFiles.map(file=>({path:flowOut+'/'+path.relative(flowSource,file).replaceAll('\\','/'),sha256:hash(fs.readFileSync(file)),bytes:fs.statSync(file).size}));
+const build='final-'+hash(JSON.stringify(manifest)+JSON.stringify(flowManifest)+['index.html','review.css','review.mjs','scenes.mjs','flow-viewer.mjs'].map(f=>hash(fs.readFileSync('docs/review/'+f))).join('')).slice(0,12);
+const titles=['Đăng nhập','Trang chủ','Dialog quét','Nhập kho','Xuất kho','Tra cứu','NFC','Lịch sử','Bảo hành','Cá nhân','Bảo mật','Chứng từ','Thông báo','Khôi phục / Ca','Hệ thống','Trạng thái dữ liệu','Ngoại lệ quét','Tệp / Bàn giao','Xuất linh kiện','Lịch sử linh kiện','Tiếp tục phiếu','Lịch sử NFC','Bảo hành / Phiên','Trạng thái Scanner'];
+const catalog={build,fixture:gate.fixture_version,tokens:gate.token_version,sourceHash:gate.app_source_hash,flows:{count:50,boards:25,sourceBuild:JSON.parse(fs.readFileSync(flowSource+'/SOURCES.json')).build,manifest:'./flows/SOURCES.json'},panels:csv.map(r=>({id:r.panel_id,board:r.prompt_id,boardTitle:titles[Number(r.prompt_id.slice(1))-1],title:r.title,disposition:r.disposition,note:r.disposition==='MIGRATED'?'Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ.':''}))};
+fs.writeFileSync('docs/review/catalog.json',JSON.stringify(catalog,null,2));
+fs.mkdirSync('handoff/FINAL',{recursive:true});fs.writeFileSync('handoff/FINAL/BUILD_MANIFEST.json',JSON.stringify({build,sourceCommit:gate.source_commit,sourceHash:gate.app_source_hash,tokenHash:gate.token_sha256,files:manifest,flowFiles:flowManifest,transforms:['Fixture-only geography port using existing test data','Auth entry hides existing technical tools; no business CSS changed','CSP limits network to same-origin; camera/microphone denied by host iframe','External flow viewer; same iframe/owner retained when changing diagrams'],publicAssets:[...publicAssets]},null,2));
+console.log(JSON.stringify({build,files:manifest.length,bytes:manifest.reduce((s,f)=>s+f.bytes,0),assets:publicAssets.size,boards:24,panels:91}));

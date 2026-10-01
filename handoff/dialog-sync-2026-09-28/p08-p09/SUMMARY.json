@@ -1,0 +1,32 @@
+{
+  "scope": "P08/P09 dialog synchronization",
+  "node": {
+    "passed": 50,
+    "total": 50
+  },
+  "browser": {
+    "dialog_sync": 12,
+    "warranty": 10,
+    "update": 11,
+    "stability": 7,
+    "history": 5,
+    "choices": 1
+  },
+  "visual": "TECHNICAL_QA_PASS_USER_REVIEW_PENDING",
+  "integration": "NOT_RUN_PRODUCTION_HARDWARE",
+  "browser_total": 46,
+  "sync_layout_metrics": 61,
+  "files": [
+    "docs/flows/history/history.mjs",
+    "docs/flows/history/history-picker.mjs",
+    "docs/flows/warranty/warranty.mjs",
+    "docs/flows/warranty/style.css",
+    "tests/history.test.mjs",
+    "scripts/check_dialog_sync_p08_p09.cjs",
+    "scripts/check_dialog_sync_p09_choices.cjs",
+    "scripts/check_history_reset_r19.cjs",
+    "scripts/check_warranty.cjs",
+    "scripts/check_warranty_update.cjs",
+    "scripts/check_warranty_stability.cjs"
+  ]
+}

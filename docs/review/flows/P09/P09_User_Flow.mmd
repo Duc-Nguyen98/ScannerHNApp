@@ -1,0 +1,47 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P09_user_in["Home / P03 / P12 → Bảo hành"]:::action
+  P09_user_s1["<b>P09.S01</b><br/>Danh sách bảo hành<br/>Tìm kiếm · Trạng thái · Sắp xếp"]:::panel
+  P09_user_lookup["P06 · Tra cứu sản phẩm<br/>Mang theo serial"]:::action
+  P09_user_s2["<b>P09.S02</b><br/>Tiếp nhận bảo hành"]:::panel
+  P09_user_serial["Nhập / Đối chiếu đúng serial"]:::guard
+  P09_user_bad["Không hợp lệ<br/>Lỗi tại ô, giữ sản phẩm và bản nhập"]:::blocked
+  P09_user_exists["Đã có hồ sơ<br/>Mở hồ sơ sẵn, không tạo trùng"]:::action
+  P09_user_fault["Chọn lỗi tiếp nhận<br/>Chỉ chọn Khác mới hiện mô tả"]:::action
+  P09_user_note["Ghi chú / Phụ kiện<br/>Không bắt buộc"]:::action
+  P09_user_confirm["Kiểm tra và xác nhận tiếp nhận"]:::guard
+  P09_user_s3["<b>P09.S03</b><br/>Hồ sơ bảo hành<br/>Thông tin · Linh kiện · Lịch sử"]:::panel
+  P09_user_edit["Dialog cập nhật xử lý<br/>Chẩn đoán · Kết quả sửa chữa"]:::guard
+  P09_user_s4["<b>P09.S04</b><br/>Kết quả sửa chữa<br/>CHỜ BÀN GIAO"]:::panel
+  P09_user_issue["P19 · Xuất linh kiện"]:::action
+  P09_user_history["P20 · Lịch sử linh kiện"]:::action
+  P09_user_handoff["P18 · Bàn giao<br/>Chưa có nguồn xác nhận thật"]:::action
+  P09_user_closed["Hồ sơ đã trả khách<br/>Chỉ xem, khóa thao tác ghi"]:::blocked
+  P09_user_in --> P09_user_s1
+  P09_user_s1 -->|"Tiếp nhận"| P09_user_s2
+  P09_user_lookup -->|"Serial đã chọn"| P09_user_s2
+  P09_user_s2 --> P09_user_serial
+  P09_user_serial -->|"Sai / Chưa xác minh"| P09_user_bad
+  P09_user_bad -->|"Sửa"| P09_user_serial
+  P09_user_serial -->|"Đã có hồ sơ"| P09_user_exists
+  P09_user_exists --> P09_user_s3
+  P09_user_serial -->|"Sản phẩm mới hợp lệ"| P09_user_fault
+  P09_user_fault --> P09_user_note
+  P09_user_note --> P09_user_confirm
+  P09_user_confirm -->|"Được xác nhận"| P09_user_s3
+  P09_user_s1 -->|"Chọn hồ sơ"| P09_user_s3
+  P09_user_s3 -->|"Cập nhật xử lý"| P09_user_edit
+  P09_user_edit -->|"Lưu được xác nhận"| P09_user_s4
+  P09_user_s4 -->|"Xem hồ sơ"| P09_user_s3
+  P09_user_s3 -->|"Về danh sách"| P09_user_s1
+  P09_user_s3 --> P09_user_issue
+  P09_user_s3 --> P09_user_history
+  P09_user_s3 --> P09_user_handoff
+  P09_user_s3 -->|"Trạng thái đã trả khách"| P09_user_closed
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

@@ -1,0 +1,526 @@
+{
+  "scope": "UI_FIXTURE",
+  "checks": [
+    {
+      "id": "J01",
+      "boards": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P09"
+      ],
+      "name": "Entry and P03 actions remain clickable at three viewports",
+      "status": "PASS",
+      "details": [
+        {
+          "action": "inbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            494,
+            950
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            360,
+            800
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "inbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "absolute"
+        },
+        {
+          "action": "outbound",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "lookup",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        },
+        {
+          "action": "warranty",
+          "viewport": [
+            1440,
+            900
+          ],
+          "centerClickable": true,
+          "closePosition": "relative"
+        }
+      ],
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/lookup",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/lookup",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/lookup",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#home"
+      ]
+    },
+    {
+      "id": "J02",
+      "boards": [
+        "P04",
+        "P08",
+        "P12",
+        "P24"
+      ],
+      "name": "Verified stock receipt shares history and document identity; Back/Forward retain result",
+      "status": "PASS",
+      "details": {
+        "documentId": "fixture-inbound-0005",
+        "historyId": "receipt:fixture-inbound-0005",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound"
+      ]
+    },
+    {
+      "id": "J03",
+      "boards": [
+        "P02",
+        "P08",
+        "P12",
+        "P18"
+      ],
+      "name": "History explicit B08 mapping opens document and real PDF; caller tab/filter/focus restored",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:73:10\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:25:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:66:2",
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/attachments?panel=1&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/attachments?panel=2&doc=fixture-inbound-0005&file=b12-attachment-1"
+      ]
+    },
+    {
+      "id": "J04",
+      "boards": [
+        "P08",
+        "P22",
+        "P23"
+      ],
+      "name": "History missing/invalid IDs never choose first record; legacy session stays B08",
+      "status": "PASS",
+      "details": {
+        "legacyScanCount": "19",
+        "missingAndInvalidCases": 4,
+        "defaultEventSources": "unavailable, not fabricated"
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=3&session=PQ-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=bad",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=3",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=3&session=bad",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history?scene=nfc",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history?scene=sessions"
+      ]
+    },
+    {
+      "id": "J05",
+      "boards": [
+        "P01",
+        "P02",
+        "P12"
+      ],
+      "name": "Refresh reauth gate and logout Back do not reveal old documents",
+      "status": "PASS",
+      "details": {
+        "preRefreshHash": "#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "refresh": "reauth required; page-memory receipt not durable",
+        "logout": "no authenticated DOM"
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=1&entry=home-recent",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=1&entry=home-recent",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#login"
+      ]
+    },
+    {
+      "id": "J06",
+      "boards": [
+        "P04",
+        "P15",
+        "P17",
+        "P24"
+      ],
+      "name": "UNKNOWN stock write only checks same request, no duplicate record",
+      "status": "PASS",
+      "details": {
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound"
+      ]
+    },
+    {
+      "id": "J07",
+      "boards": [
+        "P09",
+        "P19",
+        "P20"
+      ],
+      "name": "Entry warranty to component Post and shared case/history",
+      "status": "PASS",
+      "details": {
+        "caseId": "BH-001",
+        "receiptId": "XLK-DEMO-0001",
+        "commits": 1
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-001&tab=info",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-001&tab=parts",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=1&doc=DRAFT-DEMO-17e422e4-0d22-41c0-aabf-9d1c5427c6f2",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=3&doc=DRAFT-DEMO-17e422e4-0d22-41c0-aabf-9d1c5427c6f2",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=4&doc=DRAFT-DEMO-17e422e4-0d22-41c0-aabf-9d1c5427c6f2",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-history?case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-history?case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001"
+      ]
+    },
+    {
+      "id": "J08",
+      "boards": [
+        "P03",
+        "P04",
+        "P14"
+      ],
+      "name": "Legacy P03 draft cannot masquerade as a verified live owner",
+      "status": "PASS",
+      "details": {
+        "documentId": "PN-0001",
+        "dependency": "P03 legacy draft has no matching P04 owner; retained and blocked"
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home"
+      ]
+    },
+    {
+      "id": "J09",
+      "boards": [
+        "P09",
+        "P20",
+        "P23",
+        "P24"
+      ],
+      "name": "Closed case read-only history and timeline use the same case identity",
+      "status": "PASS",
+      "details": {
+        "caseId": "BH-002",
+        "readOnly": true
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-002&tab=info",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-002&tab=parts",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-history?case=BH-002",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history?scene=warranty-detail&case=BH-002",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-history?case=BH-002"
+      ]
+    },
+    {
+      "id": "J10",
+      "boards": [
+        "P05",
+        "P08",
+        "P12",
+        "P17",
+        "P24"
+      ],
+      "name": "Outbound record and UNKNOWN reconciliation share receipt identity without Post",
+      "status": "PASS",
+      "details": {
+        "firstDocumentId": "fixture-outbound-0005-1",
+        "secondDocumentId": "fixture-outbound-0005-2",
+        "inventoryDelta": 0
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-outbound-0005-1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-outbound-0005-1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-outbound-0005-1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-outbound-0005-1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-outbound-0005-1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound"
+      ]
+    },
+    {
+      "id": "J11",
+      "boards": [
+        "P09",
+        "P19",
+        "P21"
+      ],
+      "name": "Live component draft resumes exact document/session/version through P21",
+      "status": "PASS",
+      "details": {
+        "documentId": "DRAFT-DEMO-4892b9bc-5c7e-4dde-9ffb-4d1c039ab50d",
+        "scanSessionId": "80e79b67-77a5-4fea-b134-07bf5dc8771b",
+        "version": 2,
+        "commits": 0
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-001&tab=info",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-001&tab=parts",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=1&doc=DRAFT-DEMO-4892b9bc-5c7e-4dde-9ffb-4d1c039ab50d",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-resume?panel=2&doc=DRAFT-DEMO-4892b9bc-5c7e-4dde-9ffb-4d1c039ab50d",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&doc=DRAFT-DEMO-4892b9bc-5c7e-4dde-9ffb-4d1c039ab50d&panel=1"
+      ]
+    }
+  ]
+}

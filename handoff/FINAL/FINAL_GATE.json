@@ -1,0 +1,32 @@
+{
+  "status": "PASS_PUBLIC_UI_FIXTURE",
+  "scope": "PUBLIC_UI_FIXTURE",
+  "build": "final-2e8357d7f52d",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "source_app_hash": "9138cf689297094c291963dfdf9c04041728c338e71691c84185d448cd1a2fe9",
+  "deployment_commit": "74336a0807ee94cf5f4900911254eb4e34e26bfa",
+  "verifiedAt": "2026-10-01T00:54:20.016Z",
+  "board_count": 24,
+  "panel_count": 91,
+  "local_mode_checks": 273,
+  "local_panel_builds": [
+    "final-305d112659d0"
+  ],
+  "final_shell_revalidation": "Reset cancellation guard and cold Home UI-module deadline only; final controls, seven startup paths and reduced/off rechecked. Slow 17.5s module load verified. App runtime/scene commands/motion/fixtures unchanged; initial P19.S02 timeout retained as resolved evidence.",
+  "public_panel_checks": 91,
+  "public_reduced_checks": 13,
+  "public_off_checks": 13,
+  "public_journeys": 12,
+  "review_controls": 8,
+  "node_tests": {
+    "pass": 765,
+    "fail": 0
+  },
+  "motion_release": "READY_FOR_FINAL; preserved 224-file source manifest",
+  "public_deployed": true,
+  "gallery_unchanged": true,
+  "blockers": [],
+  "visual": "USER_REVIEW_PENDING",
+  "backend_hardware": "NOT_VERIFIED",
+  "persistence": "PAGE_MEMORY; declared review scenes reconstruct on refresh"
+}

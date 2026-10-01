@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {quantityError} from '../docs/flows/warranty-components/issue-model.mjs';
+import {canRestoreWaitingResult} from '../docs/flows/shared/waiting-web.mjs';
+test('Stock validation explains BOX vs UNIT without changing rejection bounds',()=>{assert.match(quantityError(13,12,'BOX'),/của hộp/);assert.doesNotMatch(quantityError(1,0,'UNIT'),/của hộp/);assert.ok(quantityError(1,0,'UNIT'));assert.equal(quantityError(1,1,'UNIT'),'');assert.match(quantityError(1,null,'UNIT'),/chưa xác minh/);});
+test('Result restoration requires same context and recorded owner document',()=>{const saved={id:'doc-1'},state={document:{documentId:'doc-1'},recorded:true,outcome:'recorded'};assert.equal(canRestoreWaitingResult(saved,state,{documentId:'doc-1'}),true);for(const context of [{},{documentId:'doc-2'},null])assert.equal(canRestoreWaitingResult(saved,state,context),false);assert.equal(canRestoreWaitingResult(saved,{...state,document:{documentId:'doc-2'}},{documentId:'doc-1'}),false);});
+test('UNKNOWN, draft and stale result markers do not restore successful result focus',()=>{for(const state of [{},{document:{documentId:'doc-1'},recorded:true,outcome:'recorded',unknown:true},{document:{documentId:'doc-1'},recorded:false,outcome:'recorded'},{document:{documentId:'doc-1'},recorded:true,outcome:'posted'}])assert.equal(canRestoreWaitingResult({id:'doc-1'},state,{documentId:'doc-1'}),false);assert.equal(canRestoreWaitingResult(null,{recorded:true},{documentId:'doc-1'}),false);});

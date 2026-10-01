@@ -1,0 +1,35 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P08_user_in["P22 hub / Kết quả P04-P05 / P14"]:::action
+  P08_user_s1["<b>P08.S01</b><br/>Danh sách lịch sử<br/>Tìm kiếm · Lọc ngày · Loại · Tải tiếp"]:::panel
+  P08_user_id["Record ID / Session ID có thật?"]:::guard
+  P08_user_missing["Không tìm thấy<br/>Không dùng phần tử đầu làm mặc định"]:::blocked
+  P08_user_s2["<b>P08.S02</b><br/>Chi tiết lịch sử<br/>Thông tin · Timeline · Tệp"]:::panel
+  P08_user_s3["<b>P08.S03</b><br/>Phiên quét B08 tham chiếu<br/>Xem mã và số lượt trùng"]:::panel
+  P08_user_s4["<b>P08.S04</b><br/>Hoạt động theo ngày<br/>Cùng nguồn và bộ lọc"]:::panel
+  P08_user_doc["P12 · Chứng từ<br/>Chỉ khi có mapping rõ"]:::action
+  P08_user_files["P18 · Tệp / Viewer<br/>Đúng document ID và file ID"]:::action
+  P08_user_legacy["B08 khác B23<br/>Không đổi namespace chỉ vì trùng PQ"]:::blocked
+  P08_user_back["Back về danh sách / Màn gọi<br/>Giữ query, tab, cuộn, focus"]:::action
+  P08_user_in --> P08_user_s1
+  P08_user_s1 -->|"Chọn dòng / Deep link"| P08_user_id
+  P08_user_id -->|"Thiếu / Sai ID"| P08_user_missing
+  P08_user_id -->|"Đúng record"| P08_user_s2
+  P08_user_s2 -->|"Có session tham chiếu"| P08_user_s3
+  P08_user_s3 --> P08_user_legacy
+  P08_user_s1 -->|"Theo ngày"| P08_user_s4
+  P08_user_s4 -->|"Chọn hoạt động"| P08_user_s2
+  P08_user_s2 -->|"Có sourceDocumentId"| P08_user_doc
+  P08_user_s2 -->|"Có tệp đã ánh xạ"| P08_user_files
+  P08_user_doc -->|"Back đúng caller"| P08_user_s2
+  P08_user_files -->|"Back giữ tab tệp"| P08_user_s2
+  P08_user_s3 -->|"Back"| P08_user_s2
+  P08_user_s2 --> P08_user_back
+  P08_user_back --> P08_user_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

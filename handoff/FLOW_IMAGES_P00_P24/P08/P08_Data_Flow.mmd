@@ -1,0 +1,32 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P08_data_seed[("Seed lịch sử B08<br/>Activity ID · Record ID · Session ID")]:::store
+  P08_data_receipts[("Receipt P04/P05 đã xác minh<br/>Cùng actor/kho + Document ID")]:::store
+  P08_data_project["history-source projection<br/>ID receipt:DocumentID<br/>Khử trùng theo ID chính xác"]:::action
+  P08_data_s1["<b>P08.S01</b><br/>Danh sách từ nguồn đã hợp nhất"]:::panel
+  P08_data_filters["Lọc / Tìm / Phân trang<br/>Tổng dùng cùng tập dữ liệu"]:::guard
+  P08_data_s4["<b>P08.S04</b><br/>Nhóm theo ngày<br/>Không đếm lặp activity ID"]:::panel
+  P08_data_s2["<b>P08.S02</b><br/>Chi tiết đúng record<br/>Không suy từ số PN/PX"]:::panel
+  P08_data_s3["<b>P08.S03</b><br/>Đọc session B08 đã tham chiếu"]:::panel
+  P08_data_map[("Mapping explicit sang P12/P18<br/>History record ID → Document ID → File ID")]:::store
+  P08_data_other["P22 / P23 là nguồn độc lập<br/>Không tổng hợp NFC/session từ receipt"]:::blocked
+  P08_data_ctx[("history.state + cache view<br/>Query · Tab · Scroll · Focus")]:::store
+  P08_data_seed --> P08_data_project
+  P08_data_receipts --> P08_data_project
+  P08_data_project --> P08_data_filters
+  P08_data_filters --> P08_data_s1
+  P08_data_filters --> P08_data_s4
+  P08_data_s1 -->|"Record ID"| P08_data_s2
+  P08_data_s2 -->|"Session ID B08"| P08_data_s3
+  P08_data_s2 --> P08_data_map
+  P08_data_map -->|"Back đúng ngữ cảnh"| P08_data_s2
+  P08_data_s1 --> P08_data_ctx
+  P08_data_ctx -->|"Khôi phục view"| P08_data_s1
+  P08_data_project -->|"Không tạo event giả"| P08_data_other
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

@@ -1,0 +1,50 @@
+{
+  "scope": [
+    "P06.S01",
+    "P06.S02",
+    "P06.S03",
+    "P06.S04",
+    "P07.S01",
+    "P07.S02",
+    "P07.S03",
+    "P07.S04"
+  ],
+  "node": {
+    "passed": 33,
+    "failed": 0,
+    "log": "node-tests.txt"
+  },
+  "browser": [
+    {
+      "path": "browser-results.json",
+      "groups": 11,
+      "errors": []
+    },
+    {
+      "path": "lookup-regression/browser-results.json",
+      "groups": 11,
+      "errors": []
+    },
+    {
+      "path": "nfc-regression/browser-results.json",
+      "groups": 11,
+      "errors": []
+    },
+    {
+      "path": "nfc-repeat/results.json",
+      "groups": 4,
+      "errors": []
+    },
+    {
+      "path": "nfc-stability/results.json",
+      "groups": 5,
+      "errors": []
+    }
+  ],
+  "browser_groups": 42,
+  "panel_viewport_captures": 48,
+  "dialog_viewport_checks": 12,
+  "visual": "Screenshots reviewed; user review pending",
+  "integration": "Fixture only; no real API/NFC",
+  "report": "REPORT.md"
+}

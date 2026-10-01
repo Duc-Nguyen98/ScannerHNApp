@@ -1,0 +1,16 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {hasHistoryFilters,clearHistoryConditions,acceptedLabel,latestWarrantyEvent,sessionLinks} from '../docs/flows/history/warranty-session-experience.mjs';
+import {normalizeSessions,newFilters,warrantyRows,caseEvents} from '../docs/flows/history/warranty-session-model.mjs';
+import {sessionFixture} from '../docs/flows/history/warranty-session-fixture.mjs';
+import {WARRANTY_LEDGER} from '../docs/flows/shared/warranty-cases.mjs';
+const wh='fixture-hoa-nam',r=()=>normalizeSessions(sessionFixture(wh,'fixture'),wh).items[0];
+test('clear conditions preserves exact query',()=>{const f={...newFilters(),q:' A<>& ',type:'Nhập kho',from:'2026-09-10'};assert.ok(hasHistoryFilters(f));assert.deepEqual(clearHistoryConditions(f),{...newFilters(),q:f.q});assert.equal(hasHistoryFilters(clearHistoryConditions(f)),false);});
+test('query by itself not a filter-clear condition',()=>assert.equal(hasHistoryFilters({...newFilters(),q:'x'}),false));
+test('accepted label depends on operation not quantity',()=>{assert.equal(acceptedLabel({type:'Tra cứu'}),'Lượt tra cứu hợp lệ');assert.equal(acceptedLabel(r()),'Mã hợp lệ');});
+test('latest event uses event timestamp not status or list index',()=>{const c=warrantyRows()[0],ev=caseEvents(c);assert.equal(latestWarrantyEvent(ev.slice().reverse()),ev[0].id);});
+test('unknown dates or tied timestamps not claimed newest',()=>{assert.equal(latestWarrantyEvent([{id:'x',day:'wrong',time:'10:00'}]),null);assert.equal(latestWarrantyEvent([{id:'a',day:'2026-09-10',time:'10:00'},{id:'b',day:'2026-09-10',time:'10:00'}]),null);});
+test('explicit linked receipt matches case and POSTED owner',()=>assert.deepEqual(sessionLinks(r(),warrantyRows(),WARRANTY_LEDGER,wh),{caseId:'BH-001',receiptId:'XLK-0002'}));
+test('display number alone never opens receipt',()=>{const x=r();delete x.linkedReceiptId;assert.equal(sessionLinks(x,warrantyRows(),WARRANTY_LEDGER,wh).receiptId,null);});
+test('wrong case, receipt status, scope, missing case block link',()=>{const x=r();assert.deepEqual(sessionLinks(x,warrantyRows(),WARRANTY_LEDGER,'other'),{});assert.deepEqual(sessionLinks(x,[],WARRANTY_LEDGER,wh),{});assert.equal(sessionLinks(x,warrantyRows(),[{...WARRANTY_LEDGER[0],caseId:'BH-002'}],wh).receiptId,null);assert.equal(sessionLinks(x,warrantyRows(),[{...WARRANTY_LEDGER[0],status:'DRAFT'}],wh).receiptId,null);});
+test('closed case can be linked read only without granting mutation',()=>{const x={...r(),caseId:'BH-002',linkedReceiptId:'XLK-0003'};assert.deepEqual(sessionLinks(x,warrantyRows(),WARRANTY_LEDGER,wh),{caseId:'BH-002',receiptId:'XLK-0003'});});
+test('unverified result never enables receipt',()=>{assert.equal(sessionLinks({...r(),status:'Chưa xác minh kết quả'},warrantyRows(),WARRANTY_LEDGER,wh).receiptId,null);});

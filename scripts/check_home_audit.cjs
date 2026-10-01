@@ -1,0 +1,52 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/TAN MIE/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const out=path.resolve(process.env.HOME_AUDIT_EVIDENCE_DIR||'handoff/P02/evidence/revision-16-audit');fs.mkdirSync(out,{recursive:true});
+(async()=>{const browser=await chromium.launch({headless:true}),page=await browser.newPage({viewport:{width:494,height:950},deviceScaleFactor:1});const checks=[],errors=[],metrics={};page.on('pageerror',e=>errors.push(e.message));
+const check=async(name,fn)=>{await fn();checks.push({name,status:'PASS'});console.log('PASS '+name);};
+const shot=async(name)=>{await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(out,name+'.png')});};
+const refresh=()=>page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
+const home=async()=>{await page.evaluate(()=>location.hash='#home');await page.locator('#hn-home').waitFor({state:'visible'});};
+try{
+ await page.clock.setFixedTime(new Date('2026-09-28T01:15:20Z'));await page.goto((process.env.PREVIEW_BASE_URL||'http://127.0.0.1:8767')+'/flows/auth-session/');await page.fill('#username','minhanh');await page.fill('#password','preview');await page.click('#submit');await page.click('#start');await page.locator('.hn-record').first().waitFor();const shift=await page.locator('[data-shift-start]').getAttribute('datetime');
+ await check('Baseline keeps three newest documents, locked footer and enlarged View all hit area without layout shift',async()=>{
+  assert.equal(await page.locator('.hn-record').count(),3);const b=await page.locator('.hn-view-all').boundingBox();assert.equal(b.height,44);
+  const row=await page.locator('.hn-record').first().boundingBox();assert.equal(row.y,662);assert.equal((await page.locator('.hn-nav').boundingBox()).y,875);await shot('after-home');
+ });
+ await check('Midnight/date refresh keeps current keyboard focus and inner scroll',async()=>{
+  const row=page.locator('.hn-record').first();await row.focus();const id=await row.getAttribute('data-recent-document');await page.clock.setFixedTime(new Date('2026-09-29T01:15:20Z'));await refresh();assert.equal(await page.evaluate(()=>document.activeElement.dataset.recentDocument),id);assert.match(await page.locator('.hn-record time').first().textContent(),/27\/09/);assert.equal(await page.locator('.hn-main').evaluate(n=>n.scrollTop),0);
+ });
+ await check('Live row removed by newer data falls back safely; refresh does not steal focus from another control',async()=>{
+  await page.locator('.hn-record').last().focus();await page.evaluate(async()=>{const m=await import('/flows/shared/warranty-cases.mjs');m.writeWarrantyCase({...m.readWarrantyCases()[0],day:'2026-09-29',time:'09:00'});});await refresh();assert.equal(await page.evaluate(()=>document.activeElement.id),'hn-recent-title');await page.locator('.hn-bell').focus();await page.evaluate(async()=>{(await import('/flows/shared/warranty-cases.mjs')).resetWarrantyCases();});await refresh();assert.equal(await page.locator('.hn-bell').evaluate(n=>n===document.activeElement),true);
+ });
+ await check('Full-name modal keeps focus during refresh, traps Tab and returns on Escape/Back',async()=>{
+  await page.locator('.hn-name').click();await page.locator('#hn-name-dialog[open]').waitFor();await page.clock.setFixedTime(new Date('2026-09-28T01:15:20Z'));await refresh();assert.equal(await page.locator('#hn-name-dialog').evaluate(n=>n.contains(document.activeElement)),true);await page.keyboard.press('Tab');assert.equal(await page.locator('#hn-name-dialog').evaluate(n=>n.contains(document.activeElement)),true);await page.keyboard.press('Escape');await page.locator('.app-modal-host').waitFor({state:'detached'});assert.equal(await page.locator('.hn-name').evaluate(n=>n===document.activeElement),true);await page.locator('.hn-name').click();await page.goBack();await page.locator('.app-modal-host').waitFor({state:'detached'});
+ });
+ await check('Active/stopped/unknown warehouse labels have distinct honest colors; write guard still blocks',async()=>{
+  await page.locator('.p03-tools summary').click();metrics.warehouse={};
+  for(const mode of ['stopped','unknown','active']){await page.selectOption('[data-p03-fixture=warehouse]',mode);await page.click('[data-tab=home]');assert.equal(await page.locator('.hn-active').getAttribute('data-state'),mode);metrics.warehouse[mode]=await page.locator('.hn-active').evaluate(n=>({text:n.textContent,background:getComputedStyle(n).backgroundColor,dot:getComputedStyle(n,'::before').backgroundColor}));await shot('warehouse-'+mode);
+   if(mode==='stopped'){await page.click('.hn-task[data-route=inbound]');await page.locator('[data-panel="P03.S03"]').waitFor();await page.getByRole('button',{name:'Về Trang chủ',exact:true}).click();await page.locator('#hn-home').waitFor({state:'visible'});}
+  }
+  assert.notEqual(metrics.warehouse.active.background,metrics.warehouse.stopped.background);assert.notEqual(metrics.warehouse.active.dot,metrics.warehouse.unknown.dot);
+ });
+ await check('Unknown KPI uses Vietnamese, disables actions and preserves confirmed shift',async()=>{
+  await page.locator('.hn-tools > details > summary').first().click();await page.selectOption('#hn-scenario','unknown');assert.equal(await page.locator('.hn-kpi-link:disabled').count(),2);assert.equal(await page.locator('.hn-kpi-link').first().evaluate(n=>getComputedStyle(n).opacity),'1');assert.equal(await page.locator('.hn-kpi-link strong').first().textContent(),'Chưa xác minh');assert.doesNotMatch(await page.locator('.hn-kpi-link').first().getAttribute('aria-label'),/Xem danh sách/);assert.equal(await page.locator('[data-shift-start]').getAttribute('datetime'),shift);await shot('unknown-kpis');await page.selectOption('#hn-scenario','baseline');
+ });
+ await check('Short/normal/unbroken names fit and full identity remains readable',async()=>{
+  for(const mode of ['short','normal','unbroken']){await page.selectOption('#hn-scenario',mode);await page.locator('.hn-name').click();await page.locator('#hn-name-dialog[open]').waitFor();assert.ok((await page.locator('#hn-full-name').textContent()).length>0);assert.equal(await page.locator('#hn-name-dialog').evaluate(n=>n.scrollWidth>n.clientWidth),false);await page.keyboard.press('Escape');await page.locator('.app-modal-host').waitFor({state:'detached'});}
+  await page.selectOption('#hn-scenario','baseline');
+ });
+ await check('Unbroken document number wraps without overlapping date/status or changing source',async()=>{
+  await page.evaluate(async()=>{const {DOCUMENTS}=await import('/flows/documents/document-model.mjs');const d=DOCUMENTS.find(r=>r.number==='PX-0011');window.auditDocument={number:d.number};d.number='PX-'+('1234567890'.repeat(8));});await refresh();
+  const bounds=await page.locator('.hn-record').first().evaluate(n=>{const r=n.querySelector('strong').getBoundingClientRect(),m=n.querySelector('.hn-record-meta').getBoundingClientRect();const range=document.createRange();range.selectNodeContents(n.querySelector('strong'));return {textRight:Math.max(...Array.from(range.getClientRects(),r=>r.right)),metaLeft:m.left,overflow:n.scrollWidth>n.clientWidth,text:n.querySelector('strong').textContent,height:r.height}});assert.equal(bounds.overflow,false);assert.ok(bounds.textRight<=bounds.metaLeft);assert.equal(bounds.text.length,83);assert.ok(bounds.height>21);await shot('long-document');
+  await page.evaluate(async()=>{const {DOCUMENTS}=await import('/flows/documents/document-model.mjs');DOCUMENTS.find(r=>r.id==='p12-stock-PX-0011').number=window.auditDocument.number;});await refresh();
+ });
+ await check('Home pending-work scroll, Back and P03 cancel retain context without covering the last row',async()=>{
+  await page.click('.hn-task[data-route=inbound]');await page.locator('[data-panel="P04.S01"]').waitFor();await home();await page.locator('.hn-resume-row').waitFor();await page.locator('.hn-record').last().scrollIntoViewIfNeeded();const top=await page.locator('.hn-main').evaluate(n=>n.scrollTop);assert.ok(top>0);await page.locator('.hn-record').last().click();await page.locator('[data-panel="P12.S02"]').waitFor();await page.goBack();await page.locator('#hn-home').waitFor({state:'visible'});assert.ok(Math.abs(await page.locator('.hn-main').evaluate(n=>n.scrollTop)-top)<2);await page.click('[data-tab=lookup]');await page.locator('.p03-dialog').waitFor();await page.keyboard.press('Escape');await page.locator('#hn-home').waitFor({state:'visible'});assert.ok(Math.abs(await page.locator('.hn-main').evaluate(n=>n.scrollTop)-top)<2);
+  for(const [width,height]of [[320,568],[360,800],[494,950],[1264,712]]){await page.setViewportSize({width,height});await page.locator('.hn-record').last().scrollIntoViewIfNeeded();const last=await page.locator('.hn-record').last().boundingBox(),scan=await page.locator('.hn-scan-circle').boundingBox();assert.ok(last.y+last.height<=scan.y+1);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await shot('draft-'+width);}
+ });
+ await check('Small text and status labels have at least 4.5 contrast on Home surfaces',async()=>{
+  const l=rgb=>{const c=rgb.match(/[\d.]+/g).slice(0,3).map(Number).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722;};const ratio=(a,b)=>(Math.max(l(a),l(b))+.05)/(Math.min(l(a),l(b))+.05);
+  metrics.contrast=await page.evaluate(()=>{const n=document.querySelector('.hn-record small'),get=n=>({color:getComputedStyle(n).color,background:getComputedStyle(n).backgroundColor});const values=[{name:'secondary',color:getComputedStyle(n).color,background:'rgb(255,255,255)'}];for(const tone of ['green','amber','blue']){const e=document.createElement('span');e.className='hn-label '+tone;document.querySelector('#hn-home').append(e);values.push({name:tone,...get(e)});e.remove();}return values;});for(const v of metrics.contrast){v.ratio=ratio(v.color,v.background);assert.ok(v.ratio>=4.5,v.name);}
+ });
+ assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({checks,metrics,errors,scope:'P02 plus navigation/dialog integration; no production/backend/hardware claims'},null,2));
+}catch(e){await shot('failure');fs.writeFileSync(path.join(out,'failure.json'),JSON.stringify({error:e.stack,checks,errors},null,2));throw e;}finally{await browser.close();}})();

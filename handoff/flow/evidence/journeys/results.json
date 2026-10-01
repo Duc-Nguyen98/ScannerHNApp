@@ -1,0 +1,259 @@
+{
+  "scope": "UI_FIXTURE",
+  "checks": [
+    {
+      "id": "J01",
+      "boards": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P09"
+      ],
+      "name": "Entry and P03 actions remain clickable at three viewports",
+      "status": "FAIL",
+      "error": "page.click: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-tab=home]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" data-tab=\"home\" data-route=\"home\" aria-current=\"page\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    17 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at home (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:20:32)\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:40:77\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:25:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:30:2",
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound"
+      ]
+    },
+    {
+      "id": "J02",
+      "boards": [
+        "P04",
+        "P08",
+        "P12",
+        "P24"
+      ],
+      "name": "Verified stock receipt shares history and document identity; Back/Forward retain result",
+      "status": "PASS",
+      "details": {
+        "documentId": "fixture-inbound-0005",
+        "historyId": "receipt:fixture-inbound-0005",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=receipt%3Afixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound"
+      ]
+    },
+    {
+      "id": "J03",
+      "boards": [
+        "P02",
+        "P08",
+        "P12",
+        "P18"
+      ],
+      "name": "History explicit B08 mapping opens document and real PDF; caller tab/filter/focus restored",
+      "status": "PASS",
+      "details": {
+        "documentId": "fixture-inbound-0005",
+        "recordId": "LS-0001",
+        "pdfNonblank": true
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/attachments?panel=1&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/attachments?panel=2&doc=fixture-inbound-0005&file=b12-attachment-1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/attachments?panel=1&doc=fixture-inbound-0005",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1"
+      ]
+    },
+    {
+      "id": "J04",
+      "boards": [
+        "P08",
+        "P22",
+        "P23"
+      ],
+      "name": "History missing/invalid IDs never choose first record; legacy session stays B08",
+      "status": "FAIL",
+      "error": "page.click: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-tab=history]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" data-tab=\"history\" aria-current=\"page\" data-route=\"history\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    17 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at hub (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:22:36)\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:87:9\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:25:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:79:2",
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=LS-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=3&session=PQ-0001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=2&record=bad",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=3",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history-list?panel=3&session=bad",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/history?scene=nfc"
+      ]
+    },
+    {
+      "id": "J05",
+      "boards": [
+        "P01",
+        "P02",
+        "P12"
+      ],
+      "name": "Refresh reauth gate and logout Back do not reveal old documents",
+      "status": "PASS",
+      "details": {
+        "preRefreshHash": "#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "refresh": "reauth required; page-memory receipt not durable",
+        "logout": "no authenticated DOM"
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=1&entry=home-recent",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=1&entry=home-recent",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents?panel=2&doc=p12-stock-PX-0011",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/documents",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#login"
+      ]
+    },
+    {
+      "id": "J06",
+      "boards": [
+        "P04",
+        "P15",
+        "P17",
+        "P24"
+      ],
+      "name": "UNKNOWN stock write only checks same request, no duplicate record",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.p04-unknown') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:101:185\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:25:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:99:2",
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound"
+      ]
+    },
+    {
+      "id": "J07",
+      "boards": [
+        "P09",
+        "P19",
+        "P20",
+        "P23"
+      ],
+      "name": "Entry warranty to component Post and shared case/history/timeline",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p20=\"timeline\"]').first()\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:112:29\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:25:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:106:2",
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-001&tab=info",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&case=BH-001&tab=parts",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=1",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=1&doc=DRAFT-DEMO-f3c110a0-549a-49c2-9580-cf626158954e",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=3&doc=DRAFT-DEMO-f3c110a0-549a-49c2-9580-cf626158954e",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-issue?case=BH-001&panel=4&doc=DRAFT-DEMO-f3c110a0-549a-49c2-9580-cf626158954e",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/warranty?panel=3&tab=parts&case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-history?case=BH-001",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/component-history?case=BH-001"
+      ]
+    },
+    {
+      "id": "J08",
+      "boards": [
+        "P03",
+        "P04",
+        "P14"
+      ],
+      "name": "Legacy P03 draft cannot masquerade as a verified live owner",
+      "status": "FAIL",
+      "error": "locator.innerText: Error: strict mode violation: locator('.hn-action-dialog') resolved to 2 elements:\n    1) <dialog open=\"\" aria-modal=\"true\" data-tone=\"neutral\" class=\"p07-dialog hn-action-dialog \" aria-labelledby=\"hn-action-eb3e8304-91a2-4577-b656-3a6774a3c297\" aria-describedby=\"hn-action-eb3e8304-91a2-4577-b656-3a6774a3c297-message\">…</dialog> aka getByRole('dialog', { name: 'Nhập kho' })\n    2) <dialog id=\"hn-name-dialog\" aria-describedby=\"hn-full-name\" aria-labelledby=\"hn-name-dialog-title\" class=\"p07-dialog hn-action-dialog hn-name-dialog\">…</dialog> aka getByLabel('Tên đầy đủ')\n\nCall log:\n\u001b[2m  - waiting for locator('.hn-action-dialog')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:117:53\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:25:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_flow_gate.cjs:115:2",
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home"
+      ]
+    }
+  ]
+}

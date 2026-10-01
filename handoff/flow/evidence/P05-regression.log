@@ -1,0 +1,66 @@
+PASS confirmed success Home button → Xuất kho creates clean next run
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-p03-operation="outbound"]')[22m
+[2m    - locator resolved to <button class="p03-operation" data-p03-operation="outbound">…</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <button class="p03-close" data-hn-hit-ready="" data-hn-touch-layout="" data-p03-action="cancel" aria-label="Đóng chọn tác vụ quét">…</button> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <button class="p03-close" data-hn-hit-ready="" data-hn-touch-layout="" data-p03-action="cancel" aria-label="Đóng chọn tác vụ quét">…</button> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    57 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <button class="p03-close" data-hn-hit-ready="" data-hn-touch-layout="" data-p03-action="cancel" aria-label="Đóng chọn tác vụ quét">…</button> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+    at enter (<anonymous>:12:152)
+    at async eval (<anonymous>:19:194)
+    at async check (<anonymous>:10:32)
+    at async eval (<anonymous>:19:2) {
+  log: [
+    `  - waiting for locator('[data-p03-operation="outbound"]')`,
+    '    - locator resolved to <button class="p03-operation" data-p03-operation="outbound">…</button>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <button class="p03-close" data-hn-hit-ready="" data-hn-touch-layout="" data-p03-action="cancel" aria-label="Đóng chọn tác vụ quét">…</button> intercepts pointer events',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - <button class="p03-close" data-hn-hit-ready="" data-hn-touch-layout="" data-p03-action="cancel" aria-label="Đóng chọn tác vụ quét">…</button> intercepts pointer events',
+    '    - retrying click action',
+    '      - waiting 100ms',
+    '    57 × waiting for element to be visible, enabled and stable',
+    '       - element is visible, enabled and stable',
+    '       - scrolling into view if needed',
+    '       - done scrolling',
+    '       - <button class="p03-close" data-hn-hit-ready="" data-hn-touch-layout="" data-p03-action="cancel" aria-label="Đóng chọn tác vụ quét">…</button> intercepts pointer events',
+    '     - retrying click action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

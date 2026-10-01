@@ -1,0 +1,677 @@
+{
+  "date": "2026-10-01",
+  "build": "final-2e8357d7f52d",
+  "sourceAppHash": "9138cf689297094c291963dfdf9c04041728c338e71691c84185d448cd1a2fe9",
+  "deploymentCommit": "74336a0807ee94cf5f4900911254eb4e34e26bfa",
+  "scope": "Diagrams of current UI fixture, not production API schemas or new business requirements",
+  "panelCount": 91,
+  "boardCount": 24,
+  "foundation": "P00 is an overview, not an additional board",
+  "renderer": "Mermaid 11.12.0 + Chromium + Arial, PNG 2x",
+  "files": [
+    {
+      "file": "AGENTS.md",
+      "sha256": "a618dacfdc97dadfe1e011e52b6487b332cde1e10736a1fbfa46f2acc0eb473e"
+    },
+    {
+      "file": "docs/flows/attachments/experience.mjs",
+      "sha256": "db93be350bb7f5d58631bb864b68bcc72abb49bfb44e1bf0d0d34d67cb1e1728"
+    },
+    {
+      "file": "docs/flows/attachments/fixture-adapter.mjs",
+      "sha256": "a2d51ae47ff90bf852b31181a48a8663f3d9b23e325d28dcbb17c10866249140"
+    },
+    {
+      "file": "docs/flows/attachments/icons.mjs",
+      "sha256": "029ce0ccf331a2583b3a2eb989fcdd2c90fe2243e85363fb4f8bb2b0e9f144f9"
+    },
+    {
+      "file": "docs/flows/attachments/model.mjs",
+      "sha256": "d8bfd18b493b8a1acf7a356df9e514d966c4685caacfb19bbcc18392b10e2e5a"
+    },
+    {
+      "file": "docs/flows/attachments/motion.mjs",
+      "sha256": "7a5cc687bfe6eef5196cc5051d635e7a5fe010d1ca257c21d6507ca82b39e5d1"
+    },
+    {
+      "file": "docs/flows/attachments/vendor/pdf.mjs",
+      "sha256": "43c67d941a73a2d65be72c97f5e68d9a7963df53b219cc1c0aa85f2b8bd1c9bd"
+    },
+    {
+      "file": "docs/flows/attachments/vendor/pdf.worker.mjs",
+      "sha256": "08ee175af31a8537ee0ddee910717db78c6751e2016c4ddc3f033d5047ed5aa0"
+    },
+    {
+      "file": "docs/flows/attachments/view.mjs",
+      "sha256": "7c9339a33d0cc1dd8651c9da7526cb348c8cb167e6876e9e821ff62c3cbe109f"
+    },
+    {
+      "file": "docs/flows/auth-session/app.mjs",
+      "sha256": "ee99503ad039f6e57646da94b17624f204b30d31217f57963f951f918242d996"
+    },
+    {
+      "file": "docs/flows/auth-session/auth-flow.mjs",
+      "sha256": "c9d8bbbf1b573ea9ed36f97ffb94715dc0a258db248244af278dee84050a1371"
+    },
+    {
+      "file": "docs/flows/auth-session/bootstrap.mjs",
+      "sha256": "d553403c56f52387a94dfcdf96d33f0a93b325185433a1144ae2f7d7c862c2f5"
+    },
+    {
+      "file": "docs/flows/auth-session/experience.mjs",
+      "sha256": "45616e03c1a6ed406d436e157a2876d3dcd2481082ff6172043072d8f839ad3c"
+    },
+    {
+      "file": "docs/flows/auth-session/fixture-adapter.mjs",
+      "sha256": "220bb69e3159075de2e18d450737ccd19af93d818f5471f0786db231e5cb0a15"
+    },
+    {
+      "file": "docs/flows/auth-session/lazy-home.mjs",
+      "sha256": "8f118540d01c9b3528b8f5d2a9832b36bf4ae4eb263692632a048ae5ff524e48"
+    },
+    {
+      "file": "docs/flows/auth-session/motion.mjs",
+      "sha256": "8c2f23cb3bd616574f363beeb9283d3e980adb0567f62335d61af9e09e2ac0eb"
+    },
+    {
+      "file": "docs/flows/auth-session/preview-account-store.mjs",
+      "sha256": "703b7a6c12599af439da2d3d41ce2106fb36e4dd30e701f341738cd649f9ec6d"
+    },
+    {
+      "file": "docs/flows/auth-session/sourced-icons.mjs",
+      "sha256": "e40f728522efa29582d165ab5458918a02b797cf60978ac3f84c9e347a1c9833"
+    },
+    {
+      "file": "docs/flows/data-states/model.mjs",
+      "sha256": "714b797aa36e3a40d8f0d58245e4bad898859aae9abba0855b31131dda756da2"
+    },
+    {
+      "file": "docs/flows/data-states/view.mjs",
+      "sha256": "c3f02111b7d58518470a50e4aa5848621171da4acbedce0fd46a4e98107db040"
+    },
+    {
+      "file": "docs/flows/documents/document-model.mjs",
+      "sha256": "a02e8e6818f97c953c2f5ef34b66eb578f32b92d8dc0b4d086a4c3869e16977d"
+    },
+    {
+      "file": "docs/flows/documents/document-progress.mjs",
+      "sha256": "26c0ab2f6b6d997863ef450db54b6fd7c3b46383bdb7768072ebbf2871ba6f83"
+    },
+    {
+      "file": "docs/flows/documents/documents.mjs",
+      "sha256": "873e7510684634589ba282b9f79110ebf13d5ed000810746e446a542eee9fec0"
+    },
+    {
+      "file": "docs/flows/documents/motion.mjs",
+      "sha256": "9f3c0181ca16dc51821d0fc0dd5dfb678166e1ebfe011bf21fc79422bda05cba"
+    },
+    {
+      "file": "docs/flows/history/business-history-data.mjs",
+      "sha256": "08eaf9cda66031507eeae1369708621d840b4110b85324f457cdffbb1b2dfd74"
+    },
+    {
+      "file": "docs/flows/history/embedded-history.mjs",
+      "sha256": "ffe0601e70de10a02e9d0ae4c455bcf0a86fe6789bf2e23673bbd75e51d82d28"
+    },
+    {
+      "file": "docs/flows/history/history-controls.mjs",
+      "sha256": "a0a81548a1ab2ac39d1712df345f6538cb4314f0ae9dd09499386354bb10259e"
+    },
+    {
+      "file": "docs/flows/history/history-detail.mjs",
+      "sha256": "0478184eec5ae9fcb98878b95fc2fb7f67ab14de4a0923f41757beb30fc4ebca"
+    },
+    {
+      "file": "docs/flows/history/history-model.mjs",
+      "sha256": "15775e5a2e8d7f108c0ea559ffbfab7227b5c97253f86f766827252c65e6b423"
+    },
+    {
+      "file": "docs/flows/history/history-picker.mjs",
+      "sha256": "7acd3c740236d5d85b7cdf617e337212703fe9346279c751d4590d1b4c1d4b35"
+    },
+    {
+      "file": "docs/flows/history/history-source.mjs",
+      "sha256": "843077fa6b07e5233d2c51b11e38f3319c56cf48a35eb483178d4d885318df11"
+    },
+    {
+      "file": "docs/flows/history/history-ux.mjs",
+      "sha256": "d36d2be3284e07f78dafe61a2ed7d92c928257d0bc4213796792e935dc00ddba"
+    },
+    {
+      "file": "docs/flows/history/history.mjs",
+      "sha256": "eb13ef2c38fea307f69642867f2d2f85cdf3234ff711a0ae7f546f00f22ad8eb"
+    },
+    {
+      "file": "docs/flows/history/motion.mjs",
+      "sha256": "ed7e07a90ddaf87b85bab17b2d9c57a24f19d39cf19b678e18aabb72135d332a"
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-experience.mjs",
+      "sha256": "f5497940f293d05cdcf72ab9deea316dff3195b1db6294ba067eb97b1646ec28"
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-fixture.mjs",
+      "sha256": "a7a806ae2198b1b20d092c3456bab431980e1de99b82b1f77d925a04b4037ea8"
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-model.mjs",
+      "sha256": "49ee2621833d810a2b1dea02dd1b72d61f4cfc2c436de9c225167b40290b4b40"
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-motion.mjs",
+      "sha256": "0e899e2f5d6ee3ef4acb50f23e8f655cad9151c297ca819ea58efe2ed288b364"
+    },
+    {
+      "file": "docs/flows/history/nfc-audit-view.mjs",
+      "sha256": "e55c113279bd1deef4c33b2535ac364910d67de77885f46c6c1fbf23cd6f7a5f"
+    },
+    {
+      "file": "docs/flows/history/warranty-session-experience.mjs",
+      "sha256": "8466a7e4e7065c18e78085c54483758cbd6c60e424dff5c4501312fa94d9038f"
+    },
+    {
+      "file": "docs/flows/history/warranty-session-fixture.mjs",
+      "sha256": "6e62f6db55560b5141ee64f7a8fed8daa09566b7c269285912d045a5eeda3da9"
+    },
+    {
+      "file": "docs/flows/history/warranty-session-model.mjs",
+      "sha256": "0b547e4b32424598793aa0462f402ec15aa19a5de6bf39f5bf6a01b5a5bd47d2"
+    },
+    {
+      "file": "docs/flows/history/warranty-session-motion.mjs",
+      "sha256": "d07b63e942bfeec66f91a2344809dc3dd87b0687ea6f5899ba88a16e59c462e0"
+    },
+    {
+      "file": "docs/flows/history/warranty-session-view.mjs",
+      "sha256": "3774b96c2bd4f7e8945e3c9a51d96dbf4a59ba587fa8fc8d836c426747e72ddd"
+    },
+    {
+      "file": "docs/flows/home/assets.mjs",
+      "sha256": "683dd5c18cf68d973c74d48ebed4d2eba29635ee3f289844c3a2f7aa83e1c2bd"
+    },
+    {
+      "file": "docs/flows/home/fixture-adapter.mjs",
+      "sha256": "e63d40a1bbee70bd008bd297afa571fa69dcf414f2fb814382895e1e36d51b03"
+    },
+    {
+      "file": "docs/flows/home/home-flow.mjs",
+      "sha256": "1b9ae1990fa2ddadab18ce095c47fa9012678464fe3a1c908effc628818d3531"
+    },
+    {
+      "file": "docs/flows/home/home.mjs",
+      "sha256": "f99bc9681e4015340c61feb605a4339ab4764d4347ea26c0137745588c889868"
+    },
+    {
+      "file": "docs/flows/home/icons.mjs",
+      "sha256": "b41521c650a43415e07b2e9a3365ea573d4f37723ad002f01bbf901571704a88"
+    },
+    {
+      "file": "docs/flows/home/motion.mjs",
+      "sha256": "7f34d586a0506db4f1db8ef69461ccc0efe46d4b779665a2130eb965492c7b46"
+    },
+    {
+      "file": "docs/flows/home/pending-work.mjs",
+      "sha256": "7853bf29c0ea4097c8e97834c7dd8c5cc954b5daa1737a98126a2118bd0c7cd0"
+    },
+    {
+      "file": "docs/flows/home/recent-documents.mjs",
+      "sha256": "1e49f309ac2274dce797045ddcc67972604a184636c6d290db29c4d10254221f"
+    },
+    {
+      "file": "docs/flows/home/vietnam-clock.mjs",
+      "sha256": "fc236cd9ef2105ca54880d415a6bbf7b6c455e3c41238d90b799931b319001d6"
+    },
+    {
+      "file": "docs/flows/inbound/catalogue.mjs",
+      "sha256": "d6c9329d9730422ae78b070bba38b0f804af414fe808a8bb321226fd905da59e"
+    },
+    {
+      "file": "docs/flows/inbound/fixture-adapter.mjs",
+      "sha256": "44931fa130a82d6b6e6e649dcda2c0d901a93479c1f7ac11b2c102b8bd401187"
+    },
+    {
+      "file": "docs/flows/inbound/icons.mjs",
+      "sha256": "856e7b6fdb8cbcb4e1f678a3d5570962f66e459c7ac2d2d756b7cff264142fcc"
+    },
+    {
+      "file": "docs/flows/inbound/inbound-flow.mjs",
+      "sha256": "dcd90ee962552e908288298d95001ec432c3af2bd9c5dc9a37972e162d7ecf70"
+    },
+    {
+      "file": "docs/flows/inbound/inbound.mjs",
+      "sha256": "c9ae2a8e19cf655b0c80c706d507eeca5a9bc6d9e701c8368de619ab20672da4"
+    },
+    {
+      "file": "docs/flows/inbound/manual-entry.mjs",
+      "sha256": "9f73802fa0d7815c80b01e9705c921142b74e6d4848ae18794b8835c8de97e07"
+    },
+    {
+      "file": "docs/flows/inbound/motion.mjs",
+      "sha256": "d56e76668588fe41bf8488753f7cd662117e099a0aafa50fe2c0ab48c3977248"
+    },
+    {
+      "file": "docs/flows/inbound/scan-view.mjs",
+      "sha256": "3b390cb20a1aa11b65230c84a680322435f9c0742fa0314d6d33f34356805ee4"
+    },
+    {
+      "file": "docs/flows/inbound/select-control.mjs",
+      "sha256": "366c59c3de08f2fca2f853193ea547af1b00ccd3a56ca2ab8861e7ee30b9a216"
+    },
+    {
+      "file": "docs/flows/inbound/validation.mjs",
+      "sha256": "2de88b482795963313ef3f4b4ea69dc1db751e4b7733ddde389a4d77a7c2aca0"
+    },
+    {
+      "file": "docs/flows/lookup/demo-data.mjs",
+      "sha256": "9ab6cb905c8e92177a5b6a50e12af4a3ee0a74be7b33d427868c37233d501c82"
+    },
+    {
+      "file": "docs/flows/lookup/fixture-adapter.mjs",
+      "sha256": "d9fb960b0f01a9db06bbbe1a802867cb7d0bbe600ccf914e582be27941459515"
+    },
+    {
+      "file": "docs/flows/lookup/icons.mjs",
+      "sha256": "d4ff1730885cb414f88bdf9329ca6b41f8d3e9ab9c56b5df04d074628c1f7d66"
+    },
+    {
+      "file": "docs/flows/lookup/lookup-flow.mjs",
+      "sha256": "f33b0c31c2e0aefcfd3f2217a655a8c13d054b2d94e4f7067939b2626cf61520"
+    },
+    {
+      "file": "docs/flows/lookup/lookup.mjs",
+      "sha256": "2db86e7b4b92a36932d7850956219942a53d8d53bdf0f2b756eac40161f15c84"
+    },
+    {
+      "file": "docs/flows/lookup/motion.mjs",
+      "sha256": "d04ab2f6b9944326ffe2dc711a46f3d054b83ac2daa5107a694575caf6412bc0"
+    },
+    {
+      "file": "docs/flows/lookup/read-owner.mjs",
+      "sha256": "6f8d334489744c5476bc6228739712688a3ffc5bcf66c94515d36575e0444f71"
+    },
+    {
+      "file": "docs/flows/lookup/recent-items.mjs",
+      "sha256": "9673f760f3650ab1f8a8c433431e6d5ab7dec9a5d663ab510732364be4ec0e70"
+    },
+    {
+      "file": "docs/flows/nfc/demo-tags.mjs",
+      "sha256": "fd121576b5831d3401c73b25b7a2d6e2d1aaf2088cdf0f1cf3281b9450d7954a"
+    },
+    {
+      "file": "docs/flows/nfc/fixture-adapter.mjs",
+      "sha256": "c608675b39ed5cf75053a514702101f56b56d726d079d8bb38407ac139967e9b"
+    },
+    {
+      "file": "docs/flows/nfc/motion.mjs",
+      "sha256": "561f5db865f02cacd9e97c1ac97fafd837d251c04dd9d6b61e5f62a1fc0f8de1"
+    },
+    {
+      "file": "docs/flows/nfc/nfc-flow.mjs",
+      "sha256": "27c3a8ded6e1a8c80ef1326391e42bf182bd3e5f9c5378bdbca9c687b2b0e949"
+    },
+    {
+      "file": "docs/flows/nfc/nfc.mjs",
+      "sha256": "bec624e74b1ea6c8f6bc4b05ea36eb144aee28191708c3867fd9321e521c1fa5"
+    },
+    {
+      "file": "docs/flows/notifications/motion.mjs",
+      "sha256": "f3a4392e91bca902f0824bde053873e6c1b25608300e0899c8f1a1d6a1a18df2"
+    },
+    {
+      "file": "docs/flows/notifications/notification-count.mjs",
+      "sha256": "4108de2576497941ee6801fca8c228c798b1c90edacfaec27d00a8a39e81885a"
+    },
+    {
+      "file": "docs/flows/notifications/notification-model.mjs",
+      "sha256": "c9bf83a318eefd8910cdeb18549d9fd8795c36aacbad76e8f38a43b31bb42876"
+    },
+    {
+      "file": "docs/flows/notifications/notification-pages.mjs",
+      "sha256": "9e3cffc9b2f130f2cc5b54445ef6ec0cdf5c5996a3d2b5591a3ebff8dbf41cd4"
+    },
+    {
+      "file": "docs/flows/notifications/notifications.mjs",
+      "sha256": "80e87a1d85cb0d2251d3f4508f907daebe2708c07b8c51c93519c6a0fe591beb"
+    },
+    {
+      "file": "docs/flows/outbound/experience.mjs",
+      "sha256": "765c7d5e894204c7ba3b2c656600ae49169d5d7df025872feddf2a08151a9598"
+    },
+    {
+      "file": "docs/flows/outbound/fixture-adapter.mjs",
+      "sha256": "03582cc8d25a509a178555a9b22b6afda536ae840a828b9cb1d3a7293b5ffa3d"
+    },
+    {
+      "file": "docs/flows/outbound/geography.mjs",
+      "sha256": "d43809ae9dcb608da9e2a85ddb301f672fe60ed60c505a37098d664d740458d5"
+    },
+    {
+      "file": "docs/flows/outbound/icons.mjs",
+      "sha256": "28555d8d95280375f3a6f52c8f87ce57c19565fd211be873e3bb88d6bdb9bd5a"
+    },
+    {
+      "file": "docs/flows/outbound/motion.mjs",
+      "sha256": "6d1c4065183946d582b9d29a88ac1c441cb636c9f51d7f72db1b2885ae8d54f4"
+    },
+    {
+      "file": "docs/flows/outbound/outbound-flow.mjs",
+      "sha256": "b8778ceca948ca42f9e546d0636dd0b5beca11c8cc6ad7400e8f83a023a5836f"
+    },
+    {
+      "file": "docs/flows/outbound/outbound.mjs",
+      "sha256": "2c72b4d90da518139ff838d0d3f365e4b2350e19ec2380e46cbded3297558444"
+    },
+    {
+      "file": "docs/flows/outbound/select-control.mjs",
+      "sha256": "a71c98fa7db593267b03f332b5ec62c2ac3bdcf37b10dd2b2e7fbf0d72f60399"
+    },
+    {
+      "file": "docs/flows/outbound/source-review.mjs",
+      "sha256": "159f22315fa4983a2da45d55adbf35cd08b8defcb7c85d0744f1f369006e1d86"
+    },
+    {
+      "file": "docs/flows/outbound/validation.mjs",
+      "sha256": "23eea266a12f8db170329f5da1f86986387ed09a24fa01b8a191a727bf36e9c6"
+    },
+    {
+      "file": "docs/flows/profile/icons.mjs",
+      "sha256": "09c22ee919eac4ce8d293e870880e8dabed37faf46587a33b2f369aad82cc54b"
+    },
+    {
+      "file": "docs/flows/profile/logout-button.mjs",
+      "sha256": "b5f5f5831cd71a41f1af4ae76f355c923a3628ee119a94cd2b7907628bbb400d"
+    },
+    {
+      "file": "docs/flows/profile/motion.mjs",
+      "sha256": "317578335d903538c0eac67b3b09d1d3661fdb0266275932ba4e38cfa11f24b6"
+    },
+    {
+      "file": "docs/flows/profile/profile-model.mjs",
+      "sha256": "e9687f769c29966be53c0f003c434f27a16cb3c79da15f418559dc67c37a94fa"
+    },
+    {
+      "file": "docs/flows/profile/profile.mjs",
+      "sha256": "6f0e854ad4bc40dd9ef75d99e0fe45d692cb0c6ad100514aa2e7360661782e41"
+    },
+    {
+      "file": "docs/flows/recovery-shift/draft-retention.mjs",
+      "sha256": "36d09bdc0df14438dd9463ff49a5c2c63a1f9c1d597eba934cdc146aa2d4679a"
+    },
+    {
+      "file": "docs/flows/recovery-shift/model.mjs",
+      "sha256": "b5ef5026c96f8a504ed05ac4742771928cc4c348f3308c61a677124a2c42a00a"
+    },
+    {
+      "file": "docs/flows/recovery-shift/motion.mjs",
+      "sha256": "50f656d9f916e4dfd1bb42a199e6081e6985e69127d89b90682329732957022c"
+    },
+    {
+      "file": "docs/flows/recovery-shift/presentation.mjs",
+      "sha256": "0760114b36799487814f79cdbba2fafca02bb4a32df4cfdf4b32bd0cf384b876"
+    },
+    {
+      "file": "docs/flows/recovery-shift/record-dialog.mjs",
+      "sha256": "487cec627ee0996c76162083ef11f84ed10549111682e18376c5c4a8908cc014"
+    },
+    {
+      "file": "docs/flows/recovery-shift/view.mjs",
+      "sha256": "f6969fc67c7fc16e4b49a769a414aed231d6a10d5b801d68bcc9815ecd529557"
+    },
+    {
+      "file": "docs/flows/scan-exceptions/experience.mjs",
+      "sha256": "b77795a975c05db5e787408b9fd104db9faa381307e554dbba39a12f64453bf2"
+    },
+    {
+      "file": "docs/flows/scan-exceptions/navigation.mjs",
+      "sha256": "a892de1e7e571c510914046a75869756e9009d9e68cbf86581827f503a49e23f"
+    },
+    {
+      "file": "docs/flows/scan-exceptions/view.mjs",
+      "sha256": "41b786ba160d02aaa576825880e66f2fcad16850ef4d21f5c541069b2f53bcbb"
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/dialog-flow.mjs",
+      "sha256": "c0ef71dd75877904d3fd54efffe030f8f71269a8f1f23807e26550a6e961bb3e"
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/dialogs.mjs",
+      "sha256": "63dafa60fb11029f08b6669f3bbaf206182d9e7f1aebf99b62444cfe639e3848"
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/fixture-adapter.mjs",
+      "sha256": "f773b9966bb9719e164d0645bd20b7ddc4ef1e02fde448ca3f455005920ceeb3"
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/icons.mjs",
+      "sha256": "0045f7881b95ea2d5542d2804ba325dcc557e91bdc673758567f0cec20f8d817"
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/motion.mjs",
+      "sha256": "c3bc4d1c9e8328a1f0550258cd7cb9900175c7d5781fd72c0626d3cea944f844"
+    },
+    {
+      "file": "docs/flows/scanner-dialogs/stock-owner-adapter.mjs",
+      "sha256": "63918cfc4a70eeb4ba0b43665a7f86970d9c0ad1ae8f9aa944991d18c542bc1f"
+    },
+    {
+      "file": "docs/flows/security/icons.mjs",
+      "sha256": "b5c5bb6d609b442a89f41a797f1357080714630f37688b5e198f7498bfa5a1d9"
+    },
+    {
+      "file": "docs/flows/security/motion.mjs",
+      "sha256": "18edfebc8ceb6413cc71f201cb3d39f665cfffc53be3960a9b4df503b12514da"
+    },
+    {
+      "file": "docs/flows/security/preview-adapter.mjs",
+      "sha256": "8eb1f7192e074a024d20bcbf5318afb8d1f14640f426a6776429080e9db2c2b3"
+    },
+    {
+      "file": "docs/flows/security/security-model.mjs",
+      "sha256": "d030a800639c12de75cc88bf8e53417e22218f1190e16329b81dff153e9a64be"
+    },
+    {
+      "file": "docs/flows/security/security.mjs",
+      "sha256": "df9e1f804a9b977017469166729578d77c39a0a2649f2a0f4b97c0f1bac5fd7e"
+    },
+    {
+      "file": "docs/flows/shared/action-dialog.mjs",
+      "sha256": "2a717bd824aa01e864e572eec09d3327ae16755150118dda73c5b5ee8cb10b33"
+    },
+    {
+      "file": "docs/flows/shared/action-feedback.mjs",
+      "sha256": "9d3f6da346ae88f4b5e1d75f694d477704ff982ff91419ce38284dba067f06a9"
+    },
+    {
+      "file": "docs/flows/shared/app-modal.mjs",
+      "sha256": "cc06600a8a8e2a4669ef965cb2245bdfbf22e40f9b065bd96de0f80583dc1d60"
+    },
+    {
+      "file": "docs/flows/shared/choice-dialog.mjs",
+      "sha256": "df6341967fa24c943cfb3e508f6a9a90616ff12706110cf8d6884cf9085b4af4"
+    },
+    {
+      "file": "docs/flows/shared/choice-options.mjs",
+      "sha256": "45aa082e6ab38fccc46a1db1cd34ecee7bc16ab526bde3e9f978f3c3f8c78a50"
+    },
+    {
+      "file": "docs/flows/shared/dialog-route.mjs",
+      "sha256": "0f18d7d86293407c93ba01a35b5c999a92472d22ec543781889876b1ec7e310f"
+    },
+    {
+      "file": "docs/flows/shared/flow-guidance.mjs",
+      "sha256": "275053bb90745835ac5540a4af52a1334a3ee161b5b0e3c5196a45201ee63020"
+    },
+    {
+      "file": "docs/flows/shared/form-navigation.mjs",
+      "sha256": "4531cadff1039b4bcc738866bcac8713ed52092a26bd6cdee16a0d2b6140ae2d"
+    },
+    {
+      "file": "docs/flows/shared/list-actions.mjs",
+      "sha256": "9f3f78bf1fbe51fa17c722260de18c60fb7b058ab816c0430d56f28d00725dbc"
+    },
+    {
+      "file": "docs/flows/shared/motion/motion-primitives.mjs",
+      "sha256": "496c13bec42ceadc4f19eb31fd28bafcfb55f04e152072d7dc4c168955b22e4b"
+    },
+    {
+      "file": "docs/flows/shared/motion/scan-flow-feedback.mjs",
+      "sha256": "55bd937332ef1148a3ac9788031df5e69354096db6a3f56580d4264ad7d02506"
+    },
+    {
+      "file": "docs/flows/shared/overlay-scroll-lock.mjs",
+      "sha256": "9a32dab38c3192796d602dfd7469ce120d3c3854cd71e6480b3816bf529b2029"
+    },
+    {
+      "file": "docs/flows/shared/priority-touch.mjs",
+      "sha256": "501de783e5ed2f13f5ff8006908168a5b133f2f97defbb21911cd92e4a6ad2c2"
+    },
+    {
+      "file": "docs/flows/shared/query-date-policy.mjs",
+      "sha256": "06e9327403a8ba4f6835adf9d93d4b9d71bc7101a4ad15c6e17d0190b852d759"
+    },
+    {
+      "file": "docs/flows/shared/readable-text.mjs",
+      "sha256": "f15bc7432732e9d9d6dbc9c3c05c403894da4b7d00cb2652445d4614df3312ae"
+    },
+    {
+      "file": "docs/flows/shared/recent-time.mjs",
+      "sha256": "f98e9bdc6a6c2eb1fddafad8b2abb1157b7f87410a74f422cc67a031bfd9ea9b"
+    },
+    {
+      "file": "docs/flows/shared/scaled-controls.mjs",
+      "sha256": "8083a0081aed1163e3ea3ea85054a503ece63fe3b23352feaad97eeb7c4cc326"
+    },
+    {
+      "file": "docs/flows/shared/scan-entry.mjs",
+      "sha256": "0664c38e34141a71cb0933dc90baef2c25421f5547f6549fd242458e6b40cd81"
+    },
+    {
+      "file": "docs/flows/shared/status-announcer.mjs",
+      "sha256": "e95bf9d7e97c3aff99d31c5e7fc91bea1a0404194a5e0e5f4f38093d23f1def0"
+    },
+    {
+      "file": "docs/flows/shared/waiting-web.mjs",
+      "sha256": "0856dcec019e3b75219969bf4f16a5f3ceb0f3e5fda5034342d00056384e7ebd"
+    },
+    {
+      "file": "docs/flows/shared/warranty-cases.mjs",
+      "sha256": "6c6c0fe0090026c427fc7ba70604c8646cd22411628238324fa4beb65d0fcf26"
+    },
+    {
+      "file": "docs/flows/system/model.mjs",
+      "sha256": "25cc22e296f92c85f4b34400ed58cf7d5e93ff6f609c59d4eca96e3c099c5f08"
+    },
+    {
+      "file": "docs/flows/system/motion.mjs",
+      "sha256": "6c4c68e35812bc4c9a8e4d7116ae2a86aaf4b7b255a5b2891a446ac7be9c7bd1"
+    },
+    {
+      "file": "docs/flows/system/presentation.mjs",
+      "sha256": "6eafa6bc2f77b4666921d79953374d22f88433154fd9d935e96b7afec4381029"
+    },
+    {
+      "file": "docs/flows/system/view.mjs",
+      "sha256": "97004d4121c5dfad861083a1996198dda01941d37c4b7579cf5e312103183423"
+    },
+    {
+      "file": "docs/flows/warranty-components/history-experience.mjs",
+      "sha256": "abca23a7876b81051c178c0c01716b8226042d98af12c6873f94ea7d472d3f6d"
+    },
+    {
+      "file": "docs/flows/warranty-components/history-fixture.mjs",
+      "sha256": "8065f6d7aed3351a6af4f1b397aba109f5ffea1cbca1cf7e64cbd78819f5d9fc"
+    },
+    {
+      "file": "docs/flows/warranty-components/history-model.mjs",
+      "sha256": "6ca7575280f2b73803ae0329a319b3b776d96d57749d8154c3827c90a44786bd"
+    },
+    {
+      "file": "docs/flows/warranty-components/history-motion.mjs",
+      "sha256": "80972c895082ab6a1b98bef5df5cc929031d1d3bc4e67c612a1e903fc417e3c3"
+    },
+    {
+      "file": "docs/flows/warranty-components/history-view.mjs",
+      "sha256": "6401dbbd98e5b12e8a289bd07968ef48dfd28e95c0ce91e2fd297a2aa59f9f47"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-experience.mjs",
+      "sha256": "85a5908f0e3984ddead570fbe1142c178c4b844a85712ff96a66197b3fc65011"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-fixture.mjs",
+      "sha256": "0cb18e8dc72e087f8c4354ed6c79874a17f4fbfe4f5881dbe28e6f146166f7da"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-icons.mjs",
+      "sha256": "40b55c8de49b604efb94336a7434c95b9852e007cb6040bb3e8ea3c4e94447ef"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-model.mjs",
+      "sha256": "9bf3116555006f2a6d05f304bd7118b705556a1e3bf2dfaf49fcb02b19728257"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-motion.mjs",
+      "sha256": "de3d9dffab1ea9c7ce850428f00584f4df5d851429eb5a336bf41b572b28f922"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-view.mjs",
+      "sha256": "5378362b7b200ff82d0c3da710180d973984c1b0aa94f52cf8d80ba05aa1999c"
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-experience.mjs",
+      "sha256": "9fecb7fe6f5a2f1cc71dd62d4ef272c38dfdaecf91768c8c7e11667e8092c8d1"
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-model.mjs",
+      "sha256": "eece62fb1c354db1ed611ace020362ff407a51176a1342e9155ca5c9de1fbca9"
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-motion.mjs",
+      "sha256": "3705ad359092db320cdd83523091e6b3339574f84a08c97e79903d71bf421fab"
+    },
+    {
+      "file": "docs/flows/warranty-components/resume-view.mjs",
+      "sha256": "aeb9ca6b663613dbdbb3b394bec3e71b0edef5fa0ed22774938d310685af4654"
+    },
+    {
+      "file": "docs/flows/warranty/fault-options.mjs",
+      "sha256": "b30b6b86156f9aa7c5fadfb56334ffa7fc07b288464065b94c937c6e9be8897b"
+    },
+    {
+      "file": "docs/flows/warranty/modal-history.mjs",
+      "sha256": "f74bfa350ecbee665d982d866ca8f23fc3de53e94386404367ac5d3771cffb1e"
+    },
+    {
+      "file": "docs/flows/warranty/motion.mjs",
+      "sha256": "74e3f6af91d1b2265e6a291c2351b40b7fc7f653ebf9b8961580685a6df447be"
+    },
+    {
+      "file": "docs/flows/warranty/warranty-model.mjs",
+      "sha256": "91f63e28d2173dba76f41f26b6724ba5f2dd36f2a8fc5297804e2b7d51361475"
+    },
+    {
+      "file": "docs/flows/warranty/warranty.mjs",
+      "sha256": "b7e0c6141789dbfddbc75f378f334cfb684125b0665c10d5f1dc6a0061343836"
+    },
+    {
+      "file": "handoff/FINAL/FINAL_GATE.json",
+      "sha256": "b5aeed4c8abd9a0028a88d35d931fcc77af65d4deef863974f6ab732d5a0ccd5"
+    },
+    {
+      "file": "handoff/flow/FLOW_GRAPH.csv",
+      "sha256": "ab348fad1eb36c82f04be646beca72d0a5762882736b7b71e0f7a6568fd472d5"
+    },
+    {
+      "file": "scripts/flow_gate_spec.cjs",
+      "sha256": "d24e13337f345daaf6799e54762e52a92a40224c3bbd809d8e64ea032cf7af43"
+    },
+    {
+      "file": "scripts/flow_images_spec.cjs",
+      "sha256": "0986b1840c72327950985a47606dfd62026d37311d736a2e7c7e6424fbfe18fe"
+    },
+    {
+      "file": "scripts/render_flow_images.cjs",
+      "sha256": "30ccf84ca576218a8a430ed3f75c6d40ecc155251d45e6af1a0e69971fc0161e"
+    }
+  ]
+}

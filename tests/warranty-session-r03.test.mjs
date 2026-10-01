@@ -1,0 +1,12 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {caseEvents,normalizeSessions} from '../docs/flows/history/warranty-session-model.mjs';
+import {sessionNotice,latestWarrantyEvent} from '../docs/flows/history/warranty-session-experience.mjs';
+import {sessionFixture} from '../docs/flows/history/warranty-session-fixture.mjs';
+test('null and non-event values do not crash owner timeline',()=>assert.deepEqual(caseEvents({events:[null,undefined,0,'x',{}, {id:'ok'}]}),[{id:'ok'}]));
+test('timeline preserves raw strings and does not mutate owner data',()=>{const row={events:[null,{id:'x',description:'  <>&\n🌸  ',actor:'X'.repeat(2000)}]},before=structuredClone(row);assert.equal(caseEvents(row)[0].description,'  <>&\n🌸  ');assert.deepEqual(row,before);});
+test('known event IDs still deduplicated after malformed rows',()=>assert.deepEqual(caseEvents({events:[null,{id:'x'},null,{id:'x'}]}),[{id:'x'}]));
+test('unknown inbound never claims sent or posted',()=>{const f=sessionFixture('fixture-hoa-nam','fixture');f.items[1].result=null;const r=normalizeSessions(f,'fixture-hoa-nam').items[1];assert.match(sessionNotice(r),/chưa xác minh/);assert.doesNotMatch(sessionNotice(r),/Phiếu đã gửi/);});
+test('missing document never confirms inbound send',()=>{const f=sessionFixture('fixture-hoa-nam','fixture');f.items[1].doc=null;assert.match(sessionNotice(normalizeSessions(f,'fixture-hoa-nam').items[1]),/chưa xác minh/);});
+test('verified inbound remains Web pending not posted',()=>{assert.match(sessionNotice({type:'Nhập kho',status:'Chờ xử lý trên Web'}),/chưa ghi sổ/);});
+test('unknown issue and lookup retain distinct meanings',()=>{assert.match(sessionNotice({type:'Xuất linh kiện',status:'Chưa xác minh kết quả'}),/Kết quả xuất chưa xác minh/);assert.match(sessionNotice({type:'Tra cứu'}),/không tạo phiếu kho/);});
+test('invalid time cannot be promoted as latest event',()=>{assert.equal(latestWarrantyEvent(caseEvents({events:[null,{id:'x',day:'2026-09-10',time:'X'.repeat(2000)}]})),null);});

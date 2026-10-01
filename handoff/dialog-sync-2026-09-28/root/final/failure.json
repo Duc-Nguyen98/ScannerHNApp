@@ -1,0 +1,364 @@
+{
+  "message": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.app-modal-host dialog[open]') to be visible\u001b[22m\n",
+  "checks": [
+    {
+      "name": "P01 S01 uniform shell and fixed footer across six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "P01 required fields remain field validation without action dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "P01 rejected credentials use contained dialog, no shifting body message, Back keeps login",
+      "status": "PASS"
+    },
+    {
+      "name": "P01 recovery notice is dialog; backdrop keeps focus and Escape cancels",
+      "status": "PASS"
+    },
+    {
+      "name": "P01 S02 fits six viewports and no inherited action error shifts it",
+      "status": "PASS"
+    },
+    {
+      "name": "P01 logout confirmation supports cancel with session kept",
+      "status": "PASS"
+    },
+    {
+      "name": "P02 Home retains shell/nav in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "P02 full-name dialog remains inside app and native Back closes first",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "P01-S01-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        469,
+        469
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S01-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        469,
+        469
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S01-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        469,
+        469
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S01-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        469,
+        469
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S01-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        469,
+        469
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S01-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        469,
+        469
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S02-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        484,
+        484
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S02-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        484,
+        484
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S02-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        484,
+        484
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S02-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        484,
+        484
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S02-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        484,
+        484
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P01-S02-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        484,
+        484
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P02-S01-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        692,
+        692
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P02-S01-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        692,
+        692
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P02-S01-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        692,
+        692
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P02-S01-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        692,
+        692
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P02-S01-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        692,
+        692
+      ],
+      "footerInside": true
+    },
+    {
+      "name": "P02-S01-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "fits": true,
+      "overflow": false,
+      "content": [
+        692,
+        692
+      ],
+      "footerInside": true
+    }
+  ],
+  "errors": []
+}

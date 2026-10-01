@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "name": "Footer navigation waits for system history close, URL matches Documents; Back returns Home",
+      "status": "PASS"
+    },
+    {
+      "name": "Closing via Home CTA has no stale system history; subsequent nav works",
+      "status": "PASS"
+    },
+    {
+      "name": "Device guide closes once with Back, restores trigger; Back then leaves panel",
+      "status": "PASS"
+    },
+    {
+      "name": "Expiry replaces active P15 without stale close callback hiding it; reauth remains required",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,3 @@
+const {chromium}=require('C:/Users/TAN MIE/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs');
+(async()=>{const out='handoff/P19/evidence/revision-01/before';fs.mkdirSync(out,{recursive:true});fs.copyFileSync('RUN_STATE.json',out+'/RUN_STATE.json');const b=await chromium.launch();const p=await b.newPage({viewport:{width:494,height:950},deviceScaleFactor:1,reducedMotion:'reduce'});for(const scene of ['scan','quantity','review','success']){await p.goto('http://localhost:8766/flows/warranty-components/?mode=screen&scene='+scene);await p.evaluate(()=>document.fonts.ready);await p.screenshot({path:out+'/'+scene+'-494x950.png'});}await b.close();})();

@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "name": "Real source Unicode/newline/2000+ unbroken name retains full raw text, no nested controls or overflow, fixed footer at3viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Image read failure keeps40px thumbnail placeholder; no expansion into text column",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "sourceOverride": "Browser-only mock response for long names; repository demo data unchanged"
+}

@@ -1,0 +1,4 @@
+const fs=require('node:fs');let code=fs.readFileSync('scripts/check_motion_p23.cjs','utf8');
+code=code.replace('p.setDefaultTimeout(10000);',"p.on('console',m=>console.log(m.text()));p.setDefaultTimeout(10000);");
+code=code.replace("await p.route('**/warranty-session-fixture.mjs'",`await p.route('**/warranty-session-view.mjs',async rt=>{const response=await rt.fetch();await rt.fulfill({response,body:(await response.text()).replace('const node=prior&&prior.outerHTML===fresh.outerHTML?prior:fresh;',"if(fresh.dataset?.p23Entity==='M23-SESSION-15')console.log(JSON.stringify({old:prior?.outerHTML,fresh:fresh.outerHTML}));const node=prior&&prior.outerHTML===fresh.outerHTML?prior:fresh;")});});await p.route('**/warranty-session-fixture.mjs'`);
+process.argv.push('--flow-only');new Function('require','process',code)(require,process);

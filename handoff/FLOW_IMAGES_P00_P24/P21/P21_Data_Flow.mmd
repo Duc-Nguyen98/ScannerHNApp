@@ -1,0 +1,35 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P21_data_owner[("Owner P19 hiện có<br/>Document ID · Case ID · Session<br/>Version · Lines · Request/receipt")]:::store
+  P21_data_s1["<b>P21.S01</b><br/>Danh sách pending từ live owner<br/>Không dựng lại từ số phiếu"]:::panel
+  P21_data_read["Nguồn checkpoint đọc theo ID<br/>Cùng scope và generation"]:::action
+  P21_data_compare["So document/session/version<br/>Recorded lines / UNKNOWN status"]:::guard
+  P21_data_s2["<b>P21.S02</b><br/>Checkpoint khớp<br/>Mở lại chính owner P19"]:::panel
+  P21_data_s3["<b>P21.S03</b><br/>Conflict / Chưa xác minh<br/>Read-only, không sửa bằng dữ liệu đoán"]:::panel
+  P21_data_s4["<b>P21.S04</b><br/>Request UNKNOWN được giữ nguyên"]:::panel
+  P21_data_status["Đọc trạng thái request<br/>Case đóng vẫn được check yêu cầu cũ"]:::action
+  P21_data_receipt[("Receipt POSTED có nguồn<br/>Case + Document + Request khớp")]:::store
+  P21_data_notpost["Xác nhận chưa Post<br/>Đọc lại checkpoint, không auto-Post"]:::action
+  P21_data_history["P20 dùng đúng receipt<br/>Caller/scroll/focus cùng case"]:::action
+  P21_data_stale["Response cũ / Mất phiên / Đổi owner<br/>Không cập nhật vào phiếu khác"]:::blocked
+  P21_data_owner --> P21_data_s1
+  P21_data_s1 --> P21_data_read
+  P21_data_owner --> P21_data_compare
+  P21_data_read --> P21_data_compare
+  P21_data_compare -->|"Khớp"| P21_data_s2
+  P21_data_compare -->|"Lệch / Không rõ"| P21_data_s3
+  P21_data_compare -->|"Post UNKNOWN"| P21_data_s4
+  P21_data_s2 -->|"Resume cùng đối tượng"| P21_data_owner
+  P21_data_s4 --> P21_data_status
+  P21_data_status -->|"Đã Post xác minh"| P21_data_receipt
+  P21_data_receipt --> P21_data_history
+  P21_data_status -->|"Chưa Post xác minh"| P21_data_notpost
+  P21_data_notpost --> P21_data_read
+  P21_data_read -->|"Scope/generation đổi"| P21_data_stale
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

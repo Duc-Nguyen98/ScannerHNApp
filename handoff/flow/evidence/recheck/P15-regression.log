@@ -1,0 +1,4 @@
+PASS Footer navigation waits for system history close, URL matches Documents; Back returns Home
+PASS Closing via Home CTA has no stale system history; subsequent nav works
+PASS Device guide closes once with Back, restores trigger; Back then leaves panel
+PASS Expiry replaces active P15 without stale close callback hiding it; reauth remains required

@@ -1,0 +1,10 @@
+const fs=require('node:fs');const file=process.argv[2];
+if(!['check_p21.cjs','check_p21_edges.cjs','check_p21_r02.cjs','audit_p21_r03.cjs','test_p21.cjs','check_motion_p19.cjs','check_motion_p20.cjs','check_home_footer_locked.cjs'].includes(file))throw Error('Unsupported');
+process.env.HOME_FOOTER_EVIDENCE_DIR='handoff/motion/M21/regression/footer';
+let s=fs.readFileSync('scripts/'+file,'utf8').replaceAll('handoff/P21/evidence/revision-01','handoff/motion/M21/regression/p21').replaceAll('handoff/P21/evidence/revision-02','handoff/motion/M21/regression/p21-r02').replaceAll('handoff/P21/evidence/revision-03','handoff/motion/M21/regression/p21-r03');
+if(file==='audit_p21_r03.cjs')process.argv.splice(2,1,'after');
+if(file==='test_p21.cjs')s=s.replace('const files=[',"const files=['motion-p21.test.mjs','component-resume-experience.test.mjs',");
+if(file==='check_p21.cjs')s=s.replace("await p.waitForSelector('[data-panel=\"P19.S04\"]');const after=await issue();assert.equal(after.metrics.post,before.metrics.post);assert.equal(after.receipt.requestId,before.request.id);", "await p.waitForSelector('.p20-receipt-fresh');const hs=JSON.parse(await p.locator('[data-p20-snapshot]').textContent());assert.equal(hs.items.find(r=>r.requestId===before.request.id).status,'POSTED');");
+if(file==='check_motion_p20.cjs')s=s.replace("out='handoff/motion/M20/'+(before?'before':'evidence')","out='handoff/motion/M21/regression/m20'");
+if(file==='check_motion_p19.cjs')s=s.replace("out='handoff/motion/M19/'+(before?'before':'evidence')","out='handoff/motion/M21/regression/m19'");
+new Function('require','process',s)(require,process);

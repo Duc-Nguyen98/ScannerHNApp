@@ -1,0 +1,32 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P23_data_cases[("Nguồn P09 dùng chung<br/>Case ID · Status · Timeline xác minh")]:::store
+  P23_data_s1["<b>P23.S01</b><br/>Danh sách hồ sơ đã lọc"]:::panel
+  P23_data_s2["<b>P23.S02</b><br/>Timeline đúng Case ID<br/>Không dựng event từ status cuối"]:::panel
+  P23_data_ledger[("Receipt POSTED P19/P20<br/>Liên quan đúng case")]:::store
+  P23_data_sessions[("Nguồn phiên quét B23 riêng<br/>Session ID · Operation · Events<br/>Session status · Document result")]:::store
+  P23_data_scope["Kho / Session ID / Event schema<br/>Null số liệu không đổi thành 0"]:::guard
+  P23_data_s3["<b>P23.S03</b><br/>Trang session đã đọc<br/>Search trên nguồn, không chỉ DOM"]:::panel
+  P23_data_s4["<b>P23.S04</b><br/>Events đúng session<br/>Accepted / Rejected / Duplicate<br/>Quantity theo kết quả đã xác minh"]:::panel
+  P23_data_map["Liên kết case/receipt explicit<br/>ENDED không đồng nghĩa POSTED"]:::guard
+  P23_data_legacy["B08 và B23 khác namespace<br/>Trùng mã PQ không phải cùng phiên"]:::blocked
+  P23_data_stale["Response trễ / Sai scope<br/>Không ghi đè visit mới"]:::blocked
+  P23_data_cases --> P23_data_s1
+  P23_data_cases --> P23_data_s2
+  P23_data_s1 -->|"Case ID"| P23_data_s2
+  P23_data_ledger -->|"Receipt đúng case"| P23_data_s2
+  P23_data_sessions --> P23_data_scope
+  P23_data_scope -->|"Hợp lệ"| P23_data_s3
+  P23_data_s3 -->|"Session ID"| P23_data_s4
+  P23_data_sessions -->|"Event đúng session"| P23_data_s4
+  P23_data_s4 --> P23_data_map
+  P23_data_ledger -->|"Chỉ liên kết receipt thật"| P23_data_map
+  P23_data_legacy -.->|"KHÔNG trộn nguồn"| P23_data_sessions
+  P23_data_scope -->|"Nguồn/thế hệ không khớp"| P23_data_stale
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

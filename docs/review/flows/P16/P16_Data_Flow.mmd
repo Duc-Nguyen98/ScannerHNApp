@@ -1,0 +1,32 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P16_data_query["Query + Filter + Kho + Phiên"]:::action
+  P16_data_key["Cache key + Query generation<br/>Một read đang chờ cho context"]:::guard
+  P16_data_adapter["Read port của nguồn P12<br/>Không phải lệnh tạo/ghi chứng từ"]:::action
+  P16_data_s1["<b>P16.S01</b><br/>Pending read / Loading"]:::panel
+  P16_data_response["Kiểm response còn đúng generation<br/>Scope chưa đổi, dữ liệu hợp lệ"]:::guard
+  P16_data_s2["<b>P16.S02</b><br/>Verified empty<br/>Không query/filter"]:::panel
+  P16_data_s3["<b>P16.S03</b><br/>Verified no-results<br/>Có điều kiện tìm kiếm"]:::panel
+  P16_data_s4["<b>P16.S04</b><br/>Read failure / Nguồn không hợp lệ"]:::panel
+  P16_data_cache[("Cache cùng context<br/>Giữ hàng đã đọc, gắn trạng thái stale")]:::store
+  P16_data_rows["P12 render rows + metadata<br/>Focus/cuộn không bị callback cũ lấy lại"]:::action
+  P16_data_late["Response trễ / Đã hủy / Sai scope<br/>Bỏ kết quả, không ghi đè view mới"]:::blocked
+  P16_data_query --> P16_data_key
+  P16_data_key --> P16_data_s1
+  P16_data_key --> P16_data_adapter
+  P16_data_adapter --> P16_data_response
+  P16_data_response -->|"Sai thế hệ/phạm vi"| P16_data_late
+  P16_data_response -->|"Rỗng không lọc"| P16_data_s2
+  P16_data_response -->|"Không khớp tìm kiếm"| P16_data_s3
+  P16_data_response -->|"Lỗi / Thiếu nguồn"| P16_data_s4
+  P16_data_response -->|"Dữ liệu đã xác minh"| P16_data_cache
+  P16_data_cache --> P16_data_rows
+  P16_data_s4 -->|"Giữ cache cũ nếu có"| P16_data_cache
+  P16_data_s4 -->|"Retry đọc cùng context"| P16_data_key
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-28",
+  "scope": "P01–P10 authorized synchronization to P11-r03 dialog contract",
+  "panels_reviewed": 35,
+  "total_catalog_panels": 91,
+  "node_snapshot": {
+    "passed": 250,
+    "failed": 0,
+    "evidence": "node-tests-workspace.txt"
+  },
+  "browser_groups": {
+    "root_p01_p02_p03_p10": 17,
+    "p04_p05": 23,
+    "p06_p07": 42,
+    "p08_p09": 46,
+    "p10_regression": 12
+  },
+  "browser_p01_p10_total": 140,
+  "shared_lifecycle_cases": 7,
+  "p11_regression_groups": 18,
+  "visual_status": "USER_REVIEW_PENDING",
+  "behavior_status": "PASS_AUDITED_PROTOTYPE",
+  "integration_status": "PRODUCTION_HARDWARE_NOT_RUN",
+  "report": "handoff/dialog-sync-2026-09-28/REPORT.md",
+  "provenance_note": "P09 r08 six evidence files unintentionally overwritten by legacy hardcoded output; dated correction and manifest retained; no fabricated restoration."
+}

@@ -1,0 +1,30 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P24_data_owner["Không có owner ghi mới cho P24<br/>Dùng lại model/service hiện có"]:::action
+  P24_data_stock[("Tồn linh kiện đã xác minh<br/>Quantity của dòng đang sửa")]:::store
+  P24_data_s1["<b>P24.S01</b><br/>P19 validation<br/>Sai thì giữ nguyên lines/version"]:::panel
+  P24_data_code[("Nguồn trạng thái BOX<br/>Mã chưa nhập / Không được xuất")]:::store
+  P24_data_s2["<b>P24.S02</b><br/>P19 rejection<br/>Raw + Reason, không tăng quantity"]:::panel
+  P24_data_receipt[("Receipt P04/P05 đã record<br/>Request ID / Document ID khớp")]:::store
+  P24_data_s3["<b>P24.S03</b><br/>waiting-web projection<br/>Record ≠ Post · Inventory delta 0"]:::panel
+  P24_data_caseState[("Case status P09 dùng chung<br/>Đã trả khách / Closed")]:::store
+  P24_data_s4["<b>P24.S04</b><br/>P20 read-only + liên kết P23<br/>Không Post mới sau khi đóng"]:::panel
+  P24_data_pending[("Request Post UNKNOWN đã tồn tại<br/>Đối chiếu cùng ID vẫn được phép")]:::store
+  P24_data_motion["Thông báo chuyển động là trình bày<br/>Guard/validation có hiệu lực ngay<br/>Không dùng animation callback để ghi"]:::action
+  P24_data_owner -->|"P19"| P24_data_stock
+  P24_data_stock --> P24_data_s1
+  P24_data_owner -->|"P19"| P24_data_code
+  P24_data_code --> P24_data_s2
+  P24_data_owner -->|"P04/P05"| P24_data_receipt
+  P24_data_receipt --> P24_data_s3
+  P24_data_owner -->|"P09/P20"| P24_data_caseState
+  P24_data_caseState --> P24_data_s4
+  P24_data_pending -->|"Cho check, không cho Post mới"| P24_data_s4
+  P24_data_motion -->|"Chỉ trình bày, guard có hiệu lực ngay"| P24_data_owner
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

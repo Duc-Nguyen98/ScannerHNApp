@@ -1,0 +1,32 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P13_data_events[("Notification store theo scope<br/>Event ID · Document ID · Read flag")]:::store
+  P13_data_docs[("Nguồn P12 dùng chung<br/>Chứng từ / Trạng thái / Lines")]:::store
+  P13_data_s1["<b>P13.S01</b><br/>Trang thông báo từ nguồn<br/>Không suy badge từ số DOM đã tải"]:::panel
+  P13_data_s2["<b>P13.S02</b><br/>Chi tiết event chính xác"]:::panel
+  P13_data_guard["Actor/kho + generation hiện tại<br/>Không để UI trễ ghi đè view mới"]:::guard
+  P13_data_read["Mark-read request<br/>Chỉ cập nhật event đã xác nhận"]:::action
+  P13_data_badge["Badge chưa đọc P02/P13<br/>Cùng notification store"]:::action
+  P13_data_waiting["Lọc phiếu nhập/xuất chờ Web<br/>Từ nguồn chứng từ hiện hành"]:::action
+  P13_data_s3["<b>P13.S03</b><br/>Danh sách chờ xử lý"]:::panel
+  P13_data_s4["<b>P13.S04</b><br/>Chi tiết đọc cùng Document ID"]:::panel
+  P13_data_noWrite["Approval cũ đã MIGRATED<br/>Không approve/Post/đổi tồn trên App"]:::blocked
+  P13_data_events --> P13_data_s1
+  P13_data_s1 -->|"Event ID"| P13_data_s2
+  P13_data_s2 -->|"Đánh dấu đọc"| P13_data_guard
+  P13_data_guard --> P13_data_read
+  P13_data_read -->|"Kết quả hợp lệ"| P13_data_events
+  P13_data_events --> P13_data_badge
+  P13_data_docs -->|"Tham chiếu hợp lệ"| P13_data_s2
+  P13_data_docs --> P13_data_waiting
+  P13_data_waiting --> P13_data_s3
+  P13_data_s3 -->|"Document ID"| P13_data_s4
+  P13_data_docs --> P13_data_s4
+  P13_data_s4 --> P13_data_noWrite
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

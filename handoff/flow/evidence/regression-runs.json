@@ -1,0 +1,250 @@
+[
+  {
+    "board": "P01",
+    "command": [
+      "check_flow_audit.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:10:47.443Z",
+    "finished": "2026-09-30T10:10:56.659Z",
+    "log": "handoff/flow/evidence/P01-regression.log"
+  },
+  {
+    "board": "P02",
+    "command": [
+      "check_home_recent.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:10:56.788Z",
+    "finished": "2026-09-30T10:11:02.401Z",
+    "log": "handoff/flow/evidence/P02-regression.log"
+  },
+  {
+    "board": "P03",
+    "command": [
+      "check_dialogs.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:11:02.401Z",
+    "finished": "2026-09-30T10:11:37.136Z",
+    "log": "handoff/flow/evidence/P03-regression.log"
+  },
+  {
+    "board": "P04",
+    "command": [
+      "check_inbound.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:11:37.136Z",
+    "finished": "2026-09-30T10:12:14.823Z",
+    "log": "handoff/flow/evidence/P04-regression.log"
+  },
+  {
+    "board": "P05",
+    "command": [
+      "check_outbound_lifecycle.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:12:14.824Z",
+    "finished": "2026-09-30T10:12:51.515Z",
+    "log": "handoff/flow/evidence/P05-regression.log"
+  },
+  {
+    "board": "P06",
+    "command": [
+      "check_lookup_recent_edges.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:12:51.516Z",
+    "finished": "2026-09-30T10:12:56.061Z",
+    "log": "handoff/flow/evidence/P06-regression.log"
+  },
+  {
+    "board": "P07",
+    "command": [
+      "check_nfc_r13.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:12:56.062Z",
+    "finished": "2026-09-30T10:13:15.038Z",
+    "log": "handoff/flow/evidence/P07-regression.log"
+  },
+  {
+    "board": "P08",
+    "command": [
+      "check_history_r23.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:13:15.039Z",
+    "finished": "2026-09-30T10:13:51.241Z",
+    "log": "handoff/flow/evidence/P08-regression.log"
+  },
+  {
+    "board": "P09",
+    "command": [
+      "check_warranty_navigation.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:13:51.242Z",
+    "finished": "2026-09-30T10:14:07.402Z",
+    "log": "handoff/flow/evidence/P09-regression.log"
+  },
+  {
+    "board": "P10",
+    "command": [
+      "check_profile_stability.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:14:07.403Z",
+    "finished": "2026-09-30T10:14:27.948Z",
+    "log": "handoff/flow/evidence/P10-regression.log"
+  },
+  {
+    "board": "P11",
+    "command": [
+      "check_security_live_preview.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:14:27.950Z",
+    "finished": "2026-09-30T10:14:44.480Z",
+    "log": "handoff/flow/evidence/P11-regression.log"
+  },
+  {
+    "board": "P12",
+    "command": [
+      "check_documents_tabs.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:14:44.480Z",
+    "finished": "2026-09-30T10:14:54.472Z",
+    "log": "handoff/flow/evidence/P12-regression.log"
+  },
+  {
+    "board": "P13",
+    "command": [
+      "check_notification_detail_nav.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:14:54.473Z",
+    "finished": "2026-09-30T10:15:48.469Z",
+    "log": "handoff/flow/evidence/P13-regression.log"
+  },
+  {
+    "board": "P14",
+    "command": [
+      "check_p14_audit_r06.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:15:48.470Z",
+    "finished": "2026-09-30T10:16:08.585Z",
+    "log": "handoff/flow/evidence/P14-regression.log"
+  },
+  {
+    "board": "P15",
+    "command": [
+      "check_p15_navigation_r03.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:16:08.586Z",
+    "finished": "2026-09-30T10:16:14.434Z",
+    "log": "handoff/flow/evidence/P15-regression.log"
+  },
+  {
+    "board": "P16",
+    "command": [
+      "check_p16_r03.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:16:14.435Z",
+    "finished": "2026-09-30T10:16:24.427Z",
+    "log": "handoff/flow/evidence/P16-regression.log"
+  },
+  {
+    "board": "P17",
+    "command": [
+      "check_p17_navigation_r03.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:16:24.428Z",
+    "finished": "2026-09-30T10:16:42.012Z",
+    "log": "handoff/flow/evidence/P17-regression.log"
+  },
+  {
+    "board": "P18",
+    "command": [
+      "check_p18_r03_edges.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:16:42.013Z",
+    "finished": "2026-09-30T10:16:51.857Z",
+    "log": "handoff/flow/evidence/P18-regression.log"
+  },
+  {
+    "board": "P19",
+    "command": [
+      "check_p19.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:16:51.858Z",
+    "finished": "2026-09-30T10:17:11.663Z",
+    "log": "handoff/flow/evidence/P19-regression.log"
+  },
+  {
+    "board": "P20",
+    "command": [
+      "run_p24_r03.cjs",
+      "regression",
+      "check_p20.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:17:11.664Z",
+    "finished": "2026-09-30T10:17:26.321Z",
+    "log": "handoff/flow/evidence/P20-regression.log"
+  },
+  {
+    "board": "P21",
+    "command": [
+      "run_p24_r03.cjs",
+      "regression",
+      "check_p21.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:17:26.321Z",
+    "finished": "2026-09-30T10:17:50.146Z",
+    "log": "handoff/flow/evidence/P21-regression.log"
+  },
+  {
+    "board": "P22",
+    "command": [
+      "run_p22_r03.cjs",
+      "check_p22.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:17:50.146Z",
+    "finished": "2026-09-30T10:18:00.845Z",
+    "log": "handoff/flow/evidence/P22-regression.log"
+  },
+  {
+    "board": "P23",
+    "command": [
+      "run_p24_r03.cjs",
+      "regression",
+      "check_p23.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:18:00.846Z",
+    "finished": "2026-09-30T10:18:16.330Z",
+    "log": "handoff/flow/evidence/P23-regression.log"
+  },
+  {
+    "board": "P24",
+    "command": [
+      "run_p24_r03.cjs",
+      "check_p24.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:18:16.331Z",
+    "finished": "2026-09-30T10:18:42.287Z",
+    "log": "handoff/flow/evidence/P24-regression.log"
+  }
+]

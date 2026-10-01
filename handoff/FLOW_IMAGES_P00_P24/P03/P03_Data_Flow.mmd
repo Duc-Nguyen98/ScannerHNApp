@@ -1,0 +1,34 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P03_data_owners[("Live owner P04/P05<br/>Document · Scan session · Version<br/>Accepted rows · Metadata · Request")]:::store
+  P03_data_projection["stock-owner-adapter<br/>Projection chỉ đọc, không tạo owner"]:::action
+  P03_data_s2["<b>P03.S02</b><br/>Snapshot giữ đúng định danh<br/>Actor · Kho · Fingerprint"]:::panel
+  P03_data_guard["Kiểm lại scope + fingerprint<br/>Trước lệnh và sau khi dialog đóng"]:::guard
+  P03_data_resume["resumeExisting<br/>Mở đúng P04/P05"]:::action
+  P03_data_s4["<b>P03.S04</b><br/>Lệnh bỏ local draft"]:::panel
+  P03_data_ownerDelete["Owner tự kiểm và xóa local<br/>P05 dọn cache địa chỉ của phiếu"]:::action
+  P03_data_save[("Dấu lưu trong bộ nhớ phiên<br/>Không đồng nghĩa WMS đã nhận")]:::store
+  P03_data_s1["<b>P03.S01</b><br/>Operation + Actor ID<br/>Warehouse ID + Return context"]:::panel
+  P03_data_s3["<b>P03.S03</b><br/>Trạng thái kho<br/>Không cho thực hiện lệnh ghi"]:::panel
+  P03_data_legacy["Legacy PN-0001 / fixture-p03<br/>Nguồn review riêng, không ánh xạ theo PN"]:::blocked
+  P03_data_shift["P14 đọc owner một lần<br/>Loại projection P03 khỏi đếm trùng"]:::action
+  P03_data_owners --> P03_data_projection
+  P03_data_projection --> P03_data_s2
+  P03_data_s2 -->|"Tiếp tục / Lưu / Bỏ"| P03_data_guard
+  P03_data_guard -->|"Khớp"| P03_data_resume
+  P03_data_guard -->|"Chỉ local chưa lưu"| P03_data_s4
+  P03_data_s4 --> P03_data_ownerDelete
+  P03_data_ownerDelete -->|"Cập nhật đúng owner"| P03_data_owners
+  P03_data_guard -->|"Lưu fixture"| P03_data_save
+  P03_data_s1 -->|"Chọn nghiệp vụ, chưa cấp lại nháp"| P03_data_resume
+  P03_data_s3 -->|"Write guard"| P03_data_guard
+  P03_data_legacy -->|"Review riêng"| P03_data_s2
+  P03_data_owners --> P03_data_shift
+  P03_data_guard -->|"Lệch / UNKNOWN: giữ dữ liệu"| P03_data_s2
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

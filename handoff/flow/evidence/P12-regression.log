@@ -1,0 +1,10 @@
+PASS Deep panel3 retains four tabs, exact doc, product selected; panel ID preserved
+PASS All four tabs share stable context/header/nav position at six viewports
+PASS Zero attachments has explicit empty card, info hides dead View all; history uses P09 marker timeline
+PASS Keyboard arrows/Home/End navigate all tabs; active repeat does not grow history
+PASS Product query retained across tabs; different document does not inherit it
+PASS Long per-tab content restores independent scroll; tabs stay available during wheel
+PASS Tab changes replace one page; browser Back returns to list, Forward restores latest tab
+PASS P18 PDF viewer Back restores document tab; file identity stays unchanged
+PASS Unknown document and missing source differ from empty; no orphan tabpanels
+9 groups PASS

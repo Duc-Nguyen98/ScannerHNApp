@@ -1,0 +1,33 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P12_data_seed[("DOCUMENTS seed theo scope<br/>Document ID · Loại · Trạng thái · Lines")]:::store
+  P12_data_live[("Owner P04/P05<br/>Receipt đã record + Draft đang làm")]:::store
+  P12_data_merge["mergeDocuments / recordedDocuments<br/>Scope actor/kho, dedup đúng ID"]:::action
+  P12_data_s1["<b>P12.S01</b><br/>Danh sách đã lọc<br/>Home gần đây dùng cùng nguồn"]:::panel
+  P12_data_s2["<b>P12.S02</b><br/>Chi tiết đúng document ID"]:::panel
+  P12_data_s3["<b>P12.S03</b><br/>Lines/tổng cùng document<br/>Search không thay quantity gốc"]:::panel
+  P12_data_files[("Metadata tệp + File ID + URL<br/>Liên kết P18 đúng chứng từ")]:::store
+  P12_data_s4["<b>P12.S04</b><br/>Form tạo tạm<br/>Type · Supplier ID · Note"]:::panel
+  P12_data_guard["Quyền / Kho / Metadata<br/>Resume ID phải khớp owner"]:::guard
+  P12_data_handoff["Giao lệnh tạo/tiếp tục cho P04/P05/P09<br/>P12 không tự ghi kho"]:::action
+  P12_data_reader["Read controller P16<br/>Query generation · Scope · Cache"]:::action
+  P12_data_missing["Nguồn thiếu / ID sai<br/>Không suy thành chứng từ rỗng"]:::blocked
+  P12_data_seed --> P12_data_merge
+  P12_data_live --> P12_data_merge
+  P12_data_merge --> P12_data_reader
+  P12_data_reader --> P12_data_s1
+  P12_data_s1 -->|"ID thật"| P12_data_s2
+  P12_data_s2 --> P12_data_s3
+  P12_data_s2 --> P12_data_files
+  P12_data_s4 --> P12_data_guard
+  P12_data_live -->|"Kiểm draft có sẵn"| P12_data_guard
+  P12_data_guard -->|"Được phép"| P12_data_handoff
+  P12_data_reader -->|"Không xác minh"| P12_data_missing
+  P12_data_missing -->|"Hiển thị state đúng"| P12_data_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

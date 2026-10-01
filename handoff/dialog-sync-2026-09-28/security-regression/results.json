@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "Back and immediate reentry during list load settle instead of leaving a spinner",
+      "status": "PASS"
+    },
+    {
+      "name": "Default session list works without opening review tools",
+      "status": "PASS"
+    },
+    {
+      "name": "Revoke cancel preserves both sessions; confirm removes only selected ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Reenter session list after Home keeps revocation",
+      "status": "PASS"
+    },
+    {
+      "name": "Default password mismatch stays local; correcting it changes shared preview credential",
+      "status": "PASS"
+    },
+    {
+      "name": "Old current password is rejected on next change; no stale receipt success",
+      "status": "PASS"
+    },
+    {
+      "name": "Switching password to sessions clears old error and scroll context",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout invalidates current session; old password fails and new password logs in via P01",
+      "status": "PASS"
+    },
+    {
+      "name": "New login retains account credential and prior remote revocation",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit disconnected scenario has scoped message; normal preview recovers without account reset",
+      "status": "PASS"
+    },
+    {
+      "name": "No secret is persisted to browser storage, history or visible review metadata",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "external": []
+}

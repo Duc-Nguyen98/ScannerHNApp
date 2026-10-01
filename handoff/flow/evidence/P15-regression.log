@@ -1,0 +1,12 @@
+PASS Footer navigation waits for system history close, URL matches Documents; Back returns Home
+PASS Closing via Home CTA has no stale system history; subsequent nav works
+PASS Device guide closes once with Back, restores trigger; Back then leaves panel
+PASS Expiry replaces active P15 without stale close callback hiding it; reauth remains required
+Error: ENOENT: no such file or directory, open 'C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\handoff\flow\evidence\regression\P15\P15\evidence\revision-03\navigation-results.json'
+    at Object.writeFileSync (node:fs:2483:20)
+    at eval (eval at <anonymous> (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\flow_gate_regression.cjs:48:3), <anonymous>:11:32) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\flow\\evidence\\regression\\P15\\P15\\evidence\\revision-03\\navigation-results.json'
+}

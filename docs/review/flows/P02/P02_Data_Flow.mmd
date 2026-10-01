@@ -1,0 +1,32 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P02_data_session[("Phiên P01<br/>Actor · Kho · Quyền · Giờ bắt đầu")]:::store
+  P02_data_docs[("Nguồn chứng từ P12<br/>Seed + receipt P04/P05 hợp lệ")]:::store
+  P02_data_cases[("Nguồn hồ sơ bảo hành P09")]:::store
+  P02_data_notif[("Notification store P13<br/>Trạng thái đã đọc/chưa đọc")]:::store
+  P02_data_draft[("Snapshot owner P04/P05/P19<br/>Không dựng draft mới từ tên phiếu")]:::store
+  P02_data_scope["Lọc cùng actor/kho<br/>Chỉ dùng receipt đã xác minh"]:::guard
+  P02_data_view["Tính KPI / Badge / Phiếu đang làm<br/>Gần đây tối đa 3 chứng từ"]:::action
+  P02_data_s1["<b>P02.S01</b><br/>Hiển thị từ nguồn dùng chung<br/>Không cộng tồn từ số card"]:::panel
+  P02_data_route["Chuyển màn bằng ID thật<br/>Document ID / Case ID / Draft ID"]:::action
+  P02_data_returnState[("Ngữ cảnh quay lại<br/>Cuộn · Focus · ID lựa chọn")]:::store
+  P02_data_unknown["Nguồn chưa xác minh<br/>Không đổi thành số 0 giả"]:::blocked
+  P02_data_session --> P02_data_scope
+  P02_data_docs --> P02_data_scope
+  P02_data_cases --> P02_data_view
+  P02_data_notif --> P02_data_view
+  P02_data_draft --> P02_data_scope
+  P02_data_scope --> P02_data_view
+  P02_data_view --> P02_data_s1
+  P02_data_s1 -->|"Chọn mục"| P02_data_route
+  P02_data_route --> P02_data_returnState
+  P02_data_returnState -->|"Back"| P02_data_s1
+  P02_data_scope -->|"Thiếu nguồn / scope"| P02_data_unknown
+  P02_data_unknown -->|"Hiển thị chưa xác minh"| P02_data_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

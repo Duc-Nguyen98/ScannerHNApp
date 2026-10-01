@@ -1,0 +1,13 @@
+# MOTION_P00 — Setup hệ thống motion dùng chung sau FLOW_GATE
+
+Đây là prompt thực thi nền tảng, không phải board mới. Đọc `MOTION_CONTRACT.md`, contract thiết kế gốc và `handoff/flow/FLOW_GATE.json`. Nếu flow chưa đạt, xử lý blocker flow trước, không thêm animation toàn app. Tái sử dụng code đã dựng, không chạy lại24 prompt gốc.
+
+1. Kiểm framework/runtime, package/lockfile, thư viện motion/scroll/virtual hiện có, AppShell/router/overlay và scroller. Ghi `STACK_DECISION.md` với lựa chọn và source evidence. React tương thích thì một Motion/framer-motion engine; vanilla dùng CSS/WAAPI. Không migrate framework, không tự cài GSAP/Lenis/Locomotive/SmoothUI pack.
+2. Lập `OWNERSHIP.md` trước khi sửa: component/domain → owner → consumer boards → property/controller. Xác định chính xác node route wrapper và overlay root. Không animate transform trên ancestor chứa fixed header/CTA hoặc video khiến geometry thay đổi. Không hai owner scroll/focus/route.
+3. Đo/chụp baseline hiện hành: Login/Home khóa, một modal, scanner, list dài nếu có, dữ liệu mẫu và operation count. Lưu fixture version và source/diff identity để so sau. Đo runtime/bundle bằng công cụ sẵn có, không đoán.
+4. Tạo token và primitive theo contract: PressFeedback, NoticeFeedback, RouteTransition, Modal/SheetMotion, DataState và RowFeedback theo cách đặt tên dự án. Cấu hình auto/reduced/off, cleanup/cancel. Primitive có thể khác tên nhưng giữ ownership. Chỉ kiểm trên harness/route đại diện nội bộ; không bật route/animation toàn app trước khi các consumer được kiểm.
+5. Đặt feature flag fail-safe cho motion: tắt vẫn dùng được toàn bộ app. Motion on không đổi domain state. Ưu tiên opacity/transform cục bộ, không global transition:all hay scroll-behavior:smooth toàn trang. Dùng CSS cho interaction đơn giản, phân property tránh trùng Motion.
+6. Audit list candidates P06/P08/P12/P20/P22/P23 và list khác nếu có evidence. Chỉ quyết định TanStack Virtual khi profile cần; có sẵn thì reuse. Ghi APPLIED hoặc NOT_NEEDED kèm số đo/lý do. Chưa có dữ liệu profile thì DEFERRED, không cài trước để dự phòng.
+7. Kiểm reduced OS khi đổi live, modeoff, keyboard/focus/modal cleanup, nested scroll, rapid navigation, safe-area/keyboard. Route security-sensitive bỏ exit ngay. Không thêm dashboard hoặc setting motion vào UI sản phẩm: test controls ở review/harness riêng.
+
+Đầu ra `handoff/motion/M00/REPORT.md`, `STACK_DECISION.md`, `OWNERSHIP.md`, token/primitive thật, before-evidence và `MOTION_RUN_STATE.json`. Copy/khởi tạo tracking CSV kèm pack, giữ dữ liệu nếu đã có. Sau đủ kiểm nền tảng chuyển MOTION_P01. Không install thêm engine trong từng prompt con; quyết định chung chỉ sửa khi có evidence cụ thể.

@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {summarizeReceipt,receiptSummary,receiptCodes,pendingSummary,newlyLoadedIds} from '../docs/flows/warranty-components/history-experience.mjs';
+const line={sku:'LK-1',code:'BOX-< & >',name:'Đầu in',quantity:2};
+test('SKU grouping and quantity distinct from codes, source immutable',()=>{const d={lines:[line,{...line,code:'B',quantity:1}]},before=JSON.stringify(d),s=summarizeReceipt(d);assert.equal(s.total,3);assert.equal(s.skuCount,1);assert.equal(s.groups[0].codes.size,2);assert.equal(JSON.stringify(d),before);});
+for(const q of [undefined,null,0,-1,1.2,'2',NaN,Infinity])test('Unknown quantity not converted to0: '+String(q),()=>{const s=summarizeReceipt({lines:[line,{...line,quantity:q}]});assert.equal(s.total,null);assert.equal(s.groups[0].known,false);});
+test('Missing SKU not guessed from code; empty total unverified',()=>{assert.equal(summarizeReceipt({lines:[{code:'A',quantity:1}]}).skuCount,null);assert.equal(summarizeReceipt({lines:[]}).total,null);assert.match(receiptSummary({lines:[]}),/chưa xác minh/);});
+test('Unsafe sums are not displayed',()=>{assert.equal(summarizeReceipt({lines:[{...line,quantity:Number.MAX_SAFE_INTEGER},line]}).total,null);});
+test('Raw codes preserve full Unicode/newline/HTML strings; never infer kind from prefix',()=>{const d={id:'D',caseId:'BH-001',at:'now',lines:[{...line,code:'BOX-< & >\n🧰'+('Z'.repeat(2000))}]};const s=receiptCodes(d);assert.ok(s.includes(d.lines[0].code));assert.match(s,/Mã linh kiện \/ hộp/);assert.match(receiptCodes({...d,lines:[{...line,kind:'BOX'}]}),/Mã hộp:/);});
+test('Raw dialog and totals keep unknown fields explicit',()=>{const s=receiptCodes({id:'D',lines:[{}]});assert.match(s,/SKU: Chưa xác minh/);assert.match(s,/Số lượng: Chưa xác minh/);});
+test('New batch counts only immutable IDs not duplicates/SKUs',()=>{assert.deepEqual(newlyLoadedIds([{id:'A'}],[{id:'A'},{id:'B'},{id:'B'}]),['B']);assert.deepEqual(newlyLoadedIds([{id:'A'}],[{id:'A'}]),[]);});
+test('Pending summary is sourced and missing counts not0',()=>{assert.equal(pendingSummary({counts:{codes:2,quantity:3}}),'2 mã/hộp · 3 linh kiện');assert.match(pendingSummary({}),/Chưa xác minh/);assert.equal(pendingSummary(null),'');});

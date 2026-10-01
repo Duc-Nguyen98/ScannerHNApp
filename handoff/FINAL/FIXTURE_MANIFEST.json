@@ -1,0 +1,720 @@
+{
+  "fixture_version": "hn-flow-gate-2026-09-30-v1",
+  "build": "final-2e8357d7f52d",
+  "source_app_hash": "9138cf689297094c291963dfdf9c04041728c338e71691c84185d448cd1a2fe9",
+  "prior_manifest": "handoff/flow/FIXTURE_MANIFEST.json",
+  "owners": {
+    "auth": "hn-scanner-auth-preview-v1",
+    "dialogs": "hn-scanner-dialog-preview-v1",
+    "inbound": "hn-inbound-preview-v1",
+    "outbound": "hn-outbound-preview-v1",
+    "history": "hn-history-fixture-v1; verified-stock-receipt projection",
+    "warranty": "shared/warranty-cases.mjs + P19 confirmed receipts",
+    "nfc_audit": "P22 event-only; default unavailable; B22 opt-in",
+    "sessions": "P23 distinct sessions; default unavailable; B23 opt-in"
+  },
+  "scenarios": [
+    {
+      "name": "B08",
+      "session": "PQ-0001",
+      "scan_total": 19,
+      "quantity": 17,
+      "not_equivalent_to": "B23/PQ-0001"
+    },
+    {
+      "name": "B23",
+      "session": "PQ-0001",
+      "operation": "lookup",
+      "scan_total": 5,
+      "document": null
+    },
+    {
+      "name": "verified-stock-receipt",
+      "rule": "recordedDocuments checks actor/warehouse/recorded/outcome; projection only verified receipt event; dedup exact ID; replace exact P12 legacy mapping only; no synthetic scan/NFC event"
+    },
+    {
+      "name": "P03-legacy",
+      "document": "PN-0001",
+      "owner_mapping": "ISOLATED_NEGATIVE_REVIEW_SAMPLE_NOT_IMPORTED",
+      "codes": [
+        "FIXTURE-HN-0001",
+        "FIXTURE-HN-0002"
+      ],
+      "runtime_replacement": "stock-owner-adapter projection of current P04/P05 owner; J12 verifies both"
+    },
+    {
+      "name": "B19/B20/B21/B24",
+      "rule": "Existing explicit samples retained; seed not regenerated; runtime owner UUIDs retained within each journey"
+    }
+  ],
+  "review_scenarios": [
+    {
+      "id": "P01.S01",
+      "board": "P01",
+      "disposition": "ORIGINAL",
+      "link": "?view=review&panel=P01.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P01.S02",
+      "board": "P01",
+      "disposition": "ORIGINAL",
+      "link": "?view=review&panel=P01.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P02.S01",
+      "board": "P02",
+      "disposition": "ORIGINAL",
+      "link": "?view=review&panel=P02.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P03.S01",
+      "board": "P03",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P03.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P03.S02",
+      "board": "P03",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P03.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P03.S03",
+      "board": "P03",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P03.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P03.S04",
+      "board": "P03",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P03.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P04.S01",
+      "board": "P04",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P04.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P04.S02",
+      "board": "P04",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P04.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P04.S03",
+      "board": "P04",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P04.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P04.S04",
+      "board": "P04",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P04.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P05.S01",
+      "board": "P05",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P05.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P05.S02",
+      "board": "P05",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P05.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P05.S03",
+      "board": "P05",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P05.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P05.S04",
+      "board": "P05",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P05.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P06.S01",
+      "board": "P06",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P06.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P06.S02",
+      "board": "P06",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P06.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P06.S03",
+      "board": "P06",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P06.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P06.S04",
+      "board": "P06",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P06.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P07.S01",
+      "board": "P07",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P07.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P07.S02",
+      "board": "P07",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P07.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P07.S03",
+      "board": "P07",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P07.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P07.S04",
+      "board": "P07",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P07.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P08.S01",
+      "board": "P08",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P08.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P08.S02",
+      "board": "P08",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P08.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P08.S03",
+      "board": "P08",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P08.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P08.S04",
+      "board": "P08",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P08.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P09.S01",
+      "board": "P09",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P09.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P09.S02",
+      "board": "P09",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P09.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P09.S03",
+      "board": "P09",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P09.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P09.S04",
+      "board": "P09",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P09.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P10.S01",
+      "board": "P10",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P10.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P10.S02",
+      "board": "P10",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P10.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P10.S03",
+      "board": "P10",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P10.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P10.S04",
+      "board": "P10",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P10.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P11.S01",
+      "board": "P11",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P11.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P11.S02",
+      "board": "P11",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P11.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P11.S03",
+      "board": "P11",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P11.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P11.S04",
+      "board": "P11",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P11.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P12.S01",
+      "board": "P12",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P12.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P12.S02",
+      "board": "P12",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P12.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P12.S03",
+      "board": "P12",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P12.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P12.S04",
+      "board": "P12",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P12.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P13.S01",
+      "board": "P13",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P13.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P13.S02",
+      "board": "P13",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P13.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P13.S03",
+      "board": "P13",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P13.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P13.S04",
+      "board": "P13",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P13.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P14.S01",
+      "board": "P14",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P14.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P14.S02",
+      "board": "P14",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P14.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P14.S03",
+      "board": "P14",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P14.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P14.S04",
+      "board": "P14",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P14.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P15.S01",
+      "board": "P15",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P15.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P15.S02",
+      "board": "P15",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P15.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P15.S03",
+      "board": "P15",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P15.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P15.S04",
+      "board": "P15",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P15.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P16.S01",
+      "board": "P16",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P16.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P16.S02",
+      "board": "P16",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P16.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P16.S03",
+      "board": "P16",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P16.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P16.S04",
+      "board": "P16",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P16.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P17.S01",
+      "board": "P17",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P17.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P17.S02",
+      "board": "P17",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P17.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P17.S03",
+      "board": "P17",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P17.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P17.S04",
+      "board": "P17",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P17.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P18.S01",
+      "board": "P18",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P18.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P18.S02",
+      "board": "P18",
+      "disposition": "LEGACY_ADAPTED",
+      "link": "?view=review&panel=P18.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P18.S03",
+      "board": "P18",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P18.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P18.S04",
+      "board": "P18",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P18.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P19.S01",
+      "board": "P19",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P19.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P19.S02",
+      "board": "P19",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P19.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P19.S03",
+      "board": "P19",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P19.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P19.S04",
+      "board": "P19",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P19.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P20.S01",
+      "board": "P20",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P20.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P20.S02",
+      "board": "P20",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P20.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P20.S03",
+      "board": "P20",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P20.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P20.S04",
+      "board": "P20",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P20.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P21.S01",
+      "board": "P21",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P21.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P21.S02",
+      "board": "P21",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P21.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P21.S03",
+      "board": "P21",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P21.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P21.S04",
+      "board": "P21",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P21.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P22.S01",
+      "board": "P22",
+      "disposition": "MIGRATED",
+      "link": "?view=review&panel=P22.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P22.S02",
+      "board": "P22",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P22.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P22.S03",
+      "board": "P22",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P22.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P22.S04",
+      "board": "P22",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P22.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P23.S01",
+      "board": "P23",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P23.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P23.S02",
+      "board": "P23",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P23.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P23.S03",
+      "board": "P23",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P23.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P23.S04",
+      "board": "P23",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P23.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P24.S01",
+      "board": "P24",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P24.S01&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P24.S02",
+      "board": "P24",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P24.S02&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P24.S03",
+      "board": "P24",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P24.S03&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    },
+    {
+      "id": "P24.S04",
+      "board": "P24",
+      "disposition": "CURRENT",
+      "link": "?view=review&panel=P24.S04&motion=auto",
+      "policy": "Fresh document; existing UI commands/opt-in owner sample, never direct state injection"
+    }
+  ],
+  "correction_map": [
+    {
+      "surface": "FINAL old Home View all journey",
+      "current": "Home recent View all -> P12; History footer -> P22",
+      "source": "AGENTS.md user decision 2026-09-29"
+    },
+    {
+      "surface": "P03.S02/S04",
+      "current": "Live inbound owner projection; legacy review sample remains separate",
+      "source": "FLOW_GATE J12 + stock-owner-adapter"
+    }
+  ],
+  "geography": {
+    "namespace": "final-geography-fixture",
+    "version": "provinces.open-api.vn/v1-before-2025-07",
+    "source": "tests/fixtures/outbound-geography.mjs",
+    "province_ids": [
+      "79",
+      "1"
+    ],
+    "district_ids": [
+      "760",
+      "761",
+      "1"
+    ],
+    "network": "Local in-memory Response; no external request"
+  },
+  "isolation": "Per browser document/iframe. No shared server state or browser storage.",
+  "reset": "User confirmation then reloads only preview iframe; Escape/cancel keeps current document. No global storage clearing.",
+  "refresh": "Reconstruct declared review panel from URL; later edits/drafts/receipts/password changes reset. App Preview reauthenticates. No durable backend claim.",
+  "secret_scan": "No private key, GitHub/OpenAI credential or local user path pattern detected in packaged files; public demo credentials only."
+}

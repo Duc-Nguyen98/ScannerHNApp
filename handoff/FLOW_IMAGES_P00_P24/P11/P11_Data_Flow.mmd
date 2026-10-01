@@ -1,0 +1,34 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P11_data_session[("Account store dùng chung P01–P11<br/>Actor ID · Current auth session ID")]:::store
+  P11_data_s1["<b>P11.S01</b><br/>Mật khẩu chỉ giữ tạm trong form"]:::panel
+  P11_data_s2["<b>P11.S02</b><br/>Validation tại client<br/>Sai xác nhận: không gọi đổi mật khẩu"]:::panel
+  P11_data_ctx["Scope tài khoản / Phiên<br/>Action + Request ID cố định"]:::guard
+  P11_data_adapter["Security preview adapter<br/>Nguồn policy / Session list / Reconcile"]:::action
+  P11_data_unknown["Kết quả chưa xác minh<br/>Giữ pending, không phát lệnh trùng"]:::guard
+  P11_data_receipt[("Receipt khớp action + request<br/>Không nhận callback khác tài khoản")]:::store
+  P11_data_s3["<b>P11.S03</b><br/>Xác nhận thay đổi fixture<br/>Login sau dùng credential mới trong trang"]:::panel
+  P11_data_s4["<b>P11.S04</b><br/>Danh sách session đã kiểm ID<br/>Đúng 1 phiên hiện tại"]:::panel
+  P11_data_revoke["Thu hồi session ID được chọn<br/>Giữ phiên hiện tại theo policy fixture"]:::action
+  P11_data_clear["Rời màn / Logout / Reload<br/>Dọn ô mật khẩu; không ghi password vào storage"]:::blocked
+  P11_data_session --> P11_data_ctx
+  P11_data_s1 --> P11_data_s2
+  P11_data_s2 -->|"Hợp lệ"| P11_data_ctx
+  P11_data_ctx --> P11_data_adapter
+  P11_data_adapter -->|"Chưa rõ / Receipt sai"| P11_data_unknown
+  P11_data_unknown -->|"Reconcile cùng request"| P11_data_adapter
+  P11_data_adapter -->|"Đã xác minh"| P11_data_receipt
+  P11_data_receipt -->|"Cập nhật đúng account"| P11_data_session
+  P11_data_receipt --> P11_data_s3
+  P11_data_session -->|"Đọc phiên"| P11_data_adapter
+  P11_data_adapter -->|"Nguồn xác minh"| P11_data_s4
+  P11_data_s4 --> P11_data_revoke
+  P11_data_revoke --> P11_data_ctx
+  P11_data_clear -->|"Xóa dữ liệu nhạy cảm"| P11_data_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

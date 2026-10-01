@@ -1,0 +1,38 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P17_user_entry["Đang quét / Gửi phiếu<br/>P04 · P05 · P07"]:::action
+  P17_user_s1["<b>P17.S01</b><br/>Mã không hợp lệ<br/>P04 giữ raw và danh sách hợp lệ"]:::panel
+  P17_user_repair["Nhập mã / Sửa mã vừa nhập<br/>Quay lại đúng phiên quét"]:::action
+  P17_user_s2["<b>P17.S02</b><br/>Mã không thể xuất<br/>P05 hiển thị lý do từ nguồn"]:::panel
+  P17_user_other["Quét mã khác<br/>Không cộng mã bị chặn"]:::action
+  P17_user_s3["<b>P17.S03</b><br/>NFC đã có liên kết / Xung đột"]:::panel
+  P17_user_nfc["Xem liên kết / Hủy<br/>Không tự ghi đè mapping"]:::action
+  P17_user_s4["<b>P17.S04</b><br/>Kết quả gửi chưa xác định<br/>Giữ phiếu, khóa gửi lại"]:::panel
+  P17_user_check["Kiểm tra đúng request hiện tại"]:::guard
+  P17_user_yes["P04/P05.S04 · Chờ Web<br/>Chỉ khi xác nhận đã record"]:::action
+  P17_user_no["Chưa record được xác minh<br/>Retry cùng yêu cầu nếu được phép"]:::action
+  P17_user_unknown["Vẫn UNKNOWN / Thiếu nguồn<br/>Giữ khóa, chờ đối chiếu"]:::guard
+  P17_user_home["Rời màn không xóa request<br/>Trở lại vẫn giữ trạng thái"]:::action
+  P17_user_entry -->|"Mã nhập không hợp lệ"| P17_user_s1
+  P17_user_s1 --> P17_user_repair
+  P17_user_repair --> P17_user_entry
+  P17_user_entry -->|"Nguồn từ chối xuất"| P17_user_s2
+  P17_user_s2 --> P17_user_other
+  P17_user_other --> P17_user_entry
+  P17_user_entry -->|"Thẻ xung đột"| P17_user_s3
+  P17_user_s3 --> P17_user_nfc
+  P17_user_nfc -->|"Hủy / Đọc mã khác"| P17_user_entry
+  P17_user_entry -->|"Timeout / Mất phản hồi"| P17_user_s4
+  P17_user_s4 --> P17_user_check
+  P17_user_check -->|"Đã ghi nhận"| P17_user_yes
+  P17_user_check -->|"Chưa ghi nhận + retryAllowed"| P17_user_no
+  P17_user_check -->|"Chưa rõ"| P17_user_unknown
+  P17_user_unknown -->|"Thử đọc trạng thái"| P17_user_check
+  P17_user_s4 --> P17_user_home
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

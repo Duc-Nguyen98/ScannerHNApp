@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "S01 required/read-only metadata and source session",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 fixture 12=11+1 and raw history",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 back retains codes/identity and edits note",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 single confirmed record + S04 links exact P12 receipt without inventory change",
+      "status": "PASS"
+    },
+    {
+      "name": "result dependency notice remains accessible at reduced height",
+      "status": "PASS"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'DIV' !== 'BUTTON'\n\n    at eval (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\flow_gate_regression.cjs:52:3), <anonymous>:32:644)\n    at async check (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\flow_gate_regression.cjs:52:3), <anonymous>:13:32)\n    at async eval (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\flow_gate_regression.cjs:52:3), <anonymous>:32:2)",
+  "errors": []
+}

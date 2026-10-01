@@ -1,0 +1,8 @@
+PASS Long query 250/2000/unbroken/Unicode is three lines with exact full reader; short has no extra link
+PASS Reader Back/backdrop/focus and six viewport geometry; recovery CTA remains reachable
+PASS Toolbar scan and sort keep DOM identity and keyboard focus when request settles
+PASS Open sort remains focused during read completion; Escape returns to same trigger
+PASS Focused row disappearing moves focus to list region, never BODY; busy/announcement remains accessible
+PASS Apply filter and sort restore semantic trigger after render; Cancel does not change query
+PASS Long query with all filters has no clipped art; scrolling reaches CTA; removal and browser Back work
+7 groups PASS

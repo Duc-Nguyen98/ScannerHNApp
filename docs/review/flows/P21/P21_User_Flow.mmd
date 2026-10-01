@@ -1,0 +1,38 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P21_user_in["Back từ P19 / Tiếp tục từ P09<br/>Chọn đúng draft owner"]:::action
+  P21_user_s1["<b>P21.S01</b><br/>Phiếu đang thực hiện<br/>Chỉ owner hiện có; B21 là mẫu riêng"]:::panel
+  P21_user_s2["<b>P21.S02</b><br/>Tiếp tục đúng phiếu<br/>Đọc checkpoint trước khi quét"]:::panel
+  P21_user_check["Đúng document/session/version?<br/>Mã đã ghi nhận có xác minh?"]:::guard
+  P21_user_scan["P19 · Quét tiếp / Kiểm tra<br/>Giữ lines và định danh"]:::action
+  P21_user_s3["<b>P21.S03</b><br/>Cần đối chiếu<br/>Lệch version / Thiếu xác minh"]:::panel
+  P21_user_readonly["Không tự thay phiên / Tạo phiếu mới<br/>Không cho quét hoặc Post"]:::blocked
+  P21_user_s4["<b>P21.S04</b><br/>Kiểm tra kết quả xuất<br/>Request Post đang UNKNOWN"]:::panel
+  P21_user_reconcile["Đối chiếu cùng request"]:::guard
+  P21_user_posted["P20 · Receipt POSTED<br/>Đúng case và đúng phiếu"]:::action
+  P21_user_notPosted["Chưa Post được xác minh<br/>Đọc lại checkpoint trước tiếp tục"]:::action
+  P21_user_unknown["Vẫn chưa rõ / Lỗi nguồn<br/>Giữ khóa và dữ liệu"]:::guard
+  P21_user_back["Chi tiết → Danh sách → Home<br/>Không xóa draft khi Back"]:::action
+  P21_user_in --> P21_user_s1
+  P21_user_s1 -->|"Chọn document ID"| P21_user_s2
+  P21_user_in -->|"Caller đã có ID"| P21_user_s2
+  P21_user_s2 --> P21_user_check
+  P21_user_check -->|"Khớp + Được phép"| P21_user_scan
+  P21_user_check -->|"Chưa khớp / Chưa rõ"| P21_user_s3
+  P21_user_s3 --> P21_user_readonly
+  P21_user_s2 -->|"Post đang UNKNOWN"| P21_user_s4
+  P21_user_s4 --> P21_user_reconcile
+  P21_user_reconcile -->|"Đã Post xác minh"| P21_user_posted
+  P21_user_reconcile -->|"Chưa Post xác minh"| P21_user_notPosted
+  P21_user_notPosted -->|"Đọc lại"| P21_user_s2
+  P21_user_reconcile -->|"Không xác minh"| P21_user_unknown
+  P21_user_unknown --> P21_user_s4
+  P21_user_s2 --> P21_user_back
+  P21_user_s1 --> P21_user_back
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

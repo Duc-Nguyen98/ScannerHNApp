@@ -1,0 +1,38 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P12_user_in["Home gần đây / Xem tất cả<br/>P08 / P13 / Kết quả nhập-xuất"]:::action
+  P12_user_s1["<b>P12.S01</b><br/>Danh sách chứng từ<br/>Tìm · Lọc · Chọn đúng ID"]:::panel
+  P12_user_s2["<b>P12.S02</b><br/>Chi tiết chứng từ<br/>Thông tin · Trạng thái · Tệp"]:::panel
+  P12_user_s3["<b>P12.S03</b><br/>Sản phẩm cùng chứng từ<br/>SKU · Quantity · Tìm trong phiếu"]:::panel
+  P12_user_files["P18.S01/S02 · Tệp / Viewer"]:::action
+  P12_user_s4["<b>P12.S04</b><br/>Tạo chứng từ<br/>Chọn loại · NCC · Ghi chú"]:::panel
+  P12_user_type["Nhập / Xuất / Bảo hành?"]:::guard
+  P12_user_draft["Đã có phiếu đang làm?"]:::guard
+  P12_user_resume["Xác nhận tiếp tục đúng owner<br/>Không đè dữ liệu bằng form mới"]:::action
+  P12_user_create["P04 / P05 / P09<br/>Tạo qua owner nghiệp vụ"]:::action
+  P12_user_missing["Sai ID / Thiếu nguồn<br/>Không lấy chứng từ đầu tiên"]:::blocked
+  P12_user_states["P16 · Loading / Empty / Error<br/>Giữ filter và context khi retry"]:::action
+  P12_user_back["Back đúng caller<br/>Giữ tab, tìm kiếm, cuộn và focus"]:::action
+  P12_user_in --> P12_user_s1
+  P12_user_s1 -->|"Chọn ID"| P12_user_s2
+  P12_user_s2 -->|"Tab sản phẩm"| P12_user_s3
+  P12_user_s3 -->|"Thông tin"| P12_user_s2
+  P12_user_s2 -->|"Mở đúng file ID"| P12_user_files
+  P12_user_files -->|"Back"| P12_user_s2
+  P12_user_s1 -->|"Tạo mới"| P12_user_s4
+  P12_user_s4 --> P12_user_type
+  P12_user_type -->|"Kiểm owner hiện tại"| P12_user_draft
+  P12_user_draft -->|"Có đúng draft"| P12_user_resume
+  P12_user_resume -->|"Người dùng đồng ý"| P12_user_create
+  P12_user_draft -->|"Chưa có draft"| P12_user_create
+  P12_user_s2 -->|"Không xác minh được ID"| P12_user_missing
+  P12_user_s1 -->|"Kết quả đọc"| P12_user_states
+  P12_user_s2 --> P12_user_back
+  P12_user_back --> P12_user_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

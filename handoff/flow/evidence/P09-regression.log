@@ -1,0 +1,11 @@
+PASS Intake → lookup → header/browser Back restores exact draft/manual/scroll, never Home
+PASS Nested P06 product/stock/history Back follows its own steps then returns to P09
+PASS Choose serial in P06 returns to original intake, consumes bridge and keeps fields
+PASS Browser Back closes fault/filter/confirmation overlays before leaving the current step
+PASS Confirmed intake → case → Back returns to intake; next Back returns list; no loop
+PASS Case Events tab → processing dialog → browser Back restores tab and unsent result
+PASS Result browser Back preserves calling Parts tab; subsequent Back restores case list filter
+PASS Standalone P06 → warranty → Back returns P06 item, without poisoning future Home lookup
+PASS Rapid double Back consumes one step instead of jumping Home
+PASS UNKNOWN keeps request/session/version across Back/Forward, without reapplying serial
+PASS Forward over dismissed dialog cannot submit; logout then Back cannot resurrect journey

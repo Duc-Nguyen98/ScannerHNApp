@@ -1,0 +1,47 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P09_data_serial["Serial nhập tay / Nhận từ P06"]:::action
+  P09_data_match["Đối chiếu đúng serial<br/>Không dùng SKU thay serial"]:::guard
+  P09_data_product[("Sản phẩm · Khách hàng · Liên hệ<br/>Nguồn fixture hiện hành")]:::store
+  P09_data_s2["<b>P09.S02</b><br/>Bản nhập tiếp nhận<br/>Lỗi · Mô tả Khác · Ghi chú · Phụ kiện"]:::panel
+  P09_data_shared[("Nguồn hồ sơ dùng chung<br/>Case ID · Serial · Status<br/>Version · Lịch sử xử lý")]:::store
+  P09_data_s3["<b>P09.S03</b><br/>Bản cập nhật sửa chữa<br/>Chẩn đoán · Kết quả"]:::panel
+  P09_data_guard["Phiên · Quyền · Kho · Hồ sơ đóng<br/>Dữ liệu · Version · Chặn gửi trùng"]:::guard
+  P09_data_req["Yêu cầu cố định danh<br/>Request ID · Session · Case ID<br/>Version · Nội dung gửi"]:::action
+  P09_data_adapter["Bộ xử lý hiện tại<br/>Adapter mô phỏng"]:::action
+  P09_data_unknown["UNKNOWN<br/>Giữ request, khóa gửi lại"]:::guard
+  P09_data_check["Đối chiếu đúng Request ID"]:::guard
+  P09_data_failed["Lỗi xác định<br/>Giữ bản nhập và định danh"]:::blocked
+  P09_data_verified["Cập nhật hồ sơ và lịch sử<br/>Receipt khớp đúng yêu cầu"]:::action
+  P09_data_ledger[("Phiếu linh kiện POSTED<br/>Đúng Case ID, từ P19/P20")]:::store
+  P09_data_qty["Tổng quantity<br/>Tách số phiếu / mã / linh kiện"]:::action
+  P09_data_s1["<b>P09.S01</b><br/>Danh sách và hồ sơ cùng nguồn"]:::panel
+  P09_data_s4["<b>P09.S04</b><br/>Receipt sửa chữa đã xác minh<br/>Chờ bàn giao, chưa trả khách"]:::panel
+  P09_data_serial --> P09_data_match
+  P09_data_match -->|"Đúng serial"| P09_data_product
+  P09_data_product --> P09_data_s2
+  P09_data_shared --> P09_data_s3
+  P09_data_s2 --> P09_data_guard
+  P09_data_s3 --> P09_data_guard
+  P09_data_guard -->|"Hợp lệ"| P09_data_req
+  P09_data_req --> P09_data_adapter
+  P09_data_adapter -->|"Từ chối xác định"| P09_data_failed
+  P09_data_failed -->|"Sửa / Retry theo owner"| P09_data_guard
+  P09_data_adapter -->|"Chưa rõ"| P09_data_unknown
+  P09_data_unknown --> P09_data_check
+  P09_data_check -->|"Chưa xác minh"| P09_data_unknown
+  P09_data_adapter -->|"Xác nhận thành công"| P09_data_verified
+  P09_data_check -->|"Đã xác minh"| P09_data_verified
+  P09_data_verified --> P09_data_shared
+  P09_data_shared --> P09_data_s1
+  P09_data_shared --> P09_data_s3
+  P09_data_verified --> P09_data_s4
+  P09_data_ledger --> P09_data_qty
+  P09_data_qty -->|"Linh kiện đã xuất"| P09_data_s3
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

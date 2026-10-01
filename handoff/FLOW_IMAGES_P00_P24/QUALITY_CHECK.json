@@ -1,0 +1,4327 @@
+[
+  {
+    "name": "P00_Data_Flow",
+    "board": "P00",
+    "type": "data",
+    "panels": [],
+    "nodes": 13,
+    "edges": 16,
+    "png": {
+      "width": 2670,
+      "height": 4650,
+      "bytes": 469735
+    },
+    "width": 1335,
+    "height": 2325,
+    "graphWidth": 1238.60205078125,
+    "graphHeight": 2058.974609375,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Nguồn phiên P01Actor · Auth session · Kho · Quyền",
+        "width": 260,
+        "height": 80.99996948242188
+      },
+      {
+        "text": "Phạm vi phiên được xác minhKhông suy quyền từ tên vai trò",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "AppShell / RouterChỉ truyền ID và ngữ cảnh",
+        "width": 224.078125,
+        "height": 54
+      },
+      {
+        "text": "Owner theo nghiệp vụP04/P05: record · P19: PostP09: hồ sơ · P07: mapping",
+        "width": 234.109375,
+        "height": 81
+      },
+      {
+        "text": "Yêu cầu cố định danhRequest ID · Document/Case IDScan session · Version",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Adapter hiện cóDữ liệu mô phỏng trong trang",
+        "width": 255.015625,
+        "height": 54
+      },
+      {
+        "text": "UNKNOWNGiữ request, khóa gửi lại",
+        "width": 213.125,
+        "height": 54
+      },
+      {
+        "text": "Đọc / Đối chiếu đúng yêu cầu",
+        "width": 251.046875,
+        "height": 27
+      },
+      {
+        "text": "Kết quả đã xác minhKhông suy thành công từ timeout",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Nguồn dùng chung / Phép chiếuKhông tạo lại record theo nhãn PN",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P01–P24Màn hiển thị cùng dữ liệuBack giữ lọc, tab, focus theo owner",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Motion auto / reduced / offChỉ trình bày, không phát lệnh ghi",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Reload / Reset mẫuMất thay đổi trong bộ nhớ trangLink review dựng lại mẫu đã chọn",
+        "width": 260,
+        "height": 135
+      }
+    ]
+  },
+  {
+    "name": "P00_User_Flow",
+    "board": "P00",
+    "type": "user",
+    "panels": [],
+    "nodes": 14,
+    "edges": 20,
+    "png": {
+      "width": 4638,
+      "height": 3076,
+      "bytes": 448439
+    },
+    "width": 2319,
+    "height": 1538,
+    "graphWidth": 2222.20703125,
+    "graphHeight": 1272,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Mở App PreviewHoặc chọn mẫu trong Review Mode",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P01Đăng nhập và xác nhận phiên",
+        "width": 254.0625,
+        "height": 55
+      },
+      {
+        "text": "Phiên · Quyền · KhoKiểm tra trước khi vào luồng",
+        "width": 246.890625,
+        "height": 54
+      },
+      {
+        "text": "P02Trang chủ / AppShell",
+        "width": 178.359375,
+        "height": 55
+      },
+      {
+        "text": "P03Chọn tác vụ / Nháp / Kho dừng",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "P04 · P05Nhập kho / Xuất khoGửi Web, không Post trên App",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P06 · P07Tra cứu sản phẩm / NFC",
+        "width": 207.09375,
+        "height": 55
+      },
+      {
+        "text": "P09 · P19 · P20 · P21Bảo hành / Xuất linh kiệnLịch sử POSTED / Tiếp tục phiếu",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P08 · P12 · P13 · P18Lịch sử / Chứng từ / Thông báoTệp, bàn giao và vị trí",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P22 · P23Hub lịch sử / NFC auditBảo hành / Phiên quét",
+        "width": 199.046875,
+        "height": 82
+      },
+      {
+        "text": "P10 · P11 · P14Cá nhân / Bảo mậtKhôi phục và ca làm việc",
+        "width": 214.09375,
+        "height": 82
+      },
+      {
+        "text": "P15 · P16 · P17 · P24Hệ thống / Dữ liệu / Ngoại lệTrạng thái dùng lại từ owner",
+        "width": 242.046875,
+        "height": 82
+      },
+      {
+        "text": "Back / Home / Đóng dialogGiữ đúng ngữ cảnh màn gọi",
+        "width": 242.0625,
+        "height": 54
+      },
+      {
+        "text": "Hết phiên / Mất quyềnChặn ngay, không chờ animation",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P01_Data_Flow",
+    "board": "P01",
+    "type": "data",
+    "panels": [
+      "P01.S01",
+      "P01.S02"
+    ],
+    "nodes": 11,
+    "edges": 12,
+    "png": {
+      "width": 2280,
+      "height": 3946,
+      "bytes": 356067
+    },
+    "width": 1140,
+    "height": 1973,
+    "graphWidth": 865.1953125,
+    "graphHeight": 1706.97021484375,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P01.S01Tài khoản + mật khẩu nhậpKhông lưu mật khẩu vào báo cáo/storage",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Credential epochBỏ callback của lần nhập/phiên cũ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Auth fixture + Account storeNguồn credential mô phỏng dùng chung P11",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Session đã xác minhActor ID · Auth session IDWarehouse ID · Permissions",
+        "width": 242.40625,
+        "height": 81
+      },
+      {
+        "text": "P01.S02Hiển thị đúng sessionKho / Người / Quyền",
+        "width": 187.015625,
+        "height": 82
+      },
+      {
+        "text": "Yêu cầu bắt đầu caGiữ định danh trong lúc chờ",
+        "width": 243.828125,
+        "height": 54
+      },
+      {
+        "text": "Adapter xác nhận bắt đầu",
+        "width": 220.046875,
+        "height": 27
+      },
+      {
+        "text": "Start UNKNOWNKhông mở Home, không gửi lại mù",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "previewReady + thời điểm caChỉ từ kết quả đã xác minh",
+        "width": 248.40625,
+        "height": 54
+      },
+      {
+        "text": "P02 nhận cùng sessionTải UI không tạo thêm ca",
+        "width": 213.03125,
+        "height": 54
+      },
+      {
+        "text": "Logout / Hết phiên / ReloadVô hiệu callback, bỏ DOM bảo vệ",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P01_User_Flow",
+    "board": "P01",
+    "type": "user",
+    "panels": [
+      "P01.S01",
+      "P01.S02"
+    ],
+    "nodes": 14,
+    "edges": 18,
+    "png": {
+      "width": 4262,
+      "height": 3402,
+      "bytes": 468295
+    },
+    "width": 2131,
+    "height": 1701,
+    "graphWidth": 2034.16796875,
+    "graphHeight": 1435,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Mở ứng dụng / Đăng xuất",
+        "width": 218.8125,
+        "height": 27
+      },
+      {
+        "text": "P01.S01Đăng nhậpNhập tài khoản và mật khẩu demo",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Kiểm tra dữ liệu nhập",
+        "width": 185.0625,
+        "height": 27
+      },
+      {
+        "text": "Lỗi tại ô / Đăng nhập bị từ chốiKhông mở dữ liệu Home",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Gửi yêu cầu xác thực mô phỏng",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "Xác thực chưa rõKhông suy là đã đăng nhập",
+        "width": 235.015625,
+        "height": 54
+      },
+      {
+        "text": "P01.S02Xác nhận phiênĐúng người, kho và quyền",
+        "width": 228.84375,
+        "height": 82
+      },
+      {
+        "text": "Kho hoạt động?Quyền thao tác đã xác nhận?",
+        "width": 250.0625,
+        "height": 54
+      },
+      {
+        "text": "Chặn bắt đầu caKhông vượt guard bằng deep link",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Bắt đầu caChặn nhấn gửi trùng",
+        "width": 178.015625,
+        "height": 54
+      },
+      {
+        "text": "Kết quả bắt đầu UNKNOWNGiữ phiên, chưa vào Home",
+        "width": 236,
+        "height": 54
+      },
+      {
+        "text": "P02 · HomeChỉ sau receipt bắt đầu hợp lệ",
+        "width": 257.859375,
+        "height": 54
+      },
+      {
+        "text": "P14.S01 · Khôi phục tài khoản",
+        "width": 257.0625,
+        "height": 27
+      },
+      {
+        "text": "Xác nhận đăng xuấtXóa nội dung được bảo vệ",
+        "width": 227.859375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P02_Data_Flow",
+    "board": "P02",
+    "type": "data",
+    "panels": [
+      "P02.S01"
+    ],
+    "nodes": 11,
+    "edges": 12,
+    "png": {
+      "width": 2356,
+      "height": 2896,
+      "bytes": 335879
+    },
+    "width": 1178,
+    "height": 1448,
+    "graphWidth": 1081.73828125,
+    "graphHeight": 1181.1878662109375,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Phiên P01Actor · Kho · Quyền · Giờ bắt đầu",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "Nguồn chứng từ P12Seed + receipt P04/P05 hợp lệ",
+        "width": 256.421875,
+        "height": 53.99998474121094
+      },
+      {
+        "text": "Nguồn hồ sơ bảo hành P09",
+        "width": 233.8125,
+        "height": 27
+      },
+      {
+        "text": "Notification store P13Trạng thái đã đọc/chưa đọc",
+        "width": 235.078125,
+        "height": 54
+      },
+      {
+        "text": "Snapshot owner P04/P05/P19Không dựng draft mới từ tên phiếu",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "Lọc cùng actor/khoChỉ dùng receipt đã xác minh",
+        "width": 251.046875,
+        "height": 54
+      },
+      {
+        "text": "Tính KPI / Badge / Phiếu đang làmGần đây tối đa 3 chứng từ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P02.S01Hiển thị từ nguồn dùng chungKhông cộng tồn từ số card",
+        "width": 257.984375,
+        "height": 82
+      },
+      {
+        "text": "Chuyển màn bằng ID thậtDocument ID / Case ID / Draft ID",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Ngữ cảnh quay lạiCuộn · Focus · ID lựa chọn",
+        "width": 230.03125,
+        "height": 54
+      },
+      {
+        "text": "Nguồn chưa xác minhKhông đổi thành số 0 giả",
+        "width": 215,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P02_User_Flow",
+    "board": "P02",
+    "type": "user",
+    "panels": [
+      "P02.S01"
+    ],
+    "nodes": 16,
+    "edges": 15,
+    "png": {
+      "width": 3360,
+      "height": 2768,
+      "bytes": 363361
+    },
+    "width": 1680,
+    "height": 1384,
+    "graphWidth": 1583.890625,
+    "graphHeight": 1118,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P01 xác nhận phiên thành công",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P02.S01Trang chủKPI · Phiếu đang làm · Chứng từ gần đây",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Chọn nghiệp vụ",
+        "width": 135.984375,
+        "height": 27
+      },
+      {
+        "text": "P03 · Chọn tác vụ quét",
+        "width": 194.03125,
+        "height": 27
+      },
+      {
+        "text": "P04 · Nhập kho",
+        "width": 130.03125,
+        "height": 27
+      },
+      {
+        "text": "P05 · Xuất kho",
+        "width": 124.03125,
+        "height": 27
+      },
+      {
+        "text": "P06 · Tra cứu",
+        "width": 114.09375,
+        "height": 27
+      },
+      {
+        "text": "P07 · Thẻ NFC",
+        "width": 122.03125,
+        "height": 27
+      },
+      {
+        "text": "P09 · Bảo hành",
+        "width": 130.03125,
+        "height": 27
+      },
+      {
+        "text": "P12 · Đúng chứng từ đã chọn",
+        "width": 253.078125,
+        "height": 27
+      },
+      {
+        "text": "P12 · Danh sách chứng từ",
+        "width": 224.125,
+        "height": 27
+      },
+      {
+        "text": "P22.S01 · Hub lịch sử",
+        "width": 184.109375,
+        "height": 27
+      },
+      {
+        "text": "P13 · Thông báo",
+        "width": 140.015625,
+        "height": 27
+      },
+      {
+        "text": "P10 · Cá nhân",
+        "width": 119.03125,
+        "height": 27
+      },
+      {
+        "text": "P04/P05 hoặc P21Tiếp tục đúng owner đang làm",
+        "width": 259.6875,
+        "height": 54
+      },
+      {
+        "text": "Hết phiên / Mất quyền / Kho dừngP15 hoặc P03 chặn thao tác ghi",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P03_Data_Flow",
+    "board": "P03",
+    "type": "data",
+    "panels": [
+      "P03.S01",
+      "P03.S02",
+      "P03.S03",
+      "P03.S04"
+    ],
+    "nodes": 12,
+    "edges": 13,
+    "png": {
+      "width": 2944,
+      "height": 3206,
+      "bytes": 432704
+    },
+    "width": 1472,
+    "height": 1603,
+    "graphWidth": 1375.2109375,
+    "graphHeight": 1336.70361328125,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Live owner P04/P05Document · Scan session · VersionAccepted rows · Metadata · Request",
+        "width": 260,
+        "height": 134.99998474121094
+      },
+      {
+        "text": "stock-owner-adapterProjection chỉ đọc, không tạo owner",
+        "width": 260,
+        "height": 81.00003051757812
+      },
+      {
+        "text": "P03.S02Snapshot giữ đúng định danhActor · Kho · Fingerprint",
+        "width": 256,
+        "height": 82
+      },
+      {
+        "text": "Kiểm lại scope + fingerprintTrước lệnh và sau khi dialog đóng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "resumeExistingMở đúng P04/P05",
+        "width": 150.84375,
+        "height": 54
+      },
+      {
+        "text": "P03.S04Lệnh bỏ local draft",
+        "width": 161.015625,
+        "height": 55
+      },
+      {
+        "text": "Owner tự kiểm và xóa localP05 dọn cache địa chỉ của phiếu",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Dấu lưu trong bộ nhớ phiênKhông đồng nghĩa WMS đã nhận",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P03.S01Operation + Actor IDWarehouse ID + Return context",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P03.S03Trạng thái khoKhông cho thực hiện lệnh ghi",
+        "width": 255.015625,
+        "height": 82
+      },
+      {
+        "text": "Legacy PN-0001 / fixture-p03Nguồn review riêng, không ánh xạ theo PN",
+        "width": 260,
+        "height": 81.00003051757812
+      },
+      {
+        "text": "P14 đọc owner một lầnLoại projection P03 khỏi đếm trùng",
+        "width": 260,
+        "height": 81.00003051757812
+      }
+    ]
+  },
+  {
+    "name": "P03_User_Flow",
+    "board": "P03",
+    "type": "user",
+    "panels": [
+      "P03.S01",
+      "P03.S02",
+      "P03.S03",
+      "P03.S04"
+    ],
+    "nodes": 13,
+    "edges": 18,
+    "png": {
+      "width": 4526,
+      "height": 2834,
+      "bytes": 487096
+    },
+    "width": 2263,
+    "height": 1417,
+    "graphWidth": 2166.30859375,
+    "graphHeight": 1151,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Từ Home / Tab quét / Luồng ghi",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P03.S01Chọn tác vụNhập / Xuất / Tra cứu / Bảo hành",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P04 / P05 / P06 / P09Mang đúng nghiệp vụ và phạm vi",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P03.S02Có phiếu chưa hoàn tấtGiữ định danh và dữ liệu",
+        "width": 213.09375,
+        "height": 82
+      },
+      {
+        "text": "Tiếp tục owner hiện tạiKhông tạo phiếu thay thế",
+        "width": 216,
+        "height": 54
+      },
+      {
+        "text": "Lưu nháp trong bộ nhớ fixtureXác nhận rồi về Home",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P03.S04Xác nhận bỏ phiếu",
+        "width": 160.015625,
+        "height": 55
+      },
+      {
+        "text": "Đúng local draft chưa lưu?Không request/UNKNOWN/recorded?",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Không được xóaGiữ dữ liệu để đối chiếu",
+        "width": 207.09375,
+        "height": 54
+      },
+      {
+        "text": "Bỏ đúng phần chưa lưuKhông xóa WMS",
+        "width": 204.0625,
+        "height": 54
+      },
+      {
+        "text": "P03.S03Kho tạm dừngChặn ghi, không tự đăng xuất",
+        "width": 255.03125,
+        "height": 82
+      },
+      {
+        "text": "P02 · Home / Màn gọi",
+        "width": 181.03125,
+        "height": 27
+      },
+      {
+        "text": "Mẫu P03 legacy riêngThiếu owner: giữ lại, không import",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P04_Data_Flow",
+    "board": "P04",
+    "type": "data",
+    "panels": [
+      "P04.S01",
+      "P04.S02",
+      "P04.S03",
+      "P04.S04"
+    ],
+    "nodes": 12,
+    "edges": 14,
+    "png": {
+      "width": 2280,
+      "height": 3784,
+      "bytes": 396133
+    },
+    "width": 1140,
+    "height": 1892,
+    "graphWidth": 921.60546875,
+    "graphHeight": 1625.259521484375,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P04.S01MetadataDocument ID · Scan session · NCC · Kho",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P04.S02Mã gốc từ nhập tay / fixture camera",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Catalogue kiểm mã hiện hành",
+        "width": 254.0625,
+        "height": 27
+      },
+      {
+        "text": "Validate · Khử trùngMã lỗi/trùng không tăng accepted",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Owner inbound-flowDocument/version · AttemptsAccepted rows: SKU + Quantity",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P04.S03Review dùng cùng ownerTổng theo accepted, không theo lượt quét",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Request ID cố địnhSnapshot document + linesChặn gửi trùng",
+        "width": 234.546875,
+        "height": 81
+      },
+      {
+        "text": "Record adapter mô phỏng",
+        "width": 224.015625,
+        "height": 27
+      },
+      {
+        "text": "UNKNOWN / TimeoutGiữ cùng request để check",
+        "width": 232.109375,
+        "height": 54
+      },
+      {
+        "text": "Receipt được xác minhrequest khớp · recorded=true",
+        "width": 252.375,
+        "height": 54
+      },
+      {
+        "text": "P04.S04Chờ Web · Chưa ghi sổInventory delta = 0",
+        "width": 200.5,
+        "height": 82
+      },
+      {
+        "text": "P12 projection + P08 receipt historyCùng Document ID, không tổng hợp event giả",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P04_User_Flow",
+    "board": "P04",
+    "type": "user",
+    "panels": [
+      "P04.S01",
+      "P04.S02",
+      "P04.S03",
+      "P04.S04"
+    ],
+    "nodes": 14,
+    "edges": 19,
+    "png": {
+      "width": 3204,
+      "height": 4042,
+      "bytes": 448308
+    },
+    "width": 1602,
+    "height": 2021,
+    "graphWidth": 1505.46875,
+    "graphHeight": 1755,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P02 / P03 / P12Tạo hoặc tiếp tục đúng phiếu",
+        "width": 250,
+        "height": 54
+      },
+      {
+        "text": "P04.S01Thông tin phiếu nhậpLoại nhập · NCC · Kho · Ghi chú",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Thông tin bắt buộc hợp lệ?",
+        "width": 232.765625,
+        "height": 27
+      },
+      {
+        "text": "P04.S02Quét / Nhập tayGiữ nguyên mã gốc",
+        "width": 169.0625,
+        "height": 82
+      },
+      {
+        "text": "Mã hợp lệ và chưa trùng?",
+        "width": 220.875,
+        "height": 27
+      },
+      {
+        "text": "P17.S01 · Mã lỗiLượt trùng không cộng số lượng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Thêm vào danh sách hợp lệPhân biệt số mã và tổng quantity",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P04.S03Kiểm tra phiếuCần ít nhất 1 mã hợp lệ",
+        "width": 198.828125,
+        "height": 82
+      },
+      {
+        "text": "Gửi phiếu lên WebMột yêu cầu đang chờ",
+        "width": 190.828125,
+        "height": 54
+      },
+      {
+        "text": "P04.S04Đã gửi phiếu nhậpChờ xử lý trên Web",
+        "width": 166.53125,
+        "height": 82
+      },
+      {
+        "text": "P17.S04 · UNKNOWNChỉ kiểm tra cùng yêu cầu",
+        "width": 223.078125,
+        "height": 54
+      },
+      {
+        "text": "Từ chối xác địnhGiữ phiếu; retry theo điều kiện",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P08 Lịch sử / P12 Chứng từCùng document ID",
+        "width": 237.15625,
+        "height": 54
+      },
+      {
+        "text": "P03.S03 / P15Kho dừng / Phiên / Quyền",
+        "width": 221.046875,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P05_Data_Flow",
+    "board": "P05",
+    "type": "data",
+    "panels": [
+      "P05.S01",
+      "P05.S02",
+      "P05.S03",
+      "P05.S04"
+    ],
+    "nodes": 13,
+    "edges": 14,
+    "png": {
+      "width": 2408,
+      "height": 3794,
+      "bytes": 413700
+    },
+    "width": 1204,
+    "height": 1897,
+    "graphWidth": 1108,
+    "graphHeight": 1630.3873291015625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Nguồn phiếu / Danh mục người nhậnĐịa giới theo phiên bản fixture",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "P05.S01Metadata + Số lượng yêu cầuKho / Người nhận / Điện thoại / Địa chỉ",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P05.S02Mã gốc từ cùng pipeline quét",
+        "width": 250.046875,
+        "height": 55
+      },
+      {
+        "text": "Đúng sản phẩm/nhómChưa xuất · Không trùng · Không vượt SL",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Owner outbound-flowDocument ID · Scan session · VersionAccepted · Attempts · Geography cache",
+        "width": 260,
+        "height": 135
+      },
+      {
+        "text": "P05.S03Tổng quantity đã soạnSo với số lượng yêu cầu",
+        "width": 211.6875,
+        "height": 82
+      },
+      {
+        "text": "Request cố định danhCùng document snapshot + lines",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Record / Check adapter",
+        "width": 201.078125,
+        "height": 27
+      },
+      {
+        "text": "UNKNOWNKhóa gửi lại, giữ request",
+        "width": 213.109375,
+        "height": 54
+      },
+      {
+        "text": "Kết quả recorded đã xác minhCùng Request / Document ID",
+        "width": 257.078125,
+        "height": 54
+      },
+      {
+        "text": "P05.S04Chờ xử lý WebKhông Post và không đổi tồn",
+        "width": 249.984375,
+        "height": 82
+      },
+      {
+        "text": "P08 / P12 cùng receiptKhông map bằng số PX hiển thị",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Bỏ đúng local draft đã xác nhậnKhông xóa phiếu đã record/UNKNOWN",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P05_User_Flow",
+    "board": "P05",
+    "type": "user",
+    "panels": [
+      "P05.S01",
+      "P05.S02",
+      "P05.S03",
+      "P05.S04"
+    ],
+    "nodes": 14,
+    "edges": 20,
+    "png": {
+      "width": 2692,
+      "height": 4414,
+      "bytes": 466729
+    },
+    "width": 1346,
+    "height": 2207,
+    "graphWidth": 1249.98046875,
+    "graphHeight": 1941,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P02 / P03 / P12Tạo hoặc tiếp tục đúng owner",
+        "width": 255.015625,
+        "height": 54
+      },
+      {
+        "text": "P05.S01Thông tin phiếu xuấtNguồn phiếu · Người nhận · Địa chỉ · SL",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Đổi nguồn phiếu?Xác nhận trước khi thay nội dung",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Metadata và địa chỉ hợp lệ?",
+        "width": 235.859375,
+        "height": 27
+      },
+      {
+        "text": "P05.S02Quét / Nhập tay",
+        "width": 132.03125,
+        "height": 55
+      },
+      {
+        "text": "Mã được phép xuất?Đúng nhóm, không trùng, không vượt SL",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P17.S02 / Thông báo mãKhông thêm mã bị chặn",
+        "width": 207.0625,
+        "height": 54
+      },
+      {
+        "text": "P05.S03Kiểm tra phiếu xuấtĐối chiếu số đã soạn / yêu cầu",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Đã soạn đủ số lượng?",
+        "width": 191.84375,
+        "height": 27
+      },
+      {
+        "text": "Gửi phiếu lên WebChặn double-submit",
+        "width": 174,
+        "height": 54
+      },
+      {
+        "text": "P05.S04Đã gửi phiếu xuấtChờ Web, chưa đổi tồn",
+        "width": 198.5,
+        "height": 82
+      },
+      {
+        "text": "P17.S04 · UNKNOWNCheck cùng request",
+        "width": 181.046875,
+        "height": 54
+      },
+      {
+        "text": "Từ chối xác địnhGiữ yêu cầu để thử lại có điều kiện",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P08 / P12Đúng receipt và chứng từ",
+        "width": 220.109375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P06_Data_Flow",
+    "board": "P06",
+    "type": "data",
+    "panels": [
+      "P06.S01",
+      "P06.S02",
+      "P06.S03",
+      "P06.S04"
+    ],
+    "nodes": 11,
+    "edges": 11,
+    "png": {
+      "width": 2894,
+      "height": 2564,
+      "bytes": 338154
+    },
+    "width": 1447,
+    "height": 1282,
+    "graphWidth": 1350.69921875,
+    "graphHeight": 1015.8518676757812,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P06.S01Query / Category / Item IDNguồn lựa chọn và lịch sử xem",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Catalogue fixtureMã · SKU · Serial · Ảnh · Vị trí",
+        "width": 251.03125,
+        "height": 54.00001525878906
+      },
+      {
+        "text": "Scope phiên/khoID phải có trong nguồn",
+        "width": 196.984375,
+        "height": 54
+      },
+      {
+        "text": "Read adapter / Cache đọcBỏ response cũ sau đổi context",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P06.S02Thông tin sản phẩm đúng ID",
+        "width": 242.984375,
+        "height": 55
+      },
+      {
+        "text": "Snapshot tồn cùng khoThiếu số liệu = chưa xác minh",
+        "width": 257.609375,
+        "height": 54
+      },
+      {
+        "text": "P06.S03Hiển thị tồn / Khả dụng",
+        "width": 196.984375,
+        "height": 55
+      },
+      {
+        "text": "Sự kiện giao dịch theo item IDKhông dùng để tính ngược tồn",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P06.S04Lọc lịch sử từ cùng nguồn",
+        "width": 228.0625,
+        "height": 55
+      },
+      {
+        "text": "P07 / P09 / P18Chỉ truyền item ID / serial / vị trí",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Không đủ nguồn / Mapping thiếuKhông thay dữ liệu bằng 0 hoặc ID đầu",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P06_User_Flow",
+    "board": "P06",
+    "type": "user",
+    "panels": [
+      "P06.S01",
+      "P06.S02",
+      "P06.S03",
+      "P06.S04"
+    ],
+    "nodes": 12,
+    "edges": 15,
+    "png": {
+      "width": 3808,
+      "height": 2772,
+      "bytes": 400282
+    },
+    "width": 1904,
+    "height": 1386,
+    "graphWidth": 1807.078125,
+    "graphHeight": 1120,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Home / P03Hoặc picker từ P07 / P09",
+        "width": 210.140625,
+        "height": 54
+      },
+      {
+        "text": "P06.S01Tìm sản phẩmMã / SKU / Serial · Bộ lọc · Vừa xem",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Nguồn đọc và ID hợp lệ?",
+        "width": 212.8125,
+        "height": 27
+      },
+      {
+        "text": "Lỗi / Không có kết quảKhông tự mở sản phẩm đầu tiên",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P06.S02Thông tin đúng sản phẩm",
+        "width": 219.984375,
+        "height": 55
+      },
+      {
+        "text": "P06.S03Tồn kho cùng sản phẩm/kho",
+        "width": 244.015625,
+        "height": 55
+      },
+      {
+        "text": "P06.S04Lịch sử giao dịchGiữ bộ lọc theo sản phẩm",
+        "width": 222.0625,
+        "height": 82
+      },
+      {
+        "text": "P18.S04 · Vị tríKhông suy sức chứa chưa có nguồn",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Trả item ID + serial về P07Chỉ khi đang chọn cho NFC",
+        "width": 235,
+        "height": 54
+      },
+      {
+        "text": "P09 · Tiếp nhận / Hồ sơMang theo serial, không dùng SKU thay",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Chứng từ chưa có mappingBáo chưa khả dụng, không mở giả",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Về đúng màn gọi / Danh sáchGiữ tìm kiếm, cuộn và focus",
+        "width": 251.046875,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P07_Data_Flow",
+    "board": "P07",
+    "type": "data",
+    "panels": [
+      "P07.S01",
+      "P07.S02",
+      "P07.S03",
+      "P07.S04"
+    ],
+    "nodes": 12,
+    "edges": 13,
+    "png": {
+      "width": 2826,
+      "height": 3950,
+      "bytes": 379054
+    },
+    "width": 1413,
+    "height": 1975,
+    "graphWidth": 1316.12890625,
+    "graphHeight": 1708.478515625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Nguồn trạng thái thẻTag ID · UID · Mapping hiện tại",
+        "width": 258.65625,
+        "height": 54
+      },
+      {
+        "text": "P07.S01Danh sách / Lọc theo nguồn thẻ",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "P07.S02Lượt đọc UID + Sản phẩm đã chọn",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Sản phẩm từ P06Item ID · Serial, không suy bằng tên",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Guard phiên/kho/quyềnKhóa thẻ · Xung đột · Context hiện tại",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P07.S03Snapshot UID + Sản phẩmChờ người dùng xác nhận",
+        "width": 226.640625,
+        "height": 82.00006103515625
+      },
+      {
+        "text": "Request liên kếtĐúng tag/product + thế hệ tác vụ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "NFC preview adapterKhông gọi thiết bị NFC thật",
+        "width": 232.96875,
+        "height": 54
+      },
+      {
+        "text": "UNKNOWNKhông suy đã liên kết từ timeout",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Receipt liên kết hợp lệCallback cũ không ghi sang thẻ mới",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P07.S04Hiển thị kết quả đã xác nhận",
+        "width": 243.0625,
+        "height": 55
+      },
+      {
+        "text": "P22 cần nguồn event độc lậpMapping hiện tại không phải audit",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P07_User_Flow",
+    "board": "P07",
+    "type": "user",
+    "panels": [
+      "P07.S01",
+      "P07.S02",
+      "P07.S03",
+      "P07.S04"
+    ],
+    "nodes": 13,
+    "edges": 16,
+    "png": {
+      "width": 3176,
+      "height": 3446,
+      "bytes": 403520
+    },
+    "width": 1588,
+    "height": 1723,
+    "graphWidth": 1491.711181640625,
+    "graphHeight": 1457,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P02 · NFC",
+        "width": 85.03125,
+        "height": 27
+      },
+      {
+        "text": "P07.S01Danh sách thẻTìm UID / Lọc / Xem chi tiết",
+        "width": 231.046875,
+        "height": 82
+      },
+      {
+        "text": "P07.S02Đọc thẻ mô phỏngChọn sản phẩm",
+        "width": 157.984375,
+        "height": 82
+      },
+      {
+        "text": "P06 pickerTrả đúng sản phẩm + serial",
+        "width": 232.578125,
+        "height": 54
+      },
+      {
+        "text": "UID đã đọc?Thẻ khả dụng, không xung đột?",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P17.S03 · Đã liên kếtKhông ghi đè tùy ý",
+        "width": 175.09375,
+        "height": 54
+      },
+      {
+        "text": "P15.S04 / Lỗi đọcKhông tự xin quyền phần cứng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P07.S03Xác minh liên kếtĐúng UID và sản phẩm",
+        "width": 196.03125,
+        "height": 82
+      },
+      {
+        "text": "Xác nhận liên kếtChặn nhấn trùng",
+        "width": 147.0625,
+        "height": 54
+      },
+      {
+        "text": "P07.S04Liên kết được xác nhận",
+        "width": 202.890625,
+        "height": 55
+      },
+      {
+        "text": "UNKNOWN sau lưuKhóa thao tác mới, đối chiếu trước",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Chi tiết thẻ / Danh sáchHoặc đọc thẻ tiếp theo",
+        "width": 199.03125,
+        "height": 54
+      },
+      {
+        "text": "P22 · Audit là nguồn riêngKhông tự có event vì thẻ đổi trạng thái",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P08_Data_Flow",
+    "board": "P08",
+    "type": "data",
+    "panels": [
+      "P08.S01",
+      "P08.S02",
+      "P08.S03",
+      "P08.S04"
+    ],
+    "nodes": 11,
+    "edges": 12,
+    "png": {
+      "width": 2280,
+      "height": 3006,
+      "bytes": 346564
+    },
+    "width": 1140,
+    "height": 1503,
+    "graphWidth": 1012.515625,
+    "graphHeight": 1236.9365234375,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Seed lịch sử B08Activity ID · Record ID · Session ID",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "Receipt P04/P05 đã xác minhCùng actor/kho + Document ID",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "history-source projectionID receipt:DocumentIDKhử trùng theo ID chính xác",
+        "width": 242.046875,
+        "height": 81
+      },
+      {
+        "text": "P08.S01Danh sách từ nguồn đã hợp nhất",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Lọc / Tìm / Phân trangTổng dùng cùng tập dữ liệu",
+        "width": 238,
+        "height": 54
+      },
+      {
+        "text": "P08.S04Nhóm theo ngàyKhông đếm lặp activity ID",
+        "width": 220.046875,
+        "height": 82
+      },
+      {
+        "text": "P08.S02Chi tiết đúng recordKhông suy từ số PN/PX",
+        "width": 202.0625,
+        "height": 82
+      },
+      {
+        "text": "P08.S03Đọc session B08 đã tham chiếu",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Mapping explicit sang P12/P18History record ID → Document ID → File ID",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P22 / P23 là nguồn độc lậpKhông tổng hợp NFC/session từ receipt",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "history.state + cache viewQuery · Tab · Scroll · Focus",
+        "width": 233.703125,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P08_User_Flow",
+    "board": "P08",
+    "type": "user",
+    "panels": [
+      "P08.S01",
+      "P08.S02",
+      "P08.S03",
+      "P08.S04"
+    ],
+    "nodes": 11,
+    "edges": 15,
+    "png": {
+      "width": 2918,
+      "height": 2824,
+      "bytes": 359656
+    },
+    "width": 1459,
+    "height": 1412,
+    "graphWidth": 1362.1484375,
+    "graphHeight": 1146,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P22 hub / Kết quả P04-P05 / P14",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P08.S01Danh sách lịch sửTìm kiếm · Lọc ngày · Loại · Tải tiếp",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Record ID / Session ID có thật?",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "Không tìm thấyKhông dùng phần tử đầu làm mặc định",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P08.S02Chi tiết lịch sửThông tin · Timeline · Tệp",
+        "width": 218.65625,
+        "height": 82
+      },
+      {
+        "text": "P08.S03Phiên quét B08 tham chiếuXem mã và số lượt trùng",
+        "width": 230.046875,
+        "height": 82
+      },
+      {
+        "text": "P08.S04Hoạt động theo ngàyCùng nguồn và bộ lọc",
+        "width": 188.984375,
+        "height": 82
+      },
+      {
+        "text": "P12 · Chứng từChỉ khi có mapping rõ",
+        "width": 189.015625,
+        "height": 54
+      },
+      {
+        "text": "P18 · Tệp / ViewerĐúng document ID và file ID",
+        "width": 239.03125,
+        "height": 54
+      },
+      {
+        "text": "B08 khác B23Không đổi namespace chỉ vì trùng PQ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Back về danh sách / Màn gọiGiữ query, tab, cuộn, focus",
+        "width": 245.078125,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P09_Data_Flow",
+    "board": "P09",
+    "type": "data",
+    "panels": [
+      "P09.S01",
+      "P09.S02",
+      "P09.S03",
+      "P09.S04"
+    ],
+    "nodes": 17,
+    "edges": 21,
+    "png": {
+      "width": 2778,
+      "height": 5168,
+      "bytes": 507953
+    },
+    "width": 1389,
+    "height": 2584,
+    "graphWidth": 1292.34765625,
+    "graphHeight": 2317.47314453125,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Serial nhập tay / Nhận từ P06",
+        "width": 249.109375,
+        "height": 27
+      },
+      {
+        "text": "Đối chiếu đúng serialKhông dùng SKU thay serial",
+        "width": 243.03125,
+        "height": 54
+      },
+      {
+        "text": "Sản phẩm · Khách hàng · Liên hệNguồn fixture hiện hành",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P09.S02Bản nhập tiếp nhậnLỗi · Mô tả Khác · Ghi chú · Phụ kiện",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Nguồn hồ sơ dùng chungCase ID · Serial · StatusVersion · Lịch sử xử lý",
+        "width": 219.765625,
+        "height": 81
+      },
+      {
+        "text": "P09.S03Bản cập nhật sửa chữaChẩn đoán · Kết quả",
+        "width": 200.140625,
+        "height": 82
+      },
+      {
+        "text": "Phiên · Quyền · Kho · Hồ sơ đóngDữ liệu · Version · Chặn gửi trùng",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Yêu cầu cố định danhRequest ID · Session · Case IDVersion · Nội dung gửi",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Bộ xử lý hiện tạiAdapter mô phỏng",
+        "width": 160,
+        "height": 54
+      },
+      {
+        "text": "UNKNOWNGiữ request, khóa gửi lại",
+        "width": 213.125,
+        "height": 54
+      },
+      {
+        "text": "Đối chiếu đúng Request ID",
+        "width": 229.015625,
+        "height": 27
+      },
+      {
+        "text": "Lỗi xác địnhGiữ bản nhập và định danh",
+        "width": 233.046875,
+        "height": 54
+      },
+      {
+        "text": "Cập nhật hồ sơ và lịch sửReceipt khớp đúng yêu cầu",
+        "width": 235.84375,
+        "height": 54
+      },
+      {
+        "text": "Phiếu linh kiện POSTEDĐúng Case ID, từ P19/P20",
+        "width": 220.109375,
+        "height": 54
+      },
+      {
+        "text": "Tổng quantityTách số phiếu / mã / linh kiện",
+        "width": 250.0625,
+        "height": 54
+      },
+      {
+        "text": "P09.S01Danh sách và hồ sơ cùng nguồn",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "P09.S04Receipt sửa chữa đã xác minhChờ bàn giao, chưa trả khách",
+        "width": 260,
+        "height": 109
+      }
+    ]
+  },
+  {
+    "name": "P09_User_Flow",
+    "board": "P09",
+    "type": "user",
+    "panels": [
+      "P09.S01",
+      "P09.S02",
+      "P09.S03",
+      "P09.S04"
+    ],
+    "nodes": 17,
+    "edges": 21,
+    "png": {
+      "width": 3750,
+      "height": 4198,
+      "bytes": 515041
+    },
+    "width": 1875,
+    "height": 2099,
+    "graphWidth": 1778.328125,
+    "graphHeight": 1833,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Home / P03 / P12 → Bảo hành",
+        "width": 254.078125,
+        "height": 27
+      },
+      {
+        "text": "P09.S01Danh sách bảo hànhTìm kiếm · Trạng thái · Sắp xếp",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P06 · Tra cứu sản phẩmMang theo serial",
+        "width": 203.109375,
+        "height": 54
+      },
+      {
+        "text": "P09.S02Tiếp nhận bảo hành",
+        "width": 169.6875,
+        "height": 55
+      },
+      {
+        "text": "Nhập / Đối chiếu đúng serial",
+        "width": 242.046875,
+        "height": 27
+      },
+      {
+        "text": "Không hợp lệLỗi tại ô, giữ sản phẩm và bản nhập",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Đã có hồ sơMở hồ sơ sẵn, không tạo trùng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Chọn lỗi tiếp nhậnChỉ chọn Khác mới hiện mô tả",
+        "width": 259.828125,
+        "height": 54
+      },
+      {
+        "text": "Ghi chú / Phụ kiệnKhông bắt buộc",
+        "width": 157.03125,
+        "height": 54
+      },
+      {
+        "text": "Kiểm tra và xác nhận tiếp nhận",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P09.S03Hồ sơ bảo hànhThông tin · Linh kiện · Lịch sử",
+        "width": 258.015625,
+        "height": 82
+      },
+      {
+        "text": "Dialog cập nhật xử lýChẩn đoán · Kết quả sửa chữa",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P09.S04Kết quả sửa chữaCHỜ BÀN GIAO",
+        "width": 153.125,
+        "height": 82
+      },
+      {
+        "text": "P19 · Xuất linh kiện",
+        "width": 165.046875,
+        "height": 27
+      },
+      {
+        "text": "P20 · Lịch sử linh kiện",
+        "width": 191.09375,
+        "height": 27
+      },
+      {
+        "text": "P18 · Bàn giaoChưa có nguồn xác nhận thật",
+        "width": 254.0625,
+        "height": 54
+      },
+      {
+        "text": "Hồ sơ đã trả kháchChỉ xem, khóa thao tác ghi",
+        "width": 228.046875,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P10_Data_Flow",
+    "board": "P10",
+    "type": "data",
+    "panels": [
+      "P10.S01",
+      "P10.S02",
+      "P10.S03",
+      "P10.S04"
+    ],
+    "nodes": 11,
+    "edges": 11,
+    "png": {
+      "width": 2964,
+      "height": 2878,
+      "bytes": 330599
+    },
+    "width": 1482,
+    "height": 1439,
+    "graphWidth": 1385.109375,
+    "graphHeight": 1172.851806640625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Session P01 đã xác minhActor · Role · Warehouse",
+        "width": 215.109375,
+        "height": 53.99998474121094
+      },
+      {
+        "text": "Contact fixture B10 theo actor IDKhông phải trường xác thực",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "readProfileGhép đúng người / kho",
+        "width": 199.8125,
+        "height": 54
+      },
+      {
+        "text": "P10.S01Hiển thị hồ sơ",
+        "width": 120.796875,
+        "height": 55
+      },
+      {
+        "text": "P10.S02Editable draftName · Nickname · Phone",
+        "width": 221.0625,
+        "height": 82
+      },
+      {
+        "text": "Chỉ lấy trường đã thay đổiKhông gửi mật khẩu / quyền",
+        "width": 243.046875,
+        "height": 54
+      },
+      {
+        "text": "Profile adaptersave=false · avatar=falseGiữ draft, account không đổi",
+        "width": 247.046875,
+        "height": 81
+      },
+      {
+        "text": "P10.S03Quyền từng nghiệp vụ = chưa xác minhKhông suy từ role/warehouseOperations",
+        "width": 260,
+        "height": 136.00003051757812
+      },
+      {
+        "text": "P10.S04Ý định mở bảo mậtActor ID · Kho · Return context",
+        "width": 260,
+        "height": 109.00003051757812
+      },
+      {
+        "text": "P11 / P14Owner đích tự kiểm phạm vi",
+        "width": 241.09375,
+        "height": 54
+      },
+      {
+        "text": "Logout làm mất phiên/DOM bảo vệKhông ghi profile giả để hiển thị mới",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P10_User_Flow",
+    "board": "P10",
+    "type": "user",
+    "panels": [
+      "P10.S01",
+      "P10.S02",
+      "P10.S03",
+      "P10.S04"
+    ],
+    "nodes": 13,
+    "edges": 16,
+    "png": {
+      "width": 5406,
+      "height": 2238,
+      "bytes": 442723
+    },
+    "width": 2703,
+    "height": 1119,
+    "graphWidth": 2606.1328125,
+    "graphHeight": 853,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P02 · Avatar / Tab Cá nhân",
+        "width": 224.40625,
+        "height": 27
+      },
+      {
+        "text": "P10.S01Thông tin cá nhân",
+        "width": 155,
+        "height": 55
+      },
+      {
+        "text": "P10.S02Chỉnh sửa bản nhậpTên · Tên gọi · Điện thoại",
+        "width": 215,
+        "height": 82
+      },
+      {
+        "text": "Có thay đổi chưa lưu?",
+        "width": 192.078125,
+        "height": 27
+      },
+      {
+        "text": "Xác nhận rời bản nhập",
+        "width": 194.828125,
+        "height": 27
+      },
+      {
+        "text": "Lưu hồ sơ / Upload avatarAdapter hiện tại chưa kết nốiKhông báo thành công giả",
+        "width": 248.09375,
+        "height": 81
+      },
+      {
+        "text": "P10.S03Công việc & quyềnChỉ đọc; quyền riêng chưa có nguồn",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P10.S04Tài khoản & bảo mật",
+        "width": 176.03125,
+        "height": 55
+      },
+      {
+        "text": "P11 · Đổi mật khẩu / Phiên đăng nhập",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P14 · Kết thúc / Tổng kết ca",
+        "width": 235.046875,
+        "height": 27
+      },
+      {
+        "text": "Xác nhận đăng xuấtCảnh báo dữ liệu đang nhập",
+        "width": 243.046875,
+        "height": 54
+      },
+      {
+        "text": "UNKNOWN / Yêu cầu cần đối chiếuChặn logout không an toàn",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P01 · Đăng nhậpBack không phục hồi dữ liệu cũ",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P11_Data_Flow",
+    "board": "P11",
+    "type": "data",
+    "panels": [
+      "P11.S01",
+      "P11.S02",
+      "P11.S03",
+      "P11.S04"
+    ],
+    "nodes": 11,
+    "edges": 14,
+    "png": {
+      "width": 2962,
+      "height": 3428,
+      "bytes": 410696
+    },
+    "width": 1481,
+    "height": 1714,
+    "graphWidth": 1384.92138671875,
+    "graphHeight": 1447.7037353515625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Account store dùng chung P01–P11Actor ID · Current auth session ID",
+        "width": 259.9999694824219,
+        "height": 108
+      },
+      {
+        "text": "P11.S01Mật khẩu chỉ giữ tạm trong form",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "P11.S02Validation tại clientSai xác nhận: không gọi đổi mật khẩu",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Scope tài khoản / PhiênAction + Request ID cố định",
+        "width": 239.53125,
+        "height": 54
+      },
+      {
+        "text": "Security preview adapterNguồn policy / Session list / Reconcile",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Kết quả chưa xác minhGiữ pending, không phát lệnh trùng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Receipt khớp action + requestKhông nhận callback khác tài khoản",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P11.S03Xác nhận thay đổi fixtureLogin sau dùng credential mới trong trang",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P11.S04Danh sách session đã kiểm IDĐúng 1 phiên hiện tại",
+        "width": 258.109375,
+        "height": 82
+      },
+      {
+        "text": "Thu hồi session ID được chọnGiữ phiên hiện tại theo policy fixture",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Rời màn / Logout / ReloadDọn ô mật khẩu; không ghi password vào storage",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P11_User_Flow",
+    "board": "P11",
+    "type": "user",
+    "panels": [
+      "P11.S01",
+      "P11.S02",
+      "P11.S03",
+      "P11.S04"
+    ],
+    "nodes": 12,
+    "edges": 17,
+    "png": {
+      "width": 3214,
+      "height": 3686,
+      "bytes": 416200
+    },
+    "width": 1607,
+    "height": 1843,
+    "graphWidth": 1510.4375,
+    "graphHeight": 1577,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P10.S04 · Tài khoản & bảo mật",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P11.S01Đổi mật khẩuHiện tại · Mới · Xác nhận",
+        "width": 209.828125,
+        "height": 82
+      },
+      {
+        "text": "Trường bắt buộc / Xác nhận khớp?",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P11.S02Lỗi xác thực thông tinSửa tại ô, chưa đổi mật khẩu",
+        "width": 247.125,
+        "height": 82
+      },
+      {
+        "text": "Gửi thay đổi vào account fixtureChặn gửi trùng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P11.S03Đã đổi mật khẩuChỉ sau receipt hợp lệ",
+        "width": 188.84375,
+        "height": 82
+      },
+      {
+        "text": "UNKNOWN / Mất phản hồiGiữ yêu cầu, đối chiếu trước retry",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P11.S04Phiên đăng nhậpĐọc danh sách cùng tài khoản",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Chọn phiên khác → Xác nhận thu hồi",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "Thu hồi đã xác minhChỉ bỏ đúng session ID",
+        "width": 200.015625,
+        "height": 54
+      },
+      {
+        "text": "Back về P10Dọn ô mật khẩu, không giữ bí mật",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P15.S02 → P01Hết phiên cần xác thực lại",
+        "width": 223.109375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P12_Data_Flow",
+    "board": "P12",
+    "type": "data",
+    "panels": [
+      "P12.S01",
+      "P12.S02",
+      "P12.S03",
+      "P12.S04"
+    ],
+    "nodes": 12,
+    "edges": 12,
+    "png": {
+      "width": 2280,
+      "height": 3534,
+      "bytes": 351238
+    },
+    "width": 1140,
+    "height": 1767,
+    "graphWidth": 1020.828125,
+    "graphHeight": 1500.851806640625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "DOCUMENTS seed theo scopeDocument ID · Loại · Trạng thái · Lines",
+        "width": 260,
+        "height": 107.99998474121094
+      },
+      {
+        "text": "Owner P04/P05Receipt đã record + Draft đang làm",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "mergeDocuments / recordedDocumentsScope actor/kho, dedup đúng ID",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P12.S01Danh sách đã lọcHome gần đây dùng cùng nguồn",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P12.S02Chi tiết đúng document ID",
+        "width": 223.984375,
+        "height": 55
+      },
+      {
+        "text": "P12.S03Lines/tổng cùng documentSearch không thay quantity gốc",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Metadata tệp + File ID + URLLiên kết P18 đúng chứng từ",
+        "width": 242.0625,
+        "height": 54
+      },
+      {
+        "text": "P12.S04Form tạo tạmType · Supplier ID · Note",
+        "width": 207.6875,
+        "height": 82
+      },
+      {
+        "text": "Quyền / Kho / MetadataResume ID phải khớp owner",
+        "width": 242.84375,
+        "height": 54
+      },
+      {
+        "text": "Giao lệnh tạo/tiếp tục cho P04/P05/P09P12 không tự ghi kho",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Read controller P16Query generation · Scope · Cache",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Nguồn thiếu / ID saiKhông suy thành chứng từ rỗng",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P12_User_Flow",
+    "board": "P12",
+    "type": "user",
+    "panels": [
+      "P12.S01",
+      "P12.S02",
+      "P12.S03",
+      "P12.S04"
+    ],
+    "nodes": 13,
+    "edges": 16,
+    "png": {
+      "width": 3742,
+      "height": 3146,
+      "bytes": 401439
+    },
+    "width": 1871,
+    "height": 1573,
+    "graphWidth": 1774.4296875,
+    "graphHeight": 1307,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Home gần đây / Xem tất cảP08 / P13 / Kết quả nhập-xuất",
+        "width": 251.078125,
+        "height": 54
+      },
+      {
+        "text": "P12.S01Danh sách chứng từTìm · Lọc · Chọn đúng ID",
+        "width": 213.96875,
+        "height": 82
+      },
+      {
+        "text": "P12.S02Chi tiết chứng từThông tin · Trạng thái · Tệp",
+        "width": 231.984375,
+        "height": 82
+      },
+      {
+        "text": "P12.S03Sản phẩm cùng chứng từSKU · Quantity · Tìm trong phiếu",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P18.S01/S02 · Tệp / Viewer",
+        "width": 226.796875,
+        "height": 27
+      },
+      {
+        "text": "P12.S04Tạo chứng từChọn loại · NCC · Ghi chú",
+        "width": 219.984375,
+        "height": 82
+      },
+      {
+        "text": "Nhập / Xuất / Bảo hành?",
+        "width": 207.015625,
+        "height": 27
+      },
+      {
+        "text": "Đã có phiếu đang làm?",
+        "width": 197.03125,
+        "height": 27
+      },
+      {
+        "text": "Xác nhận tiếp tục đúng ownerKhông đè dữ liệu bằng form mới",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P04 / P05 / P09Tạo qua owner nghiệp vụ",
+        "width": 217.015625,
+        "height": 54
+      },
+      {
+        "text": "Sai ID / Thiếu nguồnKhông lấy chứng từ đầu tiên",
+        "width": 246.078125,
+        "height": 54
+      },
+      {
+        "text": "P16 · Loading / Empty / ErrorGiữ filter và context khi retry",
+        "width": 247.046875,
+        "height": 54
+      },
+      {
+        "text": "Back đúng callerGiữ tab, tìm kiếm, cuộn và focus",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P13_Data_Flow",
+    "board": "P13",
+    "type": "data",
+    "panels": [
+      "P13.S01",
+      "P13.S02",
+      "P13.S03",
+      "P13.S04"
+    ],
+    "nodes": 11,
+    "edges": 12,
+    "png": {
+      "width": 2542,
+      "height": 2940,
+      "bytes": 329298
+    },
+    "width": 1271,
+    "height": 1470,
+    "graphWidth": 1174.86328125,
+    "graphHeight": 1203.851806640625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Notification store theo scopeEvent ID · Document ID · Read flag",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "Nguồn P12 dùng chungChứng từ / Trạng thái / Lines",
+        "width": 246.078125,
+        "height": 54
+      },
+      {
+        "text": "P13.S01Trang thông báo từ nguồnKhông suy badge từ số DOM đã tải",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P13.S02Chi tiết event chính xác",
+        "width": 201.0625,
+        "height": 55
+      },
+      {
+        "text": "Actor/kho + generation hiện tạiKhông để UI trễ ghi đè view mới",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Mark-read requestChỉ cập nhật event đã xác nhận",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Badge chưa đọc P02/P13Cùng notification store",
+        "width": 215.125,
+        "height": 54
+      },
+      {
+        "text": "Lọc phiếu nhập/xuất chờ WebTừ nguồn chứng từ hiện hành",
+        "width": 259.078125,
+        "height": 54
+      },
+      {
+        "text": "P13.S03Danh sách chờ xử lý",
+        "width": 177.890625,
+        "height": 55
+      },
+      {
+        "text": "P13.S04Chi tiết đọc cùng Document ID",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Approval cũ đã MIGRATEDKhông approve/Post/đổi tồn trên App",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P13_User_Flow",
+    "board": "P13",
+    "type": "user",
+    "panels": [
+      "P13.S01",
+      "P13.S02",
+      "P13.S03",
+      "P13.S04"
+    ],
+    "nodes": 10,
+    "edges": 14,
+    "png": {
+      "width": 3002,
+      "height": 2830,
+      "bytes": 369943
+    },
+    "width": 1501,
+    "height": 1415,
+    "graphWidth": 1404.38671875,
+    "graphHeight": 1149,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P02 · Chuông thông báo",
+        "width": 207.984375,
+        "height": 27
+      },
+      {
+        "text": "P13.S01Danh sách thông báoTất cả / Chưa đọc / Xem thêm",
+        "width": 252.109375,
+        "height": 82
+      },
+      {
+        "text": "P13.S02Chi tiết thông báoĐúng event, không tự duyệt phiếu",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Đánh dấu đã đọcBadge cập nhật khi nguồn xác nhận",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P12 · Đúng chứng từ liên quan",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P13.S03Phiếu chờ xử lý trên WebLọc nhập / xuất",
+        "width": 217.546875,
+        "height": 82
+      },
+      {
+        "text": "P13.S04Chi tiết phiếu chờ WebChỉ xem trong App",
+        "width": 195.46875,
+        "height": 82
+      },
+      {
+        "text": "Hướng dẫn xử lý trên WebKhông có URL thì báo chưa cấu hình",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Thông báo/chứng từ không tồn tạiKhông fallback sang ID khác",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Back về đúng list/tabGiữ lọc, số dòng, cuộn và focus",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P14_Data_Flow",
+    "board": "P14",
+    "type": "data",
+    "panels": [
+      "P14.S01",
+      "P14.S02",
+      "P14.S03",
+      "P14.S04"
+    ],
+    "nodes": 14,
+    "edges": 15,
+    "png": {
+      "width": 2366,
+      "height": 3964,
+      "bytes": 426619
+    },
+    "width": 1183,
+    "height": 1982,
+    "graphWidth": 1086.48828125,
+    "graphHeight": 1715.7071533203125,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P14.S01Username khôi phụcKhông yêu cầu phiên đăng nhập",
+        "width": 260,
+        "height": 109.00006103515625
+      },
+      {
+        "text": "Request recovery cố định ID",
+        "width": 243.078125,
+        "height": 27
+      },
+      {
+        "text": "P14.S02Receipt recoveryID + Thời điểm đã xác minh",
+        "width": 234.359375,
+        "height": 82
+      },
+      {
+        "text": "Snapshot P04/P05/P19Document/Session/Version/LinesP03 projection không đếm trùng",
+        "width": 284.09375,
+        "height": 81
+      },
+      {
+        "text": "P14.S03Danh sách trong cùng actor/kho",
+        "width": 260,
+        "height": 81.99996948242188
+      },
+      {
+        "text": "Auth session scopeFingerprint nội dung checkpoint",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Dấu nháp đã lưu trong phiênCache địa chỉ không làm nháp bẩn giả",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Request endSnapshot ca + Danh sách nháp",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Adapter recovery/save/end/check",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "Pending / UNKNOWNGiữ request, đối chiếu cùng ID",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Receipt end đã kiểmRequest/scope khớp, nháp không đổi",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P14.S04KPI từ aggregate B14Không tính từ số dòng client",
+        "width": 246,
+        "height": 82
+      },
+      {
+        "text": "Retention trong bộ nhớ trangNamespace + Actor + KhoĐăng nhập lại cùng owner mới phục hồi",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Reload trang mất bộ nhớKhông phải lưu bền WMS",
+        "width": 219.015625,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P14_User_Flow",
+    "board": "P14",
+    "type": "user",
+    "panels": [
+      "P14.S01",
+      "P14.S02",
+      "P14.S03",
+      "P14.S04"
+    ],
+    "nodes": 14,
+    "edges": 15,
+    "png": {
+      "width": 3548,
+      "height": 2874,
+      "bytes": 395129
+    },
+    "width": 1774,
+    "height": 1437,
+    "graphWidth": 1677.3001708984375,
+    "graphHeight": 1171,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P01 · Quên mật khẩu",
+        "width": 178.0625,
+        "height": 27
+      },
+      {
+        "text": "P14.S01Nhập tài khoản cần hỗ trợ",
+        "width": 222.828125,
+        "height": 55
+      },
+      {
+        "text": "Gửi yêu cầu hỗ trợ mô phỏngKhông gửi email/SMS thật",
+        "width": 253.84375,
+        "height": 54
+      },
+      {
+        "text": "P14.S02Xác nhận yêu cầu hỗ trợChỉ sau receipt hợp lệ",
+        "width": 209.859375,
+        "height": 82
+      },
+      {
+        "text": "UNKNOWNGiữ request, kiểm tra kết quả",
+        "width": 249.125,
+        "height": 54
+      },
+      {
+        "text": "P10 · Kết thúc ca",
+        "width": 145.046875,
+        "height": 27
+      },
+      {
+        "text": "P14.S03Phiếu đang thực hiệnTừ đúng owner trong phiên",
+        "width": 235.01556396484375,
+        "height": 82
+      },
+      {
+        "text": "Tiếp tục P04/P05/P19/P21Không tạo phiếu thay thế",
+        "width": 216.796875,
+        "height": 54
+      },
+      {
+        "text": "Còn nháp chưa lưu / UNKNOWN?",
+        "width": 259.99993896484375,
+        "height": 54
+      },
+      {
+        "text": "Xác nhận lưu nhápGiữ checkpoint trong bộ nhớ",
+        "width": 249.828125,
+        "height": 54
+      },
+      {
+        "text": "Xác nhận kết thúc caKhông tự đăng xuất",
+        "width": 179.0625,
+        "height": 54
+      },
+      {
+        "text": "P14.S04Tổng kết caKPI fixture + nháp đã giữ",
+        "width": 213.578125,
+        "height": 82
+      },
+      {
+        "text": "Đăng xuất khi đủ điều kiệnGiữ nháp đúng tài khoản/kho trong trang",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Nguồn chưa rõ / Nháp thay đổiKhông kết thúc ca giả",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P15_Data_Flow",
+    "board": "P15",
+    "type": "data",
+    "panels": [
+      "P15.S01",
+      "P15.S02",
+      "P15.S03",
+      "P15.S04"
+    ],
+    "nodes": 10,
+    "edges": 12,
+    "png": {
+      "width": 3364,
+      "height": 2564,
+      "bytes": 331164
+    },
+    "width": 1682,
+    "height": 1282,
+    "graphWidth": 1585.15625,
+    "graphHeight": 1015.8518676757812,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Lỗi từ owner / Adapter / SessionKhông lấy thông báo text làm kết quả ghi",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Ngữ cảnh màn gọiRoute · Action · Request IDDocument ID · Scope · Focus/scroll",
+        "width": 260,
+        "height": 107.99998474121094
+      },
+      {
+        "text": "classifySystemErrorIntent: đọc / ghi / đối chiếu",
+        "width": 228,
+        "height": 54
+      },
+      {
+        "text": "P15.S01Network state + callback retry hợp lệ",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "P15.S02Session expiryVô hiệu callback và DOM cũ",
+        "width": 239.09375,
+        "height": 82
+      },
+      {
+        "text": "P15.S03Permission denialGuard tại handler và route",
+        "width": 224.0625,
+        "height": 82
+      },
+      {
+        "text": "P15.S04Trạng thái khả năng/quyền thiết bị",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Owner vẫn sở hữu yêu cầuP15 không tạo request nghiệp vụ mới",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "UNKNOWN giữ nguyên requestChỉ gọi read/check được cho phép",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Khôi phục context khi được phépKhông phục hồi phiên đã bị thu hồi",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P15_User_Flow",
+    "board": "P15",
+    "type": "user",
+    "panels": [
+      "P15.S01",
+      "P15.S02",
+      "P15.S03",
+      "P15.S04"
+    ],
+    "nodes": 12,
+    "edges": 14,
+    "png": {
+      "width": 3204,
+      "height": 2494,
+      "bytes": 337914
+    },
+    "width": 1602,
+    "height": 1247,
+    "graphWidth": 1505.953125,
+    "graphHeight": 981,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Màn đang đọc / Ghi / QuétGiữ context gốc",
+        "width": 222.015625,
+        "height": 54
+      },
+      {
+        "text": "Phân loại lỗi đúng nguyên nhân",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P15.S01Mất kết nối / Lỗi mạng",
+        "width": 189.015625,
+        "height": 55
+      },
+      {
+        "text": "P15.S02Phiên hết hạn",
+        "width": 118.015625,
+        "height": 55
+      },
+      {
+        "text": "P15.S03Không có quyền",
+        "width": 141,
+        "height": 55
+      },
+      {
+        "text": "P15.S04Camera / NFCKhông hỗ trợ hoặc quyền bị từ chối",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Có thao tác đọc được phép retry?Không retry lệnh ghi UNKNOWN",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Về màn gọiGiữ dữ liệu, focus và cuộn",
+        "width": 228.109375,
+        "height": 54
+      },
+      {
+        "text": "P01 · Đăng nhập lạiNội dung bảo vệ mất ngay",
+        "width": 224.03125,
+        "height": 54
+      },
+      {
+        "text": "Hướng dẫn / Kênh liên hệThiếu cấu hình thì báo rõ",
+        "width": 219.84375,
+        "height": 54
+      },
+      {
+        "text": "P17 / Owner requestĐối chiếu thay vì gửi lại",
+        "width": 202.078125,
+        "height": 54
+      },
+      {
+        "text": "Handler / Deep link vẫn kiểm guardKhông chỉ ẩn nút trên giao diện",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P16_Data_Flow",
+    "board": "P16",
+    "type": "data",
+    "panels": [
+      "P16.S01",
+      "P16.S02",
+      "P16.S03",
+      "P16.S04"
+    ],
+    "nodes": 11,
+    "edges": 12,
+    "png": {
+      "width": 3154,
+      "height": 3246,
+      "bytes": 362491
+    },
+    "width": 1577,
+    "height": 1623,
+    "graphWidth": 1480.390625,
+    "graphHeight": 1356.851806640625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Query + Filter + Kho + Phiên",
+        "width": 241.578125,
+        "height": 27
+      },
+      {
+        "text": "Cache key + Query generationMột read đang chờ cho context",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Read port của nguồn P12Không phải lệnh tạo/ghi chứng từ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P16.S01Pending read / Loading",
+        "width": 199.015625,
+        "height": 55
+      },
+      {
+        "text": "Kiểm response còn đúng generationScope chưa đổi, dữ liệu hợp lệ",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P16.S02Verified emptyKhông query/filter",
+        "width": 155.015625,
+        "height": 82
+      },
+      {
+        "text": "P16.S03Verified no-resultsCó điều kiện tìm kiếm",
+        "width": 185.046875,
+        "height": 82
+      },
+      {
+        "text": "P16.S04Read failure / Nguồn không hợp lệ",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Cache cùng contextGiữ hàng đã đọc, gắn trạng thái stale",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P12 render rows + metadataFocus/cuộn không bị callback cũ lấy lại",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Response trễ / Đã hủy / Sai scopeBỏ kết quả, không ghi đè view mới",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P16_User_Flow",
+    "board": "P16",
+    "type": "user",
+    "panels": [
+      "P16.S01",
+      "P16.S02",
+      "P16.S03",
+      "P16.S04"
+    ],
+    "nodes": 12,
+    "edges": 14,
+    "png": {
+      "width": 4122,
+      "height": 2448,
+      "bytes": 363176
+    },
+    "width": 2061,
+    "height": 1224,
+    "graphWidth": 1964.02734375,
+    "graphHeight": 958,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P12 · Đọc danh sách chứng từ",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P16.S01Đang tảiKhông thay đổi kích thước bố cục",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Kết quả đọc có xác minh?",
+        "width": 223.046875,
+        "height": 27
+      },
+      {
+        "text": "P12.S01 · Có dữ liệu",
+        "width": 174.09375,
+        "height": 27
+      },
+      {
+        "text": "P16.S02Nguồn xác nhận rỗngKhông có điều kiện lọc",
+        "width": 197.015625,
+        "height": 82
+      },
+      {
+        "text": "P12.S04 · Tạo chứng từChỉ khi được phép",
+        "width": 202.125,
+        "height": 54
+      },
+      {
+        "text": "P16.S03Không có kết quả phù hợpGiữ từ khóa / Bộ lọc",
+        "width": 228.78125,
+        "height": 82
+      },
+      {
+        "text": "Sửa từ khóa / Bỏ điều kiệnKhông xóa dữ liệu nguồn",
+        "width": 228.125,
+        "height": 54
+      },
+      {
+        "text": "P16.S04Lỗi đọc / Nguồn thiếuKhông giả thành kết quả rỗng",
+        "width": 255,
+        "height": 82
+      },
+      {
+        "text": "Thử lại cùng scope + query",
+        "width": 234.59375,
+        "height": 27
+      },
+      {
+        "text": "Có cache: giữ dữ liệu cũGhi rõ chưa cập nhật được",
+        "width": 232.90625,
+        "height": 54
+      },
+      {
+        "text": "Rời màn / Đổi queryBỏ response cũ, không giành focus",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P17_Data_Flow",
+    "board": "P17",
+    "type": "data",
+    "panels": [
+      "P17.S01",
+      "P17.S02",
+      "P17.S03",
+      "P17.S04"
+    ],
+    "nodes": 12,
+    "edges": 14,
+    "png": {
+      "width": 3368,
+      "height": 2830,
+      "bytes": 388641
+    },
+    "width": 1684,
+    "height": 1415,
+    "graphWidth": 1587.8671875,
+    "graphHeight": 1148.250732421875,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Raw code / UIDTừ cùng pipeline của owner",
+        "width": 239.0625,
+        "height": 54
+      },
+      {
+        "text": "Snapshot P04/P05/P07Document/Tag ID · Scan sessionAccepted · Request · Version",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P17.S01Raw + Lý do không hợp lệ",
+        "width": 224.328125,
+        "height": 55
+      },
+      {
+        "text": "P17.S02Nguồn từ chối xuấtSản phẩm / Chứng từ liên quan nếu có",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P17.S03Mapping thẻ đã xác minhUID + Sản phẩm liên kết",
+        "width": 215.03125,
+        "height": 82
+      },
+      {
+        "text": "Không thay accepted/quantityKhông tạo phiếu hoặc liên kết khác",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P17.S04Snapshot request UNKNOWNChặn lệnh gửi mới",
+        "width": 253.015625,
+        "height": 82
+      },
+      {
+        "text": "Status read bằng request gốcKhông gọi record/Post lần nữa",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Receipt có khớp request/scope?",
+        "width": 260,
+        "height": 53.99993896484375
+      },
+      {
+        "text": "Kết quả record đã xác minhCùng Document ID",
+        "width": 236.078125,
+        "height": 54
+      },
+      {
+        "text": "Kết quả chưa record + quyền retryDo adapter/owner quyết định",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Không có nguồn / Receipt saiGiữ nguyên UNKNOWN và dữ liệu",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P17_User_Flow",
+    "board": "P17",
+    "type": "user",
+    "panels": [
+      "P17.S01",
+      "P17.S02",
+      "P17.S03",
+      "P17.S04"
+    ],
+    "nodes": 13,
+    "edges": 16,
+    "png": {
+      "width": 4274,
+      "height": 2020,
+      "bytes": 386719
+    },
+    "width": 2137,
+    "height": 1010,
+    "graphWidth": 2040.57421875,
+    "graphHeight": 744,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Đang quét / Gửi phiếuP04 · P05 · P07",
+        "width": 188.046875,
+        "height": 54
+      },
+      {
+        "text": "P17.S01Mã không hợp lệP04 giữ raw và danh sách hợp lệ",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Nhập mã / Sửa mã vừa nhậpQuay lại đúng phiên quét",
+        "width": 243.140625,
+        "height": 54
+      },
+      {
+        "text": "P17.S02Mã không thể xuấtP05 hiển thị lý do từ nguồn",
+        "width": 232.03125,
+        "height": 82
+      },
+      {
+        "text": "Quét mã khácKhông cộng mã bị chặn",
+        "width": 204.015625,
+        "height": 54
+      },
+      {
+        "text": "P17.S03NFC đã có liên kết / Xung đột",
+        "width": 249.015625,
+        "height": 55
+      },
+      {
+        "text": "Xem liên kết / HủyKhông tự ghi đè mapping",
+        "width": 219.015625,
+        "height": 54
+      },
+      {
+        "text": "P17.S04Kết quả gửi chưa xác địnhGiữ phiếu, khóa gửi lại",
+        "width": 227.109375,
+        "height": 82
+      },
+      {
+        "text": "Kiểm tra đúng request hiện tại",
+        "width": 259.046875,
+        "height": 27
+      },
+      {
+        "text": "P04/P05.S04 · Chờ WebChỉ khi xác nhận đã record",
+        "width": 230.0625,
+        "height": 54
+      },
+      {
+        "text": "Chưa record được xác minhRetry cùng yêu cầu nếu được phép",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Vẫn UNKNOWN / Thiếu nguồnGiữ khóa, chờ đối chiếu",
+        "width": 256.984375,
+        "height": 54
+      },
+      {
+        "text": "Rời màn không xóa requestTrở lại vẫn giữ trạng thái",
+        "width": 237.84375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P18_Data_Flow",
+    "board": "P18",
+    "type": "data",
+    "panels": [
+      "P18.S01",
+      "P18.S02",
+      "P18.S03",
+      "P18.S04"
+    ],
+    "nodes": 12,
+    "edges": 11,
+    "png": {
+      "width": 3708,
+      "height": 2362,
+      "bytes": 375313
+    },
+    "width": 1854,
+    "height": 1181,
+    "graphWidth": 1757.818359375,
+    "graphHeight": 914.8518676757812,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Nguồn chứng từ P12 / Mapping P08Document ID · Danh sách file",
+        "width": 260,
+        "height": 80.99998474121094
+      },
+      {
+        "text": "P18.S01Metadata tệpFile ID · Task ID · State · Progress",
+        "width": 260,
+        "height": 109.00003051757812
+      },
+      {
+        "text": "Upload queue fixtureRetry/cancel đúng task + generation",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P18.S02Đọc URL file đã xác minhPDF bytes / Ảnh + Viewer state",
+        "width": 260,
+        "height": 109.00006103515625
+      },
+      {
+        "text": "Actor · Auth session · KhoKiểm scope trước đọc/tải/nhận callback",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Rời màn / Đổi file / Mất quyềnAbort read, bỏ callback cũ",
+        "width": 251.828125,
+        "height": 54
+      },
+      {
+        "text": "Nguồn hồ sơ P09Case ID · Status · Closed",
+        "width": 213.046875,
+        "height": 53.99998474121094
+      },
+      {
+        "text": "P18.S03Bản nhập bàn giaoChecked · Receiver · Day · Note",
+        "width": 260,
+        "height": 109.00003051757812
+      },
+      {
+        "text": "Nguồn xác nhận bàn giao chưa cóKhông mutate case, không báo đã trả khách",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Nguồn vị trí P06Item ID · Location",
+        "width": 151.015625,
+        "height": 53.99998474121094
+      },
+      {
+        "text": "P18.S04Vị trí / Slot read-only",
+        "width": 175.03125,
+        "height": 55
+      },
+      {
+        "text": "Có số liệu sức chứa xác minh?Không có: để chưa xác minh, không suy 0",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P18_User_Flow",
+    "board": "P18",
+    "type": "user",
+    "panels": [
+      "P18.S01",
+      "P18.S02",
+      "P18.S03",
+      "P18.S04"
+    ],
+    "nodes": 13,
+    "edges": 14,
+    "png": {
+      "width": 3440,
+      "height": 2178,
+      "bytes": 373890
+    },
+    "width": 1720,
+    "height": 1089,
+    "graphWidth": 1623.76953125,
+    "graphHeight": 823,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P12 / P08Document ID + File ID",
+        "width": 185.53125,
+        "height": 54
+      },
+      {
+        "text": "P18.S01Danh sách tệp của chứng từTrạng thái tải / Lỗi / Hủy",
+        "width": 244.109375,
+        "height": 82
+      },
+      {
+        "text": "P18.S02Viewer PDF / ẢnhTrang · Zoom · Fit · Tải xuống",
+        "width": 252.984375,
+        "height": 82
+      },
+      {
+        "text": "Thiếu file / Lỗi đọcThử lại nguồn, không đổi chứng từ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Back về đúng tệp và màn gọiGiữ trang/zoom/cuộn/focus",
+        "width": 248.0625,
+        "height": 54
+      },
+      {
+        "text": "P09 · Đúng hồ sơ bảo hành",
+        "width": 233.8125,
+        "height": 27
+      },
+      {
+        "text": "P18.S03Thông tin bàn giaoKiểm máy · Người nhận · Ngày · Ghi chú",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Hồ sơ Chờ bàn giao?Dữ liệu hợp lệ / Quyền / Kho?",
+        "width": 253.859375,
+        "height": 54
+      },
+      {
+        "text": "Chưa có nguồn xác nhận bàn giaoKhông gửi thật, không đóng hồ sơ",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Đã trả khách / Chưa sẵn sàngChỉ đọc hoặc chặn thao tác",
+        "width": 253.125,
+        "height": 54
+      },
+      {
+        "text": "P06.S03 · Vị trí sản phẩm",
+        "width": 214.09375,
+        "height": 27
+      },
+      {
+        "text": "P18.S04Vị trí cùng item IDSơ đồ sức chứa chỉ khi có nguồn",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Xem chi tiết vị trí / Về P06Không di chuyển hàng hoặc ghi tồn",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P19_Data_Flow",
+    "board": "P19",
+    "type": "data",
+    "panels": [
+      "P19.S01",
+      "P19.S02",
+      "P19.S03",
+      "P19.S04"
+    ],
+    "nodes": 13,
+    "edges": 14,
+    "png": {
+      "width": 2670,
+      "height": 4002,
+      "bytes": 402000
+    },
+    "width": 1335,
+    "height": 2001,
+    "graphWidth": 1238.73046875,
+    "graphHeight": 1734.80712890625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Nguồn hồ sơ bảo hành P09Case ID · Trạng thái · Kho",
+        "width": 233.8125,
+        "height": 54
+      },
+      {
+        "text": "P19.S01Owner phiếu linh kiệnDocument ID · Scan session · Version",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Danh mục mã đơn / BOXSKU · Tồn khả dụng đã xác minh",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P19.S02Quantity tạm trong sheetHủy không thêm dòng",
+        "width": 213.03125,
+        "height": 82
+      },
+      {
+        "text": "Kiểm mã + số lượng + tồnCase/quyền/kho vẫn hợp lệ",
+        "width": 233.859375,
+        "height": 54
+      },
+      {
+        "text": "Accepted lines của cùng ownerStable code ID · SKU · Quantity",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P19.S03Review từ lines hiện hành",
+        "width": 222.09375,
+        "height": 55
+      },
+      {
+        "text": "Request Post cố định danhCase + Document + Session + Version",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Post / Check adapter mô phỏng",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "UNKNOWN giữ nguyên requestKhông tạo lệnh Post thứ hai",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Receipt POSTED đã xác minhCase ID · Receipt ID · Request ID",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P19.S04Hiển thị Đã xuấtKhông dùng trạng thái Chờ Web",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P09 / P20 nhận đúng receiptChỉ ledger POSTED của đúng case",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P19_User_Flow",
+    "board": "P19",
+    "type": "user",
+    "panels": [
+      "P19.S01",
+      "P19.S02",
+      "P19.S03",
+      "P19.S04"
+    ],
+    "nodes": 14,
+    "edges": 18,
+    "png": {
+      "width": 3790,
+      "height": 3142,
+      "bytes": 491257
+    },
+    "width": 1895,
+    "height": 1571,
+    "graphWidth": 1798.4375,
+    "graphHeight": 1305,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P09 hồ sơ / P21 tiếp tụcĐúng Case ID + Draft ID",
+        "width": 202.875,
+        "height": 54
+      },
+      {
+        "text": "Case còn mở? Kho/quyền hợp lệ?",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "Case đóng / Thiếu scopeKhông mở xuất mới",
+        "width": 212.046875,
+        "height": 54
+      },
+      {
+        "text": "P19.S01Quét linh kiện / Nhập tayGiữ đúng phiếu và phiên",
+        "width": 212.046875,
+        "height": 82
+      },
+      {
+        "text": "Mã đơn hay BOX?Mã được phép xuất?",
+        "width": 177.859375,
+        "height": 54
+      },
+      {
+        "text": "P19.S02Sheet số lượng BOXKhông vượt tồn đã xác minh",
+        "width": 245.84375,
+        "height": 82
+      },
+      {
+        "text": "P24.S01 / P24.S02Lỗi số lượng / Hộp chưa thể xuất",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Danh sách linh kiện hợp lệSố mã khác tổng quantity",
+        "width": 228.84375,
+        "height": 54
+      },
+      {
+        "text": "P19.S03Kiểm tra linh kiệnXác nhận xuất trực tiếp",
+        "width": 200.09375,
+        "height": 82
+      },
+      {
+        "text": "Post mô phỏng một lầnKiểm lại case, tồn và version",
+        "width": 246.125,
+        "height": 54
+      },
+      {
+        "text": "P19.S04ĐÃ XUẤTChỉ sau receipt POSTED hợp lệ",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P21.S04 · UNKNOWNĐối chiếu cùng request, không repost",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P09 hồ sơ / P20 lịch sửCùng receipt của đúng case",
+        "width": 240.0625,
+        "height": 54
+      },
+      {
+        "text": "P21.S02 · Giữ phiếu đang làmBack không bỏ dữ liệu",
+        "width": 254.109375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P20_Data_Flow",
+    "board": "P20",
+    "type": "data",
+    "panels": [
+      "P20.S01",
+      "P20.S02",
+      "P20.S03",
+      "P20.S04"
+    ],
+    "nodes": 12,
+    "edges": 13,
+    "png": {
+      "width": 3466,
+      "height": 3062,
+      "bytes": 410289
+    },
+    "width": 1733,
+    "height": 1531,
+    "graphWidth": 1636.1484375,
+    "graphHeight": 1264.70361328125,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Case ID + Scope + CallerReceipt focus nếu được xác minh",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Nguồn lịch sử read-onlySeed riêng + P19 receipts POSTED",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Đúng case/kho · POSTEDImmutable ID · Không nhận trùng",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Cache lịch sử theo caseItems · Cursor · Has more · Focus",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P20.S01Danh sách phiếu đã tải",
+        "width": 196.046875,
+        "height": 55
+      },
+      {
+        "text": "P20.S02Một read đang chờKhông mất cache khi tải tiếp",
+        "width": 244.046875,
+        "height": 82
+      },
+      {
+        "text": "P20.S03Read error giữ cursorKhông biến thành empty",
+        "width": 211,
+        "height": 82
+      },
+      {
+        "text": "P20.S04Đã đọc và rỗng thậtKhông phải nguồn unavailable",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Rời màn / Case khác / Scope khácHủy read, bỏ response cũ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Tổng từ dòng của mỗi receiptPhân biệt số phiếu / mã / quantity",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P19 live draft của cùng caseĐể mở P21, không trộn vào ledger",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Case đã trả kháchKhóa xuất mới; vẫn đối chiếu request cũ",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P20_User_Flow",
+    "board": "P20",
+    "type": "user",
+    "panels": [
+      "P20.S01",
+      "P20.S02",
+      "P20.S03",
+      "P20.S04"
+    ],
+    "nodes": 12,
+    "edges": 16,
+    "png": {
+      "width": 3696,
+      "height": 2348,
+      "bytes": 399004
+    },
+    "width": 1848,
+    "height": 1174,
+    "graphWidth": 1751.53125,
+    "graphHeight": 908,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P09 / P19 / P21 / P23Mang đúng Case ID",
+        "width": 173.125,
+        "height": 54
+      },
+      {
+        "text": "P20.S01Linh kiện đã xuấtPhiếu POSTED của hồ sơ",
+        "width": 218.84375,
+        "height": 82
+      },
+      {
+        "text": "P20.S02Tải thêm lịch sửGiữ các dòng đã đọc",
+        "width": 179.0625,
+        "height": 82
+      },
+      {
+        "text": "P20.S03Lỗi tải thêmGiữ cursor và cache",
+        "width": 174.125,
+        "height": 82
+      },
+      {
+        "text": "P20.S04Nguồn xác nhận chưa có phiếu",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Thử tải lại cùng contextChỉ đọc, không Post",
+        "width": 203.0625,
+        "height": 54
+      },
+      {
+        "text": "Mở rộng phiếu / Xem dòng linh kiệnKhông đổi quantity",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Có phiếu linh kiện đang làm?",
+        "width": 250.015625,
+        "height": 27
+      },
+      {
+        "text": "P21 · Tiếp tục / Đối chiếu",
+        "width": 212.71875,
+        "height": 27
+      },
+      {
+        "text": "P19 · Xuất linh kiện mớiChỉ khi case mở và được phép",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P24.S04 · Hồ sơ đã trả kháchChỉ đọc; P23 xem quá trình",
+        "width": 247.90625,
+        "height": 54
+      },
+      {
+        "text": "Back đúng callerGiữ cuộn, focus, phiếu vừa chọn",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P21_Data_Flow",
+    "board": "P21",
+    "type": "data",
+    "panels": [
+      "P21.S01",
+      "P21.S02",
+      "P21.S03",
+      "P21.S04"
+    ],
+    "nodes": 12,
+    "edges": 14,
+    "png": {
+      "width": 3234,
+      "height": 3842,
+      "bytes": 455397
+    },
+    "width": 1617,
+    "height": 1921,
+    "graphWidth": 1520.8671875,
+    "graphHeight": 1654.70361328125,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Owner P19 hiện cóDocument ID · Case ID · SessionVersion · Lines · Request/receipt",
+        "width": 260,
+        "height": 134.99998474121094
+      },
+      {
+        "text": "P21.S01Danh sách pending từ live ownerKhông dựng lại từ số phiếu",
+        "width": 260,
+        "height": 109.00003051757812
+      },
+      {
+        "text": "Nguồn checkpoint đọc theo IDCùng scope và generation",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "So document/session/versionRecorded lines / UNKNOWN status",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P21.S02Checkpoint khớpMở lại chính owner P19",
+        "width": 200.84375,
+        "height": 82
+      },
+      {
+        "text": "P21.S03Conflict / Chưa xác minhRead-only, không sửa bằng dữ liệu đoán",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P21.S04Request UNKNOWN được giữ nguyên",
+        "width": 260,
+        "height": 82
+      },
+      {
+        "text": "Đọc trạng thái requestCase đóng vẫn được check yêu cầu cũ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Receipt POSTED có nguồnCase + Document + Request khớp",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Xác nhận chưa PostĐọc lại checkpoint, không auto-Post",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P20 dùng đúng receiptCaller/scroll/focus cùng case",
+        "width": 249.109375,
+        "height": 54
+      },
+      {
+        "text": "Response cũ / Mất phiên / Đổi ownerKhông cập nhật vào phiếu khác",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P21_User_Flow",
+    "board": "P21",
+    "type": "user",
+    "panels": [
+      "P21.S01",
+      "P21.S02",
+      "P21.S03",
+      "P21.S04"
+    ],
+    "nodes": 13,
+    "edges": 16,
+    "png": {
+      "width": 4096,
+      "height": 2992,
+      "bytes": 468230
+    },
+    "width": 2048,
+    "height": 1496,
+    "graphWidth": 1951.9765625,
+    "graphHeight": 1230,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Back từ P19 / Tiếp tục từ P09Chọn đúng draft owner",
+        "width": 248.828125,
+        "height": 54
+      },
+      {
+        "text": "P21.S01Phiếu đang thực hiệnChỉ owner hiện có; B21 là mẫu riêng",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P21.S02Tiếp tục đúng phiếuĐọc checkpoint trước khi quét",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Đúng document/session/version?Mã đã ghi nhận có xác minh?",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P19 · Quét tiếp / Kiểm traGiữ lines và định danh",
+        "width": 213.0625,
+        "height": 54
+      },
+      {
+        "text": "P21.S03Cần đối chiếuLệch version / Thiếu xác minh",
+        "width": 257.078125,
+        "height": 82
+      },
+      {
+        "text": "Không tự thay phiên / Tạo phiếu mớiKhông cho quét hoặc Post",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P21.S04Kiểm tra kết quả xuấtRequest Post đang UNKNOWN",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Đối chiếu cùng request",
+        "width": 199.03125,
+        "height": 27
+      },
+      {
+        "text": "P20 · Receipt POSTEDĐúng case và đúng phiếu",
+        "width": 218.03125,
+        "height": 54
+      },
+      {
+        "text": "Chưa Post được xác minhĐọc lại checkpoint trước tiếp tục",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Vẫn chưa rõ / Lỗi nguồnGiữ khóa và dữ liệu",
+        "width": 207.046875,
+        "height": 54
+      },
+      {
+        "text": "Chi tiết → Danh sách → HomeKhông xóa draft khi Back",
+        "width": 258.046875,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P22_Data_Flow",
+    "board": "P22",
+    "type": "data",
+    "panels": [
+      "P22.S01",
+      "P22.S02",
+      "P22.S03",
+      "P22.S04"
+    ],
+    "nodes": 10,
+    "edges": 10,
+    "png": {
+      "width": 2408,
+      "height": 3800,
+      "bytes": 339599
+    },
+    "width": 1204,
+    "height": 1900,
+    "graphWidth": 1108,
+    "graphHeight": 1633.851806640625,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P22.S01Chỉ điều hướng 6 nguồn lịch sửKhông tạo thêm draft hay sự kiện",
+        "width": 260,
+        "height": 136
+      },
+      {
+        "text": "Nguồn event NFC độc lậpImmutable event ID · UID · ActorKho · Thời điểm · Kết quả",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Scope / Envelope / ID hợp lệKhông coi unavailable là empty",
+        "width": 260,
+        "height": 80.99993896484375
+      },
+      {
+        "text": "Items + Cursor + CompleteDedup theo event ID",
+        "width": 229.078125,
+        "height": 54
+      },
+      {
+        "text": "P22.S02Filter/search từ dữ liệu nguồnBadge phản ánh phạm vi đã đọc",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P22.S03Exact event IDNội dung và tham chiếu có nguồn",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P22.S04Trạng thái unavailableGiữ dữ liệu cũ nếu read lỗi phù hợp",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Read/reload cùng contextChặn single-flight, bỏ kết quả trễ",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P07 current mapping không phải auditKhông chế event sau thao tác thẻ",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Mẫu B22 chỉ opt-inNguồn mặc định có thể chưa khả dụng",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  },
+  {
+    "name": "P22_User_Flow",
+    "board": "P22",
+    "type": "user",
+    "panels": [
+      "P22.S01",
+      "P22.S02",
+      "P22.S03",
+      "P22.S04"
+    ],
+    "nodes": 11,
+    "edges": 13,
+    "png": {
+      "width": 4620,
+      "height": 2282,
+      "bytes": 372565
+    },
+    "width": 2310,
+    "height": 1141,
+    "graphWidth": 2213.421875,
+    "graphHeight": 875,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P02 · Tab Lịch sử",
+        "width": 148.75,
+        "height": 27
+      },
+      {
+        "text": "P22.S01Hub lịch sử · 6 mụcKhông có shortcut draft đã bỏ",
+        "width": 258,
+        "height": 82
+      },
+      {
+        "text": "P08.S01 · Lịch sử chungHoặc lịch sử chứng từ theo scope",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P08.S04 · Hoạt động theo ngày",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P23.S01 · Lịch sử bảo hành",
+        "width": 235.109375,
+        "height": 27
+      },
+      {
+        "text": "P23.S03 · Lịch sử phiên quét",
+        "width": 246.09375,
+        "height": 27
+      },
+      {
+        "text": "P22.S02Lịch sử thao tác NFCTìm UID / Lọc / Tải thêm",
+        "width": 204.03125,
+        "height": 82
+      },
+      {
+        "text": "P22.S03Chi tiết đúng event IDKhông suy từ trạng thái thẻ",
+        "width": 236.03125,
+        "height": 82
+      },
+      {
+        "text": "P22.S04Nguồn lịch sử chưa khả dụngKhông hiển thị rỗng thành công",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Thử đọc lại nguồn event",
+        "width": 209.046875,
+        "height": 27
+      },
+      {
+        "text": "Back về list / Hub / HomeGiữ điều kiện, cuộn và focus",
+        "width": 246.09375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P23_Data_Flow",
+    "board": "P23",
+    "type": "data",
+    "panels": [
+      "P23.S01",
+      "P23.S02",
+      "P23.S03",
+      "P23.S04"
+    ],
+    "nodes": 11,
+    "edges": 12,
+    "png": {
+      "width": 3350,
+      "height": 3332,
+      "bytes": 426055
+    },
+    "width": 1675,
+    "height": 1666,
+    "graphWidth": 1578.09375,
+    "graphHeight": 1399.70361328125,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Nguồn P09 dùng chungCase ID · Status · Timeline xác minh",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P23.S01Danh sách hồ sơ đã lọc",
+        "width": 202.84375,
+        "height": 55
+      },
+      {
+        "text": "P23.S02Timeline đúng Case IDKhông dựng event từ status cuối",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Receipt POSTED P19/P20Liên quan đúng case",
+        "width": 218.09375,
+        "height": 54
+      },
+      {
+        "text": "Nguồn phiên quét B23 riêngSession ID · Operation · EventsSession status · Document result",
+        "width": 260,
+        "height": 134.99996948242188
+      },
+      {
+        "text": "Kho / Session ID / Event schemaNull số liệu không đổi thành 0",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P23.S03Trang session đã đọcSearch trên nguồn, không chỉ DOM",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "P23.S04Events đúng sessionAccepted / Rejected / DuplicateQuantity theo kết quả đã xác minh",
+        "width": 260,
+        "height": 163
+      },
+      {
+        "text": "Liên kết case/receipt explicitENDED không đồng nghĩa POSTED",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "B08 và B23 khác namespaceTrùng mã PQ không phải cùng phiên",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Response trễ / Sai scopeKhông ghi đè visit mới",
+        "width": 213.09375,
+        "height": 54
+      }
+    ]
+  },
+  {
+    "name": "P23_User_Flow",
+    "board": "P23",
+    "type": "user",
+    "panels": [
+      "P23.S01",
+      "P23.S02",
+      "P23.S03",
+      "P23.S04"
+    ],
+    "nodes": 10,
+    "edges": 14,
+    "png": {
+      "width": 3850,
+      "height": 2088,
+      "bytes": 364109
+    },
+    "width": 1925,
+    "height": 1044,
+    "graphWidth": 1828.0078125,
+    "graphHeight": 778,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "P22 hub / P20 xem quá trình",
+        "width": 240.078125,
+        "height": 27
+      },
+      {
+        "text": "P23.S01Danh sách lịch sử bảo hànhTìm / Lọc đúng nguồn hồ sơ",
+        "width": 242.765625,
+        "height": 82
+      },
+      {
+        "text": "P23.S02Quá trình đúng Case IDTimeline và linh kiện đã xuất",
+        "width": 243.75,
+        "height": 82
+      },
+      {
+        "text": "P20 · Lịch sử linh kiệnGiữ case và caller quay lại",
+        "width": 226.171875,
+        "height": 54
+      },
+      {
+        "text": "P23.S03Lịch sử phiên quétNguồn session độc lập",
+        "width": 197.03125,
+        "height": 82
+      },
+      {
+        "text": "P23.S04Chi tiết đúng session IDTrạng thái phiên khác kết quả phiếu",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Hồ sơ / Phiếu liên quanChỉ mở khi có mapping xác minh",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Nguồn thiếu / Session không cóKhông lấy phiên đầu làm mặc định",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Back giữ query/filter/scroll/focusVề đúng hub hoặc P20",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "Case đã trả khách / Phiên kết thúcXem lịch sử không phát sinh lệnh ghi",
+        "width": 260,
+        "height": 108
+      }
+    ]
+  },
+  {
+    "name": "P24_Data_Flow",
+    "board": "P24",
+    "type": "data",
+    "panels": [
+      "P24.S01",
+      "P24.S02",
+      "P24.S03",
+      "P24.S04"
+    ],
+    "nodes": 11,
+    "edges": 10,
+    "png": {
+      "width": 3650,
+      "height": 2570,
+      "bytes": 364837
+    },
+    "width": 1825,
+    "height": 1285,
+    "graphWidth": 1728.49609375,
+    "graphHeight": 1018.8518676757812,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Không có owner ghi mới cho P24Dùng lại model/service hiện có",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Tồn linh kiện đã xác minhQuantity của dòng đang sửa",
+        "width": 244.0625,
+        "height": 54
+      },
+      {
+        "text": "P24.S01P19 validationSai thì giữ nguyên lines/version",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Nguồn trạng thái BOXMã chưa nhập / Không được xuất",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P24.S02P19 rejectionRaw + Reason, không tăng quantity",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Receipt P04/P05 đã recordRequest ID / Document ID khớp",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P24.S03waiting-web projectionRecord ≠ Post · Inventory delta 0",
+        "width": 260,
+        "height": 109
+      },
+      {
+        "text": "Case status P09 dùng chungĐã trả khách / Closed",
+        "width": 246.0625,
+        "height": 54
+      },
+      {
+        "text": "P24.S04P20 read-only + liên kết P23Không Post mới sau khi đóng",
+        "width": 255.796875,
+        "height": 82
+      },
+      {
+        "text": "Request Post UNKNOWN đã tồn tạiĐối chiếu cùng ID vẫn được phép",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "Thông báo chuyển động là trình bàyGuard/validation có hiệu lực ngayKhông dùng animation callback để ghi",
+        "width": 260,
+        "height": 162
+      }
+    ]
+  },
+  {
+    "name": "P24_User_Flow",
+    "board": "P24",
+    "type": "user",
+    "panels": [
+      "P24.S01",
+      "P24.S02",
+      "P24.S03",
+      "P24.S04"
+    ],
+    "nodes": 13,
+    "edges": 14,
+    "png": {
+      "width": 3766,
+      "height": 1966,
+      "bytes": 333699
+    },
+    "width": 1883,
+    "height": 983,
+    "graphWidth": 1786.05078125,
+    "graphHeight": 717,
+    "overlaps": [],
+    "labels": [
+      {
+        "text": "Trạng thái phát sinh từ ownerBốn nhánh độc lập, không phải 4 bước",
+        "width": 260,
+        "height": 81
+      },
+      {
+        "text": "P19 · Sheet số lượng BOX",
+        "width": 224.890625,
+        "height": 27
+      },
+      {
+        "text": "P24.S01Số lượng sai / Vượt tồnLỗi tại ô, không xác nhận",
+        "width": 216.03125,
+        "height": 82
+      },
+      {
+        "text": "Sửa số lượng hợp lệ hoặc HủyKhông cộng dòng khi chưa xác nhận",
+        "width": 260,
+        "height": 108
+      },
+      {
+        "text": "P19 · Quét BOX chưa thể xuất",
+        "width": 256.109375,
+        "height": 27
+      },
+      {
+        "text": "P24.S02Thông báo mã hộp bị chặnGiữ accepted list và phiếu",
+        "width": 229,
+        "height": 82
+      },
+      {
+        "text": "Quét mã khác / Sửa mã vừa nhập",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P04 / P05 · Record đã xác minh",
+        "width": 260,
+        "height": 54
+      },
+      {
+        "text": "P24.S03CHỜ XỬ LÝ TRÊN WEBChưa ghi sổ, chưa đổi tồn",
+        "width": 224.078125,
+        "height": 82
+      },
+      {
+        "text": "P12 xem phiếu / P08 lịch sửCùng receipt, không Post",
+        "width": 237.140625,
+        "height": 54
+      },
+      {
+        "text": "P09 / P20 · Case đã trả khách",
+        "width": 249.140625,
+        "height": 27
+      },
+      {
+        "text": "P24.S04Hồ sơ chỉ đọcKhóa xuất mới",
+        "width": 125.828125,
+        "height": 82
+      },
+      {
+        "text": "P20 lịch sử / P23 quá trìnhUNKNOWN cũ vẫn được đối chiếu",
+        "width": 260,
+        "height": 81
+      }
+    ]
+  }
+]

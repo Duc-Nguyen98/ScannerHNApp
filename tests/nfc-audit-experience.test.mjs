@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {removeAuditFilter,auditCopyText,auditReadState} from '../docs/flows/history/nfc-audit-experience.mjs';
+import {auditFilters} from '../docs/flows/history/nfc-audit-model.mjs';
+const filters={...auditFilters(),q:' UID <>& 🌸 ',type:'Thay thẻ',from:'2026-09-10',to:'2026-09-11',status:'Thành công'};
+for(const [key,patch] of [['q',{q:''}],['type',{type:'all'}],['date',{from:'',to:''}],['status',{status:'all'}]])test('remove only '+key,()=>{assert.deepEqual(removeAuditFilter(filters,key),{...filters,...patch});assert.equal(filters.q,' UID <>& 🌸 ');});
+test('unknown removal cannot reset filters',()=>assert.deepEqual(removeAuditFilter(filters,'all'),filters));
+const event={id:'E-1',type:'Thay thẻ',uid:' NFC <>&\n🌸 ',previousUid:'OLD',serial:'SN-1',day:'2026-09-10',time:'11:20',warehouse:'Kho Hoa Nam',token:'secret',description:'not copy'};
+test('copy raw full UID without trim/escape',()=>assert.equal(auditCopyText(event,'uid'),event.uid));
+test('bundle allowlist no auth or arbitrary data',()=>{const s=auditCopyText(event,'bundle');assert.match(s,/Mã sự kiện: E-1\n/);assert.ok(s.includes(event.uid));assert.match(s,/UTC\+7/);assert.doesNotMatch(s,/secret|not copy/);});
+test('missing and unknown copy never stringify undefined',()=>{assert.equal(auditCopyText({},'uid'),null);assert.equal(auditCopyText(event,'token'),null);assert.equal(auditCopyText(null,'bundle'),null);});
+test('invalid time absent from copied bundle',()=>assert.doesNotMatch(auditCopyText({...event,time:'88:00'},'bundle'),/Thời điểm/));
+const ready={kind:'ready',items:[event],complete:true};
+for(const kind of ['error','unavailable','loading'])test('retain verified data on '+kind,()=>{const s=auditReadState(ready,{kind,items:[]},{preserve:true});assert.equal(s.items,ready.items);assert.equal(s.readIssue,kind);assert.equal(s.refreshing,kind==='loading');assert.equal(s.kind,'ready');});
+test('different source/scope cannot keep old rows',()=>assert.deepEqual(auditReadState(ready,{kind:'unavailable',items:[]}),{kind:'unavailable',items:[]}));
+test('confirmed empty replaces cache; missing previous remains error',()=>{const empty={kind:'ready',items:[],complete:true};assert.equal(auditReadState(ready,empty,{preserve:true}),empty);assert.equal(auditReadState({kind:'unavailable'}, {kind:'error',items:[]},{preserve:true}).kind,'error');});

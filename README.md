@@ -1,5 +1,21 @@
 # WMS Hoa Nam — Bộ thiết kế mobile v2
 
+## Bản tích hợp hiện hành
+
+- [App Preview](https://duc-nguyen98.github.io/ScannerHNApp/review/?view=app) · [Review Mode + sơ đồ](https://duc-nguyen98.github.io/ScannerHNApp/review/?view=review&panel=P01.S01&scenario=default&motion=auto).
+- Review Mode giữ app và sơ đồ cạnh nhau trên desktop. Nút **Sơ đồ** mở User Flow/Data Flow theo màn đang xem; có P00 nền tảng, chọn riêng P01-P24, zoom và tải PNG/SVG/Mermaid. Đổi sơ đồ không tạo lại phiên app.
+- Source ứng dụng editable: `docs/flows/`. Bản static public tự chứa: `docs/review/runtime/`. Gallery gốc trong `docs/index.html` được giữ nguyên.
+- Thiết kế gốc: `design/01_Main/BOARDS/`; contract/prompt đã dùng: `design/specifications/`; hình tham chiếu luồng: `design/flow-reference/`.
+- Bộ 50 sơ đồ và source chỉnh sửa: `handoff/FLOW_IMAGES_P00_P24/`, được xuất bản tại `docs/review/flows/`.
+- Báo cáo/ảnh trước-sau/evidence/log/trace được giữ đầy đủ dưới `handoff/`; không dùng ảnh hoặc kết quả fixture để khẳng định backend/hardware đã tích hợp. Xem [bản đồ repository](docs/REPOSITORY_MAP.md).
+- Demo: `minhanh` / `preview`. Mọi thay đổi chỉ ở bộ nhớ trang; refresh khởi tạo lại mẫu. Đây không phải ứng dụng production.
+
+Repository có bộ evidence lớn. Có thể dùng `git clone --filter=blob:none https://github.com/Duc-Nguyen98/ScannerHNApp.git` để tải object theo nhu cầu. Không cần tải hoặc giải nén mọi trace để chạy preview.
+
+Chạy local bằng `python scripts/serve_preview.py`, mở `http://127.0.0.1:8766/review/`. Build static: `node scripts/build_final_preview.cjs`. Test logic: `node --test tests/*.mjs tests/*.cjs`. Các browser runner cần Playwright/Chromium; runner hỗ trợ `PLAYWRIGHT_MODULE` dùng biến này để chỉ runtime trên máy khác, còn một số script lịch sử giữ đường dẫn môi trường ban đầu.
+
+Các mục dưới đây là lịch sử bàn giao thiết kế ban đầu; trạng thái triển khai mới xem `handoff/FINAL/` và `handoff/REVIEW_FLOW_INTEGRATION/`.
+
 ## Mở thư viện trực quan
 
 Xem toàn bộ board trên GitHub Pages: **https://duc-nguyen98.github.io/ScannerHNApp/**

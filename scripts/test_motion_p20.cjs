@@ -1,0 +1,2 @@
+const {spawnSync}=require('node:child_process'),fs=require('node:fs');
+const r=spawnSync(process.execPath,['--test','tests/motion-p20.test.mjs','tests/component-history.test.mjs','tests/component-history-experience.test.mjs','tests/component-history-r03.test.mjs','tests/motion-p01.test.mjs'],{encoding:'utf8'});fs.writeFileSync('handoff/motion/M20/node-tests.txt',r.stdout+r.stderr);process.stdout.write(r.stdout+r.stderr);process.exitCode=r.status;

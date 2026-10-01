@@ -1,0 +1,32 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P01_data_input["<b>P01.S01</b><br/>Tài khoản + mật khẩu nhập<br/>Không lưu mật khẩu vào báo cáo/storage"]:::panel
+  P01_data_epoch["Credential epoch<br/>Bỏ callback của lần nhập/phiên cũ"]:::guard
+  P01_data_adapter["Auth fixture + Account store<br/>Nguồn credential mô phỏng dùng chung P11"]:::action
+  P01_data_session[("Session đã xác minh<br/>Actor ID · Auth session ID<br/>Warehouse ID · Permissions")]:::store
+  P01_data_confirm["<b>P01.S02</b><br/>Hiển thị đúng session<br/>Kho / Người / Quyền"]:::panel
+  P01_data_req["Yêu cầu bắt đầu ca<br/>Giữ định danh trong lúc chờ"]:::guard
+  P01_data_result["Adapter xác nhận bắt đầu"]:::action
+  P01_data_unknown["Start UNKNOWN<br/>Không mở Home, không gửi lại mù"]:::guard
+  P01_data_ready[("previewReady + thời điểm ca<br/>Chỉ từ kết quả đã xác minh")]:::store
+  P01_data_home["P02 nhận cùng session<br/>Tải UI không tạo thêm ca"]:::action
+  P01_data_revoke["Logout / Hết phiên / Reload<br/>Vô hiệu callback, bỏ DOM bảo vệ"]:::blocked
+  P01_data_input --> P01_data_epoch
+  P01_data_epoch --> P01_data_adapter
+  P01_data_adapter -->|"Xác thực hợp lệ"| P01_data_session
+  P01_data_session --> P01_data_confirm
+  P01_data_confirm -->|"Bắt đầu"| P01_data_req
+  P01_data_req --> P01_data_result
+  P01_data_result -->|"Chưa rõ"| P01_data_unknown
+  P01_data_result -->|"Xác nhận hợp lệ"| P01_data_ready
+  P01_data_ready --> P01_data_home
+  P01_data_revoke -->|"Vô hiệu"| P01_data_session
+  P01_data_revoke -->|"Đổi thế hệ"| P01_data_epoch
+  P01_data_adapter -->|"Từ chối: giữ form"| P01_data_input
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

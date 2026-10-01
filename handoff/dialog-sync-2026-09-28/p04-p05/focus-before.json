@@ -1,0 +1,780 @@
+{
+  "checks": [
+    {
+      "name": "p04: S01 shell/scroll across six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "p04: blank/invalid/duplicate validation stays at field; accepted scan uses persistent counters",
+      "status": "PASS"
+    },
+    {
+      "name": "p04: S02 scroll retains fixed header/footer at six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "p04: S03 content scroll keeps header/footer at six viewports",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "p": "p04",
+      "label": "S01",
+      "viewport": [
+        340,
+        420
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 802,
+      "scrollHeight": 802,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        382.4210510253906,
+        412.92633056640625
+      ],
+      "header": [
+        0,
+        27.852632522583008
+      ],
+      "bounds": [
+        60.796875,
+        0,
+        279.1968688964844,
+        420
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          382.4210510253906,
+          412.92633056640625
+        ],
+        "header": [
+          0,
+          27.852632522583008
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S01",
+      "viewport": [
+        390,
+        844
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 802,
+      "scrollHeight": 802,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        682.894775390625,
+        737.3684692382812
+      ],
+      "header": [
+        0,
+        49.73684310913086
+      ],
+      "bounds": [
+        0,
+        0,
+        390,
+        750
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          682.894775390625,
+          737.3684692382812
+        ],
+        "header": [
+          0,
+          49.73684310913086
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S01",
+      "viewport": [
+        494,
+        1000
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        854,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        0,
+        0,
+        494,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          854,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S01",
+      "viewport": [
+        768,
+        1024
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        854,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        137,
+        0,
+        631,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          854,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S01",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        854,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        473,
+        0,
+        967,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          854,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S01",
+      "viewport": [
+        1869,
+        940
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        845.0105590820312,
+        913.2842407226562
+      ],
+      "header": [
+        0,
+        62.33684158325195
+      ],
+      "bounds": [
+        690.09375,
+        0,
+        1178.893798828125,
+        940
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          845.0105590820312,
+          913.2842407226562
+        ],
+        "header": [
+          0,
+          62.33684158325195
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S02",
+      "viewport": [
+        340,
+        420
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 777,
+      "scrollHeight": 866,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        371.368408203125,
+        412.92633056640625
+      ],
+      "header": [
+        0,
+        27.852632522583008
+      ],
+      "bounds": [
+        60.796875,
+        0,
+        279.1968688964844,
+        420
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 89,
+        "footer": [
+          371.368408203125,
+          412.92633056640625
+        ],
+        "header": [
+          0,
+          27.852632522583008
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S02",
+      "viewport": [
+        390,
+        844
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 777,
+      "scrollHeight": 866,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        663.1578979492188,
+        737.3684692382812
+      ],
+      "header": [
+        0,
+        49.73684310913086
+      ],
+      "bounds": [
+        0,
+        0,
+        390,
+        750
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 89,
+        "footer": [
+          663.1578979492188,
+          737.3684692382812
+        ],
+        "header": [
+          0,
+          49.73684310913086
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S02",
+      "viewport": [
+        494,
+        1000
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 766,
+      "scrollHeight": 866,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        829,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        0,
+        0,
+        494,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 100,
+        "footer": [
+          829,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S02",
+      "viewport": [
+        768,
+        1024
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 766,
+      "scrollHeight": 866,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        829,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        137,
+        0,
+        631,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 100,
+        "footer": [
+          829,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S02",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 766,
+      "scrollHeight": 866,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        829,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        473,
+        0,
+        967,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 100,
+        "footer": [
+          829,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S02",
+      "viewport": [
+        1869,
+        940
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 766,
+      "scrollHeight": 866,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        820.273681640625,
+        913.2842407226562
+      ],
+      "header": [
+        0,
+        62.33684158325195
+      ],
+      "bounds": [
+        690.09375,
+        0,
+        1178.893798828125,
+        940
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 100,
+        "footer": [
+          820.273681640625,
+          913.2842407226562
+        ],
+        "header": [
+          0,
+          62.33684158325195
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S03",
+      "viewport": [
+        340,
+        420
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 802,
+      "scrollHeight": 802,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        382.4210510253906,
+        412.92633056640625
+      ],
+      "header": [
+        0,
+        27.852632522583008
+      ],
+      "bounds": [
+        60.796875,
+        0,
+        279.1968688964844,
+        420
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          382.4210510253906,
+          412.92633056640625
+        ],
+        "header": [
+          0,
+          27.852632522583008
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S03",
+      "viewport": [
+        390,
+        844
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 802,
+      "scrollHeight": 802,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        682.894775390625,
+        737.3684692382812
+      ],
+      "header": [
+        0,
+        49.73684310913086
+      ],
+      "bounds": [
+        0,
+        0,
+        390,
+        750
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          682.894775390625,
+          737.3684692382812
+        ],
+        "header": [
+          0,
+          49.73684310913086
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S03",
+      "viewport": [
+        494,
+        1000
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        854,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        0,
+        0,
+        494,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          854,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S03",
+      "viewport": [
+        768,
+        1024
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        854,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        137,
+        0,
+        631,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          854,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S03",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        854,
+        923
+      ],
+      "header": [
+        0,
+        63
+      ],
+      "bounds": [
+        473,
+        0,
+        967,
+        950
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          854,
+          923
+        ],
+        "header": [
+          0,
+          63
+        ]
+      }
+    },
+    {
+      "p": "p04",
+      "label": "S03",
+      "viewport": [
+        1869,
+        940
+      ],
+      "size": [
+        494,
+        950
+      ],
+      "height": 791,
+      "scrollHeight": 791,
+      "scrollTop": 0,
+      "overflow": false,
+      "footer": [
+        845.0105590820312,
+        913.2842407226562
+      ],
+      "header": [
+        0,
+        62.33684158325195
+      ],
+      "bounds": [
+        690.09375,
+        0,
+        1178.893798828125,
+        940
+      ],
+      "focusInDialog": null,
+      "after": {
+        "scrollTop": 0,
+        "footer": [
+          845.0105590820312,
+          913.2842407226562
+        ],
+        "header": [
+          0,
+          62.33684158325195
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound_outbound_dialog_sync.cjs:55:371\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound_outbound_dialog_sync.cjs:8:32)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound_outbound_dialog_sync.cjs:54:3"
+}

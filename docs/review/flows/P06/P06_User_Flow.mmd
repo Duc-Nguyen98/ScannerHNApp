@@ -1,0 +1,36 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P06_user_in["Home / P03<br/>Hoặc picker từ P07 / P09"]:::action
+  P06_user_s1["<b>P06.S01</b><br/>Tìm sản phẩm<br/>Mã / SKU / Serial · Bộ lọc · Vừa xem"]:::panel
+  P06_user_exists["Nguồn đọc và ID hợp lệ?"]:::guard
+  P06_user_empty["Lỗi / Không có kết quả<br/>Không tự mở sản phẩm đầu tiên"]:::blocked
+  P06_user_s2["<b>P06.S02</b><br/>Thông tin đúng sản phẩm"]:::panel
+  P06_user_s3["<b>P06.S03</b><br/>Tồn kho cùng sản phẩm/kho"]:::panel
+  P06_user_s4["<b>P06.S04</b><br/>Lịch sử giao dịch<br/>Giữ bộ lọc theo sản phẩm"]:::panel
+  P06_user_loc["P18.S04 · Vị trí<br/>Không suy sức chứa chưa có nguồn"]:::action
+  P06_user_nfc["Trả item ID + serial về P07<br/>Chỉ khi đang chọn cho NFC"]:::action
+  P06_user_war["P09 · Tiếp nhận / Hồ sơ<br/>Mang theo serial, không dùng SKU thay"]:::action
+  P06_user_doc["Chứng từ chưa có mapping<br/>Báo chưa khả dụng, không mở giả"]:::blocked
+  P06_user_back["Về đúng màn gọi / Danh sách<br/>Giữ tìm kiếm, cuộn và focus"]:::action
+  P06_user_in --> P06_user_s1
+  P06_user_s1 -->|"Chọn dòng"| P06_user_exists
+  P06_user_exists -->|"Không xác minh"| P06_user_empty
+  P06_user_empty -->|"Sửa lọc / Thử đọc lại"| P06_user_s1
+  P06_user_exists -->|"Đúng ID"| P06_user_s2
+  P06_user_s2 -->|"Xem tồn"| P06_user_s3
+  P06_user_s2 -->|"Xem lịch sử"| P06_user_s4
+  P06_user_s3 --> P06_user_loc
+  P06_user_s2 -->|"Chọn cho NFC"| P06_user_nfc
+  P06_user_s2 -->|"Bảo hành"| P06_user_war
+  P06_user_s4 -->|"Link chưa có mapping"| P06_user_doc
+  P06_user_s2 -->|"Back"| P06_user_back
+  P06_user_s3 -->|"Back"| P06_user_s2
+  P06_user_s4 -->|"Back"| P06_user_s2
+  P06_user_back --> P06_user_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

@@ -1,0 +1,8 @@
+PASS confirmed success Home button → Xuất kho creates clean next run
+PASS confirmed success nav Home → Quét mã → Xuất kho creates clean next run
+PASS confirmed success result Quét mã → cancel retains result; choose Xuất kho starts next run
+PASS failure → Home → both entry points reset; same-screen retry keeps request
+PASS native Back after terminal success → both entry points reset
+PASS unfinished accepted codes and metadata survive Home → both entry points
+PASS UNKNOWN → Home → both entry points retain exact request; reconcile before new run
+PASS actual pending submit survives leave/reentry, late receipt never renders over Home

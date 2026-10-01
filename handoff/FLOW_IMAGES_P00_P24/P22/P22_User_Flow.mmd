@@ -1,0 +1,33 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P22_user_in["P02 · Tab Lịch sử"]:::action
+  P22_user_s1["<b>P22.S01</b><br/>Hub lịch sử · 6 mục<br/>Không có shortcut draft đã bỏ"]:::panel
+  P22_user_general["P08.S01 · Lịch sử chung<br/>Hoặc lịch sử chứng từ theo scope"]:::action
+  P22_user_daily["P08.S04 · Hoạt động theo ngày"]:::action
+  P22_user_war["P23.S01 · Lịch sử bảo hành"]:::action
+  P22_user_sessions["P23.S03 · Lịch sử phiên quét"]:::action
+  P22_user_s2["<b>P22.S02</b><br/>Lịch sử thao tác NFC<br/>Tìm UID / Lọc / Tải thêm"]:::panel
+  P22_user_s3["<b>P22.S03</b><br/>Chi tiết đúng event ID<br/>Không suy từ trạng thái thẻ"]:::panel
+  P22_user_s4["<b>P22.S04</b><br/>Nguồn lịch sử chưa khả dụng<br/>Không hiển thị rỗng thành công"]:::panel
+  P22_user_retry["Thử đọc lại nguồn event"]:::action
+  P22_user_back["Back về list / Hub / Home<br/>Giữ điều kiện, cuộn và focus"]:::action
+  P22_user_in --> P22_user_s1
+  P22_user_s1 -->|"Lịch sử chung / Chứng từ"| P22_user_general
+  P22_user_s1 -->|"Theo ngày"| P22_user_daily
+  P22_user_s1 -->|"Bảo hành"| P22_user_war
+  P22_user_s1 -->|"Phiên quét"| P22_user_sessions
+  P22_user_s1 -->|"NFC"| P22_user_s2
+  P22_user_s2 -->|"Chọn event ID"| P22_user_s3
+  P22_user_s3 -->|"Back"| P22_user_s2
+  P22_user_s2 -->|"Nguồn chưa có / Không xác minh"| P22_user_s4
+  P22_user_s4 --> P22_user_retry
+  P22_user_retry -->|"Nguồn xác minh"| P22_user_s2
+  P22_user_s2 --> P22_user_back
+  P22_user_s1 --> P22_user_back
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

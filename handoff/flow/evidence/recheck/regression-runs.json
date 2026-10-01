@@ -1,0 +1,32 @@
+[
+  {
+    "board": "P03",
+    "command": [
+      "check_dialogs.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:19:57.791Z",
+    "finished": "2026-09-30T10:20:02.970Z",
+    "log": "handoff/flow/evidence/recheck/P03-regression.log"
+  },
+  {
+    "board": "P05",
+    "command": [
+      "check_outbound_lifecycle.cjs"
+    ],
+    "exit_code": 1,
+    "started": "2026-09-30T10:20:02.971Z",
+    "finished": "2026-09-30T10:20:43.414Z",
+    "log": "handoff/flow/evidence/recheck/P05-regression.log"
+  },
+  {
+    "board": "P15",
+    "command": [
+      "check_p15_navigation_r03.cjs"
+    ],
+    "exit_code": 0,
+    "started": "2026-09-30T10:20:43.415Z",
+    "finished": "2026-09-30T10:20:48.465Z",
+    "log": "handoff/flow/evidence/recheck/P15-regression.log"
+  }
+]

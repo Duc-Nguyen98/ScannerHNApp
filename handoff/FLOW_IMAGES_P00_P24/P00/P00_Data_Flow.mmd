@@ -1,0 +1,38 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P00_data_session[("Nguồn phiên P01<br/>Actor · Auth session · Kho · Quyền")]:::store
+  P00_data_scope["Phạm vi phiên được xác minh<br/>Không suy quyền từ tên vai trò"]:::guard
+  P00_data_router["AppShell / Router<br/>Chỉ truyền ID và ngữ cảnh"]:::action
+  P00_data_owners[("Owner theo nghiệp vụ<br/>P04/P05: record · P19: Post<br/>P09: hồ sơ · P07: mapping")]:::store
+  P00_data_request["Yêu cầu cố định danh<br/>Request ID · Document/Case ID<br/>Scan session · Version"]:::guard
+  P00_data_adapter["Adapter hiện có<br/>Dữ liệu mô phỏng trong trang"]:::action
+  P00_data_unknown["UNKNOWN<br/>Giữ request, khóa gửi lại"]:::guard
+  P00_data_check["Đọc / Đối chiếu đúng yêu cầu"]:::action
+  P00_data_receipt[("Kết quả đã xác minh<br/>Không suy thành công từ timeout")]:::store
+  P00_data_projection["Nguồn dùng chung / Phép chiếu<br/>Không tạo lại record theo nhãn PN"]:::action
+  P00_data_views["<b>P01–P24</b><br/>Màn hiển thị cùng dữ liệu<br/>Back giữ lọc, tab, focus theo owner"]:::panel
+  P00_data_motion["Motion auto / reduced / off<br/>Chỉ trình bày, không phát lệnh ghi"]:::action
+  P00_data_reset["Reload / Reset mẫu<br/>Mất thay đổi trong bộ nhớ trang<br/>Link review dựng lại mẫu đã chọn"]:::blocked
+  P00_data_session --> P00_data_scope
+  P00_data_scope --> P00_data_router
+  P00_data_router --> P00_data_owners
+  P00_data_owners --> P00_data_request
+  P00_data_request --> P00_data_adapter
+  P00_data_adapter -->|"Đã xác minh"| P00_data_receipt
+  P00_data_adapter -->|"Chưa rõ"| P00_data_unknown
+  P00_data_unknown --> P00_data_check
+  P00_data_check -->|"Chưa xác minh"| P00_data_unknown
+  P00_data_check -->|"Đã xác minh"| P00_data_receipt
+  P00_data_receipt --> P00_data_owners
+  P00_data_owners --> P00_data_projection
+  P00_data_projection --> P00_data_views
+  P00_data_motion -->|"Không đổi dữ liệu"| P00_data_views
+  P00_data_reset -->|"Khởi tạo lại seed"| P00_data_session
+  P00_data_views -->|"Chuyển màn bằng ID"| P00_data_router
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

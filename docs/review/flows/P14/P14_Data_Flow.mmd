@@ -1,0 +1,38 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P14_data_s1["<b>P14.S01</b><br/>Username khôi phục<br/>Không yêu cầu phiên đăng nhập"]:::panel
+  P14_data_recovery["Request recovery cố định ID"]:::action
+  P14_data_s2["<b>P14.S02</b><br/>Receipt recovery<br/>ID + Thời điểm đã xác minh"]:::panel
+  P14_data_owners[("Snapshot P04/P05/P19<br/>Document/Session/Version/Lines<br/>P03 projection không đếm trùng")]:::store
+  P14_data_s3["<b>P14.S03</b><br/>Danh sách trong cùng actor/kho"]:::panel
+  P14_data_scope["Auth session scope<br/>Fingerprint nội dung checkpoint"]:::guard
+  P14_data_save[("Dấu nháp đã lưu trong phiên<br/>Cache địa chỉ không làm nháp bẩn giả")]:::store
+  P14_data_end["Request end<br/>Snapshot ca + Danh sách nháp"]:::action
+  P14_data_adapter["Adapter recovery/save/end/check"]:::action
+  P14_data_pending["Pending / UNKNOWN<br/>Giữ request, đối chiếu cùng ID"]:::guard
+  P14_data_receipt[("Receipt end đã kiểm<br/>Request/scope khớp, nháp không đổi")]:::store
+  P14_data_s4["<b>P14.S04</b><br/>KPI từ aggregate B14<br/>Không tính từ số dòng client"]:::panel
+  P14_data_retained[("Retention trong bộ nhớ trang<br/>Namespace + Actor + Kho<br/>Đăng nhập lại cùng owner mới phục hồi")]:::store
+  P14_data_limit["Reload trang mất bộ nhớ<br/>Không phải lưu bền WMS"]:::blocked
+  P14_data_s1 --> P14_data_recovery
+  P14_data_recovery --> P14_data_adapter
+  P14_data_adapter -->|"Recovery xác nhận"| P14_data_s2
+  P14_data_owners --> P14_data_s3
+  P14_data_s3 --> P14_data_scope
+  P14_data_scope -->|"Save xác nhận đúng nội dung"| P14_data_save
+  P14_data_save -->|"Đủ điều kiện"| P14_data_end
+  P14_data_end --> P14_data_adapter
+  P14_data_adapter -->|"Chưa rõ / Snapshot lệch"| P14_data_pending
+  P14_data_pending -->|"Check đúng request"| P14_data_adapter
+  P14_data_adapter -->|"End xác nhận"| P14_data_receipt
+  P14_data_receipt --> P14_data_s4
+  P14_data_owners -->|"Giữ trước logout được phép"| P14_data_retained
+  P14_data_retained -->|"Phục hồi đúng owner"| P14_data_owners
+  P14_data_retained --> P14_data_limit
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

@@ -1,0 +1,41 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P01_user_start["Mở ứng dụng / Đăng xuất"]:::action
+  P01_user_s1["<b>P01.S01</b><br/>Đăng nhập<br/>Nhập tài khoản và mật khẩu demo"]:::panel
+  P01_user_valid["Kiểm tra dữ liệu nhập"]:::guard
+  P01_user_err["Lỗi tại ô / Đăng nhập bị từ chối<br/>Không mở dữ liệu Home"]:::blocked
+  P01_user_auth["Gửi yêu cầu xác thực mô phỏng"]:::action
+  P01_user_unk["Xác thực chưa rõ<br/>Không suy là đã đăng nhập"]:::guard
+  P01_user_s2["<b>P01.S02</b><br/>Xác nhận phiên<br/>Đúng người, kho và quyền"]:::panel
+  P01_user_guard["Kho hoạt động?<br/>Quyền thao tác đã xác nhận?"]:::guard
+  P01_user_deny["Chặn bắt đầu ca<br/>Không vượt guard bằng deep link"]:::blocked
+  P01_user_begin["Bắt đầu ca<br/>Chặn nhấn gửi trùng"]:::action
+  P01_user_pending["Kết quả bắt đầu UNKNOWN<br/>Giữ phiên, chưa vào Home"]:::guard
+  P01_user_home["P02 · Home<br/>Chỉ sau receipt bắt đầu hợp lệ"]:::action
+  P01_user_recover["P14.S01 · Khôi phục tài khoản"]:::action
+  P01_user_logout["Xác nhận đăng xuất<br/>Xóa nội dung được bảo vệ"]:::action
+  P01_user_start --> P01_user_s1
+  P01_user_s1 -->|"Đăng nhập"| P01_user_valid
+  P01_user_valid -->|"Thiếu / Sai"| P01_user_err
+  P01_user_err -->|"Sửa"| P01_user_s1
+  P01_user_valid -->|"Hợp lệ"| P01_user_auth
+  P01_user_auth -->|"Chưa rõ"| P01_user_unk
+  P01_user_unk -->|"Thông báo và kiểm tra lại"| P01_user_s1
+  P01_user_auth -->|"Xác thực thành công"| P01_user_s2
+  P01_user_s2 --> P01_user_guard
+  P01_user_guard -->|"Không đủ"| P01_user_deny
+  P01_user_guard -->|"Đủ điều kiện"| P01_user_begin
+  P01_user_begin -->|"Chưa xác minh"| P01_user_pending
+  P01_user_pending -->|"Giữ thông tin đối chiếu"| P01_user_s2
+  P01_user_begin -->|"Đã xác minh"| P01_user_home
+  P01_user_s1 -->|"Quên mật khẩu"| P01_user_recover
+  P01_user_recover -->|"Back"| P01_user_s1
+  P01_user_s2 --> P01_user_logout
+  P01_user_logout -->|"Đồng ý"| P01_user_s1
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

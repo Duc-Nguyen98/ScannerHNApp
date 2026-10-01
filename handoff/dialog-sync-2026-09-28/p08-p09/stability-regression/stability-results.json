@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "name": "Search preserves the focused input/IME composition instead of replacing it per keystroke",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid open-case and open-dialog events create one step and one overlay",
+      "status": "PASS"
+    },
+    {
+      "name": "A → B → A retains independent repair drafts; cancel does not write",
+      "status": "PASS"
+    },
+    {
+      "name": "Opening/canceling a later edit does not erase or replace the last confirmed result",
+      "status": "PASS"
+    },
+    {
+      "name": "Stopped warehouse remains readable; forged update cannot bypass guard",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed intake offers Open case after Back, without a duplicate request or extra write",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN banner names the pending case; narrow layout and Return/Back retain request",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "production": "NOT_RUN"
+}

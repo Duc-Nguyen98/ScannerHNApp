@@ -1,0 +1,34 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P07_data_tags[("Nguồn trạng thái thẻ<br/>Tag ID · UID · Mapping hiện tại")]:::store
+  P07_data_s1["<b>P07.S01</b><br/>Danh sách / Lọc theo nguồn thẻ"]:::panel
+  P07_data_s2["<b>P07.S02</b><br/>Lượt đọc UID + Sản phẩm đã chọn"]:::panel
+  P07_data_product[("Sản phẩm từ P06<br/>Item ID · Serial, không suy bằng tên")]:::store
+  P07_data_check["Guard phiên/kho/quyền<br/>Khóa thẻ · Xung đột · Context hiện tại"]:::guard
+  P07_data_s3["<b>P07.S03</b><br/>Snapshot UID + Sản phẩm<br/>Chờ người dùng xác nhận"]:::panel
+  P07_data_req["Request liên kết<br/>Đúng tag/product + thế hệ tác vụ"]:::guard
+  P07_data_adapter["NFC preview adapter<br/>Không gọi thiết bị NFC thật"]:::action
+  P07_data_pending["UNKNOWN<br/>Không suy đã liên kết từ timeout"]:::guard
+  P07_data_receipt[("Receipt liên kết hợp lệ<br/>Callback cũ không ghi sang thẻ mới")]:::store
+  P07_data_s4["<b>P07.S04</b><br/>Hiển thị kết quả đã xác nhận"]:::panel
+  P07_data_audit["P22 cần nguồn event độc lập<br/>Mapping hiện tại không phải audit"]:::blocked
+  P07_data_tags --> P07_data_s1
+  P07_data_s1 --> P07_data_s2
+  P07_data_product --> P07_data_s2
+  P07_data_s2 --> P07_data_check
+  P07_data_tags --> P07_data_check
+  P07_data_check -->|"Không xung đột"| P07_data_s3
+  P07_data_s3 --> P07_data_req
+  P07_data_req --> P07_data_adapter
+  P07_data_adapter -->|"Chưa rõ"| P07_data_pending
+  P07_data_adapter -->|"Xác nhận"| P07_data_receipt
+  P07_data_receipt -->|"Cập nhật mapping"| P07_data_tags
+  P07_data_receipt --> P07_data_s4
+  P07_data_tags -->|"Không tự sinh event"| P07_data_audit
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

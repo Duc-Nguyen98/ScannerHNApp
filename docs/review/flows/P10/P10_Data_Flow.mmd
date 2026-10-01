@@ -1,0 +1,31 @@
+---
+config: {"theme":"base","securityLevel":"strict","startOnLoad":false,"fontFamily":"Arial, sans-serif","themeVariables":{"darkMode":true,"background":"#191919","primaryColor":"#2d1948","primaryTextColor":"#d1b7ee","primaryBorderColor":"#513966","lineColor":"#a5a9ab","secondaryColor":"#363f40","tertiaryColor":"#3c3020","edgeLabelBackground":"#21172e","fontSize":"18px"},"flowchart":{"htmlLabels":true,"curve":"basis","nodeSpacing":36,"rankSpacing":62,"padding":20,"wrappingWidth":260,"useMaxWidth":false},"themeCSS":".node rect{rx:14px;ry:14px}.nodeLabel{font-weight:550}.edgeLabel{color:#d5bdf1!important;font-size:16px}.edgeLabel p{background:#21172e!important;border-radius:12px;padding:3px 7px}.flowchart-link{stroke-width:1.4px}.marker{fill:#a5a9ab!important;stroke:#a5a9ab!important}"}
+---
+flowchart TB
+  P10_data_session[("Session P01 đã xác minh<br/>Actor · Role · Warehouse")]:::store
+  P10_data_contact[("Contact fixture B10 theo actor ID<br/>Không phải trường xác thực")]:::store
+  P10_data_read["readProfile<br/>Ghép đúng người / kho"]:::action
+  P10_data_s1["<b>P10.S01</b><br/>Hiển thị hồ sơ"]:::panel
+  P10_data_s2["<b>P10.S02</b><br/>Editable draft<br/>Name · Nickname · Phone"]:::panel
+  P10_data_diff["Chỉ lấy trường đã thay đổi<br/>Không gửi mật khẩu / quyền"]:::guard
+  P10_data_adapter["Profile adapter<br/>save=false · avatar=false<br/>Giữ draft, account không đổi"]:::blocked
+  P10_data_s3["<b>P10.S03</b><br/>Quyền từng nghiệp vụ = chưa xác minh<br/>Không suy từ role/warehouseOperations"]:::panel
+  P10_data_s4["<b>P10.S04</b><br/>Ý định mở bảo mật<br/>Actor ID · Kho · Return context"]:::panel
+  P10_data_dest["P11 / P14<br/>Owner đích tự kiểm phạm vi"]:::action
+  P10_data_end["Logout làm mất phiên/DOM bảo vệ<br/>Không ghi profile giả để hiển thị mới"]:::blocked
+  P10_data_session --> P10_data_read
+  P10_data_contact --> P10_data_read
+  P10_data_read --> P10_data_s1
+  P10_data_s1 --> P10_data_s2
+  P10_data_s2 -->|"Bấm Lưu"| P10_data_diff
+  P10_data_diff --> P10_data_adapter
+  P10_data_adapter -->|"Bị chặn, giữ bản nhập"| P10_data_s2
+  P10_data_session --> P10_data_s3
+  P10_data_session --> P10_data_s4
+  P10_data_s4 --> P10_data_dest
+  P10_data_s1 -->|"Đăng xuất được xác nhận"| P10_data_end
+  classDef action fill:#2d1948,stroke:#53396b,color:#d0b1ef,stroke-width:1.4px;
+  classDef panel fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef store fill:#363f40,stroke:#08a4bc,color:#f2f7f8,stroke-width:1.6px;
+  classDef guard fill:#413b32,stroke:#b97e18,color:#fff1d5,stroke-width:1.6px;
+  classDef blocked fill:#392a32,stroke:#ad637a,color:#ffcfda,stroke-width:1.4px;

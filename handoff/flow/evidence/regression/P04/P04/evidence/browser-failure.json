@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "S01 required/read-only metadata and source session",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 fixture 12=11+1 and raw history",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 back retains codes/identity and edits note",
+      "status": "PASS"
+    }
+  ],
+  "error": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.p04-feedback')\u001b[22m\n\n    at eval (<anonymous>:29:386)\n    at async check (<anonymous>:13:32)\n    at async eval (<anonymous>:29:2)",
+  "errors": []
+}
