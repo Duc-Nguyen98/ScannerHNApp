@@ -1,0 +1,134 @@
+{
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "panels": 4,
+  "modes": 3,
+  "checks": 18,
+  "node_passed": 59,
+  "regression": {
+    "M04": 39,
+    "M05": 39,
+    "M07": 21
+  },
+  "static_geometry_equal": 12,
+  "pixel_equal": 10,
+  "source_byte_delta": 1933,
+  "files": {
+    "docs/flows/inbound/inbound.mjs": {
+      "before_sha256": "f21d326edc011c7f7fe0cacbf23097a7eabea12b56f85e82d8674016f6c36c7a",
+      "after_sha256": "c9ae2a8e19cf655b0c80c706d507eeca5a9bc6d9e701c8368de619ab20672da4",
+      "before_bytes": 30646,
+      "after_bytes": 30671,
+      "changed": true
+    },
+    "docs/flows/nfc/nfc.mjs": {
+      "before_sha256": "40f6fb6b47a39c38468f777b0ae314e9afd8eb1b077d507ac09ac973bfa0b6b9",
+      "after_sha256": "bec624e74b1ea6c8f6bc4b05ea36eb144aee28191708c3867fd9321e521c1fa5",
+      "before_bytes": 30535,
+      "after_bytes": 30709,
+      "changed": true
+    },
+    "docs/flows/outbound/outbound.mjs": {
+      "before_sha256": "f32fb81cfd1e96bb6ed71edf6d9c5d97d8584d3f90800b65bfc2ab813ec01a02",
+      "after_sha256": "2c72b4d90da518139ff838d0d3f365e4b2350e19ec2380e46cbded3297558444",
+      "before_bytes": 43253,
+      "after_bytes": 43278,
+      "changed": true
+    },
+    "docs/flows/scan-exceptions/style.css": {
+      "before_sha256": "bf7169ce5e9bef1197d82c83861dc68618d92ffc8cc7d1e9f6ba230139f38825",
+      "after_sha256": "4b9f0a3ffac04babaecaac0bf3e555e46725395a623917c94de4bc703127922d",
+      "before_bytes": 6486,
+      "after_bytes": 7029,
+      "changed": true
+    },
+    "docs/flows/scan-exceptions/view.mjs": {
+      "before_sha256": "f9b916041914bf1b5992a9249b9694314dacbe72e062ab6c4876cb281c49c00e",
+      "after_sha256": "41b786ba160d02aaa576825880e66f2fcad16850ef4d21f5c541069b2f53bcbb",
+      "before_bytes": 9104,
+      "after_bytes": 9237,
+      "changed": true
+    },
+    "docs/flows/shared/motion/motion-primitives.mjs": {
+      "before_sha256": "496c13bec42ceadc4f19eb31fd28bafcfb55f04e152072d7dc4c168955b22e4b",
+      "after_sha256": "496c13bec42ceadc4f19eb31fd28bafcfb55f04e152072d7dc4c168955b22e4b",
+      "before_bytes": 3924,
+      "after_bytes": 3924,
+      "changed": false
+    },
+    "docs/flows/shared/motion/motion-tokens.css": {
+      "before_sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a",
+      "after_sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a",
+      "before_bytes": 745,
+      "after_bytes": 745,
+      "changed": false
+    },
+    "docs/flows/shared/motion/scan-flow-feedback.mjs": {
+      "before_sha256": "0d66683d5d3f6e2d9a0aabec1e6bfb8f862c0cf6f681f95ecdd4381c05257b5b",
+      "after_sha256": "55bd937332ef1148a3ac9788031df5e69354096db6a3f56580d4264ad7d02506",
+      "before_bytes": 3232,
+      "after_bytes": 4265,
+      "changed": true
+    }
+  },
+  "domain_by_mode": {
+    "auto": {
+      "calls": {
+        "inboundRecord": 1,
+        "inboundCheck": 1,
+        "outboundRecord": 0,
+        "outboundCheck": 0,
+        "hardware": 0
+      },
+      "accepted": [
+        [
+          "HN12345",
+          1
+        ]
+      ],
+      "outboundAccepted": 0,
+      "inboundRecorded": true
+    },
+    "os-reduced": {
+      "calls": {
+        "inboundRecord": 1,
+        "inboundCheck": 1,
+        "outboundRecord": 0,
+        "outboundCheck": 0,
+        "hardware": 0
+      },
+      "accepted": [
+        [
+          "HN12345",
+          1
+        ]
+      ],
+      "outboundAccepted": 0,
+      "inboundRecorded": true
+    },
+    "off": {
+      "calls": {
+        "inboundRecord": 1,
+        "inboundCheck": 1,
+        "outboundRecord": 0,
+        "outboundCheck": 0,
+        "hardware": 0
+      },
+      "accepted": [
+        [
+          "HN12345",
+          1
+        ]
+      ],
+      "outboundAccepted": 0,
+      "inboundRecorded": true
+    }
+  },
+  "intermediate_opacity_samples": {
+    "auto": 104,
+    "os-reduced": 33,
+    "off": 0
+  },
+  "visual": "USER_REVIEW_PENDING",
+  "production": "NOT_RUN",
+  "hardware": "NOT_RUN"
+}

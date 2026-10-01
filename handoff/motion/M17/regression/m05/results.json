@@ -1,0 +1,3457 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      {
+        "name": "S01 validation immediate, CTA fixed and FormFeedback140/80/0",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 seed7/10 and1duplicate: exactly7 new row events160ms, camera/counter static",
+        "status": "PASS"
+      },
+      {
+        "name": "S03 missing3 appears immediately and cannot send; notice140ms/no row replay on Back",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate feedback is immediate and manual input stays connected",
+        "status": "PASS"
+      },
+      {
+        "name": "new camera-fixture scan preserves visible row anchor and does not replay through filter",
+        "status": "PASS"
+      },
+      {
+        "name": "accepted final row: real RAF opacity changes only in auto and counter immediately10",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 only after matched receipt; rapid send once; Back fromP12 never replays result",
+        "status": "PASS"
+      },
+      {
+        "name": "UNKNOWN remains guarded; confirm fade only after reconciliation using same request",
+        "status": "PASS"
+      },
+      {
+        "name": "rapid submit then native Back records once without rendering success over Home",
+        "status": "PASS"
+      },
+      {
+        "name": "P04→P05 isolation and callback epochs: no callbacks/codes from old owner",
+        "status": "PASS"
+      },
+      {
+        "name": "live mode/OS/hidden cancellation never replays and does not change domain",
+        "status": "PASS"
+      },
+      {
+        "name": "security guard removes active effects immediately, restore retains codes",
+        "status": "PASS"
+      },
+      {
+        "name": "compact viewports preserve input/CTA and logout cleans controllers",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 5,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.854956",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 19,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915978",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 35,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951973",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 52,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974548",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 67,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974548",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 84,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988533",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 100,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996429",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 116,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 132,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 148,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 163,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 180,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 196,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 212,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 227,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 243,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-field-error",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0
+            ]
+          },
+          {
+            "owner": "FormFeedback",
+            "node": "p05-input",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0.731807,
+              0.854956,
+              0.915978,
+              0.951973,
+              0.974548,
+              0.974548,
+              0.988533,
+              0.996429,
+              0.999734,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "label": "missing-three",
+        "samples": [
+          {
+            "ms": 7,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.854631",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 24,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.915983",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 40,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.951976",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 56,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.974551",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 71,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.988531",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 87,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996428",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 104,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.999734",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 120,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 136,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 152,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 167,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 183,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 199,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 215,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 231,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-warning",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0.65,
+              0.854631,
+              0.854631,
+              0.915983,
+              0.951976,
+              0.974551,
+              0.988531,
+              0.996428,
+              0.999734,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 3,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.808384",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 17,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.882275",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 34,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.926915",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 50,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.956148",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 66,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.975653",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 82,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.988335",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 97,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.995905",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 116,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "0.999464",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 130,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 145,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 162,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 178,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 193,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 209,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 226,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 241,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "ScanFeedback",
+            "node": "p05-attempt-code",
+            "duration": 160,
+            "frames": [
+              {
+                "opacity": 0.6
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0.6,
+              0.808384,
+              0.808384,
+              0.882275,
+              0.926915,
+              0.956148,
+              0.975653,
+              0.988335,
+              0.995905,
+              0.999464,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "label": "verified-result",
+        "samples": [
+          {
+            "ms": 2,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "0.926945",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 20,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "0.956168",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 34,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "0.975666",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 52,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "0.988343",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 72,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "0.995909",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 85,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "0.999466",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 100,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 114,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 134,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 146,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 163,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 179,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 195,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 211,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 226,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 242,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "SubmitFeedback",
+            "node": "hn-waiting-hero",
+            "duration": 160,
+            "frames": [
+              {
+                "opacity": 0.6
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0.6,
+              0.6,
+              0.808478,
+              0.882328,
+              0.926945,
+              0.956168,
+              0.975666,
+              0.988343,
+              0.995909,
+              0.999466,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "layouts": [
+      {
+        "size": [
+          494,
+          950
+        ],
+        "footer": true,
+        "overflow": false
+      },
+      {
+        "size": [
+          494,
+          950
+        ],
+        "footer": true,
+        "overflow": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "P05.S01",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S02",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            102,
+            494,
+            848
+          ],
+          ".p05-scroll": [
+            22,
+            163,
+            450,
+            645
+          ],
+          ".p05-footer": [
+            22,
+            808,
+            450,
+            120
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": [
+            22,
+            236,
+            450,
+            220
+          ],
+          ".p05-counter": [
+            22,
+            528,
+            450,
+            115
+          ],
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S03",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": [
+            22,
+            910.578125,
+            450,
+            134
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S04",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            817
+          ],
+          ".p05-scroll": [
+            22,
+            74,
+            450,
+            636
+          ],
+          ".p05-footer": [
+            22,
+            717,
+            450,
+            136
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": [
+            42,
+            94,
+            410,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "anchor": {
+      "id": "fixture-outbound-scan-0005-1:event:9",
+      "offset": 157.78125,
+      "delta": 0,
+      "scroll": {
+        "top": 443,
+        "height": 1088,
+        "client": 645
+      }
+    },
+    "listProfile": {
+      "rows": 4,
+      "nodes": 142,
+      "accepted": 10
+    },
+    "domain": {
+      "step": 2,
+      "returnToReview": false,
+      "document": {
+        "namespace": "hn-outbound-preview-v1",
+        "documentId": "fixture-outbound-0005-4",
+        "scanSessionId": "fixture-outbound-scan-0005-4",
+        "version": 1,
+        "actorId": "fixture-minhanh",
+        "actorName": "Minh Anh",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouseName": "Kho Hoa Nam",
+        "number": "PX-0005",
+        "sourceId": "new",
+        "recipient": "Đại lý Minh Phát",
+        "recipientId": "minh-phat",
+        "recipientType": "existing",
+        "phone": "0901 234 567",
+        "address": "123 Lê Lợi",
+        "addressSuggestion": "123 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+        "provinceId": "79",
+        "provinceName": "Thành phố Hồ Chí Minh",
+        "districtId": "760",
+        "districtName": "Quận 1",
+        "geographyVersion": "provinces.open-api.vn/v1-before-2025-07",
+        "planned": 10,
+        "plannedInput": "10",
+        "group": "Máy in nhiệt",
+        "groupId": "printers",
+        "note": ""
+      },
+      "attempts": [
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:15",
+          "raw": "HN12345",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:16",
+          "raw": "HN12346",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:17",
+          "raw": "HN12347",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:18",
+          "raw": "HN12348",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:19",
+          "raw": "HN12349",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        }
+      ],
+      "accepted": [
+        {
+          "raw": "HN12345",
+          "sku": "XP-420B",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12346",
+          "sku": "ZD421",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12347",
+          "sku": "ZD421",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12348",
+          "sku": "XP-420B",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12349",
+          "sku": "XP-420B",
+          "quantity": 1
+        }
+      ],
+      "busy": false,
+      "unknown": false,
+      "request": null,
+      "recorded": false,
+      "outcome": null,
+      "message": "",
+      "exception": null,
+      "geography": {
+        "provinces": [
+          {
+            "id": "79",
+            "name": "Thành phố Hồ Chí Minh"
+          },
+          {
+            "id": "1",
+            "name": "Thành phố Hà Nội"
+          },
+          {
+            "id": "100",
+            "name": "Tỉnh kiểm thử 1"
+          },
+          {
+            "id": "101",
+            "name": "Tỉnh kiểm thử 2"
+          },
+          {
+            "id": "102",
+            "name": "Tỉnh kiểm thử 3"
+          },
+          {
+            "id": "103",
+            "name": "Tỉnh kiểm thử 4"
+          },
+          {
+            "id": "104",
+            "name": "Tỉnh kiểm thử 5"
+          },
+          {
+            "id": "105",
+            "name": "Tỉnh kiểm thử 6"
+          },
+          {
+            "id": "106",
+            "name": "Tỉnh kiểm thử 7"
+          },
+          {
+            "id": "107",
+            "name": "Tỉnh kiểm thử 8"
+          },
+          {
+            "id": "108",
+            "name": "Tỉnh kiểm thử 9"
+          },
+          {
+            "id": "109",
+            "name": "Tỉnh kiểm thử 10"
+          },
+          {
+            "id": "110",
+            "name": "Tỉnh kiểm thử 11"
+          },
+          {
+            "id": "111",
+            "name": "Tỉnh kiểm thử 12"
+          }
+        ],
+        "provinceStatus": "ready",
+        "districts": [
+          {
+            "id": "760",
+            "name": "Quận 1",
+            "provinceId": "79"
+          },
+          {
+            "id": "761",
+            "name": "Quận 12",
+            "provinceId": "79"
+          }
+        ],
+        "districtStatus": "ready"
+      }
+    },
+    "operations": {
+      "record": 3,
+      "check": 1,
+      "camera": 0
+    }
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      {
+        "name": "S01 validation immediate, CTA fixed and FormFeedback140/80/0",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 seed7/10 and1duplicate: exactly7 new row events160ms, camera/counter static",
+        "status": "PASS"
+      },
+      {
+        "name": "S03 missing3 appears immediately and cannot send; notice140ms/no row replay on Back",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate feedback is immediate and manual input stays connected",
+        "status": "PASS"
+      },
+      {
+        "name": "new camera-fixture scan preserves visible row anchor and does not replay through filter",
+        "status": "PASS"
+      },
+      {
+        "name": "accepted final row: real RAF opacity changes only in auto and counter immediately10",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 only after matched receipt; rapid send once; Back fromP12 never replays result",
+        "status": "PASS"
+      },
+      {
+        "name": "UNKNOWN remains guarded; confirm fade only after reconciliation using same request",
+        "status": "PASS"
+      },
+      {
+        "name": "rapid submit then native Back records once without rendering success over Home",
+        "status": "PASS"
+      },
+      {
+        "name": "P04→P05 isolation and callback epochs: no callbacks/codes from old owner",
+        "status": "PASS"
+      },
+      {
+        "name": "live mode/OS/hidden cancellation never replays and does not change domain",
+        "status": "PASS"
+      },
+      {
+        "name": "security guard removes active effects immediately, restore retains codes",
+        "status": "PASS"
+      },
+      {
+        "name": "compact viewports preserve input/CTA and logout cleans controllers",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 17,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.832934",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 30,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.936263",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 45,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.97879",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 62,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "0.996449",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 78,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 93,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 110,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 127,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 143,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 157,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 174,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 189,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 205,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 222,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 237,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-field-error",
+            "duration": 80,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0
+            ]
+          },
+          {
+            "owner": "FormFeedback",
+            "node": "p05-input",
+            "duration": 80,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0.65,
+              0.832934,
+              0.936263,
+              0.97879,
+              0.996449,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "label": "missing-three",
+        "samples": [
+          {
+            "ms": 8,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 25,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 40,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 57,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 73,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 89,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 105,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 120,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 136,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 153,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 169,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 185,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 200,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 216,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 233,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": [
+          {
+            "owner": "FormFeedback",
+            "node": "p05-warning",
+            "duration": 80,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "cancelled": false,
+            "liveSamples": [
+              0.65,
+              0.832212,
+              0.936009,
+              0.978678,
+              0.996449,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 12,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 26,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 41,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 57,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 74,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 91,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 106,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 121,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 138,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 153,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 169,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 192,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 204,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 217,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 233,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      },
+      {
+        "label": "verified-result",
+        "samples": [
+          {
+            "ms": 4,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 20,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 37,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 53,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 67,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 84,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 99,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 116,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 131,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 147,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 164,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 181,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 197,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 211,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 229,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 244,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      }
+    ],
+    "layouts": [
+      {
+        "size": [
+          494,
+          950
+        ],
+        "footer": true,
+        "overflow": false
+      },
+      {
+        "size": [
+          494,
+          950
+        ],
+        "footer": true,
+        "overflow": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "P05.S01",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S02",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            102,
+            494,
+            848
+          ],
+          ".p05-scroll": [
+            22,
+            163,
+            450,
+            645
+          ],
+          ".p05-footer": [
+            22,
+            808,
+            450,
+            120
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": [
+            22,
+            236,
+            450,
+            220
+          ],
+          ".p05-counter": [
+            22,
+            528,
+            450,
+            115
+          ],
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S03",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": [
+            22,
+            910.578125,
+            450,
+            134
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S04",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            817
+          ],
+          ".p05-scroll": [
+            22,
+            74,
+            450,
+            636
+          ],
+          ".p05-footer": [
+            22,
+            717,
+            450,
+            136
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": [
+            42,
+            94,
+            410,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "anchor": {
+      "id": "fixture-outbound-scan-0005-1:event:9",
+      "offset": 157.78125,
+      "delta": 0,
+      "scroll": {
+        "top": 443,
+        "height": 1088,
+        "client": 645
+      }
+    },
+    "listProfile": {
+      "rows": 4,
+      "nodes": 142,
+      "accepted": 10
+    },
+    "domain": {
+      "step": 2,
+      "returnToReview": false,
+      "document": {
+        "namespace": "hn-outbound-preview-v1",
+        "documentId": "fixture-outbound-0005-4",
+        "scanSessionId": "fixture-outbound-scan-0005-4",
+        "version": 1,
+        "actorId": "fixture-minhanh",
+        "actorName": "Minh Anh",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouseName": "Kho Hoa Nam",
+        "number": "PX-0005",
+        "sourceId": "new",
+        "recipient": "Đại lý Minh Phát",
+        "recipientId": "minh-phat",
+        "recipientType": "existing",
+        "phone": "0901 234 567",
+        "address": "123 Lê Lợi",
+        "addressSuggestion": "123 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+        "provinceId": "79",
+        "provinceName": "Thành phố Hồ Chí Minh",
+        "districtId": "760",
+        "districtName": "Quận 1",
+        "geographyVersion": "provinces.open-api.vn/v1-before-2025-07",
+        "planned": 10,
+        "plannedInput": "10",
+        "group": "Máy in nhiệt",
+        "groupId": "printers",
+        "note": ""
+      },
+      "attempts": [
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:15",
+          "raw": "HN12345",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:16",
+          "raw": "HN12346",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:17",
+          "raw": "HN12347",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:18",
+          "raw": "HN12348",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:19",
+          "raw": "HN12349",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        }
+      ],
+      "accepted": [
+        {
+          "raw": "HN12345",
+          "sku": "XP-420B",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12346",
+          "sku": "ZD421",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12347",
+          "sku": "ZD421",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12348",
+          "sku": "XP-420B",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12349",
+          "sku": "XP-420B",
+          "quantity": 1
+        }
+      ],
+      "busy": false,
+      "unknown": false,
+      "request": null,
+      "recorded": false,
+      "outcome": null,
+      "message": "",
+      "exception": null,
+      "geography": {
+        "provinces": [
+          {
+            "id": "79",
+            "name": "Thành phố Hồ Chí Minh"
+          },
+          {
+            "id": "1",
+            "name": "Thành phố Hà Nội"
+          },
+          {
+            "id": "100",
+            "name": "Tỉnh kiểm thử 1"
+          },
+          {
+            "id": "101",
+            "name": "Tỉnh kiểm thử 2"
+          },
+          {
+            "id": "102",
+            "name": "Tỉnh kiểm thử 3"
+          },
+          {
+            "id": "103",
+            "name": "Tỉnh kiểm thử 4"
+          },
+          {
+            "id": "104",
+            "name": "Tỉnh kiểm thử 5"
+          },
+          {
+            "id": "105",
+            "name": "Tỉnh kiểm thử 6"
+          },
+          {
+            "id": "106",
+            "name": "Tỉnh kiểm thử 7"
+          },
+          {
+            "id": "107",
+            "name": "Tỉnh kiểm thử 8"
+          },
+          {
+            "id": "108",
+            "name": "Tỉnh kiểm thử 9"
+          },
+          {
+            "id": "109",
+            "name": "Tỉnh kiểm thử 10"
+          },
+          {
+            "id": "110",
+            "name": "Tỉnh kiểm thử 11"
+          },
+          {
+            "id": "111",
+            "name": "Tỉnh kiểm thử 12"
+          }
+        ],
+        "provinceStatus": "ready",
+        "districts": [
+          {
+            "id": "760",
+            "name": "Quận 1",
+            "provinceId": "79"
+          },
+          {
+            "id": "761",
+            "name": "Quận 12",
+            "provinceId": "79"
+          }
+        ],
+        "districtStatus": "ready"
+      }
+    },
+    "operations": {
+      "record": 3,
+      "check": 1,
+      "camera": 0
+    }
+  },
+  {
+    "mode": "off",
+    "checks": [
+      {
+        "name": "S01 validation immediate, CTA fixed and FormFeedback140/80/0",
+        "status": "PASS"
+      },
+      {
+        "name": "S02 seed7/10 and1duplicate: exactly7 new row events160ms, camera/counter static",
+        "status": "PASS"
+      },
+      {
+        "name": "S03 missing3 appears immediately and cannot send; notice140ms/no row replay on Back",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate feedback is immediate and manual input stays connected",
+        "status": "PASS"
+      },
+      {
+        "name": "new camera-fixture scan preserves visible row anchor and does not replay through filter",
+        "status": "PASS"
+      },
+      {
+        "name": "accepted final row: real RAF opacity changes only in auto and counter immediately10",
+        "status": "PASS"
+      },
+      {
+        "name": "S04 only after matched receipt; rapid send once; Back fromP12 never replays result",
+        "status": "PASS"
+      },
+      {
+        "name": "UNKNOWN remains guarded; confirm fade only after reconciliation using same request",
+        "status": "PASS"
+      },
+      {
+        "name": "rapid submit then native Back records once without rendering success over Home",
+        "status": "PASS"
+      },
+      {
+        "name": "P04→P05 isolation and callback epochs: no callbacks/codes from old owner",
+        "status": "PASS"
+      },
+      {
+        "name": "live mode/OS/hidden cancellation never replays and does not change domain",
+        "status": "PASS"
+      },
+      {
+        "name": "security guard removes active effects immediately, restore retains codes",
+        "status": "PASS"
+      },
+      {
+        "name": "compact viewports preserve input/CTA and logout cleans controllers",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "frames": [
+      {
+        "label": "form-error",
+        "samples": [
+          {
+            "ms": 14,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 30,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 42,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 57,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 73,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 89,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 105,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 121,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 136,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 154,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 169,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 185,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 201,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 217,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 233,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      },
+      {
+        "label": "missing-three",
+        "samples": [
+          {
+            "ms": 24,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 35,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 45,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 62,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 77,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 93,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 109,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 125,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 141,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 157,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 173,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 189,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 205,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 221,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 237,
+            "nodes": [
+              {
+                "owner": "FormFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      },
+      {
+        "label": "accepted-row",
+        "samples": [
+          {
+            "ms": 11,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 28,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 43,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 59,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 75,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 91,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 108,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 124,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 139,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 155,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 172,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 188,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 204,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 220,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 235,
+            "nodes": [
+              {
+                "owner": "ScanFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      },
+      {
+        "label": "verified-result",
+        "samples": [
+          {
+            "ms": 11,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 28,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 50,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 59,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 85,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 92,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 107,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 124,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 140,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 156,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 172,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 188,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 205,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 220,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          },
+          {
+            "ms": 236,
+            "nodes": [
+              {
+                "owner": "SubmitFeedback",
+                "opacity": "1",
+                "transform": "none"
+              }
+            ]
+          }
+        ],
+        "log": []
+      }
+    ],
+    "layouts": [
+      {
+        "size": [
+          494,
+          950
+        ],
+        "footer": true,
+        "overflow": false
+      },
+      {
+        "size": [
+          494,
+          950
+        ],
+        "footer": true,
+        "overflow": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "P05.S01",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S02",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            102,
+            494,
+            848
+          ],
+          ".p05-scroll": [
+            22,
+            163,
+            450,
+            645
+          ],
+          ".p05-footer": [
+            22,
+            808,
+            450,
+            120
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": [
+            22,
+            236,
+            450,
+            220
+          ],
+          ".p05-counter": [
+            22,
+            528,
+            450,
+            115
+          ],
+          ".p05-products": null,
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S03",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            892
+          ],
+          ".p05-scroll": [
+            22,
+            119,
+            450,
+            712
+          ],
+          ".p05-footer": [
+            22,
+            831,
+            450,
+            97
+          ],
+          ".p05-section-title": [
+            22,
+            119,
+            450,
+            60
+          ],
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": [
+            22,
+            910.578125,
+            450,
+            134
+          ],
+          ".hn-waiting-hero": null
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "P05.S04",
+        "geometry": {
+          ".p05-header": [
+            0,
+            0,
+            494,
+            72
+          ],
+          ".p05-sheet": [
+            0,
+            58,
+            494,
+            817
+          ],
+          ".p05-scroll": [
+            22,
+            74,
+            450,
+            636
+          ],
+          ".p05-footer": [
+            22,
+            717,
+            450,
+            136
+          ],
+          ".p05-section-title": null,
+          ".p05-camera": null,
+          ".p05-counter": null,
+          ".p05-products": null,
+          ".hn-waiting-hero": [
+            42,
+            94,
+            410,
+            247.484375
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "anchor": {
+      "id": "fixture-outbound-scan-0005-1:event:9",
+      "offset": 157.78125,
+      "delta": 0,
+      "scroll": {
+        "top": 443,
+        "height": 1088,
+        "client": 645
+      }
+    },
+    "listProfile": {
+      "rows": 4,
+      "nodes": 142,
+      "accepted": 10
+    },
+    "domain": {
+      "step": 2,
+      "returnToReview": false,
+      "document": {
+        "namespace": "hn-outbound-preview-v1",
+        "documentId": "fixture-outbound-0005-4",
+        "scanSessionId": "fixture-outbound-scan-0005-4",
+        "version": 1,
+        "actorId": "fixture-minhanh",
+        "actorName": "Minh Anh",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouseName": "Kho Hoa Nam",
+        "number": "PX-0005",
+        "sourceId": "new",
+        "recipient": "Đại lý Minh Phát",
+        "recipientId": "minh-phat",
+        "recipientType": "existing",
+        "phone": "0901 234 567",
+        "address": "123 Lê Lợi",
+        "addressSuggestion": "123 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+        "provinceId": "79",
+        "provinceName": "Thành phố Hồ Chí Minh",
+        "districtId": "760",
+        "districtName": "Quận 1",
+        "geographyVersion": "provinces.open-api.vn/v1-before-2025-07",
+        "planned": 10,
+        "plannedInput": "10",
+        "group": "Máy in nhiệt",
+        "groupId": "printers",
+        "note": ""
+      },
+      "attempts": [
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:15",
+          "raw": "HN12345",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:16",
+          "raw": "HN12346",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:17",
+          "raw": "HN12347",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:18",
+          "raw": "HN12348",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        },
+        {
+          "eventId": "fixture-outbound-scan-0005-4:event:19",
+          "raw": "HN12349",
+          "source": "manual",
+          "time": "08:15:20",
+          "kind": "valid"
+        }
+      ],
+      "accepted": [
+        {
+          "raw": "HN12345",
+          "sku": "XP-420B",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12346",
+          "sku": "ZD421",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12347",
+          "sku": "ZD421",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12348",
+          "sku": "XP-420B",
+          "quantity": 1
+        },
+        {
+          "raw": "HN12349",
+          "sku": "XP-420B",
+          "quantity": 1
+        }
+      ],
+      "busy": false,
+      "unknown": false,
+      "request": null,
+      "recorded": false,
+      "outcome": null,
+      "message": "",
+      "exception": null,
+      "geography": {
+        "provinces": [
+          {
+            "id": "79",
+            "name": "Thành phố Hồ Chí Minh"
+          },
+          {
+            "id": "1",
+            "name": "Thành phố Hà Nội"
+          },
+          {
+            "id": "100",
+            "name": "Tỉnh kiểm thử 1"
+          },
+          {
+            "id": "101",
+            "name": "Tỉnh kiểm thử 2"
+          },
+          {
+            "id": "102",
+            "name": "Tỉnh kiểm thử 3"
+          },
+          {
+            "id": "103",
+            "name": "Tỉnh kiểm thử 4"
+          },
+          {
+            "id": "104",
+            "name": "Tỉnh kiểm thử 5"
+          },
+          {
+            "id": "105",
+            "name": "Tỉnh kiểm thử 6"
+          },
+          {
+            "id": "106",
+            "name": "Tỉnh kiểm thử 7"
+          },
+          {
+            "id": "107",
+            "name": "Tỉnh kiểm thử 8"
+          },
+          {
+            "id": "108",
+            "name": "Tỉnh kiểm thử 9"
+          },
+          {
+            "id": "109",
+            "name": "Tỉnh kiểm thử 10"
+          },
+          {
+            "id": "110",
+            "name": "Tỉnh kiểm thử 11"
+          },
+          {
+            "id": "111",
+            "name": "Tỉnh kiểm thử 12"
+          }
+        ],
+        "provinceStatus": "ready",
+        "districts": [
+          {
+            "id": "760",
+            "name": "Quận 1",
+            "provinceId": "79"
+          },
+          {
+            "id": "761",
+            "name": "Quận 12",
+            "provinceId": "79"
+          }
+        ],
+        "districtStatus": "ready"
+      }
+    },
+    "operations": {
+      "record": 3,
+      "check": 1,
+      "camera": 0
+    }
+  }
+]

@@ -1,0 +1,38 @@
+✔ summary counts independent file states without reordering source (4.1484ms)
+✔ handoff field readiness never enables unapproved mutation (2.3585ms)
+✔ fit page respects both axes and zoom changes only document dimensions (1.4106ms)
+✔ actual entered values mark draft dirty; unchanged default date is clean (0.2861ms)
+✔ restored page and zoom never forward invalid values to renderer (0.2456ms)
+✔ zoom preserves reading point including centered narrow pages (0.3487ms)
+✔ owner attachment source distinguishes null/unknown from verified empty and returns fresh metadata (0.8915ms)
+✔ P12 file IDs remain authoritative; B18 upload examples require explicit preview mode (5.8147ms)
+✔ P18.A01 retry/progress is task-specific and duplicate begin is rejected (0.9604ms)
+✔ cancel rejects late completion and does not delete ready attachments (0.5464ms)
+✔ UNKNOWN retains task ID and blocks blind retry (0.4317ms)
+✔ old actor, auth session, warehouse, revoked permission, inactive warehouse and disposal reject upload events (2.9889ms)
+✔ invalid progress cannot fabricate completion; monotonic progress (0.3247ms)
+✔ P18.A03 field validation has no case mutation; checked alone never closes (12.0663ms)
+✔ P18.A04/A05 source-less capacity stays unknown, fixture explicitly opted in (0.386ms)
+✔ route/action scope requires authenticated actor, warehouse and auth session (9.6094ms)
+✔ M00 harness reuses the served primitive rather than a second implementation (4.0297ms)
+✔ OS reduction cannot be overridden and invalid modes fail to off (0.4695ms)
+✔ all six M00 primitives preserve presentation lifecycle in auto (2.1363ms)
+✔ all six M00 primitives preserve presentation lifecycle in reduced (1.0042ms)
+✔ all six M00 primitives preserve presentation lifecycle in off (0.5191ms)
+✔ rapid replacement, OS change, hidden, detached and security teardown cancel without callbacks (0.6348ms)
+✔ inputs, preview scale roots and disabled targets remain static (0.2787ms)
+✔ P01 label updates apply immediately, do not replay identical text, and cancel on dispose (0.779ms)
+✔ repeated P01 mount/dispose leaves zero media, visibility or pointer/key listeners (0.7331ms)
+✔ M18 auto: page ready only for latest explicit request; no replay on Back (9.2986ms)
+✔ M18 reduced: page ready only for latest explicit request; no replay on Back (21.5169ms)
+✔ M18 off: page ready only for latest explicit request; no replay on Back (0.383ms)
+✔ Restored errors/checks are seeded; duplicate input/change does not replay, off/hidden outcomes consumed (8.6241ms)
+✔ OS reduction, hide, repeated dispose and reactivation cancel handles with balanced listeners/observer (7.841ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 806.7777

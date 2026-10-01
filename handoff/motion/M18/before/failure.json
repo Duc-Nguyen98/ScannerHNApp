@@ -1,0 +1,12 @@
+{
+  "results": [
+    {
+      "mode": "auto",
+      "checks": [],
+      "geometry": {},
+      "text": {},
+      "errors": []
+    }
+  ],
+  "error": "page.selectOption: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#motion-mode')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"motion-mode\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    30 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_motion_p18.cjs:13:67"
+}

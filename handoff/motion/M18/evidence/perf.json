@@ -1,0 +1,78 @@
+[
+  {
+    "mode": "auto",
+    "scenario": "same initial four-panel capture journey; single instrumented run, not hardware benchmark",
+    "before_nodes_last_panel": 92,
+    "after_nodes_last_panel": 92,
+    "before_long_tasks": [
+      {
+        "start": 2773.5,
+        "duration": 97
+      }
+    ],
+    "after_long_tasks": [
+      {
+        "start": 1475.5,
+        "duration": 114
+      },
+      {
+        "start": 2790,
+        "duration": 192
+      }
+    ],
+    "resource_delta": null,
+    "resource_note": "Resource timing entries unavailable in clock-instrumented runner; source bytes measured separately."
+  },
+  {
+    "mode": "os-reduced",
+    "scenario": "same initial four-panel capture journey; single instrumented run, not hardware benchmark",
+    "before_nodes_last_panel": 92,
+    "after_nodes_last_panel": 92,
+    "before_long_tasks": [
+      {
+        "start": 4171.800000011921,
+        "duration": 103
+      }
+    ],
+    "after_long_tasks": [
+      {
+        "start": 493.90000000596046,
+        "duration": 143
+      },
+      {
+        "start": 3193.300000011921,
+        "duration": 97
+      }
+    ],
+    "resource_delta": null,
+    "resource_note": "Resource timing entries unavailable in clock-instrumented runner; source bytes measured separately."
+  },
+  {
+    "mode": "off",
+    "scenario": "same initial four-panel capture journey; single instrumented run, not hardware benchmark",
+    "before_nodes_last_panel": 92,
+    "after_nodes_last_panel": 92,
+    "before_long_tasks": [
+      {
+        "start": 564.2999999970198,
+        "duration": 71
+      },
+      {
+        "start": 2955.5,
+        "duration": 101
+      }
+    ],
+    "after_long_tasks": [
+      {
+        "start": 430.70000000298023,
+        "duration": 90
+      },
+      {
+        "start": 2356.7000000029802,
+        "duration": 97
+      }
+    ],
+    "resource_delta": null,
+    "resource_note": "Resource timing entries unavailable in clock-instrumented runner; source bytes measured separately."
+  }
+]
