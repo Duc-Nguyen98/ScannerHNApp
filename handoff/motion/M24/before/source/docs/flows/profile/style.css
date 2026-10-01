@@ -1,0 +1,129 @@
+@import url('../shared/scaled-controls.css');
+/* B10 measurements in handoff/P10/CONTEXT.md. Existing uniform AppShell fit. */
+#home-app .hn-screen.p10-screen{height:950px;min-height:950px;overflow:hidden;background:#fff}
+#home-app .hn-profile{display:flex;flex:1;min-height:0;overflow:hidden}
+#home-app .p10-editor>.hn-nav{display:none}
+#home-app .p10-app{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;font:18px/1.4 Arial,sans-serif;color:#083b62;background:white}
+#home-app .p10-app *{box-sizing:border-box}
+.p10-icon{width:28px;height:28px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;vertical-align:middle}
+#home-app .p10-app button{font:inherit;color:inherit;cursor:pointer}
+#home-app .p10-app :focus-visible{outline:3px solid #008cff;outline-offset:2px}
+#home-app .p10-header{flex-shrink:0;min-height:88px;padding:14px 20px 22px;background:linear-gradient(115deg,#04334c,#00577c);color:white}
+#home-app .p10-heading{display:flex;align-items:center;gap:18px;min-height:48px}
+#home-app .p10-heading h1{font-size:26px;font-weight:600;line-height:1.25}
+#home-app .p10-back{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:none}
+#home-app .p10-hero{padding:16px 24px 32px}
+#home-app .p10-hero .p10-heading{justify-content:center}
+#home-app .p10-hero h1{margin-left:0}
+#home-app .p10-person{display:flex;align-items:center;gap:22px;margin-top:22px}
+#home-app .p10-person>div{min-width:0;flex:1}
+#home-app .p10-profile-shortcut,#home-app .p10-name-shortcut{padding:0;border:0;background:none;color:inherit;text-align:left}
+#home-app .p10-profile-shortcut{flex-shrink:0;border-radius:50%}
+#home-app .p10-name-shortcut{display:flex;align-items:center;max-width:100%;min-height:var(--hn-control-hit-min,44px);border-radius:6px}
+#home-app .p10-app .hn-read-more{min-height:var(--hn-control-hit-min,44px)}
+@media(hover:hover){#home-app .p10-name-shortcut:hover strong{text-decoration:underline;text-underline-offset:4px}}
+#home-app .p10-person strong{display:block;font-size:28px;line-height:1.2;overflow-wrap:anywhere}
+#home-app .p10-person p{margin-top:6px;font-size:19px}
+#home-app .p10-warehouse{display:flex;align-items:center;gap:10px;font-weight:600}
+#home-app .p10-warehouse .p10-icon{width:22px;height:22px}
+#home-app .p10-avatar{display:grid;place-items:center;width:108px;height:108px;flex-shrink:0;border-radius:50%;border:3px solid white;color:white;background:linear-gradient(140deg,#06486a,#008eb5);font-size:42px;font-weight:600;overflow:hidden}
+#home-app .p10-body{display:flex;flex-direction:column;flex:1;min-height:0;border-radius:24px 24px 0 0;margin-top:-12px;background:white;overflow:hidden}
+#home-app .p10-scroll{display:flex;flex-direction:column;flex:1;min-height:0;padding:22px 20px 28px;overflow:auto;overscroll-behavior:contain;scroll-padding:20px}
+#home-app .p10-scroll>*{flex-shrink:0}
+#home-app .p10-editor .p10-scroll{padding-top:16px;padding-bottom:calc(16px + var(--hn-form-keyboard-inset,0px))}
+#home-app .p10-menus{display:grid;gap:12px}
+#home-app .p10-menu{width:100%;min-height:96px;display:flex;align-items:center;gap:18px;padding:14px 12px;border:1px solid #dae8f4;border-radius:14px;background:white;text-align:left}
+#home-app .p10-menu>span:nth-child(2){flex:1;min-width:0}
+#home-app .p10-menu strong{display:block;font-size:21px;line-height:1.3}
+#home-app .p10-app small{display:block;font-size:17px;line-height:1.45;color:#547296;margin-top:6px;overflow-wrap:anywhere}
+#home-app .p10-menu>.p10-icon{width:20px;color:#006390}
+/* P10-r02: approved account grouping; logout is an action, not a menu row. */
+#home-app .p10-account-group{border:1px solid #dae8f4;border-radius:14px;background:white;padding:0 14px}
+#home-app .p10-account-group .p10-menu{min-height:max(80px,var(--hn-control-hit-min,44px));padding:16px 0;gap:16px;border:0;border-radius:0;background:transparent}
+#home-app .p10-account-group .p10-menu+.p10-menu{border-top:1px solid #e7eff5}
+#home-app .p10-account-group .p10-menu strong{font-size:20px}
+#home-app .p10-shift-section{margin-top:20px}
+#home-app .p10-shift-section .p10-menu{min-height:max(88px,var(--hn-control-hit-min,44px));gap:16px;padding:14px}
+#home-app .p10-shift-section .p10-menu strong{font-size:20px}
+#home-app .p10-app .p10-logout-button,
+#home-app .hn-logout-button,
+#home-app .p10-dialog[data-tone="logout"] .p10-primary{border:1px solid #b42318;background:#b42318;color:white}
+#home-app .p10-app .p10-logout-button,
+#home-app .hn-logout-button{display:flex;align-items:center;justify-content:center;gap:12px;min-height:56px;width:100%;margin-top:20px;padding:14px 18px;border-radius:12px;font:600 19px/1.3 Arial,sans-serif}
+#home-app .p10-logout-button .p10-icon{width:24px;height:24px}
+#home-app .p10-app [data-p10="logout"]{min-height:max(56px,var(--hn-control-hit-min,44px))}
+@media(hover:hover){
+ #home-app .p10-account-group .p10-menu:hover{background:#f7fafc}
+ #home-app .p10-app .p10-logout-button:hover,
+ #home-app .hn-logout-button:hover,
+ #home-app .p10-dialog[data-tone="logout"] .p10-primary:hover{background:#912018;border-color:#912018}
+}
+#home-app .p10-dialog[data-tone="logout"] button:focus-visible{outline:3px solid #008cff;outline-offset:2px}
+#home-app .p10-avatar-card{background:#f3f9fd;border:1px solid #dceafa;border-radius:14px;padding:10px 12px;text-align:center;margin-bottom:8px}
+#home-app .p10-app h2{font-size:21px;line-height:1.35}
+#home-app .p10-avatar-card h2{text-align:left}
+#home-app .p10-avatar-button{position:relative;border:0;background:none;display:block;margin:4px auto 8px;padding:0}
+#home-app .p10-avatar-button .p10-avatar{border:0;width:88px;height:88px}
+#home-app .p10-camera{position:absolute;right:-6px;bottom:-5px;display:grid;place-items:center;border:3px solid white;border-radius:50%;width:48px;height:48px;background:#065676;color:white}
+#home-app .p10-camera .p10-icon{width:24px;height:24px}
+#home-app .p10-avatar-card small{margin:0}
+#home-app .p10-field{margin-top:8px}
+#home-app .p10-field label{display:block;font-size:17px;line-height:22px;color:#006391;margin-bottom:4px}
+#home-app .p10-required{color:#d91f36}
+#home-app .p10-input{display:flex;align-items:center;gap:14px;border:1px solid #d9e8f6;border-radius:12px;padding:0 14px;min-height:50px;color:#007db5}
+#home-app .p10-input input{min-width:0;width:100%;height:48px;padding:0;border:0;background:none;font:600 18px/1.3 Arial;color:#123f65}
+#home-app .p10-input:focus-within{outline:2px solid #008cff;outline-offset:1px}
+#home-app .p10-input input:focus-visible{outline:none}
+#home-app .p10-input.p10-locked{background:#f2f7fb}
+#home-app .p10-locked input{font-weight:400;color:#3f6385}
+#home-app .p10-locked>.p10-icon:last-child{width:21px;height:21px;color:#68869f}
+#home-app .p10-admin-note{text-align:center;color:#597795;font-size:14px;margin-top:7px}
+#home-app .p10-clear{background:none;border:0;padding:6px;min-width:44px;min-height:44px;display:grid;place-items:center;color:#006390}
+#home-app .p10-clear .p10-icon{width:22px;height:22px}
+#home-app .p10-footer{flex-shrink:0;padding:8px 20px 18px;border-top:1px solid #edf3f8;background:white}
+#home-app .p10-app .p10-unsaved-status{min-height:22px;margin:0 0 8px;font-size:16px;line-height:22px;color:#547296;text-align:center}
+#home-app .p10-app .p10-availability{font-size:15px;line-height:21px;color:#547296;text-align:center;margin:0 0 4px}
+#home-app .p10-primary,#home-app .p10-secondary{display:flex;align-items:center;justify-content:center;gap:16px;min-height:60px;padding:12px 18px;border:1px solid #006383;border-radius:12px;background:#006383;color:white;font:600 19px/1.3 Arial;cursor:pointer}
+#home-app .p10-footer>.p10-primary{width:100%}
+#home-app .p10-footer>[data-p10-save]{min-height:max(60px,var(--hn-control-hit-min,44px))}
+#home-app .p10-app .p10-primary{color:white;font:600 19px/1.3 Arial}
+#home-app .p10-primary:disabled{opacity:.5;cursor:not-allowed}
+#home-app .p10-primary[aria-busy="true"]{cursor:wait}
+#home-app .p10-secondary{background:white;color:#245475;border-color:#cfdfeb}
+#home-app .p10-work-card{border:1px solid #dceafa;border-radius:14px;background:#f3f9fd;margin-bottom:18px;overflow:hidden}
+#home-app .p10-work-card h2{padding:10px 14px}
+#home-app .p10-work-card>div{display:flex;gap:16px;padding:16px 12px;background:white;align-items:flex-start}
+#home-app .p10-work-card>div>span:nth-child(2){flex:1;min-width:0}
+#home-app .p10-work-card strong{font-size:21px}
+#home-app .p10-work-card>div>.p10-icon{width:20px;height:20px;color:#68869f}
+#home-app .p10-work-card small{font-size:16px}
+#home-app .p10-permission-title{margin-top:8px}
+#home-app .p10-permission-caption{color:#597795;font-size:17px;margin-top:4px}
+#home-app .p10-permissions{list-style:none;padding:0;margin:18px 0 10px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#home-app .p10-permissions li{position:relative;display:flex;align-items:center;flex-direction:column;gap:9px;background:#f3f8fb;border-radius:14px;padding:12px 5px}
+#home-app .p10-permissions strong{font-size:17px}
+#home-app .p10-permission-state{position:absolute;right:6px;top:6px;display:grid;place-items:center;width:24px;height:24px;border:2px solid white;border-radius:50%;font-size:15px;background:#e4edf4;color:#466279;font-weight:700}
+#home-app [data-status=granted] .p10-permission-state{background:#138341;color:white}
+#home-app .p10-permission-state .p10-icon{width:16px;height:16px}
+#home-app .p10-permission-unknown{font-size:15px;color:#597795}
+#home-app .p10-notice{display:flex;gap:16px;border:1px solid #dceafa;background:#f0f8ff;border-radius:14px;padding:20px 16px;margin-top:24px}
+#home-app .p10-notice>.p10-icon{width:34px;height:34px;color:#0086bf}
+#home-app .p10-notice strong{font-size:20px}
+#home-app .p10-notice p{margin-top:6px;font-size:17px;line-height:1.6;color:#4a7096}
+#home-app .p10-dialog .app-modal-body p{margin:0;line-height:1.6}
+#home-app .p10-dialog .app-modal-footer{display:flex;gap:12px}
+#home-app .p10-dialog .app-modal-footer button{flex:1;min-width:0;font-size:18px}
+#home-app .p10-dialog.hn-action-dialog .app-modal-footer button{min-height:max(56px,var(--hn-control-hit-min,44px))}
+/* Keep the complete work/permission overview visible in the reference shell. */
+#home-app .p10-app[data-panel="P10.S03"] .p10-scroll{padding:18px 20px 22px}
+#home-app .p10-work-card{margin-bottom:14px}
+#home-app .p10-work-card h2{font-size:20px;padding:8px 12px}
+#home-app .p10-work-card>div{padding:10px 12px}
+#home-app .p10-work-card strong{font-size:19px}
+#home-app .p10-work-card small{font-size:15px;line-height:1.4}
+#home-app .p10-permission-title{margin-top:0}
+#home-app .p10-permissions{margin:14px 0 8px;gap:12px}
+#home-app .p10-permissions li{padding:10px 5px;gap:6px}
+#home-app .p10-permissions strong{font-size:16px}
+#home-app .p10-app[data-panel="P10.S03"] .p10-notice{margin-top:16px;padding:16px}
+#home-app .p10-app[data-panel="P10.S03"] .p10-notice p{font-size:16px;line-height:1.45}

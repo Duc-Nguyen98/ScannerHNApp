@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "1 Separate clear-query / clear-filter; loaded count, 44px and no idle clear",
+      "status": "PASS"
+    },
+    {
+      "name": "2 Viewed marker by ID, independent lists; Back scroll/focus",
+      "status": "PASS"
+    },
+    {
+      "name": "3 Timeline compact metadata and latest event, owner state not overwritten",
+      "status": "PASS"
+    },
+    {
+      "name": "4 Session/document outcomes independent, labels per operation",
+      "status": "PASS"
+    },
+    {
+      "name": "5 Related case and exact POSTED receipt; Back context and no fresh label",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(await p.locator('.p23-scroll').evaluate(e=>e.scrollTop)-y)<2)\n\n    at eval (eval at <anonymous> (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\regression_motion_p23.cjs:8:1)), <anonymous>:15:1033)\n    at async test (eval at <anonymous> (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\regression_motion_p23.cjs:8:1)), <anonymous>:8:30)\n    at async eval (eval at <anonymous> (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\regression_motion_p23.cjs:8:1)), <anonymous>:15:1)"
+}

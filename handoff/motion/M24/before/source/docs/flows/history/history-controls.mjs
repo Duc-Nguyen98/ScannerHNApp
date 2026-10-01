@@ -1,0 +1,16 @@
+import {dayLabel} from './history-model.mjs';
+import {SORTS} from './history-picker.mjs';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export const countBadge=(count,label,prefix=false)=>'<span class="p08-count-badge">'+(prefix?'<span>'+esc(label)+'</span> <strong>'+esc(count)+'</strong>':'<strong>'+esc(count)+'</strong> <span>'+esc(label)+'</span>')+'</span>';
+export function historySearch({value,id,placeholder,icon,namespace='p08',action='filter',actionLabel='Bộ lọc lịch sử',filterActive=false}){
+ return '<div class="p08-search"><label>'+icon('search')+'<input id="'+esc(id)+'" type="search" aria-label="'+esc(placeholder)+'" placeholder="'+esc(placeholder)+'" value="'+esc(value)+'"></label><button data-'+namespace+'="'+action+'" aria-haspopup="dialog" aria-label="'+esc(actionLabel+(filterActive?', đang áp dụng':''))+'" '+(filterActive?'data-filter-active="true"':'')+'>'+icon(action==='scan'?'scan':'filter')+(filterActive?'<span class="p08-filter-dot" aria-hidden="true"></span>':'')+'</button></div>';
+}
+export function historyControls({filters:f,tabs,statuses,count,ready=true,placeholder='Tìm theo mã phiếu, serial, người thao tác',icon,showSort=true,dateAction='filter',canClear,namespace='p08',inputId='p08-search',scopeName='lịch sử',extraAction=null}){
+ const action='data-'+namespace, clear=(canClear??!!(f.from||f.to||f.q||f.status!=='all'||f.type!=='all'))?'<button class="p08-link" '+action+'="clear">Xóa lọc</button>':'';
+ const dateText=!f.from&&!f.to?'Tất cả ngày':f.from===f.to?dayLabel(f.from):dayLabel(f.from)+' – '+dayLabel(f.to);
+ return historySearch({value:f.q,id:inputId,placeholder,icon,namespace,actionLabel:'Bộ lọc '+scopeName,filterActive:namespace==='p08'&&!!(f.from||f.to||f.status!=='all')})+
+ (tabs.length?'<div class="p08-tabs" role="tablist" aria-label="Loại nghiệp vụ">'+[['all','Tất cả'],...tabs].map(([v,t])=>'<button role="tab" aria-selected="'+(f.type===v)+'" tabindex="'+(f.type===v||(f.type==='documents'&&v==='all')?0:-1)+'" '+action+'-type="'+v+'">'+esc(t)+'</button>').join('')+'</div>':'')+
+ (f.type==='documents'?'<p class="p08-footnote">Đang lọc: Chứng từ</p>':'')+
+ '<div class="p08-filter-summary"><button '+action+'="'+dateAction+'" aria-haspopup="dialog" aria-label="Thay đổi bộ lọc">'+icon('calendar')+'<span>'+dateText+'</span></button></div>'+(f.status!=='all'?'<p class="p08-active-status">Trạng thái: '+esc(statuses[f.status])+'</p>':'')+
+ '<div class="p08-results-toolbar"><p class="p08-result-count '+(namespace==='p08'?'':esc(namespace)+'-result-count')+'" role="status">'+(ready?countBadge(count,'kết quả'):'Chưa xác định số kết quả')+(f.scope==='documents'?' · Nhập/xuất':'')+'</p><div class="p08-toolbar-actions">'+(extraAction?'<button class="p08-control-extra" '+action+'="'+esc(extraAction.action)+'" aria-haspopup="dialog" aria-label="'+esc(extraAction.label)+'" title="'+esc(extraAction.label)+'">'+icon(extraAction.icon)+'</button>':'')+clear+(showSort?'<button '+action+'="sort" aria-haspopup="dialog" aria-label="Sắp xếp '+esc(scopeName)+'">'+SORTS.find(([v])=>v===f.sort)?.[1]+icon('chevron')+'</button>':'')+'</div></div>';
+}

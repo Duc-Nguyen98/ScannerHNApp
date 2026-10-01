@@ -1,0 +1,4 @@
+@import url('../shared/motion/motion-tokens.css');
+/* Home feedback is owned by M00 WAAPI (opacity100ms). Keep existing hover/press
+   colors instantaneous; never stack the old120ms CSS effect or change geometry. */
+#home-app .hn-screen[data-hn-motion-mode] #hn-home button { transition:none; }

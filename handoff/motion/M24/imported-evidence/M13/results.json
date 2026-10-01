@@ -1,0 +1,2666 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "S01 filter140/80/off; guards and count immediate; no repeat selected filter",
+      "S02 one mark-read even rapid click; route only shell; exact P12 ID and Back",
+      "Read error preserves source/notification; dialog keyboard Back and retry",
+      "S03/S04 MIGRATED list/state only; no approval; no state replay on Back",
+      "Native long list append/Back keep scroll; old rows never replay",
+      "Rapid routes and motion cancellation keep final scope; no exit overlay over link",
+      "Permission loss blocks document link immediately with no stale exit layer",
+      "Live OS/mode change and hidden cancel;10 cycles release listeners; expiry immediate"
+    ],
+    "geometry": {
+      "P13.S01": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          141,
+          494,
+          734
+        ],
+        ".p13-filter-dock": [
+          0,
+          76,
+          494,
+          65
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S02": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          639
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": [
+          0,
+          715,
+          494,
+          160
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S03": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          799
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S04": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          620
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": [
+          0,
+          696,
+          494,
+          179
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "profile1000-page20": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          141,
+          494,
+          734
+        ],
+        ".p13-filter-dock": [
+          0,
+          76,
+          494,
+          65
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "compact": {
+        ".p13-header": [
+          0,
+          0,
+          218.39999389648438,
+          38.9052619934082
+        ],
+        ".p13-scroll": [
+          0,
+          62.33684158325195,
+          218.39999389648438,
+          324.5052490234375
+        ],
+        ".p13-filter-dock": [
+          0,
+          33.599998474121094,
+          218.39999389648438,
+          28.73684310913086
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          386.84210205078125,
+          218.39999389648438,
+          33.15789794921875
+        ],
+        ".hn-scan-circle": [
+          95.48782348632812,
+          378.88421630859375,
+          27.4105224609375,
+          27.4105224609375
+        ]
+      }
+    },
+    "errors": [],
+    "writeRequests": [],
+    "initialAnimations": [
+      {
+        "node": "submit",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 1023
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 1025
+      },
+      {
+        "node": "start",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 1974
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 1976
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 2428
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 2984
+      },
+      {
+        "node": "hn-bell",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 3504
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 3516
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 4207
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 4836
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 5302
+      },
+      {
+        "node": "p13-banner",
+        "primitive": "WaitingWebState",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 5303
+      }
+    ],
+    "profile": {
+      "rows": 20,
+      "nodes": 335,
+      "appendWallMs": 260
+    },
+    "domain": {
+      "readOps": 2,
+      "badge": "2",
+      "doc": "PN-0005"
+    },
+    "finalDomain": {
+      "readOperations": 4,
+      "hardware": 0,
+      "pageCalls": "9 lượt tải trang"
+    },
+    "animations": [
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 11161
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 11522
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 11633
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 11633
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 11689
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 11689
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 12021
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 12871
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 13600
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 13649
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 14568
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 14579
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 14585
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 14934
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 15283
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 15283
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 15648
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 15648
+      },
+      {
+        "node": "hn-destination",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 16177
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 17096
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 17230
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "WaitingWebState",
+        "t": 10,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 27,
+        "opacity": "0.854646"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 42,
+        "opacity": "0.915806"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 57,
+        "opacity": "0.951866"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 74,
+        "opacity": "0.974481"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 90,
+        "opacity": "0.988492"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 106,
+        "opacity": "0.996408"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 122,
+        "opacity": "0.996408"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 137,
+        "opacity": "0.999729"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 154,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 170,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 185,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 202,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 218,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 9,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 45,
+        "opacity": "0.915855"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 56,
+        "opacity": "0.951896"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 73,
+        "opacity": "0.974501"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 88,
+        "opacity": "0.974501"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 105,
+        "opacity": "0.988501"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 119,
+        "opacity": "0.996413"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 135,
+        "opacity": "0.99973"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 152,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 168,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 184,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 202,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 215,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 7,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 35,
+        "opacity": "0.854833"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 45,
+        "opacity": "0.915909"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 55,
+        "opacity": "0.915909"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 71,
+        "opacity": "0.95193"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 85,
+        "opacity": "0.974522"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 101,
+        "opacity": "0.988517"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 117,
+        "opacity": "0.99642"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 133,
+        "opacity": "0.999732"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 148,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 166,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 180,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 197,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 212,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 11,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 28,
+        "opacity": "0.73119"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 40,
+        "opacity": "0.854656"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 56,
+        "opacity": "0.915811"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 72,
+        "opacity": "0.951869"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 88,
+        "opacity": "0.974558"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 103,
+        "opacity": "0.988536"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 119,
+        "opacity": "0.99643"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 136,
+        "opacity": "0.999734"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 151,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 168,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 184,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 200,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 216,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 10,
+        "opacity": "0.73121"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 26,
+        "opacity": "0.854666"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 42,
+        "opacity": "0.915816"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 59,
+        "opacity": "0.951873"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 74,
+        "opacity": "0.974486"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 90,
+        "opacity": "0.988492"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 106,
+        "opacity": "0.996409"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 121,
+        "opacity": "0.999729"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 137,
+        "opacity": "0.999732"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 154,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 170,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 186,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 201,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 218,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 19,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 14,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 8,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 50,
+        "opacity": "0.915991"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 59,
+        "opacity": "0.951981"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 72,
+        "opacity": "0.951981"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 88,
+        "opacity": "0.974554"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 103,
+        "opacity": "0.988533"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 120,
+        "opacity": "0.996429"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 135,
+        "opacity": "0.999734"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 151,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 169,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 184,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 200,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 216,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 12,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 67,
+        "opacity": "0.915822"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 73,
+        "opacity": "0.915822"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 88,
+        "opacity": "0.951876"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 106,
+        "opacity": "0.974492"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 124,
+        "opacity": "0.988496"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 139,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 4,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 35,
+        "opacity": "0.854695"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 54,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 67,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 81,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 98,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 114,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 129,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 146,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 162,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 178,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 193,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 211,
+        "opacity": "1"
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 2769.0999999940395,
+        "duration": 99
+      }
+    ]
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "S01 filter140/80/off; guards and count immediate; no repeat selected filter",
+      "S02 one mark-read even rapid click; route only shell; exact P12 ID and Back",
+      "Read error preserves source/notification; dialog keyboard Back and retry",
+      "S03/S04 MIGRATED list/state only; no approval; no state replay on Back",
+      "Native long list append/Back keep scroll; old rows never replay",
+      "Rapid routes and motion cancellation keep final scope; no exit overlay over link",
+      "Permission loss blocks document link immediately with no stale exit layer",
+      "Live OS/mode change and hidden cancel;10 cycles release listeners; expiry immediate"
+    ],
+    "geometry": {
+      "P13.S01": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          141,
+          494,
+          734
+        ],
+        ".p13-filter-dock": [
+          0,
+          76,
+          494,
+          65
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S02": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          639
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": [
+          0,
+          715,
+          494,
+          160
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S03": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          799
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S04": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          620
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": [
+          0,
+          696,
+          494,
+          179
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "profile1000-page20": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          141,
+          494,
+          734
+        ],
+        ".p13-filter-dock": [
+          0,
+          76,
+          494,
+          65
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "compact": {
+        ".p13-header": [
+          0,
+          0,
+          218.39999389648438,
+          38.9052619934082
+        ],
+        ".p13-scroll": [
+          0,
+          62.33684158325195,
+          218.39999389648438,
+          324.5052490234375
+        ],
+        ".p13-filter-dock": [
+          0,
+          33.599998474121094,
+          218.39999389648438,
+          28.73684310913086
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          386.84210205078125,
+          218.39999389648438,
+          33.15789794921875
+        ],
+        ".hn-scan-circle": [
+          95.48782348632812,
+          378.88421630859375,
+          27.4105224609375,
+          27.4105224609375
+        ]
+      }
+    },
+    "errors": [],
+    "writeRequests": [],
+    "initialAnimations": [
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 863
+      },
+      {
+        "node": "button-label",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 1715
+      },
+      {
+        "node": "button-label",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 2168
+      },
+      {
+        "node": "p13-banner",
+        "primitive": "WaitingWebState",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 5044
+      }
+    ],
+    "profile": {
+      "rows": 20,
+      "nodes": 335,
+      "appendWallMs": 306
+    },
+    "domain": {
+      "readOps": 2,
+      "badge": "2",
+      "doc": "PN-0005"
+    },
+    "finalDomain": {
+      "readOperations": 4,
+      "hardware": 0,
+      "pageCalls": "9 lượt tải trang"
+    },
+    "animations": [
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 11087
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 11525
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 11578
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 12698
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 14327
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 14336
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 14342
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 15023
+      },
+      {
+        "node": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 15381
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 16542
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 16623
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "WaitingWebState",
+        "t": 13,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 29,
+        "opacity": "0.832512"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 45,
+        "opacity": "0.93611"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 61,
+        "opacity": "0.978723"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 76,
+        "opacity": "0.996426"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 92,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 108,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 124,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 141,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 157,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 173,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 189,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 204,
+        "opacity": "1"
+      },
+      {
+        "primitive": "WaitingWebState",
+        "t": 221,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 10,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 32,
+        "opacity": "0.936043"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 45,
+        "opacity": "0.978693"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 58,
+        "opacity": "0.996417"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 74,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 90,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 106,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 122,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 137,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 153,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 170,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 185,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 202,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 218,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 12,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 31,
+        "opacity": "0.832573"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 46,
+        "opacity": "0.936133"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 60,
+        "opacity": "0.978733"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 78,
+        "opacity": "0.99643"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 94,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 113,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 125,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 141,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 157,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 173,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 189,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 204,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 221,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 2,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 22,
+        "opacity": "0.832594"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 34,
+        "opacity": "0.93614"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 50,
+        "opacity": "0.978736"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 66,
+        "opacity": "0.99643"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 82,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 98,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 114,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 129,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 145,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 161,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 178,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 194,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 209,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 225,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 8,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 22,
+        "opacity": "0.832573"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 43,
+        "opacity": "0.936133"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 55,
+        "opacity": "0.978733"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 70,
+        "opacity": "0.996429"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 87,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 103,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 118,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 134,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 150,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 167,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 182,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 199,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 215,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 19,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 16,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 10,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 28,
+        "opacity": "0.936237"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 42,
+        "opacity": "0.978779"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 58,
+        "opacity": "0.978779"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 75,
+        "opacity": "0.996445"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 90,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 107,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 123,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 138,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 155,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 170,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 186,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 203,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 219,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 3,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 30,
+        "opacity": "0.855069"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 41,
+        "opacity": "0.855069"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 52,
+        "opacity": "0.916041"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 66,
+        "opacity": "0.952011"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 84,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 3,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 29,
+        "opacity": "0.855069"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 53,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 67,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 81,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 99,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 113,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 129,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 146,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 161,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 177,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 194,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 210,
+        "opacity": "1"
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 481.5,
+        "duration": 73
+      },
+      {
+        "start": 564.1000000089407,
+        "duration": 109
+      },
+      {
+        "start": 1291.2000000029802,
+        "duration": 71
+      },
+      {
+        "start": 2640.6000000089407,
+        "duration": 117
+      }
+    ]
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "S01 filter140/80/off; guards and count immediate; no repeat selected filter",
+      "S02 one mark-read even rapid click; route only shell; exact P12 ID and Back",
+      "Read error preserves source/notification; dialog keyboard Back and retry",
+      "S03/S04 MIGRATED list/state only; no approval; no state replay on Back",
+      "Native long list append/Back keep scroll; old rows never replay",
+      "Rapid routes and motion cancellation keep final scope; no exit overlay over link",
+      "Permission loss blocks document link immediately with no stale exit layer",
+      "Live OS/mode change and hidden cancel;10 cycles release listeners; expiry immediate"
+    ],
+    "geometry": {
+      "P13.S01": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          141,
+          494,
+          734
+        ],
+        ".p13-filter-dock": [
+          0,
+          76,
+          494,
+          65
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S02": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          639
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": [
+          0,
+          715,
+          494,
+          160
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S03": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          799
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "P13.S04": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          76,
+          494,
+          620
+        ],
+        ".p13-filter-dock": null,
+        ".p13-actions": [
+          0,
+          696,
+          494,
+          179
+        ],
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "profile1000-page20": {
+        ".p13-header": [
+          0,
+          0,
+          494,
+          88
+        ],
+        ".p13-scroll": [
+          0,
+          141,
+          494,
+          734
+        ],
+        ".p13-filter-dock": [
+          0,
+          76,
+          494,
+          65
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          875,
+          494,
+          75
+        ],
+        ".hn-scan-circle": [
+          215.984375,
+          857,
+          62,
+          62
+        ]
+      },
+      "compact": {
+        ".p13-header": [
+          0,
+          0,
+          218.39999389648438,
+          38.9052619934082
+        ],
+        ".p13-scroll": [
+          0,
+          62.33684158325195,
+          218.39999389648438,
+          324.5052490234375
+        ],
+        ".p13-filter-dock": [
+          0,
+          33.599998474121094,
+          218.39999389648438,
+          28.73684310913086
+        ],
+        ".p13-actions": null,
+        ".hn-nav": [
+          0,
+          386.84210205078125,
+          218.39999389648438,
+          33.15789794921875
+        ],
+        ".hn-scan-circle": [
+          95.48782348632812,
+          378.88421630859375,
+          27.4105224609375,
+          27.4105224609375
+        ]
+      }
+    },
+    "errors": [],
+    "writeRequests": [],
+    "initialAnimations": [
+      {
+        "node": "submit",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 908
+      },
+      {
+        "node": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 910
+      },
+      {
+        "node": "start",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 1772
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 1775
+      },
+      {
+        "node": "button-label",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 2227
+      },
+      {
+        "node": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 2924
+      }
+    ],
+    "profile": {
+      "rows": 20,
+      "nodes": 335,
+      "appendWallMs": 285
+    },
+    "domain": {
+      "readOps": 2,
+      "badge": "2",
+      "doc": "PN-0005"
+    },
+    "finalDomain": {
+      "readOperations": 4,
+      "hardware": 0,
+      "pageCalls": "9 lượt tải trang"
+    },
+    "animations": [
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false,
+        "time": 16982
+      },
+      {
+        "node": "p13-records",
+        "primitive": "NotificationList",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true,
+        "time": 17163
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "NotificationList",
+        "t": 89,
+        "opacity": "0.974457"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 125,
+        "opacity": "0.996412"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 140,
+        "opacity": "0.999733"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 158,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 183,
+        "opacity": ""
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 7,
+        "opacity": "0.65"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 57,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 70,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 85,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 102,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 117,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 134,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 150,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 166,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 181,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 197,
+        "opacity": "1"
+      },
+      {
+        "primitive": "NotificationList",
+        "t": 214,
+        "opacity": "1"
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 1251.5,
+        "duration": 89
+      },
+      {
+        "start": 2609.9000000059605,
+        "duration": 103
+      }
+    ]
+  }
+]

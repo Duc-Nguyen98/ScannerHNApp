@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bàn giao Scanner · Màn 17–22</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 38px 22px 72px;
+        line-height: 1.7;
+      }
+      h1 {
+        font-size: 34px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin: 18px 0;
+      }
+      h2 {
+        margin: 30px 0 12px;
+        font-size: 21px;
+      }
+      p,
+      li {
+        font-size: 15px;
+        color: var(--muted);
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background: white;
+        font-size: 13px;
+      }
+      td,
+      th {
+        padding: 12px;
+        border: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+      }
+      .table-wrap {
+        overflow: auto;
+      }
+      .doc-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      .doc-links a {
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        padding: 12px 16px;
+        border-radius: 9px;
+        font-size: 13px;
+      }
+      .note {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: white;
+      }
+      code {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="./">← Mở bộ màn tương tác</a>
+      <p class="eyebrow" style="margin-top: 24px">
+        Hoa Nam Scanner · Bàn giao DEV
+      </p>
+      <h1>Quét mã, tiếp tục phiếu<br />và lịch sử thao tác</h1>
+      <p>
+        Phạm vi: thiết kế 9 nội dung và trạng thái liên quan, theo xác nhận
+        khách hàng ngày 10/09/2026. Bộ thiết kế không gửi dữ liệu tới WMS.
+      </p>
+      <div class="doc-links">
+        <a href="./HANDOFF.md">Mapping & quy tắc đầy đủ</a
+        ><a href="./DEV_PROPOSAL.md">Đề xuất hợp đồng để DEV chốt</a>
+      </div>
+      <h2>Nghiệp vụ đã chốt</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Luồng</th>
+              <th>Hành vi</th>
+              <th>Câu chữ UI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nhập/xuất chính trên App</td>
+              <td>
+                Quét → gửi phiếu để xử lý trên Web. Không có UI Duyệt/Post.
+              </td>
+              <td>Chờ xử lý trên Web<br />Phiếu đã gửi, chưa ghi sổ.</td>
+            </tr>
+            <tr>
+              <td>Linh kiện bảo hành</td>
+              <td>Quét → kiểm tra → xác nhận → Post trực tiếp.</td>
+              <td>Đã xuất</td>
+            </tr>
+            <tr>
+              <td>Phiếu dở</td>
+              <td>
+                Tiếp tục cùng phiếu, giữ mã/version/mốc xử lý. Chưa xác minh thì
+                đối chiếu Web.
+              </td>
+              <td>Tiếp tục phiếu / Cần đối chiếu trên Web</td>
+            </tr>
+            <tr>
+              <td>Kho</td>
+              <td>Một kho; khóa kho sau lần quét đầu.</td>
+              <td>Kho Hoa Nam</td>
+            </tr>
+            <tr>
+              <td>Lịch sử linh kiện</td>
+              <td>Chỉ POSTED; tải thêm/phân trang, chống trùng.</td>
+              <td>Phiếu đã xuất / Tải thêm phiếu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Bộ màn 17–22</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Board</th>
+              <th>Nội dung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="./?mode=board&board=17">17</a></td>
+              <td>Quét, sheet số lượng, xác nhận, thành công</td>
+            </tr>
+            <tr>
+              <td><a href="./?mode=board&board=18">18</a></td>
+              <td>Lịch sử trong hồ sơ, tải thêm, lỗi tải, rỗng</td>
+            </tr>
+            <tr>
+              <td><a href="./?mode=board&board=19">19</a></td>
+              <td>Phiếu dở, tiếp tục, đối chiếu, kiểm tra kết quả Post</td>
+            </tr>
+            <tr>
+              <td><a href="./?mode=board&board=20">20</a></td>
+              <td>Hub lịch sử, NFC, chi tiết NFC, chưa có nguồn dữ liệu</td>
+            </tr>
+            <tr>
+              <td><a href="./?mode=board&board=21">21</a></td>
+              <td>Lịch sử/timeline bảo hành, danh sách/chi tiết phiên quét</td>
+            </tr>
+            <tr>
+              <td><a href="./?mode=board&board=22">22</a></td>
+              <td>
+                Số lượng vượt tồn, mã chưa thể xuất, chờ Web, hồ sơ đã trả
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Hai đề xuất gửi DEV xác nhận</h2>
+      <p>
+        <strong>1. Gửi thiếu metadata:</strong> bắt buộc phiên xác thực/quyền,
+        kho, loại nghiệp vụ, mã đã đối soát, số lượng hợp lệ và khóa chống
+        trùng. Đề xuất cho bổ sung đối tác/người nhận/địa chỉ và kế hoạch còn
+        thiếu trên Web trước Post. Không relax kiểm mã, tồn hoặc quyền. DEV cần
+        chốt FE và BE cùng lúc.
+      </p>
+      <p>
+        <strong>2. Nguồn lịch sử:</strong> NFC dùng event mapping/thu hồi thực
+        của backend; phiên quét phải có session_id và event_id ổn định. Dùng API
+        hiện có nếu đủ contract; các đường dẫn mới trong đề xuất chỉ là phương
+        án chờ duyệt. Bảo hành dùng lại hồ sơ/timeline hiện có.
+      </p>
+      <p class="note">
+        Ảnh và prototype sử dụng dữ liệu thiết kế được phép dùng cho Scanner.
+        Nội dung NFC/phiên quét thể hiện giao diện theo contract đề xuất, không
+        phải chứng nhận dữ liệu thật đã được kết nối. Nghiệp vụ mới ở đây ưu
+        tiên hơn các mô tả cũ trong board 11.
+      </p>
+    </main>
+  </body>
+</html>

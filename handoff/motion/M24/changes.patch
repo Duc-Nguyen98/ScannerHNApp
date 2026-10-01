@@ -1,0 +1,36 @@
+diff --git "a/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M24\\before\\source\\docs\\flows\\warranty-components\\issue-motion.mjs" "b/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\warranty-components\\issue-motion.mjs"
+index c3dfdc2..edc67e9 100644
+--- "a/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M24\\before\\source\\docs\\flows\\warranty-components\\issue-motion.mjs"	
++++ "b/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\warranty-components\\issue-motion.mjs"	
+@@ -13,6 +13,9 @@ export function mountComponentIssueMotion({root,requested='auto',active=()=>true
+  return {
+   activate(){if(disposed||controller)return;controller=createMotionController({element:root,requested,...(media?{media}:{})});root.addEventListener('pointerdown',press);root.addEventListener('keydown',press);root.ownerDocument.addEventListener('visibilitychange',issueVisibility);observer=new MutationObserver(issueVisibility);observer.observe(root,{attributes:true,attributeFilter:['inert','hidden']});},
+   accepted(node){controller?.cancel();if(usable())controller?.rowFeedback(mark(node,'ComponentScan'));},
++  // M24: only the explicit rejected scan command emits feedback. Rendering,
++  // Back, mode changes and restoration never replay a previously shown error.
++  rejected(node){controller?.cancel();if(usable())controller?.noticeFeedback(mark(node,'ScannerValidation'));},
+   seedReceipt(receipt){if(receipt?.id)receipts.add(receiptKey(receipt));},
+   posted(node,receipt){if(!receipt?.id||receipt.status!=='POSTED'||receipts.has(receiptKey(receipt)))return;receipts.add(receiptKey(receipt));if(usable())controller?.rowFeedback(mark(node,'PostFeedback'));},
+   beforeRender(){controller?.cancel();},
+diff --git "a/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M24\\before\\source\\docs\\flows\\warranty-components\\issue-view.mjs" "b/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\warranty-components\\issue-view.mjs"
+index bc977b3..4fb3b9e 100644
+--- "a/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M24\\before\\source\\docs\\flows\\warranty-components\\issue-view.mjs"	
++++ "b/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\warranty-components\\issue-view.mjs"	
+@@ -77,7 +77,7 @@ export function mountComponentIssue({motionMode='auto',root,screen,tools,getStat
+   else if(result.kind==='unknown'){root.querySelector('[data-p19=reconcile]')?.focus({preventScroll:true});feedback.show({title:'Cần đối chiếu kết quả xuất',message:result.error,cancelLabel:'Để sau',confirmLabel:'Đối chiếu',onConfirm:()=>run('reconcile')});}
+   else {root.querySelector('[data-p19=post]')?.focus({preventScroll:true});info('Chưa xuất linh kiện',result.error||'Chưa thể xác minh kết quả.');}
+  }
+- function submitCode(){if(!flow||locked())return;if(!code.trim()){const input=root.querySelector('[data-scan-code]'),message=root.querySelector('#p19-code-feedback');input?.setAttribute('aria-invalid','true');if(message){message.dataset.tone='invalid';message.textContent='Nhập mã linh kiện hoặc mã hộp.';}input?.focus({preventScroll:true});return;}const acceptedCode=code.trim(),result=flow.scan(code);if(result.kind==='quantity'){quantity();return;}if(result.kind==='accepted'){syncAccepted(acceptedCode);return;}if(result.kind==='unavailable'){remember();rejection=result;errorRoute.begin();render(true);return;}info(result.kind==='duplicate'?'Mã đã có trong danh sách':'Chưa thêm linh kiện',result.error);syncTools();}
++ function submitCode(){if(!flow||locked())return;if(!code.trim()){const input=root.querySelector('[data-scan-code]'),message=root.querySelector('#p19-code-feedback');input?.setAttribute('aria-invalid','true');if(message){message.dataset.tone='invalid';message.textContent='Nhập mã linh kiện hoặc mã hộp.';}input?.focus({preventScroll:true});return;}const acceptedCode=code.trim(),result=flow.scan(code);if(result.kind==='quantity'){quantity();return;}if(result.kind==='accepted'){syncAccepted(acceptedCode);return;}if(result.kind==='unavailable'){remember();rejection=result;errorRoute.begin();render(true);motion.rejected(root.querySelector('.p24-rejection-note'));return;}info(result.kind==='duplicate'?'Mã đã có trong danh sách':'Chưa thêm linh kiện',result.error);syncTools();}
+  function onClick(e){if(!active||disposed||!e.target.closest('.p19-app'))return;const el=e.target.closest('button'),a=el?.dataset.p19,sa=el?.dataset.scanAction;if(!el||el.disabled)return;
+   if(rejection&&['back','other-code','retry-code'].includes(a)){returnScan(a!=='other-code');return;}
+   if(a==='back'&&onResume&&flow&&(!demo||flow===resumeDemo)&&!current().receipt&&(panel===1||current().unknown)){onResume(current(),demo);return;}
+diff --git "a/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M24\\before\\source\\docs\\flows\\warranty-components\\issue.css" "b/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\warranty-components\\issue.css"
+index 22a4e82..2a67e48 100644
+--- "a/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\handoff\\motion\\M24\\before\\source\\docs\\flows\\warranty-components\\issue.css"	
++++ "b/C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\docs\\flows\\warranty-components\\issue.css"	
+@@ -104,3 +104,4 @@
+ #home-app .p19-sheet .p24-quantity-change{margin:0 0 12px}
+ .p19-context strong{display:block;overflow-wrap:anywhere}
+ .p19-sheet #p19-quantity-help{overflow-wrap:anywhere;white-space:pre-line}
++.p19-quantity-input:has(input[aria-invalid="true"]){border-color:#b42318;outline-color:#b42318}

@@ -1,0 +1,213 @@
+{
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "modes": [
+    "auto",
+    "os-reduced",
+    "off"
+  ],
+  "motionGroups": 24,
+  "regressionGroups": 67,
+  "shellGroups": 36,
+  "nodeTests": 153,
+  "geometry": [
+    {
+      "panel": "P23.S01",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 100
+    },
+    {
+      "panel": "P23.S02",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 73
+    },
+    {
+      "panel": "P23.S03",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 98
+    },
+    {
+      "panel": "P23.S04",
+      "mode": "auto",
+      "equal": true,
+      "nodes": 94
+    },
+    {
+      "panel": "P23.S01",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 100
+    },
+    {
+      "panel": "P23.S02",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 73
+    },
+    {
+      "panel": "P23.S03",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 98
+    },
+    {
+      "panel": "P23.S04",
+      "mode": "os-reduced",
+      "equal": true,
+      "nodes": 94
+    },
+    {
+      "panel": "P23.S01",
+      "mode": "off",
+      "equal": true,
+      "nodes": 100
+    },
+    {
+      "panel": "P23.S02",
+      "mode": "off",
+      "equal": true,
+      "nodes": 73
+    },
+    {
+      "panel": "P23.S03",
+      "mode": "off",
+      "equal": true,
+      "nodes": 98
+    },
+    {
+      "panel": "P23.S04",
+      "mode": "off",
+      "equal": true,
+      "nodes": 94
+    }
+  ],
+  "layoutCombinations": 50,
+  "footerViewports": 4,
+  "operations": [
+    {
+      "mode": "auto",
+      "ids": [
+        "PQ-0003",
+        "PQ-0002",
+        "PQ-0001"
+      ],
+      "reads": 7,
+      "writes": 0
+    },
+    {
+      "mode": "os-reduced",
+      "ids": [
+        "PQ-0003",
+        "PQ-0002",
+        "PQ-0001"
+      ],
+      "reads": 7,
+      "writes": 0
+    },
+    {
+      "mode": "off",
+      "ids": [
+        "PQ-0003",
+        "PQ-0002",
+        "PQ-0001"
+      ],
+      "reads": 7,
+      "writes": 0
+    }
+  ],
+  "anchorBeforeAfter": [
+    {
+      "mode": "auto",
+      "before": {
+        "before": {
+          "offset": 182.5,
+          "id": "M23-SESSION-15"
+        },
+        "after": {
+          "offset": 425.5,
+          "id": "M23-SESSION-15"
+        },
+        "nodeConnected": false,
+        "focused": true
+      },
+      "after": {
+        "before": {
+          "offset": 182.5,
+          "id": "M23-SESSION-15"
+        },
+        "after": {
+          "offset": 181.5,
+          "id": "M23-SESSION-15"
+        },
+        "nodeConnected": true,
+        "focused": true
+      }
+    },
+    {
+      "mode": "os-reduced",
+      "before": {
+        "before": {
+          "offset": 182.5,
+          "id": "M23-SESSION-15"
+        },
+        "after": {
+          "offset": 425.5,
+          "id": "M23-SESSION-15"
+        },
+        "nodeConnected": false,
+        "focused": true
+      },
+      "after": {
+        "before": {
+          "offset": 182.5,
+          "id": "M23-SESSION-15"
+        },
+        "after": {
+          "offset": 181.5,
+          "id": "M23-SESSION-15"
+        },
+        "nodeConnected": true,
+        "focused": true
+      }
+    },
+    {
+      "mode": "off",
+      "before": {
+        "before": {
+          "offset": 182.5,
+          "id": "M23-SESSION-15"
+        },
+        "after": {
+          "offset": 425.5,
+          "id": "M23-SESSION-15"
+        },
+        "nodeConnected": false,
+        "focused": true
+      },
+      "after": {
+        "before": {
+          "offset": 182.5,
+          "id": "M23-SESSION-15"
+        },
+        "after": {
+          "offset": 181.5,
+          "id": "M23-SESSION-15"
+        },
+        "nodeConnected": true,
+        "focused": true
+      }
+    }
+  ],
+  "sourceBytesDelta": 5518,
+  "scopedSourceHash": "63f82014bba7579beffb7ce6dbdc8ef8e60f079135af95b3f437db9932c84907",
+  "performance": {
+    "longTasks": "Raw entries recorded; before/after workloads differ, no speed/FPS claim",
+    "inputLatency": "NOT_MEASURED separately",
+    "droppedFrames": "NOT_MEASURED on target hardware",
+    "virtualization": "DEFERRED per M00; native scrolling preserved, no library or paging API added"
+  },
+  "visual": "USER_REVIEW_PENDING for motion; P23 r03 temporary acceptance preserved",
+  "integration": "BLOCKED_PRODUCTION / hardware NOT_RUN; business tracking unchanged"
+}

@@ -1,0 +1,5692 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "S01 accepted row160 only; same input/camera connection; counters immediate",
+      "S02 enter220/exit160; immediate cancel/quantity; rapid Back; no camera replacement",
+      "S03 immediate2 codes/3units; press100; repeated Post only1; UNKNOWN never success",
+      "S04 confirmed receipt160 once; authoritative not-posted keeps request; Back no replay",
+      "Old case timeout never opens success on another case; no blind retry",
+      "Compact sheet and live off mode; inert exit cancels before rapid next sheet",
+      "Lifecycle4x; no listener growth; OS/off/hidden cancel; security removes outgoing instantly"
+    ],
+    "geometry": {
+      "P19.S01": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": [
+            20,
+            137,
+            454,
+            96
+          ],
+          ".hn-scan-camera": [
+            20,
+            315,
+            454,
+            210
+          ],
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": null
+        },
+        "nodes": 286
+      },
+      "P19.S02": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": [
+            20,
+            137,
+            454,
+            96
+          ],
+          ".hn-scan-camera": [
+            20,
+            315,
+            454,
+            210
+          ],
+          ".p19-sheet": [
+            0,
+            279,
+            494,
+            671
+          ],
+          ".p19-sheet-footer": [
+            0,
+            794,
+            494,
+            156
+          ],
+          ".p19-success-mark": null
+        },
+        "nodes": 325
+      },
+      "P19.S03": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            673.5
+          ],
+          ".p19-footer": [
+            0,
+            747.5,
+            494,
+            202.5
+          ],
+          ".p19-context": [
+            20,
+            131,
+            454,
+            96
+          ],
+          ".hn-scan-camera": null,
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": null
+        },
+        "nodes": 298
+      },
+      "P19.S04": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": null,
+          ".hn-scan-camera": null,
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": [
+            192,
+            173,
+            110,
+            110
+          ]
+        },
+        "nodes": 251
+      }
+    },
+    "errors": [],
+    "panelProfile": {
+      "longTasks": [
+        {
+          "start": 1369.2999999970198,
+          "duration": 61
+        },
+        {
+          "start": 2310.5999999940395,
+          "duration": 110
+        },
+        {
+          "start": 2697.5999999940395,
+          "duration": 73
+        }
+      ],
+      "resourceDecodedBytes": 0,
+      "durationMs": 6452
+    },
+    "domain": {
+      "counts": {
+        "codes": 2,
+        "quantity": 3
+      },
+      "metrics": {
+        "post": 2,
+        "check": 1,
+        "commits": 1
+      },
+      "status": "POSTED"
+    },
+    "fx": [
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 100,
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 100,
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "ComponentScan",
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "ComponentScan",
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "PostPress",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 100,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": false
+      },
+      {
+        "primitive": "PostPress",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 100,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": false
+      },
+      {
+        "primitive": "PostPress",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 100,
+        "cancelled": true
+      },
+      {
+        "primitive": "PostFeedback",
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "ComponentScan",
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "PostPress",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 100,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 180,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 140,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "duration": 220,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "duration": 160,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "duration": 160,
+        "cancelled": true
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 8,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 9,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 26,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 26,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 37,
+        "opacity": "0.232405",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 37,
+        "opacity": "0.0787055",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.37036)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 53,
+        "opacity": "0.584942",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 58,
+        "opacity": "0.356378",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14898)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 70,
+        "opacity": "0.759593",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 70,
+        "opacity": "0.562797",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49763)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 85,
+        "opacity": "0.862566",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 89,
+        "opacity": "0.692527",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45979)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 100,
+        "opacity": "0.927148",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 103,
+        "opacity": "0.782129",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.74297)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 117,
+        "opacity": "0.967148",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 119,
+        "opacity": "0.847223",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.22222)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 132,
+        "opacity": "0.989785",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 136,
+        "opacity": "0.895666",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.834673)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 149,
+        "opacity": "0.999237",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 150,
+        "opacity": "0.931694",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.546448)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 165,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 165,
+        "opacity": "0.95822",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.334239)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 180,
+        "opacity": "0.977129",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.182965)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 197,
+        "opacity": "0.989762",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.081906)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 212,
+        "opacity": "0.997108",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0231342)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 228,
+        "opacity": "0.999926",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.000595716)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 244,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 18,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 17,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 23,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 22,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 37,
+        "opacity": "0.825594",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 36,
+        "opacity": "0.825594",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.39525)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 53,
+        "opacity": "0.478361",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 52,
+        "opacity": "0.478361",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17311)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 68,
+        "opacity": "0.293929",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 67,
+        "opacity": "0.293929",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64857)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 84,
+        "opacity": "0.182478",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 83,
+        "opacity": "0.182478",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.54018)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 100,
+        "opacity": "0.109473",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 99,
+        "opacity": "0.109473",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12422)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 116,
+        "opacity": "0.0607641",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 116,
+        "opacity": "0.0607641",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51389)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 131,
+        "opacity": "0.0290971",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 130,
+        "opacity": "0.0290971",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76722)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 149,
+        "opacity": "0.0102021",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 149,
+        "opacity": "0.0102021",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91838)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 168,
+        "opacity": "0.0013272",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 168,
+        "opacity": "0.0013272",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98938)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 179,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 178,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 4,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 25,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 35,
+        "opacity": "0.669335",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 53,
+        "opacity": "0.808396",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 68,
+        "opacity": "0.882301",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 82,
+        "opacity": "0.926928",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 101,
+        "opacity": "0.956157",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 114,
+        "opacity": "0.975658",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 130,
+        "opacity": "0.988339",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 147,
+        "opacity": "0.995907",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 163,
+        "opacity": "0.999465",
+        "transform": "none"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 179,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 14,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 31,
+        "opacity": "0.585308",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 31,
+        "opacity": "0.356791",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14567)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 42,
+        "opacity": "0.585308",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 41,
+        "opacity": "0.356791",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14567)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 55,
+        "opacity": "0.75978",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 54,
+        "opacity": "0.563026",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49579)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 73,
+        "opacity": "0.862682",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 72,
+        "opacity": "0.692679",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45856)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 88,
+        "opacity": "0.926965",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 87,
+        "opacity": "0.781856",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.74515)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 103,
+        "opacity": "0.967101",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 102,
+        "opacity": "0.847136",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.22291)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 119,
+        "opacity": "0.989759",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 118,
+        "opacity": "0.895596",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.835232)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 135,
+        "opacity": "0.999231",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 134,
+        "opacity": "0.931642",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.546864)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 152,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 151,
+        "opacity": "0.958182",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.334541)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 167,
+        "opacity": "0.977105",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.183159)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 182,
+        "opacity": "0.989746",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.082029)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 198,
+        "opacity": "0.9971",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0231963)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 214,
+        "opacity": "0.999924",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00060452)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 231,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 20,
+        "opacity": "0.233849",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 19,
+        "opacity": "0.0792974",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36562)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 37,
+        "opacity": "0.585645",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 36,
+        "opacity": "0.357173",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14262)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 52,
+        "opacity": "0.759968",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 51,
+        "opacity": "0.563255",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49396)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 67,
+        "opacity": "0.862798",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 66,
+        "opacity": "0.692832",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45734)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 93,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 94,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 12,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 12,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 24,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 24,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "0.478568",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 40,
+        "opacity": "0.478568",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17146)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 56,
+        "opacity": "0.478568",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 56,
+        "opacity": "0.478568",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17146)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 73,
+        "opacity": "0.182552",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 74,
+        "opacity": "0.182552",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53958)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 88,
+        "opacity": "0.182552",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 88,
+        "opacity": "0.182552",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53958)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 104,
+        "opacity": "0.109522",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 104,
+        "opacity": "0.109522",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12382)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 119,
+        "opacity": "0.0607972",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 120,
+        "opacity": "0.0607972",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51362)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 135,
+        "opacity": "0.0291178",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 136,
+        "opacity": "0.0291178",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76706)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 151,
+        "opacity": "0.0102135",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 152,
+        "opacity": "0.0102135",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91829)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 168,
+        "opacity": "0.00133102",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 168,
+        "opacity": "0.00133102",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98935)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 184,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 184,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 7,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 7,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 19,
+        "opacity": "0.233849",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 19,
+        "opacity": "0.0792974",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36562)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 50,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 50,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 16,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 17,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 10,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 31,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 33,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 26,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 47,
+        "opacity": "0.825934",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 47,
+        "opacity": "0.825934",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.39253)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 40,
+        "opacity": "0.669626",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 63,
+        "opacity": "0.478568",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 63,
+        "opacity": "0.478568",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17146)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 56,
+        "opacity": "0.808573",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 79,
+        "opacity": "0.294046",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 79,
+        "opacity": "0.294046",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64763)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 72,
+        "opacity": "0.882382",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 95,
+        "opacity": "0.182552",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 96,
+        "opacity": "0.182552",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53958)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 89,
+        "opacity": "0.926979",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 112,
+        "opacity": "0.109522",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 113,
+        "opacity": "0.109522",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12382)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 106,
+        "opacity": "0.956191",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 132,
+        "opacity": "0.0291178",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 132,
+        "opacity": "0.0291178",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76706)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 125,
+        "opacity": "0.988353",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 144,
+        "opacity": "0.0291089",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 144,
+        "opacity": "0.0291089",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76713)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 137,
+        "opacity": "0.988356",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 160,
+        "opacity": "0.0102086",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 160,
+        "opacity": "0.0102086",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91833)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 153,
+        "opacity": "0.995917",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 176,
+        "opacity": "0.00132938",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 176,
+        "opacity": "0.00132938",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98937)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 169,
+        "opacity": "0.999468",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 191,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 191,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 184,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostPress",
+        "ms": 14,
+        "opacity": "0.822308",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostPress",
+        "ms": 32,
+        "opacity": "0.91972",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostPress",
+        "ms": 48,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 39,
+        "opacity": "0.585645",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 39,
+        "opacity": "0.357173",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14262)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 47,
+        "opacity": "0.585645",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 46,
+        "opacity": "0.357173",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14262)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 64,
+        "opacity": "0.759968",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 64,
+        "opacity": "0.563255",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49396)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 79,
+        "opacity": "0.862798",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 78,
+        "opacity": "0.692832",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45734)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 95,
+        "opacity": "0.927294",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 94,
+        "opacity": "0.782346",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.74123)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 112,
+        "opacity": "0.967236",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 111,
+        "opacity": "0.847383",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.22093)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 127,
+        "opacity": "0.989796",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 127,
+        "opacity": "0.895696",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.834433)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 143,
+        "opacity": "0.99924",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 142,
+        "opacity": "0.931716",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.54627)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 159,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 158,
+        "opacity": "0.958236",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.33411)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 174,
+        "opacity": "0.977141",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.182875)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 191,
+        "opacity": "0.989769",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0818493)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 207,
+        "opacity": "0.997112",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0231056)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 227,
+        "opacity": "0.999926",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.000591338)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 239,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostPress",
+        "ms": 25,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 11,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 10,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 26,
+        "opacity": "0.234022",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 27,
+        "opacity": "0.0793686",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36505)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 44,
+        "opacity": "0.585729",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 43,
+        "opacity": "0.357268",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14186)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 58,
+        "opacity": "0.760014",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 59,
+        "opacity": "0.563312",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49351)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 75,
+        "opacity": "0.862827",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 74,
+        "opacity": "0.69287",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45704)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 91,
+        "opacity": "0.927312",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 90,
+        "opacity": "0.782374",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.74101)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 106,
+        "opacity": "0.967247",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 106,
+        "opacity": "0.847403",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.22077)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 122,
+        "opacity": "0.989801",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 122,
+        "opacity": "0.895711",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.834314)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 139,
+        "opacity": "0.999242",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 138,
+        "opacity": "0.931727",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.546181)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 155,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 154,
+        "opacity": "0.958244",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.334045)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 170,
+        "opacity": "0.977146",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.18283)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 186,
+        "opacity": "0.989772",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.081821)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 202,
+        "opacity": "0.997114",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0230913)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 218,
+        "opacity": "0.997114",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0230913)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 234,
+        "opacity": "0.999926",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.000589155)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 250,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostPress",
+        "ms": 12,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 8,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 24,
+        "opacity": "0.668909",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 41,
+        "opacity": "0.808136",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 57,
+        "opacity": "0.882362",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 72,
+        "opacity": "0.926966",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 88,
+        "opacity": "0.956182",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 105,
+        "opacity": "0.975675",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 120,
+        "opacity": "0.975675",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 135,
+        "opacity": "0.988349",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 152,
+        "opacity": "0.995913",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 168,
+        "opacity": "0.999467",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostFeedback",
+        "ms": 184,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 14,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 25,
+        "opacity": "0.232405",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 24,
+        "opacity": "0.0787055",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.37036)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "0.585476",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 39,
+        "opacity": "0.356982",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14415)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 57,
+        "opacity": "0.759358",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 56,
+        "opacity": "0.56251",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49992)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 73,
+        "opacity": "0.862585",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 72,
+        "opacity": "0.692552",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45958)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 88,
+        "opacity": "0.926959",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 87,
+        "opacity": "0.781847",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.74522)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 107,
+        "opacity": "0.967035",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 107,
+        "opacity": "0.847015",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.22388)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 120,
+        "opacity": "0.989694",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 119,
+        "opacity": "0.895421",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.836632)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 137,
+        "opacity": "0.999215",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 136,
+        "opacity": "0.931516",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.547874)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 153,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 152,
+        "opacity": "0.958091",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.335275)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 168,
+        "opacity": "0.977071",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.183429)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 184,
+        "opacity": "0.977071",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.183429)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 200,
+        "opacity": "0.989725",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0821994)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 216,
+        "opacity": "0.99709",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0232776)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 231,
+        "opacity": "0.999924",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.000605257)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 247,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 27,
+        "opacity": "0.826808",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 27,
+        "opacity": "0.826808",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.38554)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 23,
+        "opacity": "0.669277",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 33,
+        "opacity": "0.826808",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 33,
+        "opacity": "0.826808",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.38554)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 34,
+        "opacity": "0.669277",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 49,
+        "opacity": "0.479069",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 49,
+        "opacity": "0.479069",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.16744)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 50,
+        "opacity": "0.808372",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 65,
+        "opacity": "0.29433",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 65,
+        "opacity": "0.29433",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64536)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 67,
+        "opacity": "0.882268",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 81,
+        "opacity": "0.182734",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 81,
+        "opacity": "0.182734",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53813)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 77,
+        "opacity": "0.926906",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 96,
+        "opacity": "0.109643",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 96,
+        "opacity": "0.109643",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12285)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 92,
+        "opacity": "0.956143",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 116,
+        "opacity": "0.0607924",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 116,
+        "opacity": "0.0607924",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51366)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 112,
+        "opacity": "0.975683",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 128,
+        "opacity": "0.0291149",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 129,
+        "opacity": "0.0291149",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76708)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 125,
+        "opacity": "0.988354",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 144,
+        "opacity": "0.0102118",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 145,
+        "opacity": "0.0102118",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91831)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 141,
+        "opacity": "0.995915",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 161,
+        "opacity": "0.00133048",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 161,
+        "opacity": "0.00133048",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98936)"
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 157,
+        "opacity": "0.999468",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 176,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 176,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "ComponentScan",
+        "ms": 172,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "PostPress",
+        "ms": 16,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 16,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 23,
+        "opacity": "0.233156",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 24,
+        "opacity": "0.0790129",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.3679)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 47,
+        "opacity": "0.585308",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 47,
+        "opacity": "0.356791",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14567)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 57,
+        "opacity": "0.75978",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 58,
+        "opacity": "0.563026",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49579)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 73,
+        "opacity": "0.862711",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 73,
+        "opacity": "0.692718",
+        "transform": "matrix(1, 0, 0, 1, 0, 2.45826)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 88,
+        "opacity": "0.927239",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 88,
+        "opacity": "0.782265",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.74188)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 103,
+        "opacity": "0.967203",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 103,
+        "opacity": "0.847323",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.22141)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 119,
+        "opacity": "0.989779",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 119,
+        "opacity": "0.895651",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.834793)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 135,
+        "opacity": "0.999236",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 135,
+        "opacity": "0.931683",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.546537)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 151,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 151,
+        "opacity": "0.958212",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.334304)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 167,
+        "opacity": "0.977128",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.18298)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 183,
+        "opacity": "0.989761",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0819155)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 199,
+        "opacity": "0.997108",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.023139)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 215,
+        "opacity": "0.999925",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.000596447)"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 232,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 20,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 20,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 32,
+        "opacity": "0.233676",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 33,
+        "opacity": "0.0792262",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36619)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 48,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 50,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 10,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 10,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 24,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 25,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 62,
+        "opacity": "0.478656",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 62,
+        "opacity": "0.478656",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17075)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 72,
+        "opacity": "0.294096",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 72,
+        "opacity": "0.294096",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64723)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 101,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 101,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 14,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 13,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 28,
+        "opacity": "0.233676",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 27,
+        "opacity": "0.0792262",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36619)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 47,
+        "opacity": "0.585561",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 46,
+        "opacity": "0.357077",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.14338)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 61,
+        "opacity": "0.759921",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 60,
+        "opacity": "0.563197",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.49442)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 78,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 77,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 15,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 28,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 28,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 45,
+        "opacity": "0.478656",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 45,
+        "opacity": "0.478656",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17075)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 61,
+        "opacity": "0.294096",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 61,
+        "opacity": "0.294096",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64723)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 77,
+        "opacity": "0.182584",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 77,
+        "opacity": "0.182584",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53932)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 92,
+        "opacity": "0.109544",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 92,
+        "opacity": "0.109544",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12365)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 108,
+        "opacity": "0.0608113",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 109,
+        "opacity": "0.0608113",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51351)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 124,
+        "opacity": "0.0608113",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 124,
+        "opacity": "0.0608113",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51351)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 141,
+        "opacity": "0.0291267",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 141,
+        "opacity": "0.0291267",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76699)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 157,
+        "opacity": "0.0102183",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 157,
+        "opacity": "0.0102183",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91825)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 173,
+        "opacity": "0.00133266",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 173,
+        "opacity": "0.00133266",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98934)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 188,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 188,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 14,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 13,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 38,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 19,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 18,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 21,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 20,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 37,
+        "opacity": "0.826323",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 36,
+        "opacity": "0.826323",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.38942)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 54,
+        "opacity": "0.478804",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 53,
+        "opacity": "0.478804",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.16957)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 70,
+        "opacity": "0.29418",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 69,
+        "opacity": "0.29418",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64656)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 85,
+        "opacity": "0.182638",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 85,
+        "opacity": "0.182638",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.5389)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 102,
+        "opacity": "0.109579",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 101,
+        "opacity": "0.109579",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12336)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 118,
+        "opacity": "0.0608349",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 117,
+        "opacity": "0.0608349",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51332)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 134,
+        "opacity": "0.0291238",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 133,
+        "opacity": "0.0291238",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76701)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 149,
+        "opacity": "0.0102167",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 148,
+        "opacity": "0.0102167",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91827)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 166,
+        "opacity": "0.00133212",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 165,
+        "opacity": "0.00133212",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98934)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 182,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 181,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 22,
+        "opacity": "0.233387",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 22,
+        "opacity": "0.0791077",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36714)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 15,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 30,
+        "opacity": "0.826323",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 30,
+        "opacity": "0.826323",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.38942)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 47,
+        "opacity": "0.478804",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 47,
+        "opacity": "0.478804",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.16957)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 60,
+        "opacity": "0.29418",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 60,
+        "opacity": "0.29418",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64656)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 77,
+        "opacity": "0.182638",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 77,
+        "opacity": "0.182638",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.5389)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 93,
+        "opacity": "0.109579",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 93,
+        "opacity": "0.109579",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12336)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 109,
+        "opacity": "0.109579",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 109,
+        "opacity": "0.0608349",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51332)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 125,
+        "opacity": "0.0608349",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 125,
+        "opacity": "0.0608349",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51332)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 141,
+        "opacity": "0.0291416",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 141,
+        "opacity": "0.0291416",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76687)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 158,
+        "opacity": "0.0102264",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 158,
+        "opacity": "0.0102264",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91819)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 174,
+        "opacity": "0.0013354",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 174,
+        "opacity": "0.0013354",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98932)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 189,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 189,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 17,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 17,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 33,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 33,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 18,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 18,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 27,
+        "opacity": "0.825886",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 27,
+        "opacity": "0.825886",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.39292)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 43,
+        "opacity": "0.478538",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 43,
+        "opacity": "0.478538",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17169)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 59,
+        "opacity": "0.294029",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 59,
+        "opacity": "0.294029",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64776)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 75,
+        "opacity": "0.182542",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 75,
+        "opacity": "0.182542",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53967)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 91,
+        "opacity": "0.109515",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 91,
+        "opacity": "0.109515",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12388)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 107,
+        "opacity": "0.0607924",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 107,
+        "opacity": "0.0607924",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51366)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 123,
+        "opacity": "0.0291149",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 123,
+        "opacity": "0.0291149",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76708)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 138,
+        "opacity": "0.0102118",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 139,
+        "opacity": "0.0102118",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91831)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 155,
+        "opacity": "0.00133048",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 155,
+        "opacity": "0.00133048",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98936)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 171,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 171,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 16,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 18,
+        "opacity": "0.0790129",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.3679)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 23,
+        "opacity": "0.233156",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 23,
+        "opacity": "0.0790129",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.3679)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 14,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 15,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 28,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 28,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 44,
+        "opacity": "0.478922",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 44,
+        "opacity": "0.478922",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.16863)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 60,
+        "opacity": "0.294246",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 61,
+        "opacity": "0.294246",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.64603)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 76,
+        "opacity": "0.182681",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 76,
+        "opacity": "0.182681",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53856)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 93,
+        "opacity": "0.109608",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 93,
+        "opacity": "0.109608",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12314)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 108,
+        "opacity": "0.0608538",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 108,
+        "opacity": "0.0608538",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.51317)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 124,
+        "opacity": "0.0291535",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 124,
+        "opacity": "0.0291535",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.76677)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 140,
+        "opacity": "0.0291535",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 140,
+        "opacity": "0.0102329",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91814)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 156,
+        "opacity": "0.0102329",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 156,
+        "opacity": "0.0102329",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91814)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 171,
+        "opacity": "0.00133759",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 171,
+        "opacity": "0.00133759",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.9893)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 188,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 188,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 17,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 16,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 30,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 30,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 21,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 21,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 34,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 34,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 50,
+        "opacity": "0.825837",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 50,
+        "opacity": "0.825837",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.3933)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 66,
+        "opacity": "0.478509",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 72,
+        "opacity": "0.478509",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.17193)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 81,
+        "opacity": "0.294013",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 82,
+        "opacity": "0.294013",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.6479)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 99,
+        "opacity": "0.182531",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 99,
+        "opacity": "0.182531",
+        "transform": "matrix(1, 0, 0, 1, 0, 6.53975)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 114,
+        "opacity": "0.109508",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 114,
+        "opacity": "0.109508",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.12393)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 130,
+        "opacity": "0.0607877",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 130,
+        "opacity": "0.0607877",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.5137)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 145,
+        "opacity": "0.0607877",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 145,
+        "opacity": "0.0607877",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.5137)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 163,
+        "opacity": "0.0102102",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 164,
+        "opacity": "0.0102102",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91832)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 178,
+        "opacity": "0.0102102",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 178,
+        "opacity": "0.0102102",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.91832)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 194,
+        "opacity": "0.00132993",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 194,
+        "opacity": "0.00132993",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.98936)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 212,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 212,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 6,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 5,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 29,
+        "opacity": "0.233964",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 28,
+        "opacity": "0.0793449",
+        "transform": "matrix(1, 0, 0, 1, 0, 7.36524)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 39,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 38,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 6,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 6,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 20,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 20,
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 8)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 39,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 40,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 16,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 15,
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 43,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "ms": 42,
+        "opacity": "",
+        "transform": ""
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 1369.2999999970198,
+        "duration": 61
+      },
+      {
+        "start": 2310.5999999940395,
+        "duration": 110
+      },
+      {
+        "start": 2697.5999999940395,
+        "duration": 73
+      }
+    ],
+    "hardware": 0,
+    "resourceBytes": 0
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "S01 accepted row160 only; same input/camera connection; counters immediate",
+      "S02 enter220/exit160; immediate cancel/quantity; rapid Back; no camera replacement",
+      "S03 immediate2 codes/3units; press100; repeated Post only1; UNKNOWN never success",
+      "S04 confirmed receipt160 once; authoritative not-posted keeps request; Back no replay",
+      "Old case timeout never opens success on another case; no blind retry",
+      "Compact sheet and live off mode; inert exit cancels before rapid next sheet",
+      "Lifecycle4x; no listener growth; OS/off/hidden cancel; security removes outgoing instantly"
+    ],
+    "geometry": {
+      "P19.S01": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": [
+            20,
+            137,
+            454,
+            96
+          ],
+          ".hn-scan-camera": [
+            20,
+            315,
+            454,
+            210
+          ],
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": null
+        },
+        "nodes": 286
+      },
+      "P19.S02": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": [
+            20,
+            137,
+            454,
+            96
+          ],
+          ".hn-scan-camera": [
+            20,
+            315,
+            454,
+            210
+          ],
+          ".p19-sheet": [
+            0,
+            279,
+            494,
+            671
+          ],
+          ".p19-sheet-footer": [
+            0,
+            794,
+            494,
+            156
+          ],
+          ".p19-success-mark": null
+        },
+        "nodes": 325
+      },
+      "P19.S03": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            673.5
+          ],
+          ".p19-footer": [
+            0,
+            747.5,
+            494,
+            202.5
+          ],
+          ".p19-context": [
+            20,
+            131,
+            454,
+            96
+          ],
+          ".hn-scan-camera": null,
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": null
+        },
+        "nodes": 298
+      },
+      "P19.S04": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": null,
+          ".hn-scan-camera": null,
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": [
+            192,
+            173,
+            110,
+            110
+          ]
+        },
+        "nodes": 251
+      }
+    },
+    "errors": [],
+    "panelProfile": {
+      "longTasks": [
+        {
+          "start": 336.1000000089407,
+          "duration": 94
+        },
+        {
+          "start": 1064.7000000029802,
+          "duration": 77
+        },
+        {
+          "start": 2199.9000000059605,
+          "duration": 95
+        }
+      ],
+      "resourceDecodedBytes": 0,
+      "durationMs": 5999
+    },
+    "domain": {
+      "counts": {
+        "codes": 2,
+        "quantity": 3
+      },
+      "metrics": {
+        "post": 2,
+        "check": 1,
+        "commits": 1
+      },
+      "status": "POSTED"
+    },
+    "fx": [
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "duration": 80,
+        "cancelled": true
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 6,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 26,
+        "opacity": "0.521756",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 38,
+        "opacity": "0.817565",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 49,
+        "opacity": "0.939255",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 66,
+        "opacity": "0.989808",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 82,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 54,
+        "opacity": "0.52099",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 63,
+        "opacity": "0.817287",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 80,
+        "opacity": "0.939132",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 98,
+        "opacity": "0.989765",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 115,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 20,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 33,
+        "opacity": "0.521049",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 50,
+        "opacity": "0.817309",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 71,
+        "opacity": "0.939142",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 83,
+        "opacity": "0.989795",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 98,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 33,
+        "opacity": "0.522581",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 51,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 15,
+        "opacity": "0.521521",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 31,
+        "opacity": "0.81748",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 48,
+        "opacity": "0.939217",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 63,
+        "opacity": "0.989795",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 79,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 5,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 25,
+        "opacity": "0.521462",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 37,
+        "opacity": "0.817458",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 53,
+        "opacity": "0.939208",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 69,
+        "opacity": "0.939208",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 86,
+        "opacity": "0.989824",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 102,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 14,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 25,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 41,
+        "opacity": "0.522345",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 67,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 20,
+        "opacity": "0.521698",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "0.817586",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 66,
+        "opacity": "0.989808",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 82,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 19,
+        "opacity": "0.521874",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 40,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 12,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 33,
+        "opacity": "0.817608",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 45,
+        "opacity": "0.939274",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 60,
+        "opacity": "0.939274",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 81,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 6,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 18,
+        "opacity": "0.521698",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 36,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 7,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 18,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 33,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 6,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 32,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 17,
+        "opacity": "0.52211",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 51,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 5,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 20,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 14,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 30,
+        "opacity": "0.522286",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 42,
+        "opacity": "0.817757",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 72,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 16,
+        "opacity": "0",
+        "transform": "none"
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "ms": 38,
+        "opacity": "",
+        "transform": ""
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 336.1000000089407,
+        "duration": 94
+      },
+      {
+        "start": 1064.7000000029802,
+        "duration": 77
+      },
+      {
+        "start": 2199.9000000059605,
+        "duration": 95
+      }
+    ],
+    "hardware": 0,
+    "resourceBytes": 0
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "S01 accepted row160 only; same input/camera connection; counters immediate",
+      "S02 enter220/exit160; immediate cancel/quantity; rapid Back; no camera replacement",
+      "S03 immediate2 codes/3units; press100; repeated Post only1; UNKNOWN never success",
+      "S04 confirmed receipt160 once; authoritative not-posted keeps request; Back no replay",
+      "Old case timeout never opens success on another case; no blind retry",
+      "Compact sheet and live off mode; inert exit cancels before rapid next sheet",
+      "Lifecycle4x; no listener growth; OS/off/hidden cancel; security removes outgoing instantly"
+    ],
+    "geometry": {
+      "P19.S01": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": [
+            20,
+            137,
+            454,
+            96
+          ],
+          ".hn-scan-camera": [
+            20,
+            315,
+            454,
+            210
+          ],
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": null
+        },
+        "nodes": 286
+      },
+      "P19.S02": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": [
+            20,
+            137,
+            454,
+            96
+          ],
+          ".hn-scan-camera": [
+            20,
+            315,
+            454,
+            210
+          ],
+          ".p19-sheet": [
+            0,
+            279,
+            494,
+            671
+          ],
+          ".p19-sheet-footer": [
+            0,
+            794,
+            494,
+            156
+          ],
+          ".p19-success-mark": null
+        },
+        "nodes": 325
+      },
+      "P19.S03": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            673.5
+          ],
+          ".p19-footer": [
+            0,
+            747.5,
+            494,
+            202.5
+          ],
+          ".p19-context": [
+            20,
+            131,
+            454,
+            96
+          ],
+          ".hn-scan-camera": null,
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": null
+        },
+        "nodes": 298
+      },
+      "P19.S04": {
+        "frame": [
+          494,
+          950
+        ],
+        "rects": {
+          ".p19-header": [
+            0,
+            0,
+            494,
+            86
+          ],
+          ".p19-scroll": [
+            0,
+            74,
+            494,
+            773
+          ],
+          ".p19-footer": [
+            0,
+            847,
+            494,
+            103
+          ],
+          ".p19-context": null,
+          ".hn-scan-camera": null,
+          ".p19-sheet": null,
+          ".p19-sheet-footer": null,
+          ".p19-success-mark": [
+            192,
+            173,
+            110,
+            110
+          ]
+        },
+        "nodes": 251
+      }
+    },
+    "errors": [],
+    "panelProfile": {
+      "longTasks": [
+        {
+          "start": 360.90000000596046,
+          "duration": 60
+        },
+        {
+          "start": 1062.7999999970198,
+          "duration": 60
+        },
+        {
+          "start": 2212.2000000029802,
+          "duration": 96
+        }
+      ],
+      "resourceDecodedBytes": 0,
+      "durationMs": 5970
+    },
+    "domain": {
+      "counts": {
+        "codes": 2,
+        "quantity": 3
+      },
+      "metrics": {
+        "post": 2,
+        "check": 1,
+        "commits": 1
+      },
+      "status": "POSTED"
+    },
+    "fx": [],
+    "samples": [],
+    "longTasks": [
+      {
+        "start": 360.90000000596046,
+        "duration": 60
+      },
+      {
+        "start": 1062.7999999970198,
+        "duration": 60
+      },
+      {
+        "start": 2212.2000000029802,
+        "duration": 96
+      }
+    ],
+    "hardware": 0,
+    "resourceBytes": 0
+  }
+]

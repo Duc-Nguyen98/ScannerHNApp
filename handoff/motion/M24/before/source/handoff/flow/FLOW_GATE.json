@@ -1,0 +1,245 @@
+{
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_diff_hash": "0b7603d797bc47da74c961fb381dab8ae5ca089f00395b36b808718ea524dc49",
+  "working_diff_hash_definition": "See SOURCE_MANIFEST.json; includes untracked source",
+  "appSourceHash": "e968ad9ebd0875cfcf784d13754942b77d1cb8e515df7373c18ea3c1e5ff9767",
+  "target": "prototype-local-ui-fixture",
+  "fixture_version": "hn-flow-gate-2026-09-30-v1",
+  "board_count": 24,
+  "panel_count": 91,
+  "observed_panel_count": 91,
+  "graph_edge_count": 126,
+  "tested_edges": [
+    {
+      "id": "F01",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F02",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F03",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F04",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F05",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F06",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F07",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F08",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F09",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F10",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F11",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F12",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F13",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F14",
+      "journey": "J04",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F15",
+      "journey": "J04",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F16",
+      "journey": "J04",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F17",
+      "journey": "J05",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F18",
+      "journey": "J05",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F19",
+      "journey": "J06",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F20",
+      "journey": "J06",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F21",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F22",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F23",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F24",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F25",
+      "journey": "J08",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F26",
+      "journey": "J09",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F27",
+      "journey": "J09",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F28",
+      "journey": "J10",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F29",
+      "journey": "J10",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F30",
+      "journey": "J11",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F31",
+      "journey": "J11",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F32",
+      "journey": "J12",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F33",
+      "journey": "J12",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F34",
+      "journey": "J12",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F35",
+      "journey": "J12",
+      "status": "PASS_UI_FIXTURE"
+    }
+  ],
+  "blockers": [],
+  "resolved_blockers": [
+    {
+      "id": "B01",
+      "resolution": "P03 runtime consumes live scoped P04/P05 owner; exact resume, save/cancel/discard and P14 dedup verified in J12. Legacy review fixture retained as negative guard test J08, never mapped by PN display number."
+    },
+    {
+      "id": "B02",
+      "resolution": "24 suites PASS; 12 journeys PASS; 7 supplementary groups PASS; 91/91 reference panels observed with assertion evidence. Obsolete selectors and migrated ownership assertions refreshed; original logs archived."
+    }
+  ],
+  "gate_status": "PASS",
+  "evidence_scope": "UI_FIXTURE",
+  "tests": {
+    "command": "node --test tests/*.mjs tests/*.cjs",
+    "exit_code": 0,
+    "tests": 675,
+    "pass": 675,
+    "fail": 0
+  },
+  "evidence_paths": [
+    "SOURCE_MANIFEST.json",
+    "PANEL_EVIDENCE.json",
+    "FLOW_GRAPH.csv",
+    "FLOW_PANEL_MATRIX.csv",
+    "BOARD_CHECKS.json",
+    "evidence/acceptance-02/regression-runs.json",
+    "evidence/journeys-acceptance-04/results.json",
+    "evidence/remaining-02/results.json",
+    "evidence/state-alias-01/regression-runs.json",
+    "evidence/final-verification/node-summary.json",
+    "evidence/final-verification/syntax.json",
+    "evidence/post-discard-guard/regression-runs.json",
+    "evidence/marker-recheck/regression-runs.json"
+  ],
+  "inventory_missing_panels": [],
+  "scope_exclusions": [
+    "visual reapproval",
+    "production API/WMS and durable storage",
+    "physical camera/NFC/keyboard acceptance",
+    "application motion rollout",
+    "deploy"
+  ],
+  "next_step": "MOTION_P01 may begin; M00 harness verified, app consumers remain opt-in per board",
+  "affected_rechecks": [
+    {
+      "board": "P05",
+      "command": [
+        "check_outbound_lifecycle.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T11:48:58.582Z",
+      "finished": "2026-09-30T11:49:25.493Z",
+      "log": "handoff/flow/evidence/post-discard-guard/P05-regression.log"
+    }
+  ]
+}

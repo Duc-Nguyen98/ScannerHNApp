@@ -1,0 +1,2043 @@
+[
+  {
+    "mode": "auto",
+    "checks": [
+      "inbound result160 after verified record; no replay on P12 Back",
+      "outbound result160 after verified record; no replay on P12 Back",
+      "S01 invalid13/0/negative/decimal immediate text and border, IME, cancel with no mutation",
+      "S02 local140/80/off only once per rejected attempt; accepted list and hardware unchanged",
+      "S02 mode/hidden/route cancellation does not resend or replay old errors",
+      "Closed while Post pending rejects immediately; stale CTA cannot commit; resume remains read-only",
+      "S04 reads/pagination/dedup/Back usable without animation, no new issue",
+      "Repeated module/overlay lifecycle releases listeners and cancels handles; logout removes protected UI"
+    ],
+    "geometry": {
+      "P24.S01": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 325,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 773
+          },
+          {
+            "c": "p19-footer",
+            "x": 0,
+            "y": 847,
+            "w": 494,
+            "h": 103
+          },
+          {
+            "c": "app-modal p19-sheet",
+            "x": 0,
+            "y": 279,
+            "w": 494,
+            "h": 671
+          },
+          {
+            "c": "p19-quantity-input",
+            "x": 24,
+            "y": 319,
+            "w": 446,
+            "h": 70
+          },
+          {
+            "c": "p19-sheet-footer",
+            "x": 0,
+            "y": 515,
+            "w": 494,
+            "h": 156
+          }
+        ]
+      },
+      "P24.S02": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 256,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 693
+          },
+          {
+            "c": "p19-hint p24-rejection-note",
+            "x": 20,
+            "y": 670,
+            "w": 454,
+            "h": 71
+          },
+          {
+            "c": "p19-footer",
+            "x": 0,
+            "y": 767,
+            "w": 494,
+            "h": 183
+          }
+        ]
+      },
+      "P24.S03-inbound": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 256,
+        "rects": [
+          {
+            "c": "p04-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 67
+          },
+          {
+            "c": "hn-waiting-web",
+            "x": 36,
+            "y": 87,
+            "w": 422,
+            "h": 561
+          },
+          {
+            "c": "hn-waiting-hero",
+            "x": 36,
+            "y": 87,
+            "w": 422,
+            "h": 247
+          },
+          {
+            "c": "p04-footer",
+            "x": 16,
+            "y": 763,
+            "w": 462,
+            "h": 136
+          }
+        ]
+      },
+      "P24.S03-outbound": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 255,
+        "rects": [
+          {
+            "c": "p05-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 72
+          },
+          {
+            "c": "hn-waiting-web",
+            "x": 42,
+            "y": 94,
+            "w": 410,
+            "h": 561
+          },
+          {
+            "c": "hn-waiting-hero",
+            "x": 42,
+            "y": 94,
+            "w": 410,
+            "h": 247
+          },
+          {
+            "c": "p05-footer",
+            "x": 22,
+            "y": 717,
+            "w": 450,
+            "h": 136
+          }
+        ]
+      },
+      "P24.S04": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 303,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll p20-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 765
+          },
+          {
+            "c": "p19-hint p24-closed-note",
+            "x": 20,
+            "y": 273,
+            "w": 454,
+            "h": 71
+          },
+          {
+            "c": "p19-footer p20-footer",
+            "x": 0,
+            "y": 839,
+            "w": 494,
+            "h": 111
+          }
+        ]
+      }
+    },
+    "text": {
+      "P24.S01": "Xuất linh kiện bảo hành\n1\nQuét mã\n2\nKiểm tra\n3\nKết quả\nBH-001\n\nMáy in nhiệt XP-420B\n\nĐang kiểm tra\nQuét linh kiện hoặc mã hộp\n\nThêm linh kiện cho hồ sơ BH-001.\n\nCamera chưa kết nối\nĐèn chưa sẵn sàng\nNhập tay\n1\nmã đã quét\n1 linh kiện\nLK-0001\n\nĐầu in nhiệt XP-420B\n\n× 1\n\nQuét mã chỉ thêm vào danh sách. Xác nhận xuất mới làm thay đổi tồn kho.\n\nKiểm tra linh kiện\nHộp linh kiện\nLK-0002\n\nAdapter nguồn 24V\n\nBOX-LK-0002-01\nTồn khả dụng\n12 linh kiện\nSố lượng linh kiện cần xuất *\n−\n+\n\nNhập số lượng cần dùng cho hồ sơ BH-001.\n\nSố lượng cần xuất vượt tồn khả dụng của hộp (12).\n\nChỉ xác nhận số lượng. Bước này chưa xuất kho.\n\nXác nhận số lượng\nHủy",
+      "P24.S02": "Kiểm tra mã linh kiện\nBH-001\n\nMáy in nhiệt XP-420B\n\nĐang kiểm tra\nMã hộp chưa thể xuất\n\nHộp chưa được ghi nhận nhập kho. Kiểm tra lại mã hoặc chọn hộp khác.\n\nMã đã quét\nBOX-NOT-RECEIVED\nKho\nKho Hoa Nam\nĐã giữ 1 mã hợp lệ\n\nTrong phiếu\nDRAFT-DEMO-dc7e2237-747a-4006-b771-c88283266376\n\nMã này chưa được thêm vào danh sách. Các mã đã quét hợp lệ vẫn được giữ lại.\n\nQuét mã khác\nSửa mã vừa nhập",
+      "P24.S03-inbound": "Đã gửi phiếu\nĐã gửi phiếu nhập\n✓\nĐã gửi phiếu\n2\nChờ xử lý trên Web\n\nChưa ghi sổ · Chưa đổi tồn.\n\nMã phiếu\nPN-0005\nKho\nKho Hoa Nam\nĐã ghi nhận\n12 mã\nThời gian gửi\n10/09/2026 11:25\nTồn kho chỉ cập nhật sau khi phiếu được ghi sổ thành công trên Web.\nXem phiếu PN-0005\nNhập lượt mới\nXem lịch sử\nTrang chủ",
+      "P24.S03-outbound": "Đã gửi phiếu\nĐã gửi phiếu xuất\n✓\nĐã gửi phiếu\n2\nChờ xử lý trên Web\n\nChưa ghi sổ · Chưa đổi tồn.\n\nMã phiếu\nPX-0004\nKho\nKho Hoa Nam\nĐã ghi nhận\n10 mã\nThời gian gửi\n09/09/2026 14:32\nTồn kho chỉ cập nhật sau khi phiếu được ghi sổ thành công trên Web.\nXem phiếu PX-0004\nXem lịch sử\nVề Trang chủ\nTrang chủ\nChứng từ\nQuét mã\nLịch sử\nCá nhân",
+      "P24.S04": "Hồ sơ bảo hành\nBH-002\n\nMáy quét mã vạch ZD421\n\nĐã trả khách\n\nSN:\nHN12346\n\nKhách hàng\nĐại lý Thành Công\nHồ sơ đã trả khách, chỉ đọc. Bạn vẫn có thể xem các phiếu đã xuất.\nXem thông tin hồ sơ\nXem quá trình bảo hành\nLinh kiện đã xuất\n1 phiếu đã tải\n\nPhiếu đã xác nhận xuất kho cho hồ sơ này.\n\nXLK-0002\nĐã xuất\n\n10/09/2026 14:45\n\n2 loại linh kiện · Tổng số lượng 3\n\nLK-0001\n\nĐầu in nhiệt XP-420B\n\n1 linh kiện\n1 mã/hộp\nLK-0002\n\nAdapter nguồn 24V\n\n2 linh kiện\n1 mã/hộp\nXem mã đã xuất\nTải thêm phiếu\nVề lịch sử\n1 phiếu đã tải"
+    },
+    "errors": [],
+    "mutations": [],
+    "domain": {
+      "inbound": {
+        "number": "PN-0005",
+        "documentId": "fixture-inbound-0005",
+        "accepted": 12,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "outbound": {
+        "number": "PX-0004",
+        "documentId": "fixture-outbound-0005-2",
+        "accepted": 10,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "issue": {
+        "post": 1,
+        "commits": 0,
+        "check": 0,
+        "counts": {
+          "codes": 2,
+          "quantity": 3
+        }
+      },
+      "history": {
+        "ids": [
+          "XLK-0002",
+          "XLK-DEMO-OLDER"
+        ],
+        "reads": 2
+      }
+    },
+    "profile": {
+      "longTasks": [
+        {
+          "start": 1358.0999999940395,
+          "duration": 58
+        },
+        {
+          "start": 2522.2000000029802,
+          "duration": 97
+        },
+        {
+          "start": 3093.9000000059605,
+          "duration": 54
+        },
+        {
+          "start": 5063.5,
+          "duration": 74
+        },
+        {
+          "start": 8410.40000000596,
+          "duration": 56
+        }
+      ],
+      "domNodes": 303,
+      "captureMs": 11893
+    },
+    "effects": [
+      {
+        "primitive": "",
+        "target": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-issue",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ComponentScan",
+        "target": "p19-card p19-part",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 220,
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-visual-exit",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "ComponentScan",
+        "target": "p19-card p19-part",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 0.6
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "p07-dialog hn-action-dialog ",
+        "duration": 220,
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-resume",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-history",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-warranty-session",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "WarrantyHistorySelection",
+        "target": "",
+        "duration": 100,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-history",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-issue",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 220,
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-visual-exit",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-issue",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 220,
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-visual-exit",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-issue",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 220,
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-visual-exit",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-issue",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 220,
+        "frames": [
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          },
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-visual-exit",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1
+          },
+          {
+            "opacity": 0
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalPanel",
+        "target": "app-modal p19-sheet",
+        "duration": 160,
+        "frames": [
+          {
+            "opacity": 1,
+            "transform": "translateY(0)"
+          },
+          {
+            "opacity": 0,
+            "transform": "translateY(8px)"
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-main",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "hn-component-issue",
+        "duration": 180,
+        "frames": [
+          {
+            "opacity": 0.7
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ScannerValidation",
+        "target": "p19-hint p24-rejection-note",
+        "duration": 140,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "ScannerValidation",
+        "t": 16,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 37,
+        "opacity": "0.854823",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 43,
+        "opacity": "0.854823",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 60,
+        "opacity": "0.915904",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 75,
+        "opacity": "0.95193",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 90,
+        "opacity": "0.974522",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 107,
+        "opacity": "0.988514",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 122,
+        "opacity": "0.996419",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 138,
+        "opacity": "0.999735",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 154,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 9,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 29,
+        "opacity": "0.808378",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 41,
+        "opacity": "0.808378",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 55,
+        "opacity": "0.882271",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 71,
+        "opacity": "0.926913",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 88,
+        "opacity": "0.956147",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 103,
+        "opacity": "0.975652",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 120,
+        "opacity": "0.988334",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 136,
+        "opacity": "0.995905",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 151,
+        "opacity": "0.999464",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 168,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 15,
+        "opacity": "0.6",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 35,
+        "opacity": "0.669306",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 48,
+        "opacity": "0.808378",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 62,
+        "opacity": "0.882325",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 78,
+        "opacity": "0.926943",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 95,
+        "opacity": "0.956167",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 111,
+        "opacity": "0.975665",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 127,
+        "opacity": "0.988343",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 144,
+        "opacity": "0.995909",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 158,
+        "opacity": "0.999466",
+        "transform": "none"
+      },
+      {
+        "primitive": "SubmitFeedback",
+        "t": 174,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 2,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 26,
+        "opacity": "0.731352",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 34,
+        "opacity": "0.731352",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 49,
+        "opacity": "0.854745",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 67,
+        "opacity": "0.9519",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 87,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 3,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 22,
+        "opacity": "0.731655",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 40,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 9,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 37,
+        "opacity": "1",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "mode": "os-reduced",
+    "checks": [
+      "inbound result160 after verified record; no replay on P12 Back",
+      "outbound result160 after verified record; no replay on P12 Back",
+      "S01 invalid13/0/negative/decimal immediate text and border, IME, cancel with no mutation",
+      "S02 local140/80/off only once per rejected attempt; accepted list and hardware unchanged",
+      "S02 mode/hidden/route cancellation does not resend or replay old errors",
+      "Closed while Post pending rejects immediately; stale CTA cannot commit; resume remains read-only",
+      "S04 reads/pagination/dedup/Back usable without animation, no new issue",
+      "Repeated module/overlay lifecycle releases listeners and cancels handles; logout removes protected UI"
+    ],
+    "geometry": {
+      "P24.S01": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 325,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 773
+          },
+          {
+            "c": "p19-footer",
+            "x": 0,
+            "y": 847,
+            "w": 494,
+            "h": 103
+          },
+          {
+            "c": "app-modal p19-sheet",
+            "x": 0,
+            "y": 279,
+            "w": 494,
+            "h": 671
+          },
+          {
+            "c": "p19-quantity-input",
+            "x": 24,
+            "y": 319,
+            "w": 446,
+            "h": 70
+          },
+          {
+            "c": "p19-sheet-footer",
+            "x": 0,
+            "y": 515,
+            "w": 494,
+            "h": 156
+          }
+        ]
+      },
+      "P24.S02": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 256,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 693
+          },
+          {
+            "c": "p19-hint p24-rejection-note",
+            "x": 20,
+            "y": 670,
+            "w": 454,
+            "h": 71
+          },
+          {
+            "c": "p19-footer",
+            "x": 0,
+            "y": 767,
+            "w": 494,
+            "h": 183
+          }
+        ]
+      },
+      "P24.S03-inbound": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 256,
+        "rects": [
+          {
+            "c": "p04-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 67
+          },
+          {
+            "c": "hn-waiting-web",
+            "x": 36,
+            "y": 87,
+            "w": 422,
+            "h": 561
+          },
+          {
+            "c": "hn-waiting-hero",
+            "x": 36,
+            "y": 87,
+            "w": 422,
+            "h": 247
+          },
+          {
+            "c": "p04-footer",
+            "x": 16,
+            "y": 763,
+            "w": 462,
+            "h": 136
+          }
+        ]
+      },
+      "P24.S03-outbound": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 255,
+        "rects": [
+          {
+            "c": "p05-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 72
+          },
+          {
+            "c": "hn-waiting-web",
+            "x": 42,
+            "y": 94,
+            "w": 410,
+            "h": 561
+          },
+          {
+            "c": "hn-waiting-hero",
+            "x": 42,
+            "y": 94,
+            "w": 410,
+            "h": 247
+          },
+          {
+            "c": "p05-footer",
+            "x": 22,
+            "y": 717,
+            "w": 450,
+            "h": 136
+          }
+        ]
+      },
+      "P24.S04": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 303,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll p20-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 765
+          },
+          {
+            "c": "p19-hint p24-closed-note",
+            "x": 20,
+            "y": 273,
+            "w": 454,
+            "h": 71
+          },
+          {
+            "c": "p19-footer p20-footer",
+            "x": 0,
+            "y": 839,
+            "w": 494,
+            "h": 111
+          }
+        ]
+      }
+    },
+    "text": {
+      "P24.S01": "Xuất linh kiện bảo hành\n1\nQuét mã\n2\nKiểm tra\n3\nKết quả\nBH-001\n\nMáy in nhiệt XP-420B\n\nĐang kiểm tra\nQuét linh kiện hoặc mã hộp\n\nThêm linh kiện cho hồ sơ BH-001.\n\nCamera chưa kết nối\nĐèn chưa sẵn sàng\nNhập tay\n1\nmã đã quét\n1 linh kiện\nLK-0001\n\nĐầu in nhiệt XP-420B\n\n× 1\n\nQuét mã chỉ thêm vào danh sách. Xác nhận xuất mới làm thay đổi tồn kho.\n\nKiểm tra linh kiện\nHộp linh kiện\nLK-0002\n\nAdapter nguồn 24V\n\nBOX-LK-0002-01\nTồn khả dụng\n12 linh kiện\nSố lượng linh kiện cần xuất *\n−\n+\n\nNhập số lượng cần dùng cho hồ sơ BH-001.\n\nSố lượng cần xuất vượt tồn khả dụng của hộp (12).\n\nChỉ xác nhận số lượng. Bước này chưa xuất kho.\n\nXác nhận số lượng\nHủy",
+      "P24.S02": "Kiểm tra mã linh kiện\nBH-001\n\nMáy in nhiệt XP-420B\n\nĐang kiểm tra\nMã hộp chưa thể xuất\n\nHộp chưa được ghi nhận nhập kho. Kiểm tra lại mã hoặc chọn hộp khác.\n\nMã đã quét\nBOX-NOT-RECEIVED\nKho\nKho Hoa Nam\nĐã giữ 1 mã hợp lệ\n\nTrong phiếu\nDRAFT-DEMO-9108d3e7-7956-4720-80f0-920e6366bc82\n\nMã này chưa được thêm vào danh sách. Các mã đã quét hợp lệ vẫn được giữ lại.\n\nQuét mã khác\nSửa mã vừa nhập",
+      "P24.S03-inbound": "Đã gửi phiếu\nĐã gửi phiếu nhập\n✓\nĐã gửi phiếu\n2\nChờ xử lý trên Web\n\nChưa ghi sổ · Chưa đổi tồn.\n\nMã phiếu\nPN-0005\nKho\nKho Hoa Nam\nĐã ghi nhận\n12 mã\nThời gian gửi\n10/09/2026 11:25\nTồn kho chỉ cập nhật sau khi phiếu được ghi sổ thành công trên Web.\nXem phiếu PN-0005\nNhập lượt mới\nXem lịch sử\nTrang chủ",
+      "P24.S03-outbound": "Đã gửi phiếu\nĐã gửi phiếu xuất\n✓\nĐã gửi phiếu\n2\nChờ xử lý trên Web\n\nChưa ghi sổ · Chưa đổi tồn.\n\nMã phiếu\nPX-0004\nKho\nKho Hoa Nam\nĐã ghi nhận\n10 mã\nThời gian gửi\n09/09/2026 14:32\nTồn kho chỉ cập nhật sau khi phiếu được ghi sổ thành công trên Web.\nXem phiếu PX-0004\nXem lịch sử\nVề Trang chủ\nTrang chủ\nChứng từ\nQuét mã\nLịch sử\nCá nhân",
+      "P24.S04": "Hồ sơ bảo hành\nBH-002\n\nMáy quét mã vạch ZD421\n\nĐã trả khách\n\nSN:\nHN12346\n\nKhách hàng\nĐại lý Thành Công\nHồ sơ đã trả khách, chỉ đọc. Bạn vẫn có thể xem các phiếu đã xuất.\nXem thông tin hồ sơ\nXem quá trình bảo hành\nLinh kiện đã xuất\n1 phiếu đã tải\n\nPhiếu đã xác nhận xuất kho cho hồ sơ này.\n\nXLK-0002\nĐã xuất\n\n10/09/2026 14:45\n\n2 loại linh kiện · Tổng số lượng 3\n\nLK-0001\n\nĐầu in nhiệt XP-420B\n\n1 linh kiện\n1 mã/hộp\nLK-0002\n\nAdapter nguồn 24V\n\n2 linh kiện\n1 mã/hộp\nXem mã đã xuất\nTải thêm phiếu\nVề lịch sử\n1 phiếu đã tải"
+    },
+    "errors": [],
+    "mutations": [],
+    "domain": {
+      "inbound": {
+        "number": "PN-0005",
+        "documentId": "fixture-inbound-0005",
+        "accepted": 12,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "outbound": {
+        "number": "PX-0004",
+        "documentId": "fixture-outbound-0005-2",
+        "accepted": 10,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "issue": {
+        "post": 1,
+        "commits": 0,
+        "check": 0,
+        "counts": {
+          "codes": 2,
+          "quantity": 3
+        }
+      },
+      "history": {
+        "ids": [
+          "XLK-0002",
+          "XLK-DEMO-OLDER"
+        ],
+        "reads": 2
+      }
+    },
+    "profile": {
+      "longTasks": [
+        {
+          "start": 1099.4000000059605,
+          "duration": 66
+        },
+        {
+          "start": 2319.2000000029802,
+          "duration": 95
+        },
+        {
+          "start": 2854.9000000059605,
+          "duration": 52
+        },
+        {
+          "start": 4856.800000011921,
+          "duration": 63
+        },
+        {
+          "start": 7722.600000008941,
+          "duration": 58
+        }
+      ],
+      "domNodes": 303,
+      "captureMs": 10971
+    },
+    "effects": [
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "",
+        "target": "",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": false
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "SharedModalBackdrop",
+        "target": "app-modal-host",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      },
+      {
+        "primitive": "ScannerValidation",
+        "target": "p19-hint p24-rejection-note",
+        "duration": 80,
+        "frames": [
+          {
+            "opacity": 0.65
+          },
+          {
+            "opacity": 1
+          }
+        ],
+        "cancelled": true
+      }
+    ],
+    "samples": [
+      {
+        "primitive": "ScannerValidation",
+        "t": 16,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 32,
+        "opacity": "0.832419",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 48,
+        "opacity": "0.936077",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 64,
+        "opacity": "0.978708",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 79,
+        "opacity": "0.996422",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 95,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 7,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 22,
+        "opacity": "0.832728",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 37,
+        "opacity": "0.936189",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 52,
+        "opacity": "0.978757",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 78,
+        "opacity": "",
+        "transform": ""
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 9,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 24,
+        "opacity": "0.832687",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 41,
+        "opacity": "1",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 3,
+        "opacity": "0.65",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 19,
+        "opacity": "0.832708",
+        "transform": "none"
+      },
+      {
+        "primitive": "ScannerValidation",
+        "t": 38,
+        "opacity": "1",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "mode": "off",
+    "checks": [
+      "inbound result160 after verified record; no replay on P12 Back",
+      "outbound result160 after verified record; no replay on P12 Back",
+      "S01 invalid13/0/negative/decimal immediate text and border, IME, cancel with no mutation",
+      "S02 local140/80/off only once per rejected attempt; accepted list and hardware unchanged",
+      "S02 mode/hidden/route cancellation does not resend or replay old errors",
+      "Closed while Post pending rejects immediately; stale CTA cannot commit; resume remains read-only",
+      "S04 reads/pagination/dedup/Back usable without animation, no new issue",
+      "Repeated module/overlay lifecycle releases listeners and cancels handles; logout removes protected UI"
+    ],
+    "geometry": {
+      "P24.S01": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 325,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 773
+          },
+          {
+            "c": "p19-footer",
+            "x": 0,
+            "y": 847,
+            "w": 494,
+            "h": 103
+          },
+          {
+            "c": "app-modal p19-sheet",
+            "x": 0,
+            "y": 279,
+            "w": 494,
+            "h": 671
+          },
+          {
+            "c": "p19-quantity-input",
+            "x": 24,
+            "y": 319,
+            "w": 446,
+            "h": 70
+          },
+          {
+            "c": "p19-sheet-footer",
+            "x": 0,
+            "y": 515,
+            "w": 494,
+            "h": 156
+          }
+        ]
+      },
+      "P24.S02": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 256,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 693
+          },
+          {
+            "c": "p19-hint p24-rejection-note",
+            "x": 20,
+            "y": 670,
+            "w": 454,
+            "h": 71
+          },
+          {
+            "c": "p19-footer",
+            "x": 0,
+            "y": 767,
+            "w": 494,
+            "h": 183
+          }
+        ]
+      },
+      "P24.S03-inbound": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 256,
+        "rects": [
+          {
+            "c": "p04-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 67
+          },
+          {
+            "c": "hn-waiting-web",
+            "x": 36,
+            "y": 87,
+            "w": 422,
+            "h": 561
+          },
+          {
+            "c": "hn-waiting-hero",
+            "x": 36,
+            "y": 87,
+            "w": 422,
+            "h": 247
+          },
+          {
+            "c": "p04-footer",
+            "x": 16,
+            "y": 763,
+            "w": 462,
+            "h": 136
+          }
+        ]
+      },
+      "P24.S03-outbound": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 255,
+        "rects": [
+          {
+            "c": "p05-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 72
+          },
+          {
+            "c": "hn-waiting-web",
+            "x": 42,
+            "y": 94,
+            "w": 410,
+            "h": 561
+          },
+          {
+            "c": "hn-waiting-hero",
+            "x": 42,
+            "y": 94,
+            "w": 410,
+            "h": 247
+          },
+          {
+            "c": "p05-footer",
+            "x": 22,
+            "y": 717,
+            "w": 450,
+            "h": 136
+          }
+        ]
+      },
+      "P24.S04": {
+        "frame": [
+          494,
+          950
+        ],
+        "nodes": 303,
+        "rects": [
+          {
+            "c": "p19-header",
+            "x": 0,
+            "y": 0,
+            "w": 494,
+            "h": 86
+          },
+          {
+            "c": "p19-scroll p20-scroll",
+            "x": 0,
+            "y": 74,
+            "w": 494,
+            "h": 765
+          },
+          {
+            "c": "p19-hint p24-closed-note",
+            "x": 20,
+            "y": 273,
+            "w": 454,
+            "h": 71
+          },
+          {
+            "c": "p19-footer p20-footer",
+            "x": 0,
+            "y": 839,
+            "w": 494,
+            "h": 111
+          }
+        ]
+      }
+    },
+    "text": {
+      "P24.S01": "Xuất linh kiện bảo hành\n1\nQuét mã\n2\nKiểm tra\n3\nKết quả\nBH-001\n\nMáy in nhiệt XP-420B\n\nĐang kiểm tra\nQuét linh kiện hoặc mã hộp\n\nThêm linh kiện cho hồ sơ BH-001.\n\nCamera chưa kết nối\nĐèn chưa sẵn sàng\nNhập tay\n1\nmã đã quét\n1 linh kiện\nLK-0001\n\nĐầu in nhiệt XP-420B\n\n× 1\n\nQuét mã chỉ thêm vào danh sách. Xác nhận xuất mới làm thay đổi tồn kho.\n\nKiểm tra linh kiện\nHộp linh kiện\nLK-0002\n\nAdapter nguồn 24V\n\nBOX-LK-0002-01\nTồn khả dụng\n12 linh kiện\nSố lượng linh kiện cần xuất *\n−\n+\n\nNhập số lượng cần dùng cho hồ sơ BH-001.\n\nSố lượng cần xuất vượt tồn khả dụng của hộp (12).\n\nChỉ xác nhận số lượng. Bước này chưa xuất kho.\n\nXác nhận số lượng\nHủy",
+      "P24.S02": "Kiểm tra mã linh kiện\nBH-001\n\nMáy in nhiệt XP-420B\n\nĐang kiểm tra\nMã hộp chưa thể xuất\n\nHộp chưa được ghi nhận nhập kho. Kiểm tra lại mã hoặc chọn hộp khác.\n\nMã đã quét\nBOX-NOT-RECEIVED\nKho\nKho Hoa Nam\nĐã giữ 1 mã hợp lệ\n\nTrong phiếu\nDRAFT-DEMO-62f07e9f-f2ef-40b9-b944-8d9f8fc02482\n\nMã này chưa được thêm vào danh sách. Các mã đã quét hợp lệ vẫn được giữ lại.\n\nQuét mã khác\nSửa mã vừa nhập",
+      "P24.S03-inbound": "Đã gửi phiếu\nĐã gửi phiếu nhập\n✓\nĐã gửi phiếu\n2\nChờ xử lý trên Web\n\nChưa ghi sổ · Chưa đổi tồn.\n\nMã phiếu\nPN-0005\nKho\nKho Hoa Nam\nĐã ghi nhận\n12 mã\nThời gian gửi\n10/09/2026 11:25\nTồn kho chỉ cập nhật sau khi phiếu được ghi sổ thành công trên Web.\nXem phiếu PN-0005\nNhập lượt mới\nXem lịch sử\nTrang chủ",
+      "P24.S03-outbound": "Đã gửi phiếu\nĐã gửi phiếu xuất\n✓\nĐã gửi phiếu\n2\nChờ xử lý trên Web\n\nChưa ghi sổ · Chưa đổi tồn.\n\nMã phiếu\nPX-0004\nKho\nKho Hoa Nam\nĐã ghi nhận\n10 mã\nThời gian gửi\n09/09/2026 14:32\nTồn kho chỉ cập nhật sau khi phiếu được ghi sổ thành công trên Web.\nXem phiếu PX-0004\nXem lịch sử\nVề Trang chủ\nTrang chủ\nChứng từ\nQuét mã\nLịch sử\nCá nhân",
+      "P24.S04": "Hồ sơ bảo hành\nBH-002\n\nMáy quét mã vạch ZD421\n\nĐã trả khách\n\nSN:\nHN12346\n\nKhách hàng\nĐại lý Thành Công\nHồ sơ đã trả khách, chỉ đọc. Bạn vẫn có thể xem các phiếu đã xuất.\nXem thông tin hồ sơ\nXem quá trình bảo hành\nLinh kiện đã xuất\n1 phiếu đã tải\n\nPhiếu đã xác nhận xuất kho cho hồ sơ này.\n\nXLK-0002\nĐã xuất\n\n10/09/2026 14:45\n\n2 loại linh kiện · Tổng số lượng 3\n\nLK-0001\n\nĐầu in nhiệt XP-420B\n\n1 linh kiện\n1 mã/hộp\nLK-0002\n\nAdapter nguồn 24V\n\n2 linh kiện\n1 mã/hộp\nXem mã đã xuất\nTải thêm phiếu\nVề lịch sử\n1 phiếu đã tải"
+    },
+    "errors": [],
+    "mutations": [],
+    "domain": {
+      "inbound": {
+        "number": "PN-0005",
+        "documentId": "fixture-inbound-0005",
+        "accepted": 12,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "outbound": {
+        "number": "PX-0004",
+        "documentId": "fixture-outbound-0005-2",
+        "accepted": 10,
+        "recorded": true,
+        "outcome": "recorded",
+        "recordCalls": 1,
+        "inventoryDelta": 0
+      },
+      "issue": {
+        "post": 1,
+        "commits": 0,
+        "check": 0,
+        "counts": {
+          "codes": 2,
+          "quantity": 3
+        }
+      },
+      "history": {
+        "ids": [
+          "XLK-0002",
+          "XLK-DEMO-OLDER"
+        ],
+        "reads": 2
+      }
+    },
+    "profile": {
+      "longTasks": [
+        {
+          "start": 2671.2000000029802,
+          "duration": 90
+        },
+        {
+          "start": 3284.4000000059605,
+          "duration": 55
+        },
+        {
+          "start": 5280.800000011921,
+          "duration": 66
+        },
+        {
+          "start": 8447.70000000298,
+          "duration": 52
+        }
+      ],
+      "domNodes": 303,
+      "captureMs": 12411
+    },
+    "effects": [],
+    "samples": []
+  }
+]

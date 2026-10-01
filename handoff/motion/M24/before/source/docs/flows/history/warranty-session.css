@@ -1,0 +1,73 @@
+/* P23 B23 composition, adapting existing P08 controls to the locked 494x950 shell. */
+#home-app .hn-screen.p23-screen{height:950px;min-height:950px;overflow:hidden;background:#f3f9fb}
+#home-app .p23-screen>.hn-nav{display:none}
+#home-app .hn-warranty-session{flex:1;min-height:0;min-width:0;display:flex;overflow:hidden}
+.p23-app{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0;font:16px/1.5 HN-P22,Arial,sans-serif;color:#12384e;background:#f3f9fb}
+.p23-app *{box-sizing:border-box}
+.p23-app button,.p23-app input{font:inherit}
+.p23-app button{cursor:pointer;min-height:44px;touch-action:manipulation}
+.p23-app button:focus-visible,.p23-app input:focus-visible{outline:3px solid #008cff;outline-offset:-3px}
+.p23-app .p08-header{gap:12px}.p23-app .p08-header button{width:44px;height:44px;flex-shrink:0}
+#home-app .p23-app h1{font-size:26px;line-height:1.25}
+.p23-dock{flex-shrink:0;background:#f3f9fb;border-radius:24px 24px 0 0;margin-top:-12px;padding:16px 20px 0}
+.p23-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:20px 20px 24px;scrollbar-width:none;background:#f3f9fb;border-radius:24px 24px 0 0;margin-top:-12px}
+.p23-dock+.p23-scroll{margin:0;border-radius:0;padding-top:0}
+.p23-app h2{font-size:22px;line-height:1.4;margin:0 0 14px}.p23-app h3{font-size:17px;margin:0}
+.p23-intro{font-size:14px;color:#527186;margin:0 0 12px!important}
+.p23-app .p08-tabs{gap:6px;margin-bottom:10px}.p23-app .p08-tabs button{font-size:14px;white-space:normal;min-height:44px;padding:6px}
+.p23-app .p08-search{margin-bottom:10px}.p23-app .p08-filter-summary button{display:flex;align-items:center;gap:8px;border:0;background:transparent;color:#527186;font-size:14px;padding:0 4px}
+.p23-app .p08-results-toolbar{margin:0 0 10px;font-size:13px}.p23-app .p08-result-count{margin:0!important}
+.p23-card{padding:18px;border:1px solid #dce9ef;border-radius:12px;background:white;min-width:0;margin-bottom:14px}
+.p23-link{display:block;width:100%;text-align:left;color:inherit}.p23-link:hover{background:#f8fcfe;border-color:#9abfce}.p23-link:active{background:#edf7fa}
+.p23-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}.p23-row>strong{min-width:0;overflow-wrap:anywhere}
+.p23-row .p08-chip{flex-shrink:0;font-size:12px}.p23-card p{margin:10px 0!important;overflow-wrap:anywhere}
+.p23-meta{font-size:14px;color:#527186;overflow-wrap:anywhere}.p23-title{display:flex;align-items:center;gap:12px;min-width:0}.p23-title strong{overflow-wrap:anywhere}
+.p23-card .p23-clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.p23-id{font-size:20px;overflow-wrap:anywhere}.p23-end{text-align:center;color:#527186;font-size:13px;margin:24px 0!important}
+.p23-group{display:flex;justify-content:space-between;font-size:16px;margin:16px 0 12px;gap:12px}.p23-group span{font-size:13px;color:#527186}
+.p23-timeline{list-style:none;padding:0;margin:0 0 28px}.p23-timeline li{position:relative;margin-left:15px;border-left:1px solid #c6dde5;padding:0 0 24px 30px;min-width:0}.p23-timeline li:last-child{border:0}
+.p23-event-dot{position:absolute;left:-15px;top:0;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e1f5eb;color:#277e68}
+.p23-timeline p{margin:6px 0!important;color:#527186;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}
+.p23-notice{padding:14px;border-radius:12px;background:#eaf5fa;color:#0c6286;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+.p23-empty{text-align:center;display:grid;justify-items:center;align-content:center;gap:20px;min-height:320px;padding:30px 15px}.p23-empty h2{margin:0}.p23-empty p{color:#527186;margin:0}
+.p23-kv{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid #dce9ef;font-size:14px}.p23-kv:last-child{border:0}.p23-kv>span{color:#527186}.p23-kv strong{display:block;text-align:right;white-space:pre-wrap;overflow-wrap:anywhere}
+.p23-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:18px 8px}.p23-stats>div{text-align:center;border-right:1px solid #dce9ef;padding:0 6px;min-width:0}.p23-stats>div:last-child{border:0}.p23-stats strong{display:block;font-size:28px;color:#0c6286;overflow-wrap:anywhere;line-height:1.3}.p23-stats strong.p23-na{font-size:15px;min-height:36px;align-content:center}.p23-stats span{font-size:12px;color:#527186}
+.p23-code{padding:14px 0;border-bottom:1px solid #dce9ef}.p23-code:first-child{padding-top:0}.p23-code:last-child{border:0;padding-bottom:0}.p23-code strong{display:block;overflow-wrap:anywhere;white-space:pre-wrap}
+.p23-footer{flex-shrink:0;display:grid;gap:10px;padding:16px 20px 20px;background:white;border-top:1px solid #dce9ef}.p23-footer button{min-height:56px;border:1px solid #dce9ef;border-radius:12px;background:white;color:#0c6286;font-weight:650}
+.p23-reload{border:1px solid #dce9ef;border-radius:10px;background:white;color:#0c6286;padding:6px 12px;min-height:44px}.p23-read-status{font-size:13px;color:#795315;margin-bottom:12px;overflow-wrap:anywhere}
+#home-app .p23-app .hn-read-more{min-height:44px}.p23-app button:disabled{cursor:wait;opacity:.6}
+/* Compact date/count row follows approved P22 dock; original controls stay shared. */
+.p23-dock{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px}
+.p23-dock>.p23-intro,.p23-dock>.p08-search,.p23-dock>.p08-tabs{grid-column:1/-1}
+.p23-dock>.p08-results-toolbar{gap:8px;margin:0;align-self:center;font-size:12px}
+.p23-dock>.p08-filter-summary{min-width:0}.p23-app .p08-filter-summary button{font-size:12px;line-height:1.5}
+.p23-app .p08-tabs button{flex:1!important;height:44px;white-space:nowrap;font-size:13px}
+.p23-kv{padding:10px 0}.p23-timeline li{padding-bottom:20px}
+.p23-timeline p{line-height:1.5}
+/* r02: scoped adaptation of shared controls; Home/P03 footer is untouched. */
+.p23-dock>.p08-link{grid-column:1/-1;justify-self:end;font-size:13px;margin:0 0 6px}
+.p23-dock [hidden]{display:none!important}
+.p23-dock .p08-search{position:relative}.p23-dock .p08-search label{padding-right:44px}
+.p23-dock input::-webkit-search-cancel-button{display:none}
+.p23-dock .p08-search>.p23-clear-query{position:absolute;right:66px;top:3px;width:44px;height:44px;min-height:44px;border:0;background:transparent;color:#527186;font-size:24px;padding:0}
+.p23-dock>.p08-results-toolbar{font-size:12px;gap:6px}.p23-dock .p08-toolbar-actions{gap:0}
+.p23-dock .p23-reload,.p23-detail-toolbar .p23-reload{font-size:13px;padding:6px 10px;min-width:74px}
+.p23-detail-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-shrink:0;padding:14px 20px 10px;margin-top:-12px;border-radius:24px 24px 0 0;background:#f3f9fb;font-size:13px;color:#527186}
+.p23-detail-toolbar+.p23-scroll{margin-top:0;border-radius:0;padding-top:4px}
+.p23-link{padding:16px}.p23-viewed{border-color:#87aebe;box-shadow:inset 3px 0 #0c6286}
+.p23-session-id{font-weight:650;font-size:16px;overflow-wrap:anywhere}.p23-card-end{font-size:13px;color:#527186}
+.p23-row>.p23-title{flex:1}.p23-row>.p08-chip{max-width:48%;white-space:normal}
+.p23-latest{display:inline-block;font-size:12px;color:#0c6286;background:#eaf5fa;padding:2px 8px;border-radius:6px;margin:4px 0}
+.p23-event-meta{display:flex;gap:6px 12px;flex-wrap:wrap;align-items:flex-start;color:#527186;font-size:13px;margin:6px 0}
+.p23-event-meta time{flex-shrink:0}.p23-event-meta>div{min-width:0;flex:1;min-inline-size:95px}
+.p23-timeline .p23-event-meta p{margin:0!important;font-size:13px}
+.p23-timeline li{padding-bottom:24px}
+.p23-related{margin:20px 0}.p23-related h2{font-size:18px}
+.p23-related-link{display:flex;align-items:center;gap:12px;width:100%;padding:12px;border:1px solid #dce9ef;border-radius:12px;background:white;color:#12384e;text-align:left;margin:8px 0}
+.p23-related-link>span:nth-child(2){flex:1;min-width:0}.p23-related-link strong,.p23-related-link small{display:block;overflow-wrap:anywhere}.p23-related-link small{color:#527186;font-size:13px;margin-top:4px}
+/* r03: long event metadata remains readable; no change to locked app shell/nav. */
+.p23-timeline h3{overflow-wrap:anywhere;white-space:pre-wrap}
+.p23-event-meta time{flex-shrink:1;min-width:0;max-width:100%;overflow-wrap:anywhere;white-space:pre-wrap}
+.p23-app button[aria-disabled="true"]{cursor:wait;opacity:.6}
+.p23-app .p08-search [data-p23="filter"]{position:relative}
+.p23-event-meta>.p23-event-time{flex:0 1 auto;min-inline-size:0;max-width:100%}
