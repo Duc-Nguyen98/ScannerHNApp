@@ -1,0 +1,43 @@
+{
+  "status": "PASS_PUBLIC_FLOW_REVIEW_AND_FULL_GIT_ARCHIVE",
+  "verifiedAt": "2026-10-01T03:06:51.905Z",
+  "testedCommit": "792c636329e1b1f875f07ae98caf494935635a18",
+  "reviewTree": "e17970b7153a9b01f48e07bdcaf5f3ca10f89199",
+  "build": "final-3b1249193760",
+  "url": "https://duc-nguyen98.github.io/ScannerHNApp/review/?view=review&panel=P01.S01&scenario=default&motion=auto",
+  "diagramCount": 50,
+  "downloadLinks": 150,
+  "boardsWithFoundation": 25,
+  "appBoards": 24,
+  "appPanels": 91,
+  "checks": [
+    "Default desktop comparison follows the active board",
+    "All 50 images and 150 PNG/SVG/Mermaid links load",
+    "Changing diagrams does not reload iframe or change the draft",
+    "Zoom, fit and keyboard tabs work",
+    "Close/reopen preserves the current step and follows app state",
+    "360/390/430/1440 layouts have no horizontal overflow; app survives mobile comparison",
+    "Independent P00 diagram and URL state survive refresh"
+  ],
+  "pageErrors": [],
+  "httpFailures": [],
+  "crossBoardFollow": "P04 -> P09 -> P04; draft preserved; recordCalls=0",
+  "nodeTests": {
+    "passed": 765,
+    "failed": 0
+  },
+  "archive": {
+    "sourceFiles": 22338,
+    "sourceBytes": 4956080478,
+    "snapshotCommit": "a4200b5ff84cf4f307af0200bff7e88d207802d2",
+    "branch": "archive/full-workspace-20261001",
+    "exactBytesVerified": true,
+    "allIntermediateLogsAndTraces": true
+  },
+  "gallery": "Original canonical Git blob restored on main; exact raw working-copy bytes remain in archive snapshot",
+  "limits": [
+    "UI fixture only; backend/hardware not certified",
+    "One pre-existing incomplete trace retained with its checksum",
+    "Primary local checkout/index not reset or cleaned"
+  ]
+}

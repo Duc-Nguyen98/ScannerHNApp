@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "base": "https://duc-nguyen98.github.io/ScannerHNApp/review/",
+  "checks": [
+    "Default desktop comparison follows the active board",
+    "All 50 images and 150 PNG/SVG/Mermaid links load",
+    "Changing diagrams does not reload iframe or change the draft",
+    "Zoom, fit and keyboard tabs work",
+    "Close/reopen preserves the current step and follows app state",
+    "360/390/430/1440 layouts have no horizontal overflow; app survives mobile comparison",
+    "Independent P00 diagram and URL state survive refresh"
+  ],
+  "errors": [],
+  "failed": []
+}
