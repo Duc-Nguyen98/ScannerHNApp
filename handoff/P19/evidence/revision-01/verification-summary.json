@@ -1,0 +1,44 @@
+{
+  "syntax": "PASS",
+  "node": {
+    "tests": 100,
+    "pass": 100,
+    "fail": 0,
+    "log": "node-tests.txt"
+  },
+  "reports": [
+    {
+      "file": "after/results.json",
+      "groups": 9,
+      "status": "PASS"
+    },
+    {
+      "file": "edges/results.json",
+      "groups": 8,
+      "status": "PASS"
+    },
+    {
+      "file": "p09-regression/navigation-results.json",
+      "groups": 11,
+      "status": "PASS"
+    },
+    {
+      "file": "p18-logout-regression/results.json",
+      "groups": 3,
+      "status": "PASS"
+    },
+    {
+      "file": "footer/results.json",
+      "groups": 4,
+      "status": "PASS"
+    }
+  ],
+  "coverage": {
+    "prompts": 24,
+    "boards": 24,
+    "panels": 91,
+    "uniquePanels": 91
+  },
+  "visual": "REVIEW_PENDING",
+  "integration": "BLOCKED_PRODUCTION"
+}

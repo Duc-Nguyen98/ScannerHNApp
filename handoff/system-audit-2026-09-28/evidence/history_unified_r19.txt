@@ -1,0 +1,21 @@
+PASS Shared full shell/search/filter on all history lists; per-business source statuses
+PASS NFC type/status/date/search combined; invalid status cleared on type switch; Back restores
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('iframe').contentFrame().locator('[data-action="warranty"]')[22m
+
+    at hub (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_history_unified_r19.cjs:10:140)
+    at async C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_history_unified_r19.cjs:38:3
+    at async check (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_history_unified_r19.cjs:9:32)
+    at async C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_history_unified_r19.cjs:37:2 {
+  log: [
+    `  - waiting for locator('iframe').contentFrame().locator('[data-action="warranty"]')`
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

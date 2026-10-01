@@ -1,0 +1,244 @@
+/* B07 estimated geometry adapted to the existing Home reference shell 494×950. */
+/* P07 has its own inner scroller. Avoid a reserved outer gutter clipping the
+   right edge of the fixed preview in Chromium; real scrollbar width is still
+   handled by Home's clientWidth-based fit. This override is scoped to P07. */
+html:has(#home-app:not([hidden]) .p07-screen){scrollbar-gutter:auto}
+#home-app .hn-screen.p07-screen{height:950px;min-height:950px;overflow:hidden;background:#fbfdff}
+#home-app .hn-nfc{flex:1;min-height:0;min-width:0;display:flex;overflow:hidden}
+#home-app .p07-wizard>.hn-nav{display:none}
+#home-app .p07-app{--p07-page-inset:18px;--p07-card-inset:8px;--p07-text-inset:12px;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;font:20px/1.35 Arial,sans-serif;color:#061568;background:#fcfeff}
+#home-app .p07-app *{box-sizing:border-box}
+#home-app .p07-header{display:flex;align-items:center;gap:18px;flex:0 0 86px;padding:16px 20px 24px;background:linear-gradient(115deg,#04334c,#00577c);color:#fff}
+#home-app .p07-header h1{font-size:26px;line-height:1.2;font-weight:600;flex:1}
+#home-app .p07-header>span{font-size:18px;white-space:nowrap}
+#home-app .p07-header button{padding:5px;background:none;border:0;color:#fff;display:grid;place-items:center;border-radius:8px}
+#home-app .p07-header:has([data-p07="begin"]) h1{padding-left:64px}
+#home-app .p07-icon{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;vertical-align:middle}
+#home-app .p07-body{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden;border-radius:24px 24px 0 0;margin-top:-12px;background:#fcfeff}
+#home-app .p07-scroll{flex:1;min-height:0;min-width:0;overflow:auto;padding:16px var(--p07-page-inset) 24px;scrollbar-width:none;scrollbar-gutter:auto;overscroll-behavior:contain}
+#home-app .p07-screen:not(.p07-wizard) .p07-body{margin-bottom:24px}
+#home-app .p07-app button{font:inherit;cursor:pointer}
+#home-app .p07-app button:disabled{cursor:not-allowed}
+#home-app .p07-app button:focus-visible,#home-app .p07-app input:focus-visible{outline:3px solid #008cff;outline-offset:2px}
+#home-app .p07-entry{display:flex;align-items:center;gap:16px;width:100%;border:1px solid #e1effd;border-radius:14px;background:#f0f7fd;padding:8px;margin-bottom:14px;text-align:left;color:inherit}
+#home-app .p07-entry>span:nth-child(2){flex:1;min-width:0}
+#home-app .p07-entry strong{display:block;font-size:20px}
+#home-app .p07-app small{display:block;color:#55729f;font-size:17px;line-height:1.4;font-weight:400;overflow-wrap:anywhere}
+#home-app .p07-entry small{margin-top:3px}
+#home-app .p07-entry>.p07-icon{color:#0073fc;width:22px}
+#home-app .p07-nfc-tile{display:grid;place-items:center;width:74px;height:96px;flex-shrink:0;border-radius:14px;background:linear-gradient(110deg,#f1f1f1,#fafafa);color:#0078ff}
+#home-app .p07-nfc-tile>.p07-icon{width:44px;height:44px}
+#home-app .p07-entry .p07-nfc-tile,#home-app .p07-tag-hero .p07-nfc-tile{width:70px;height:70px;background:linear-gradient(120deg,#2189bf,#3399ce);color:white;border-radius:12px}
+#home-app .p07-search-row{display:flex;gap:14px;margin-bottom:14px;height:50px}
+#home-app .p07-search-row :is(label,.p07-search-field){display:flex;align-items:center;gap:10px;min-width:0;flex:1;border:1px solid #d6eaff;border-radius:12px;background:#f4f9ff;padding:0 12px;color:#0072ff}
+#home-app .p07-search-row input{min-width:0;width:100%;height:46px;background:none;border:0;font:17px Arial;color:#153e7c}
+#home-app .p07-search-row input::placeholder{color:#5474a1}
+#home-app .p07-search-row>button{width:54px;border:0;border-radius:12px;background:linear-gradient(120deg,#0089b6,#00658e);color:white}
+#home-app .p07-tabs{display:flex;gap:7px;margin-bottom:14px}
+#home-app .p07-tabs button{flex:1;min-width:0;font-size:16px;font-weight:600;white-space:nowrap;padding:12px 6px;border:0;border-radius:13px;background:#edf6ff;color:#071568}
+#home-app .p07-tabs button[aria-selected="true"]{background:linear-gradient(120deg,#008fbb,#006d96);color:white}
+#home-app .p07-list{display:grid;gap:10px}
+#home-app .p07-tag{display:flex;align-items:center;gap:16px;padding:10px 9px;width:100%;min-width:0;border:1px solid #dfedfc;border-radius:14px;color:inherit;background:white;text-align:left}
+#home-app .p07-tag-copy{flex:1;min-width:0}
+#home-app .p07-tag-top{display:flex;justify-content:space-between;align-items:center;gap:4px;margin-bottom:3px;flex-wrap:wrap}
+#home-app .p07-tag-copy b{display:block;font-size:18px;font-weight:500;overflow-wrap:anywhere}
+#home-app .p07-tag-copy small{font-size:16px}
+#home-app .p07-tag>.p07-icon{width:15px;color:#0074ff}
+#home-app .p07-chip{display:inline-block;white-space:normal;text-align:center;padding:4px 12px;border-radius:14px;font-size:17px;line-height:1.25;font-weight:500}
+#home-app .p07-chip.linked{color:#00a55b;background:#dcfae9}
+#home-app .p07-chip.unlinked{color:#ef8a00;background:#fff3da}
+#home-app .p07-chip.locked{color:red;background:#ffe8eb}
+#home-app .p07-tag .p07-chip{font-size:16px;padding:4px 10px}
+#home-app .p07-section{border:1px solid #dfedfc;border-radius:12px;background:linear-gradient(100deg,#fff,#f8fbfe);margin-bottom:16px;overflow:hidden}
+#home-app .p07-section h2{font-size:21px;line-height:1.25;padding:11px 12px 8px;font-weight:600}
+#home-app .p07-hint{font-size:17px;color:#55729f;padding:0 12px 16px;line-height:1.45}
+#home-app .p07-product{display:flex;align-items:center;gap:16px;padding:10px 12px;margin:0 var(--p07-card-inset) var(--p07-card-inset);border:1px solid #e1edfc;border-radius:12px;background:#fff;color:inherit;min-width:0;text-align:left;width:calc(100% - 2 * var(--p07-card-inset))}
+#home-app .p07-product img{width:91px;height:91px;object-fit:contain;background:#f7f7f7;border-radius:12px;flex-shrink:0}
+#home-app .p07-product>span{flex:1;min-width:0;overflow-wrap:anywhere}
+#home-app .p07-product strong{display:block;font-size:23px;line-height:1.4}
+#home-app .p07-product b{display:block;font-size:18px;font-weight:500;margin-bottom:3px}
+#home-app .p07-product>.p07-icon{width:20px;color:#52729c}
+#home-app .p07-divider{color:#d2e4f6;padding:0 6px}
+#home-app .p07-warehouse{display:flex;align-items:center;gap:18px;margin:0 var(--p07-card-inset) var(--p07-card-inset);padding:12px;border-radius:10px;background:linear-gradient(100deg,#f6fbff,#edf6fe)}
+#home-app .p07-warehouse>.p07-icon{color:#0064ed}
+#home-app .p07-warehouse>div{flex:1;min-width:0;overflow-wrap:anywhere}
+#home-app .p07-warehouse strong{font-size:20px}
+#home-app .p07-warehouse small{margin-top:4px}
+#home-app .p07-warehouse>.p07-icon:last-child{width:24px;color:#597ca7}
+#home-app .p07-touch{text-align:center;margin:0 0 22px}
+#home-app .p07-touch>strong{display:block;font-size:22px;line-height:1.3;margin-top:5px}
+#home-app .p07-touch>p{font-size:18px;color:#5474a1;margin-top:6px}
+/* Decorative NFC waves: isolated behind the phone, never part of hit testing. */
+#home-app .p07-art-frame{position:relative;isolation:isolate;height:194px;display:grid;place-items:center;overflow:hidden;pointer-events:none}
+/* Separate original B07 backdrop, animated waves, and opaque phone foreground. */
+#home-app .p07-art-frame::before{content:'';position:absolute;z-index:0;width:244px;height:191px;background:url('./assets/B07-artwork-source.png') -512px -383px / 1672px 941px no-repeat}
+#home-app .p07-phone{position:relative;z-index:2;width:244px;height:191px;background:url('./assets/B07-artwork-source.png') -512px -383px / 1672px 941px no-repeat;clip-path:inset(41px 73px 0 round 17px 17px 0 0)}
+#home-app .p07-wave{position:absolute;top:120.5px;margin-top:-61px;width:122px;height:122px;border:0;border-radius:50%;background:#8fceff;opacity:0;z-index:1;animation:p07-nfc-ripple 3.2s ease-out infinite both}
+#home-app .p07-wave:nth-child(2){animation-delay:-1.0666667s}
+#home-app .p07-wave:nth-child(3){animation-delay:-2.1333333s}
+@keyframes p07-nfc-ripple{0%{transform:scale(.65);opacity:0}20%{opacity:.12}100%{transform:scale(2);opacity:0}}
+#home-app .p07-app dl{margin:0;padding:0 var(--p07-text-inset) 7px}
+#home-app .p07-app dl>div{display:flex;align-items:center;gap:12px;min-height:48px;border-top:1px solid #e5effb;padding:10px 0;min-width:0}
+#home-app .p07-app dt{font-size:18px;color:#56749f;flex:1;min-width:0;overflow-wrap:anywhere}
+#home-app .p07-app dd{font-size:19px;margin:0;flex:1.2;min-width:0;overflow-wrap:anywhere}
+#home-app .p07-read-state{display:flex;align-items:center;justify-content:flex-start;gap:10px;color:#647c9d;white-space:normal;overflow-wrap:anywhere}
+#home-app .p07-read-state i{width:16px;height:16px;background:#9ba9bb;border-radius:50%;flex-shrink:0}
+#home-app .p07-read-state.read i{background:#00ad61}
+#home-app .p07-read-state.read{color:#009955}
+#home-app .p07-footer{flex-shrink:0;padding:10px var(--p07-page-inset) 30px;display:grid;gap:10px;background:#fcfeff}
+#home-app .p07-primary,#home-app .p07-secondary{width:100%;min-height:64px;display:flex;align-items:center;justify-content:center;gap:16px;padding:14px;border-radius:12px;border:1px solid #006191;font-size:21px;font-weight:600;color:white;background:linear-gradient(110deg,#007b9a,#004f79)}
+#home-app .p07-primary:disabled{background:linear-gradient(120deg,#b1bac7,#aeb7c4);border-color:transparent;color:#fff}
+#home-app .p07-secondary{color:#00176b;background:white}
+#home-app .p07-tag-hero{display:flex;align-items:center;gap:16px;border:1px solid #e1edfc;padding:8px 10px;border-radius:12px;background:white;margin:0 var(--p07-card-inset) var(--p07-card-inset);width:calc(100% - 2 * var(--p07-card-inset))}
+#home-app .p07-tag-hero>div{flex:1;min-width:0;overflow-wrap:anywhere}
+#home-app .p07-tag-hero strong{display:block;font-size:23px}
+#home-app .p07-tag-hero small{margin-top:4px}
+#home-app .p07-copy{border:0;background:transparent;color:#0076ff;display:grid;place-items:center;padding:3px;border-radius:5px;flex-shrink:0}
+#home-app .p07-copy>.p07-icon{width:22px;height:22px}
+#home-app .p07-pending{display:flex;align-items:center;gap:18px;padding:14px 18px 16px;border-top:1px solid #e5effb}
+#home-app .p07-pending i{width:20px;height:20px;background:#ff9900;border-radius:50%}
+#home-app .p07-success{text-align:center;padding:22px 4px 20px}
+#home-app .p07-success-symbol{width:146px;height:146px;border:24px solid #d9f8e9;border-radius:50%;background:#00ad62;display:grid;place-items:center;margin:0 auto 18px;color:white}
+#home-app .p07-success-symbol>.p07-icon{width:70px;height:70px;stroke-width:3.5}
+#home-app .p07-success h2{font-size:29px;line-height:1.3;margin-bottom:10px}
+#home-app .p07-success p{font-size:21px;color:#53709b;line-height:1.45}
+#home-app dl.p07-summary{border:1px solid #dcecff;border-radius:12px;background:#fff;padding:0 10px}
+#home-app .p07-summary>div:first-child{border-top:0}
+#home-app .p07-summary>div>.p07-icon{color:#0074ff;background:#f1f8ff;border-radius:8px;width:38px;height:38px;padding:5px}
+#home-app .p07-summary dd{font-weight:600;flex:1.25}
+#home-app .p07-summary dt{font-size:17px}
+#home-app .p07-dialog{width:min(450px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;padding:20px;border:1px solid #d2e7f7;border-radius:20px;color:#061568;background:white;font:18px/1.4 Arial,sans-serif;box-shadow:0 15px 60px #00345433}
+#home-app .p07-dialog::backdrop{background:#09283980}
+#home-app .p07-dialog h2{font-size:22px;margin-bottom:18px}
+#home-app .p07-dialog dd{font-size:18px}
+#home-app .p07-dialog .p07-hint{padding:14px 0}
+#home-app .p07-empty{padding:24px 10px;color:#53709b;font-size:18px}
+#home-app .p07-tools{margin-top:18px;border-top:1px solid #c9dbe5;padding-top:16px;overflow-wrap:anywhere}
+#home-app .p07-tools>button{margin:10px 0;padding:12px 18px;border:1px solid #006580;border-radius:10px;background:#006580;color:white}
+#home-app .p07-tools button:disabled{opacity:.5;cursor:not-allowed}
+#home-app .p07-tools pre{white-space:pre-wrap;word-break:break-word;font-size:12px}
+#home-app .p07-tools label{display:grid;gap:7px;margin-top:12px}
+/* Fit the board's key fields inside the inherited reference frame; long values
+   still expand naturally and scroll within the app. */
+#home-app .p07-header{flex-basis:76px;padding-bottom:20px}
+#home-app .p07-header h1{font-size:25px}
+#home-app .p07-app small{font-size:16px}
+#home-app .p07-entry{gap:14px;margin-bottom:12px;padding:7px}
+#home-app .p07-entry .p07-nfc-tile{width:60px;height:60px}
+#home-app .p07-search-row{height:46px;margin-bottom:12px}
+#home-app .p07-search-row input{height:42px;font-size:16px}
+#home-app .p07-tabs{margin-bottom:12px}
+#home-app .p07-tabs button{padding:11px 5px}
+#home-app .p07-list{gap:8px}
+#home-app .p07-tag{padding:8px;gap:14px}
+#home-app .p07-tag .p07-nfc-tile{width:66px;height:82px}
+#home-app .p07-tag-copy b{font-size:17px}
+#home-app .p07-tag-copy small{font-size:15px}
+#home-app .p07-tag-top>strong{font-size:20px}
+#home-app .p07-tag .p07-chip{font-size:15px}
+#home-app .p07-section{margin-bottom:14px}
+#home-app .p07-section h2{font-size:20px;padding:10px 12px 7px}
+#home-app .p07-hint{font-size:17px;padding-bottom:10px}
+#home-app .p07-product{gap:14px;padding:8px 10px}
+#home-app .p07-product img{width:80px;height:80px}
+#home-app .p07-product strong{font-size:22px}
+#home-app .p07-product b{font-size:17px}
+#home-app .p07-warehouse{padding:10px 12px}
+#home-app .p07-touch{margin-bottom:18px}
+#home-app .p07-touch>strong{font-size:21px}
+#home-app .p07-touch>p{font-size:17px}
+#home-app .p07-success{padding:10px 4px 10px}
+#home-app .p07-success-symbol{width:130px;height:130px;border-width:22px;margin-bottom:16px}
+#home-app .p07-success-symbol>.p07-icon{width:62px;height:62px}
+#home-app .p07-success h2{font-size:28px}
+#home-app .p07-success p{font-size:19px;line-height:1.4}
+#home-app .p07-summary>div{min-height:47px;padding:6px 0;gap:10px}
+#home-app .p07-summary dd{font-size:18px}
+#home-app .p07-summary dt{font-size:16px}
+#home-app .p07-summary small{font-size:16px}
+#home-app .p07-summary>div>.p07-icon{width:34px;height:34px}
+#home-app .p07-summary .p07-chip{font-size:16px}
+#home-app .p07-footer{padding-bottom:26px}
+#home-app .p07-primary,#home-app .p07-secondary{min-height:62px;font-size:20px}
+/* Stable columns: copy belongs to the value cell, not a separate flex column. */
+#home-app .p07-app dl>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+#home-app .p07-app dl.p07-summary>div{grid-template-columns:34px minmax(0,.92fr) minmax(0,1.25fr);column-gap:10px}
+#home-app .p07-app dl dd{position:relative;text-align:left;margin:0;min-width:0}
+#home-app .p07-section dl:first-of-type dd{text-align:left}
+#home-app .p07-app dl dd:has(.p07-copy),#home-app .p07-dialog dd:has(.p07-copy){padding-right:34px}
+#home-app dl dd>.p07-copy{position:absolute;right:0;top:0}
+#home-app .p07-summary .p07-chip{margin:0;vertical-align:middle}
+#home-app .p07-text-action{background:transparent;border:0;color:#004e78;font-size:17px;padding:5px 12px;min-height:34px;border-radius:8px}
+/* Test controls stay outside the app. Keep the main sequence visible and the
+   diagnostic JSON collapsed so it cannot push the controls out of reach. */
+#home-app .p07-tools{font-family:Arial,sans-serif;min-width:0}
+#home-app .p07-tools *{box-sizing:border-box;min-width:0}
+#home-app .p07-tools select{display:block;width:100%;max-width:100%;font-size:13px;text-overflow:ellipsis}
+#home-app .p07-tools>button{display:block;width:100%;white-space:normal}
+#home-app .p07-tools .p07-test-guide{padding:10px;margin:12px 0;background:#eef7ff;border-radius:8px;color:#13416b}
+#home-app .p07-tools [data-p07-selected-note]{font-size:12px;margin-top:7px}
+#home-app .p07-tools pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+#home-app .p07-success-symbol{width:112px;height:112px;border-width:18px;margin-bottom:14px}
+#home-app .p07-success-symbol>.p07-icon{width:56px;height:56px}
+/* One primary action, followed by two balanced secondary destinations. */
+#home-app [data-panel="P07.S04"] .p07-scroll{padding-bottom:12px}
+#home-app [data-panel="P07.S04"] .p07-footer{gap:10px;padding-top:12px;padding-bottom:18px}
+#home-app [data-panel="P07.S04"] .p07-footer>button{display:grid;grid-template-columns:34px minmax(0,1fr) 34px;align-items:center;column-gap:10px;width:100%;min-height:56px;margin:0;padding:12px 10px;border-radius:12px;text-align:left;font-size:20px;line-height:1.35}
+#home-app [data-panel="P07.S04"] .p07-footer>button>.p07-icon{width:28px;height:28px;justify-self:center}
+#home-app [data-panel="P07.S04"] .p07-footer>button>span{min-width:0;overflow-wrap:anywhere}
+#home-app [data-panel="P07.S04"] .p07-text-action{border:1px solid #d6e7f1;background:#f1f7fb;color:#004e78}
+#home-app .p07-secondary-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#home-app .p07-secondary-actions>button{display:flex;align-items:center;justify-content:center;gap:9px;min-width:0;min-height:56px;margin:0;padding:12px 10px;border:1px solid #d6e7f1;border-radius:12px;font-size:17px;line-height:1.35;font-weight:500;color:#16466b;background:#f3f8fc}
+#home-app .p07-secondary-actions>button>.p07-icon{width:23px;height:23px}
+#home-app .p07-secondary-actions>button>span{min-width:0;overflow-wrap:anywhere}
+#home-app .p07-secondary-actions>button:hover{background:#eaf4fa;border-color:#98bed5}
+/* S02 inset surfaces use the same trailing edge for controls and values. */
+#home-app [data-panel="P07.S02"] .p07-product{padding-right:12px;padding-left:12px}
+#home-app [data-panel="P07.S02"] .p07-product>.p07-icon{width:24px;height:24px}
+#home-app [data-panel="P07.S02"] .p07-warehouse{border:1px solid transparent}
+#home-app .p07-app dl.p07-read-details{margin:0 var(--p07-card-inset) var(--p07-card-inset);padding:0 12px;border:1px solid #e1edfc;border-radius:12px;background:#fff}
+#home-app .p07-read-details>div:first-child{border-top:0}
+#home-app .p07-app dl.p07-read-details dd{text-align:right;font-weight:500}
+#home-app .p07-read-details .p07-read-state{justify-content:flex-end;gap:8px;font-size:18px}
+#home-app .p07-read-details .p07-read-state i{width:10px;height:10px}
+#home-app .p07-success-symbol{position:relative;isolation:isolate}
+#home-app [data-panel="P07.S04"] .p07-success{padding:6px 4px 8px}
+#home-app [data-panel="P07.S04"] .p07-success-symbol{margin-bottom:10px}
+#home-app .p07-success-symbol::before,#home-app .p07-success-symbol::after{content:'';position:absolute;inset:-18px;border:2px solid #00ad6238;border-radius:50%;z-index:-1;pointer-events:none;opacity:0;animation:p07-success-ripple 1.8s ease-out 2 both}
+#home-app .p07-success-symbol::after{animation-delay:.5s}
+@keyframes p07-success-ripple{0%{transform:scale(.9);opacity:0}20%{opacity:.6}100%{transform:scale(1.28);opacity:0}}
+@media(prefers-reduced-motion:reduce){
+ #home-app .p07-wave,#home-app .p07-success-symbol::before,#home-app .p07-success-symbol::after{animation:none;opacity:0}
+}
+/* Keep the normal read screen within its frame. Only surrounding whitespace
+   changes: the approved r10 artwork, phone and ripple geometry stay intact. */
+#home-app [data-panel="P07.S02"] .p07-scroll{padding-top:12px;padding-bottom:12px}
+#home-app [data-panel="P07.S02"] .p07-section{margin-bottom:10px}
+#home-app [data-panel="P07.S02"] .p07-touch{margin-bottom:16px}
+/* P07 r12: approved interaction upgrades; no change to NFC artwork or nav. */
+#home-app .p07-header>button{min-width:44px;min-height:44px;margin:-3px}
+#home-app .p07-clear-query{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;margin-right:-12px;border:0;background:transparent;color:#52729c;border-radius:10px}
+#home-app .p07-clear-query[hidden]{display:none}
+#home-app .p07-clear-query .p07-icon{width:20px;height:20px}
+#home-app .p07-product-context{display:flex;align-items:center;gap:8px;padding:0 12px 6px}
+#home-app .p07-product-context .p07-hint{flex:1;min-width:0;padding:0;font-size:16px;line-height:1.4}
+#home-app .p07-inline-action{min-height:44px;flex-shrink:0;padding:8px 10px;border:1px solid #d6e7f1;border-radius:10px;background:#f3f8fc;color:#16466b;font-size:16px!important}
+#home-app .p07-product-context .p07-inline-action{border:0;background:transparent;padding-right:0}
+#home-app .p07-inline-action:disabled{opacity:.5}
+#home-app .p07-empty{text-align:center;border:1px dashed #d6e7f1;border-radius:12px;background:white;padding:28px 18px}
+#home-app .p07-empty strong{display:block;color:#16466b;font-size:20px}
+#home-app .p07-empty p{margin:8px 0 16px;line-height:1.5}
+#home-app .p07-app dl dd:has(.p07-copy),#home-app .p07-dialog dd:has(.p07-copy){padding-right:44px}
+#home-app dl dd>.p07-copy{width:44px;height:44px;top:-8px;right:0;padding:11px}
+#home-app .p07-copy[data-copied="true"]{color:#00834c;background:#e7f6ec}
+#home-app .p07-copy-note{position:absolute;z-index:3;right:0;top:100%;white-space:nowrap;font:14px/1.4 Arial,sans-serif;border-radius:6px;color:#fff;background:#174b3b;pointer-events:none}
+#home-app .p07-copy-note:not(:empty){padding:5px 8px}
+#home-app .p07-dialog .app-modal-heading:has(.p07-dialog-back){display:flex;align-items:center;gap:10px}
+#home-app .p07-dialog-back{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:8px;background:#f3f8fc;border:1px solid #d6e7f1;border-radius:10px;color:#16466b;cursor:pointer}
+#home-app .p07-dialog .app-modal-heading>span{min-width:0;overflow-wrap:anywhere}
+
+/* r13: copy acknowledgement stays inside the 44px control, never over the next row. */
+#home-app .p07-copy[data-copied="true"]{display:flex;flex-direction:column;justify-content:center;gap:1px;padding:3px}
+#home-app .p07-copy[data-copied="true"]>.p07-icon{width:18px;height:18px}
+#home-app .p07-copy-note{position:static;transform:none;max-width:100%;background:transparent;color:inherit;font-size:11px;line-height:14px}
+#home-app .p07-copy-note:not(:empty){padding:0}

@@ -1,0 +1,36 @@
+✔ Enter intent opens only one complete verified match; no hardware read or mutation (8.88ms)
+✔ Multiple matches focus the first filtered row; zero/empty/whitespace do nothing (2.5652ms)
+✔ One loaded result in a partial source does not auto-open (1.565ms)
+✔ Failed/stale/unknown/malformed sources cannot produce automatic navigation (1.1494ms)
+✔ Read-only warehouse/capability can inspect rows; wrong scope/session cannot (0.6064ms)
+✔ Search navigation cannot operate outside list or after disposal (0.7068ms)
+✔ P07.A01 unread and unsupported are gated without device calls (10.4043ms)
+✔ P07.A02 reading and prepare never create a mapping or receipt (16.6492ms)
+✔ P07.A03 conflict preserves current mapping and provides P17.S03 context (5.0496ms)
+✔ P07.A04 duplicate confirm yields one confirmed mapping and same tag detail/list (31.6156ms)
+✔ UNKNOWN preserves request and blocks blind retry; reconcile uses same receipt (30.2703ms)
+✔ Known failure retry retains request; fresh successful attempt resets read and identity (46.7741ms)
+✔ read permission, unsupported, read error and locked are distinct (45.9385ms)
+✔ warehouse stop and capability denial gate handlers, keep UID/session (2.1055ms)
+✔ P06 product selection carries exact independent fields and clears old UID (25.7357ms)
+✔ adapter search status and counts remain separate; no audit inferred from current tags (7.8665ms)
+✔ invalid/expired scope hides data and late receipt cannot revive disposed flow (59.1623ms)
+✔ receipt must match UID/item/actor/warehouse/request; prepare or malformed cannot succeed (14.4812ms)
+✔ five consecutive links keep product and create distinct requests, preserve existing tag IDs/labels (168.1042ms)
+✔ changing demo UID invalidates prior read; busy/UNKNOWN cannot change it or product (68.1796ms)
+✔ scenario change at read step invalidates old UID; linked tag never fabricates a fresh success (48.05ms)
+✔ UNKNOWN terminal reconciliation unlocks recovery without discarding the request (63.9921ms)
+✔ known failure retries same request in place; begin from list creates a fresh attempt (46.8078ms)
+✔ late confirmation preserves list navigation and confirms mapping without stealing screen (92.3505ms)
+✔ UNKNOWN can be reconciled while warehouse writes are stopped (77.9898ms)
+✔ receipt nested actor mismatch is UNKNOWN; late reconciliation cannot clear a changed session (18.4955ms)
+✔ NFC search accepts product code and uppercase Vietnamese Đ (1.4961ms)
+✔ Clear NFC filters is atomic, read-only and session guarded (0.6475ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1684.1852

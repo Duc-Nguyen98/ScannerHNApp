@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "id": "A01",
+      "title": "Expand keeps focused control inside visible scroller",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A02",
+      "title": "Collapse during page request does not leave large permanent blank card",
+      "status": "FAIL",
+      "error": "blank gap 1059.90625"
+    },
+    {
+      "id": "A03",
+      "title": "Cache return restores focus to selected receipt, not obsolete load control",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A04",
+      "title": "Large valid quantities do not overflow their column/card",
+      "status": "FAIL",
+      "error": "{\"overflow\":true,\"width\":110}\n\ntrue !== false\n"
+    },
+    {
+      "id": "A05",
+      "title": "Direct-link Back fallback cannot cycle P20 and P09",
+      "status": "FAIL",
+      "error": "Back returned to P20 without a real caller\n\n1 !== 0\n"
+    },
+    {
+      "id": "A06",
+      "title": "Unknown case Back never opens phantom case/cycles",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Đóng', exact: true })\u001b[22m\n"
+    },
+    {
+      "id": "A07",
+      "title": "Switch active case while read dialog open closes stale case overlay",
+      "status": "PASS"
+    },
+    {
+      "id": "A08",
+      "title": "Reader trigger for long receipt ID stays below header, no column squeeze",
+      "status": "FAIL",
+      "error": "{\"w\":88.203125,\"h\":44}"
+    },
+    {
+      "id": "A09",
+      "title": "Successful duplicate-only page removes obsolete new-batch marker",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "id": "A10",
+      "title": "Successive page keeps focus on existing jump control while async completes",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A11",
+      "title": "Preview selector reflects per-case source mode",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n'error' !== 'ready'\n"
+    },
+    {
+      "id": "A12",
+      "title": "Repeated same-route preview entry does not add Back history step",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n4 !== 3\n"
+    }
+  ],
+  "passed": 1,
+  "failed": 11
+}

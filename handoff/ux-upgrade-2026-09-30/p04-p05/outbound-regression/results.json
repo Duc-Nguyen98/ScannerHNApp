@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "name": "one natural click from valid address into group opens picker, no swallowed click",
+      "status": "PASS"
+    },
+    {
+      "name": "quantity remains visually anchored when moving focus out of completed shipping",
+      "status": "PASS"
+    },
+    {
+      "name": "collapsed card opens with focused recipient fully visible inside scroll region",
+      "status": "PASS"
+    },
+    {
+      "name": "opening already-open manual input does not discard typed raw or resize progress/header",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p05=\"manual\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-p05=\"manual\" class=\"p05-button \" aria-expanded=\"true\" aria-controls=\"p05-manual-form\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    55 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p05=\"manual\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-p05=\"manual\" class=\"p05-button \" aria-expanded=\"true\" aria-controls=\"p05-manual-form\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    55 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_micro_audit.cjs:21:235\n    at async probe (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_micro_audit.cjs:9:35)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_outbound_micro_audit.cjs:21:2"
+}

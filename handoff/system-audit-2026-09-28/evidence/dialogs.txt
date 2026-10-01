@@ -1,0 +1,16 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.evaluate: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#submit')[22m
+
+    at colors (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_dialogs.cjs:21:37)
+    at login (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_dialogs.cjs:36:27)
+    at async C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_dialogs.cjs:97:5 {
+  log: [ "  - waiting for locator('#submit')" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

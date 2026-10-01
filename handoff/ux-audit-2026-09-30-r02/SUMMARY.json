@@ -1,0 +1,114 @@
+{
+  "revision": "UX-AUDIT-20260930-r02",
+  "target_kind": "prototype",
+  "reproduced_fixed_cases": 11,
+  "node_unique": 223,
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE_SCOPED",
+  "integration": "NOT_RUN_PRODUCTION_HARDWARE",
+  "suites": {
+    "shared": {
+      "path": "shared/verified-02/results.json",
+      "pass_groups": 4,
+      "errors": []
+    },
+    "forward": {
+      "path": "shared/forward-after/results.json",
+      "pass_groups": 1,
+      "errors": []
+    },
+    "long": {
+      "path": "shared/long-verified/results.json",
+      "pass_groups": 2,
+      "errors": []
+    },
+    "lifecycle": {
+      "path": "shared/lifecycle-02/shared-feedback-lifecycle.json",
+      "pass_groups": 7,
+      "errors": []
+    },
+    "touch": {
+      "path": "shared/touch-regression/results.json",
+      "pass_groups": 12,
+      "errors": []
+    },
+    "touch_edges": {
+      "path": "shared/touch-edges/results.json",
+      "pass_groups": 9,
+      "errors": []
+    },
+    "profile": {
+      "path": "shared/profile-regression/results.json",
+      "pass_groups": 7,
+      "errors": []
+    },
+    "footer": {
+      "path": "shared/footer-regression/results.json",
+      "pass_groups": 4,
+      "errors": [],
+      "unit": "viewport"
+    },
+    "lookup_nfc": {
+      "path": "p06-p07/after/results.json",
+      "pass_groups": 7,
+      "errors": []
+    },
+    "nfc_r13": {
+      "path": "p06-p07/nfc-regression/results.json",
+      "pass_groups": 6,
+      "errors": []
+    },
+    "nfc_repeat": {
+      "path": "p06-p07/nfc-repeat/results.json",
+      "pass_groups": 4,
+      "errors": []
+    },
+    "lookup_recent": {
+      "path": "p06-p07/recent-regression/after/results.json",
+      "pass_groups": 10,
+      "errors": []
+    },
+    "manual": {
+      "path": "p04-p05/manual-regression/results.json",
+      "pass_groups": 11,
+      "errors": []
+    },
+    "reader": {
+      "path": "p04-p05/verified-02/results.json",
+      "pass_groups": 1,
+      "errors": []
+    },
+    "eye": {
+      "path": "routes/eye-verified/results.json",
+      "pass_groups": 3,
+      "errors": []
+    },
+    "security_layout": {
+      "path": "routes/security-layout/results.json",
+      "pass_groups": 7,
+      "errors": []
+    },
+    "security_live": {
+      "path": "routes/security-live/results.json",
+      "pass_groups": 11,
+      "errors": []
+    },
+    "warranty": {
+      "path": "routes/warranty-regression/navigation-results.json",
+      "pass_groups": 11,
+      "errors": []
+    },
+    "history": {
+      "path": "routes/history-verified/results.json",
+      "pass_groups": 11,
+      "errors": []
+    }
+  },
+  "report": "handoff/ux-audit-2026-09-30-r02/REPORT.md",
+  "review": "handoff/ux-audit-2026-09-30-r02/REVIEW.html",
+  "limitations": [
+    "Device keyboard/touch/NFC/camera/WMS unverified.",
+    "P24 not implemented; no new durable persistence.",
+    "No guarantee against cases outside this audit."
+  ]
+}

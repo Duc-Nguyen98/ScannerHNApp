@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "history-general: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "history-daily: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "documents: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#p08-search') to be visible\u001b[22m\n\n    at hub (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:9:178)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:15:4\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:10:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_history_ux_r22.cjs:14:3"
+}

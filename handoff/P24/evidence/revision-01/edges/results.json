@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "External P24 tools S01/IME/Back/cancel keeps existing list and returns focus",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 long reason and raw code readable; Back closes reader first; no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Stale quantity submit after case closes cannot add lines or Post",
+      "status": "PASS"
+    },
+    {
+      "name": "Record timeout never shows S03 until same request reconciles; busy double click one record",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 document link opens exact record; result Back retains identity, no auto new draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout then browser Back never restores P24 result or authenticated data",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

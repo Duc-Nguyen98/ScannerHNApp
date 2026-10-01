@@ -1,0 +1,31 @@
+✔ recent store is unique MRU max3 and returns current source objects rather than copied values (2.6289ms)
+✔ categories stay separate; invalid category/id/warehouse cannot be remembered or substituted (0.5699ms)
+✔ read error and removed source rows hide entries without turning failure into deletion or using stale data (0.285ms)
+✔ actor, warehouse, auth session, logout, denial and explicit clear all invalidate previous IDs (0.7089ms)
+✔ missing auth session is never treated as an authorized durable recent scope (0.2914ms)
+✔ selection rereads list and exact item; names/SKUs/codes never substitute ID (0.494ms)
+✔ selection rejects source unavailable, thrown read, deleted detail and scope/category mismatch (1.1767ms)
+✔ flow default All dates and selection source guard preserve current query/category/scroll on failure (2.562ms)
+✔ direct deep-link open also rejects unavailable or deleted current source and keeps prior state (2.848ms)
+✔ P06 read failure and retry cannot mutate inventory or signed event fixtures (3.5984ms)
+✔ P06 reuses P08 draft/validation semantics without committing picker draft (3.0218ms)
+✔ A01 independent code/name/SKU/serial search, scope, aggregate counts and immutable clear (1.1278ms)
+✔ A02 stock uses supplied totals with 12/10/1/1 and 6+3+2+1 positions (0.3526ms)
+✔ A03 real zero distinct from missing, SKU never substitutes serial (1.9024ms)
+✔ A04 print and warranty fail closed regardless of role, even if print capability true no implementation (2.6997ms)
+✔ A05 inclusive type/range, invalid range and signed events independent of current stock (0.8676ms)
+✔ list context/scroll retained on detail and stock/history; IDs cannot open outside scope (0.7833ms)
+✔ capability-guarded document link identifies exact event and does not invent a matching document (0.9708ms)
+✔ session revoked hides data and actions; stopped warehouse remains read-only accessible (0.7268ms)
+✔ list scan context drops the previously viewed item while preserving query/category (0.6813ms)
+✔ invalid or impossible dates keep the committed filters and events; valid correction clears error (41.9891ms)
+✔ demo fills each catalogue item with coherent locations and distinct scoped history (6.0067ms)
+✔ missing-data scenario is reversible and does not erase demo inventory or event fixtures (0.3577ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 372.8535

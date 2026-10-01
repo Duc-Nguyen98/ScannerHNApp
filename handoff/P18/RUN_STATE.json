@@ -1,0 +1,48 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P18",
+  "revision": "P18-r03",
+  "prompt_status": "TEMPORARILY_ACCEPTED_BY_USER",
+  "completed_panel_ids": [
+    "P18.S01",
+    "P18.S02",
+    "P18.S03",
+    "P18.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual_status": "TEMPORARILY_ACCEPTED_BY_USER",
+  "behavior_status": "PASS_PROTOTYPE",
+  "integration_status": "BLOCKED_PRODUCTION",
+  "node_tests": 85,
+  "browser_groups": {
+    "audit_before_after": 11,
+    "ux": 11,
+    "async_render_download": 5,
+    "long_content": 4,
+    "logout": 3,
+    "mobile": 2,
+    "p12_tabs": 9,
+    "footer_viewports": 4
+  },
+  "shared_components_changed": [
+    "P18 source-safe file rendering/download and viewer interaction",
+    "Home nav active tab for P18 location only"
+  ],
+  "blockers": [
+    "upload policy/receipt/status source",
+    "warranty handoff/closure policy and mutation",
+    "location/capacity schema and confirmation policy"
+  ],
+  "artifact_paths": [
+    "handoff/P18/REVISION_03.md",
+    "handoff/P18/REVIEW_03.html",
+    "handoff/P18/REVISION_03_SOURCE_MAP.md",
+    "handoff/P18/evidence/revision-03"
+  ],
+  "next_action": "Preserve P18 r03; add synchronized states later when requested. Production remains blocked.",
+  "layout_combinations": 20,
+  "user_acceptance": "2026-09-29: user temporarily accepts P18 r03; synchronized additional states deferred"
+}

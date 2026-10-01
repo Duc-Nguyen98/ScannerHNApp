@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "All four P21 panels rendered and captured",
+      "status": "PASS"
+    },
+    {
+      "name": "A01/A02 resume owner ID/version/session and recorded locks through P19",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 unknown codes keep references and block scan; guide Back/Escape/backdrop/focus",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 timeout Post check opens same confirmed receipt, no resubmit",
+      "status": "PASS"
+    },
+    {
+      "name": "P19 live → P21 reopen → P20 pending uses exact document; Home link",
+      "status": "PASS"
+    },
+    {
+      "name": "Version conflict blocks deep linked P19 without losing draft",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-panel=\"P19.S04\"]') to be visible\u001b[22m\n\n    at eval (<anonymous>:22:675)\n    at async test (<anonymous>:9:29)\n    at async eval (<anonymous>:22:1)"
+}

@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "name": "Four B20 panel captures",
+      "status": "PASS"
+    },
+    {
+      "name": "A01/A04 overlap + rapid load: one request, quantities not added, explicit end",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 error retains DOM/scroll and retry uses failed cursor",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 entry + same case P20/P19 and information/Back",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /đã trả khách/i. Input:\n\n'Về lịch sử'\n\n    at eval (eval at <anonymous> (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\run_p24_r02.cjs:6:1)), <anonymous>:16:347)\n    at async check (eval at <anonymous> (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\run_p24_r02.cjs:6:1)), <anonymous>:10:30)\n    at async eval (eval at <anonymous> (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\run_p24_r02.cjs:6:1)), <anonymous>:16:1)"
+}

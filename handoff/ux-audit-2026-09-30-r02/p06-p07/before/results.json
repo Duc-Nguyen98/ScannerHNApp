@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "name": "lookup-ime-after-clear",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'' !== 'HN12347'\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:10:414\n    at async run (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:6:270)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:10:40",
+      "errors": []
+    },
+    {
+      "name": "lookup-ime-after-category",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'HN12346'\n- 'LK0001'\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:10:414\n    at async run (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:6:270)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:10:40",
+      "errors": []
+    },
+    {
+      "name": "lookup-image-recovery-repairs-gallery",
+      "status": "PASS"
+    },
+    {
+      "name": "nfc-repeated-back-keeps-parent",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:12:416\n    at async run (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:6:270)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:12:1",
+      "errors": []
+    },
+    {
+      "name": "nfc-error-row-click-guard",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:13:237\n    at async run (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:6:270)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:13:39",
+      "errors": []
+    },
+    {
+      "name": "nfc-stale-row-click-guard",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:13:237\n    at async run (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:6:270)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_lookup_nfc_audit_r02.cjs:13:39",
+      "errors": []
+    },
+    {
+      "name": "lookup-back-restores-normal-duplicate-row",
+      "status": "PASS"
+    }
+  ]
+}

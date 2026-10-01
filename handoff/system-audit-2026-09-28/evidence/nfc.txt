@@ -1,0 +1,11 @@
+PASS S01 Home entry, 30 demo cards, counts30/16/9, search and tabs
+PASS tag ID detail, Escape/backdrop, focus and clipboard
+PASS S02 unread CTA disabled; read alone does not map or succeed
+PASS S03 confirm guarded; S04 only fixture receipt; same tag detail/list; duplicate submit once
+PASS fresh attempt, P06 pick uses exact item ID and serial; normal P06 remains detail navigation
+PASS unsupported/permission/read error/conflict/locked are distinct; no overwrite
+PASS UNKNOWN cannot resubmit or select product; reconcile single request
+PASS warehouse stop blocks confirm and retains UID; restores after active
+PASS native Back/Forward keeps read identity; protected success deep link does not bypass receipt
+PASS long text and internal scroll stay above footer; keyboard dialog trap/backdrop
+PASS P03 scan tab one overlay and focus restore; logout and Back cannot restore NFC

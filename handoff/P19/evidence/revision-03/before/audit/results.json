@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "id": "A01",
+      "name": "Collapse manual restores focus to visible entry control",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A02",
+      "name": "Review → scan restores input focus/caret and unsubmitted text",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A03",
+      "name": "Confirmed removal returns keyboard focus to remaining row or scan action",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A04",
+      "name": "Leaving during IME does not disable Enter in next rendered input",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "id": "A05",
+      "name": "Most recently accepted BOX moves to top without changing document line order",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'LK0001-HN001'\n- 'BOX-LK-0002-01'\n"
+    },
+    {
+      "id": "A06",
+      "name": "Long SKU/name/code sheet wraps; footer reachable and body scrolls inside dialog",
+      "status": "FAIL",
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   bodyWide: true,\n-   bodyWide: false,\n    footer: true,\n+   scroll: false,\n-   scroll: true,\n    wide: false\n  }\n"
+    },
+    {
+      "id": "A07",
+      "name": "Long SKU in manual/review preserves full text without horizontal overflow",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A08",
+      "name": "IME Enter in quantity does not confirm unfinished composition",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "id": "A09",
+      "name": "Blank scan input validates at field without opening generic dialog",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "id": "A10",
+      "name": "Returning to case then P09 Back does not bounce into P19",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "id": "A11",
+      "name": "Confirm unchanged BOX retains document version and request identity",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n3 !== 2\n"
+    },
+    {
+      "id": "A12",
+      "name": "Back/delete/sheet close targets are at least44 CSS pixels",
+      "status": "FAIL",
+      "error": "[40,40]"
+    },
+    {
+      "id": "A13",
+      "name": "Quantity field with long metadata is visible immediately inside scrolling sheet",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A14",
+      "name": "Posting has accurate busy text and focus; rejected result returns to action",
+      "status": "FAIL",
+      "error": "The input did not match the regular expression /Đang xuất linh kiện/. Input:\n\n'Đang kiểm tra kết quả…'\n"
+    },
+    {
+      "id": "A15",
+      "name": "Deleting last line disables Post; scan return stays usable",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "A16",
+      "name": "Route away while request pending never opens result/dialog over another case",
+      "status": "PASS"
+    },
+    {
+      "id": "A17",
+      "name": "Quantity browser Forward over dismissed sheet cannot confirm or stack overlays",
+      "status": "PASS"
+    },
+    {
+      "id": "A18",
+      "name": "Repeated invalid then valid quantity keeps one overlay; backdrop and Escape preserve rows",
+      "status": "PASS"
+    },
+    {
+      "id": "A19",
+      "name": "New BOX quantity fits remaining stock1; exhausted BOX does not open impossible form",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n'2' !== '1'\n"
+    }
+  ],
+  "errors": []
+}

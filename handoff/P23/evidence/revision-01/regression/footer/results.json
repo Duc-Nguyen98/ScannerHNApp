@@ -1,0 +1,555 @@
+{
+  "checks": [
+    {
+      "name": "494×950: footer LOCK + P03 parity + KPI spacing + fixed shift",
+      "status": "PASS"
+    },
+    {
+      "name": "456×874: footer LOCK + P03 parity + KPI spacing + fixed shift",
+      "status": "PASS"
+    },
+    {
+      "name": "360×800: footer LOCK + P03 parity + KPI spacing + fixed shift",
+      "status": "PASS"
+    },
+    {
+      "name": "1264×712: footer LOCK + P03 parity + KPI spacing + fixed shift",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "home": {
+        "nav": {
+          "backgroundColor": "rgba(255, 255, 255, 0.98)",
+          "borderRadius": "23px 23px 0px 0px",
+          "color": "rgb(8, 53, 78)",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "minHeight": "75px",
+          "padding": "8px",
+          "width": "494px",
+          "height": "75px",
+          "boxShadow": "rgba(23, 72, 96, 0.02) 0px -5px 18px 0px",
+          "borderTopColor": "rgb(8, 53, 78)",
+          "borderTopWidth": "0px"
+        },
+        "selected": {
+          "backgroundColor": "rgb(238, 249, 251)",
+          "borderRadius": "12px",
+          "color": "rgb(0, 85, 119)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "1px 6px",
+          "width": "95.5938px",
+          "height": "59px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(0, 85, 119)",
+          "borderTopWidth": "0px"
+        },
+        "circle": {
+          "backgroundColor": "rgb(0, 115, 153)",
+          "borderRadius": "50%",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "62px",
+          "height": "62px",
+          "boxShadow": "rgba(18, 96, 121, 0.125) 0px 2px 6px 0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "3px"
+        },
+        "icon": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "31px",
+          "height": "31px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "0px"
+        },
+        "html": "<button data-route=\"home\" data-tab=\"home\" class=\"\" aria-current=\"page\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"></path><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path></svg><span>Trang chủ</span></button><button data-route=\"documents\" data-tab=\"documents\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"></rect><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><path d=\"M12 11h4\"></path><path d=\"M12 16h4\"></path><path d=\"M8 11h.01\"></path><path d=\"M8 16h.01\"></path></svg><span>Chứng từ</span></button><button data-route=\"lookup\" data-tab=\"lookup\" class=\"hn-scan-tab\"><span class=\"hn-scan-circle\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"></path><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"></path><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"></path><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"></path><path d=\"M7 8h8\"></path><path d=\"M7 12h10\"></path><path d=\"M7 16h6\"></path></svg></span><span>Quét mã</span></button><button data-route=\"history\" data-tab=\"history\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5v5h5M3 10a9 9 0 1 1 1 8M12 7v5l3 2\"></path></svg><span>Lịch sử</span></button><button data-route=\"profile\" data-tab=\"profile\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Cá nhân</span></button>"
+      },
+      "geometry": {
+        "nav": {
+          "x": 0,
+          "y": 875,
+          "right": 494,
+          "bottom": 950,
+          "width": 494,
+          "height": 75
+        },
+        "screen": {
+          "x": 0,
+          "y": 0,
+          "right": 494,
+          "bottom": 950,
+          "width": 494,
+          "height": 950
+        },
+        "scan": {
+          "x": 215.984375,
+          "y": 857,
+          "right": 277.984375,
+          "bottom": 919,
+          "width": 62,
+          "height": 62
+        },
+        "clock": {
+          "x": 339.328125,
+          "y": 201.5,
+          "right": 424.59375,
+          "bottom": 237.5,
+          "width": 85.265625,
+          "height": 36
+        },
+        "clockIcon": {
+          "x": 433,
+          "y": 207.5,
+          "right": 457,
+          "bottom": 231.5,
+          "width": 24,
+          "height": 24
+        },
+        "lastKpi": {
+          "x": 322.328125,
+          "y": 184,
+          "right": 473,
+          "bottom": 280,
+          "width": 150.671875,
+          "height": 96
+        },
+        "kpis": {
+          "x": 20,
+          "y": 183,
+          "right": 474,
+          "bottom": 281,
+          "width": 454,
+          "height": 98
+        },
+        "lastRow": {
+          "x": 21,
+          "y": 792,
+          "right": 473,
+          "bottom": 857,
+          "width": 452,
+          "height": 65
+        },
+        "scale": 1,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "viewport": [
+        456,
+        874
+      ],
+      "home": {
+        "nav": {
+          "backgroundColor": "rgba(255, 255, 255, 0.98)",
+          "borderRadius": "23px 23px 0px 0px",
+          "color": "rgb(8, 53, 78)",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "minHeight": "75px",
+          "padding": "8px",
+          "width": "494px",
+          "height": "75px",
+          "boxShadow": "rgba(23, 72, 96, 0.02) 0px -5px 18px 0px",
+          "borderTopColor": "rgb(8, 53, 78)",
+          "borderTopWidth": "0px"
+        },
+        "selected": {
+          "backgroundColor": "rgb(238, 249, 251)",
+          "borderRadius": "12px",
+          "color": "rgb(0, 85, 119)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "1px 6px",
+          "width": "95.5938px",
+          "height": "59px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(0, 85, 119)",
+          "borderTopWidth": "0px"
+        },
+        "circle": {
+          "backgroundColor": "rgb(0, 115, 153)",
+          "borderRadius": "50%",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "62px",
+          "height": "62px",
+          "boxShadow": "rgba(18, 96, 121, 0.125) 0px 2px 6px 0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "3px"
+        },
+        "icon": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "31px",
+          "height": "31px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "0px"
+        },
+        "html": "<button data-route=\"home\" data-tab=\"home\" class=\"\" aria-current=\"page\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"></path><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path></svg><span>Trang chủ</span></button><button data-route=\"documents\" data-tab=\"documents\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"></rect><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><path d=\"M12 11h4\"></path><path d=\"M12 16h4\"></path><path d=\"M8 11h.01\"></path><path d=\"M8 16h.01\"></path></svg><span>Chứng từ</span></button><button data-route=\"lookup\" data-tab=\"lookup\" class=\"hn-scan-tab\"><span class=\"hn-scan-circle\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"></path><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"></path><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"></path><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"></path><path d=\"M7 8h8\"></path><path d=\"M7 12h10\"></path><path d=\"M7 16h6\"></path></svg></span><span>Quét mã</span></button><button data-route=\"history\" data-tab=\"history\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5v5h5M3 10a9 9 0 1 1 1 8M12 7v5l3 2\"></path></svg><span>Lịch sử</span></button><button data-route=\"profile\" data-tab=\"profile\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Cá nhân</span></button>"
+      },
+      "geometry": {
+        "nav": {
+          "x": 0.765625,
+          "y": 805,
+          "right": 455.2456359863281,
+          "bottom": 874,
+          "width": 454.4800109863281,
+          "height": 69
+        },
+        "screen": {
+          "x": 0.765625,
+          "y": 0,
+          "right": 455.2456359863281,
+          "bottom": 874,
+          "width": 454.4800109863281,
+          "height": 874
+        },
+        "scan": {
+          "x": 199.47125244140625,
+          "y": 788.4400024414062,
+          "right": 256.5112609863281,
+          "bottom": 845.4800415039062,
+          "width": 57.040008544921875,
+          "height": 57.0400390625
+        },
+        "clock": {
+          "x": 312.947509765625,
+          "y": 185.3800048828125,
+          "right": 391.3918762207031,
+          "bottom": 218.5,
+          "width": 78.44436645507812,
+          "height": 33.1199951171875
+        },
+        "clockIcon": {
+          "x": 399.1256408691406,
+          "y": 190.90000915527344,
+          "right": 421.20562744140625,
+          "bottom": 212.98001098632812,
+          "width": 22.079986572265625,
+          "height": 22.080001831054688
+        },
+        "lastKpi": {
+          "x": 297.3074951171875,
+          "y": 169.27999877929688,
+          "right": 435.9256286621094,
+          "bottom": 257.6000061035156,
+          "width": 138.61813354492188,
+          "height": 88.32000732421875
+        },
+        "kpis": {
+          "x": 19.165624618530273,
+          "y": 168.36000061035156,
+          "right": 436.84564781188965,
+          "bottom": 258.52001953125,
+          "width": 417.6800231933594,
+          "height": 90.16001892089844
+        },
+        "lastRow": {
+          "x": 20.08562469482422,
+          "y": 728.6400146484375,
+          "right": 435.92562103271484,
+          "bottom": 788.4400024414062,
+          "width": 415.8399963378906,
+          "height": 59.79998779296875
+        },
+        "scale": 0.9200000222395306,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "home": {
+        "nav": {
+          "backgroundColor": "rgba(255, 255, 255, 0.98)",
+          "borderRadius": "23px 23px 0px 0px",
+          "color": "rgb(8, 53, 78)",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "minHeight": "75px",
+          "padding": "8px",
+          "width": "494px",
+          "height": "75px",
+          "boxShadow": "rgba(23, 72, 96, 0.02) 0px -5px 18px 0px",
+          "borderTopColor": "rgb(8, 53, 78)",
+          "borderTopWidth": "0px"
+        },
+        "selected": {
+          "backgroundColor": "rgb(238, 249, 251)",
+          "borderRadius": "12px",
+          "color": "rgb(0, 85, 119)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "1px 6px",
+          "width": "95.5938px",
+          "height": "59px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(0, 85, 119)",
+          "borderTopWidth": "0px"
+        },
+        "circle": {
+          "backgroundColor": "rgb(0, 115, 153)",
+          "borderRadius": "50%",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "62px",
+          "height": "62px",
+          "boxShadow": "rgba(18, 96, 121, 0.125) 0px 2px 6px 0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "3px"
+        },
+        "icon": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "31px",
+          "height": "31px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "0px"
+        },
+        "html": "<button data-route=\"home\" data-tab=\"home\" class=\"\" aria-current=\"page\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"></path><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path></svg><span>Trang chủ</span></button><button data-route=\"documents\" data-tab=\"documents\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"></rect><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><path d=\"M12 11h4\"></path><path d=\"M12 16h4\"></path><path d=\"M8 11h.01\"></path><path d=\"M8 16h.01\"></path></svg><span>Chứng từ</span></button><button data-route=\"lookup\" data-tab=\"lookup\" class=\"hn-scan-tab\"><span class=\"hn-scan-circle\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"></path><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"></path><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"></path><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"></path><path d=\"M7 8h8\"></path><path d=\"M7 12h10\"></path><path d=\"M7 16h6\"></path></svg></span><span>Quét mã</span></button><button data-route=\"history\" data-tab=\"history\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5v5h5M3 10a9 9 0 1 1 1 8M12 7v5l3 2\"></path></svg><span>Lịch sử</span></button><button data-route=\"profile\" data-tab=\"profile\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Cá nhân</span></button>"
+      },
+      "geometry": {
+        "nav": {
+          "x": 0,
+          "y": 637.6517944335938,
+          "right": 360,
+          "bottom": 692.3076782226562,
+          "width": 360,
+          "height": 54.6558837890625
+        },
+        "screen": {
+          "x": 0,
+          "y": 0,
+          "right": 360,
+          "bottom": 692.3076782226562,
+          "width": 360,
+          "height": 692.3076782226562
+        },
+        "scan": {
+          "x": 157.39752197265625,
+          "y": 624.534423828125,
+          "right": 202.57969665527344,
+          "bottom": 669.7166137695312,
+          "width": 45.18217468261719,
+          "height": 45.18218994140625
+        },
+        "clock": {
+          "x": 247.2836456298828,
+          "y": 146.84210205078125,
+          "right": 309.4205322265625,
+          "bottom": 173.07691955566406,
+          "width": 62.13688659667969,
+          "height": 26.234817504882812
+        },
+        "clockIcon": {
+          "x": 315.5465393066406,
+          "y": 151.21456909179688,
+          "right": 333.03643798828125,
+          "bottom": 168.70445251464844,
+          "width": 17.489898681640625,
+          "height": 17.489883422851562
+        },
+        "lastKpi": {
+          "x": 234.89498901367188,
+          "y": 134.0890655517578,
+          "right": 344.69635009765625,
+          "bottom": 204.048583984375,
+          "width": 109.80136108398438,
+          "height": 69.95951843261719
+        },
+        "kpis": {
+          "x": 14.574898719787598,
+          "y": 133.36032104492188,
+          "right": 345.425087928772,
+          "bottom": 204.77732849121094,
+          "width": 330.8501892089844,
+          "height": 71.41700744628906
+        },
+        "lastRow": {
+          "x": 15.303643226623535,
+          "y": 577.1659545898438,
+          "right": 344.69634342193604,
+          "bottom": 624.534423828125,
+          "width": 329.3927001953125,
+          "height": 47.36846923828125
+        },
+        "scale": 0.728744939271255,
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "viewport": [
+        1264,
+        712
+      ],
+      "home": {
+        "nav": {
+          "backgroundColor": "rgba(255, 255, 255, 0.98)",
+          "borderRadius": "23px 23px 0px 0px",
+          "color": "rgb(8, 53, 78)",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "minHeight": "75px",
+          "padding": "8px",
+          "width": "494px",
+          "height": "75px",
+          "boxShadow": "rgba(23, 72, 96, 0.02) 0px -5px 18px 0px",
+          "borderTopColor": "rgb(8, 53, 78)",
+          "borderTopWidth": "0px"
+        },
+        "selected": {
+          "backgroundColor": "rgb(238, 249, 251)",
+          "borderRadius": "12px",
+          "color": "rgb(0, 85, 119)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "1px 6px",
+          "width": "95.5938px",
+          "height": "59px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(0, 85, 119)",
+          "borderTopWidth": "0px"
+        },
+        "circle": {
+          "backgroundColor": "rgb(0, 115, 153)",
+          "borderRadius": "50%",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "62px",
+          "height": "62px",
+          "boxShadow": "rgba(18, 96, 121, 0.125) 0px 2px 6px 0px",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "3px"
+        },
+        "icon": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "0px",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12px",
+          "lineHeight": "17px",
+          "minHeight": "auto",
+          "padding": "0px",
+          "width": "31px",
+          "height": "31px",
+          "boxShadow": "none",
+          "borderTopColor": "rgb(255, 255, 255)",
+          "borderTopWidth": "0px"
+        },
+        "html": "<button data-route=\"home\" data-tab=\"home\" class=\"\" aria-current=\"page\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"></path><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path></svg><span>Trang chủ</span></button><button data-route=\"documents\" data-tab=\"documents\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"></rect><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><path d=\"M12 11h4\"></path><path d=\"M12 16h4\"></path><path d=\"M8 11h.01\"></path><path d=\"M8 16h.01\"></path></svg><span>Chứng từ</span></button><button data-route=\"lookup\" data-tab=\"lookup\" class=\"hn-scan-tab\"><span class=\"hn-scan-circle\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"></path><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"></path><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"></path><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"></path><path d=\"M7 8h8\"></path><path d=\"M7 12h10\"></path><path d=\"M7 16h6\"></path></svg></span><span>Quét mã</span></button><button data-route=\"history\" data-tab=\"history\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5v5h5M3 10a9 9 0 1 1 1 8M12 7v5l3 2\"></path></svg><span>Lịch sử</span></button><button data-route=\"profile\" data-tab=\"profile\" class=\"\"><svg class=\"hn-icon \" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Cá nhân</span></button>"
+      },
+      "geometry": {
+        "nav": {
+          "x": 446.875,
+          "y": 655.7894897460938,
+          "right": 817.114990234375,
+          "bottom": 712,
+          "width": 370.239990234375,
+          "height": 56.21051025390625
+        },
+        "screen": {
+          "x": 446.875,
+          "y": 0,
+          "right": 817.114990234375,
+          "bottom": 712,
+          "width": 370.239990234375,
+          "height": 712
+        },
+        "scan": {
+          "x": 608.7496337890625,
+          "y": 642.2989501953125,
+          "right": 655.2169799804688,
+          "bottom": 688.7662963867188,
+          "width": 46.46734619140625,
+          "height": 46.46734619140625
+        },
+        "clock": {
+          "x": 701.1925048828125,
+          "y": 151.01895141601562,
+          "right": 765.0968017578125,
+          "bottom": 178,
+          "width": 63.904296875,
+          "height": 26.981048583984375
+        },
+        "clockIcon": {
+          "x": 771.3970947265625,
+          "y": 155.5157928466797,
+          "right": 789.384521484375,
+          "bottom": 173.50315856933594,
+          "width": 17.9874267578125,
+          "height": 17.98736572265625
+        },
+        "lastKpi": {
+          "x": 688.451416015625,
+          "y": 137.9031524658203,
+          "right": 801.3760986328125,
+          "bottom": 209.85263061523438,
+          "width": 112.9246826171875,
+          "height": 71.94947814941406
+        },
+        "kpis": {
+          "x": 461.8644714355469,
+          "y": 137.1536865234375,
+          "right": 802.12548828125,
+          "bottom": 210.60211181640625,
+          "width": 340.2610168457031,
+          "height": 73.44842529296875
+        },
+        "lastRow": {
+          "x": 462.61395263671875,
+          "y": 593.5831909179688,
+          "right": 801.3760986328125,
+          "bottom": 642.2989501953125,
+          "width": 338.76214599609375,
+          "height": 48.71575927734375
+        },
+        "scale": 0.7494736644420547,
+        "horizontalOverflow": false
+      }
+    }
+  ],
+  "errors": []
+}

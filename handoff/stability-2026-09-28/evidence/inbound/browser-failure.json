@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "S01 required/read-only metadata and source session",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 fixture 12=11+1 and raw history",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 back retains codes/identity and edits note",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 single confirmed record + S04 no inventory change",
+      "status": "PASS"
+    },
+    {
+      "name": "result dependency notice remains accessible at reduced height",
+      "status": "PASS"
+    }
+  ],
+  "error": "page.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at login (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound.cjs:11:97)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_inbound.cjs:28:2",
+  "errors": []
+}

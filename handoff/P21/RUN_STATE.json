@@ -1,0 +1,59 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P21",
+  "revision": "P21-r03",
+  "completed_panel_ids": [
+    "P21.S01",
+    "P21.S02",
+    "P21.S03",
+    "P21.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual": "USER_TEMPORARILY_ACCEPTED",
+  "user_acceptance": "User2026-09-30 P22 request temporarily accepts P21 r03; future sync states deferred; see TEMPORARY_ACCEPTANCE.md",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node_tests": 160,
+  "p21_node_tests": 24,
+  "browser_groups": {
+    "p21_main": 9,
+    "p21_edges": 6,
+    "p21_r02_ux": 9,
+    "p21_r03_audit": 16
+  },
+  "browser_groups_total": 40,
+  "layout_combinations": 20,
+  "footer_viewports": 4,
+  "shared_components_changed": [
+    "Home route, draft shortcut and lifecycle",
+    "P19 owner checkpoint wrapper and resume navigation",
+    "Auth stylesheet entry",
+    "P03 context handoff validation only"
+  ],
+  "blockers": [
+    "Checkpoint/recorded lines/version/status API and durable retention remain unverified. Preview page memory only; reload/logout loses data.",
+    "WMS URL unavailable; guidance text from HANDOFF. Physical camera/NFC/virtual keyboard NOT_RUN.",
+    "P03 uses a separate inbound fixture; production component-draft source is not integrated. P22 shortcut remains removed per earlier user instruction. P22–P24 full boards pending."
+  ],
+  "artifact_paths": [
+    "handoff/P21/REPORT.md",
+    "handoff/P21/REVIEW.html",
+    "handoff/P21/DESIGN_TRACE.md",
+    "handoff/P21/STATE_ACCEPTANCE.csv",
+    "handoff/P21/evidence/revision-01",
+    "handoff/P21/REVISION_02.md",
+    "handoff/P21/REVIEW_02.html",
+    "handoff/P21/REVISION_02_CONTEXT.md",
+    "handoff/P21/evidence/revision-02",
+    "handoff/P21/REVISION_03.md",
+    "handoff/P21/REVIEW_03.html",
+    "handoff/P21/REVISION_03_CONTEXT.md",
+    "handoff/P21/evidence/revision-03/"
+  ],
+  "next_action": "Preserve P21 r03 temporary acceptance; sync states later. Continue P22; production/hardware unverified.",
+  "report": "handoff/P21/REVISION_03.md",
+  "review": "handoff/P21/REVIEW_03.html",
+  "reproduced_fixed_cases": 14
+}

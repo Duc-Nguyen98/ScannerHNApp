@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "P09 owner entry, IME cannot submit, quantity native Back preserves focus and code",
+      "status": "PASS"
+    },
+    {
+      "name": "Different case keeps separate entry draft; Back restores exact document",
+      "status": "PASS"
+    },
+    {
+      "name": "P14 unfinished P19 blocks save/end and Continue returns same document",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN prevents voluntary logout, retains exact request through external navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "New issue uses new document; old receipt Back remains immutable; stock refetched",
+      "status": "PASS"
+    },
+    {
+      "name": "P18 receives confirmed component lines of same case",
+      "status": "PASS"
+    },
+    {
+      "name": "Long Unicode case description keeps full text in reader; no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Valid logout then browser Back cannot restore P19/session",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "name": "Home recent Xem tất cả remains P12",
+      "status": "PASS"
+    },
+    {
+      "name": "Date draft Reset/Cancel/Apply, bounds Vietnam",
+      "status": "PASS"
+    },
+    {
+      "name": "Scroll retained when returning from event; keyboard tabs",
+      "status": "PASS"
+    },
+    {
+      "name": "Read timeout15 seconds keeps query; duplicate retry blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "Read completion does not steal focus from external tools",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 dependency exact event retained; old NFC URL migrates",
+      "status": "PASS"
+    },
+    {
+      "name": "Hub other owners unchanged; NFC Back returns to same entry",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "SyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n    at snap (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_edges.cjs:4:70)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_edges.cjs:17:331\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_edges.cjs:7:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_edges.cjs:17:1"
+}

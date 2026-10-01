@@ -1,0 +1,102 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P24",
+  "revision": "P24-r03",
+  "completed_panel_ids": [
+    "P24.S01",
+    "P24.S02",
+    "P24.S03",
+    "P24.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node_tests": 173,
+  "p24_node_tests": 14,
+  "browser_groups": {
+    "audit_r03": 16,
+    "guards_r03": 4,
+    "p24_main": 5,
+    "p24_edges": 6,
+    "p24_r02_ux": 5,
+    "p19": 9,
+    "p20": 7,
+    "p21": 9,
+    "p23": 9
+  },
+  "browser_groups_total": 70,
+  "layout_combinations": 35,
+  "footer_viewports": 4,
+  "shared_components_changed": [
+    "Shared waiting-web result return controller for P04/P05",
+    "P20 context/reader lifecycle and loading selector scope",
+    "P19 local long-text/stepper fixes and UNIT/BOX error wording",
+    "Home result/new-run history identity; P23 return to verified P20 caller"
+  ],
+  "blockers": [
+    "Production actor/permission/stock/validate/record/Post/status/cursor contracts unverified.",
+    "Camera/NFC/physical keyboard NOT_RUN. Preview memory only; reload/logout loses data."
+  ],
+  "artifact_paths": [
+    "handoff/P24/REPORT.md",
+    "handoff/P24/REVIEW.html",
+    "handoff/P24/DESIGN_TRACE.md",
+    "handoff/P24/STATE_ACCEPTANCE.csv",
+    "handoff/P24/COVERAGE_SUMMARY.md",
+    "handoff/P24/SOURCE_MANIFEST.json",
+    "handoff/P24/evidence/revision-01",
+    "handoff/P24/REVISION_02.md",
+    "handoff/P24/REVIEW_02.html",
+    "handoff/P24/REVISION_02_CONTEXT.md",
+    "handoff/P24/STATE_ACCEPTANCE_02.csv",
+    "handoff/P24/SOURCE_MANIFEST_02.json",
+    "handoff/P24/evidence/revision-02",
+    "handoff/P24/REVISION_03.md",
+    "handoff/P24/REVIEW_03.html",
+    "handoff/P24/REVISION_03_CONTEXT.md",
+    "handoff/P24/STATE_ACCEPTANCE_03.csv",
+    "handoff/P24/SOURCE_MANIFEST_03.json",
+    "handoff/P24/evidence/revision-03"
+  ],
+  "next_action": "User visual review P24 r03 after14 reproduced UI/UX cases fixed. Preserve historical temporary acceptance and deferred synchronization states; production/hardware/persistence unverified.",
+  "report": "handoff/P24/REVISION_03.md",
+  "review": "handoff/P24/REVIEW_03.html",
+  "coverage_reference": {
+    "boards": 24,
+    "panels": 91,
+    "statuses": {
+      "visual_status": {
+        "IN_PROGRESS": 70,
+        "USER_TEMPORARILY_ACCEPTED": 4,
+        "PASS": 17
+      },
+      "behavior_status": {
+        "PASS": 91
+      },
+      "integration_status": {
+        "BLOCKED": 91
+      }
+    },
+    "basis": "Historical report inventory retained. Only scoped P24/dependencies validated by this revision."
+  },
+  "reproduced_fixed_cases": 14,
+  "reproduced_case_ids": [
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16"
+  ]
+}

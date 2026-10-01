@@ -1,0 +1,263 @@
+{
+  "checks": [
+    {
+      "name": "S03 fits and real mouse wheel cannot move content/header/footer/page in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmation dialog stays inside app with locked background and explicit cancel in six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Verified revoke uses one success dialog and no inline toast; acknowledgment preserves result",
+      "status": "PASS"
+    },
+    {
+      "name": "Escape closes result without undo; Back closes dialog before route navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "General revoke failure is a dialog and leaves target intact",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN dialog allows defer then explicit reconcile; no stacked overlays or blind retry",
+      "status": "PASS"
+    },
+    {
+      "name": "Long identity remains complete through a bounded preview and full reader",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "kind": "success-fit",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 76,
+      "footer": 832
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 744,
+      "content": 744,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 64.40283203125,
+      "footer": 606.3157958984375
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 753,
+      "content": 753,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 68.37076568603516,
+      "footer": 724.2105712890625
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 72,
+      "footer": 788.2105712890625
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 704,
+      "content": 704,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 56.375328063964844,
+      "footer": 367.8315734863281
+    },
+    {
+      "kind": "success-fit",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 756,
+      "content": 756,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 75.20000457763672,
+      "footer": 823.2421264648438
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 76,
+      "footer": 875,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 787,
+      "content": 794,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 64.40283203125,
+      "footer": 637.6517944335938,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 796,
+      "content": 796,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 68.37076568603516,
+      "footer": 761.6397094726562,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 72,
+      "footer": 828.9473876953125,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 747,
+      "content": 794,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 56.375328063964844,
+      "footer": 386.84210205078125,
+      "within": true,
+      "overlay": 1
+    },
+    {
+      "kind": "confirm-dialog",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "height": 799,
+      "content": 799,
+      "scroll": 0,
+      "pageScroll": 0,
+      "head": 0,
+      "body": 75.20000457763672,
+      "footer": 865.7894897460938,
+      "within": true,
+      "overlay": 1
+    }
+  ],
+  "errors": []
+}

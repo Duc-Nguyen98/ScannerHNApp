@@ -1,0 +1,43 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_directory": "C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp",
+  "target_kind": "prototype",
+  "current_prompt": "P19",
+  "revision": "P19-r02",
+  "completed_panel_ids": [
+    "P19.S01",
+    "P19.S02",
+    "P19.S03",
+    "P19.S04"
+  ],
+  "remaining_panel_ids": [],
+  "report": "handoff/P19/REVISION_02.md",
+  "node_tests": 104,
+  "browser_groups": 25,
+  "layout_combinations": 35,
+  "p09_regression_groups": 11,
+  "p18_logout_regression_groups": 3,
+  "footer_viewports": 4,
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "shared_components_changed": [
+    "P19: Home/auth route and lifecycle; P09/P18 scoped verified receipt source; P10 pending issue logout guard; P14 unsaved issue block/continue. Footer CSS unchanged."
+  ],
+  "blockers": [
+    "P19 production create/validate/Post/status/idempotency/stock contract and hardware unavailable; P20 full history, P21 durable resume, P24 full terminal boards pending. Preview remains page-memory only."
+  ],
+  "artifact_paths": [
+    "handoff/P19/REPORT.md",
+    "handoff/P19/REVIEW.html",
+    "handoff/P19/STATE_ACCEPTANCE.csv",
+    "handoff/P19/evidence/revision-01",
+    "handoff/P19/REVISION_02.md",
+    "handoff/P19/REVIEW_02.html",
+    "handoff/P19/evidence/revision-02/"
+  ],
+  "next_action": "Review P19 r02 visuals. P18 remains temporarily accepted; preserve other prompt revisions. Production integration and P20–P24 remain pending.",
+  "total_browser_groups": 39,
+  "ux_browser_groups": 8
+}

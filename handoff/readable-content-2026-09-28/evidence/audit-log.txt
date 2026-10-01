@@ -1,0 +1,16 @@
+PASS P01.S01 secret input is excluded, even with an accidental reader marker
+PASS P01.S02 complete identity accessible without changing session or input
+PASS P02 keeps the existing full-name dialog; no duplicate viewer
+PASS P03 consequences stay complete in the existing modal and remain scrollable
+PASS P04 input limit200 retained; saved-note reader does not change draft/codes/request
+PASS P05 input and saved-note readable while exact outbound draft retained
+PASS P06 description and transaction text have full readers without nested buttons
+PASS P07 verification product readable; existing NFC detail remains complete, no new write
+PASS P08 history note uses the shared reader and Back preserves route/scroll
+PASS Shared preview handles empty/short/250/2000+/Unicode/line breaks and derives button from real overflow
+PASS P09 note/diagnosis/result/accessories and timeline share bounded full readers
+PASS P10 long identity retains profile routing and full text access
+PASS P11 session metadata readable and password fields stay untouched
+PASS P12 keeps validated adapter and shared overflow primitive, full749-char source
+PASS Reader never writes storage; repeated route/observer lifecycle produces no stale overlay
+15 groups PASS

@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "name": "confirmed success Home button → Xuất kho creates clean next run",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed success nav Home → Quét mã → Xuất kho creates clean next run",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed success result Quét mã → cancel retains result; choose Xuất kho starts next run",
+      "status": "PASS"
+    },
+    {
+      "name": "failure → Home → both entry points reset; same-screen retry keeps request",
+      "status": "PASS"
+    },
+    {
+      "name": "native Back after terminal success → both entry points reset",
+      "status": "PASS"
+    },
+    {
+      "name": "unfinished accepted codes and metadata survive Home → both entry points",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN → Home → both entry points retain exact request; reconcile before new run",
+      "status": "PASS"
+    },
+    {
+      "name": "actual pending submit survives leave/reentry, late receipt never renders over Home",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

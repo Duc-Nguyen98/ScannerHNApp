@@ -1,0 +1,93 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P17",
+  "prompt_status": "P17_R03_AUDIT_FIXED_VISUAL_REVIEW_PENDING",
+  "completed_panel_ids": [
+    "P17.S01",
+    "P17.S02",
+    "P17.S03",
+    "P17.S04"
+  ],
+  "remaining_panel_ids": [
+    "P18.S01",
+    "P18.S02",
+    "P18.S03",
+    "P18.S04",
+    "P19.S01",
+    "P19.S02",
+    "P19.S03",
+    "P19.S04",
+    "P20.S01",
+    "P20.S02",
+    "P20.S03",
+    "P20.S04",
+    "P21.S01",
+    "P21.S02",
+    "P21.S03",
+    "P21.S04",
+    "P22.S01",
+    "P22.S02",
+    "P22.S03",
+    "P22.S04",
+    "P23.S01",
+    "P23.S02",
+    "P23.S03",
+    "P23.S04",
+    "P24.S01",
+    "P24.S02",
+    "P24.S03",
+    "P24.S04"
+  ],
+  "latest_revision": {
+    "id": "P17-r03",
+    "report": "handoff/P17/REVISION_03.md",
+    "review": "handoff/P17/REVIEW_03.html",
+    "evidence": "handoff/P17/evidence/revision-03",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_SCOPED_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "fixed_findings": 7,
+    "audit_checks": 10,
+    "node_tests": 126,
+    "browser_groups": {
+      "p17_regression": 6,
+      "navigation_long_content": 5,
+      "footer_viewports": 4
+    },
+    "scope": "P16/P17 and direct P04/P05/P07 UI lifecycle; preserve other chats/P18 checkpoint"
+  },
+  "blockers": [
+    "User visual review pending",
+    "Production status/record/same-request retry/permissions contract unavailable",
+    "Camera/NFC and physical scanner not tested",
+    "B17 package camera asset not separately verified; existing P04 warehouse illustration used"
+  ],
+  "next_action": "Review r03 scoped UI fixes; preserve P17 r02 temporary acceptance as historical and P18 current global work.",
+  "previous_revision": {
+    "id": "P17-r02",
+    "report": "handoff/P17/REVISION_02.md",
+    "review": "handoff/P17/REVIEW_02.html",
+    "evidence": "handoff/P17/evidence/revision-02",
+    "visual_status": "AWAITING_USER_REVIEW",
+    "behavior_status": "PASS_PROTOTYPE",
+    "integration_status": "BLOCKED_PRODUCTION",
+    "node_tests": 122,
+    "browser_groups": {
+      "ux": 7,
+      "p17": 6,
+      "p16": 7,
+      "footer_viewports": 4
+    },
+    "scope": "Six user-authorized UX improvements in P16/P17; model/request/backend semantics unchanged"
+  },
+  "user_temporary_acceptance": {
+    "date": "2026-09-29",
+    "status": "TEMPORARILY_ACCEPTED",
+    "scope": "P17 r02 current prototype; user may add states later",
+    "source": "User: Tạm thời tôi chốt P017 (chỉ là tạm thời sau này sẽ bổ sung thêm các state cho đồng bộ)",
+    "integration_status": "BLOCKED_PRODUCTION"
+  },
+  "visual_status": "AWAITING_USER_REVIEW"
+}

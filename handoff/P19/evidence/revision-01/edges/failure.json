@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "P09 owner entry, IME cannot submit, quantity native Back preserves focus and code",
+      "status": "PASS"
+    },
+    {
+      "name": "Different case keeps separate entry draft; Back restores exact document",
+      "status": "PASS"
+    },
+    {
+      "name": "P14 unfinished P19 blocks save/end and Continue returns same document",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN prevents voluntary logout, retains exact request through external navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "New issue uses new document; old receipt Back remains immutable; stock refetched",
+      "status": "PASS"
+    },
+    {
+      "name": "P18 receives confirmed component lines of same case",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.waitForSelector: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-hn-read-trigger]') to be visible\u001b[22m\n\u001b[2m    21 × locator resolved to 3 elements. Proceeding with the first one: <button hidden=\"\" type=\"button\" class=\"hn-read-more\" aria-haspopup=\"dialog\" data-hn-read-trigger=\"\" aria-label=\"Xem đầy đủ họ tên\">Xem đầy đủ</button>\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p19_edges.cjs:11:422\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p19_edges.cjs:3:536)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p19_edges.cjs:11:2"
+}

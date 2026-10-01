@@ -1,0 +1,108 @@
+{
+  "revision": "P19-r01",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "files": [
+    {
+      "file": "docs/flows/warranty-components/issue-model.mjs",
+      "sha256": "6102956b5025ba29ad22b034a02031b8bde6bfa4042ed53ebbed5991440df16b"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-fixture.mjs",
+      "sha256": "97912f049cdde937c36faf79d1e5fb76682a327405e6539f9d6ff4f1dd258193"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-view.mjs",
+      "sha256": "9caa0533dec12837452a6994a4da777524badf717917db8ae191b6c40dea1e59"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue-icons.mjs",
+      "sha256": "40b55c8de49b604efb94336a7434c95b9852e007cb6040bb3e8ea3c4e94447ef"
+    },
+    {
+      "file": "docs/flows/warranty-components/issue.css",
+      "sha256": "00ca86a1f666cc8a76148c1ddaa7a0f04266975ab12eaa10f3c29557539fb151"
+    },
+    {
+      "file": "docs/flows/auth-session/index.html",
+      "sha256": "d0349731f9517b23e4b407f950cbe75f94f89b96ca7fdcdb9f0b91c0e4e54ef5"
+    },
+    {
+      "file": "docs/flows/home/home-flow.mjs",
+      "sha256": "ac8dcdaded424e2974f3964d1aed8c30f536ea5f6453d2747f16b1c4252d1001"
+    },
+    {
+      "file": "docs/flows/home/home.mjs",
+      "sha256": "6ae707c26d2997f23379ac240766b0efa471ab4ac6ab09c106073fc069e32769"
+    },
+    {
+      "file": "docs/flows/warranty/warranty.mjs",
+      "sha256": "ce9c0130f938c672b06b03e66133c5fe30c5da8c8f990481f24a025635974646"
+    },
+    {
+      "file": "docs/flows/attachments/view.mjs",
+      "sha256": "34d1e141f7decf13c5d9b1bd7211db08818cd663441acf1ebbb31b113bd7f141"
+    },
+    {
+      "file": "docs/flows/profile/profile.mjs",
+      "sha256": "0d82bf74d84d425b2520b53fd011738dc312d4c58d1902e3b76b2c58090bd325"
+    },
+    {
+      "file": "docs/flows/recovery-shift/model.mjs",
+      "sha256": "b5ef5026c96f8a504ed05ac4742771928cc4c348f3308c61a677124a2c42a00a"
+    },
+    {
+      "file": "docs/flows/recovery-shift/presentation.mjs",
+      "sha256": "0760114b36799487814f79cdbba2fafca02bb4a32df4cfdf4b32bd0cf384b876"
+    },
+    {
+      "file": "tests/component-issue.test.mjs",
+      "sha256": "cdb1ce63f97197d8597a16c3e2d0521ae9c097cd5d7792b08f009a8c3062af2a"
+    },
+    {
+      "file": "scripts/check_p19.cjs",
+      "sha256": "b36c8cc932c58674c3fb038f0a8af5c25a7ec398b630adc614d34a048206b503"
+    },
+    {
+      "file": "scripts/check_p19_edges.cjs",
+      "sha256": "c1f24051e442b1683cee4966abaac8078ee5ccf5832c9cce9e9d09ed3edd6807"
+    },
+    {
+      "file": "scripts/capture_p19_before.cjs",
+      "sha256": "2c347433d3f35fc2031b72d1a58a91a4efeb29448b8ba7c6f0e6a26d7421408d"
+    }
+  ],
+  "capture": {
+    "css_frame": [
+      494,
+      950
+    ],
+    "viewports": [
+      [
+        494,
+        950
+      ],
+      [
+        360,
+        800
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        340,
+        420
+      ]
+    ],
+    "dpr": 1,
+    "zoom": "100%",
+    "font": "Local Public Sans",
+    "engine": "Playwright Chromium",
+    "animation": "reduced motion",
+    "baseline": "Unmodified B19.png; before screenshots are the existing standalone390×844 prototype at494×950 browser viewport, after is user-locked494×950 app. Not pixel-diff aligned."
+  }
+}

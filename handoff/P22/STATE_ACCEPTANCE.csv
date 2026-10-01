@@ -1,0 +1,10 @@
+id,disposition,visual,behavior,integration,evidence,note
+P22.S01,MIGRATED,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/regression/after/S01-494x950.png,R03 unchanged hub6 no shortcut; Home recent P12
+P22.S02,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,R03 list controls focus IME cache and data validation; visual review pending
+P22.S03,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,R03 navigation cache warning long values and focus; visual review pending
+P22.S04,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/regression/after/S04-494x950.png,R03 default unavailable unchanged; retry read-only
+P22.A01,MIGRATED,IN_PROGRESS,PASS,BLOCKED,evidence/revision-01/edges/results.json,Latest user HomeP12/no shortcut supersedes original A01
+P22.A02,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-01/after/results.json,Filters/query/scroll/focus preserved
+P22.A03,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-01/after/results.json,Missing ID not first event
+P22.A04,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-01/after/results.json,Unavailable distinct from confirmed empty
+P22.A05,CURRENT,IN_PROGRESS,PASS,BLOCKED,evidence/revision-01/logic/node-tests.txt,Source confirmation required; no P07 inferred event; production BLOCKED

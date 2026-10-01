@@ -1,0 +1,14 @@
+/* HN-action-feedback-v1: explicit confirm before mutation, acknowledge verified result. */
+:is(#home-app,#app) .hn-action-dialog .app-modal-heading{padding:24px 24px 14px;font-size:24px;color:#123b57}
+:is(#home-app,#app) .hn-action-dialog .app-modal-body{padding:0 24px}
+:is(#home-app,#app) .hn-action-dialog .app-modal-body p{margin:0;color:#4b657c;font-size:18px;line-height:1.6;overflow-wrap:anywhere}
+:is(#home-app,#app) .hn-action-dialog .app-modal-footer{gap:12px;display:flex;padding:24px}
+:is(#home-app,#app) .hn-action-dialog .app-modal-footer button{flex:1;min-width:0;min-height:56px;padding:12px 16px;border-radius:12px;font:600 18px/1.4 Arial,sans-serif;cursor:pointer}
+:is(#home-app,#app) .hn-action-dialog .hn-action-primary{border:1px solid #006383;background:#006383;color:white}
+:is(#home-app,#app) .hn-action-dialog .hn-action-secondary{border:1px solid #cfdfeb;background:white;color:#315b7d}
+:is(#home-app,#app) .hn-action-dialog[data-tone="danger"] .hn-action-primary{background:#b42318;border-color:#b42318}
+:is(#home-app,#app) .hn-action-status{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#eef5fb;color:#006383;margin:2px auto 18px}
+:is(#home-app,#app) .hn-action-status svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:is(#home-app,#app) .hn-action-dialog[data-tone="success"] .hn-action-status{background:#e7f6ec;color:#178344}
+:is(#home-app,#app) .hn-action-dialog[data-tone="success"] .app-modal-heading,:is(#home-app,#app) .hn-action-dialog[data-tone="success"] .app-modal-body{text-align:center}
+:is(#home-app,#app) .hn-action-dialog[data-tone="error"] .hn-action-status{background:#fff0ef;color:#b42318}

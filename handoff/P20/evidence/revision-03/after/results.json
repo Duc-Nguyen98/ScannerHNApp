@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "id": "A01",
+      "title": "Expand keeps focused control inside visible scroller",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "title": "Collapse during page request does not leave large permanent blank card",
+      "status": "PASS"
+    },
+    {
+      "id": "A03",
+      "title": "Cache return restores focus to selected receipt, not obsolete load control",
+      "status": "PASS"
+    },
+    {
+      "id": "A04",
+      "title": "Large valid quantities do not overflow their column/card",
+      "status": "PASS"
+    },
+    {
+      "id": "A05",
+      "title": "Direct-link Back fallback cannot cycle P20 and P09",
+      "status": "PASS"
+    },
+    {
+      "id": "A06",
+      "title": "Unknown case Back never opens phantom case/cycles",
+      "status": "PASS"
+    },
+    {
+      "id": "A07",
+      "title": "Switch active case while read dialog open closes stale case overlay",
+      "status": "PASS"
+    },
+    {
+      "id": "A08",
+      "title": "Reader trigger for long receipt ID stays below header, no column squeeze",
+      "status": "PASS"
+    },
+    {
+      "id": "A09",
+      "title": "Successful duplicate-only page removes obsolete new-batch marker",
+      "status": "PASS"
+    },
+    {
+      "id": "A10",
+      "title": "Successive page keeps focus on existing jump control while async completes",
+      "status": "PASS"
+    },
+    {
+      "id": "A11",
+      "title": "Preview selector reflects per-case source mode",
+      "status": "PASS"
+    },
+    {
+      "id": "A12",
+      "title": "Repeated same-route preview entry does not add Back history step",
+      "status": "PASS"
+    }
+  ],
+  "passed": 12,
+  "failed": 0
+}

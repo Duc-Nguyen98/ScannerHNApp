@@ -1,0 +1,24 @@
+PASS p04: S01 shell/scroll across six viewports
+PASS p04: blank/invalid/duplicate validation stays at field; accepted scan uses persistent counters
+PASS p04: S02 scroll retains fixed header/footer at six viewports
+PASS p04: S03 content scroll keeps header/footer at six viewports
+PASS p04: rejected send shows scoped dialog, keeps request and restores focus
+PASS p04: UNKNOWN dialog and delayed reconciliation preserve exact request; no retry
+PASS p04: S04 short result fits naturally; wheel cannot move content at six viewports
+PASS p04: document opens P12 by verified ID and Back preserves exact result
+PASS p04: dialog Đối chiếu resolves UNKNOWN without another send
+PASS p05: S01 shell/scroll across six viewports
+PASS p05: source confirmation cancel, backdrop, Escape and native Back keep metadata unchanged
+PASS p05: source confirmation applies once with Enter and preserves changed source
+PASS p05: required metadata remains inline with focus; no action dialog
+PASS p05: blank/invalid/duplicate validation stays at field; accepted scan uses persistent counters
+PASS p05: blocked product retains contextual P17.S02 panel
+PASS p05: S02 scroll retains fixed header/footer at six viewports
+PASS p05: S03 content scroll keeps header/footer at six viewports
+PASS p05: rejected send shows scoped dialog, keeps request and restores focus
+PASS p05: UNKNOWN dialog and delayed reconciliation preserve exact request; no retry
+PASS p05: S04 short result fits naturally; wheel cannot move content at six viewports
+PASS p05: document opens P12 by verified ID and Back preserves exact result
+PASS p05: dialog Đối chiếu resolves UNKNOWN without another send
+PASS p05: long recipient remains fully readable with legitimate internal scroll
+{"groups":23,"layouts":66,"errors":[]}

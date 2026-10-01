@@ -1,0 +1,91 @@
+{
+  "phase": "before",
+  "checks": [
+    {
+      "id": "01",
+      "name": "Deep-link Back fallback must not invent a caller",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n",
+      "errors": []
+    },
+    {
+      "id": "02",
+      "name": "Leaving a refresh is not a read failure",
+      "status": "FAIL",
+      "error": "Expected \"actual\" to be strictly unequal to:\n\n'error'",
+      "errors": []
+    },
+    {
+      "id": "03",
+      "name": "Cached detail exposes the source warning",
+      "status": "FAIL",
+      "error": "The input did not match the regular expression /lần đọc trước/. Input:\n\n'Thay thẻ\\n' +\n  'Thành công\\n' +\n  'Thay đổi thẻ NFC\\n' +\n  'Thẻ trước\\n' +\n  'Sao chép\\n' +\n  'NFC-OLD-7B10\\n' +\n  '↓\\n' +\n  'Thẻ thay thế\\n' +\n  'Sao chép\\n' +\n  'NFC-7B10\\n' +\n  'Lý do\\n' +\n  '\\n' +\n  'Thẻ cũ bị hỏng.\\n' +\n  '\\n' +\n  'Serial sản phẩm\\n' +\n  'HN12346\\n' +\n  'Sao chép\\n' +\n  'Sản phẩm\\n' +\n  'Máy quét mã HS-200\\n' +\n  'Người thực hiện\\n' +\n  'Lan Nguyễn\\n' +\n  'Thời điểm\\n' +\n  '10/09/2026 · 11:20\\n' +\n  'Nội dung thao tác\\n' +\n  '\\n' +\n  'Thay thẻ đã được xác nhận; UID cũ được giữ để truy vết.\\n' +\n  '\\n' +\n  'Thông tin đối chiếu\\n' +\n  'Lịch sử chỉ dùng để xem lại thao tác, không thay đổi trạng thái thẻ.'\n",
+      "errors": []
+    },
+    {
+      "id": "04",
+      "name": "A long UID never hides the serial row",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "id": "05",
+      "name": "Long actor is compact on card with full detail path",
+      "status": "FAIL",
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await p.locator('.p22-actor').first().evaluate(e=>e.offsetHeight<=48))\n",
+      "errors": []
+    },
+    {
+      "id": "06",
+      "name": "IME lifecycle resets after a tab replaces its input",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n",
+      "errors": []
+    },
+    {
+      "id": "07",
+      "name": "Pending query does not repaint underneath a picker",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "id": "08",
+      "name": "Reload keyboard focus survives request completion",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "id": "09",
+      "name": "Incomplete empty is not a confirmed empty history",
+      "status": "FAIL",
+      "error": "The input was expected to not match the regular expression /Chưa có thao tác|Nguồn đã xác nhận kết quả đọc/. Input:\n\n'Chưa có thao tác\\n' +\n  '\\n' +\n  'Nguồn đã xác nhận kết quả đọc. Bạn có thể thay đổi bộ lọc hoặc tải lại.\\n' +\n  '\\n' +\n  'Điều chỉnh bộ lọc'\n",
+      "errors": []
+    },
+    {
+      "id": "10",
+      "name": "Invalid optional data is unknown, not object text or fake copy action",
+      "status": "FAIL",
+      "error": "The input was expected to not match the regular expression /\\[object Object\\]/. Input:\n\n'Thay thẻ\\n' +\n  'Thành công\\n' +\n  'Thay đổi thẻ NFC\\n' +\n  'Thẻ trước\\n' +\n  'Sao chép\\n' +\n  'NFC-OLD-7B10\\n' +\n  '↓\\n' +\n  'Thẻ thay thế\\n' +\n  'Sao chép\\n' +\n  '[object Object]\\n' +\n  'Lý do\\n' +\n  '\\n' +\n  'Thẻ cũ bị hỏng.\\n' +\n  '\\n' +\n  'Serial sản phẩm\\n' +\n  'Chưa xác minh\\n' +\n  'Sản phẩm\\n' +\n  'Máy quét mã HS-200\\n' +\n  'Người thực hiện\\n' +\n  '[object Object]\\n' +\n  'Thời điểm\\n' +\n  '10/09/2026 · 11:20\\n' +\n  'Nội dung thao tác\\n' +\n  '\\n' +\n  'Thay thẻ đã được xác nhận; UID cũ được giữ để truy vết.\\n' +\n  '\\n' +\n  'Thông tin đối chiếu\\n' +\n  'Lịch sử chỉ dùng để xem lại thao tác, không thay đổi trạng thái thẻ.'\n",
+      "errors": []
+    },
+    {
+      "id": "11",
+      "name": "Active status filter has visible filter indicator",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n",
+      "errors": []
+    },
+    {
+      "id": "12",
+      "name": "Source change does not strand focus in document body",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    }
+  ],
+  "passed": 0,
+  "total": 12
+}

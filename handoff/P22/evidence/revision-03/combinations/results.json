@@ -1,0 +1,195 @@
+{
+  "checks": [
+    {
+      "name": "Deferred query commits once after Cancel with clear button and scope intact",
+      "status": "PASS"
+    },
+    {
+      "name": "Read focus never steals a newer input, external control, or pointer choice",
+      "status": "PASS"
+    },
+    {
+      "name": "Refresh error deferred under filter; Apply retains query and failure context",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancelled refresh stays interrupted after late completion and retry recovers",
+      "status": "PASS"
+    },
+    {
+      "name": "Double Back consumes one entry; Forward returns to exact event",
+      "status": "PASS"
+    },
+    {
+      "name": "Late clipboard does not stack over reader; reader Escape returns focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Long query and active filters / error detail fit5viewports with stable header-footer",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "layout": [
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "scene": "filtered-list",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        494,
+        950
+      ],
+      "scene": "cached-detail",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "scene": "filtered-list",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "scene": "cached-detail",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "scene": "filtered-list",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "scene": "cached-detail",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "scene": "filtered-list",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "scene": "cached-detail",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "scene": "filtered-list",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    },
+    {
+      "viewport": [
+        340,
+        420
+      ],
+      "scene": "cached-detail",
+      "shell": [
+        494,
+        950
+      ],
+      "overflow": false,
+      "controlsOverflow": false,
+      "small": [],
+      "footer": true,
+      "header": true
+    }
+  ]
+}

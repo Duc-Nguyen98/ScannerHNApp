@@ -1,0 +1,8 @@
+PASS S03 fits and real mouse wheel cannot move content/header/footer/page in six viewports
+PASS Confirmation dialog stays inside app with locked background and explicit cancel in six viewports
+PASS Verified revoke uses one success dialog and no inline toast; acknowledgment preserves result
+PASS Escape closes result without undo; Back closes dialog before route navigation
+PASS General revoke failure is a dialog and leaves target intact
+PASS UNKNOWN dialog allows defer then explicit reconcile; no stacked overlays or blind retry
+PASS Long identity remains complete through a bounded preview and full reader
+7 groups PASS

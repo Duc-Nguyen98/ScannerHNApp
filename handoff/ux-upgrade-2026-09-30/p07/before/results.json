@@ -1,0 +1,51 @@
+{
+  "viewport": {
+    "width": 494,
+    "height": 1000,
+    "dpr": 1
+  },
+  "results": [
+    {
+      "name": "unique-enters-existing-detail",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#p07-detail-title') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "multiple-focuses-first-row",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "errors": []
+    },
+    {
+      "name": "zero-keeps-search-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "empty-keeps-search-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "composition-blocks-enter",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#p07-detail-title') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "ime-key229-and-repeat-block",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard-back-restores-context",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#p07-detail-title') to be visible\u001b[22m\n",
+      "errors": []
+    },
+    {
+      "name": "readonly-capability-allows-view-only",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#p07-detail-title') to be visible\u001b[22m\n",
+      "errors": []
+    }
+  ]
+}

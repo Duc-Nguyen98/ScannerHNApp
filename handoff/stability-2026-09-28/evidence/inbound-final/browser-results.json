@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "S01 required/read-only metadata and source session",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 fixture 12=11+1 and raw history",
+      "status": "PASS"
+    },
+    {
+      "name": "S03 back retains codes/identity and edits note",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 single confirmed record + S04 no inventory change",
+      "status": "PASS"
+    },
+    {
+      "name": "result dependency notice remains accessible at reduced height",
+      "status": "PASS"
+    },
+    {
+      "name": "manual/camera fixture validation same pipeline, keyboard input, invalid preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "timeout preserves request, disables retry/back; reconcile receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "Home/native Back preserves in-memory draft",
+      "status": "PASS"
+    },
+    {
+      "name": "warehouse stop blocks record via P03 without logout",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 picker opens P04 without requesting camera",
+      "status": "PASS"
+    },
+    {
+      "name": "logout/back cannot restore P04 authenticated data",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

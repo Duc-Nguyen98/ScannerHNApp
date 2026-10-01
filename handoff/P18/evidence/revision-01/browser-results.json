@@ -1,0 +1,423 @@
+{
+  "checks": [
+    {
+      "name": "S01/A01 four tasks, cancel/escape/back, retry single task and retain others",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 UNKNOWN blocks retry and preserves task; menu no deletion",
+      "status": "PASS"
+    },
+    {
+      "name": "S02/A02 true PDF renderer, different page bytes/text, correct file download",
+      "status": "PASS"
+    },
+    {
+      "name": "S03/A03 validations, blocked close, retained form, closed readonly",
+      "status": "PASS"
+    },
+    {
+      "name": "S04/A04/A05 unknown source, explicit fixture, selection without location mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "P12 actual file uses same ID, viewer and Back restore tab; P18 list entry works",
+      "status": "PASS"
+    },
+    {
+      "name": "P09/P06 owners navigate with exact case/item and restore on Back",
+      "status": "PASS"
+    },
+    {
+      "name": "read error retry, late fetch route departure, invalid deep links",
+      "status": "PASS"
+    },
+    {
+      "name": "permission/session revoked blocks P18 and Back cannot restore logged out data",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "P18-S01",
+      "width": 494,
+      "height": 950,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 1,
+      "scaleY": 1,
+      "overflow": false,
+      "scrollHeight": 856,
+      "clientHeight": 799,
+      "footerBottom": 950,
+      "frameBottom": 950,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S01",
+      "width": 360,
+      "height": 800,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.728744939271255,
+      "scaleY": 0.7287449244449014,
+      "overflow": false,
+      "scrollHeight": 856,
+      "clientHeight": 799,
+      "footerBottom": 692.3076782226562,
+      "frameBottom": 692.3076782226562,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S01",
+      "width": 430,
+      "height": 932,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.8704453441295547,
+      "scaleY": 0.8704453638980263,
+      "overflow": false,
+      "scrollHeight": 856,
+      "clientHeight": 799,
+      "footerBottom": 826.923095703125,
+      "frameBottom": 826.923095703125,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S01",
+      "width": 1440,
+      "height": 900,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.9473684210526315,
+      "scaleY": 0.9473684210526315,
+      "overflow": false,
+      "scrollHeight": 856,
+      "clientHeight": 799,
+      "footerBottom": 900,
+      "frameBottom": 900,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S01",
+      "width": 340,
+      "height": 420,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.44210525080259994,
+      "scaleY": 0.4421052631578947,
+      "overflow": false,
+      "scrollHeight": 856,
+      "clientHeight": 799,
+      "footerBottom": 420,
+      "frameBottom": 420,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S02",
+      "width": 494,
+      "height": 950,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 1,
+      "scaleY": 1,
+      "overflow": false,
+      "scrollHeight": 797,
+      "clientHeight": 728,
+      "footerBottom": 950,
+      "frameBottom": 950,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S02",
+      "width": 360,
+      "height": 800,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.728744939271255,
+      "scaleY": 0.7287449244449014,
+      "overflow": false,
+      "scrollHeight": 797,
+      "clientHeight": 728,
+      "footerBottom": 692.3076782226562,
+      "frameBottom": 692.3076782226562,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S02",
+      "width": 430,
+      "height": 932,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.8704453441295547,
+      "scaleY": 0.8704453638980263,
+      "overflow": false,
+      "scrollHeight": 797,
+      "clientHeight": 728,
+      "footerBottom": 826.923095703125,
+      "frameBottom": 826.923095703125,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S02",
+      "width": 1440,
+      "height": 900,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.9473684210526315,
+      "scaleY": 0.9473684210526315,
+      "overflow": false,
+      "scrollHeight": 797,
+      "clientHeight": 728,
+      "footerBottom": 900,
+      "frameBottom": 900,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S02",
+      "width": 340,
+      "height": 420,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.44210525080259994,
+      "scaleY": 0.4421052631578947,
+      "overflow": false,
+      "scrollHeight": 797,
+      "clientHeight": 728,
+      "footerBottom": 420,
+      "frameBottom": 420,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S03",
+      "width": 494,
+      "height": 950,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 1,
+      "scaleY": 1,
+      "overflow": false,
+      "scrollHeight": 1129,
+      "clientHeight": 784,
+      "footerBottom": 950,
+      "frameBottom": 950,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S03",
+      "width": 360,
+      "height": 800,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.728744939271255,
+      "scaleY": 0.7287449244449014,
+      "overflow": false,
+      "scrollHeight": 1129,
+      "clientHeight": 784,
+      "footerBottom": 692.3076782226562,
+      "frameBottom": 692.3076782226562,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S03",
+      "width": 430,
+      "height": 932,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.8704453441295547,
+      "scaleY": 0.8704453638980263,
+      "overflow": false,
+      "scrollHeight": 1129,
+      "clientHeight": 784,
+      "footerBottom": 826.923095703125,
+      "frameBottom": 826.923095703125,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S03",
+      "width": 1440,
+      "height": 900,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.9473684210526315,
+      "scaleY": 0.9473684210526315,
+      "overflow": false,
+      "scrollHeight": 1129,
+      "clientHeight": 784,
+      "footerBottom": 900,
+      "frameBottom": 900,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S03",
+      "width": 340,
+      "height": 420,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.44210525080259994,
+      "scaleY": 0.4421052631578947,
+      "overflow": false,
+      "scrollHeight": 1129,
+      "clientHeight": 784,
+      "footerBottom": 420,
+      "frameBottom": 420,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S04",
+      "width": 494,
+      "height": 950,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 1,
+      "scaleY": 1,
+      "overflow": false,
+      "scrollHeight": 946,
+      "clientHeight": 709,
+      "footerBottom": 117,
+      "frameBottom": 192,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S04",
+      "width": 360,
+      "height": 800,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.728744939271255,
+      "scaleY": 0.7287449244449014,
+      "overflow": false,
+      "scrollHeight": 946,
+      "clientHeight": 709,
+      "footerBottom": 637.6517944335938,
+      "frameBottom": 692.3076782226562,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S04",
+      "width": 430,
+      "height": 932,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.8704453441295547,
+      "scaleY": 0.8704453638980263,
+      "overflow": false,
+      "scrollHeight": 946,
+      "clientHeight": 709,
+      "footerBottom": 761.6397094726562,
+      "frameBottom": 826.923095703125,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S04",
+      "width": 1440,
+      "height": 900,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.9473684210526315,
+      "scaleY": 0.9473684210526315,
+      "overflow": false,
+      "scrollHeight": 946,
+      "clientHeight": 709,
+      "footerBottom": 828.9473876953125,
+      "frameBottom": 900,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    },
+    {
+      "id": "P18-S04",
+      "width": 340,
+      "height": 420,
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.44210525080259994,
+      "scaleY": 0.4421052631578947,
+      "overflow": false,
+      "scrollHeight": 946,
+      "clientHeight": 709,
+      "footerBottom": 386.84210205078125,
+      "frameBottom": 420,
+      "dpr": 1,
+      "zoom": 1,
+      "font": "Arial, sans-serif"
+    }
+  ],
+  "errors": []
+}

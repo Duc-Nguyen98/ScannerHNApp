@@ -1,0 +1,2037 @@
+{
+  "checks": [
+    {
+      "name": "P01 password eye actual target and raw preservation",
+      "status": "PASS"
+    },
+    {
+      "name": "Home compact targets hit correctly and locked nav stays independent",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 picker close and discard dialog actions fit at compact viewport",
+      "status": "FAIL",
+      "error": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.p03-dialog') to be detached\u001b[22m\n\u001b[2m    42 × locator resolved to visible <section tabindex=\"-1\" aria-busy=\"false\" role=\"alertdialog\" aria-modal=\"false\" data-panel=\"P03.S02\" aria-labelledby=\"p03-title\" aria-describedby=\"p03-description\" class=\"p03-dialog modal unfinished\">…</section>\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:14:450\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:8:35)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:14:1"
+    },
+    {
+      "name": "P04/P05 Back is not covered by the first content card",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 clear, focus, Escape and dialog targets",
+      "status": "PASS"
+    },
+    {
+      "name": "P07 detail copy/close targets and native Back returns to same query",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: [{\"id\":\"Quay lại màn trước\",\"r\":{\"x\":77.15476989746094,\"y\":75.91776275634766,\"width\":43.99638366699219,\"height\":43.99638366699219,\"top\":75.91776275634766,\"right\":121.15115356445312,\"bottom\":119.91414642333984,\"left\":77.15476989746094},\"points\":[{\"x\":0.25,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.25,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.25,\"y\":0.75,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.5,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.5,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.5,\"y\":0.75,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.75,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.75,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"},{\"x\":0.75,\"y\":0.75,\"ok\":true,\"hit\":\"<button class=\\\"p07-dialog-back\\\" data-p07=\\\"close-detail\\\" aria-label=\\\"Quay lại màn trước\\\" data-hn-touch-layout=\\\"\\\" style=\\\"-\"}]},{\"id\":\"Sao chép mã thẻ NFC-OLD-001\",\"r\":{\"x\":218.8426055908203,\"y\":128.31414794921875,\"width\":43.99638366699219,\"height\":43.99638366699219,\"top\":128.31414794921875,\"right\":262.8389892578125,\"bottom\":172.31053161621094,\"left\":218.8426055908203},\"points\":[{\"x\":0.25,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-copy\\\" data-p07=\\\"copy\\\" data-uid=\\\"NFC-OLD-001\\\" aria-label=\\\"Sao chép mã thẻ NFC-OLD-001\\\" data-hn-touch-l\"},{\"x\":0.25,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-copy\\\" data-p07=\\\"copy\\\" data-uid=\\\"NFC-OLD-001\\\" aria-label=\\\"Sao chép mã thẻ NFC-OLD-001\\\" data-hn-touch-l\"},{\"x\":0.25,\"y\":0.75,\"ok\":false,\"hit\":\"<dd><span class=\\\"p07-chip linked\\\">Đã liên kết</span></dd>\"},{\"x\":0.5,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-copy\\\" data-p07=\\\"copy\\\" data-uid=\\\"NFC-OLD-001\\\" aria-label=\\\"Sao chép mã thẻ NFC-OLD-001\\\" data-hn-touch-l\"},{\"x\":0.5,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-copy\\\" data-p07=\\\"copy\\\" data-uid=\\\"NFC-OLD-001\\\" aria-label=\\\"Sao chép mã thẻ NFC-OLD-001\\\" data-hn-touch-l\"},{\"x\":0.5,\"y\":0.75,\"ok\":false,\"hit\":\"<dd><span class=\\\"p07-chip linked\\\">Đã liên kết</span></dd>\"},{\"x\":0.75,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-copy\\\" data-p07=\\\"copy\\\" data-uid=\\\"NFC-OLD-001\\\" aria-label=\\\"Sao chép mã thẻ NFC-OLD-001\\\" data-hn-touch-l\"},{\"x\":0.75,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-copy\\\" data-p07=\\\"copy\\\" data-uid=\\\"NFC-OLD-001\\\" aria-label=\\\"Sao chép mã thẻ NFC-OLD-001\\\" data-hn-touch-l\"},{\"x\":0.75,\"y\":0.75,\"ok\":false,\"hit\":\"<dd><span class=\\\"p07-chip linked\\\">Đã liên kết</span></dd>\"}]},{\"id\":\"Đóng\",\"r\":{\"x\":77.15476989746094,\"y\":301.8542785644531,\"width\":185.68421936035156,\"height\":43.996368408203125,\"top\":301.8542785644531,\"right\":262.8389892578125,\"bottom\":345.85064697265625,\"left\":77.15476989746094},\"points\":[{\"x\":0.25,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.25,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.25,\"y\":0.75,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.5,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.5,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.5,\"y\":0.75,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.75,\"y\":0.25,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.75,\"y\":0.5,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"},{\"x\":0.75,\"y\":0.75,\"ok\":true,\"hit\":\"<button class=\\\"p07-secondary\\\" data-p07=\\\"close-detail\\\" data-hn-touch-layout=\\\"\\\" style=\\\"--hn-control-layout-min-height: 62p\"}]}]\n    at points (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:7:788)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:17:254\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:8:35)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_ux_touch_edges.cjs:17:1"
+    },
+    {
+      "name": "P08 record copy and filter controls stay clickable",
+      "status": "PASS"
+    },
+    {
+      "name": "P11 password eye geometry and value does not normalize",
+      "status": "PASS"
+    },
+    {
+      "name": "P10 existing controller is not double mounted; later boards opt out",
+      "status": "PASS"
+    }
+  ],
+  "geometry": [
+    {
+      "name": "login",
+      "result": [
+        {
+          "id": "toggle-password",
+          "r": {
+            "x": 291.95343017578125,
+            "y": 331.85223388671875,
+            "width": 43.99798583984375,
+            "height": 43.997955322265625,
+            "top": 331.85223388671875,
+            "right": 335.951416015625,
+            "bottom": 375.8501892089844,
+            "left": 291.95343017578125
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"eye\" id=\"toggle-password\" type=\"button\" aria-label=\"Hiện mật khẩu\" aria-pressed=\"false\" data-hn-touch-lay"
+            }
+          ]
+        },
+        {
+          "id": "forgot",
+          "r": {
+            "x": 245.3251495361328,
+            "y": 378.03643798828125,
+            "width": 91.35499572753906,
+            "height": 43.997955322265625,
+            "top": 378.03643798828125,
+            "right": 336.6801452636719,
+            "bottom": 422.0343933105469,
+            "left": 245.3251495361328
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"forgot\" type=\"button\" id=\"forgot\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layout"
+            }
+          ]
+        },
+        {
+          "id": "submit",
+          "r": {
+            "x": 23.31983757019043,
+            "y": 430.05059814453125,
+            "width": 313.3603210449219,
+            "height": 48.09716796875,
+            "top": 430.05059814453125,
+            "right": 336.6801586151123,
+            "bottom": 478.14776611328125,
+            "left": 23.31983757019043
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"primary\" type=\"submit\" id=\"submit\" data-hn-touch-layout=\"\" data-hn-hit-ready=\"\" style=\"--hn-control-layou"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "result": [
+        {
+          "id": "Thông báo: 3 thông báo chưa đọc",
+          "r": {
+            "x": 177.05673217773438,
+            "y": 4.4210524559021,
+            "width": 43.99639892578125,
+            "height": 43.99638366699219,
+            "top": 4.4210524559021,
+            "right": 221.05313110351562,
+            "bottom": 48.41743612289429,
+            "left": 177.05673217773438
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"hn-bell\" data-route=\"notifications\" aria-label=\"Thông báo: 3 thông báo chưa đọc\" title=\"3 thông báo chưa "
+            }
+          ]
+        },
+        {
+          "id": "Cá nhân — Minh Anh",
+          "r": {
+            "x": 226.35838317871094,
+            "y": 4.4210524559021,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 4.4210524559021,
+            "right": 270.3547668457031,
+            "bottom": 48.41743612289429,
+            "left": 226.35838317871094
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"hn-avatar\" data-route=\"profile\" aria-label=\"Cá nhân — Minh Anh\" data-hn-touch-layout=\"\" style=\"--hn-contr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P03-picker",
+      "result": [
+        {
+          "id": "Đóng chọn tác vụ quét",
+          "r": {
+            "x": 229.89523315429688,
+            "y": 211.76841735839844,
+            "width": 43.996368408203125,
+            "height": 43.99638366699219,
+            "top": 211.76841735839844,
+            "right": 273.8916015625,
+            "bottom": 255.76480102539062,
+            "left": 229.89523315429688
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-close\" data-p03-action=\"cancel\" aria-label=\"Đóng chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--h"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P03-discard",
+      "result": [
+        {
+          "id": "Quay lại",
+          "r": {
+            "x": 73.17581939697266,
+            "y": 196.50888061523438,
+            "width": 193.64212036132812,
+            "height": 43.99638366699219,
+            "top": 196.50888061523438,
+            "right": 266.8179397583008,
+            "bottom": 240.50526428222656,
+            "left": 73.17581939697266
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-neutral\" data-p03-action=\"cancel\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-h"
+            }
+          ]
+        },
+        {
+          "id": "Bỏ phiếu",
+          "r": {
+            "x": 73.17581939697266,
+            "y": 244.9263153076172,
+            "width": 193.64212036132812,
+            "height": 43.99638366699219,
+            "top": 244.9263153076172,
+            "right": 266.8179397583008,
+            "bottom": 288.9226989746094,
+            "left": 73.17581939697266
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p03-button p03-danger\" data-p03-action=\"confirmDiscard\" data-hn-touch-layout=\"\" style=\"--hn-control-layou"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "inbound",
+      "result": [
+        {
+          "id": "Về Trang chủ",
+          "r": {
+            "x": 66.10213470458984,
+            "y": 3.978947401046753,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 3.978947401046753,
+            "right": 110.09851837158203,
+            "bottom": 47.97533106803894,
+            "left": 66.10213470458984
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p04-button \" data-p04=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "outbound",
+      "result": [
+        {
+          "id": "Về Trang chủ",
+          "r": {
+            "x": 66.10213470458984,
+            "y": 6.189473628997803,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 6.189473628997803,
+            "right": 110.09851837158203,
+            "bottom": 50.18585729598999,
+            "left": 66.10213470458984
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p05-button \" data-p05=\"back\" aria-label=\"Về Trang chủ\" data-hn-touch-layout=\"\" style=\"--hn-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P06 search",
+      "result": [
+        {
+          "id": "Quay lại",
+          "r": {
+            "x": 69.63897705078125,
+            "y": 7.073684215545654,
+            "width": 43.99638366699219,
+            "height": 43.99637985229492,
+            "top": 7.073684215545654,
+            "right": 113.63536071777344,
+            "bottom": 51.070064067840576,
+            "left": 69.63897705078125
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px; --hn-c"
+            }
+          ]
+        },
+        {
+          "id": "Chọn tác vụ quét",
+          "r": {
+            "x": 226.35838317871094,
+            "y": 7.073684215545654,
+            "width": 43.99638366699219,
+            "height": 43.99637985229492,
+            "top": 7.073684215545654,
+            "right": 270.3547668457031,
+            "bottom": 51.070064067840576,
+            "left": 226.35838317871094
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"scan\" aria-label=\"Chọn tác vụ quét\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 0px"
+            }
+          ]
+        },
+        {
+          "id": "Xóa từ khóa tìm kiếm",
+          "r": {
+            "x": 172.19358825683594,
+            "y": 64.77532958984375,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 64.77532958984375,
+            "right": 216.18997192382812,
+            "bottom": 108.77171325683594,
+            "left": 172.19358825683594
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p06=\"clear\" aria-label=\"Xóa từ khóa tìm kiếm\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height"
+            }
+          ]
+        },
+        {
+          "id": "Bộ lọc sản phẩm",
+          "r": {
+            "x": 227.2425994873047,
+            "y": 64.33322143554688,
+            "width": 43.99638366699219,
+            "height": 44.880592346191406,
+            "top": 64.33322143554688,
+            "right": 271.2389831542969,
+            "bottom": 109.21381378173828,
+            "left": 227.2425994873047
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p06-filter\" data-p06=\"filter\" aria-label=\"Bộ lọc sản phẩm\" data-hn-touch-layout=\"\" style=\"--hn-control-la"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P06 dialog",
+      "result": [
+        {
+          "id": "Đã hiểu",
+          "r": {
+            "x": 79.80740356445312,
+            "y": 222.39276123046875,
+            "width": 180.37893676757812,
+            "height": 43.99639892578125,
+            "top": 222.39276123046875,
+            "right": 260.18634033203125,
+            "bottom": 266.38916015625,
+            "left": 79.80740356445312
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" data-action-dialog=\"confirm\" class=\"hn-action-primary\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P07 detail",
+      "result": [
+        {
+          "id": "Quay lại màn trước",
+          "r": {
+            "x": 77.15476989746094,
+            "y": 75.91776275634766,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 75.91776275634766,
+            "right": 121.15115356445312,
+            "bottom": 119.91414642333984,
+            "left": 77.15476989746094
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p07-dialog-back\" data-p07=\"close-detail\" aria-label=\"Quay lại màn trước\" data-hn-touch-layout=\"\" style=\"-"
+            }
+          ]
+        },
+        {
+          "id": "Sao chép mã thẻ NFC-OLD-001",
+          "r": {
+            "x": 218.8426055908203,
+            "y": 128.31414794921875,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 128.31414794921875,
+            "right": 262.8389892578125,
+            "bottom": 172.31053161621094,
+            "left": 218.8426055908203
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-copy\" data-p07=\"copy\" data-uid=\"NFC-OLD-001\" aria-label=\"Sao chép mã thẻ NFC-OLD-001\" data-hn-touch-l"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-copy\" data-p07=\"copy\" data-uid=\"NFC-OLD-001\" aria-label=\"Sao chép mã thẻ NFC-OLD-001\" data-hn-touch-l"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": false,
+              "hit": "<dd><span class=\"p07-chip linked\">Đã liên kết</span></dd>"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-copy\" data-p07=\"copy\" data-uid=\"NFC-OLD-001\" aria-label=\"Sao chép mã thẻ NFC-OLD-001\" data-hn-touch-l"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-copy\" data-p07=\"copy\" data-uid=\"NFC-OLD-001\" aria-label=\"Sao chép mã thẻ NFC-OLD-001\" data-hn-touch-l"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": false,
+              "hit": "<dd><span class=\"p07-chip linked\">Đã liên kết</span></dd>"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-copy\" data-p07=\"copy\" data-uid=\"NFC-OLD-001\" aria-label=\"Sao chép mã thẻ NFC-OLD-001\" data-hn-touch-l"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-copy\" data-p07=\"copy\" data-uid=\"NFC-OLD-001\" aria-label=\"Sao chép mã thẻ NFC-OLD-001\" data-hn-touch-l"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": false,
+              "hit": "<dd><span class=\"p07-chip linked\">Đã liên kết</span></dd>"
+            }
+          ]
+        },
+        {
+          "id": "Đóng",
+          "r": {
+            "x": 77.15476989746094,
+            "y": 301.8542785644531,
+            "width": 185.68421936035156,
+            "height": 43.996368408203125,
+            "top": 301.8542785644531,
+            "right": 262.8389892578125,
+            "bottom": 345.85064697265625,
+            "left": 77.15476989746094
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button class=\"p07-secondary\" data-p07=\"close-detail\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 62p"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P08 list",
+      "result": [
+        {
+          "id": "Quay lại",
+          "r": {
+            "x": 69.63897705078125,
+            "y": 7.073684215545654,
+            "width": 43.99638366699219,
+            "height": 43.99637985229492,
+            "top": 7.073684215545654,
+            "right": 113.63536071777344,
+            "bottom": 51.070064067840576,
+            "left": 69.63897705078125
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            }
+          ]
+        },
+        {
+          "id": "Bộ lọc lịch sử",
+          "r": {
+            "x": 227.2425994873047,
+            "y": 64.33322143554688,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 64.33322143554688,
+            "right": 271.2389831542969,
+            "bottom": 108.32960510253906,
+            "left": 227.2425994873047
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Bộ lọc lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control"
+            }
+          ]
+        },
+        {
+          "id": "Thay đổi bộ lọc",
+          "r": {
+            "x": 68.75476837158203,
+            "y": 138.39276123046875,
+            "width": 202.48422241210938,
+            "height": 43.99638366699219,
+            "top": 138.39276123046875,
+            "right": 271.2389907836914,
+            "bottom": 182.38914489746094,
+            "left": 68.75476837158203
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"filter\" aria-haspopup=\"dialog\" aria-label=\"Thay đổi bộ lọc\" data-hn-touch-layout=\"\" style=\"--hn-contro"
+            }
+          ]
+        },
+        {
+          "id": "Sắp xếp lịch sử",
+          "r": {
+            "x": 207.0162811279297,
+            "y": 185.9259796142578,
+            "width": 64.22270202636719,
+            "height": 43.99638366699219,
+            "top": 185.9259796142578,
+            "right": 271.2389831542969,
+            "bottom": 229.92236328125,
+            "left": 207.0162811279297
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"sort\" aria-haspopup=\"dialog\" aria-label=\"Sắp xếp lịch sử\" data-hn-touch-layout=\"\" style=\"--hn-control-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P08 detail",
+      "result": [
+        {
+          "id": "Quay lại",
+          "r": {
+            "x": 69.63897705078125,
+            "y": 7.073684215545654,
+            "width": 43.99638366699219,
+            "height": 43.99637985229492,
+            "top": 7.073684215545654,
+            "right": 113.63536071777344,
+            "bottom": 51.070064067840576,
+            "left": 69.63897705078125
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button data-p08=\"back\" aria-label=\"Quay lại\" data-hn-touch-layout=\"\" style=\"--hn-control-layout-min-height: 44px; --hn-"
+            }
+          ]
+        },
+        {
+          "id": "p08-copy-document",
+          "r": {
+            "x": 219.726806640625,
+            "y": 109.42796325683594,
+            "width": 43.99639892578125,
+            "height": 43.99638366699219,
+            "top": 109.42796325683594,
+            "right": 263.72320556640625,
+            "bottom": 153.42434692382812,
+            "left": 219.726806640625
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button id=\"p08-copy-document\" data-p08=\"copy\" aria-label=\"Sao chép mã PN-0005\" data-hn-touch-layout=\"\" style=\"--hn-cont"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P11 password",
+      "result": [
+        {
+          "id": "Quay lại Tài khoản & bảo mật",
+          "r": {
+            "x": 69.63897705078125,
+            "y": 6.189473628997803,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 6.189473628997803,
+            "right": 113.63536071777344,
+            "bottom": 50.18585729598999,
+            "left": 69.63897705078125
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" data-p11=\"back\" class=\"p11-back\" aria-label=\"Quay lại Tài khoản &amp; bảo mật\" data-hn-touch-layou"
+            }
+          ]
+        },
+        {
+          "id": "Hiện mật khẩu hiện tại",
+          "r": {
+            "x": 218.8426055908203,
+            "y": 139.663818359375,
+            "width": 43.99638366699219,
+            "height": 43.99638366699219,
+            "top": 139.663818359375,
+            "right": 262.8389892578125,
+            "bottom": 183.6602020263672,
+            "left": 218.8426055908203
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"current\" aria-label=\"Hiện mật khẩu hiện tại\" aria-pressed=\"false\" da"
+            }
+          ]
+        },
+        {
+          "id": "Hiện mật khẩu mới",
+          "r": {
+            "x": 218.8426055908203,
+            "y": 212.83914184570312,
+            "width": 43.99638366699219,
+            "height": 43.99639892578125,
+            "top": 212.83914184570312,
+            "right": 262.8389892578125,
+            "bottom": 256.8355407714844,
+            "left": 218.8426055908203
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"next\" aria-label=\"Hiện mật khẩu mới\" aria-pressed=\"false\" data-hn-to"
+            }
+          ]
+        },
+        {
+          "id": "Hiện xác nhận mật khẩu mới",
+          "r": {
+            "x": 218.8426055908203,
+            "y": 286.01446533203125,
+            "width": 43.99638366699219,
+            "height": 43.99639892578125,
+            "top": 286.01446533203125,
+            "right": 262.8389892578125,
+            "bottom": 330.0108642578125,
+            "left": 218.8426055908203
+          },
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.25,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.25,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.5,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.5,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.75,
+              "y": 0.5,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            },
+            {
+              "x": 0.75,
+              "y": 0.75,
+              "ok": true,
+              "hit": "<button type=\"button\" class=\"p11-eye\" data-p11-eye=\"confirm\" aria-label=\"Hiện xác nhận mật khẩu mới\" aria-pressed=\"false"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

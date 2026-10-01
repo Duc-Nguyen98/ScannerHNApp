@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-28",
+  "target": "prototype",
+  "node_passed": 196,
+  "browser_groups_passed": 117,
+  "suites": [
+    {
+      "suite": "home",
+      "groups_passed": 14,
+      "evidence": "evidence/home-verified/browser-results.json"
+    },
+    {
+      "suite": "dialogs",
+      "groups_passed": 16,
+      "evidence": "evidence/dialogs-complete/browser-results.json"
+    },
+    {
+      "suite": "inbound",
+      "groups_passed": 11,
+      "evidence": "evidence/inbound-final/browser-results.json"
+    },
+    {
+      "suite": "outbound",
+      "groups_passed": 12,
+      "evidence": "evidence/outbound-final/browser-results.json"
+    },
+    {
+      "suite": "lookup",
+      "groups_passed": 11,
+      "evidence": "evidence/lookup-final/browser-results.json"
+    },
+    {
+      "suite": "nfc",
+      "groups_passed": 11,
+      "evidence": "evidence/nfc-final/browser-results.json"
+    },
+    {
+      "suite": "history",
+      "groups_passed": 7,
+      "evidence": "evidence/history-verified/browser-results.json"
+    },
+    {
+      "suite": "warranty",
+      "groups_passed": 10,
+      "evidence": "evidence/warranty-final/browser-results.json"
+    },
+    {
+      "suite": "warranty_navigation",
+      "groups_passed": 11,
+      "evidence": "evidence/warranty_navigation-final/navigation-results.json"
+    },
+    {
+      "suite": "icons",
+      "groups_passed": 6,
+      "evidence": "evidence/icons-complete/system-icon-results.json"
+    },
+    {
+      "suite": "system",
+      "groups_passed": 8,
+      "evidence": "evidence/system/results.json"
+    }
+  ],
+  "visual": "Consistency/layout checked; full baseline acceptance pending",
+  "integration": "WMS/hardware NOT_RUN",
+  "preview": "http://127.0.0.1:8767/flows/auth-session/",
+  "source_sha256_at_handoff": {
+    "docs/flows/home/home.mjs": "353daf846d95cc16f774072ffb34dd987a33f3ebb4eb9f6eeea4ef66f6a7470e",
+    "docs/flows/scanner-dialogs/dialogs.mjs": "d998bfd0fbb1accd359880918cf3be6a5323b74c38c87583aeb94885a7b8dec2",
+    "docs/flows/auth-session/bootstrap.mjs": "04ef6a4093c0fa90d281e847cc357f2f941c69c3e3c664ec87b5f4c23a1473d4",
+    "docs/flows/auth-session/index.html": "7b46bf7224028daeed411244c82b14fbfdf870e6d6d3c6b71178fea9ed3d41c0",
+    "scripts/serve_preview.py": "ab35849b711e3a115b50e384fbd85c9a06fff7b6dae854f52786553ec49d1d05",
+    "scripts/check_system_stability.cjs": "5e47b89331a4d47e2912e997c917b53fb2f2bc84f74575159c6c3ed79c8ec6a5"
+  },
+  "concurrent_changes": "P04/P05/P09 and test files changed during audit. Preserved; test counts refer to saved execution snapshots."
+}

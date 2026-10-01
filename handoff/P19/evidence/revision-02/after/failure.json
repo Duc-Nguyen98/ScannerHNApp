@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "Four B19 panels render from isolated verified fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty review disabled; direct success route cannot fabricate success",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel quantity unchanged; invalid 0/negative/decimal/text/13; backdrop and focus trap",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 unit1 plus box2 = 2 codes / 3 units; no stock mutation before Post",
+      "status": "PASS"
+    },
+    {
+      "name": "Removal confirmation cancel and Browser Back preserve lines",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit rejection retains data; no success",
+      "status": "PASS"
+    },
+    {
+      "name": "Timeout POSTED stays UNKNOWN; double submit locked; reconcile same request confirms once",
+      "status": "PASS"
+    },
+    {
+      "name": "Verified receipt appears in exact P09 case; closed case deep link blocked",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: {\"scene\":\"review\",\"width\":494,\"height\":950,\"g\":{\"w\":494,\"h\":950,\"overflow\":false,\"verticalOverflow\":true,\"footer\":true}}\n+ actual - expected\n\n  {\n    footer: true,\n    h: 950,\n    overflow: false,\n+   verticalOverflow: true,\n-   verticalOverflow: false,\n    w: 494\n  }\n\n    at eval (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\run_p19_r02_regressions.cjs:4:1), <anonymous>:22:816)\n    at async check (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\run_p19_r02_regressions.cjs:4:1), <anonymous>:11:30)\n    at async eval (eval at <anonymous> (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\run_p19_r02_regressions.cjs:4:1), <anonymous>:22:2)"
+}

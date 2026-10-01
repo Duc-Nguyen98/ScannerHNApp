@@ -1,0 +1,1460 @@
+{
+  "checks": [
+    {
+      "name": "P08 all six pages: Back/Cancel/Reset only draft; Apply commits; no backdrop close",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 clipboard success: dialog only, focus trap, wheel/background stable and six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 clipboard failure remains on exact record; late clipboard reply does not open on other tab",
+      "status": "PASS"
+    },
+    {
+      "name": "P08 four panel layouts and persistent empty/loading/source states stay in content",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 intake confirms Hủy/named action; cancel/backdrop/Back send no request; field validation remains local",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 failed update: form replaced by one feedback dialog; continuation restores draft/request; double submit writes once",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 short result naturally fits; wheel does not move header/footer/content at all six sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 UNKNOWN dialog defers with same request; Back retains pending context; reconcile confirms exactly once",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 UNKNOWN confirm reconciles without stacked overlays; native Back closes notification first",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 verified new intake announces receipt, one dialog, no Hủy; UNKNOWN confirm reconciles once",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 long result has a bounded preview, full reader and accessible footer",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 closed case remains read only; dataset and invalid deep link safe",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "p08-copy-dialog-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        953
+      ],
+      "header": 0,
+      "footer": 875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p08-copy-dialog-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        953
+      ],
+      "header": 0,
+      "footer": 637.6517944335938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p08-copy-dialog-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        953
+      ],
+      "header": 0,
+      "footer": 761.6397094726562,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p08-copy-dialog-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        953
+      ],
+      "header": 0,
+      "footer": 828.9473876953125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p08-copy-dialog-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        953
+      ],
+      "header": 0,
+      "footer": 386.84210205078125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p08-copy-dialog-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        953
+      ],
+      "header": 0,
+      "footer": 865.7894897460938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p08-panel-1-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        997
+      ],
+      "header": 0,
+      "footer": 875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-1-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        997
+      ],
+      "header": 0,
+      "footer": 637.6517944335938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-1-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        997
+      ],
+      "header": 0,
+      "footer": 761.6397094726562,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-1-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        997
+      ],
+      "header": 0,
+      "footer": 828.9473876953125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-1-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        997
+      ],
+      "header": 0,
+      "footer": 386.84210205078125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-1-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        997
+      ],
+      "header": 0,
+      "footer": 865.7894897460938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-2-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        929
+      ],
+      "header": 0,
+      "footer": 875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-2-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        929
+      ],
+      "header": 0,
+      "footer": 637.6517944335938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-2-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        929
+      ],
+      "header": 0,
+      "footer": 761.6397094726562,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-2-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        929
+      ],
+      "header": 0,
+      "footer": 828.9473876953125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-2-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        929
+      ],
+      "header": 0,
+      "footer": 386.84210205078125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-2-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        929
+      ],
+      "header": 0,
+      "footer": 865.7894897460938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-3-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        948
+      ],
+      "header": 0,
+      "footer": 875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-3-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        948
+      ],
+      "header": 0,
+      "footer": 637.6517944335938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-3-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        948
+      ],
+      "header": 0,
+      "footer": 761.6397094726562,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-3-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        948
+      ],
+      "header": 0,
+      "footer": 828.9473876953125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-3-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        948
+      ],
+      "header": 0,
+      "footer": 386.84210205078125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-3-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        948
+      ],
+      "header": 0,
+      "footer": 865.7894897460938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-4-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        909
+      ],
+      "header": 0,
+      "footer": 875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-4-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        909
+      ],
+      "header": 0,
+      "footer": 637.6517944335938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-4-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        909
+      ],
+      "header": 0,
+      "footer": 761.6397094726562,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-4-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        909
+      ],
+      "header": 0,
+      "footer": 828.9473876953125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-4-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        909
+      ],
+      "header": 0,
+      "footer": 386.84210205078125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p08-panel-4-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        801,
+        909
+      ],
+      "header": 0,
+      "footer": 865.7894897460938,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-intake-confirm-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        592,
+        793,
+        1404
+      ],
+      "header": 0,
+      "footer": 842,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-intake-confirm-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        592,
+        793,
+        1404
+      ],
+      "header": 0,
+      "footer": 613.6032104492188,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-intake-confirm-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        592,
+        793,
+        1404
+      ],
+      "header": 0,
+      "footer": 732.9149780273438,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-intake-confirm-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        592,
+        793,
+        1404
+      ],
+      "header": 0,
+      "footer": 797.6842041015625,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-intake-confirm-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        592,
+        793,
+        1404
+      ],
+      "header": 0,
+      "footer": 372.25262451171875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-intake-confirm-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        592,
+        793,
+        1404
+      ],
+      "header": 0,
+      "footer": 833.1368408203125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-update-failure-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        784,
+        1205
+      ],
+      "header": 0,
+      "footer": 681,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-update-failure-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        784,
+        1205
+      ],
+      "header": 0,
+      "footer": 628.9068603515625,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-update-failure-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        784,
+        1205
+      ],
+      "header": 0,
+      "footer": 751.1943359375,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-update-failure-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        784,
+        1205
+      ],
+      "header": 0,
+      "footer": 817.5789794921875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-update-failure-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        784,
+        1205
+      ],
+      "header": 0,
+      "footer": 381.5368347167969,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-update-failure-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        784,
+        1205
+      ],
+      "header": 0,
+      "footer": 853.9158325195312,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 1
+    },
+    {
+      "name": "p09-result-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 621,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-result-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 585.1821899414062,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-result-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 698.9676513671875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-result-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 760.7368774414062,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-result-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 355.0105285644531,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-result-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 794.54736328125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-before-494",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 803,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-after-494",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 803,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-before-360",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 585.1821899414062,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-after-360",
+      "viewport": [
+        360,
+        800
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 585.1821899414062,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-before-430",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 698.9676513671875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-after-430",
+      "viewport": [
+        430,
+        932
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 698.9676513671875,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-before-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 760.7368774414062,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-after-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 760.7368774414062,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-before-340",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 355.0105285644531,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-after-340",
+      "viewport": [
+        340,
+        420
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 355.0105285644531,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-before-1869",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 794.54736328125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "wheel-after-1869",
+      "viewport": [
+        1869,
+        940
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        0,
+        727,
+        727
+      ],
+      "header": 0,
+      "footer": 794.54736328125,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    },
+    {
+      "name": "p09-long-result",
+      "viewport": [
+        494,
+        1000
+      ],
+      "shell": [
+        494,
+        950
+      ],
+      "pageOverflow": false,
+      "horizontal": false,
+      "scroll": [
+        65,
+        727,
+        792
+      ],
+      "header": 0,
+      "footer": 803,
+      "inside": true,
+      "focusIn": true,
+      "overlay": 0
+    }
+  ],
+  "errors": [],
+  "production": "NOT_RUN",
+  "hardware": "NOT_RUN"
+}

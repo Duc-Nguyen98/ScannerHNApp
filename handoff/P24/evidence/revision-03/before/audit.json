@@ -1,0 +1,110 @@
+[
+  {
+    "id": "A01",
+    "title": "Entering S02 starts at top instead of inherited scan scroll",
+    "status": "PASS"
+  },
+  {
+    "id": "A02",
+    "title": "Leaving rejection by a different route renders the requested destination",
+    "status": "PASS"
+  },
+  {
+    "id": "A03",
+    "title": "Closed-case footer geometry stays stable during load-more",
+    "status": "FAIL",
+    "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   button: 44,\n+   h: 87\n-   button: 54,\n-   h: 111\n  }\n",
+    "errors": []
+  },
+  {
+    "id": "A04",
+    "title": "Read completion reflects newly closed case consistently",
+    "status": "FAIL",
+    "error": "The input did not match the regular expression /Đã trả khách/. Input:\n\n'BH-001\\n' +\n  '\\n' +\n  'Máy in nhiệt XP-420B\\n' +\n  '\\n' +\n  'Đang kiểm tra\\n' +\n  '\\n' +\n  'SN:\\n' +\n  'HN12345\\n' +\n  '\\n' +\n  'Khách hàng\\n' +\n  'Công ty Minh Phát'\n",
+    "errors": []
+  },
+  {
+    "id": "A05",
+    "title": "Long receipt time wraps and has a full-text reader",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\ntrue !== false\n",
+    "errors": []
+  },
+  {
+    "id": "A06",
+    "title": "Long case ID in rejection context stays contained and readable",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\ntrue !== false\n",
+    "errors": []
+  },
+  {
+    "id": "A07",
+    "title": "Long case context cannot overflow quantity sheet help",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\ntrue !== false\n",
+    "errors": []
+  },
+  {
+    "id": "A08",
+    "title": "Document Back restores inbound result CTA focus",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A09",
+    "title": "Document Back restores outbound result CTA focus",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A10",
+    "title": "Outbound result restores inner scroll after document Back",
+    "status": "FAIL",
+    "error": "The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(await p.locator('.p05-scroll').evaluate(e=>e.scrollTop)-top)<2)\n",
+    "errors": []
+  },
+  {
+    "id": "A11",
+    "title": "Timeline components shortcut returns same history source and loaded pages",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '#p02/component-history?case=BH-002'\n- '#p02/component-history?case=BH-002&sample=history'\n",
+    "errors": []
+  },
+  {
+    "id": "A12",
+    "title": "Keyboard stepper reaching limit keeps focus inside sheet",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A13",
+    "title": "Depleted single component is not called a box in validation",
+    "status": "FAIL",
+    "error": "The input was expected to not match the regular expression /của hộp/. Input:\n\n'Chưa thêm linh kiện\\n\\nSố lượng cần xuất vượt tồn khả dụng của hộp (0).\\n\\nĐóng'\n",
+    "errors": []
+  },
+  {
+    "id": "A14",
+    "title": "History Back retains inbound verified result and focus",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\n0 !== 1\n",
+    "errors": []
+  },
+  {
+    "id": "A15",
+    "title": "History Back retains outbound verified result and focus",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\n0 !== 1\n",
+    "errors": []
+  },
+  {
+    "id": "A16",
+    "title": "Forward to old receipt then Back keeps new inbound draft interactive",
+    "status": "FAIL",
+    "error": "page.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p04=next]')\u001b[22m\n",
+    "errors": []
+  }
+]

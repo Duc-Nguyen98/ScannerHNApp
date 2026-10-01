@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "name": "Touch-sized mobile shell and orientation, PDF controls and text dialog at DPR2",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile keyboard-sized viewport retains form and CTA; slot information remains expanded",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "panel": "P18.S01",
+      "viewport": [
+        390,
+        844
+      ],
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.7894736842105263,
+      "scaleY": 0.7894736842105263,
+      "overflow": false,
+      "footerBottom": 750,
+      "frameBottom": 750,
+      "dpr": 2
+    },
+    {
+      "panel": "P18.S02",
+      "viewport": [
+        390,
+        844
+      ],
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.7894736842105263,
+      "scaleY": 0.7894736842105263,
+      "overflow": false,
+      "footerBottom": 750,
+      "frameBottom": 750,
+      "dpr": 2
+    },
+    {
+      "panel": "P18.S02",
+      "viewport": [
+        844,
+        390
+      ],
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.4105262910788841,
+      "scaleY": 0.4105263157894737,
+      "overflow": false,
+      "footerBottom": 390,
+      "frameBottom": 390,
+      "dpr": 2
+    },
+    {
+      "panel": "P18.S03",
+      "viewport": [
+        390,
+        480
+      ],
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.5052631084735577,
+      "scaleY": 0.5052631578947369,
+      "overflow": false,
+      "footerBottom": 480,
+      "frameBottom": 480,
+      "dpr": 2
+    },
+    {
+      "panel": "P18.S04",
+      "viewport": [
+        390,
+        844
+      ],
+      "frame": [
+        494,
+        950
+      ],
+      "scaleX": 0.7894736842105263,
+      "scaleY": 0.7894736842105263,
+      "overflow": false,
+      "footerBottom": 537.7894897460938,
+      "frameBottom": 597,
+      "dpr": 2
+    }
+  ],
+  "errors": [],
+  "limitation": "Chromium touch emulation and viewport resize; not a physical keyboard/device test"
+}

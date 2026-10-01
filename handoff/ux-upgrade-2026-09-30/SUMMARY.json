@@ -1,0 +1,36 @@
+{
+  "revision": "UX-20260930-r01",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "features": [
+    "Priority touch controls P01–P11",
+    "Focused manual entry P04/P05",
+    "Recent lookup P06",
+    "Enter UID P07",
+    "Quick date ranges P06",
+    "Source replacement comparison P05"
+  ],
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "NOT_RUN_PRODUCTION_HARDWARE",
+  "node_unique": 214,
+  "browser_groups": {
+    "touch_layout": 12,
+    "touch_edges": 9,
+    "profile_regression": 7,
+    "security_regression": 7,
+    "p04_p05": 41,
+    "p06": 33,
+    "p07": 20
+  },
+  "footer_viewports": 4,
+  "root_layout_measurements": 66,
+  "report": "handoff/ux-upgrade-2026-09-30/REPORT.md",
+  "review": "handoff/ux-upgrade-2026-09-30/REVIEW.html",
+  "limitations": [
+    "Real devices and WMS are unverified.",
+    "Recent items and drafts remain in page memory; no durable draft contract implemented.",
+    "At 340×420 manual entry lists require internal scrolling.",
+    "Additional NFC regression after final shared geometry: touch/nfc-final-regression/results.json; overlaps P07 groups, do not add again."
+  ]
+}

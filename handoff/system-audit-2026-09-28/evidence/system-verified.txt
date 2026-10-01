@@ -1,0 +1,8 @@
+PASS Module failure offers explicit recovery; retry reconstructs login
+PASS Ten successive cold reloads construct login without failed modules
+PASS Returning from inbound/outbound restores Home title and layout context
+PASS History and pending destination titles match visible routes; return restores Home
+PASS P03 header Back is operable, cancels without navigation or lost draft
+PASS Busy save visibly locks footer/header; failure unlocks controls without losing draft
+PASS Warehouse stopped keeps header disabled but explicit read-only Home remains available
+PASS Locked Home/P03 shell and footer match; backdrop no-op; heading/menu focus works at three sizes

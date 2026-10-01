@@ -1,0 +1,78 @@
+{
+  "revision": "P24-r03",
+  "files": [
+    {
+      "path": "docs/flows/warranty-components/issue-view.mjs",
+      "sha256": "01a57ddfdaef575b7ee2c71eee5612315f8af0d7d4f90211756ae35520c75564"
+    },
+    {
+      "path": "docs/flows/warranty-components/issue-model.mjs",
+      "sha256": "9bf3116555006f2a6d05f304bd7118b705556a1e3bf2dfaf49fcb02b19728257"
+    },
+    {
+      "path": "docs/flows/warranty-components/issue-fixture.mjs",
+      "sha256": "0cb18e8dc72e087f8c4354ed6c79874a17f4fbfe4f5881dbe28e6f146166f7da"
+    },
+    {
+      "path": "docs/flows/warranty-components/issue.css",
+      "sha256": "b7a5c7da70f8bd6b1346b6dec876a7b6f2e0db1aa6439d16afed8cd5d44a775c"
+    },
+    {
+      "path": "docs/flows/warranty-components/history-view.mjs",
+      "sha256": "b4b8bbe288d10e74cf06f1f5dc14cd2144c00925e06ec7044e602c7f640323e8"
+    },
+    {
+      "path": "docs/flows/warranty-components/history.css",
+      "sha256": "b364d8f80eca52da012dc623f844fbf922ad77a1c248c3a0d4770282383d25d1"
+    },
+    {
+      "path": "docs/flows/shared/waiting-web.mjs",
+      "sha256": "0856dcec019e3b75219969bf4f16a5f3ceb0f3e5fda5034342d00056384e7ebd"
+    },
+    {
+      "path": "docs/flows/shared/UI_STANDARD.md",
+      "sha256": "5828fbfedabb8c7b4acd7657e21e496b35741249d3cf81b1a00f20d346b5b02d"
+    },
+    {
+      "path": "docs/flows/inbound/inbound.mjs",
+      "sha256": "c0310e475fb0e1fff22d85e48f2a3b8f20f0bc0264ef70f18d1c4c026e2a9ccb"
+    },
+    {
+      "path": "docs/flows/outbound/outbound.mjs",
+      "sha256": "5078b187d8dfbcbcb7af5344c45363671cbabb30a4d9138c5874586b4d829351"
+    },
+    {
+      "path": "docs/flows/home/home.mjs",
+      "sha256": "34dde8f6d259d788aeca9a44ceb5276c966f5b2c41619fc9cdc904f815dec05f"
+    },
+    {
+      "path": "docs/flows/history/warranty-session-view.mjs",
+      "sha256": "3e4f7050f63672397326b74d7001bbfeecf940007089ed548e5e3bde9ef29202"
+    },
+    {
+      "path": "tests/scanner-states-r03.test.mjs",
+      "sha256": "99e5620402595264396590069d84523d2f9f174087f6a5f3cf212b62d2cb639c"
+    },
+    {
+      "path": "scripts/audit_p24_r03.cjs",
+      "sha256": "4b72c8ac9ed04f2bafc3c2abcb5d04aaf953690b579cbd8f90b9873ca20628a3"
+    },
+    {
+      "path": "scripts/check_p24_r03_guards.cjs",
+      "sha256": "062338ab3c9ee21741a373b2fb9af71c67df5c3f0f8336e59a5a04d9e22536e8"
+    },
+    {
+      "path": "scripts/run_p24_r03.cjs",
+      "sha256": "6bc20897d337248d3c31a9d09dc495161bfee725e346d68d0c6e4ff19b7a2205"
+    },
+    {
+      "path": "scripts/finalize_p24_r03.py",
+      "sha256": "1f2bb7a2e3286b187b157b90297064ef9d49c6fabb08eefcd6e60671ddf819c3"
+    },
+    {
+      "path": "scripts/verify_p24_r03.cjs",
+      "sha256": "e0750f030c270fca1b9b0196fe05fc1b526b90d5edf1e78beb0b3c5c8c6e008e"
+    }
+  ],
+  "note": "Runtime changes scoped to P24 and direct dependencies; global status files retain unrelated fields."
+}

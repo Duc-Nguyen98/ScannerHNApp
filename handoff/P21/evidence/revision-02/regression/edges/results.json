@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "Multiple drafts render from owner; keep each ID and scan session",
+      "status": "PASS"
+    },
+    {
+      "name": "Long names/IDs keep original Unicode and readable dialog within app",
+      "status": "PASS"
+    },
+    {
+      "name": "Hanging read cancelled on Back; no late repaint or write unlock",
+      "status": "PASS"
+    },
+    {
+      "name": "Read error is not empty; retry keeps all references and resolves",
+      "status": "PASS"
+    },
+    {
+      "name": "Post resolves while P21 visible: subscription removes busy and never permits another Post",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN status checks repeat safely and explicit not-posted preserves request for deliberate review",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

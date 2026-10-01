@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "Hub six entries routes S01; owner BH001/BH002 exact timeline and closed P20",
+      "status": "PASS"
+    },
+    {
+      "name": "Default unavailable then S03/S04 B23 source, all three outcomes correct",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown IDs no fallback and legacy business deep link migrates",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p23=\"clear\"]')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p23.cjs:13:997\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p23.cjs:8:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p23.cjs:13:1"
+}

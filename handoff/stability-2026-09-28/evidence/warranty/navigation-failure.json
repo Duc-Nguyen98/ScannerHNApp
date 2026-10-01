@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "name": "Intake → lookup → header/browser Back restores exact draft/manual/scroll, never Home",
+      "status": "PASS"
+    },
+    {
+      "name": "Nested P06 product/stock/history Back follows its own steps then returns to P09",
+      "status": "PASS"
+    },
+    {
+      "name": "Choose serial in P06 returns to original intake, consumes bridge and keeps fields",
+      "status": "PASS"
+    },
+    {
+      "name": "Browser Back closes fault/filter/confirmation overlays before leaving the current step",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed intake → case → Back returns to intake; next Back returns list; no loop",
+      "status": "PASS"
+    },
+    {
+      "name": "Case Events tab → processing dialog → browser Back restores tab and unsent result",
+      "status": "PASS"
+    },
+    {
+      "name": "Result browser Back preserves calling Parts tab; subsequent Back restores case list filter",
+      "status": "PASS"
+    },
+    {
+      "name": "Standalone P06 → warranty → Back returns P06 item, without poisoning future Home lookup",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid double Back consumes one step instead of jumping Home",
+      "status": "PASS"
+    }
+  ],
+  "error": "page.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at login (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:7:96)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:25:110\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:12:31)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_warranty_navigation.cjs:25:1",
+  "errors": []
+}

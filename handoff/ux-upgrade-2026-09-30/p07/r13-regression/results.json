@@ -1,0 +1,28 @@
+[
+  {
+    "name": "conflict-detail",
+    "status": "PASS"
+  },
+  {
+    "name": "picker-back",
+    "status": "PASS"
+  },
+  {
+    "name": "picker-cancel-focus",
+    "status": "PASS"
+  },
+  {
+    "name": "copy-overlap",
+    "status": "PASS"
+  },
+  {
+    "name": "picker-native-back",
+    "status": "FAIL",
+    "error": "locator.click: Error: strict mode violation: locator('[data-p06-item=\"fixture-item-HN12345\"]') resolved to 2 elements:\n    1) <button data-p06-recent=\"\" data-p06-item=\"fixture-item-HN12345\">…</button> aka getByRole('button', { name: 'Máy in HN12345 Máy in nhiệt' })\n    2) <button class=\"p06-card \" data-p06-item=\"fixture-item-HN12345\">…</button> aka getByRole('button', { name: 'Máy in HN12345 Còn hàng Máy' })\n\nCall log:\n\u001b[2m  - waiting for locator('[data-p06-item=\"fixture-item-HN12345\"]')\u001b[22m\n",
+    "errors": []
+  },
+  {
+    "name": "copy-keyboard-late",
+    "status": "PASS"
+  }
+]

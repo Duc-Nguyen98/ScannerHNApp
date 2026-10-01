@@ -1,0 +1,23 @@
+{
+  "revision": "P19-r02",
+  "node_tests": 104,
+  "groups": {
+    "main": 9,
+    "edges": 8,
+    "ux": 8,
+    "p09": 11,
+    "p18": 3
+  },
+  "browser_groups": 39,
+  "layout_combinations": 35,
+  "footer_viewports": 4,
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "before": "before/source + before/panels + before/ux",
+  "after": "after + ux",
+  "limitations": [
+    "Fixture-only page memory; no production backend or hardware verification",
+    "Desktop focus checks do not verify virtual keyboard on physical devices"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "checks": [],
+  "errors": [],
+  "error": "locator.evaluate: Error: strict mode violation: locator('.p19-tools') resolved to 2 elements:\n    1) <details class=\"p19-tools p20-tools\">…</details> aka getByText('P20 · Lịch sử linh kiệnPROTOTYPE · Bộ nhớ trang, không kết nối WMS. Bốn panel')\n    2) <details class=\"p19-tools\">…</details> aka getByText('P19 · Xuất linh kiện bảo hànhPROTOTYPE — không kết nối WMS/camera. Phiếu và tồn')\n\nCall log:\n\u001b[2m  - waiting for locator('.p19-tools')\u001b[22m\n\n    at login (<anonymous>:8:283)\n    at async eval (<anonymous>:13:5)"
+}

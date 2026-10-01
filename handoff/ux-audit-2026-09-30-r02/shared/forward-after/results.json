@@ -1,0 +1,34 @@
+{
+  "phase": "after",
+  "results": [
+    {
+      "step": "after-forward",
+      "state": {
+        "hash": "#p02/security?panel=1",
+        "state": {
+          "p11": true,
+          "p11From": "#p02/profile?panel=4"
+        }
+      }
+    },
+    {
+      "step": "after-leave",
+      "state": {
+        "hash": "#p02/profile?panel=4",
+        "state": {
+          "p10": true,
+          "p10Navigation": {
+            "owner": "a693bcd4-2ff5-4d37-a3b0-a5c2fe7abd0a",
+            "from": "#p02/profile"
+          }
+        },
+        "panel": "P10.S04"
+      }
+    },
+    {
+      "name": "Canceled dialog revisited with Forward does not require a second Back",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

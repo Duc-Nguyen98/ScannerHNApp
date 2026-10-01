@@ -1,0 +1,15 @@
+{
+  "error": "The input did not match the regular expression /P09 chưa có/. Input:\n\n'Bảo hành＋Tiếp nhận và sửa chữa bảo hànhQuét mã hoặc nhập thông tin sản phẩmTất cả trạng thái 8Ngày tạo mới nhất⌄BH-008Đã trả kháchMáy quét mã vạch ZD421SN: SN-ZD421-207 · KH: Chưa có dữ liệu18/09/2026 08:30BH-007Đang kiểm traMáy in nhiệt XP-420BSN: SN-XP420B-206 · KH: Chưa có dữ liệu17/09/2026 08:32BH-006Đã trả kháchMáy quét mã vạch ZD421SN: SN-ZD421-205 · KH: Chưa có dữ liệu16/09/2026 08:30BH-005Đang kiểm traMáy in nhiệt XP-420BSN: SN-XP420B-204 · KH: Chưa có dữ liệu15/09/2026 08:32BH-004Đã trả kháchMáy quét mã vạch ZD421SN: SN-ZD421-203 · KH: Chưa có dữ liệu14/09/2026 08:30BH-003Đang kiểm traMáy in nhiệt XP-420BSN: SN-XP420B-202 · KH: Cửa hàng An Khang13/09/2026 08:32BH-001Đang kiểm traMáy in nhiệt XP-420BSN: HN12345 · KH: Công ty Minh Phát10/09/2026 08:32BH-002Đã trả kháchMáy quét mã vạch ZD421SN: HN12346 · KH: Đại lý Thành Công09/09/2026 16:10'\n",
+  "checks": [
+    {
+      "name": "Opening from external tools scrolls app into view and restores caller focus",
+      "status": "PASS"
+    },
+    {
+      "name": "A01/A05 S01 opens from scan tab, one overlay, focus trap + Esc restore caller",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:8766/flows/auth-session/#p02/warranty"
+}

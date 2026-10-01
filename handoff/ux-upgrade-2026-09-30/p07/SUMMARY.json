@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-30",
+  "scope": "P07 proposal4 Enter read-only search navigation",
+  "browser_groups": {"enter":10,"repeat":4,"r13":6,"total":20},
+  "node_tests": {"new":6,"existing":22,"passed":28,"failed":0},
+  "browser_pageerrors": 0,
+  "before": {"groups":8,"passed":3,"failed_expected_missing_feature":5},
+  "visual_status": "AWAITING_USER_REVIEW",
+  "behavior_status": "PASS_FIXTURE",
+  "production": "NOT_RUN",
+  "hardware": "NOT_RUN",
+  "notes": [
+    "Source ready/denied marker is local fixture metadata, not a production contract.",
+    "First r13 attempt strict selector matched new P06 recent plus primary card; scope corrected to primary p06-card and all6 passed. Original failure log retained.",
+    "NFC style/artwork unchanged; actual before/after at494x1000 DPR1. Shared touch changes belong to parent audit."
+  ]
+}

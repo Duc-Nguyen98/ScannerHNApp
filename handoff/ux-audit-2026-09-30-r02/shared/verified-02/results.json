@@ -1,0 +1,136 @@
+{
+  "phase": "verified-02",
+  "results": [
+    {
+      "measurement": "long-title",
+      "dialog": {
+        "x": 18,
+        "y": 273.203125,
+        "width": 458,
+        "height": 403.59375,
+        "top": 273.203125,
+        "right": 476,
+        "bottom": 676.796875,
+        "left": 18
+      },
+      "footer": {
+        "x": 19,
+        "y": 571.796875,
+        "width": 456,
+        "height": 104,
+        "top": 571.796875,
+        "right": 475,
+        "bottom": 675.796875,
+        "left": 19
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "top": 0,
+        "right": 494,
+        "bottom": 950,
+        "left": 0
+      },
+      "title": true,
+      "bodyHeight": 58
+    },
+    {
+      "name": "long-action-title-keeps-decision-actions-visible",
+      "status": "PASS"
+    },
+    {
+      "measurement": "picker-scope",
+      "footer": {
+        "x": 31,
+        "y": 844,
+        "width": 432,
+        "height": 81,
+        "top": 844,
+        "right": 463,
+        "bottom": 925,
+        "left": 31
+      },
+      "header": {
+        "x": 31,
+        "y": 25,
+        "width": 432,
+        "height": 160,
+        "top": 25,
+        "right": 463,
+        "bottom": 185,
+        "left": 31
+      },
+      "close": {
+        "x": 399,
+        "y": 45,
+        "width": 44,
+        "height": 44,
+        "top": 45,
+        "right": 443,
+        "bottom": 89,
+        "left": 399
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950,
+        "top": 0,
+        "right": 494,
+        "bottom": 950,
+        "left": 0
+      },
+      "body": {
+        "x": 31,
+        "y": 185,
+        "width": 432,
+        "height": 659,
+        "top": 185,
+        "right": 463,
+        "bottom": 844,
+        "left": 31
+      },
+      "overflow": false
+    },
+    {
+      "name": "long-picker-scope-does-not-push-close-or-footer-away",
+      "status": "PASS"
+    },
+    {
+      "measurement": "scope-readable",
+      "textMatches": true,
+      "width": 332,
+      "scrollWidth": 332,
+      "height": 88,
+      "scrollHeight": 1870,
+      "focusable": 0,
+      "overflow": "auto"
+    },
+    {
+      "name": "long-picker-scope-is-readable-without-horizontal-clipping",
+      "status": "PASS"
+    },
+    {
+      "measurement": "style-only-scale",
+      "before": {
+        "x": 20,
+        "y": 21.296875,
+        "width": 44,
+        "height": 44
+      },
+      "after": {
+        "x": 12,
+        "y": 9.600000381469727,
+        "width": 43.99687576293945,
+        "height": 43.996877670288086
+      }
+    },
+    {
+      "name": "touch-minimum-responds-to-shell-transform-without-window-resize",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

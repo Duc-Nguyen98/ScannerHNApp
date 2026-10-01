@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "Compact controls same-row date/count; list viewport and fixed dock",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent query/date/status/type removal; input stays connected",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty actions preserve operation; viewed marker exact ID and Back focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy UID/serial/bundle raw; no overlay stack; Back and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy failure raw full data; long reader and failure dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy late response ignored after navigation; duplicate blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "Reload preserves rows/scroll/focus on error and recovers in place",
+      "status": "PASS"
+    },
+    {
+      "name": "Read while IME/picker retains input/dialog and current filters",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   '<button type=\"button\" class=\"hn-read-more\" data-hn-read-trigger=\"\" aria-haspopup=\"dialog\" aria-label=\"Xem đầy đủ thẻ thay thế\">Xem đầy đủ</button>',\n+   '<button type=\"button\" class=\"hn-read-more\" data-hn-read-trigger=\"\" aria-haspopup=\"dialog\" aria-label=\"Xem đầy đủ lý do\">Xem đầy đủ</button>',\n+   '<button type=\"button\" class=\"hn-read-more\" data-hn-read-trigger=\"\" aria-haspopup=\"dialog\" aria-label=\"Xem đầy đủ nội dung thao tác\">Xem đầy đủ</button>'\n+ ]\n- []\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_r02.cjs:19:970\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_r02.cjs:6:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22_r02.cjs:19:1"
+}

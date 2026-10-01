@@ -1,0 +1,58 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P20",
+  "revision": "P20-r03",
+  "completed_panel_ids": [
+    "P20.S01",
+    "P20.S02",
+    "P20.S03",
+    "P20.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual": "USER_TEMPORARILY_ACCEPTED",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node_tests": 117,
+  "p20_node_tests": 45,
+  "browser_groups": {
+    "p20_audit": 12,
+    "p20_unknown_closed": 1,
+    "p20_main": 7,
+    "p20_edges": 5,
+    "p20_ux": 8,
+    "p19_regression": 9,
+    "p09_navigation": 11
+  },
+  "layout_combinations": 20,
+  "footer_viewports": 4,
+  "shared_components_changed": [
+    "Home route/lifecycle for P20",
+    "P09 link to history; auth stylesheet entry"
+  ],
+  "blockers": [
+    "Production history endpoint/envelope/cursor/scope/permissions unverified; physical device NOT_RUN. Preview page memory only.",
+    "P21/P23/P24 full boards remain pending."
+  ],
+  "artifact_paths": [
+    "handoff/P20/REPORT.md",
+    "handoff/P20/REVIEW.html",
+    "handoff/P20/STATE_ACCEPTANCE.csv",
+    "handoff/P20/evidence/revision-01",
+    "handoff/P20/REVISION_02.md",
+    "handoff/P20/REVIEW_02.html",
+    "handoff/P20/REVISION_02_CONTEXT.md",
+    "handoff/P20/evidence/revision-02",
+    "handoff/P20/REVISION_03.md",
+    "handoff/P20/REVIEW_03.html",
+    "handoff/P20/REVISION_03_CONTEXT.md",
+    "handoff/P20/evidence/revision-03"
+  ],
+  "next_action": "Preserve P20 r03 temporary acceptance; additional states deferred. P21 r01 implemented for user review.",
+  "ux_layout_combinations": 15,
+  "report": "handoff/P20/REVISION_03.md",
+  "review": "handoff/P20/REVIEW_03.html",
+  "reproduced_defect_cases": 14,
+  "user_acceptance": "User temporarily accepted P20 r03 in P21 implementation request2026-09-29; synchronized additional states deferred. No production acceptance."
+}

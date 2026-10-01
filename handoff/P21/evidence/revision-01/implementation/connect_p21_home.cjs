@@ -1,0 +1,6 @@
+const fs=require('node:fs');const p='docs/flows/home/home.mjs';let s=fs.readFileSync(p,'utf8');
+s=s.replace("const pendingRows=()=>pendingWork(state(),[{operation:'inbound',snapshot:inbound?.flow.snapshot()},{operation:'outbound',snapshot:outbound?.flow.snapshot()}]);","const pendingRows=()=>[...pendingWork(state(),[{operation:'inbound',snapshot:inbound?.flow.snapshot()},{operation:'outbound',snapshot:outbound?.flow.snapshot()}]),...(componentIssue?.resumePending()||[]).map(s=>({operation:'warranty',id:s.document.documentId,number:s.document.documentId,label:s.unknown?'Cần kiểm tra kết quả xuất':'Phiếu linh kiện đang làm',acceptedCount:s.counts.codes}))];");
+s=s.replace("icon(r.operation==='inbound'?'down':'up')","icon(r.operation==='warranty'?'tool':r.operation==='inbound'?'down':'up')");
+s=s.replace("r.operation==='inbound'?'Nhập kho':'Xuất kho'","r.operation==='warranty'?'Linh kiện bảo hành':r.operation==='inbound'?'Nhập kho':'Xuất kho'");
+s=s.replace("history.pushState({homeDraftResume:{operation,id,journey:resumeJourney}}","if(operation==='warranty'){openResume({panel:2,doc:id});return;}\n    history.pushState({homeDraftResume:{operation,id,journey:resumeJourney}}");
+fs.writeFileSync(p,s);

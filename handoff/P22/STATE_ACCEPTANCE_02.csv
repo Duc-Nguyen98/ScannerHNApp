@@ -1,0 +1,11 @@
+id,visual,behavior,integration,evidence,note
+P22.S01,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/regression/after/S01-494x950.png,Unchanged migrated hub; latest user decisions preserved
+P22.S02,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,Compact controls; independent filters; viewed marker; read cache preservation
+P22.S03,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,UID replacement group; raw copy; expandable audit; reader
+P22.S04,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/regression/after/S04-494x950.png,Default unavailable unchanged; retry read only
+P22.R02.UX01,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/comparison-metrics.json,97px more list height at494x950
+P22.R02.UX02,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,Query and each filter removed independently
+P22.R02.UX03,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,Viewed marker exact immutable eventID
+P22.R02.UX04,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,Old/new UID from source; reason nearby; audit expand remembered
+P22.R02.UX05,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,Clipboard stub raw payload; physical clipboard not verified
+P22.R02.UX06,IN_PROGRESS,PASS,BLOCKED,evidence/revision-02/ux/results.json,Same-source cache on read error; scroll/focus/IME preserved

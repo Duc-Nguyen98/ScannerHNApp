@@ -1,0 +1,240 @@
+{
+  "checks": [
+    {
+      "name": "Default history is All dates; quick ranges stay draft until Apply",
+      "status": "PASS"
+    },
+    {
+      "name": "Apply quick range and type; Back/Escape/Reset do not commit drafts",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual date bounds and calendar Today retain shared picker semantics",
+      "status": "PASS"
+    },
+    {
+      "name": "Picker constrained and keyboard focus contained across six viewports",
+      "status": "PASS"
+    },
+    {
+      "name": "Recent max3 MRU unique with current source; normal list count unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Query/category/IME keep recent controls scoped and results stable",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable source hides recent entries; stale catalogue cannot open",
+      "status": "PASS"
+    },
+    {
+      "name": "Recent internal scrolling preserves shell header and footer",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears recents; new login and Back cannot expose old list",
+      "status": "PASS"
+    },
+    {
+      "name": "NFC picker opens the same recent exact ID and returns without navigating to product detail",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "recent-list-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 950,
+      "dialog": null
+    },
+    {
+      "name": "recent-list-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 692.3076782226562,
+      "dialog": null
+    },
+    {
+      "name": "history-default",
+      "viewport": [
+        494,
+        1000
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 950,
+      "dialog": null
+    },
+    {
+      "name": "date-picker-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 950,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "date-picker-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 692.3076782226562,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "picker-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 950,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "picker-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 692.3076782226562,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "picker-430x932",
+      "viewport": [
+        430,
+        932
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 826.923095703125,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "picker-1440x900",
+      "viewport": [
+        1440,
+        900
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 900,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "picker-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 420,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "picker-1869x940",
+      "viewport": [
+        1869,
+        940
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 940,
+      "dialog": {
+        "inFrame": true,
+        "footerVisible": true
+      }
+    },
+    {
+      "name": "recent-bottom-494x1000",
+      "viewport": [
+        494,
+        1000
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 950,
+      "dialog": null
+    },
+    {
+      "name": "recent-bottom-360x800",
+      "viewport": [
+        360,
+        800
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 692.3076782226562,
+      "dialog": null
+    },
+    {
+      "name": "recent-bottom-340x420",
+      "viewport": [
+        340,
+        420
+      ],
+      "pageOverflow": false,
+      "contentOverflow": false,
+      "header": 0,
+      "nav": 420,
+      "dialog": null
+    }
+  ],
+  "errors": [],
+  "fixtureOnly": true
+}

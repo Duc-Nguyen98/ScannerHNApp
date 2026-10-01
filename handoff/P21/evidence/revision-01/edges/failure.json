@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "Multiple drafts render from owner; keep each ID and scan session",
+      "status": "PASS"
+    },
+    {
+      "name": "Long names/IDs keep original Unicode and readable dialog within app",
+      "status": "PASS"
+    },
+    {
+      "name": "Hanging read cancelled on Back; no late repaint or write unlock",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-panel=\"P21.S03\"]') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p21_edges.cjs:13:252\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p21_edges.cjs:6:29)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p21_edges.cjs:13:1"
+}

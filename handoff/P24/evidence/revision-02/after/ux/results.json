@@ -1,0 +1,137 @@
+{
+  "checks": [
+    {
+      "name": "U01 edit comparison is local draft2→3; invalid values no proposed confirmation; cancel/commit focus",
+      "status": "PASS"
+    },
+    {
+      "name": "U02 rejected code displays owner count/document and renamed action; retry preserves scope",
+      "status": "PASS"
+    },
+    {
+      "name": "U05/U06 closed notice only under context; timeline exact case, loaded pages/scroll/focus survive both Backs",
+      "status": "PASS"
+    },
+    {
+      "name": "U06 spoofed history token/deep link cannot invent external Back target",
+      "status": "PASS"
+    },
+    {
+      "name": "U03 long label 2000+ preserves full number through reader; result footer fits5viewports",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "name": "S01-edit",
+      "viewport": [
+        494,
+        950
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S01-edit",
+      "viewport": [
+        360,
+        800
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S01-edit",
+      "viewport": [
+        430,
+        932
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S01-edit",
+      "viewport": [
+        1440,
+        900
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S01-edit",
+      "viewport": [
+        340,
+        420
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S03-long-label",
+      "viewport": [
+        494,
+        950
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S03-long-label",
+      "viewport": [
+        360,
+        800
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S03-long-label",
+      "viewport": [
+        430,
+        932
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S03-long-label",
+      "viewport": [
+        1440,
+        900
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    },
+    {
+      "name": "S03-long-label",
+      "viewport": [
+        340,
+        420
+      ],
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footer": true
+    }
+  ],
+  "errors": []
+}

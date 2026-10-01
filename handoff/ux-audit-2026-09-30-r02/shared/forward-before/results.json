@@ -1,0 +1,32 @@
+{
+  "phase": "before",
+  "results": [
+    {
+      "step": "after-forward",
+      "state": {
+        "hash": "#p02/security?panel=1",
+        "state": {
+          "p11": true,
+          "p11From": "#p02/profile?panel=4"
+        }
+      }
+    },
+    {
+      "step": "after-leave",
+      "state": {
+        "hash": "#p02/security?panel=1",
+        "state": {
+          "p11": true,
+          "p11From": "#p02/profile?panel=4"
+        },
+        "panel": "P11.S01"
+      }
+    },
+    {
+      "name": "Canceled dialog revisited with Forward does not require a second Back",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_modal_forward_r02.cjs:5:1139"
+    }
+  ],
+  "errors": []
+}

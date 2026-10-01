@@ -1,0 +1,12 @@
+PASS P08 all six pages: Back/Cancel/Reset only draft; Apply commits; no backdrop close
+PASS P08 clipboard success: dialog only, focus trap, wheel/background stable and six sizes
+PASS P08 clipboard failure remains on exact record; late clipboard reply does not open on other tab
+PASS P08 four panel layouts and persistent empty/loading/source states stay in content
+PASS P09 intake confirms Hủy/named action; cancel/backdrop/Back send no request; field validation remains local
+PASS P09 failed update: form replaced by one feedback dialog; continuation restores draft/request; double submit writes once
+PASS P09 short result naturally fits; wheel does not move header/footer/content at all six sizes
+PASS P09 UNKNOWN dialog defers with same request; Back retains pending context; reconcile confirms exactly once
+PASS P09 UNKNOWN confirm reconciles without stacked overlays; native Back closes notification first
+PASS P09 verified new intake announces receipt, one dialog, no Hủy; UNKNOWN confirm reconciles once
+PASS P09 long result has a bounded preview, full reader and accessible footer
+PASS P09 closed case remains read only; dataset and invalid deep link safe

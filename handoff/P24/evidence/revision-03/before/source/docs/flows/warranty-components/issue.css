@@ -1,0 +1,104 @@
+/* P19 r01: B19 hierarchy, locked 494x950 AppShell, shared operation palette. */
+@font-face{font-family:HNPublicSans;src:url('./fonts/public-sans-f631476b.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:HNPublicSans;src:url('./fonts/public-sans-2090ae7a.woff2') format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+#home-app .hn-screen.p19-screen{height:950px;min-height:950px;overflow:hidden;background:#f3f9fb}
+#home-app .hn-component-issue{display:flex;flex:1;min-height:0;min-width:0;overflow:hidden}
+#home-app .p19-screen>.hn-nav{display:none}
+.p19-app{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0;background:#f3f9fb;color:#12384e;font:17px/1.5 HNPublicSans,Arial,sans-serif}
+.p19-app *,.p19-sheet *{box-sizing:border-box}
+.p19-app h1,.p19-app h2,.p19-app p,.p19-app dl,.p19-sheet h2,.p19-sheet p{margin:0}
+.p19-app button,.p19-app input,.p19-sheet button,.p19-sheet input{font:inherit;touch-action:manipulation}
+.p19-app button,.p19-sheet button{cursor:pointer}
+.p19-app button:disabled,.p19-sheet button:disabled{opacity:.45;cursor:default}
+.p19-app :focus-visible,.p19-sheet :focus-visible{outline:3px solid #159abc;outline-offset:3px}
+.p19-icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;flex-shrink:0}
+.p19-header{display:flex;align-items:center;gap:12px;min-height:86px;flex-shrink:0;padding:16px 20px 22px;background:linear-gradient(110deg,#073b52,#0c5d7d);color:white}
+.p19-header h1{flex:1;font-size:24px;line-height:1.3;font-weight:650;text-align:center;padding-right:40px}
+.p19-icon-button{display:grid;place-items:center;min-width:40px;min-height:40px;border:0;background:transparent;color:inherit;padding:6px;border-radius:8px}
+.p19-scroll{display:flex;flex-direction:column;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:20px;gap:14px;border-radius:24px 24px 0 0;margin-top:-12px;background:#f3f9fb;scroll-padding:18px}
+.p19-scroll>*{flex-shrink:0}
+.p19-steps{display:flex;align-items:center;justify-content:space-between;margin:0 0 2px;padding:0;list-style:none;font-size:13px;color:#607d8c;gap:8px}
+.p19-steps li{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.p19-steps li:not(:last-child):after{content:'';height:1px;background:#dce9ef;width:25px;margin-left:3px}
+.p19-steps li>span{display:grid;place-items:center;width:27px;height:27px;background:white;border:1px solid #dce9ef;border-radius:50%;font-size:13px}
+.p19-steps .active{font-weight:650;color:#0c6286}.p19-steps .active>span{background:#0c6286;color:white;border-color:#0c6286}.p19-steps .past>span{background:#e1f5ea;color:#168657;border-color:#e1f5ea}
+.p19-card{background:white;border:1px solid #dce9ef;border-radius:12px;padding:18px;box-shadow:0 1px 3px #12384e03}
+.p19-context{display:flex;align-items:center;gap:12px;min-height:96px}.p19-context>div{flex:1;min-width:0}.p19-context strong{font-size:21px}.p19-context p{font-size:15px;color:#527186}.p19-badge{display:inline-flex;padding:4px 8px;border-radius:5px;background:#eaf5fa;color:#0c6286;font-size:12px;font-weight:600;flex-shrink:0;max-width:140px}
+.p19-app .hn-scan-entry{margin:0}.p19-app .hn-scan-intro{margin-bottom:12px}.p19-app .hn-scan-intro h2{font:650 18px/1.4 HNPublicSans,Arial,sans-serif}.p19-app .hn-scan-intro p{font:15px/1.5 HNPublicSans,Arial,sans-serif;color:#527186}.p19-app .hn-scan-camera{height:230px;min-height:230px;background-image:url('../../assets/scanner-approved/01_backgrounds/bg_warehouse_main_4k_enhanced.jpg');background-size:cover;background-position:center}
+.p19-app .hn-scan-actions{margin-top:12px}.p19-app .hn-scan-actions button{min-height:54px;font-size:15px}.p19-app .hn-scan-manual{margin-top:12px}.p19-app .hn-scan-manual input{min-width:0}.p19-app .hn-scan-manual-heading{font-size:16px}
+.p19-scan-summary>div:first-child{display:flex;align-items:baseline;gap:7px;color:#527186;font-size:14px}.p19-scan-summary>div:first-child>strong{font-size:28px;color:#0c6286}.p19-scan-summary>div:first-child>small{margin-left:auto}
+.p19-scan-summary .p19-part{border:0;padding:10px 0 0;box-shadow:none}.p19-scan-summary .p19-part-meta .p19-badge{display:none}.p19-scan-summary .p19-part-meta{margin-top:0}.p19-scan-summary .p19-part-copy{display:grid;grid-template-columns:1fr auto}.p19-scan-summary .p19-part-copy>p{grid-column:1}.p19-scan-summary .p19-part-meta{grid-column:2;grid-row:1/3;align-items:center}
+.p19-hint{display:flex;align-items:flex-start;gap:10px;padding:14px;border-radius:12px;background:#eaf5fa;color:#276b86;font-size:14px;line-height:1.55}.p19-hint>.p19-icon{width:20px;height:20px;margin-top:2px}
+.p19-footer{flex-shrink:0;display:flex;flex-direction:column;gap:12px;padding:18px 20px 24px;border-top:1px solid #dce9ef;background:#fafcfc}
+.p19-primary{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;width:100%;border:0;border-radius:11px;background:#0c6286;color:white;padding:14px;font-weight:650!important;font-size:18px!important}
+.p19-link{display:flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:8px;border:0;background:transparent;color:#0c6286;font-size:15px!important}
+.p19-warehouse{display:flex;align-items:center;gap:12px;border:1px solid #dce9ef;background:#eaf5fa;padding:14px 18px;border-radius:12px}.p19-warehouse>div{flex:1}.p19-warehouse small,.p19-warehouse strong{display:block}.p19-warehouse small{font-size:13px;color:#527186}.p19-warehouse strong{font-size:17px}.p19-warehouse>.p19-icon:last-child{width:18px}
+.p19-section-title{display:flex;align-items:center;justify-content:space-between}.p19-section-title h2,.p19-pending h2{font-size:19px}.p19-section-title small{font-size:14px;color:#527186}
+.p19-part{display:flex;align-items:flex-start;gap:12px;min-width:0}.p19-part-copy{flex:1;min-width:0}.p19-part-copy>strong{font-size:18px}.p19-part p{font-size:15px;color:#527186}.p19-code{display:block;margin-top:10px;font-size:13px;color:#527186;overflow-wrap:anywhere}.p19-part-meta{display:flex;align-items:center;justify-content:space-between;margin-top:12px;color:#0c6286}.p19-part>.p19-icon-button{color:#728996}
+.p19-total{display:flex;align-items:center;justify-content:space-between;font-size:15px}.p19-total strong{font-size:21px;color:#0c6286}
+.p19-success{text-align:center;display:flex;align-items:center;flex-direction:column;gap:20px;padding:38px 0 24px}.p19-success-mark{display:grid;place-items:center;width:110px;height:110px;border:16px solid #e1f5ea;border-radius:50%;background:#168657;box-shadow:0 0 0 14px #effaf4;color:white;margin:12px 0 14px}.p19-success-mark svg{width:51px;height:51px;stroke-width:3}.p19-success h2{font-size:28px;line-height:1.35}.p19-posted{color:#168657;background:#e1f5ea}.p19-success p{font-size:16px;line-height:1.7;color:#527186}
+.p19-result-summary>div,.p19-pending dl>div{display:flex;justify-content:space-between;gap:15px;padding:14px 0;border-bottom:1px solid #dce9ef;font-size:15px}.p19-result-summary>div:last-child,.p19-pending dl>div:last-child{border:0}.p19-result-summary dt{color:#527186}.p19-result-summary dd,.p19-pending dd{margin:0;text-align:right;font-weight:600;overflow-wrap:anywhere;min-width:0}.p19-saved{display:flex;align-items:center;gap:12px;color:#527186;font-size:14px;padding:12px}.p19-saved svg{color:#168657}.p19-pending{border-color:#ead0a2;background:#fffaf1}.p19-pending p{font-size:15px;margin-top:8px}.p19-pending dl{margin-top:12px}.p19-pending dl>div{font-size:12px}.p19-pending dt{min-width:80px}
+.p19-live{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
+/* The local modal primitive owns focus and inert backdrop; only sheet geometry is scoped. */
+#home-app .app-modal-host:has(.p19-sheet){align-items:flex-end;padding:0}
+#home-app dialog.p19-sheet{position:relative;inset:auto;margin:0;width:100%;max-width:100%;max-height:88%;border:0;border-radius:26px 26px 0 0;padding:0;background:white;color:#12384e;font:17px/1.5 HNPublicSans,Arial,sans-serif;display:flex;flex-direction:column;box-shadow:0 -8px 30px #12384e12}
+.p19-grip{height:5px;width:50px;margin:14px auto 5px;border-radius:4px;background:#d7e3e8;flex-shrink:0}
+.p19-sheet>header{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;flex-shrink:0}.p19-sheet h2{font-size:24px}.p19-sheet form{display:flex;flex-direction:column;min-height:0}.p19-sheet .app-modal-body{overflow:auto;min-height:0;padding:12px 24px 0}.p19-sheet-item{display:flex;gap:14px;align-items:center;padding:12px 0 24px}.p19-sheet-item p,.p19-sheet-item small{color:#527186;font-size:15px}.p19-stock{display:flex;justify-content:space-between;padding:18px 0;border-top:1px solid #dce9ef;font-size:14px}.p19-stock strong{color:#168657}.p19-sheet label{display:block;font-size:15px;font-weight:600;margin:12px 0}.p19-sheet em{color:#b42318;font-style:normal}.p19-quantity-input{display:flex;height:70px;border:1px solid #0c6286;border-radius:12px;overflow:hidden}.p19-quantity-input input{min-width:0;flex:1;text-align:center;border:0;font-size:30px;font-weight:650;color:#12384e}.p19-quantity-input button{width:60px;border:0;background:#eaf5fa;color:#0c6286;font-size:26px}.p19-sheet #p19-quantity-help{font-size:14px;color:#527186;margin:10px 0}.p19-error{font-size:14px;color:#b42318;min-height:23px;margin:4px 0 12px!important}.p19-sheet-footer{display:flex;flex-direction:column;gap:8px;padding:20px 24px 24px;flex-shrink:0}.p19-sheet .p19-primary{font-size:17px!important}
+.p19-tools{border:1px solid #ccdce5;border-radius:12px;padding:14px;margin:10px 0;font:14px/1.5 Arial,sans-serif}.p19-tools button{margin:4px;padding:8px}.p19-tools label{display:block;margin:12px 0}.p19-tools select{max-width:100%;padding:8px}.p19-tools pre{max-height:220px;overflow:auto;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}
+#home-app .p19-app .hn-scan-camera{height:212px;min-height:0;background-image:url('../../assets/scanner-approved/01_backgrounds/bg_warehouse_main_4k_enhanced.jpg');background-size:cover;background-position:center}
+#home-app .p19-app .hn-scan-manual-open .hn-scan-camera{height:128px}
+#home-app .p19-app .hn-scan-intro{background:transparent;padding:0;margin-bottom:12px}
+#home-app .p19-app .hn-scan-intro h2{font:650 18px/1.4 HNPublicSans,Arial,sans-serif;color:#12384e}
+#home-app .p19-app .hn-scan-intro p{font:15px/1.5 HNPublicSans,Arial,sans-serif;color:#527186}
+#home-app .p19-app .hn-scan-actions{margin:12px 0 0}
+#home-app .p19-app .hn-scan-actions button{min-height:54px;border:1px solid #dce9ef;background:white;color:#0c6286;font:600 15px/1.4 HNPublicSans,Arial,sans-serif}
+#home-app .p19-app .hn-scan-actions button:disabled{color:#71838d;background:#f7fafb}
+#home-app .p19-sheet .app-modal-body{padding:12px 24px 0}
+.p19-success{gap:16px;padding:24px 0 12px}
+.p19-result-summary>div{padding:12px 0}
+.p19-saved{padding:8px 12px}
+#home-app .p19-app .hn-scan-camera{height:210px}
+.p19-scan-summary{padding:16px}
+.p19-app[data-panel="P19.S03"] .p19-scroll{gap:8px}
+.p19-app[data-panel="P19.S03"] .p19-part{padding:15px}
+.p19-app[data-panel="P19.S03"] .p19-code{margin-top:6px}
+.p19-app[data-panel="P19.S03"] .p19-part-meta{margin-top:8px}
+/* r02: approved continuous entry and inline quantity editing. */
+#home-app .p19-app .hn-scan-manual-open .hn-scan-camera{height:64px}
+#home-app .p19-app .hn-scan-manual-open .hn-scan-actions{display:none}
+#home-app .p19-app .hn-scan-manual-open .hn-scan-reticle{top:10px;bottom:10px;left:150px;right:150px}
+.p19-recent-label{font-size:13px;color:#527186;padding-top:8px}
+.p19-edit-quantity{display:flex;align-items:center;justify-content:center;gap:9px;min-height:44px;min-width:88px;border:1px solid #c5dfe9;border-radius:8px;padding:6px 12px;background:#eaf5fa;color:#0c6286;font-weight:650!important}
+.p19-edit-quantity span{font-size:14px;font-weight:500}
+.p19-pending details{margin-top:12px;border-top:1px solid #ead0a2}
+.p19-pending summary{min-height:44px;padding:12px 0 4px;cursor:pointer;font-size:15px;font-weight:600}
+.p19-pending details dl{margin-top:0}
+.p19-pending details dd{user-select:text}
+/* r03 audit: local touch targets and long-content containment. */
+.p19-icon-button{min-width:44px;min-height:44px}
+.p19-header h1{padding-right:44px}
+.p19-part-copy>strong{overflow-wrap:anywhere}
+.p19-scan-summary .p19-part-copy{grid-template-columns:minmax(0,1fr) auto}
+.p19-scan-summary .p19-part-copy>strong,.p19-scan-summary .p19-part-copy>.hn-read-more{grid-column:1}
+.p19-scan-summary .p19-part-meta{align-self:start}
+#home-app .p19-app .hn-read-more{min-height:44px}
+.p19-link{min-height:44px}
+.p19-sheet-item>div{min-width:0;flex:1;overflow-wrap:anywhere;white-space:pre-line}
+.p19-sheet-item strong,.p19-sheet-item small{display:block;overflow-wrap:anywhere}
+.p19-sheet .app-modal-body{overscroll-behavior:contain}
+.p19-stock{gap:16px}.p19-stock strong{overflow-wrap:anywhere;text-align:right}
+.p19-warehouse>div{min-width:0;overflow-wrap:anywhere}
+.p19-quantity-input:focus-within{outline:2px solid #159abc;outline-offset:3px}
+.p19-quantity-input input[aria-invalid="true"]{color:#b42318}
+.p24-rejection{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:38px 24px}
+.p24-rejection .hn-operation-icon svg{width:32px;height:32px}
+.p24-rejection h2{font-size:21px;line-height:1.4}
+.p24-rejection p{font-size:16px;color:#527186;overflow-wrap:anywhere;white-space:pre-line}
+.p24-rejection-note{background:#fff5e6;color:#87580e}
+
+.p24-tools{border:1px solid #ccdce5;border-radius:12px;padding:14px;margin:10px 0;font:14px/1.5 Arial,sans-serif}.p24-tools button{margin:4px;padding:8px}.p24-tools a{color:#0c6286}
+.p19-sheet .p24-quantity-change{padding:12px 14px;margin:0 0 14px;font-size:14px;line-height:1.6;color:#276b86;background:#eaf5fa;border-radius:10px;overflow-wrap:anywhere}
+.p24-kept{display:flex;flex-direction:column;gap:4px;font-size:15px}.p24-kept p{color:#527186;font-size:14px}.p24-kept span{display:block;overflow-wrap:anywhere}
+.p19-app .p24-rejection{padding:22px 20px;gap:14px}
+.p19-app .p24-kept{padding:14px 18px}
+#home-app .p19-sheet .p24-quantity-change{margin:0 0 12px}

@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "name": "Whole card pointer/Enter/Space, correct focus and recent marker",
+      "status": "PASS"
+    },
+    {
+      "name": "Grouped context, full time and footer readiness/counts",
+      "status": "PASS"
+    },
+    {
+      "name": "Load error prioritizes read retry; mismatch prioritizes Web; unknown prioritizes status",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy exact allowlisted identifiers, success dialog only, Back and no overlays stacked",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy rejection leaves complete text; closing dialog never copies",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy pending after route leave cannot open stale result dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Reader stays outside card and cannot navigate; full text preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed case explains disabled scan at CTA without ready claim",
+      "status": "PASS"
+    },
+    {
+      "name": "List scroll restored by ID and receipt goes to P20 highlighted once",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "name": "Continuous entry preserves input DOM, focus, clears accepted code, newest row first",
+      "status": "PASS"
+    },
+    {
+      "name": "Review edits BOX only; quantity selected; boundary controls and inline validation",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel and native Back restore review panel, same quantity and trigger focus",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 resume displays exact counts and returns same document/session/lines",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN prioritizes guidance, expands full identifiers and disables quantity edits",
+      "status": "PASS"
+    },
+    {
+      "name": "P09 UNKNOWN resumes same request; expanded details retained; no new Post",
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed receipt return focuses/highlights exact P09 row; one-shot marker consumed",
+      "status": "PASS"
+    },
+    {
+      "name": "Success header Back also targets verified receipt; other case never sees draft",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "state": "manual",
+      "width": 494,
+      "height": 950,
+      "status": "PASS"
+    },
+    {
+      "state": "manual",
+      "width": 360,
+      "height": 800,
+      "status": "PASS"
+    },
+    {
+      "state": "manual",
+      "width": 430,
+      "height": 932,
+      "status": "PASS"
+    },
+    {
+      "state": "manual",
+      "width": 1440,
+      "height": 900,
+      "status": "PASS"
+    },
+    {
+      "state": "manual",
+      "width": 340,
+      "height": 420,
+      "status": "PASS"
+    },
+    {
+      "state": "quantity",
+      "width": 494,
+      "height": 950,
+      "status": "PASS"
+    },
+    {
+      "state": "quantity",
+      "width": 360,
+      "height": 800,
+      "status": "PASS"
+    },
+    {
+      "state": "quantity",
+      "width": 430,
+      "height": 932,
+      "status": "PASS"
+    },
+    {
+      "state": "quantity",
+      "width": 1440,
+      "height": 900,
+      "status": "PASS"
+    },
+    {
+      "state": "quantity",
+      "width": 340,
+      "height": 420,
+      "status": "PASS"
+    },
+    {
+      "state": "unknown-expanded",
+      "width": 494,
+      "height": 950,
+      "status": "PASS"
+    },
+    {
+      "state": "unknown-expanded",
+      "width": 360,
+      "height": 800,
+      "status": "PASS"
+    },
+    {
+      "state": "unknown-expanded",
+      "width": 430,
+      "height": 932,
+      "status": "PASS"
+    },
+    {
+      "state": "unknown-expanded",
+      "width": 1440,
+      "height": 900,
+      "status": "PASS"
+    },
+    {
+      "state": "unknown-expanded",
+      "width": 340,
+      "height": 420,
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "name": "External P24 tools S01/IME/Back/cancel keeps existing list and returns focus",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 long reason and raw code readable; Back closes reader first; no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Stale quantity submit after case closes cannot add lines or Post",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p17=check]')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p24_edges.cjs:9:783\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p24_edges.cjs:4:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p24_edges.cjs:9:1"
+}

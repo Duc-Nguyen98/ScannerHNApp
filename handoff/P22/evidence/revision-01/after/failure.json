@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "S01 approved hub6 no draft shortcut; default NFC unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "S02 fixture type/query and Back retain focus; S03 exact event fields",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid event ID has no fallback; missing source never fake empty",
+      "status": "PASS"
+    },
+    {
+      "name": "Verified empty/no-match/error distinct; retry remains read",
+      "status": "PASS"
+    },
+    {
+      "name": "Reader keeps raw long Unicode text; Escape Back backdrop focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Late reads cannot reopen route; IME search stable",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-tab=history]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" data-tab=\"history\" aria-current=\"page\" data-route=\"history\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    57 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22.cjs:15:287\n    at async test (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22.cjs:7:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p22.cjs:15:1"
+}

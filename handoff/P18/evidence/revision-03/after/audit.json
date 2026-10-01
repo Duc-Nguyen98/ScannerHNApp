@@ -1,0 +1,85 @@
+{
+  "phase": "after",
+  "observations": [
+    {
+      "id": "R03-01 stable form footer",
+      "status": "PASS",
+      "evidence": {
+        "before": 759.21875,
+        "after": 759.21875
+      }
+    },
+    {
+      "id": "R03-02 location expansion retained",
+      "status": "PASS",
+      "evidence": {
+        "open": true
+      }
+    },
+    {
+      "id": "R03-03 owner nav identity",
+      "status": "PASS",
+      "evidence": {
+        "nav": "lookup"
+      }
+    },
+    {
+      "id": "R03-04 no invisible expanding keyboard stop",
+      "status": "PASS",
+      "evidence": {
+        "hiddenStop": 0
+      }
+    },
+    {
+      "id": "R03-05 readable zoom icon",
+      "status": "PASS",
+      "evidence": {
+        "plusFont": "17px",
+        "plusSvg": 1
+      }
+    },
+    {
+      "id": "R03-06 focus at zoom limit",
+      "status": "PASS",
+      "evidence": {
+        "focus": "zoom-in"
+      }
+    },
+    {
+      "id": "R03-07 reading point on zoom",
+      "status": "PASS",
+      "evidence": {
+        "before": {
+          "x": 0.45481481481481484,
+          "y": 0.43573667711598746
+        },
+        "after": {
+          "x": 0.4548919949174079,
+          "y": 0.4345878136200717
+        }
+      }
+    },
+    {
+      "id": "R03-08 unknown is not empty",
+      "status": "PASS",
+      "evidence": {
+        "body": "Tệp đính kèm PN-0005\nThông tin phiếu nhập\nPN-0005\n09/09/2026\n\nCông ty Minh Phát\n\nChưa tải được danh sách tệp\n\nNguồn tệp của PN-0005 chưa khả dụng. Chưa xác định được số tệp đính kèm.\n\nTải lại danh sách"
+      }
+    },
+    {
+      "id": "R03-09 recovered source is refreshed",
+      "status": "PASS",
+      "evidence": {
+        "recovered": 2
+      }
+    },
+    {
+      "id": "R03-10 removed source file cannot download",
+      "status": "PASS",
+      "evidence": {
+        "downloads": 0
+      }
+    }
+  ],
+  "errors": []
+}

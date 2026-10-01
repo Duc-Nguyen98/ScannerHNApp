@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "name": "runner",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: {\"headScrolled\":false,\"titleExact\":true,\"messageExact\":true,\"whiteSpace\":\"pre-wrap\",\"bodyHeight\":86,\"footerInside\":true,\"viewport\":[360,800]}\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_shared_long_dialog_r02.cjs:6:1351"
+    }
+  ],
+  "metrics": [
+    {
+      "headScrolled": true,
+      "titleExact": true,
+      "messageExact": true,
+      "whiteSpace": "pre-wrap",
+      "bodyHeight": 86,
+      "footerInside": true,
+      "viewport": [
+        494,
+        1000
+      ]
+    },
+    {
+      "headScrolled": false,
+      "titleExact": true,
+      "messageExact": true,
+      "whiteSpace": "pre-wrap",
+      "bodyHeight": 86,
+      "footerInside": true,
+      "viewport": [
+        360,
+        800
+      ]
+    }
+  ],
+  "errors": []
+}

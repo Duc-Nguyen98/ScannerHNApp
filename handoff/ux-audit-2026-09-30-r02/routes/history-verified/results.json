@@ -1,0 +1,50 @@
+{
+  "revision": "P08-r22",
+  "checks": [
+    {
+      "name": "history-general: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "history-daily: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "documents: quick ranges draft-only; Cancel/Apply, indicator and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Today navigates only; quick-range uses click-time VN day; validation and native Back retain committed state",
+      "status": "PASS"
+    },
+    {
+      "name": "3 independent in-session contexts retain query/date/sort/loaded rows/scroll when reopened from hub",
+      "status": "PASS"
+    },
+    {
+      "name": "Daily drilldown does not overwrite the separately remembered general-history context",
+      "status": "PASS"
+    },
+    {
+      "name": "P12 shared picker remains unchanged by opt-in history quick ranges",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty/no-match/error sources distinct; recovery retains operation and sort",
+      "status": "PASS"
+    },
+    {
+      "name": "Six viewport dialogs: footer accessible at either scroll end, 44px targets, no horizontal overflow or autofocus input",
+      "status": "PASS"
+    },
+    {
+      "name": "Copy pending guarded; one result dialog, Back restores same detail and no inline feedback",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout clears the session cache; new login has default unfiltered history",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

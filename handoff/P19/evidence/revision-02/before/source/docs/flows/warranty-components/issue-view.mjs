@@ -1,0 +1,96 @@
+import {createIssueFlow,countIssue,quantityError} from './issue-model.mjs';
+import {createIssueFixture} from './issue-fixture.mjs';
+import {caseDetails} from '../warranty/warranty-model.mjs';
+import {createActionFeedback} from '../shared/action-feedback.mjs';
+import {openAppModal} from '../shared/app-modal.mjs';
+import {createDialogRoute} from '../shared/dialog-route.mjs';
+import {scanEntryMarkup} from '../shared/scan-entry.mjs';
+import {HOME_ICONS} from '../home/icons.mjs';
+import {INBOUND_ICONS} from '../inbound/icons.mjs';
+import {ISSUE_ICONS} from './issue-icons.mjs';
+const esc=v=>String(v??'Chưa xác minh').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icons={...HOME_ICONS,...INBOUND_ICONS,...ISSUE_ICONS};
+const icon=n=>`<svg class="p19-icon" viewBox="0 0 24 24" aria-hidden="true">${icons[n]||icons.document}</svg>`;
+const btn=(a,t,cls='',attrs='')=>`<button type="button" data-p19="${a}" class="${cls}" ${attrs}>${t}</button>`;
+const tile=(n,op='warranty')=>`<span class="hn-operation-icon" data-hn-operation="${op}" data-size="md">${icon(n)}</span>`;
+const hint=t=>`<aside class="p19-hint">${icon('info')}<p>${t}</p></aside>`;
+const kv=(k,v)=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`;
+function steps(current){return `<ol class="p19-steps" aria-label="Tiến trình xuất linh kiện">${['Quét mã','Kiểm tra','Kết quả'].map((t,i)=>`<li class="${i===current?'active':i<current?'past':''}" ${i===current?'aria-current="step"':''}><span>${i<current?'✓':i+1}</span>${t}</li>`).join('')}</ol>`;}
+
+export function mountComponentIssue({root,screen,tools,getState,onHome,onNavigate,onCase,onSize}){
+ const adapter=createIssueFixture(),flows=new Map(),receipts=new Map(),positions=new Map(),entries=new Map();
+ let composing=false;
+ let active=false,disposed=false,flow=null,caseId=null,panel=1,manual=false,code='',modal=null,modalKind=null,demoFlow=null,demo=false,backPending=false;
+ const feedback=createActionFeedback({getScreen:()=>screen,tools,isActive:()=>active&&!disposed,key:'hnP19Feedback'});
+ const route=createDialogRoute({history,location,key:'hnP19Sheet'});
+ const info=(title,message)=>feedback.show({title,message,confirmLabel:'Đóng'});
+ const current=()=>flow?.snapshot();
+ const stateKey=()=>`${current()?.document.documentId}:${panel}`;
+ const remember=()=>{if(active&&root.querySelector('.p19-scroll')){positions.set(stateKey(),root.querySelector('.p19-scroll').scrollTop);if(flow)entries.set(current().document.documentId,{code,manual});}};
+ const blocked=()=>flow?.writeGuard()||'';
+ const locked=()=>{const s=current();return !s||s.busy||s.unknown||!!s.receipt||!!blocked();};
+ function ensure(caseId,documentId){if(documentId)return [...flows.values()].find(f=>{const s=f.snapshot();return s.caseId===caseId&&s.document.documentId===documentId;})||null;const existing=[...flows.values()].reverse().find(f=>f.snapshot().caseId===caseId&&!f.snapshot().receipt);if(existing)return existing;const created=createIssueFlow({getState,caseId,adapter,onPosted:r=>receipts.set(r.id,r)});flows.set(created.snapshot().document.documentId,created);return created;}
+ const review=document.createElement('details');review.className='p19-tools';
+ review.innerHTML=`<summary>P19 · Xuất linh kiện bảo hành</summary><p>PROTOTYPE — không kết nối WMS/camera. Phiếu và tồn mô phỏng giữ trong bộ nhớ trang. Reload đặt lại dữ liệu. Các panel B19 dùng phiên mô phỏng riêng, không thêm vào lịch sử P09.</p><div>${['scan','quantity','review','success'].map((s,i)=>`<button type="button" data-p19-demo="${s}">P19.S0${i+1} · ${s}</button>`).join('')}</div><button type="button" data-p19-open>Mở luồng BH-001 trong app</button><label>Kết quả xuất mô phỏng <select data-p19-outcome><option value="ready">Backend mô phỏng xác nhận</option><option value="error">Từ chối xuất</option><option value="unknown">UNKNOWN chưa rõ</option><option value="timeout-posted">Timeout sau khi đã xuất</option><option value="not-posted">UNKNOWN → đối chiếu chưa xuất</option></select></label><p>Mã thử: LK0001-HN001 · BOX-LK-0002-01. Tồn1/12 chỉ là fixture riêng của luồng P19.</p><pre data-p19-snapshot></pre>`;
+ tools.append(review);
+ function syncTools(){review.querySelector('[data-p19-snapshot]').textContent=JSON.stringify({demo,...current(),metrics:adapter.metrics()},null,2);}
+ function context(){const c=caseDetails(caseId);return `<section class="p19-card p19-context">${tile('tool')}<div><strong>${esc(c.id)}</strong><p data-hn-readable="Sản phẩm bảo hành" data-hn-lines="2">${esc(c.model)}</p></div><span class="p19-badge">${esc(c.status)}</span></section>`;}
+ function part(r,compact=false){return `<article class="p19-card p19-part" data-code="${esc(r.code)}">${tile(r.kind==='BOX'?'box':'tool')}<div class="p19-part-copy"><strong>${esc(r.sku)}</strong><p data-hn-readable="Tên linh kiện" data-hn-lines="2">${esc(r.name)}</p>${compact?'':`<small class="p19-code" data-hn-readable="Mã linh kiện hoặc hộp" data-hn-lines="2">${esc(r.code)}</small>`}<div class="p19-part-meta"><span class="p19-badge">${r.recorded?'Đã ghi nhận':r.kind==='BOX'?'Mã hộp':'Mã linh kiện'}</span><strong>× ${r.quantity}</strong></div></div>${compact?'':r.recorded?`<span title="Dòng đã ghi nhận, không thể xóa">${icon('lock')}</span>`:btn('remove',icon('trash'),'p19-icon-button',`data-code="${esc(r.code)}" aria-label="Bỏ ${esc(r.sku)} khỏi danh sách" ${locked()?'disabled':''}`)}</article>`;}
+ function scan(s){return `${context()}${scanEntryMarkup({id:'p19',operation:'warranty',title:'Quét linh kiện hoặc mã hộp',subtitle:'Thêm linh kiện cho hồ sơ '+caseId+'.',manual,value:code,locked:locked(),formLabel:'Nhập mã linh kiện',codeLabel:'Mã linh kiện hoặc mã hộp',hint:'Tem đơn số lượng 1; mã hộp sẽ mở bước nhập số lượng.',icon:n=>icon(n==='flash'?'torch':n)}).replace('Ví dụ: HN12345','LK0001-HN001 hoặc BOX-LK-0002-01').replace('Nhập mã sản phẩm</strong>','Nhập mã linh kiện</strong>')}<section class="p19-card p19-scan-summary"><div><strong>${s.counts.codes}</strong><span> mã đã quét</span><small>${s.counts.quantity} linh kiện</small></div>${s.lines.length?part(s.lines.at(-1),true):'<p>Chưa có mã trong danh sách.</p>'}</section>${hint('Quét mã chỉ thêm vào danh sách. Xác nhận xuất mới làm thay đổi tồn kho.')}`;}
+ function reviewBody(s){return `${context()}<div class="p19-warehouse">${icon('warehouse')}<div><small>Kho xuất</small><strong>${esc(getState().session?.warehouse?.name)}</strong></div>${icon('lock')}</div><div class="p19-section-title"><h2>Danh sách linh kiện</h2><small>${s.counts.codes} mã/hộp</small></div>${s.lines.map(r=>part(r)).join('')||'<section class="p19-card">Chưa có linh kiện trong danh sách.</section>'}${s.unknown?`<section class="p19-card p19-pending"><h2>Chưa xác định kết quả xuất</h2><p>Giữ nguyên phiếu, mã và số lượng. Đối chiếu kết quả trước khi gửi lại.</p><dl>${kv('Phiếu đang làm',s.document.documentId)}${kv('Yêu cầu',s.request?.id)}${kv('Phiên quét',s.scanSessionId)}${kv('Version',s.request?.version)}</dl></section>`:hint('Xác nhận để xuất linh kiện ngay cho hồ sơ này.')}`;}
+ function success(s){const r=s.receipt;return `<div class="p19-success"><div class="p19-success-mark">${icon('check')}</div><h2>Xuất linh kiện<br>thành công</h2><span class="p19-badge p19-posted">Đã xuất</span><p>Linh kiện đã được xuất cho hồ sơ ${esc(caseId)}.<br>Bạn có thể xem lại trong hồ sơ bảo hành.</p></div><dl class="p19-card p19-result-summary">${kv('Phiếu xuất',r.id)}${kv('Hồ sơ bảo hành',caseId)}${kv('Số mã/hộp',s.counts.codes)}${kv('Tổng số lượng',s.counts.quantity+' linh kiện')}</dl><p class="p19-saved">${icon('history')} Phiếu đã xuất được lưu theo hồ sơ.</p>`;}
+ function render(focus=false){if(!active||disposed)return;const s=current(),c=caseDetails(caseId),error=!c?'Không tìm thấy hồ sơ bảo hành.':blocked();
+  if(s?.receipt)panel=4;else if(panel===4)panel=1;if(s?.unknown)panel=3;
+  const title=panel===4?'Đã xuất linh kiện':panel===3?'Xác nhận xuất linh kiện':'Xuất linh kiện bảo hành';
+  const invalid=!s||!c||error&&!s.unknown&&!s.receipt;
+  root.innerHTML=`<section class="p19-app" data-panel="P19.S0${panel}" aria-busy="${!!s?.busy}"><header class="p19-header">${btn('back',icon('back'),'p19-icon-button','aria-label="Trở về màn trước"')}<h1 tabindex="-1">${title}</h1></header><main class="p19-scroll" tabindex="-1">${steps(panel===4?2:panel===3?1:0)}${invalid?`<section class="p19-card p19-blocked"><h2>${c?.closed?'Hồ sơ đã trả khách':'Chưa thể xuất linh kiện'}</h2><p>${esc(error||'Không có hồ sơ được xác minh.')}</p>${btn('case','Về hồ sơ bảo hành','p19-link')}</section>`:panel===4?success(s):panel===3?reviewBody(s):scan(s)}</main>${invalid?'':`<footer class="p19-footer">${panel===4?btn('case','Về hồ sơ bảo hành '+icon('arrow'),'p19-primary'):panel===3?`<div class="p19-total"><span>${s.counts.codes} mã/hộp</span><strong>${s.counts.quantity} linh kiện</strong></div>${btn(s.unknown?'reconcile':'post',s.busy?'Đang kiểm tra kết quả…':s.unknown?'Đối chiếu kết quả xuất':'Xác nhận xuất linh kiện '+icon('arrow'),'p19-primary',s.busy||(!s.unknown&&(!s.lines.length||!!error))?'disabled':'')}${btn('scan',icon('back')+' Quay lại quét','p19-link',s.busy||s.unknown?'disabled':'')}`:btn('review','Kiểm tra linh kiện '+icon('arrow'),'p19-primary',!s.lines.length||locked()?'disabled':'')}</footer>`}<span class="p19-live" aria-live="polite" role="status">${s?.busy?'Đang đối chiếu dữ liệu':s?.unknown?'Kết quả chưa rõ, cần đối chiếu':''}</span></section>`;
+  root.querySelector('.p19-scroll').scrollTop=positions.get(stateKey())||0;if(focus&&!screen.querySelector('.app-modal-host'))root.querySelector('h1')?.focus({preventScroll:true});syncTools();onSize();
+ }
+ function go(next){if(backPending)return;remember();onNavigate({case:caseId,panel:next,...(demo?{sample:'b19'}:{doc:current().document.documentId})});}
+ function closeModal(){modal?.close();}
+ function quantity(){if(modal||!current()?.pending)return;const pending=current().pending;route.begin();modalKind='quantity';const d=document.createElement('dialog');d.className='app-modal p19-sheet';d.setAttribute('aria-labelledby','p19-quantity-title');
+  d.innerHTML=`<div class="p19-grip" aria-hidden="true"></div><header><h2 id="p19-quantity-title">Hộp linh kiện</h2>${btn('close',icon('close'),'p19-icon-button','aria-label="Đóng hộp số lượng"')}</header><form novalidate><div class="app-modal-body"><div class="p19-sheet-item">${tile('box')}<div><strong>${esc(pending.sku)}</strong><p>${esc(pending.name)}</p><small>${esc(pending.code)}</small></div></div><div class="p19-stock"><span>Hộp số 01</span><strong>Tồn khả dụng: ${pending.available??'Chưa xác minh'}</strong></div><label for="p19-quantity">Số lượng linh kiện cần xuất <em>*</em></label><div class="p19-quantity-input">${btn('minus','−','','aria-label="Giảm số lượng"')}<input id="p19-quantity" inputmode="numeric" autocomplete="off" value="${pending.quantity}" aria-describedby="p19-quantity-help p19-quantity-error">${btn('plus','+','','aria-label="Tăng số lượng"')}</div><p id="p19-quantity-help">Nhập số lượng cần dùng cho hồ sơ ${esc(caseId)}.</p><p id="p19-quantity-error" class="p19-error" role="alert"></p>${hint('Chỉ xác nhận số lượng. Bước này chưa xuất kho.')}</div><footer class="p19-sheet-footer"><button type="submit" class="p19-primary">Xác nhận số lượng ${icon('check')}</button>${btn('close','Hủy','p19-link')}</footer></form>`;
+  const field=d.querySelector('input'),error=d.querySelector('.p19-error');
+  const validate=()=>{const e=quantityError(field.value,pending.available);error.textContent=e;field.setAttribute('aria-invalid',String(!!e));return !e;};
+  d.addEventListener('input',validate);d.addEventListener('click',e=>{const a=e.target.closest('[data-p19]')?.dataset.p19;if(a==='close')closeModal();if(a==='minus'||a==='plus'){const n=Number(field.value);field.value=String(Math.max(1,(Number.isSafeInteger(n)?n:1)+(a==='plus'?1:-1)));validate();}});
+  d.addEventListener('submit',e=>{e.preventDefault();const result=flow.quantity(field.value);if(result.kind!=='accepted'){error.textContent=result.error;field.setAttribute('aria-invalid','true');field.focus();return;}modal.close();void route.ready().then(()=>{if(active){manual=false;code='';render();root.querySelector('[data-p19=review]')?.focus({preventScroll:true});}});});
+  modal=openAppModal({screen,dialog:d,tools,initialFocus:'#p19-quantity',dismissOnBackdrop:false,onClose(){modal=null;modalKind=null;flow?.cancelQuantity();route.closed();root.querySelector('.p19-app')?.setAttribute('data-panel','P19.S01');}});
+  root.querySelector('.p19-app').dataset.panel='P19.S02';syncTools();
+ }
+ async function run(action){if(!flow||current().busy)return;remember();const owner=flow,promise=action==='reconcile'?owner.reconcile():owner.post();render();const result=await promise;if(!active||flow!==owner||disposed)return;render(true);
+  if(result.kind==='posted'){panel=4;history.replaceState({...history.state},'','#p02/component-issue?'+new URLSearchParams({case:caseId,panel:4,...(demo?{sample:'b19'}:{doc:current().document.documentId})}));render(true);}
+  else if(result.kind==='unknown')feedback.show({title:'Cần đối chiếu kết quả xuất',message:result.error,cancelLabel:'Để sau',confirmLabel:'Đối chiếu',onConfirm:()=>run('reconcile')});
+  else info('Chưa xuất linh kiện',result.error||'Chưa thể xác minh kết quả.');
+ }
+ function submitCode(){const result=flow.scan(code);if(result.kind==='quantity'){quantity();return;}if(result.kind==='accepted'){code='';render();if(manual)root.querySelector('[data-scan-code]')?.focus();return;}info(result.kind==='duplicate'?'Mã đã có trong danh sách':'Chưa thêm linh kiện',result.error);syncTools();}
+ function onClick(e){if(!active||disposed||!e.target.closest('.p19-app'))return;const el=e.target.closest('button'),a=el?.dataset.p19,sa=el?.dataset.scanAction;if(!el||el.disabled)return;
+  if(a==='back'){if(current()?.busy||current()?.unknown){info('Phiếu đang chờ kết quả','Dữ liệu và yêu cầu được giữ nguyên. Đối chiếu kết quả trước khi rời luồng xuất.');return;}if(panel===3){go(1);return;}onCase(caseId);return;}
+  if(a==='case'){onCase(caseId);return;}if(a==='reconcile'){run('reconcile');return;}
+  if(blocked()){info('Không thể tiếp tục',blocked());return;}
+  if(sa==='manual'||sa==='collapse'){manual=sa==='manual';render();if(manual)root.querySelector('[data-scan-code]')?.focus();return;}
+  if(a==='review'&&!locked()&&current().lines.length)go(3);if(a==='scan'&&!current().unknown&&!current().busy)go(1);
+  if(a==='post')run('post');
+  if(a==='remove'){const row=current().lines.find(r=>r.code===el.dataset.code);if(row&&!row.recorded&&!locked())feedback.show({title:'Bỏ linh kiện khỏi danh sách?',message:`${row.sku} · ${row.name} · ${row.quantity} linh kiện. Dòng này chưa xuất kho.`,cancelLabel:'Hủy',confirmLabel:'Bỏ linh kiện',onConfirm(){const r=flow.remove(row.code);render();if(r.kind!=='removed')info('Không thể bỏ linh kiện',r.error);}});}
+ }
+ const onInput=e=>{if(active&&e.target.matches('[data-scan-code]'))code=e.target.value;};
+ const onSubmit=e=>{if(active&&e.target.id==='p19-manual-form'){e.preventDefault();if(!composing)submitCode();}};
+ const onComposition=e=>{if(e.target.matches('[data-scan-code]'))composing=e.type==='compositionstart';};
+ root.addEventListener('compositionstart',onComposition);root.addEventListener('compositionend',onComposition);
+ root.addEventListener('click',onClick);root.addEventListener('input',onInput);root.addEventListener('submit',onSubmit);
+ const nav=e=>{if(route.navigation(closeModal,()=>!!modal))e.stopImmediatePropagation();};window.addEventListener('popstate',nav,true);window.addEventListener('hashchange',nav,true);
+ review.addEventListener('change',e=>{if(e.target.matches('[data-p19-outcome]'))adapter.setMode(e.target.value);});
+ review.addEventListener('click',async e=>{const target=e.target.closest('button');if(!target)return;if(target.hasAttribute('data-p19-open')){onNavigate({case:'BH-001',panel:1});return;}const scene=target.dataset.p19Demo;if(!scene)return;target.disabled=true;try{
+   const demoAdapter=createIssueFixture({delay:80});demoFlow?.dispose();demoFlow=createIssueFlow({getState,caseId:'BH-001',adapter:demoAdapter});demoFlow.scan('LK0001-HN001');
+   if(['review','success'].includes(scene)){demoFlow.scan('BOX-LK-0002-01');demoFlow.quantity(2);}if(scene==='success')await demoFlow.post();
+   onNavigate({case:'BH-001',panel:['review','success'].includes(scene)?scene==='success'?4:3:1,sample:'b19'});
+   if(scene==='quantity'){flow.scan('BOX-LK-0002-01');quantity();}
+  }finally{target.disabled=false;}});
+ return {show(){if(disposed)return;if(active)remember();const q=new URLSearchParams(location.hash.split('?')[1]);caseId=q.get('case');demo=q.get('sample')==='b19'&&!!demoFlow;flow=caseDetails(caseId)?demo?demoFlow:ensure(caseId,q.get('doc')):null;if(flow&&!demo&&!q.get('doc')){q.set('doc',flow.snapshot().document.documentId);history.replaceState(history.state,'','#p02/component-issue?'+q);}const entry=flow&&entries.get(current().document.documentId);code=entry?.code||'';manual=entry?.manual||false;panel=q.get('panel')==='3'?3:q.get('panel')==='4'?4:1;active=true;backPending=false;render(true);},
+  hide(){if(!active)return;remember();active=false;feedback.clear();closeModal();},
+  posted:()=>[...receipts.values()].map(r=>structuredClone(r)),
+  pending:()=>[...flows.values()].map(f=>f.snapshot()).filter(s=>!s.receipt&&(s.lines.length||s.busy||s.unknown)),
+  // P14 cannot claim these drafts saved until P21 retention is implemented.
+  records(){return this.pending().map(s=>({...s,operation:'warranty',source:'P19',saveBlocked:true,document:{...s.document,number:s.document.documentId,uncertain:s.unknown}}));},
+  dispose(){disposed=true;active=false;feedback.dispose();route.dispose();closeModal();flows.forEach(f=>f.dispose());demoFlow?.dispose();review.remove();root.removeEventListener('compositionstart',onComposition);root.removeEventListener('compositionend',onComposition);root.removeEventListener('click',onClick);root.removeEventListener('input',onInput);root.removeEventListener('submit',onSubmit);window.removeEventListener('popstate',nav,true);window.removeEventListener('hashchange',nav,true);},
+ };
+}

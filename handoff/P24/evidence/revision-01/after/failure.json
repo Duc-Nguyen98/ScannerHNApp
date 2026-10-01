@@ -1,0 +1,6 @@
+{
+  "checks": [],
+  "layout": [],
+  "errors": [],
+  "error": "locator.evaluate: Error: strict mode violation: locator('.p19-tools') resolved to 2 elements:\n    1) <details class=\"p19-tools p24-tools\">…</details> aka getByText('P24 · Trạng thái ScannerPROTOTYPE — dùng owner P19/P20/P04/P05, không kết nối')\n    2) <details class=\"p19-tools\">…</details> aka getByText('P19 · Xuất linh kiện bảo hànhPROTOTYPE — không kết nối WMS/camera. Phiếu và tồn')\n\nCall log:\n\u001b[2m  - waiting for locator('.p19-tools')\u001b[22m\n\n    at login (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p24.cjs:8:332)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p24.cjs:12:5"
+}

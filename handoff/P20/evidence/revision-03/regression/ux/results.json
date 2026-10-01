@@ -1,0 +1,231 @@
+{
+  "checks": [
+    {
+      "name": "UX1 link immediately below context; short receipt summary accurate and no fold control",
+      "status": "PASS"
+    },
+    {
+      "name": "UX2 large receipt3/6 rows; expand/collapse preserves ID, focus and remembered state per case",
+      "status": "PASS"
+    },
+    {
+      "name": "UX3 source code dialog exact incl2100+, Unicode/HTML; backdrop/Tab/Escape/Back restore exact trigger",
+      "status": "PASS"
+    },
+    {
+      "name": "UX6 overlap marks one new ID, keeps top; explicit jump focuses new row, not duplicate",
+      "status": "PASS"
+    },
+    {
+      "name": "UX4 exact verified receipt via P19→P09→P20 highlighted once; Back preserves new scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "UX5 pending footer exact draft ID +1code/2units and resume same document",
+      "status": "PASS"
+    },
+    {
+      "name": "UNKNOWN CTA routes same request to reconciliation without another Post",
+      "status": "PASS"
+    },
+    {
+      "name": "5 viewports long receipt/raw-code dialog/pending footer geometry",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "layouts": [
+    {
+      "label": "codes494",
+      "viewport": {
+        "width": 494,
+        "height": 950
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    },
+    {
+      "label": "long-receipt",
+      "viewport": {
+        "width": 494,
+        "height": 950
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "raw-dialog",
+      "viewport": {
+        "width": 494,
+        "height": 950
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    },
+    {
+      "label": "pending",
+      "viewport": {
+        "width": 494,
+        "height": 950
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "long-receipt",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "raw-dialog",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    },
+    {
+      "label": "pending",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "long-receipt",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "raw-dialog",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    },
+    {
+      "label": "pending",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "long-receipt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "raw-dialog",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    },
+    {
+      "label": "pending",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "long-receipt",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    },
+    {
+      "label": "raw-dialog",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    },
+    {
+      "label": "pending",
+      "viewport": {
+        "width": 340,
+        "height": 420
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": false
+    }
+  ]
+}

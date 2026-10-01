@@ -1,0 +1,77 @@
+[
+  {
+    "id": "F01",
+    "name": "Read completion preserves current Back focus",
+    "status": "PASS"
+  },
+  {
+    "id": "F02",
+    "name": "Read completion preserves user scroll",
+    "status": "PASS"
+  },
+  {
+    "id": "F03",
+    "name": "Reader remains open across read completion; focus returns to reader",
+    "status": "PASS"
+  },
+  {
+    "id": "F04",
+    "name": "No focus stolen from simulator when read completes",
+    "status": "PASS"
+  },
+  {
+    "id": "F05",
+    "name": "Invalid checkpoint date shows unverified without render crash",
+    "status": "PASS"
+  },
+  {
+    "id": "F06",
+    "name": "Long quantity cannot push row outside card",
+    "status": "PASS"
+  },
+  {
+    "id": "F07",
+    "name": "Long totals keep fixed footer inside app",
+    "status": "PASS"
+  },
+  {
+    "id": "F08",
+    "name": "Unknown counts never rendered null or undefined",
+    "status": "PASS"
+  },
+  {
+    "id": "F09",
+    "name": "Checkpoint pending export icon keeps neutral status",
+    "status": "PASS"
+  },
+  {
+    "id": "F10Escape",
+    "name": "Confirmed not-posted can resume after Escape",
+    "status": "PASS"
+  },
+  {
+    "id": "F10Back",
+    "name": "Confirmed not-posted can resume after Back",
+    "status": "PASS"
+  },
+  {
+    "id": "F11",
+    "name": "Stale copy feedback suppressed if same owner changes",
+    "status": "PASS"
+  },
+  {
+    "id": "F12",
+    "name": "Same-document return restores bottom reader focus and scroll",
+    "status": "PASS"
+  },
+  {
+    "id": "F13",
+    "name": "Header Back consumes matching list entry without native Back loop",
+    "status": "PASS"
+  },
+  {
+    "id": "F14",
+    "name": "Pending copy result never interrupts a newer full-text dialog",
+    "status": "PASS"
+  }
+]

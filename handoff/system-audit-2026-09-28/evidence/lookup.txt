@@ -1,0 +1,11 @@
+PASS S01 Home route, count metadata, five items and responsive shell
+PASS A01 search by code/name/SKU; clear; category+serial; advanced filter has no invented options
+PASS A03 zero not unknown; missing serial not SKU, missing stock not zero
+PASS S02 detail correct identity, query/scroll restore by native Back
+PASS nonzero catalogue scroll restored after native Back under long-content stress
+PASS A04 disabled print keyboard and direct route; warranty permission guard
+PASS A02 S03 explicit stock and read-only location rows
+PASS S04 and A05 seven explicit signed events, inclusive type/date and invalid range
+PASS P03 scan context, Escape restores focus and one overlay; no camera
+PASS invalid item deep link rejected; read-only lookup works while warehouse stopped
+PASS Home/picker re-entry and logout/native Back hides lookup data

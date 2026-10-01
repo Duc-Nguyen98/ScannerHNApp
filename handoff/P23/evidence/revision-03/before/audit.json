@@ -1,0 +1,101 @@
+[
+  {
+    "id": "A01",
+    "title": "Pending search then Cancel picker updates results",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\n3 !== 1\n",
+    "errors": []
+  },
+  {
+    "id": "A02",
+    "title": "Date filter has active visual and accessible indicator",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nnull !== 'true'\n",
+    "errors": []
+  },
+  {
+    "id": "A03",
+    "title": "Detail reload does not drop focus while pending",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A04",
+    "title": "Detail reload preserves newer footer focus identity",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A05",
+    "title": "Reader closes after read refresh with focus on same reader",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A06",
+    "title": "Unknown inbound does not claim document sent",
+    "status": "FAIL",
+    "error": "The input was expected to not match the regular expression /Phiếu đã gửi/. Input:\n\n'Phiếu đã gửi, chưa ghi sổ; chưa làm thay đổi tồn.'\n",
+    "errors": []
+  },
+  {
+    "id": "A07",
+    "title": "Long event heading and time cannot overflow timeline",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\ntrue !== false\n",
+    "errors": []
+  },
+  {
+    "id": "A08",
+    "title": "Malformed owner event cannot crash detail",
+    "status": "FAIL",
+    "error": "page.waitForSelector: Timeout 4000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.p23-app') to be visible\u001b[22m\n",
+    "errors": [
+      "Cannot read properties of null (reading 'id')",
+      "Cannot read properties of null (reading 'id')"
+    ]
+  },
+  {
+    "id": "A09",
+    "title": "Back from linked case names actual session destination",
+    "status": "FAIL",
+    "error": "The input did not match the regular expression /phiên quét/. Input:\n\n'Về lịch sử bảo hành'\n",
+    "errors": []
+  },
+  {
+    "id": "A10",
+    "title": "Source change clears unrelated scroll context",
+    "status": "PASS"
+  },
+  {
+    "id": "A11",
+    "title": "Pending debounce does not discard focus on result card",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A12",
+    "title": "Session quantity rejected/duplicate not labelled issued",
+    "status": "FAIL",
+    "error": "The input was expected to not match the regular expression /1 linh kiện/. Input:\n\n'LK0001-HN001\\n\\n14:31 · Từ chối · 1 linh kiện'\n",
+    "errors": []
+  },
+  {
+    "id": "A13",
+    "title": "Read refresh preserves raw event reader focus by event ID",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "A14",
+    "title": "Filter apply restores date-button trigger not search-filter",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  }
+]

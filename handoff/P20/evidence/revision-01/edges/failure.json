@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "name": "First read error never displays empty or false0; retry resolves known empty",
+      "status": "PASS"
+    },
+    {
+      "name": "Switch case while page loading ignores old response",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard load retains focus/end focus; Back restores scroll and control",
+      "status": "PASS"
+    },
+    {
+      "name": "P20 resumes same P19 draft; verified Post reappears once in same case history",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "locator.innerText: Error: strict mode violation: locator('.hn-action-dialog') resolved to 2 elements:\n    1) <dialog open=\"\" aria-modal=\"true\" data-tone=\"neutral\" class=\"p07-dialog hn-action-dialog hn-readable-dialog\" aria-labelledby=\"hn-action-0fdb51aa-38b6-4cca-978f-497ddb39a7b9\" aria-describedby=\"hn-action-0fdb51aa-38b6-4cca-978f-497ddb39a7b9-message\">…</dialog> aka getByRole('dialog', { name: 'Sản phẩm bảo hành' })\n    2) <dialog id=\"hn-name-dialog\" aria-describedby=\"hn-full-name\" aria-labelledby=\"hn-name-dialog-title\" class=\"p07-dialog hn-action-dialog hn-name-dialog\">…</dialog> aka getByLabel('Tên đầy đủ')\n\nCall log:\n\u001b[2m  - waiting for locator('.hn-action-dialog')\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p20_edges.cjs:13:717\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p20_edges.cjs:7:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p20_edges.cjs:13:1"
+}

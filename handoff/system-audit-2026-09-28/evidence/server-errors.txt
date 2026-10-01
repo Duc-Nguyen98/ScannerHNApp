@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\serve_preview.py", line 43, in <module>
+    server = PreviewServer(('127.0.0.1', args.port), partial(PreviewHandler, directory=str(docs)))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TAN MIE\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\serve_preview.py", line 35, in server_bind
+    super().server_bind()
+  File "C:\Users\TAN MIE\AppData\Local\Programs\Python\Python312\Lib\http\server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "C:\Users\TAN MIE\AppData\Local\Programs\Python\Python312\Lib\socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted

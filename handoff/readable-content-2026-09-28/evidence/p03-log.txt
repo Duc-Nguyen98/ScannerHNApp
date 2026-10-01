@@ -1,0 +1,22 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ undefined
+- 'PN-0001'
+
+    at C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_dialogs.cjs:139:85
+    at async check (C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_dialogs.cjs:52:37)
+    at async C:\Users\TAN MIE\Downloads\app_Scanner\ScannerHNApp\scripts\check_dialogs.cjs:134:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: 'PN-0001',
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

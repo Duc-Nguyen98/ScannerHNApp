@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "name": "Context refresh waits while receipt reader open; one overlay, exact raw, return focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed context can become readable active context without stale disabled footer",
+      "status": "PASS"
+    },
+    {
+      "name": "Min stepper keeps keyboard focus, no accidental quantity commit",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared result return never takes focus from a later user choice",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

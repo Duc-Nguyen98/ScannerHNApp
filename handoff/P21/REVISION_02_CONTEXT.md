@@ -1,0 +1,4 @@
+# P21 r02 — nguồn trước sửa
+User yêu cầu áp dụng cả6đề xuất: toàn thẻ mở phiếu; context gọn/ngày giờ; readiness/counts gần CTA; phân biệt lỗi đọc/mã lệch/Post UNKNOWN; copy định danh; marker phiếu vừa tiếp tục và receipt vừa xác minh.
+Nguồn: B21 + P21r01; UI_STANDARD; chỉ thị user hiện tại. Giữ frame494×950/header86px/footer2CTA, radius12px/gap12–14px và Public Sans đã ghi trong DESIGN_TRACE. CSS mới chỉ scopedP21. Màu/icon nghiệp vụ từ operation-icons.css; feedback dialog/readable dùng component chung. Context gộp và marker/copy là user-approved implementation scope, hình thức r02 vẫn chờ review.
+Ảnh before từ actualr01 cùng494×950/DPR1/fixtureB21; source snapshot trước sửa. Không sửa baseline hoặc dữ liệu production; nguồn fixture/page-memory, reload mất dữ liệu. Lỗi đọc được phân loại bằng kết quả adapter preview, không tạo enum backend.

@@ -1,0 +1,11 @@
+PASS P06 four IDs, six viewports, stable header/nav and readable long content
+PASS P06 feedback dialog backdrop, focus trap, six viewport containment, Escape focus restore
+PASS P06 native Back closes dialog without losing query/category/scroll
+PASS P06 missing serial and blocked document use dialog; range validation stays at field
+PASS P07 list, read, verify, confirmed result preserve four IDs and fit six viewports
+PASS P07 copy result replaces detail without stacking; returns to same detail; Back consumes rich dialog
+PASS P07 denied clipboard result remains modal and supports retry
+PASS P07 permission failure is dialog, background scroll unchanged, no message banner
+PASS P07 UNKNOWN cancel preserves exact request; footer reconcile produces verified S04 only once
+PASS P07 UNKNOWN direct dialog action reconciles once and keeps request identity
+PASS NFC product picker keeps a static instruction and returns exact item without a notification overlay

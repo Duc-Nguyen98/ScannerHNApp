@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "id": "A01",
+      "name": "Collapse manual restores focus to visible entry control",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "name": "Review → scan restores input focus/caret and unsubmitted text",
+      "status": "PASS"
+    },
+    {
+      "id": "A03",
+      "name": "Confirmed removal returns keyboard focus to remaining row or scan action",
+      "status": "PASS"
+    },
+    {
+      "id": "A04",
+      "name": "Leaving during IME does not disable Enter in next rendered input",
+      "status": "PASS"
+    },
+    {
+      "id": "A05",
+      "name": "Most recently accepted BOX moves to top without changing document line order",
+      "status": "PASS"
+    },
+    {
+      "id": "A06",
+      "name": "Long SKU/name/code sheet wraps; footer reachable and body scrolls inside dialog",
+      "status": "PASS"
+    },
+    {
+      "id": "A07",
+      "name": "Long SKU in manual/review preserves full text without horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "id": "A08",
+      "name": "IME Enter in quantity does not confirm unfinished composition",
+      "status": "PASS"
+    },
+    {
+      "id": "A09",
+      "name": "Blank scan input validates at field without opening generic dialog",
+      "status": "PASS"
+    },
+    {
+      "id": "A10",
+      "name": "Returning to case then P09 Back does not bounce into P19",
+      "status": "PASS"
+    },
+    {
+      "id": "A11",
+      "name": "Confirm unchanged BOX retains document version and request identity",
+      "status": "PASS"
+    },
+    {
+      "id": "A12",
+      "name": "Back/delete/sheet close targets are at least44 CSS pixels",
+      "status": "PASS"
+    },
+    {
+      "id": "A13",
+      "name": "Quantity field with long metadata is visible immediately inside scrolling sheet",
+      "status": "PASS"
+    },
+    {
+      "id": "A14",
+      "name": "Posting has accurate busy text and focus; rejected result returns to action",
+      "status": "PASS"
+    },
+    {
+      "id": "A15",
+      "name": "Deleting last line disables Post; scan return stays usable",
+      "status": "PASS"
+    },
+    {
+      "id": "A16",
+      "name": "Route away while request pending never opens result/dialog over another case",
+      "status": "PASS"
+    },
+    {
+      "id": "A17",
+      "name": "Quantity browser Forward over dismissed sheet cannot confirm or stack overlays",
+      "status": "PASS"
+    },
+    {
+      "id": "A18",
+      "name": "Repeated invalid then valid quantity keeps one overlay; backdrop and Escape preserve rows",
+      "status": "PASS"
+    },
+    {
+      "id": "A19",
+      "name": "New BOX quantity fits remaining stock1; exhausted BOX does not open impossible form",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,17 @@
+id,visual,behavior,integration,evidence,note
+P22.S01,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/regression/after/S01-494x950.png,Migrated hub unchanged
+P22.S02,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,List and controls audited
+P22.S03,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Detail and source context audited
+P22.S04,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/regression/after/S04-494x950.png,Unavailable default and retry read only
+P22.R03.01,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Deep-link Back fallback must not invent a caller
+P22.R03.02,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Leaving a refresh is not a read failure
+P22.R03.03,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Cached detail exposes the source warning
+P22.R03.04,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,A long UID never hides the serial row
+P22.R03.05,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Long actor is compact on card with full detail path
+P22.R03.06,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,IME lifecycle resets after a tab replaces its input
+P22.R03.07,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Pending query does not repaint underneath a picker
+P22.R03.08,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Reload keyboard focus survives request completion
+P22.R03.09,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Incomplete empty is not a confirmed empty history
+P22.R03.10,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Invalid optional data is unknown, not object text or fake copy action
+P22.R03.11,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Active status filter has visible filter indicator
+P22.R03.12,IN_PROGRESS,PASS,BLOCKED,evidence/revision-03/after/audit-results.json,Source change does not strand focus in document body

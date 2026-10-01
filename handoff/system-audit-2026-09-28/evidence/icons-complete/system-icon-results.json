@@ -1,0 +1,1413 @@
+{
+  "revision": "HN-icon-standard-v1/P08-r20",
+  "checks": [
+    {
+      "name": "Home task/recent/lookup tiles use shared palette without moving accepted layout at6 sizes",
+      "status": "PASS"
+    },
+    {
+      "name": "P03 operation picker has same operation mapping; warning dialogs excluded",
+      "status": "PASS"
+    },
+    {
+      "name": "P04/P05 review document icons use operation color, metadata neutral; workflow unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "P06 transaction icon colors match Home and History without changing signed values",
+      "status": "PASS"
+    },
+    {
+      "name": "P07 NFC identity tiles use purple while artwork module and layout remain unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Embedded history hub consumes same shared stylesheet; standalone is not repainted",
+      "status": "PASS"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "home-494x1000",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            36,
+            358,
+            57,
+            54
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            32,
+            489,
+            42,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            32,
+            556,
+            42,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            32,
+            623,
+            42,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "home-360x800",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            36,
+            358,
+            57,
+            54
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            32,
+            489,
+            42,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            32,
+            556,
+            42,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            32,
+            623,
+            42,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "home-430x932",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            36,
+            358,
+            57,
+            54
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            32,
+            489,
+            42,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            32,
+            556,
+            42,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            32,
+            623,
+            42,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "home-1440x900",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            36,
+            358,
+            57,
+            54
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            32,
+            489,
+            42,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            32,
+            556,
+            42,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            32,
+            623,
+            42,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "home-340x420",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            36,
+            358,
+            57,
+            54
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            32,
+            489,
+            42,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            32,
+            556,
+            42,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            32,
+            623,
+            42,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "home-1869x940",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            14,
+            18,
+            44,
+            44
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            36,
+            358,
+            57,
+            54
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            32,
+            489,
+            42,
+            44
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            32,
+            556,
+            42,
+            44
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            32,
+            623,
+            42,
+            44
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "p03-operations",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            29,
+            103,
+            50,
+            50
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            29,
+            175,
+            50,
+            50
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            29,
+            247,
+            50,
+            50
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "lookup",
+          "box": [
+            29,
+            319,
+            50,
+            50
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "p04-review",
+      "icons": [
+        {
+          "op": "documents",
+          "box": [
+            25,
+            133,
+            43,
+            38
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            25,
+            189,
+            43,
+            38
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            25,
+            245,
+            43,
+            38
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            25,
+            310,
+            43,
+            38
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            25,
+            376,
+            43,
+            38
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            25,
+            441,
+            43,
+            38
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "p05-review",
+      "icons": [
+        {
+          "op": "outbound",
+          "box": [
+            31,
+            151,
+            32,
+            32
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            31,
+            204,
+            32,
+            32
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            31,
+            257,
+            32,
+            32
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            31,
+            310,
+            32,
+            32
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            31,
+            368,
+            32,
+            32
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "documents",
+          "box": [
+            31,
+            427,
+            32,
+            32
+          ],
+          "color": "rgb(70, 98, 121)",
+          "bg": "rgb(238, 243, 247)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "p06-history",
+      "icons": [
+        {
+          "op": "inbound",
+          "box": [
+            18,
+            315,
+            52,
+            52
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            18,
+            414,
+            52,
+            52
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            18,
+            514,
+            52,
+            52
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            18,
+            614,
+            52,
+            52
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "outbound",
+          "box": [
+            18,
+            714,
+            52,
+            52
+          ],
+          "color": "rgb(34, 95, 162)",
+          "bg": "rgb(237, 244, 255)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "warranty",
+          "box": [
+            18,
+            814,
+            52,
+            52
+          ],
+          "color": "rgb(149, 96, 26)",
+          "bg": "rgb(255, 245, 230)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "inbound",
+          "box": [
+            18,
+            914,
+            52,
+            52
+          ],
+          "color": "rgb(13, 107, 96)",
+          "bg": "rgb(234, 247, 242)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    },
+    {
+      "name": "p07-list",
+      "icons": [
+        {
+          "op": "nfc",
+          "box": [
+            26,
+            88,
+            60,
+            60
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            297,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            418,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            539,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            660,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            781,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            902,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1023,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1144,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1265,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1386,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1506,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1649,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1792,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            1913,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2034,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2155,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2276,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2397,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2540,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2683,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2804,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            2925,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3046,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3167,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3287,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3408,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3529,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3650,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3771,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        },
+        {
+          "op": "nfc",
+          "box": [
+            27,
+            3892,
+            66,
+            82
+          ],
+          "color": "rgb(117, 80, 162)",
+          "bg": "rgb(243, 239, 251)",
+          "fill": "none",
+          "stroke": "1.8px"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

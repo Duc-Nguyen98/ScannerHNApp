@@ -1,0 +1,69 @@
+✖ A13 hanging read times out, keeps rows/cursor and can retry without mutation (81.1356ms)
+✖ A14 cursor cycles are rejected and retain correct failed cursor (8.765ms)
+✖ A15 whitespace-only SKU/code are unknown without destroying original raw code (0.6791ms)
+✔ Known raw codes are never trimmed or normalized (0.495ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 283.394
+
+✖ failing tests:
+
+test at tests\component-history-r03.test.mjs:7:1
+✖ A13 hanging read times out, keeps rows/cursor and can retry without mutation (81.1356ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/component-history-r03.test.mjs:7:384)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\component-history-r03.test.mjs:8:1
+✖ A14 cursor cycles are rejected and retain correct failed cursor (8.765ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(m.snapshot().error)
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/component-history-r03.test.mjs:8:241)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\component-history-r03.test.mjs:9:1
+✖ A15 whitespace-only SKU/code are unknown without destroying original raw code (0.6791ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== null
+  
+      at TestContext.<anonymous> (file:///C:/Users/TAN%20MIE/Downloads/app_Scanner/ScannerHNApp/tests/component-history-r03.test.mjs:9:184)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

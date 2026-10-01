@@ -1,0 +1,70 @@
+{
+  "contract_version": "2.0",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "target_kind": "prototype",
+  "current_prompt": "P24",
+  "revision": "P24-r01",
+  "completed_panel_ids": [
+    "P24.S01",
+    "P24.S02",
+    "P24.S03",
+    "P24.S04"
+  ],
+  "remaining_panel_ids": [],
+  "visual": "AWAITING_USER_REVIEW",
+  "behavior": "PASS_PROTOTYPE",
+  "integration": "BLOCKED_PRODUCTION",
+  "node_tests": 165,
+  "p24_node_tests": 6,
+  "browser_groups": {
+    "p24_main": 5,
+    "p24_edges": 6,
+    "p19": 9,
+    "p20": 7,
+    "p21": 9,
+    "p09_navigation": 11,
+    "p23": 9
+  },
+  "browser_groups_total": 56,
+  "layout_combinations": 25,
+  "footer_viewports": 4,
+  "shared_components_changed": [
+    "shared waiting-web presentation; P04/P05 result adapters",
+    "P19 validation/rejection; P20 closed-case presentation",
+    "Home history callbacks and external P24 preview controls"
+  ],
+  "blockers": [
+    "Production actor/permission/stock/validate/record/Post/status/cursor contracts unverified.",
+    "Camera/NFC/physical keyboard NOT_RUN. Preview memory only; reload/logout loses data."
+  ],
+  "artifact_paths": [
+    "handoff/P24/REPORT.md",
+    "handoff/P24/REVIEW.html",
+    "handoff/P24/DESIGN_TRACE.md",
+    "handoff/P24/STATE_ACCEPTANCE.csv",
+    "handoff/P24/COVERAGE_SUMMARY.md",
+    "handoff/P24/SOURCE_MANIFEST.json",
+    "handoff/P24/evidence/revision-01"
+  ],
+  "next_action": "User visual review P24 r01. Preserve temporary acceptance P23 r03; synchronized additional states deferred. Production/hardware/persistence unverified.",
+  "report": "handoff/P24/REPORT.md",
+  "review": "handoff/P24/REVIEW.html",
+  "coverage_reference": {
+    "boards": 24,
+    "panels": 91,
+    "statuses": {
+      "visual_status": {
+        "IN_PROGRESS": 68,
+        "USER_TEMPORARILY_ACCEPTED": 4,
+        "PASS": 19
+      },
+      "behavior_status": {
+        "PASS": 91
+      },
+      "integration_status": {
+        "BLOCKED": 91
+      }
+    },
+    "basis": "Existing coverage and reports; only P24 and direct dependencies revalidated in this task."
+  }
+}

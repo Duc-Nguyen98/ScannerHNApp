@@ -1,0 +1,85 @@
+{
+  "phase": "before",
+  "observations": [
+    {
+      "id": "R03-01 stable form footer",
+      "status": "FAIL",
+      "evidence": {
+        "before": 759.21875,
+        "after": 782.21875
+      }
+    },
+    {
+      "id": "R03-02 location expansion retained",
+      "status": "FAIL",
+      "evidence": {
+        "open": false
+      }
+    },
+    {
+      "id": "R03-03 owner nav identity",
+      "status": "FAIL",
+      "evidence": {
+        "nav": "documents"
+      }
+    },
+    {
+      "id": "R03-04 no invisible expanding keyboard stop",
+      "status": "FAIL",
+      "evidence": {
+        "hiddenStop": 1
+      }
+    },
+    {
+      "id": "R03-05 readable zoom icon",
+      "status": "FAIL",
+      "evidence": {
+        "plusFont": "17px",
+        "plusSvg": 0
+      }
+    },
+    {
+      "id": "R03-06 focus at zoom limit",
+      "status": "FAIL",
+      "evidence": {
+        "focus": "BODY"
+      }
+    },
+    {
+      "id": "R03-07 reading point on zoom",
+      "status": "FAIL",
+      "evidence": {
+        "before": {
+          "x": 0.45481481481481484,
+          "y": 0.43573667711598746
+        },
+        "after": {
+          "x": 0.3900889453621347,
+          "y": 0.3736559139784946
+        }
+      }
+    },
+    {
+      "id": "R03-08 unknown is not empty",
+      "status": "FAIL",
+      "evidence": {
+        "body": "Tệp đính kèm PN-0005\nThông tin phiếu nhập\nPN-0005\n09/09/2026\n\nCông ty Minh Phát\n\nDanh sách tệp đính kèm (0)\n0 sẵn sàng\n0 đang tải\n0 cần xử lý\n\nChưa có tệp đính kèm.\n\nTải lên chưa khả dụng\nBạn vẫn có thể xem và tải xuống các tệp sẵn sàng."
+      }
+    },
+    {
+      "id": "R03-09 recovered source is refreshed",
+      "status": "FAIL",
+      "evidence": {
+        "recovered": 0
+      }
+    },
+    {
+      "id": "R03-10 removed source file cannot download",
+      "status": "FAIL",
+      "evidence": {
+        "downloads": 1
+      }
+    }
+  ],
+  "errors": []
+}

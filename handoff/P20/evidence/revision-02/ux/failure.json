@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "name": "UX1 link immediately below context; short receipt summary accurate and no fold control",
+      "status": "PASS"
+    },
+    {
+      "name": "UX2 large receipt3/6 rows; expand/collapse preserves ID, focus and remembered state per case",
+      "status": "PASS"
+    },
+    {
+      "name": "UX3 source code dialog exact incl2100+, Unicode/HTML; backdrop/Tab/Escape/Back restore exact trigger",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "error": "page.waitForSelector: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p20=new]') to be visible\u001b[22m\n\n    at C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p20_r02_ux.cjs:16:368\n    at async check (C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p20_r02_ux.cjs:10:30)\n    at async C:\\Users\\TAN MIE\\Downloads\\app_Scanner\\ScannerHNApp\\scripts\\check_p20_r02_ux.cjs:16:1",
+  "layouts": [
+    {
+      "label": "codes494",
+      "viewport": {
+        "width": 494,
+        "height": 950
+      },
+      "width": 494,
+      "height": 950,
+      "overflow": false,
+      "footerFits": true,
+      "dialog": true
+    }
+  ]
+}

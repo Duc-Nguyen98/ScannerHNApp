@@ -1,0 +1,93 @@
+[
+  {
+    "id": "F01",
+    "name": "Read completion preserves current Back focus",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "F02",
+    "name": "Read completion preserves user scroll",
+    "status": "FAIL",
+    "error": "The expression evaluated to a falsy value:\n\n  assert.ok(await p.locator('.p21-scroll').evaluate(e=>e.scrollTop>=399))\n",
+    "errors": []
+  },
+  {
+    "id": "F03",
+    "name": "Reader remains open across read completion; focus returns to reader",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\n0 !== 1\n",
+    "errors": []
+  },
+  {
+    "id": "F04",
+    "name": "No focus stolen from simulator when read completes",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "F05",
+    "name": "Invalid checkpoint date shows unverified without render crash",
+    "status": "FAIL",
+    "error": "page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.p21-app') to be visible\u001b[22m\n",
+    "errors": [
+      "Invalid time value"
+    ]
+  },
+  {
+    "id": "F06",
+    "name": "Long quantity cannot push row outside card",
+    "status": "PASS"
+  },
+  {
+    "id": "F07",
+    "name": "Long totals keep fixed footer inside app",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  },
+  {
+    "id": "F08",
+    "name": "Unknown counts never rendered null or undefined",
+    "status": "FAIL",
+    "error": "The input was expected to not match the regular expression /null|undefined/. Input:\n\n'null mã · undefined linh kiện\\n\\nCó thể tiếp tục quét'\n",
+    "errors": []
+  },
+  {
+    "id": "F09",
+    "name": "Checkpoint pending export icon keeps neutral status",
+    "status": "FAIL",
+    "error": "Expected \"actual\" to be strictly unequal to:\n\n'rgb(22, 134, 87)'",
+    "errors": []
+  },
+  {
+    "id": "F10Escape",
+    "name": "Confirmed not-posted can resume after Escape",
+    "status": "FAIL",
+    "error": "page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p21=scan]:not(:disabled)') to be visible\u001b[22m\n",
+    "errors": []
+  },
+  {
+    "id": "F10Back",
+    "name": "Confirmed not-posted can resume after Back",
+    "status": "FAIL",
+    "error": "page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-p21=scan]:not(:disabled)') to be visible\u001b[22m\n",
+    "errors": []
+  },
+  {
+    "id": "F11",
+    "name": "Stale copy feedback suppressed if same owner changes",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\n1 !== 0\n",
+    "errors": []
+  },
+  {
+    "id": "F12",
+    "name": "Same-document return restores bottom reader focus and scroll",
+    "status": "FAIL",
+    "error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "errors": []
+  }
+]
