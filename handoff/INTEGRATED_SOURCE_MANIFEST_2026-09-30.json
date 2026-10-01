@@ -1,0 +1,47 @@
+{
+  "report": "handoff/INTEGRATION_REPORT_2026-09-30.md",
+  "source_root": "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp",
+  "target_kind": "prototype",
+  "baseline_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "branch": "main",
+  "origin": "origin/main",
+  "accessible_worktrees": [
+    "C:/Users/TAN MIE/Downloads/app_Scanner/ScannerHNApp"
+  ],
+  "accessible_branches": [
+    "main"
+  ],
+  "separate_non_git_material": "C:/Users/TAN MIE/Downloads/app_Scanner/contract-work",
+  "git_conflicts": {
+    "unmerged_index_entries": 0,
+    "conflict_markers_in_source": 0
+  },
+  "coverage": {
+    "prompts": 24,
+    "panels": 91,
+    "unique_panels": 91,
+    "missing_prompts": [],
+    "duplicate_panels": 0,
+    "visual": {
+      "IN_PROGRESS": 70,
+      "PASS": 17,
+      "USER_TEMPORARILY_ACCEPTED": 4
+    },
+    "behavior": {
+      "PASS": 91
+    },
+    "integration": {
+      "BLOCKED": 91
+    }
+  },
+  "validation": {
+    "node_test_command": "node --test tests/*.mjs",
+    "node_tests_passed": 653,
+    "node_tests_failed": 0,
+    "flow_modules_syntax_checked": 136,
+    "git_diff_check": "PASS"
+  },
+  "animation_added": false,
+  "deployed": false,
+  "next_gate": "01_FLOW_LINK_GATE.md"
+}

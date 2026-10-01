@@ -1,0 +1,2423 @@
+{
+  "scope": "Source-backed reference state and selected essential interactions; visible-panel observation is paired with browser assertions, not a standalone PASS",
+  "panels": [
+    {
+      "panel": "P01.S01",
+      "board": "P01",
+      "owner": "docs/flows/auth-session/app.mjs",
+      "suite": {
+        "board": "P01",
+        "command": [
+          "check_flow_audit.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:44:50.660Z",
+        "finished": "2026-09-30T11:44:57.471Z",
+        "log": "handoff/flow/evidence/acceptance-02/P01-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P02-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P06-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P18-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P01.S02",
+      "board": "P01",
+      "owner": "docs/flows/auth-session/app.mjs",
+      "suite": {
+        "board": "P01",
+        "command": [
+          "check_flow_audit.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:44:50.660Z",
+        "finished": "2026-09-30T11:44:57.471Z",
+        "log": "handoff/flow/evidence/acceptance-02/P01-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P02-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P06-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P18-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P02.S01",
+      "board": "P02",
+      "owner": "docs/flows/home/home.mjs",
+      "suite": {
+        "board": "P02",
+        "command": [
+          "check_home_recent.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:44:57.472Z",
+        "finished": "2026-09-30T11:45:03.837Z",
+        "log": "handoff/flow/evidence/acceptance-02/P02-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P02-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P06-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P18-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P03.S01",
+      "board": "P03",
+      "owner": "docs/flows/scanner-dialogs/dialog-flow.mjs",
+      "suite": {
+        "board": "P03",
+        "command": [
+          "check_dialogs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:03.838Z",
+        "finished": "2026-09-30T11:45:40.192Z",
+        "log": "handoff/flow/evidence/acceptance-02/P03-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P03.S02",
+      "board": "P03",
+      "owner": "docs/flows/scanner-dialogs/dialog-flow.mjs",
+      "suite": {
+        "board": "P03",
+        "command": [
+          "check_dialogs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:03.838Z",
+        "finished": "2026-09-30T11:45:40.192Z",
+        "log": "handoff/flow/evidence/acceptance-02/P03-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P03.S03",
+      "board": "P03",
+      "owner": "docs/flows/scanner-dialogs/dialog-flow.mjs",
+      "suite": {
+        "board": "P03",
+        "command": [
+          "check_dialogs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:03.838Z",
+        "finished": "2026-09-30T11:45:40.192Z",
+        "log": "handoff/flow/evidence/acceptance-02/P03-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P03.S04",
+      "board": "P03",
+      "owner": "docs/flows/scanner-dialogs/dialog-flow.mjs",
+      "suite": {
+        "board": "P03",
+        "command": [
+          "check_dialogs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:03.838Z",
+        "finished": "2026-09-30T11:45:40.192Z",
+        "log": "handoff/flow/evidence/acceptance-02/P03-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P04.S01",
+      "board": "P04",
+      "owner": "docs/flows/inbound/inbound.mjs",
+      "suite": {
+        "board": "P04",
+        "command": [
+          "check_inbound.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:40.193Z",
+        "finished": "2026-09-30T11:45:58.548Z",
+        "log": "handoff/flow/evidence/acceptance-02/P04-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P04.S02",
+      "board": "P04",
+      "owner": "docs/flows/inbound/inbound.mjs",
+      "suite": {
+        "board": "P04",
+        "command": [
+          "check_inbound.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:40.193Z",
+        "finished": "2026-09-30T11:45:58.548Z",
+        "log": "handoff/flow/evidence/acceptance-02/P04-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P04.S03",
+      "board": "P04",
+      "owner": "docs/flows/inbound/inbound.mjs",
+      "suite": {
+        "board": "P04",
+        "command": [
+          "check_inbound.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:40.193Z",
+        "finished": "2026-09-30T11:45:58.548Z",
+        "log": "handoff/flow/evidence/acceptance-02/P04-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P04.S04",
+      "board": "P04",
+      "owner": "docs/flows/inbound/inbound.mjs",
+      "suite": {
+        "board": "P04",
+        "command": [
+          "check_inbound.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:40.193Z",
+        "finished": "2026-09-30T11:45:58.548Z",
+        "log": "handoff/flow/evidence/acceptance-02/P04-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P05.S01",
+      "board": "P05",
+      "owner": "docs/flows/outbound/outbound.mjs",
+      "suite": {
+        "board": "P05",
+        "command": [
+          "check_outbound_lifecycle.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:58.549Z",
+        "finished": "2026-09-30T11:46:22.602Z",
+        "log": "handoff/flow/evidence/acceptance-02/P05-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P05.S02",
+      "board": "P05",
+      "owner": "docs/flows/outbound/outbound.mjs",
+      "suite": {
+        "board": "P05",
+        "command": [
+          "check_outbound_lifecycle.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:58.549Z",
+        "finished": "2026-09-30T11:46:22.602Z",
+        "log": "handoff/flow/evidence/acceptance-02/P05-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P05.S03",
+      "board": "P05",
+      "owner": "docs/flows/outbound/outbound.mjs",
+      "suite": {
+        "board": "P05",
+        "command": [
+          "check_outbound_lifecycle.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:58.549Z",
+        "finished": "2026-09-30T11:46:22.602Z",
+        "log": "handoff/flow/evidence/acceptance-02/P05-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P05.S04",
+      "board": "P05",
+      "owner": "docs/flows/outbound/outbound.mjs",
+      "suite": {
+        "board": "P05",
+        "command": [
+          "check_outbound_lifecycle.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:45:58.549Z",
+        "finished": "2026-09-30T11:46:22.602Z",
+        "log": "handoff/flow/evidence/acceptance-02/P05-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P06.S01",
+      "board": "P06",
+      "owner": "docs/flows/lookup/lookup.mjs",
+      "suite": {
+        "board": "P06",
+        "command": [
+          "check_lookup_recent_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:22.603Z",
+        "finished": "2026-09-30T11:46:26.913Z",
+        "log": "handoff/flow/evidence/acceptance-02/P06-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P06-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P06.S02",
+      "board": "P06",
+      "owner": "docs/flows/lookup/lookup.mjs",
+      "suite": {
+        "board": "P06",
+        "command": [
+          "check_lookup_recent_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:22.603Z",
+        "finished": "2026-09-30T11:46:26.913Z",
+        "log": "handoff/flow/evidence/acceptance-02/P06-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P06-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P06.S03",
+      "board": "P06",
+      "owner": "docs/flows/lookup/lookup.mjs",
+      "suite": {
+        "board": "P06",
+        "command": [
+          "check_lookup_recent_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:22.603Z",
+        "finished": "2026-09-30T11:46:26.913Z",
+        "log": "handoff/flow/evidence/acceptance-02/P06-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P06.S04",
+      "board": "P06",
+      "owner": "docs/flows/lookup/lookup.mjs",
+      "suite": {
+        "board": "P06",
+        "command": [
+          "check_lookup_recent_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:22.603Z",
+        "finished": "2026-09-30T11:46:26.913Z",
+        "log": "handoff/flow/evidence/acceptance-02/P06-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P07.S01",
+      "board": "P07",
+      "owner": "docs/flows/nfc/nfc.mjs",
+      "suite": {
+        "board": "P07",
+        "command": [
+          "check_nfc_r13.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:26.913Z",
+        "finished": "2026-09-30T11:46:46.915Z",
+        "log": "handoff/flow/evidence/acceptance-02/P07-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P07.S02",
+      "board": "P07",
+      "owner": "docs/flows/nfc/nfc.mjs",
+      "suite": {
+        "board": "P07",
+        "command": [
+          "check_nfc_r13.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:26.913Z",
+        "finished": "2026-09-30T11:46:46.915Z",
+        "log": "handoff/flow/evidence/acceptance-02/P07-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P07.S03",
+      "board": "P07",
+      "owner": "docs/flows/nfc/nfc.mjs",
+      "suite": {
+        "board": "P07",
+        "command": [
+          "check_nfc_r13.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:26.913Z",
+        "finished": "2026-09-30T11:46:46.915Z",
+        "log": "handoff/flow/evidence/acceptance-02/P07-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R01"
+      ],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P07.S04",
+      "board": "P07",
+      "owner": "docs/flows/nfc/nfc.mjs",
+      "suite": {
+        "board": "P07",
+        "command": [
+          "check_nfc_r13.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:26.913Z",
+        "finished": "2026-09-30T11:46:46.915Z",
+        "log": "handoff/flow/evidence/acceptance-02/P07-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R01"
+      ],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P08.S01",
+      "board": "P08",
+      "owner": "docs/flows/history/history.mjs",
+      "suite": {
+        "board": "P08",
+        "command": [
+          "check_history_r23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:46.915Z",
+        "finished": "2026-09-30T11:46:54.216Z",
+        "log": "handoff/flow/evidence/acceptance-02/P08-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P08.S02",
+      "board": "P08",
+      "owner": "docs/flows/history/history.mjs",
+      "suite": {
+        "board": "P08",
+        "command": [
+          "check_history_r23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:46.915Z",
+        "finished": "2026-09-30T11:46:54.216Z",
+        "log": "handoff/flow/evidence/acceptance-02/P08-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P08.S03",
+      "board": "P08",
+      "owner": "docs/flows/history/history.mjs",
+      "suite": {
+        "board": "P08",
+        "command": [
+          "check_history_r23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:46.915Z",
+        "finished": "2026-09-30T11:46:54.216Z",
+        "log": "handoff/flow/evidence/acceptance-02/P08-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P08.S04",
+      "board": "P08",
+      "owner": "docs/flows/history/history.mjs",
+      "suite": {
+        "board": "P08",
+        "command": [
+          "check_history_r23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:46.915Z",
+        "finished": "2026-09-30T11:46:54.216Z",
+        "log": "handoff/flow/evidence/acceptance-02/P08-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P09.S01",
+      "board": "P09",
+      "owner": "docs/flows/warranty/warranty.mjs",
+      "suite": {
+        "board": "P09",
+        "command": [
+          "check_warranty_navigation.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:54.217Z",
+        "finished": "2026-09-30T11:47:10.819Z",
+        "log": "handoff/flow/evidence/acceptance-02/P09-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P09.S02",
+      "board": "P09",
+      "owner": "docs/flows/warranty/warranty.mjs",
+      "suite": {
+        "board": "P09",
+        "command": [
+          "check_warranty_navigation.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:54.217Z",
+        "finished": "2026-09-30T11:47:10.819Z",
+        "log": "handoff/flow/evidence/acceptance-02/P09-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P09.S03",
+      "board": "P09",
+      "owner": "docs/flows/warranty/warranty.mjs",
+      "suite": {
+        "board": "P09",
+        "command": [
+          "check_warranty_navigation.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:54.217Z",
+        "finished": "2026-09-30T11:47:10.819Z",
+        "log": "handoff/flow/evidence/acceptance-02/P09-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P09.S04",
+      "board": "P09",
+      "owner": "docs/flows/warranty/warranty.mjs",
+      "suite": {
+        "board": "P09",
+        "command": [
+          "check_warranty_navigation.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:46:54.217Z",
+        "finished": "2026-09-30T11:47:10.819Z",
+        "log": "handoff/flow/evidence/acceptance-02/P09-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P09-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J01",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P10.S01",
+      "board": "P10",
+      "owner": "docs/flows/profile/profile.mjs",
+      "suite": {
+        "board": "P10",
+        "command": [
+          "check_profile_stability.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:10.820Z",
+        "finished": "2026-09-30T11:47:32.306Z",
+        "log": "handoff/flow/evidence/acceptance-02/P10-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P10.S02",
+      "board": "P10",
+      "owner": "docs/flows/profile/profile.mjs",
+      "suite": {
+        "board": "P10",
+        "command": [
+          "check_profile_stability.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:10.820Z",
+        "finished": "2026-09-30T11:47:32.306Z",
+        "log": "handoff/flow/evidence/acceptance-02/P10-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P10.S03",
+      "board": "P10",
+      "owner": "docs/flows/profile/profile.mjs",
+      "suite": {
+        "board": "P10",
+        "command": [
+          "check_profile_stability.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:10.820Z",
+        "finished": "2026-09-30T11:47:32.306Z",
+        "log": "handoff/flow/evidence/acceptance-02/P10-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P10.S04",
+      "board": "P10",
+      "owner": "docs/flows/profile/profile.mjs",
+      "suite": {
+        "board": "P10",
+        "command": [
+          "check_profile_stability.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:10.820Z",
+        "finished": "2026-09-30T11:47:32.306Z",
+        "log": "handoff/flow/evidence/acceptance-02/P10-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P11.S01",
+      "board": "P11",
+      "owner": "docs/flows/security/security.mjs",
+      "suite": {
+        "board": "P11",
+        "command": [
+          "check_security_live_preview.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:32.307Z",
+        "finished": "2026-09-30T11:47:49.671Z",
+        "log": "handoff/flow/evidence/acceptance-02/P11-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P10-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P11.S02",
+      "board": "P11",
+      "owner": "docs/flows/security/security.mjs",
+      "suite": {
+        "board": "P11",
+        "command": [
+          "check_security_live_preview.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:32.307Z",
+        "finished": "2026-09-30T11:47:49.671Z",
+        "log": "handoff/flow/evidence/acceptance-02/P11-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P11.S03",
+      "board": "P11",
+      "owner": "docs/flows/security/security.mjs",
+      "suite": {
+        "board": "P11",
+        "command": [
+          "check_security_live_preview.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:32.307Z",
+        "finished": "2026-09-30T11:47:49.671Z",
+        "log": "handoff/flow/evidence/acceptance-02/P11-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P11.S04",
+      "board": "P11",
+      "owner": "docs/flows/security/security.mjs",
+      "suite": {
+        "board": "P11",
+        "command": [
+          "check_security_live_preview.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:32.307Z",
+        "finished": "2026-09-30T11:47:49.671Z",
+        "log": "handoff/flow/evidence/acceptance-02/P11-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P11-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P12.S01",
+      "board": "P12",
+      "owner": "docs/flows/documents/documents.mjs",
+      "suite": {
+        "board": "P12",
+        "command": [
+          "check_documents_tabs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:49.672Z",
+        "finished": "2026-09-30T11:47:59.520Z",
+        "log": "handoff/flow/evidence/acceptance-02/P12-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P02-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P12.S02",
+      "board": "P12",
+      "owner": "docs/flows/documents/documents.mjs",
+      "suite": {
+        "board": "P12",
+        "command": [
+          "check_documents_tabs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:49.672Z",
+        "finished": "2026-09-30T11:47:59.520Z",
+        "log": "handoff/flow/evidence/acceptance-02/P12-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P02-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P12.S03",
+      "board": "P12",
+      "owner": "docs/flows/documents/documents.mjs",
+      "suite": {
+        "board": "P12",
+        "command": [
+          "check_documents_tabs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:49.672Z",
+        "finished": "2026-09-30T11:47:59.520Z",
+        "log": "handoff/flow/evidence/acceptance-02/P12-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P12.S04",
+      "board": "P12",
+      "owner": "docs/flows/documents/documents.mjs",
+      "suite": {
+        "board": "P12",
+        "command": [
+          "check_documents_tabs.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:49.672Z",
+        "finished": "2026-09-30T11:47:59.520Z",
+        "log": "handoff/flow/evidence/acceptance-02/P12-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R02"
+      ],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J05",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P13.S01",
+      "board": "P13",
+      "owner": "docs/flows/notifications/notifications.mjs",
+      "suite": {
+        "board": "P13",
+        "command": [
+          "check_notification_detail_nav.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:59.520Z",
+        "finished": "2026-09-30T11:48:14.121Z",
+        "log": "handoff/flow/evidence/acceptance-02/P13-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P13.S02",
+      "board": "P13",
+      "owner": "docs/flows/notifications/notifications.mjs",
+      "suite": {
+        "board": "P13",
+        "command": [
+          "check_notification_detail_nav.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:59.520Z",
+        "finished": "2026-09-30T11:48:14.121Z",
+        "log": "handoff/flow/evidence/acceptance-02/P13-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P13.S03",
+      "board": "P13",
+      "owner": "docs/flows/notifications/notifications.mjs",
+      "suite": {
+        "board": "P13",
+        "command": [
+          "check_notification_detail_nav.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:59.520Z",
+        "finished": "2026-09-30T11:48:14.121Z",
+        "log": "handoff/flow/evidence/acceptance-02/P13-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R03"
+      ],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P13.S04",
+      "board": "P13",
+      "owner": "docs/flows/notifications/notifications.mjs",
+      "suite": {
+        "board": "P13",
+        "command": [
+          "check_notification_detail_nav.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:47:59.520Z",
+        "finished": "2026-09-30T11:48:14.121Z",
+        "log": "handoff/flow/evidence/acceptance-02/P13-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R03"
+      ],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P14.S01",
+      "board": "P14",
+      "owner": "docs/flows/recovery-shift/view.mjs",
+      "suite": {
+        "board": "P14",
+        "command": [
+          "check_p14_audit_r06.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:14.122Z",
+        "finished": "2026-09-30T11:48:33.025Z",
+        "log": "handoff/flow/evidence/acceptance-02/P14-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P14.S02",
+      "board": "P14",
+      "owner": "docs/flows/recovery-shift/view.mjs",
+      "suite": {
+        "board": "P14",
+        "command": [
+          "check_p14_audit_r06.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:14.122Z",
+        "finished": "2026-09-30T11:48:33.025Z",
+        "log": "handoff/flow/evidence/acceptance-02/P14-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P14.S03",
+      "board": "P14",
+      "owner": "docs/flows/recovery-shift/view.mjs",
+      "suite": {
+        "board": "P14",
+        "command": [
+          "check_p14_audit_r06.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:14.122Z",
+        "finished": "2026-09-30T11:48:33.025Z",
+        "log": "handoff/flow/evidence/acceptance-02/P14-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P14.S04",
+      "board": "P14",
+      "owner": "docs/flows/recovery-shift/view.mjs",
+      "suite": {
+        "board": "P14",
+        "command": [
+          "check_p14_audit_r06.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:14.122Z",
+        "finished": "2026-09-30T11:48:33.025Z",
+        "log": "handoff/flow/evidence/acceptance-02/P14-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J08",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J12"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P15.S01",
+      "board": "P15",
+      "owner": "docs/flows/system/view.mjs",
+      "suite": {
+        "board": "P15",
+        "command": [
+          "check_p15_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:33.026Z",
+        "finished": "2026-09-30T11:48:37.891Z",
+        "log": "handoff/flow/evidence/acceptance-02/P15-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P15.S02",
+      "board": "P15",
+      "owner": "docs/flows/system/view.mjs",
+      "suite": {
+        "board": "P15",
+        "command": [
+          "check_p15_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:33.026Z",
+        "finished": "2026-09-30T11:48:37.891Z",
+        "log": "handoff/flow/evidence/acceptance-02/P15-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P14-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P15.S03",
+      "board": "P15",
+      "owner": "docs/flows/system/view.mjs",
+      "suite": {
+        "board": "P15",
+        "command": [
+          "check_p15_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:33.026Z",
+        "finished": "2026-09-30T11:48:37.891Z",
+        "log": "handoff/flow/evidence/acceptance-02/P15-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R04"
+      ],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P15.S04",
+      "board": "P15",
+      "owner": "docs/flows/system/view.mjs",
+      "suite": {
+        "board": "P15",
+        "command": [
+          "check_p15_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:33.026Z",
+        "finished": "2026-09-30T11:48:37.891Z",
+        "log": "handoff/flow/evidence/acceptance-02/P15-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P15-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P16.S01",
+      "board": "P16",
+      "owner": "docs/flows/data-states/view.mjs",
+      "suite": {
+        "board": "P16",
+        "command": [
+          "check_p16_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:37.892Z",
+        "finished": "2026-09-30T11:48:47.933Z",
+        "log": "handoff/flow/evidence/acceptance-02/P16-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R05"
+      ],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P16.S02",
+      "board": "P16",
+      "owner": "docs/flows/data-states/view.mjs",
+      "suite": {
+        "board": "P16",
+        "command": [
+          "check_p16_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:37.892Z",
+        "finished": "2026-09-30T11:48:47.933Z",
+        "log": "handoff/flow/evidence/acceptance-02/P16-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P16.S03",
+      "board": "P16",
+      "owner": "docs/flows/data-states/view.mjs",
+      "suite": {
+        "board": "P16",
+        "command": [
+          "check_p16_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:37.892Z",
+        "finished": "2026-09-30T11:48:47.933Z",
+        "log": "handoff/flow/evidence/acceptance-02/P16-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P16-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P16.S04",
+      "board": "P16",
+      "owner": "docs/flows/data-states/view.mjs",
+      "suite": {
+        "board": "P16",
+        "command": [
+          "check_p16_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:37.892Z",
+        "finished": "2026-09-30T11:48:47.933Z",
+        "log": "handoff/flow/evidence/acceptance-02/P16-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R05"
+      ],
+      "journeys": [],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P17.S01",
+      "board": "P17",
+      "owner": "docs/flows/scan-exceptions/view.mjs",
+      "suite": {
+        "board": "P17",
+        "command": [
+          "check_p17_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:47.934Z",
+        "finished": "2026-09-30T11:49:05.817Z",
+        "log": "handoff/flow/evidence/acceptance-02/P17-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P17.S02",
+      "board": "P17",
+      "owner": "docs/flows/scan-exceptions/view.mjs",
+      "suite": {
+        "board": "P17",
+        "command": [
+          "check_p17_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:47.934Z",
+        "finished": "2026-09-30T11:49:05.817Z",
+        "log": "handoff/flow/evidence/acceptance-02/P17-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P17.S03",
+      "board": "P17",
+      "owner": "docs/flows/scan-exceptions/view.mjs",
+      "suite": {
+        "board": "P17",
+        "command": [
+          "check_p17_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:47.934Z",
+        "finished": "2026-09-30T11:49:05.817Z",
+        "log": "handoff/flow/evidence/acceptance-02/P17-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P07-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P17.S04",
+      "board": "P17",
+      "owner": "docs/flows/scan-exceptions/view.mjs",
+      "suite": {
+        "board": "P17",
+        "command": [
+          "check_p17_navigation_r03.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:48:47.934Z",
+        "finished": "2026-09-30T11:49:05.817Z",
+        "log": "handoff/flow/evidence/acceptance-02/P17-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P17-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P18.S01",
+      "board": "P18",
+      "owner": "docs/flows/attachments/view.mjs",
+      "suite": {
+        "board": "P18",
+        "command": [
+          "check_p18_r03_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:05.818Z",
+        "finished": "2026-09-30T11:49:18.138Z",
+        "log": "handoff/flow/evidence/acceptance-02/P18-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P18-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P18.S02",
+      "board": "P18",
+      "owner": "docs/flows/attachments/view.mjs",
+      "suite": {
+        "board": "P18",
+        "command": [
+          "check_p18_r03_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:05.818Z",
+        "finished": "2026-09-30T11:49:18.138Z",
+        "log": "handoff/flow/evidence/acceptance-02/P18-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P12-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P18-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P18.S03",
+      "board": "P18",
+      "owner": "docs/flows/attachments/view.mjs",
+      "suite": {
+        "board": "P18",
+        "command": [
+          "check_p18_r03_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:05.818Z",
+        "finished": "2026-09-30T11:49:18.138Z",
+        "log": "handoff/flow/evidence/acceptance-02/P18-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R06"
+      ],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P18.S04",
+      "board": "P18",
+      "owner": "docs/flows/attachments/view.mjs",
+      "suite": {
+        "board": "P18",
+        "command": [
+          "check_p18_r03_edges.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:05.818Z",
+        "finished": "2026-09-30T11:49:18.138Z",
+        "log": "handoff/flow/evidence/acceptance-02/P18-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R06"
+      ],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J03"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P19.S01",
+      "board": "P19",
+      "owner": "docs/flows/warranty-components/issue-view.mjs",
+      "suite": {
+        "board": "P19",
+        "command": [
+          "check_p19.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:18.138Z",
+        "finished": "2026-09-30T11:49:38.793Z",
+        "log": "handoff/flow/evidence/acceptance-02/P19-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P19.S02",
+      "board": "P19",
+      "owner": "docs/flows/warranty-components/issue-view.mjs",
+      "suite": {
+        "board": "P19",
+        "command": [
+          "check_p19.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:18.138Z",
+        "finished": "2026-09-30T11:49:38.793Z",
+        "log": "handoff/flow/evidence/acceptance-02/P19-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P19.S03",
+      "board": "P19",
+      "owner": "docs/flows/warranty-components/issue-view.mjs",
+      "suite": {
+        "board": "P19",
+        "command": [
+          "check_p19.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:18.138Z",
+        "finished": "2026-09-30T11:49:38.793Z",
+        "log": "handoff/flow/evidence/acceptance-02/P19-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P19.S04",
+      "board": "P19",
+      "owner": "docs/flows/warranty-components/issue-view.mjs",
+      "suite": {
+        "board": "P19",
+        "command": [
+          "check_p19.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:18.138Z",
+        "finished": "2026-09-30T11:49:38.793Z",
+        "log": "handoff/flow/evidence/acceptance-02/P19-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P20.S01",
+      "board": "P20",
+      "owner": "docs/flows/warranty-components/history-view.mjs",
+      "suite": {
+        "board": "P20",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p20.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:38.793Z",
+        "finished": "2026-09-30T11:49:57.314Z",
+        "log": "handoff/flow/evidence/acceptance-02/P20-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P20.S02",
+      "board": "P20",
+      "owner": "docs/flows/warranty-components/history-view.mjs",
+      "suite": {
+        "board": "P20",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p20.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:38.793Z",
+        "finished": "2026-09-30T11:49:57.314Z",
+        "log": "handoff/flow/evidence/acceptance-02/P20-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P20.S03",
+      "board": "P20",
+      "owner": "docs/flows/warranty-components/history-view.mjs",
+      "suite": {
+        "board": "P20",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p20.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:38.793Z",
+        "finished": "2026-09-30T11:49:57.314Z",
+        "log": "handoff/flow/evidence/acceptance-02/P20-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P20.S04",
+      "board": "P20",
+      "owner": "docs/flows/warranty-components/history-view.mjs",
+      "suite": {
+        "board": "P20",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p20.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:38.793Z",
+        "finished": "2026-09-30T11:49:57.314Z",
+        "log": "handoff/flow/evidence/acceptance-02/P20-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J07",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P21.S01",
+      "board": "P21",
+      "owner": "docs/flows/warranty-components/resume-view.mjs",
+      "suite": {
+        "board": "P21",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p21.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:57.315Z",
+        "finished": "2026-09-30T11:50:23.141Z",
+        "log": "handoff/flow/evidence/acceptance-02/P21-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P21.S02",
+      "board": "P21",
+      "owner": "docs/flows/warranty-components/resume-view.mjs",
+      "suite": {
+        "board": "P21",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p21.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:57.315Z",
+        "finished": "2026-09-30T11:50:23.141Z",
+        "log": "handoff/flow/evidence/acceptance-02/P21-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P21.S03",
+      "board": "P21",
+      "owner": "docs/flows/warranty-components/resume-view.mjs",
+      "suite": {
+        "board": "P21",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p21.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:57.315Z",
+        "finished": "2026-09-30T11:50:23.141Z",
+        "log": "handoff/flow/evidence/acceptance-02/P21-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P21.S04",
+      "board": "P21",
+      "owner": "docs/flows/warranty-components/resume-view.mjs",
+      "suite": {
+        "board": "P21",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p21.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:49:57.315Z",
+        "finished": "2026-09-30T11:50:23.141Z",
+        "log": "handoff/flow/evidence/acceptance-02/P21-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J11"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P22.S01",
+      "board": "P22",
+      "owner": "docs/flows/history/nfc-audit-view.mjs",
+      "suite": {
+        "board": "P22",
+        "command": [
+          "run_p22_r03.cjs",
+          "check_p22.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:23.142Z",
+        "finished": "2026-09-30T11:50:35.417Z",
+        "log": "handoff/flow/evidence/acceptance-02/P22-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P01-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P02-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P03-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P08-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P13-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [
+        "handoff/flow/evidence/remaining-02/results.json#R07"
+      ],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P22.S02",
+      "board": "P22",
+      "owner": "docs/flows/history/nfc-audit-view.mjs",
+      "suite": {
+        "board": "P22",
+        "command": [
+          "run_p22_r03.cjs",
+          "check_p22.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:23.142Z",
+        "finished": "2026-09-30T11:50:35.417Z",
+        "log": "handoff/flow/evidence/acceptance-02/P22-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P22.S03",
+      "board": "P22",
+      "owner": "docs/flows/history/nfc-audit-view.mjs",
+      "suite": {
+        "board": "P22",
+        "command": [
+          "run_p22_r03.cjs",
+          "check_p22.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:23.142Z",
+        "finished": "2026-09-30T11:50:35.417Z",
+        "log": "handoff/flow/evidence/acceptance-02/P22-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P22.S04",
+      "board": "P22",
+      "owner": "docs/flows/history/nfc-audit-view.mjs",
+      "suite": {
+        "board": "P22",
+        "command": [
+          "run_p22_r03.cjs",
+          "check_p22.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:23.142Z",
+        "finished": "2026-09-30T11:50:35.417Z",
+        "log": "handoff/flow/evidence/acceptance-02/P22-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P22-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P23.S01",
+      "board": "P23",
+      "owner": "docs/flows/history/warranty-session-view.mjs",
+      "suite": {
+        "board": "P23",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:35.417Z",
+        "finished": "2026-09-30T11:50:50.101Z",
+        "log": "handoff/flow/evidence/acceptance-02/P23-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P23.S02",
+      "board": "P23",
+      "owner": "docs/flows/history/warranty-session-view.mjs",
+      "suite": {
+        "board": "P23",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:35.417Z",
+        "finished": "2026-09-30T11:50:50.101Z",
+        "log": "handoff/flow/evidence/acceptance-02/P23-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P23.S03",
+      "board": "P23",
+      "owner": "docs/flows/history/warranty-session-view.mjs",
+      "suite": {
+        "board": "P23",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:35.417Z",
+        "finished": "2026-09-30T11:50:50.101Z",
+        "log": "handoff/flow/evidence/acceptance-02/P23-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/remaining-02/observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P23.S04",
+      "board": "P23",
+      "owner": "docs/flows/history/warranty-session-view.mjs",
+      "suite": {
+        "board": "P23",
+        "command": [
+          "run_p24_r03.cjs",
+          "regression",
+          "check_p23.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:35.417Z",
+        "finished": "2026-09-30T11:50:50.101Z",
+        "log": "handoff/flow/evidence/acceptance-02/P23-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J04",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P24.S01",
+      "board": "P24",
+      "owner": "docs/flows/shared/waiting-web.mjs",
+      "suite": {
+        "board": "P24",
+        "command": [
+          "run_p24_r03.cjs",
+          "check_p24.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:50.102Z",
+        "finished": "2026-09-30T11:51:16.612Z",
+        "log": "handoff/flow/evidence/acceptance-02/P24-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P19-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P24.S02",
+      "board": "P24",
+      "owner": "docs/flows/shared/waiting-web.mjs",
+      "suite": {
+        "board": "P24",
+        "command": [
+          "run_p24_r03.cjs",
+          "check_p24.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:50.102Z",
+        "finished": "2026-09-30T11:51:16.612Z",
+        "log": "handoff/flow/evidence/acceptance-02/P24-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P24.S03",
+      "board": "P24",
+      "owner": "docs/flows/shared/waiting-web.mjs",
+      "suite": {
+        "board": "P24",
+        "command": [
+          "run_p24_r03.cjs",
+          "check_p24.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:50.102Z",
+        "finished": "2026-09-30T11:51:16.612Z",
+        "log": "handoff/flow/evidence/acceptance-02/P24-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P04-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P05-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P04-observed-panels.json",
+        "handoff/flow/evidence/marker-recheck/P05-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "panel": "P24.S04",
+      "board": "P24",
+      "owner": "docs/flows/shared/waiting-web.mjs",
+      "suite": {
+        "board": "P24",
+        "command": [
+          "run_p24_r03.cjs",
+          "check_p24.cjs"
+        ],
+        "exit_code": 0,
+        "started": "2026-09-30T11:50:50.102Z",
+        "finished": "2026-09-30T11:51:16.612Z",
+        "log": "handoff/flow/evidence/acceptance-02/P24-regression.log"
+      },
+      "observations": [
+        "handoff/flow/evidence/acceptance-02/P20-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P21-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P23-observed-panels.json",
+        "handoff/flow/evidence/acceptance-02/P24-observed-panels.json",
+        "handoff/flow/evidence/state-alias-01/P24-observed-panels.json"
+      ],
+      "additionalAssertions": [],
+      "journeys": [
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J02",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J06",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J09",
+        "handoff/flow/evidence/journeys-acceptance-04/results.json#J10"
+      ],
+      "status": "PASS_UI_FIXTURE"
+    }
+  ]
+}

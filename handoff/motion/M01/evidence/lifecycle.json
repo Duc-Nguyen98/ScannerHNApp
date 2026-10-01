@@ -1,0 +1,63 @@
+[
+  {
+    "case": "off mid-submit cancels presentation only",
+    "before": 1,
+    "after": 0,
+    "focus": "password",
+    "counts": {
+      "authenticate": 1,
+      "startShift": 0,
+      "logout": 0
+    }
+  },
+  {
+    "case": "Escape logout does not mutate session",
+    "counts": {
+      "authenticate": 1,
+      "startShift": 0,
+      "logout": 0
+    }
+  },
+  {
+    "case": "leave and restore during pending login ignores late auth and animation",
+    "panel": "P01.S01",
+    "counts": {
+      "authenticate": 1,
+      "startShift": 0,
+      "logout": 1
+    },
+    "animations": 0,
+    "passwordEmpty": true
+  },
+  {
+    "case": "recovery Back leaves no replay",
+    "animations": 0
+  },
+  {
+    "case": "logout cancel then confirm",
+    "mode": "auto",
+    "counts": {
+      "authenticate": 1,
+      "startShift": 0,
+      "logout": 1
+    }
+  },
+  {
+    "case": "logout cancel then confirm",
+    "mode": "os-reduced",
+    "counts": {
+      "authenticate": 1,
+      "startShift": 0,
+      "logout": 1
+    }
+  },
+  {
+    "case": "logout cancel then confirm",
+    "mode": "off",
+    "counts": {
+      "authenticate": 1,
+      "startShift": 0,
+      "logout": 1
+    }
+  }
+]

@@ -1,0 +1,36 @@
+PASS auto Home geometry equals pre-motion; effective policy respects OS
+PASS auto Tap feedback uses100ms or static; hero/counters/geometry never animate
+PASS auto Unknown counters update synchronously without animation or fake success
+PASS auto Route fade only at shell with immediate commit and real RAF evidence
+PASS auto Rapid Home/In/Back/Lookup ends at one interactive destination without queued fade
+PASS auto Draft/scroll/focus survive detail Back; no replay on filter/row repaint
+PASS auto Selected nav140ms; View all still P12, History still P22; no protected exit clone
+PASS auto P03 cancellation keeps scroll/focus and cancels route motion
+PASS auto Direct destination consumers keep navigation and native focus
+PASS auto Off / OS change interrupts animation without changing data or route
+PASS auto Small/keyboard-height viewports preserve layout across modes and last record accessibility
+PASS auto Runtime stopped/permission guards act immediately; logout removes animations/content
+PASS os-reduced Home geometry equals pre-motion; effective policy respects OS
+PASS os-reduced Tap feedback uses100ms or static; hero/counters/geometry never animate
+PASS os-reduced Unknown counters update synchronously without animation or fake success
+PASS os-reduced Route fade only at shell with immediate commit and real RAF evidence
+PASS os-reduced Rapid Home/In/Back/Lookup ends at one interactive destination without queued fade
+PASS os-reduced Draft/scroll/focus survive detail Back; no replay on filter/row repaint
+PASS os-reduced Selected nav140ms; View all still P12, History still P22; no protected exit clone
+PASS os-reduced P03 cancellation keeps scroll/focus and cancels route motion
+PASS os-reduced Direct destination consumers keep navigation and native focus
+PASS os-reduced Off / OS change interrupts animation without changing data or route
+PASS os-reduced Small/keyboard-height viewports preserve layout across modes and last record accessibility
+PASS os-reduced Runtime stopped/permission guards act immediately; logout removes animations/content
+PASS off Home geometry equals pre-motion; effective policy respects OS
+PASS off Tap feedback uses100ms or static; hero/counters/geometry never animate
+PASS off Unknown counters update synchronously without animation or fake success
+PASS off Route fade only at shell with immediate commit and real RAF evidence
+PASS off Rapid Home/In/Back/Lookup ends at one interactive destination without queued fade
+PASS off Draft/scroll/focus survive detail Back; no replay on filter/row repaint
+PASS off Selected nav140ms; View all still P12, History still P22; no protected exit clone
+PASS off P03 cancellation keeps scroll/focus and cancels route motion
+PASS off Direct destination consumers keep navigation and native focus
+PASS off Off / OS change interrupts animation without changing data or route
+PASS off Small/keyboard-height viewports preserve layout across modes and last record accessibility
+PASS off Runtime stopped/permission guards act immediately; logout removes animations/content

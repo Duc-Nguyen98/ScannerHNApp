@@ -1,0 +1,2318 @@
+{
+  "fixture_version": "hn-flow-gate-2026-09-30-v1",
+  "appSourceHash": "66dadbe7a095f72bd7724bcf1be5426e53d315732b040e00ef4c683081810b3f",
+  "browser": "151.0.7922.34",
+  "harnessHash": "f07ea6835aec46b7fad0e5587b163629978f62c2cc2c9a6a6979ece17483e666",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "modes": [
+    "normal",
+    "reduced"
+  ],
+  "rows": [
+    {
+      "id": "P01-login",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 121,
+      "screenDomNodes": 56,
+      "visibleScreenNodes": 52,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<body>\n  <main id=\"app\" aria-label=\"Hoa Nam Scanner\"><div class=\"auth-stage\" style=\"width: 494px; height: 950px;\"><section class=\"screen login\" data-panel=\"P01.S01\" style=\"transform: scale(1); --hn-priority-hit-min: 44px;\">\n    <div class=\"",
+      "route": "#login",
+      "documentTitle": "P01 · Hoa Nam Scanner · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 64,
+        "resourceTransferBytes": 3168072,
+        "resourceDecodedBytes": 3148872
+      }
+    },
+    {
+      "id": "P01-confirmation",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 131,
+      "screenDomNodes": 66,
+      "visibleScreenNodes": 62,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<h1 id=\"heading\" tabindex=\"-1\"><span class=\"greeting\">Chào bạn,</span><span class=\"auth-greeting-name\">Minh Anh</span></h1>",
+      "route": "#confirmation",
+      "documentTitle": "P01 · Hoa Nam Scanner · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 65,
+        "resourceTransferBytes": 5076729,
+        "resourceDecodedBytes": 5057229
+      }
+    },
+    {
+      "id": "P02-home",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 691,
+      "screenDomNodes": 208,
+      "visibleScreenNodes": 199,
+      "scrollContainers": [],
+      "animatedStyles": [
+        {
+          "class": "hn-kpi hn-kpi-link",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-kpi hn-kpi-link",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-task",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-task",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-task",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-task",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "hn-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        }
+      ],
+      "operationSnapshots": [],
+      "activeElement": "<h1 tabindex=\"-1\"><span class=\"hn-greeting\">Chào bạn,</span> <button type=\"button\" class=\"hn-name\" aria-haspopup=\"dialog\" aria-controls=\"hn-name-dialog\" aria-label=\"Xem đầy đủ tên: Minh Anh\" title=\"Minh Anh\">Minh Anh</button></h1>",
+      "route": "#home",
+      "documentTitle": "P02 · Hoa Nam Scanner · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 174,
+        "resourceTransferBytes": 6021642,
+        "resourceDecodedBytes": 5969442
+      }
+    },
+    {
+      "id": "P03-picker",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 742,
+      "screenDomNodes": 259,
+      "visibleScreenNodes": 91,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<section class=\"p03-dialog sheet \" role=\"dialog\" aria-modal=\"false\" aria-labelledby=\"p03-title\" aria-describedby=\"p03-description\" tabindex=\"-1\" data-panel=\"P03.S01\" aria-busy=\"false\"><span class=\"p03-grip\" aria-hidden=\"true\"></span><button",
+      "route": "#home",
+      "documentTitle": "P03 · Dialog cố định · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 174,
+        "resourceTransferBytes": 6021642,
+        "resourceDecodedBytes": 5969442
+      }
+    },
+    {
+      "id": "P04-scanner",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 792,
+      "screenDomNodes": 309,
+      "visibleScreenNodes": 102,
+      "scrollContainers": [
+        {
+          "class": "p04-scroll",
+          "id": "",
+          "client": [
+            462,
+            717
+          ],
+          "scroll": [
+            462,
+            736
+          ]
+        }
+      ],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Nhập kho</h1>",
+      "route": "#p02/inbound",
+      "documentTitle": "P04 · Nhập kho · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 174,
+        "resourceTransferBytes": 6021642,
+        "resourceDecodedBytes": 5969442
+      }
+    },
+    {
+      "id": "P08-history-list",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 848,
+      "screenDomNodes": 365,
+      "visibleScreenNodes": 182,
+      "scrollContainers": [
+        {
+          "class": "p08-scroll",
+          "id": "",
+          "client": [
+            494,
+            801
+          ],
+          "scroll": [
+            494,
+            997
+          ]
+        }
+      ],
+      "animatedStyles": [
+        {
+          "class": "p08-row",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p08-row",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p08-row",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p08-row",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p08-row",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p08-row",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        }
+      ],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<body>\n  <main id=\"app\" aria-label=\"Hoa Nam Scanner\" hidden=\"\"><div class=\"auth-stage\" style=\"width: 494px; height: 950px;\"><section class=\"screen confirmation\" data-panel=\"P01.S02\" style=\"transform: scale(1);\">\n    <div class=\"hero-image\" ",
+      "route": "#p02/history-list?panel=1",
+      "documentTitle": "Lịch sử · Hoa Nam Scanner",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 175,
+        "resourceTransferBytes": 6022890,
+        "resourceDecodedBytes": 5970390
+      }
+    },
+    {
+      "id": "P08-history-detail",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 806,
+      "screenDomNodes": 323,
+      "visibleScreenNodes": 139,
+      "scrollContainers": [
+        {
+          "class": "p08-scroll",
+          "id": "",
+          "client": [
+            494,
+            801
+          ],
+          "scroll": [
+            494,
+            974
+          ]
+        }
+      ],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Chi tiết lịch sử</h1>",
+      "route": "#p02/history-list?panel=2&record=LS-0001",
+      "documentTitle": "Chi tiết lịch sử · Hoa Nam Scanner",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 175,
+        "resourceTransferBytes": 6022890,
+        "resourceDecodedBytes": 5970390
+      }
+    },
+    {
+      "id": "P12-documents",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 1110,
+      "screenDomNodes": 627,
+      "visibleScreenNodes": 444,
+      "scrollContainers": [
+        {
+          "class": "p12-scroll",
+          "id": "",
+          "client": [
+            494,
+            524
+          ],
+          "scroll": [
+            494,
+            2549
+          ]
+        }
+      ],
+      "animatedStyles": [
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        },
+        {
+          "class": "p12-record",
+          "animation": "none",
+          "transition": "background-color",
+          "animationDuration": "0s",
+          "transitionDuration": "0.12s"
+        }
+      ],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Chứng từ</h1>",
+      "route": "#p02/documents",
+      "documentTitle": "P12 · Chứng từ · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 175,
+        "resourceTransferBytes": 6022890,
+        "resourceDecodedBytes": 5970390
+      }
+    },
+    {
+      "id": "P20-component-history",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 753,
+      "screenDomNodes": 270,
+      "visibleScreenNodes": 46,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        },
+        {
+          "owner": "data-p20-snapshot",
+          "metrics": null
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Hồ sơ bảo hành</h1>",
+      "route": "#p02/component-history?case=BH-001&sample=history",
+      "documentTitle": "P20 · Lịch sử linh kiện · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 177,
+        "resourceTransferBytes": 6057702,
+        "resourceDecodedBytes": 6004602
+      }
+    },
+    {
+      "id": "P22-nfc-unavailable",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 727,
+      "screenDomNodes": 244,
+      "visibleScreenNodes": 26,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        },
+        {
+          "owner": "data-p20-snapshot",
+          "metrics": null
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Lịch sử NFC</h1>",
+      "route": "#p02/history?scene=nfc",
+      "documentTitle": "P22 · Lịch sử NFC · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 177,
+        "resourceTransferBytes": 6057702,
+        "resourceDecodedBytes": 6004602
+      }
+    },
+    {
+      "id": "P23-sessions-unavailable",
+      "mode": "normal",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 762,
+      "screenDomNodes": 279,
+      "visibleScreenNodes": 59,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        },
+        {
+          "owner": "data-p20-snapshot",
+          "metrics": null
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Lịch sử phiên quét</h1>",
+      "route": "#p02/history?scene=sessions",
+      "documentTitle": "P23 · Bảo hành & phiên quét · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 122.80000001192093,
+          "navigationId": 313,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.30000001192092896,
+          "domainLookupStart": 2.5,
+          "domainLookupEnd": 5.5,
+          "connectStart": 5.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 6.700000002980232,
+          "requestStart": 6.800000011920929,
+          "responseStart": 7.700000002980232,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 7.700000002980232,
+          "responseEnd": 8.400000005960464,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 24.30000001192093,
+          "domContentLoadedEventStart": 116.70000000298023,
+          "domContentLoadedEventEnd": 116.90000000596046,
+          "domComplete": 122.80000001192093,
+          "loadEventStart": 122.80000001192093,
+          "loadEventEnd": 122.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 177,
+        "resourceTransferBytes": 6057702,
+        "resourceDecodedBytes": 6004602
+      }
+    },
+    {
+      "id": "P01-login",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 121,
+      "screenDomNodes": 56,
+      "visibleScreenNodes": 52,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<body>\n  <main id=\"app\" aria-label=\"Hoa Nam Scanner\"><div class=\"auth-stage\" style=\"width: 494px; height: 950px;\"><section class=\"screen login\" data-panel=\"P01.S01\" style=\"transform: scale(1); --hn-priority-hit-min: 44px;\">\n    <div class=\"",
+      "route": "#login",
+      "documentTitle": "P01 · Hoa Nam Scanner · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 68,
+        "resourceTransferBytes": 3174859,
+        "resourceDecodedBytes": 3154459
+      }
+    },
+    {
+      "id": "P01-confirmation",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 131,
+      "screenDomNodes": 66,
+      "visibleScreenNodes": 62,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<h1 id=\"heading\" tabindex=\"-1\"><span class=\"greeting\">Chào bạn,</span><span class=\"auth-greeting-name\">Minh Anh</span></h1>",
+      "route": "#confirmation",
+      "documentTitle": "P01 · Hoa Nam Scanner · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 69,
+        "resourceTransferBytes": 5083516,
+        "resourceDecodedBytes": 5062816
+      }
+    },
+    {
+      "id": "P02-home",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 691,
+      "screenDomNodes": 208,
+      "visibleScreenNodes": 199,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<h1 tabindex=\"-1\"><span class=\"hn-greeting\">Chào bạn,</span> <button type=\"button\" class=\"hn-name\" aria-haspopup=\"dialog\" aria-controls=\"hn-name-dialog\" aria-label=\"Xem đầy đủ tên: Minh Anh\" title=\"Minh Anh\">Minh Anh</button></h1>",
+      "route": "#home",
+      "documentTitle": "P02 · Hoa Nam Scanner · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 178,
+        "resourceTransferBytes": 6028429,
+        "resourceDecodedBytes": 5975029
+      }
+    },
+    {
+      "id": "P03-picker",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 742,
+      "screenDomNodes": 259,
+      "visibleScreenNodes": 91,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [],
+      "activeElement": "<section class=\"p03-dialog sheet \" role=\"dialog\" aria-modal=\"false\" aria-labelledby=\"p03-title\" aria-describedby=\"p03-description\" tabindex=\"-1\" data-panel=\"P03.S01\" aria-busy=\"false\"><span class=\"p03-grip\" aria-hidden=\"true\"></span><button",
+      "route": "#home",
+      "documentTitle": "P03 · Dialog cố định · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 178,
+        "resourceTransferBytes": 6028429,
+        "resourceDecodedBytes": 5975029
+      }
+    },
+    {
+      "id": "P04-scanner",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 792,
+      "screenDomNodes": 309,
+      "visibleScreenNodes": 102,
+      "scrollContainers": [
+        {
+          "class": "p04-scroll",
+          "id": "",
+          "client": [
+            462,
+            717
+          ],
+          "scroll": [
+            462,
+            736
+          ]
+        }
+      ],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Nhập kho</h1>",
+      "route": "#p02/inbound",
+      "documentTitle": "P04 · Nhập kho · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 178,
+        "resourceTransferBytes": 6028429,
+        "resourceDecodedBytes": 5975029
+      }
+    },
+    {
+      "id": "P08-history-list",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 848,
+      "screenDomNodes": 365,
+      "visibleScreenNodes": 182,
+      "scrollContainers": [
+        {
+          "class": "p08-scroll",
+          "id": "",
+          "client": [
+            494,
+            801
+          ],
+          "scroll": [
+            494,
+            997
+          ]
+        }
+      ],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<body>\n  <main id=\"app\" aria-label=\"Hoa Nam Scanner\" hidden=\"\"><div class=\"auth-stage\" style=\"width: 494px; height: 950px;\"><section class=\"screen confirmation\" data-panel=\"P01.S02\" style=\"transform: scale(1);\">\n    <div class=\"hero-image\" ",
+      "route": "#p02/history-list?panel=1",
+      "documentTitle": "Lịch sử · Hoa Nam Scanner",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 179,
+        "resourceTransferBytes": 6029677,
+        "resourceDecodedBytes": 5975977
+      }
+    },
+    {
+      "id": "P08-history-detail",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 806,
+      "screenDomNodes": 323,
+      "visibleScreenNodes": 139,
+      "scrollContainers": [
+        {
+          "class": "p08-scroll",
+          "id": "",
+          "client": [
+            494,
+            801
+          ],
+          "scroll": [
+            494,
+            974
+          ]
+        }
+      ],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Chi tiết lịch sử</h1>",
+      "route": "#p02/history-list?panel=2&record=LS-0001",
+      "documentTitle": "Chi tiết lịch sử · Hoa Nam Scanner",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 179,
+        "resourceTransferBytes": 6029677,
+        "resourceDecodedBytes": 5975977
+      }
+    },
+    {
+      "id": "P12-documents",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 1110,
+      "screenDomNodes": 627,
+      "visibleScreenNodes": 444,
+      "scrollContainers": [
+        {
+          "class": "p12-scroll",
+          "id": "",
+          "client": [
+            494,
+            524
+          ],
+          "scroll": [
+            494,
+            2549
+          ]
+        }
+      ],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Chứng từ</h1>",
+      "route": "#p02/documents",
+      "documentTitle": "P12 · Chứng từ · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 179,
+        "resourceTransferBytes": 6029677,
+        "resourceDecodedBytes": 5975977
+      }
+    },
+    {
+      "id": "P20-component-history",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 753,
+      "screenDomNodes": 270,
+      "visibleScreenNodes": 46,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        },
+        {
+          "owner": "data-p20-snapshot",
+          "metrics": null
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Hồ sơ bảo hành</h1>",
+      "route": "#p02/component-history?case=BH-001&sample=history",
+      "documentTitle": "P20 · Lịch sử linh kiện · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 181,
+        "resourceTransferBytes": 6064489,
+        "resourceDecodedBytes": 6010189
+      }
+    },
+    {
+      "id": "P22-nfc-unavailable",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 727,
+      "screenDomNodes": 244,
+      "visibleScreenNodes": 26,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        },
+        {
+          "owner": "data-p20-snapshot",
+          "metrics": null
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Lịch sử NFC</h1>",
+      "route": "#p02/history?scene=nfc",
+      "documentTitle": "P22 · Lịch sử NFC · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 181,
+        "resourceTransferBytes": 6064489,
+        "resourceDecodedBytes": 6010189
+      }
+    },
+    {
+      "id": "P23-sessions-unavailable",
+      "mode": "reduced",
+      "viewport": [
+        494,
+        950
+      ],
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 494,
+        "height": 950
+      },
+      "documentDomNodes": 762,
+      "screenDomNodes": 279,
+      "visibleScreenNodes": 59,
+      "scrollContainers": [],
+      "animatedStyles": [],
+      "operationSnapshots": [
+        {
+          "owner": "data-p04-snapshot",
+          "metrics": {
+            "recordCalls": 0,
+            "inventoryDelta": 0
+          }
+        },
+        {
+          "owner": "data-p20-snapshot",
+          "metrics": null
+        }
+      ],
+      "activeElement": "<h1 tabindex=\"-1\">Lịch sử phiên quét</h1>",
+      "route": "#p02/history?scene=sessions",
+      "documentTitle": "P23 · Bảo hành & phiên quét · Prototype",
+      "performance": {
+        "navigation": {
+          "name": "http://127.0.0.1:8766/flows/auth-session/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 141.29999999701977,
+          "navigationId": 6548,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.20000000298023224,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 2.2000000029802322,
+          "connectStart": 2.2000000029802322,
+          "secureConnectionStart": 0,
+          "connectEnd": 3.5999999940395355,
+          "requestStart": 3.7000000029802322,
+          "responseStart": 5.299999997019768,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 5.299999997019768,
+          "responseEnd": 6.799999997019768,
+          "transferSize": 4839,
+          "encodedBodySize": 4539,
+          "decodedBodySize": 4539,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 22.900000005960464,
+          "domContentLoadedEventStart": 107,
+          "domContentLoadedEventEnd": 107.09999999403954,
+          "domComplete": 141.29999999701977,
+          "loadEventStart": 141.29999999701977,
+          "loadEventEnd": 141.29999999701977,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resourceCount": 181,
+        "resourceTransferBytes": 6064489,
+        "resourceDecodedBytes": 6010189
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "notes": [
+    "Pre-motion baseline only; no animation imported into app.",
+    "Browser/emulation measurements, not hardware acceptance.",
+    "Existing authored transitions/animations are inventoried, not changed by this setup."
+  ]
+}

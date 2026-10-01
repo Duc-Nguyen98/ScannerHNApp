@@ -1,0 +1,222 @@
+{
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_diff_hash": "f6b645a610483437c59b7542d41cc8f8d7e762acfeb311fa4bd1134c0c0ebbba",
+  "working_diff_hash_definition": "See SOURCE_MANIFEST.json; includes untracked source and assets",
+  "target": "prototype-local-ui-fixture",
+  "fixture_version": "hn-flow-gate-2026-09-30-v1",
+  "board_count": 24,
+  "panel_count": 91,
+  "graph_edge_count": 122,
+  "tested_edges": [
+    {
+      "id": "F01",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F02",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F03",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F04",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F05",
+      "journey": "J01",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F06",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F07",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F08",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F09",
+      "journey": "J02",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F10",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F11",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F12",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F13",
+      "journey": "J03",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F14",
+      "journey": "J04",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F15",
+      "journey": "J04",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F16",
+      "journey": "J04",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F17",
+      "journey": "J05",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F18",
+      "journey": "J05",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F19",
+      "journey": "J06",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F20",
+      "journey": "J06",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F21",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F22",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F23",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F24",
+      "journey": "J07",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F25",
+      "journey": "J08",
+      "status": "BLOCKED_DEPENDENCY_GUARD_VERIFIED"
+    },
+    {
+      "id": "F26",
+      "journey": "J09",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F27",
+      "journey": "J09",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F28",
+      "journey": "J10",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F29",
+      "journey": "J10",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F30",
+      "journey": "J11",
+      "status": "PASS_UI_FIXTURE"
+    },
+    {
+      "id": "F31",
+      "journey": "J11",
+      "status": "PASS_UI_FIXTURE"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "B01",
+      "severity": "ESSENTIAL",
+      "panels": [
+        "P03.S02",
+        "P14.S03"
+      ],
+      "description": "Legacy P03 draft PN-0001 (fixture-p03-scan-*, FIXTURE-HN-0001/0002) has no matching P04/P05 owner. Resume retains data but reaches dependency dialog. J08 verifies the guard, not working resume.",
+      "source_needed": "Source adapter or approved mapping for legacy documentId, scanSessionId, version, operation, accepted rows, recorded/unsaved flags, supplier and scope; or an explicit decision migrating P03.S02 to real P04/P05 owner. Do not synthesize a replacement or map by PN display number.",
+      "evidence": "evidence/journeys-final-02/results.json#J08"
+    },
+    {
+      "id": "B02",
+      "severity": "VERIFICATION",
+      "panels": [
+        "P03.S02",
+        "P03.S04",
+        "P04.S01",
+        "P05.S01",
+        "P08.S01"
+      ],
+      "description": "24 board suites executed; four retained nonzero suite results use historical expectations. Focused journeys cover repairs and major owner chains, not every essential current edge of all 91 panels.",
+      "source_needed": "Refresh obsolete browser suite expectations from current contracts and finish uncovered essential edges. Preserve original failure logs.",
+      "evidence": "evidence/regression-runs.json; evidence/recheck/regression-runs.json"
+    }
+  ],
+  "evidence_paths": [
+    "SOURCE_MANIFEST.json",
+    "FLOW_GRAPH.csv",
+    "FLOW_PANEL_MATRIX.csv",
+    "BOARD_CHECKS.json",
+    "evidence/journeys-final-02/results.json",
+    "evidence/regression-runs.json",
+    "evidence/recheck/regression-runs.json",
+    "evidence/node-summary.json",
+    "evidence/syntax.json",
+    "evidence/diff-check.json"
+  ],
+  "gate_status": "INCOMPLETE",
+  "evidence_scope": "UI_FIXTURE",
+  "tests": {
+    "command": "node --test tests/*.mjs tests/*.cjs",
+    "exit_code": 0,
+    "tests": 668,
+    "pass": 668,
+    "fail": 0
+  },
+  "scope_exclusions": [
+    "animation",
+    "deploy",
+    "production backend/hardware acceptance"
+  ],
+  "inventory_missing_panels": [],
+  "next_step": "Resolve B01 and complete B02 verification; rerun gate before MOTION_P00"
+}

@@ -1,0 +1,511 @@
+{
+  "fixture_version": "hn-flow-gate-2026-09-30-v1",
+  "evidence_scope": "UI_FIXTURE",
+  "target": "prototype",
+  "source_commit": "da9f623a19d0359c3e80c14f8cc612636ec6ab78",
+  "working_diff_hash": "f6b645a610483437c59b7542d41cc8f8d7e762acfeb311fa4bd1134c0c0ebbba",
+  "owners": {
+    "auth": "hn-scanner-auth-preview-v1",
+    "dialogs": "hn-scanner-dialog-preview-v1",
+    "inbound": "hn-inbound-preview-v1",
+    "outbound": "hn-outbound-preview-v1",
+    "history": "hn-history-fixture-v1; verified-stock-receipt projection",
+    "warranty": "shared/warranty-cases.mjs + P19 confirmed receipts",
+    "nfc_audit": "P22 event-only; default unavailable; B22 opt-in",
+    "sessions": "P23 distinct sessions; default unavailable; B23 opt-in"
+  },
+  "scenarios": [
+    {
+      "name": "B08",
+      "session": "PQ-0001",
+      "scan_total": 19,
+      "quantity": 17,
+      "not_equivalent_to": "B23/PQ-0001"
+    },
+    {
+      "name": "B23",
+      "session": "PQ-0001",
+      "operation": "lookup",
+      "scan_total": 5,
+      "document": null
+    },
+    {
+      "name": "verified-stock-receipt",
+      "rule": "recordedDocuments checks actor/warehouse/recorded/outcome; projection only verified receipt event; dedup exact ID; replace exact P12 legacy mapping only; no synthetic scan/NFC event"
+    },
+    {
+      "name": "P03-legacy",
+      "document": "PN-0001",
+      "owner_mapping": "MISSING",
+      "codes": [
+        "FIXTURE-HN-0001",
+        "FIXTURE-HN-0002"
+      ]
+    },
+    {
+      "name": "B19/B20/B21/B24",
+      "rule": "Existing explicit samples retained; seed not regenerated; runtime owner UUIDs retained within each journey"
+    }
+  ],
+  "persistence": "In-memory page. Refresh requires login and loses prototype drafts. P14 local retention is not durable WMS storage.",
+  "source_files": [
+    {
+      "path": "docs/flows/attachments/fixture-adapter.mjs",
+      "sha256": "a2d51ae47ff90bf852b31181a48a8663f3d9b23e325d28dcbb17c10866249140",
+      "bytes": 1391
+    },
+    {
+      "path": "docs/flows/auth-session/fixture-adapter.mjs",
+      "sha256": "220bb69e3159075de2e18d450737ccd19af93d818f5471f0786db231e5cb0a15",
+      "bytes": 3060
+    },
+    {
+      "path": "docs/flows/documents/document-model.mjs",
+      "sha256": "a02e8e6818f97c953c2f5ef34b66eb578f32b92d8dc0b4d086a4c3869e16977d",
+      "bytes": 10094
+    },
+    {
+      "path": "docs/flows/history/nfc-audit-fixture.mjs",
+      "sha256": "a7a806ae2198b1b20d092c3456bab431980e1de99b82b1f77d925a04b4037ea8",
+      "bytes": 1573
+    },
+    {
+      "path": "docs/flows/history/warranty-session-fixture.mjs",
+      "sha256": "6e62f6db55560b5141ee64f7a8fed8daa09566b7c269285912d045a5eeda3da9",
+      "bytes": 1499
+    },
+    {
+      "path": "docs/flows/home/fixture-adapter.mjs",
+      "sha256": "e63d40a1bbee70bd008bd297afa571fa69dcf414f2fb814382895e1e36d51b03",
+      "bytes": 1106
+    },
+    {
+      "path": "docs/flows/inbound/catalogue.mjs",
+      "sha256": "d6c9329d9730422ae78b070bba38b0f804af414fe808a8bb321226fd905da59e",
+      "bytes": 1168
+    },
+    {
+      "path": "docs/flows/inbound/fixture-adapter.mjs",
+      "sha256": "44931fa130a82d6b6e6e649dcda2c0d901a93479c1f7ac11b2c102b8bd401187",
+      "bytes": 3241
+    },
+    {
+      "path": "docs/flows/lookup/fixture-adapter.mjs",
+      "sha256": "d9fb960b0f01a9db06bbbe1a802867cb7d0bbe600ccf914e582be27941459515",
+      "bytes": 5943
+    },
+    {
+      "path": "docs/flows/nfc/fixture-adapter.mjs",
+      "sha256": "5651436f38ad385667a020cc7c968f045ef527b40a464da1b2231e5941ba3557",
+      "bytes": 5739
+    },
+    {
+      "path": "docs/flows/outbound/fixture-adapter.mjs",
+      "sha256": "03582cc8d25a509a178555a9b22b6afda536ae840a828b9cb1d3a7293b5ffa3d",
+      "bytes": 5383
+    },
+    {
+      "path": "docs/flows/scanner-dialogs/fixture-adapter.mjs",
+      "sha256": "f773b9966bb9719e164d0645bd20b7ddc4ef1e02fde448ca3f455005920ceeb3",
+      "bytes": 2099
+    },
+    {
+      "path": "docs/flows/shared/history-fixtures.js",
+      "sha256": "cdc2ec4b43ff6e36dd6b7cf4320994ac26c08826e2cf4c50d0f2bb842ca3d3b5",
+      "bytes": 5011
+    },
+    {
+      "path": "docs/flows/shared/warranty-cases.mjs",
+      "sha256": "6c6c0fe0090026c427fc7ba70604c8646cd22411628238324fa4beb65d0fcf26",
+      "bytes": 7640
+    },
+    {
+      "path": "docs/flows/warranty-components/history-fixture.mjs",
+      "sha256": "8065f6d7aed3351a6af4f1b397aba109f5ffea1cbca1cf7e64cbd78819f5d9fc",
+      "bytes": 2138
+    },
+    {
+      "path": "docs/flows/warranty-components/issue-fixture.mjs",
+      "sha256": "0cb18e8dc72e087f8c4354ed6c79874a17f4fbfe4f5881dbe28e6f146166f7da",
+      "bytes": 3104
+    },
+    {
+      "path": "tests/fixtures/outbound-geography.mjs",
+      "sha256": "084d60b092440b423e81f366d8a47d905a30d89a2a2e04c38b0b5914cce5463b",
+      "bytes": 666
+    }
+  ],
+  "dispositions": [
+    {
+      "panel": "P01.S01",
+      "disposition": "ORIGINAL"
+    },
+    {
+      "panel": "P01.S02",
+      "disposition": "ORIGINAL"
+    },
+    {
+      "panel": "P02.S01",
+      "disposition": "ORIGINAL"
+    },
+    {
+      "panel": "P03.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P03.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P03.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P03.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P04.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P04.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P04.S03",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P04.S04",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P05.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P05.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P05.S03",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P05.S04",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P06.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P06.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P06.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P06.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P07.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P07.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P07.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P07.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P08.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P08.S02",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P08.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P08.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P09.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P09.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P09.S03",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P09.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P10.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P10.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P10.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P10.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P11.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P11.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P11.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P11.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P12.S01",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P12.S02",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P12.S03",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P12.S04",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P13.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P13.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P13.S03",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P13.S04",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P14.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P14.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P14.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P14.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P15.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P15.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P15.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P15.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P16.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P16.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P16.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P16.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P17.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P17.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P17.S03",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P17.S04",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P18.S01",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P18.S02",
+      "disposition": "LEGACY_ADAPTED"
+    },
+    {
+      "panel": "P18.S03",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P18.S04",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P19.S01",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P19.S02",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P19.S03",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P19.S04",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P20.S01",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P20.S02",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P20.S03",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P20.S04",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P21.S01",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P21.S02",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P21.S03",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P21.S04",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P22.S01",
+      "disposition": "MIGRATED"
+    },
+    {
+      "panel": "P22.S02",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P22.S03",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P22.S04",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P23.S01",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P23.S02",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P23.S03",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P23.S04",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P24.S01",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P24.S02",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P24.S03",
+      "disposition": "CURRENT"
+    },
+    {
+      "panel": "P24.S04",
+      "disposition": "CURRENT"
+    }
+  ],
+  "limitations": [
+    "No backend/WMS/hardware/delivery acceptance",
+    "No production writes",
+    "Home View all -> P12; History footer -> P22; no removed draft shortcut",
+    "P18 handoff backend unavailable; no fake case closure",
+    "P06 fixture-event-doc-* unmapped; feedback guarded, no display-ID link"
+  ]
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M00 Internal Harness</title>
+<link rel="stylesheet" href="motion-tokens.css">
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px Arial,sans-serif;color:#18332a;background:#f4f7f6}main{max-width:760px;margin:auto;padding:24px}h1{font-size:24px}button,select{font:inherit;min-height:44px}button{background:#fff;border:1px solid #71877d;border-radius:4px;padding:8px 12px;color:inherit}button:focus-visible{outline:3px solid #087f70;outline-offset:3px}.controls{display:flex;gap:12px;flex-wrap:wrap}.scroll{height:240px;overflow:auto;border-block:1px solid #71877d;margin-top:20px}.row{padding:16px;border-bottom:1px solid #d5ded8}.notice{padding:12px;background:#d6eee6}dialog{width:min(440px,calc(100% - 32px));max-height:80vh;border:1px solid #71877d;border-radius:4px}dialog::backdrop{background:#0008}.body{max-height:35vh;overflow:auto}footer{padding-top:16px}#route{min-height:80px}#owner{padding-bottom:env(safe-area-inset-bottom)}</style>
+<main id="owner">
+<h1>M00 Internal Harness</h1>
+<div class="controls"><label>Motion <select id="mode"><option>auto</option><option>reduced</option><option>off</option></select></label><button id="press">Record fixture action</button><button id="navigate">Next view</button><button id="open">Open dialog</button><button id="security">Expire fixture session</button></div>
+<p id="notice" class="notice" role="status">Ready</p><section id="route"><h2 id="route-title">View 1</h2><p id="protected">Protected fixture content</p></section>
+<div id="list" class="scroll" tabindex="0" aria-label="Fixture rows"></div>
+<dialog id="modal" aria-labelledby="modal-title"><h2 id="modal-title">Fixture dialog</h2><div class="body"><label>Fixture note <input id="note"></label><p>Fixture content</p></div><footer><button id="close">Close</button></footer></dialog>
+</main>
+<script type="module" src="harness.mjs"></script>
+</html>

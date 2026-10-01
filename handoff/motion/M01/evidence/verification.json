@@ -1,0 +1,85 @@
+{
+  "status": "PASS_SCOPED_UI_FIXTURE",
+  "panels": [
+    "P01.S01",
+    "P01.S02"
+  ],
+  "modes": 3,
+  "stateCases": 21,
+  "layoutCases": 18,
+  "lifecycleCases": 7,
+  "frameSamples": 15,
+  "baselineAppSourceHash": "e968ad9ebd0875cfcf784d13754942b77d1cb8e515df7373c18ea3c1e5ff9767",
+  "appSourceHash": "e3860165b3042926fc9268695f21a7fde97365b4103cf73e346f1903dabc7f31",
+  "changedExistingAppFiles": [
+    "docs/flows/auth-session/app.mjs",
+    "docs/flows/auth-session/bootstrap.mjs",
+    "docs/flows/auth-session/index.html"
+  ],
+  "newAppMotionBytes": 6391,
+  "motionFiles": [
+    {
+      "path": "docs/flows/auth-session/motion.mjs",
+      "bytes": 1245,
+      "sha256": "8c2f23cb3bd616574f363beeb9283d3e980adb0567f62335d61af9e09e2ac0eb"
+    },
+    {
+      "path": "docs/flows/auth-session/motion.css",
+      "bytes": 720,
+      "sha256": "8113db0559513cec77d11c0e6b6ed731eea1296b44ba29b484cd4e1d20c921d3"
+    },
+    {
+      "path": "docs/flows/shared/motion/motion-primitives.mjs",
+      "bytes": 3681,
+      "sha256": "e41efb62a5eeae160c930361bd07decd92f4bc9c30a8d0b227d76ec362a8b2f6"
+    },
+    {
+      "path": "docs/flows/shared/motion/motion-tokens.css",
+      "bytes": 745,
+      "sha256": "821c354df5e1288fbdcc1d89e3f4f3fe6e1364b408cc973aa406c3326d1dda8a"
+    }
+  ],
+  "staticGeometryAcrossModes": "IDENTICAL",
+  "referenceScreenSizeAndNodeCounts": "MATCH_M00",
+  "referenceOriginDeltas": [
+    {
+      "panel": "P01.S01",
+      "mode": "auto",
+      "x": 0.20000000298023224,
+      "y": 0
+    },
+    {
+      "panel": "P01.S02",
+      "mode": "auto",
+      "x": 0.20000000298023224,
+      "y": 0
+    },
+    {
+      "panel": "P01.S01",
+      "mode": "os-reduced",
+      "x": 0.20000000298023224,
+      "y": 0
+    },
+    {
+      "panel": "P01.S02",
+      "mode": "os-reduced",
+      "x": 0.20000000298023224,
+      "y": 0
+    },
+    {
+      "panel": "P01.S01",
+      "mode": "off",
+      "x": 0.20000000298023224,
+      "y": 0
+    },
+    {
+      "panel": "P01.S02",
+      "mode": "off",
+      "x": 0.20000000298023224,
+      "y": 0
+    }
+  ],
+  "pixelAcceptance": "NOT_CLAIMED_DIFFERENT_CAPTURE_PIPELINE",
+  "fps": "NOT_MEASURED",
+  "hardware": "NOT_RUN"
+}

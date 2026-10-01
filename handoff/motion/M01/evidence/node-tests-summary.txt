@@ -1,0 +1,7 @@
+Command: node --test tests/motion-p01.test.mjs tests/auth-session*.mjs tests/home*.mjs tests/vietnam-clock.test.mjs
+Result: 79 tests, 79 pass, 0 fail, 0 skipped, exit 0.
+Motion tests added: 9; covers all six reused primitives, three modes, cancellation and ten mount/dispose cycles.
+Evidence verifier: node scripts/verify_motion_p01_evidence.cjs => PASS_SCOPED_UI_FIXTURE.
+Syntax checks app.mjs, auth-session/motion.mjs, shared/motion/motion-primitives.mjs: exit 0.
+git diff --check: exit 0.
+No full-app motion acceptance or FPS/hardware claim.

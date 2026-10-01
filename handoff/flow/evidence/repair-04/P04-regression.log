@@ -1,0 +1,16 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.p04-unknown') to be visible[22m
+
+    at eval (<anonymous>:33:244)
+    at async check (<anonymous>:13:32)
+    at async eval (<anonymous>:33:2) {
+  log: [ "  - waiting for locator('.p04-unknown') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

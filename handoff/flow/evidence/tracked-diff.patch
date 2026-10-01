@@ -1,0 +1,392 @@
+diff --git a/docs/flows/warranty-components/flow.js b/docs/flows/warranty-components/flow.js
+index 24a9b4e..2810b38 100644
+--- a/docs/flows/warranty-components/flow.js
++++ b/docs/flows/warranty-components/flow.js
+@@ -122,6 +122,7 @@ let selected = Object.hasOwn(SCENES, params.get("scene"))
+   ? params.get("scene")
+   : "scan";
+ const sceneStates = new WeakMap();
++const historyRequests = new WeakMap();
+ const fullDraft = () => [
+   {
+     code: "LK0001-HN001",
+@@ -348,6 +349,82 @@ const HISTORY_FIXTURES = [
+   },
+   { id: "XLK-0000", at: "08/09/2026 · 09:20", lines: [{ ...fullDraft()[0] }] },
+ ];
++// Preview-only reader. Tests may inject a controlled reader; no WMS request.
++function readHistoryFixturePage() {
++  return new Promise((resolve) => {
++    setTimeout(() => resolve(structuredClone(HISTORY_FIXTURES)), 400);
++  });
++}
++function isHistoryFixtureDocument(doc) {
++  return (
++    doc &&
++    typeof doc.id === "string" && doc.id.length > 0 &&
++    typeof doc.at === "string" &&
++    Array.isArray(doc.lines) && doc.lines.length > 0 &&
++    doc.lines.every((line) =>
++      line && [line.code, line.sku, line.name].every((value) => typeof value === "string") &&
++      ["ITEM", "BOX"].includes(line.kind) &&
++      Number.isInteger(line.quantity) && line.quantity > 0
++    )
++  );
++}
++async function loadMoreHistory(node, state, button, readPage = readHistoryFixturePage) {
++  if (
++    state.loading || !state.hasMore ||
++    !["history", "history-error", "closed"].includes(state.scene)
++  ) return;
++
++  const request = { state };
++  historyRequests.set(node, request);
++  state.loading = true;
++  const hadFocus = document.activeElement === button;
++  button.disabled = true;
++  button.textContent = "Đang tải thêm…";
++  node.querySelector(".history-block").setAttribute("aria-busy", "true");
++
++  const isCurrent = () =>
++    historyRequests.get(node) === request &&
++    sceneStates.get(node) === state && node.isConnected;
++  const finish = (failed) => {
++    const top = node.querySelector(".body").scrollTop;
++    const restoreFocus = hadFocus &&
++      (document.activeElement === button || document.activeElement === document.body);
++    historyRequests.delete(node);
++    state.loading = false;
++    state.historyError = failed;
++    go(node, state.scene === "closed" ? "closed" : failed ? "history-error" : "history");
++    node.querySelector(".body").scrollTop = top;
++    if (restoreFocus) {
++      const target = node.querySelector('[data-action="load-more"]') ||
++        node.querySelector(".end-list");
++      if (target) {
++        if (target.classList.contains("end-list")) target.tabIndex = -1;
++        target.focus({ preventScroll: true });
++      }
++    }
++  };
++
++  try {
++    const page = await readPage();
++    if (!isCurrent()) return;
++    // Validate the complete fixture page before changing the visible list.
++    if (!Array.isArray(page) || !page.every(isHistoryFixtureDocument)) {
++      throw new TypeError("Invalid design history fixture page");
++    }
++    const merged = new Map(state.historyDocs.map((doc) => [doc.id, doc]));
++    for (const doc of page) merged.set(doc.id, structuredClone(doc));
++    state.historyDocs = [...merged.values()];
++    state.hasMore = false; // This design fixture contains the final page only.
++    finish(false);
++  } catch {
++    if (isCurrent()) finish(true);
++  } finally {
++    if (historyRequests.get(node) === request) {
++      historyRequests.delete(node);
++      state.loading = false;
++    }
++  }
++}
+ function issuedDoc(doc) {
+   return `<article class="issue-document" data-document-id="${esc(
+     doc.id
+@@ -377,7 +454,7 @@ function caseSummary(closed = false) {
+ }
+ function historyView(state) {
+   const empty = state.scene === "empty",
+-    error = state.scene === "history-error",
++    error = state.scene === "history-error" || state.historyError === true,
+     loading = state.scene === "history-loading",
+     closed = state.scene === "closed";
+   const docs = empty ? [] : state.historyDocs;
+@@ -522,64 +599,9 @@ function postCheckView(state) {
+       secondary("Đối chiếu trên Web", "web-guide")
+   )}`;
+ }
+-const NFC_EVENTS = [
+-  {
+-    id: "NFC-E003",
+-    type: "Gán thẻ",
+-    time: "14:35",
+-    date: "Hôm nay · 10/09",
+-    uid: "NFC-8A2F",
+-    serial: "HN12345",
+-    actor: "Minh Anh",
+-    status: "Thành công",
+-  },
+-  {
+-    id: "NFC-E002",
+-    type: "Thay thẻ",
+-    time: "11:20",
+-    date: "Hôm nay · 10/09",
+-    uid: "NFC-7B10",
+-    serial: "HN12346",
+-    actor: "Minh Anh",
+-    status: "Thành công",
+-  },
+-  {
+-    id: "NFC-E001",
+-    type: "Thu hồi thẻ",
+-    time: "09:15",
+-    date: "Hôm nay · 10/09",
+-    uid: "NFC-5C22",
+-    serial: "HN12347",
+-    actor: "Minh Anh",
+-    status: "Đã thu hồi",
+-  },
+-];
+-const SESSION_EVENTS = [
+-  {
+-    id: "PQ-0003",
+-    type: "Xuất linh kiện",
+-    time: "14:30 – 14:45",
+-    count: "2 mã · 3 linh kiện",
+-    status: "Đã xuất",
+-    doc: "XLK-0002",
+-  },
+-  {
+-    id: "PQ-0002",
+-    type: "Nhập kho",
+-    time: "11:10 – 11:25",
+-    count: "12 mã được ghi nhận",
+-    status: "Chờ xử lý trên Web",
+-    doc: "PN-0005",
+-  },
+-  {
+-    id: "PQ-0001",
+-    type: "Tra cứu",
+-    time: "09:00 – 09:08",
+-    count: "5 lượt tra cứu",
+-    status: "Đã kết thúc",
+-    doc: "Không tạo phiếu",
+-  },
+-];
++// One design fixture source shared with P08; never infer NFC events from tags.
++const NFC_EVENTS = globalThis.HN_HISTORY_FIXTURES.nfcEvents;
++const SESSION_EVENTS = globalThis.HN_HISTORY_FIXTURES.sessions;
+ function filterButtons(values, active, kind) {
+   return `<div class="filter-row" role="group" aria-label="Lọc ${kind}">${values
+     .map(
+@@ -594,6 +616,8 @@ function filterButtons(values, active, kind) {
+ }
+ function historyHub() {
+   const links = [
++    ["history", "Lịch sử chung", "Tìm phiếu, serial và người thao tác", "history-general"],
++    ["clock", "Hoạt động theo ngày", "Tổng hợp và tra cứu hoạt động", "history-daily"],
+     [
+       "document",
+       "Nhập / xuất",
+@@ -610,7 +634,7 @@ function historyHub() {
+   )}<div class="body"><div class="history-intro"><p class="eyebrow">KHO HOA NAM</p><h2>Xem lại công việc<br>đã thực hiện</h2><p class="small-copy muted">Tra cứu theo nghiệp vụ để mở đúng phiếu.</p></div><div class="history-links">${links
+     .map(
+       ([i, title, sub, action]) =>
+-        `<button class="card history-link" data-action="${action}"><span class="icon-tile">${icon(
++        `<button class="card history-link" data-action="${action}"><span class="icon-tile hn-operation-icon" data-hn-operation="${['nfc','warranty','sessions'].includes(action)?action:'documents'}">${icon(
+           i
+         )}</span><span class="grow"><strong>${title}</strong><small>${sub}</small></span>${icon(
+           "arrow",
+@@ -668,7 +692,8 @@ function nfcView(state) {
+   )}`;
+ }
+ function nfcDetail(state) {
+-  const e = NFC_EVENTS.find((r) => r.id === state.eventId) || NFC_EVENTS[0];
++  const e = NFC_EVENTS.find((r) => r.id === state.eventId);
++  if (!e) return `${header("Chi tiết thao tác NFC", "nfc")}<div class="body">${hint("Không tìm thấy sự kiện này trong dữ liệu hiện có.")}</div>`;
+   return `${header(
+     "Chi tiết thao tác NFC",
+     "nfc"
+@@ -684,7 +709,7 @@ function nfcDetail(state) {
+   )}${kv("Sản phẩm", "Máy in nhiệt XP-420B")}${kv(
+     "Người thực hiện",
+     e.actor
+-  )}${kv("Thời điểm", `10/09/2026 · ${e.time}`)}${kv(
++  )}${kv("Thời điểm", `${e.day.split('-').reverse().join('/')} · ${e.time}`)}${kv(
+     "Kho",
+     "Kho Hoa Nam"
+   )}</section><div class="card"><h3 class="section-title">Nội dung thao tác</h3><p class="small-copy muted gap-top">${
+@@ -817,25 +842,25 @@ function sessionsView(state) {
+     "Lịch sử phiên quét",
+     "history-hub"
+   )}<div class="body">${filterButtons(
+-    ["Tất cả", "Nhập kho", "Xuất linh kiện", "Tra cứu"],
++    ["Tất cả", "Nhập kho", "Xuất linh kiện", "Phiên quét mã"],
+     state.filter,
+     "phiên quét"
+-  )}<div class="row between"><h2 class="section-title">Hôm nay · 10/09</h2><span class="tiny muted">${
++  )}<div class="row between"><h2 class="section-title">Danh sách phiên quét</h2><span class="tiny muted">${
+     list.length
+   } phiên</span></div><div class="event-list">${list
+     .map(
+       (e) =>
+-        `<button class="card event-card" data-action="session-detail" data-session="${
++        `<button class="card event-card" aria-current="${e.id===params.get('session')}" data-action="session-detail" data-session="${
+           e.id
+         }"><div class="row between"><span class="row">${icon("scan")}<strong>${
+           e.type
+         }</strong></span><span class="tiny muted">${e.id}</span></div><p>${
+-          e.time
++          e.day.split('-').reverse().join('/') + ' · ' + e.time
+         }</p><div class="small-copy muted">${
+           e.count
+         }</div><div class="row between gap-top">${badge(
+           e.status,
+-          e.type === "Nhập kho" ? "amber" : "green"
++          (params.get('embed')==='history' ? e.status === 'Chờ xử lý trên Web' : e.type === "Nhập kho") ? "amber" : "green"
+         )}${icon("arrow", "small")}</div></button>`
+     )
+     .join(
+@@ -846,7 +871,9 @@ function sessionsView(state) {
+ }
+ function sessionDetail(state) {
+   const e =
+-    SESSION_EVENTS.find((r) => r.id === state.sessionId) || SESSION_EVENTS[0];
++    SESSION_EVENTS.find((r) => r.id === state.sessionId);
++  if (!e) return `${header("Chi tiết phiên quét", "sessions")}<div class="body">${hint("Không tìm thấy phiên này trong dữ liệu hiện có.")}</div>`;
++  if (e.id === 'PQ-0001') return `${header('Chi tiết phiên quét','sessions')}<div class="body"><section class="card"><div class="row between"><strong class="case-id">${e.id}</strong>${badge(e.sessionStatus,'green')}</div><p>${e.day.split('-').reverse().join('/')} · ${e.time}</p></section><section class="card summary-card">${kv('Người quét',e.actor)}${kv('Kho',e.warehouse)}${kv('Phiếu liên quan',e.doc)}${kv('Kết quả chứng từ',e.status)}</section><div class="stat-strip"><div><strong>${e.total}</strong><span>Tổng lượt quét</span></div><div><strong>${e.accepted}</strong><span>Hợp lệ</span></div><div><strong>${e.duplicate}</strong><span>Mã trùng</span></div></div><section class="card">${e.events.map(r=>`<div class="session-code"><strong>${r.code}</strong><span>${r.time} · ${r.result==='duplicate'?'Mã trùng':'Hợp lệ'}</span></div>`).join('')}</section>${hint(`Quantity fixture: ${e.quantity}; lượt trùng và NFC không cộng quantity. Phiếu đã gửi, chưa ghi sổ.`)}</div>${footer(secondary('Về lịch sử phiên quét','sessions'))}`;
+   const component = e.type === "Xuất linh kiện";
+   return `${header(
+     "Chi tiết phiên quét",
+@@ -861,7 +888,7 @@ function sessionDetail(state) {
+   } · 10/09/2026</p></section><section class="card summary-card">${kv(
+     "Thời gian",
+     e.time
+-  )}${kv("Người quét", "Minh Anh")}${kv("Kho", "Kho Hoa Nam")}${kv(
++  )}${kv("Người quét", e.actor ?? "Chưa có dữ liệu")}${kv("Kho", e.warehouse ?? "Chưa có dữ liệu")}${kv(
+     "Phiếu liên quan",
+     e.doc
+   )}</section><div class="stat-strip"><div><strong>${
+@@ -900,10 +927,12 @@ function scanError(state) {
+   )}`;
+ }
+ function documentsView() {
+-  return `${header('Lịch sử nhập / xuất','history-hub')}<div class="body"><p class="small-copy muted">Xem phiếu đã gửi để theo dõi quá trình xử lý trên Web.</p>${[['PN-0005','Phiếu nhập','12 mã','11:25','inbound'],['PX-0004','Phiếu xuất','10 mã','10:40','outbound']].map(([id,title,count,time,kind])=>`<button class="card event-card" data-action="pending-document" data-kind="${kind}"><div class="row between"><strong>${id}</strong>${badge('Chờ xử lý trên Web','amber')}</div><p>${title} · ${count}</p><div class="row between tiny muted"><span>Kho Hoa Nam</span><span>10/09 · ${time}</span></div></button>`).join('')}${hint('Phiếu đã gửi chưa làm thay đổi tồn kho.')}</div>${footer(secondary('Về lịch sử thao tác','history-hub'))}`;
++  const rows=globalThis.HN_HISTORY_FIXTURES.records.filter(r=>['inbound','outbound'].includes(r.type)).slice(0,6);
++  return `${header('Lịch sử nhập / xuất','history-hub')}<div class="body"><p class="small-copy muted">Cùng nguồn fixture P08. Phiếu đã gửi chưa ghi sổ.</p>${rows.map(r=>`<button class="card event-card" data-action="pending-document" data-kind="${r.type}" data-document="${r.documentId}"><div class="row between"><strong>${r.documentId}</strong>${badge('Chờ xử lý trên Web','amber')}</div><p>${r.label}</p><div class="row between tiny muted"><span>${r.warehouse}</span><span>${r.day.split('-').reverse().join('/')} · ${r.time}</span></div></button>`).join('')}${hint('Phiếu đã gửi chưa làm thay đổi tồn kho.')}</div>${footer(secondary('Về lịch sử thao tác','history-hub'))}`;
+ }
+ function waitingWeb(state) {
+   const outbound=state.pendingKind==='outbound';
++  const linked=globalThis.HN_HISTORY_FIXTURES.records.find(r=>r.documentId===state.pendingDocumentId);
+   return `${header(
+     "Đã gửi phiếu",
+     "documents"
+@@ -915,10 +944,10 @@ function waitingWeb(state) {
+     "amber"
+   )}<p>Phiếu đã gửi, chưa ghi sổ.<br>Tiếp tục kiểm tra hoặc bổ sung thông tin trên Web WMS.</p></div><section class="card summary-card">${kv(
+     "Mã phiếu",
+-    outbound?'PX-0004':'PN-0005'
+-  )}${kv("Kho", "Kho Hoa Nam")}${kv("Đã ghi nhận", outbound?'10 mã':'12 mã')}${kv(
++    state.pendingDocumentId || (outbound?'PX-0004':'PN-0005')
++  )}${kv("Kho", "Kho Hoa Nam")}${kv("Đã ghi nhận", linked?'Chưa có nguồn số lượng':outbound?'10 mã':'12 mã')}${kv(
+     "Thời gian gửi",
+-    outbound?'10/09/2026 · 10:40':'10/09/2026 · 11:25'
++    linked?`${linked.day.split('-').reverse().join('/')} · ${linked.time}`:outbound?'10/09/2026 · 10:40':'10/09/2026 · 11:25'
+   )}</section>${hint(
+     "Tồn kho được cập nhật sau khi phiếu được xác nhận trên Web."
+   )}</div>${footer(primary("Xem lịch sử", "documents", false, "history"))}`;
+@@ -950,9 +979,9 @@ function newState(scene) {
+     historyDocs: [structuredClone(HISTORY_FIXTURES[0])],
+     hasMore: true,
+     filter: "Tất cả",
+-    eventId: "NFC-E003",
++    eventId: scene === 'nfc-detail' ? (params.get('event') || 'NFC-E003') : 'NFC-E003',
+     caseId: "BH-001",
+-    sessionId: "PQ-0003",
++    sessionId: ['session-detail','sessions'].includes(scene) ? (params.get('session') || 'PQ-0003') : 'PQ-0003',
+   };
+ }
+ function persist(state) {
+@@ -982,6 +1011,13 @@ function readSaved() {
+   }
+ }
+ function renderPhone(node, state) {
++  // Any navigation/rerender invalidates the old page read, even if the user
++  // returns to the same scene before it completes.
++  const pendingHistory = historyRequests.get(node);
++  if (pendingHistory) {
++    historyRequests.delete(node);
++    pendingHistory.state.loading = false;
++  }
+   sceneStates.set(node, state);
+   node.dataset.scene = state.scene;
+   const views = {
+@@ -1012,6 +1048,24 @@ function renderPhone(node, state) {
+     documents: documentsView,
+   };
+   node.innerHTML = (views[state.scene] || scanView)(state);
++  const embeddedHistory=params.get('embed')==='history'&&['history-hub','nfc','nfc-detail','events-unavailable','sessions','session-detail'].includes(state.scene);
++  node.dataset.historyEmbedded=String(embeddedHistory);
++  node.dataset.historyHub=String(embeddedHistory&&state.scene==='history-hub');
++  if(embeddedHistory){
++    node.querySelector('.history-intro h2 br')?.replaceWith(document.createTextNode(' '));
++    if(state.scene==='history-hub'){
++      // r03: user removed the hub notice; notification design is deferred.
++      // This removes presentation only, never the underlying draft/session.
++      node.querySelector('.resume-shortcut')?.remove();
++      node.querySelectorAll('.history-link').forEach(button=>{
++        button.type='button';
++        button.querySelector(':scope > .icon')?.remove();
++        button.insertAdjacentHTML('beforeend',icon('chevron','history-forward'));
++      });
++    }
++    const back=node.querySelector('.phone-header [data-action="exit"]');
++    if(back)back.setAttribute('aria-label','Về Trang chủ');
++  }
+   if (["quantity", "quantity-invalid"].includes(state.scene)) {
+     node
+       .querySelectorAll(":scope > header,:scope > .body,:scope > footer")
+@@ -1318,31 +1372,20 @@ document.addEventListener("click", (event) => {
+       renderPhone(node, state);
+       break;
+     case "load-more": {
+-      if (state.loading) return;
+-      state.loading = true;
+-      const body = node.querySelector(".body"),
+-        top = body.scrollTop;
+-      button.disabled = true;
+-      button.textContent = "Đang tải thêm…";
+-      setTimeout(() => {
+-        const map = new Map(state.historyDocs.map((d) => [d.id, d]));
+-        for (const doc of HISTORY_FIXTURES)
+-          map.set(doc.id, structuredClone(doc));
+-        state.historyDocs = [...map.values()];
+-        state.hasMore = false;
+-        state.loading = false;
+-        state.scene = "history";
+-        renderPhone(node, state);
+-        node.querySelector(".body").scrollTop = top;
+-      }, 400);
++      void loadMoreHistory(node, state, button);
+       break;
+     }
+     case "nfc-detail":
+       state.eventId = button.dataset.event || "NFC-E003";
+       go(node, "nfc-detail");
+       break;
++    case "history-general":
++    case "history-daily":
++      location.href = '../auth-session/#p02/history-list?panel=' + (action === 'history-daily' ? '4' : '1');
++      break;
+     case "pending-document":
+       state.pendingKind=button.dataset.kind;
++      state.pendingDocumentId=button.dataset.document;
+       go(node,'waiting-web');
+       break;
+     case "warranty-detail":
+diff --git a/docs/flows/warranty-components/index.html b/docs/flows/warranty-components/index.html
+index 4a1e7a2..96dad7a 100644
+--- a/docs/flows/warranty-components/index.html
++++ b/docs/flows/warranty-components/index.html
+@@ -12,6 +12,10 @@
+       content="Bộ màn thiết kế xuất linh kiện bảo hành Hoa Nam Scanner: quét, số lượng hộp, xác nhận, kết quả và lịch sử theo hồ sơ."
+     />
+     <link rel="stylesheet" href="./style.css" />
++    <link rel="stylesheet" href="../history/embedded-history.css?v=p08-r03" />
++    <link rel="stylesheet" href="../shared/app-surfaces.css?v=20260927" />
++    <link rel="stylesheet" href="../shared/operation-icons.css?v=hn-approved-v1" />
++    <script src="../shared/history-fixtures.js" defer></script>
+     <script src="./flow.js" defer></script>
+   </head>
+   <body>

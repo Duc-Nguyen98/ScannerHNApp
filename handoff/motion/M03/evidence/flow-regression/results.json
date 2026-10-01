@@ -1,0 +1,109 @@
+{
+  "scope": "UI_FIXTURE",
+  "checks": [
+    {
+      "id": "J08",
+      "boards": [
+        "P03",
+        "P04",
+        "P14"
+      ],
+      "name": "Legacy P03 draft cannot masquerade as a verified live owner",
+      "status": "PASS",
+      "details": {
+        "documentId": "PN-0001",
+        "dependency": "P03 legacy draft has no matching P04 owner; retained and blocked"
+      },
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home"
+      ]
+    },
+    {
+      "id": "J12",
+      "boards": [
+        "P03",
+        "P04",
+        "P05",
+        "P14"
+      ],
+      "name": "P03 and P14 share live stock owners; resume/save/cancel/discard retain exact identity",
+      "status": "PASS",
+      "details": [
+        {
+          "operation": "inbound",
+          "documentId": "fixture-inbound-0005",
+          "scanSessionId": "fixture-inbound-scan-0005",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        },
+        {
+          "operation": "outbound",
+          "documentId": "fixture-outbound-0005-1",
+          "scanSessionId": "fixture-outbound-scan-0005-1",
+          "recordCalls": 0,
+          "inventoryDelta": 0
+        }
+      ],
+      "errors": [],
+      "external": [],
+      "routes": [
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/shift",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/inbound",
+        "http://127.0.0.1:8766/flows/auth-session/",
+        "http://127.0.0.1:8766/flows/auth-session/#login",
+        "http://127.0.0.1:8766/flows/auth-session/#confirmation",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/shift",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#home",
+        "http://127.0.0.1:8766/flows/auth-session/#p02/outbound"
+      ]
+    }
+  ]
+}

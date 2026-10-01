@@ -1,0 +1,1424 @@
+[
+  {
+    "mode": "auto",
+    "panels": [
+      {
+        "id": "P03.S01",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 0,
+            "y": 467,
+            "width": 494,
+            "height": 408,
+            "background": "rgb(255, 255, 255)",
+            "padding": "33px 20px 32px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "17px 17px 0px 0px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Chọn tác vụ quét\n\nMã sẽ được kiểm tra theo nghiệp vụ bạn chọn.\n\nNhập kho\nNhận hàng và kiểm đếm vào kho\nXuất kho\nSoạn hàng theo yêu cầu xuất\nBảo hành\nQuét máy để tra cứu hoặc tiếp nhận bảo hành\nTra cứu sản phẩm\nXem tồn kho, lịch sử và bảo hành",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 140
+          },
+          {
+            "target": "p03-dialog sheet ",
+            "panel": "P03.S01",
+            "frames": [
+              {
+                "opacity": 0,
+                "transform": "translateY(8px)"
+              },
+              {
+                "opacity": 1,
+                "transform": "translateY(0)"
+              }
+            ],
+            "duration": 220
+          }
+        ]
+      },
+      {
+        "id": "P03.S02",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 253.5,
+            "width": 478,
+            "height": 399,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "12px 20px 13px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Bạn đang có phiếu chưa hoàn tất\n\nCác dữ liệu đã quét sẽ được giữ nếu bạn tiếp tục phiếu hiện tại. Bạn có thể tiếp tục, lưu nháp hoặc bỏ phiếu.\n\nTiếp tục phiếu\nLưu nháp và thoát\nBỏ phiếu\nHủy",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 140
+          },
+          {
+            "target": "p03-dialog modal unfinished",
+            "panel": "P03.S02",
+            "frames": [
+              {
+                "opacity": 0,
+                "transform": "translateY(8px)"
+              },
+              {
+                "opacity": 1,
+                "transform": "translateY(0)"
+              }
+            ],
+            "duration": 220
+          }
+        ]
+      },
+      {
+        "id": "P03.S04",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 283,
+            "width": 478,
+            "height": 340,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "20px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Xác nhận bỏ phiếu\n\nDữ liệu chưa lưu sẽ bị xóa.\nBạn có chắc chắn muốn bỏ phiếu này?\n\nQuay lại\nBỏ phiếu",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 140
+          },
+          {
+            "target": "p03-dialog modal unfinished",
+            "panel": "P03.S02",
+            "frames": [
+              {
+                "opacity": 0,
+                "transform": "translateY(8px)"
+              },
+              {
+                "opacity": 1,
+                "transform": "translateY(0)"
+              }
+            ],
+            "duration": 220
+          },
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 140
+          },
+          {
+            "target": "p03-dialog modal ",
+            "panel": "P03.S04",
+            "frames": [
+              {
+                "opacity": 0,
+                "transform": "translateY(8px)"
+              },
+              {
+                "opacity": 1,
+                "transform": "translateY(0)"
+              }
+            ],
+            "duration": 220
+          }
+        ]
+      },
+      {
+        "id": "P03.S03",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 284,
+            "width": 478,
+            "height": 338,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "20px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Kho tạm dừng\n\nCác thao tác trong kho đang tạm dừng.\nLiên hệ quản trị viên.\n\nVề Trang chủ\nLiên hệ quản trị",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 140
+          },
+          {
+            "target": "p03-dialog modal ",
+            "panel": "P03.S03",
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 220
+          }
+        ]
+      }
+    ],
+    "checks": [
+      "P03.S01 settled geometry/content/guard and motion policy",
+      "P03.S02 settled geometry/content/guard and motion policy",
+      "P03.S04 settled geometry/content/guard and motion policy",
+      "P03.S03 settled geometry/content/guard and motion policy",
+      "Ten rapid open/close cycles preserve exact draft and restore locks/focus",
+      "Exit is presentation only, real RAF samples; rapid reopen cannot be removed by old completion",
+      "Counted lock + top-layer keyboard ownership; close top preserves P03 lock",
+      "Confirm discard + immediate close occurs once; server/POSTED retain their exact data",
+      "Save UNKNOWN retains IDs/codes, blocks resend; response update does not replay enter",
+      "Stopped warehouse deep link blocks mutation immediately in all modes",
+      "Live mode/OS changes cancel handles; native scrolling at compact viewport",
+      "Security teardown during motion removes protected host immediately"
+    ],
+    "errors": [],
+    "exitFrames": [
+      {
+        "ms": -7.2039999999997235,
+        "hidden": false,
+        "inert": true,
+        "opacity": "1",
+        "panel": null
+      },
+      {
+        "ms": 9.399999999999636,
+        "hidden": false,
+        "inert": true,
+        "opacity": "1",
+        "panel": null
+      },
+      {
+        "ms": 26.100000000000364,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.82768",
+        "panel": null
+      },
+      {
+        "ms": 42.79999999999927,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.479129",
+        "panel": null
+      },
+      {
+        "ms": 59.399999999999636,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.294915",
+        "panel": null
+      },
+      {
+        "ms": 76.10000000000036,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.182926",
+        "panel": null
+      },
+      {
+        "ms": 92.79999999999927,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.109651",
+        "panel": null
+      },
+      {
+        "ms": 109.39999999999964,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.0610381",
+        "panel": null
+      },
+      {
+        "ms": 126.10000000000036,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.0292189",
+        "panel": null
+      },
+      {
+        "ms": 142.79999999999927,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.0102411",
+        "panel": null
+      },
+      {
+        "ms": 159.39999999999964,
+        "hidden": false,
+        "inert": true,
+        "opacity": "0.00135849",
+        "panel": null
+      },
+      {
+        "ms": 176.10000000000036,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 192.70000000000073,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 209.39999999999964,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 226.10000000000036,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      }
+    ],
+    "operations": {
+      "discard": 1,
+      "save": 1
+    }
+  },
+  {
+    "mode": "os-reduced",
+    "panels": [
+      {
+        "id": "P03.S01",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 0,
+            "y": 467,
+            "width": 494,
+            "height": 408,
+            "background": "rgb(255, 255, 255)",
+            "padding": "33px 20px 32px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "17px 17px 0px 0px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Chọn tác vụ quét\n\nMã sẽ được kiểm tra theo nghiệp vụ bạn chọn.\n\nNhập kho\nNhận hàng và kiểm đếm vào kho\nXuất kho\nSoạn hàng theo yêu cầu xuất\nBảo hành\nQuét máy để tra cứu hoặc tiếp nhận bảo hành\nTra cứu sản phẩm\nXem tồn kho, lịch sử và bảo hành",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 80
+          }
+        ]
+      },
+      {
+        "id": "P03.S02",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 253.5,
+            "width": 478,
+            "height": 399,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "12px 20px 13px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Bạn đang có phiếu chưa hoàn tất\n\nCác dữ liệu đã quét sẽ được giữ nếu bạn tiếp tục phiếu hiện tại. Bạn có thể tiếp tục, lưu nháp hoặc bỏ phiếu.\n\nTiếp tục phiếu\nLưu nháp và thoát\nBỏ phiếu\nHủy",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 80
+          }
+        ]
+      },
+      {
+        "id": "P03.S04",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 283,
+            "width": 478,
+            "height": 340,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "20px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Xác nhận bỏ phiếu\n\nDữ liệu chưa lưu sẽ bị xóa.\nBạn có chắc chắn muốn bỏ phiếu này?\n\nQuay lại\nBỏ phiếu",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 80
+          },
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 80
+          }
+        ]
+      },
+      {
+        "id": "P03.S03",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 284,
+            "width": 478,
+            "height": 338,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "20px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Kho tạm dừng\n\nCác thao tác trong kho đang tạm dừng.\nLiên hệ quản trị viên.\n\nVề Trang chủ\nLiên hệ quản trị",
+        "motion": [
+          {
+            "target": "p03-backdrop",
+            "panel": null,
+            "frames": [
+              {
+                "opacity": 0
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "duration": 80
+          }
+        ]
+      }
+    ],
+    "checks": [
+      "P03.S01 settled geometry/content/guard and motion policy",
+      "P03.S02 settled geometry/content/guard and motion policy",
+      "P03.S04 settled geometry/content/guard and motion policy",
+      "P03.S03 settled geometry/content/guard and motion policy",
+      "Ten rapid open/close cycles preserve exact draft and restore locks/focus",
+      "Exit is presentation only, real RAF samples; rapid reopen cannot be removed by old completion",
+      "Counted lock + top-layer keyboard ownership; close top preserves P03 lock",
+      "Confirm discard + immediate close occurs once; server/POSTED retain their exact data",
+      "Save UNKNOWN retains IDs/codes, blocks resend; response update does not replay enter",
+      "Stopped warehouse deep link blocks mutation immediately in all modes",
+      "Live mode/OS changes cancel handles; native scrolling at compact viewport",
+      "Security teardown during motion removes protected host immediately"
+    ],
+    "errors": [],
+    "exitFrames": [
+      {
+        "ms": -4.146000005960559,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": -4.146000005960559,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 12.499999994039172,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 29.099999994039536,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 45.799999994039354,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 62.39999999403972,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 79.09999999403954,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 95.79999999403935,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 112.39999999403972,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 129.09999999403954,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 145.79999999403935,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 162.39999999403972,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 179.09999999403954,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 195.6999999940399,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 212.49999999403917,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 229.09999999403954,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      }
+    ],
+    "operations": {
+      "discard": 1,
+      "save": 1
+    }
+  },
+  {
+    "mode": "off",
+    "panels": [
+      {
+        "id": "P03.S01",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 0,
+            "y": 467,
+            "width": 494,
+            "height": 408,
+            "background": "rgb(255, 255, 255)",
+            "padding": "33px 20px 32px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "17px 17px 0px 0px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Chọn tác vụ quét\n\nMã sẽ được kiểm tra theo nghiệp vụ bạn chọn.\n\nNhập kho\nNhận hàng và kiểm đếm vào kho\nXuất kho\nSoạn hàng theo yêu cầu xuất\nBảo hành\nQuét máy để tra cứu hoặc tiếp nhận bảo hành\nTra cứu sản phẩm\nXem tồn kho, lịch sử và bảo hành",
+        "motion": []
+      },
+      {
+        "id": "P03.S02",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 253.5,
+            "width": 478,
+            "height": 399,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "12px 20px 13px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Bạn đang có phiếu chưa hoàn tất\n\nCác dữ liệu đã quét sẽ được giữ nếu bạn tiếp tục phiếu hiện tại. Bạn có thể tiếp tục, lưu nháp hoặc bỏ phiếu.\n\nTiếp tục phiếu\nLưu nháp và thoát\nBỏ phiếu\nHủy",
+        "motion": []
+      },
+      {
+        "id": "P03.S04",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 283,
+            "width": 478,
+            "height": 340,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "20px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Xác nhận bỏ phiếu\n\nDữ liệu chưa lưu sẽ bị xóa.\nBạn có chắc chắn muốn bỏ phiếu này?\n\nQuay lại\nBỏ phiếu",
+        "motion": []
+      },
+      {
+        "id": "P03.S03",
+        "geometry": {
+          ".hn-screen": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 950,
+            "background": "rgb(230, 245, 250)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-header": {
+            "x": 0,
+            "y": 0,
+            "width": 494,
+            "height": 47,
+            "background": "rgba(0, 0, 0, 0)",
+            "padding": "0px 18px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-backdrop": {
+            "x": 0,
+            "y": 47,
+            "width": 494,
+            "height": 828,
+            "background": "rgba(0, 0, 0, 0.8)",
+            "padding": "0px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "0px"
+          },
+          ".p03-dialog": {
+            "x": 8,
+            "y": 284,
+            "width": 478,
+            "height": 338,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "20px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "14px"
+          },
+          ".hn-nav": {
+            "x": 0,
+            "y": 875,
+            "width": 494,
+            "height": 75,
+            "background": "rgba(255, 255, 255, 0.98)",
+            "padding": "8px",
+            "font": "16px Arial, sans-serif",
+            "borderRadius": "23px 23px 0px 0px"
+          },
+          ".hn-scan-circle": {
+            "x": 215.984375,
+            "y": 857,
+            "width": 62,
+            "height": 62,
+            "background": "rgb(0, 115, 153)",
+            "padding": "0px",
+            "font": "600 12px / 17px Arial, sans-serif",
+            "borderRadius": "50%"
+          }
+        },
+        "content": "Kho tạm dừng\n\nCác thao tác trong kho đang tạm dừng.\nLiên hệ quản trị viên.\n\nVề Trang chủ\nLiên hệ quản trị",
+        "motion": []
+      }
+    ],
+    "checks": [
+      "P03.S01 settled geometry/content/guard and motion policy",
+      "P03.S02 settled geometry/content/guard and motion policy",
+      "P03.S04 settled geometry/content/guard and motion policy",
+      "P03.S03 settled geometry/content/guard and motion policy",
+      "Ten rapid open/close cycles preserve exact draft and restore locks/focus",
+      "Exit is presentation only, real RAF samples; rapid reopen cannot be removed by old completion",
+      "Counted lock + top-layer keyboard ownership; close top preserves P03 lock",
+      "Confirm discard + immediate close occurs once; server/POSTED retain their exact data",
+      "Save UNKNOWN retains IDs/codes, blocks resend; response update does not replay enter",
+      "Stopped warehouse deep link blocks mutation immediately in all modes",
+      "Live mode/OS changes cancel handles; native scrolling at compact viewport",
+      "Security teardown during motion removes protected host immediately"
+    ],
+    "errors": [],
+    "exitFrames": [
+      {
+        "ms": -16.11999999105865,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 0.5000000089403329,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 17.20000000894106,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 33.800000008941424,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 50.50000000894033,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 67.20000000894106,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 83.80000000894142,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 100.50000000894033,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 117.20000000894106,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 133.80000000894142,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 150.50000000894033,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 167.20000000894106,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 183.90000000893997,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 200.50000000894033,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 217.20000000894106,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      },
+      {
+        "ms": 233.80000000894142,
+        "hidden": true,
+        "inert": false,
+        "opacity": null,
+        "panel": null
+      }
+    ],
+    "operations": {
+      "discard": 1,
+      "save": 1
+    }
+  }
+]

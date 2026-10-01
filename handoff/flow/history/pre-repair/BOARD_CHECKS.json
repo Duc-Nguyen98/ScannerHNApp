@@ -1,0 +1,649 @@
+[
+  {
+    "board": "P01",
+    "owner": "auth-session/app.mjs",
+    "panels": [
+      "P01.S01",
+      "P01.S02"
+    ],
+    "initial": {
+      "board": "P01",
+      "command": [
+        "check_flow_audit.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:10:47.443Z",
+      "finished": "2026-09-30T10:10:56.659Z",
+      "log": "handoff/flow/evidence/P01-regression.log"
+    },
+    "journeys": [
+      "J01",
+      "J05"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P02",
+    "owner": "home/home.mjs",
+    "panels": [
+      "P02.S01"
+    ],
+    "initial": {
+      "board": "P02",
+      "command": [
+        "check_home_recent.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:10:56.788Z",
+      "finished": "2026-09-30T10:11:02.401Z",
+      "log": "handoff/flow/evidence/P02-regression.log"
+    },
+    "journeys": [
+      "J01",
+      "J03",
+      "J05"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P03",
+    "owner": "scanner-dialogs/dialog-flow.mjs",
+    "panels": [
+      "P03.S01",
+      "P03.S02",
+      "P03.S03",
+      "P03.S04"
+    ],
+    "initial": {
+      "board": "P03",
+      "command": [
+        "check_dialogs.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:11:02.401Z",
+      "finished": "2026-09-30T10:11:37.136Z",
+      "log": "handoff/flow/evidence/P03-regression.log"
+    },
+    "recheck": {
+      "board": "P03",
+      "command": [
+        "check_dialogs.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:19:57.791Z",
+      "finished": "2026-09-30T10:20:02.970Z",
+      "log": "handoff/flow/evidence/recheck/P03-regression.log"
+    },
+    "journeys": [
+      "J01",
+      "J08"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P04",
+    "owner": "inbound/inbound.mjs",
+    "panels": [
+      "P04.S01",
+      "P04.S02",
+      "P04.S03",
+      "P04.S04"
+    ],
+    "initial": {
+      "board": "P04",
+      "command": [
+        "check_inbound.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:11:37.136Z",
+      "finished": "2026-09-30T10:12:14.823Z",
+      "log": "handoff/flow/evidence/P04-regression.log"
+    },
+    "journeys": [
+      "J01",
+      "J02",
+      "J06",
+      "J08"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P05",
+    "owner": "outbound/outbound.mjs",
+    "panels": [
+      "P05.S01",
+      "P05.S02",
+      "P05.S03",
+      "P05.S04"
+    ],
+    "initial": {
+      "board": "P05",
+      "command": [
+        "check_outbound_lifecycle.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:12:14.824Z",
+      "finished": "2026-09-30T10:12:51.515Z",
+      "log": "handoff/flow/evidence/P05-regression.log"
+    },
+    "recheck": {
+      "board": "P05",
+      "command": [
+        "check_outbound_lifecycle.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:20:02.971Z",
+      "finished": "2026-09-30T10:20:43.414Z",
+      "log": "handoff/flow/evidence/recheck/P05-regression.log"
+    },
+    "journeys": [
+      "J01",
+      "J10"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P06",
+    "owner": "lookup/lookup.mjs",
+    "panels": [
+      "P06.S01",
+      "P06.S02",
+      "P06.S03",
+      "P06.S04"
+    ],
+    "initial": {
+      "board": "P06",
+      "command": [
+        "check_lookup_recent_edges.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:12:51.516Z",
+      "finished": "2026-09-30T10:12:56.061Z",
+      "log": "handoff/flow/evidence/P06-regression.log"
+    },
+    "journeys": [
+      "J01"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P07",
+    "owner": "nfc/nfc.mjs",
+    "panels": [
+      "P07.S01",
+      "P07.S02",
+      "P07.S03",
+      "P07.S04"
+    ],
+    "initial": {
+      "board": "P07",
+      "command": [
+        "check_nfc_r13.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:12:56.062Z",
+      "finished": "2026-09-30T10:13:15.038Z",
+      "log": "handoff/flow/evidence/P07-regression.log"
+    },
+    "journeys": [],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P08",
+    "owner": "history/history.mjs",
+    "panels": [
+      "P08.S01",
+      "P08.S02",
+      "P08.S03",
+      "P08.S04"
+    ],
+    "initial": {
+      "board": "P08",
+      "command": [
+        "check_history_r23.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:13:15.039Z",
+      "finished": "2026-09-30T10:13:51.241Z",
+      "log": "handoff/flow/evidence/P08-regression.log"
+    },
+    "journeys": [
+      "J02",
+      "J03",
+      "J04",
+      "J10"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P09",
+    "owner": "warranty/warranty.mjs",
+    "panels": [
+      "P09.S01",
+      "P09.S02",
+      "P09.S03",
+      "P09.S04"
+    ],
+    "initial": {
+      "board": "P09",
+      "command": [
+        "check_warranty_navigation.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:13:51.242Z",
+      "finished": "2026-09-30T10:14:07.402Z",
+      "log": "handoff/flow/evidence/P09-regression.log"
+    },
+    "journeys": [
+      "J01",
+      "J07",
+      "J09",
+      "J11"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P10",
+    "owner": "profile/profile.mjs",
+    "panels": [
+      "P10.S01",
+      "P10.S02",
+      "P10.S03",
+      "P10.S04"
+    ],
+    "initial": {
+      "board": "P10",
+      "command": [
+        "check_profile_stability.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:14:07.403Z",
+      "finished": "2026-09-30T10:14:27.948Z",
+      "log": "handoff/flow/evidence/P10-regression.log"
+    },
+    "journeys": [],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P11",
+    "owner": "security/security.mjs",
+    "panels": [
+      "P11.S01",
+      "P11.S02",
+      "P11.S03",
+      "P11.S04"
+    ],
+    "initial": {
+      "board": "P11",
+      "command": [
+        "check_security_live_preview.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:14:27.950Z",
+      "finished": "2026-09-30T10:14:44.480Z",
+      "log": "handoff/flow/evidence/P11-regression.log"
+    },
+    "journeys": [],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P12",
+    "owner": "documents/documents.mjs",
+    "panels": [
+      "P12.S01",
+      "P12.S02",
+      "P12.S03",
+      "P12.S04"
+    ],
+    "initial": {
+      "board": "P12",
+      "command": [
+        "check_documents_tabs.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:14:44.480Z",
+      "finished": "2026-09-30T10:14:54.472Z",
+      "log": "handoff/flow/evidence/P12-regression.log"
+    },
+    "journeys": [
+      "J02",
+      "J03",
+      "J05",
+      "J10"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P13",
+    "owner": "notifications/notifications.mjs",
+    "panels": [
+      "P13.S01",
+      "P13.S02",
+      "P13.S03",
+      "P13.S04"
+    ],
+    "initial": {
+      "board": "P13",
+      "command": [
+        "check_notification_detail_nav.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:14:54.473Z",
+      "finished": "2026-09-30T10:15:48.469Z",
+      "log": "handoff/flow/evidence/P13-regression.log"
+    },
+    "journeys": [],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P14",
+    "owner": "recovery-shift/view.mjs",
+    "panels": [
+      "P14.S01",
+      "P14.S02",
+      "P14.S03",
+      "P14.S04"
+    ],
+    "initial": {
+      "board": "P14",
+      "command": [
+        "check_p14_audit_r06.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:15:48.470Z",
+      "finished": "2026-09-30T10:16:08.585Z",
+      "log": "handoff/flow/evidence/P14-regression.log"
+    },
+    "journeys": [
+      "J08"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P15",
+    "owner": "system/view.mjs",
+    "panels": [
+      "P15.S01",
+      "P15.S02",
+      "P15.S03",
+      "P15.S04"
+    ],
+    "initial": {
+      "board": "P15",
+      "command": [
+        "check_p15_navigation_r03.cjs"
+      ],
+      "exit_code": 1,
+      "started": "2026-09-30T10:16:08.586Z",
+      "finished": "2026-09-30T10:16:14.434Z",
+      "log": "handoff/flow/evidence/P15-regression.log"
+    },
+    "recheck": {
+      "board": "P15",
+      "command": [
+        "check_p15_navigation_r03.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:20:43.415Z",
+      "finished": "2026-09-30T10:20:48.465Z",
+      "log": "handoff/flow/evidence/recheck/P15-regression.log"
+    },
+    "journeys": [
+      "J06"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P16",
+    "owner": "data-states/view.mjs",
+    "panels": [
+      "P16.S01",
+      "P16.S02",
+      "P16.S03",
+      "P16.S04"
+    ],
+    "initial": {
+      "board": "P16",
+      "command": [
+        "check_p16_r03.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:16:14.435Z",
+      "finished": "2026-09-30T10:16:24.427Z",
+      "log": "handoff/flow/evidence/P16-regression.log"
+    },
+    "journeys": [],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P17",
+    "owner": "scan-exceptions/view.mjs",
+    "panels": [
+      "P17.S01",
+      "P17.S02",
+      "P17.S03",
+      "P17.S04"
+    ],
+    "initial": {
+      "board": "P17",
+      "command": [
+        "check_p17_navigation_r03.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:16:24.428Z",
+      "finished": "2026-09-30T10:16:42.012Z",
+      "log": "handoff/flow/evidence/P17-regression.log"
+    },
+    "journeys": [
+      "J06",
+      "J10"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P18",
+    "owner": "attachments/view.mjs",
+    "panels": [
+      "P18.S01",
+      "P18.S02",
+      "P18.S03",
+      "P18.S04"
+    ],
+    "initial": {
+      "board": "P18",
+      "command": [
+        "check_p18_r03_edges.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:16:42.013Z",
+      "finished": "2026-09-30T10:16:51.857Z",
+      "log": "handoff/flow/evidence/P18-regression.log"
+    },
+    "journeys": [
+      "J03"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P19",
+    "owner": "warranty-components/issue-view.mjs",
+    "panels": [
+      "P19.S01",
+      "P19.S02",
+      "P19.S03",
+      "P19.S04"
+    ],
+    "initial": {
+      "board": "P19",
+      "command": [
+        "check_p19.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:16:51.858Z",
+      "finished": "2026-09-30T10:17:11.663Z",
+      "log": "handoff/flow/evidence/P19-regression.log"
+    },
+    "journeys": [
+      "J07",
+      "J11"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P20",
+    "owner": "warranty-components/history-view.mjs",
+    "panels": [
+      "P20.S01",
+      "P20.S02",
+      "P20.S03",
+      "P20.S04"
+    ],
+    "initial": {
+      "board": "P20",
+      "command": [
+        "run_p24_r03.cjs",
+        "regression",
+        "check_p20.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:17:11.664Z",
+      "finished": "2026-09-30T10:17:26.321Z",
+      "log": "handoff/flow/evidence/P20-regression.log"
+    },
+    "journeys": [
+      "J07",
+      "J09"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P21",
+    "owner": "warranty-components/resume-view.mjs",
+    "panels": [
+      "P21.S01",
+      "P21.S02",
+      "P21.S03",
+      "P21.S04"
+    ],
+    "initial": {
+      "board": "P21",
+      "command": [
+        "run_p24_r03.cjs",
+        "regression",
+        "check_p21.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:17:26.321Z",
+      "finished": "2026-09-30T10:17:50.146Z",
+      "log": "handoff/flow/evidence/P21-regression.log"
+    },
+    "journeys": [
+      "J11"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P22",
+    "owner": "history/nfc-audit-view.mjs",
+    "panels": [
+      "P22.S01",
+      "P22.S02",
+      "P22.S03",
+      "P22.S04"
+    ],
+    "initial": {
+      "board": "P22",
+      "command": [
+        "run_p22_r03.cjs",
+        "check_p22.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:17:50.146Z",
+      "finished": "2026-09-30T10:18:00.845Z",
+      "log": "handoff/flow/evidence/P22-regression.log"
+    },
+    "journeys": [
+      "J04"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P23",
+    "owner": "history/warranty-session-view.mjs",
+    "panels": [
+      "P23.S01",
+      "P23.S02",
+      "P23.S03",
+      "P23.S04"
+    ],
+    "initial": {
+      "board": "P23",
+      "command": [
+        "run_p24_r03.cjs",
+        "regression",
+        "check_p23.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:18:00.846Z",
+      "finished": "2026-09-30T10:18:16.330Z",
+      "log": "handoff/flow/evidence/P23-regression.log"
+    },
+    "journeys": [
+      "J04",
+      "J09"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  },
+  {
+    "board": "P24",
+    "owner": "shared/waiting-web.mjs",
+    "panels": [
+      "P24.S01",
+      "P24.S02",
+      "P24.S03",
+      "P24.S04"
+    ],
+    "initial": {
+      "board": "P24",
+      "command": [
+        "run_p24_r03.cjs",
+        "check_p24.cjs"
+      ],
+      "exit_code": 0,
+      "started": "2026-09-30T10:18:16.331Z",
+      "finished": "2026-09-30T10:18:42.287Z",
+      "log": "handoff/flow/evidence/P24-regression.log"
+    },
+    "journeys": [
+      "J02",
+      "J06",
+      "J09",
+      "J10"
+    ],
+    "visual": "UNCHANGED",
+    "production": "NOT_VERIFIED"
+  }
+]

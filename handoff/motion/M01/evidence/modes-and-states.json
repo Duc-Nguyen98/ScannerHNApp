@@ -1,0 +1,492 @@
+{
+  "motionResults": [
+    {
+      "mode": "auto",
+      "eye": {
+        "same": true,
+        "valueOK": true,
+        "start": 1,
+        "end": 4,
+        "focus": "password",
+        "animations": 0
+      },
+      "pending": {
+        "mode": "auto",
+        "same": true,
+        "valueOK": true,
+        "start": 1,
+        "end": 4,
+        "focus": "password",
+        "readOnly": true,
+        "submitDisabled": true,
+        "counts": {
+          "authenticate": 1,
+          "startShift": 0,
+          "logout": 0
+        },
+        "animations": [
+          140
+        ]
+      },
+      "start": {
+        "disabled": true,
+        "counts": {
+          "authenticate": 1,
+          "startShift": 1,
+          "logout": 0
+        },
+        "playIcon": true,
+        "animations": [
+          140
+        ]
+      },
+      "end": {
+        "counts": {
+          "authenticate": 1,
+          "startShift": 1,
+          "logout": 0
+        },
+        "authModeRemoved": true,
+        "authAnimations": 0,
+        "trace": [
+          {
+            "at": 36359.09999999404,
+            "target": "SPAN",
+            "parent": "submit",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "status": "finished",
+            "end": 36504.59999999404
+          },
+          {
+            "at": 36975.29999999702,
+            "target": "button-label",
+            "parent": "start",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "status": "finished",
+            "end": 37121
+          },
+          {
+            "at": 37427.89999999106,
+            "target": "button-label",
+            "parent": "start",
+            "duration": 140,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "status": "finished",
+            "end": 37570.59999999404
+          }
+        ]
+      }
+    },
+    {
+      "mode": "os-reduced",
+      "eye": {
+        "same": true,
+        "valueOK": true,
+        "start": 1,
+        "end": 4,
+        "focus": "password",
+        "animations": 0
+      },
+      "pending": {
+        "mode": "reduced",
+        "same": true,
+        "valueOK": true,
+        "start": 1,
+        "end": 4,
+        "focus": "password",
+        "readOnly": true,
+        "submitDisabled": true,
+        "counts": {
+          "authenticate": 1,
+          "startShift": 0,
+          "logout": 0
+        },
+        "animations": [
+          80
+        ]
+      },
+      "start": {
+        "disabled": true,
+        "counts": {
+          "authenticate": 1,
+          "startShift": 1,
+          "logout": 0
+        },
+        "playIcon": true,
+        "animations": [
+          80
+        ]
+      },
+      "end": {
+        "counts": {
+          "authenticate": 1,
+          "startShift": 1,
+          "logout": 0
+        },
+        "authModeRemoved": true,
+        "authAnimations": 0,
+        "trace": [
+          {
+            "at": 39789.20000000298,
+            "target": "SPAN",
+            "parent": "submit",
+            "duration": 80,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "status": "finished",
+            "end": 39869.59999999404
+          },
+          {
+            "at": 40366.89999999106,
+            "target": "button-label",
+            "parent": "start",
+            "duration": 80,
+            "frames": [
+              {
+                "opacity": 0.65
+              },
+              {
+                "opacity": 1
+              }
+            ],
+            "status": "finished",
+            "end": 40453.20000000298
+          }
+        ]
+      }
+    },
+    {
+      "mode": "off",
+      "eye": {
+        "same": true,
+        "valueOK": true,
+        "start": 1,
+        "end": 4,
+        "focus": "password",
+        "animations": 0
+      },
+      "pending": {
+        "mode": "off",
+        "same": true,
+        "valueOK": true,
+        "start": 1,
+        "end": 4,
+        "focus": "password",
+        "readOnly": true,
+        "submitDisabled": true,
+        "counts": {
+          "authenticate": 1,
+          "startShift": 0,
+          "logout": 0
+        },
+        "animations": []
+      },
+      "start": {
+        "disabled": true,
+        "counts": {
+          "authenticate": 1,
+          "startShift": 1,
+          "logout": 0
+        },
+        "playIcon": true,
+        "animations": []
+      },
+      "end": {
+        "counts": {
+          "authenticate": 1,
+          "startShift": 1,
+          "logout": 0
+        },
+        "authModeRemoved": true,
+        "authAnimations": 0,
+        "trace": []
+      }
+    }
+  ],
+  "stateResults": [
+    {
+      "mode": "auto",
+      "scenario": "valid",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "auto",
+      "scenario": "denied",
+      "panel": "P01.S02",
+      "startDisabled": true,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "auto",
+      "scenario": "warehouse-stopped",
+      "panel": "P01.S02",
+      "startDisabled": true,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "auto",
+      "scenario": "auth-unknown",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "auto",
+      "scenario": "start-unknown",
+      "panel": "P01.S02",
+      "startDisabled": false,
+      "startLabel": "Thông tin đối chiếu",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 1,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "auto",
+      "scenario": "expired",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 1,
+        "logout": 1
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "auto",
+      "scenario": "other-user",
+      "panel": "P01.S02",
+      "startDisabled": false,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "valid",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "denied",
+      "panel": "P01.S02",
+      "startDisabled": true,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "warehouse-stopped",
+      "panel": "P01.S02",
+      "startDisabled": true,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "auth-unknown",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "start-unknown",
+      "panel": "P01.S02",
+      "startDisabled": false,
+      "startLabel": "Thông tin đối chiếu",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 1,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "expired",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 1,
+        "logout": 1
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "os-reduced",
+      "scenario": "other-user",
+      "panel": "P01.S02",
+      "startDisabled": false,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "valid",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "denied",
+      "panel": "P01.S02",
+      "startDisabled": true,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "warehouse-stopped",
+      "panel": "P01.S02",
+      "startDisabled": true,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "auth-unknown",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "start-unknown",
+      "panel": "P01.S02",
+      "startDisabled": false,
+      "startLabel": "Thông tin đối chiếu",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 1,
+        "logout": 0
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "expired",
+      "panel": "P01.S01",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 1,
+        "logout": 1
+      },
+      "homeVisible": false
+    },
+    {
+      "mode": "off",
+      "scenario": "other-user",
+      "panel": "P01.S02",
+      "startDisabled": false,
+      "startLabel": "Bắt đầu ca làm việc",
+      "counts": {
+        "authenticate": 1,
+        "startShift": 0,
+        "logout": 0
+      },
+      "homeVisible": false
+    }
+  ]
+}
