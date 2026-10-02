@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": "tester-dataset.v1",
+  "generatedAt": "2026-10-02",
+  "sourceCommit": "81d6f61fbaff0d7cef1779d08deb21ceb41f2007",
+  "classification": "PREVIEW_FIXTURE_PLUS_EXPLICIT_RBAC_TEST_MATRIX",
+  "board": "P23",
+  "domain": "Warranty/session history",
+  "panelCount": 4,
+  "panels": [
+    {
+      "id": "P23.S01",
+      "title": "Lịch sử bảo hành",
+      "disposition": "CURRENT",
+      "note": null
+    },
+    {
+      "id": "P23.S02",
+      "title": "Quá trình xử lý hồ sơ",
+      "disposition": "CURRENT",
+      "note": null
+    },
+    {
+      "id": "P23.S03",
+      "title": "Lịch sử phiên quét",
+      "disposition": "CURRENT",
+      "note": null
+    },
+    {
+      "id": "P23.S04",
+      "title": "Chi tiết phiên quét",
+      "disposition": "CURRENT",
+      "note": null
+    }
+  ],
+  "sourceRefs": [
+    {
+      "file": "docs/flows/history/warranty-session-fixture.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/history/warranty-session-model.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/history/business-history-data.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    }
+  ],
+  "scope": {
+    "tenantId": "tenant-hoa-nam",
+    "organizationId": "org-hoa-nam",
+    "warehouseId": "fixture-hoa-nam",
+    "warehouseName": "Kho Hoa Nam",
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  "actors": [
+    {
+      "id": "fixture-minhanh",
+      "name": "Minh Anh",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "demo-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-lan",
+      "name": "Lan Nguyễn",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "scenario-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-manager",
+      "name": "Quản lý kho mẫu",
+      "role": "warehouse_manager",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-auditor",
+      "name": "Kiểm toán mẫu",
+      "role": "auditor",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-viewer",
+      "name": "Người xem mẫu",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warranty",
+      "name": "Kỹ thuật bảo hành mẫu",
+      "role": "warranty_agent",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warehouse-stopped",
+      "name": "Kho tạm dừng mẫu",
+      "role": "warehouse_operator",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "warehouse-stopped"
+    },
+    {
+      "id": "fixture-denied",
+      "name": "Tài khoản không có quyền kho",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    }
+  ],
+  "roles": {
+    "tenant_owner": {
+      "label": "Chủ tenant",
+      "scope": "tenant"
+    },
+    "org_admin": {
+      "label": "Quản trị tổ chức",
+      "scope": "organization"
+    },
+    "warehouse_manager": {
+      "label": "Quản lý kho",
+      "scope": "warehouse"
+    },
+    "warehouse_operator": {
+      "label": "Nhân viên kho",
+      "scope": "warehouse"
+    },
+    "warranty_agent": {
+      "label": "Nhân viên bảo hành",
+      "scope": "warehouse"
+    },
+    "auditor": {
+      "label": "Kiểm toán viên",
+      "scope": "organization"
+    },
+    "viewer": {
+      "label": "Người xem",
+      "scope": "warehouse"
+    },
+    "device_operator": {
+      "label": "Vận hành thiết bị",
+      "scope": "warehouse"
+    },
+    "integration_service": {
+      "label": "Dịch vụ tích hợp",
+      "scope": "system"
+    }
+  },
+  "permissions": {
+    "used": [
+      "history.warranty.read",
+      "history.sessions.read",
+      "history.read"
+    ],
+    "catalog": [
+      {
+        "id": "auth.login",
+        "label": "Đăng nhập"
+      },
+      {
+        "id": "auth.start_session",
+        "label": "Xác nhận phiên và bắt đầu ca"
+      },
+      {
+        "id": "auth.recover_account",
+        "label": "Yêu cầu khôi phục tài khoản"
+      },
+      {
+        "id": "warehouse.read",
+        "label": "Xem kho"
+      },
+      {
+        "id": "warehouse.inbound.create",
+        "label": "Tạo phiếu nhập"
+      },
+      {
+        "id": "warehouse.inbound.scan",
+        "label": "Quét/nhập hàng nhập"
+      },
+      {
+        "id": "warehouse.inbound.record",
+        "label": "Gửi phiếu nhập"
+      },
+      {
+        "id": "warehouse.outbound.create",
+        "label": "Tạo phiếu xuất"
+      },
+      {
+        "id": "warehouse.outbound.scan",
+        "label": "Quét/nhập hàng xuất"
+      },
+      {
+        "id": "warehouse.outbound.record",
+        "label": "Gửi phiếu xuất"
+      },
+      {
+        "id": "warehouse.inventory.read",
+        "label": "Xem tồn"
+      },
+      {
+        "id": "warehouse.inventory.adjust",
+        "label": "Điều chỉnh tồn"
+      },
+      {
+        "id": "warranty.read",
+        "label": "Xem bảo hành"
+      },
+      {
+        "id": "warranty.intake",
+        "label": "Tiếp nhận bảo hành"
+      },
+      {
+        "id": "warranty.update",
+        "label": "Cập nhật bảo hành"
+      },
+      {
+        "id": "warranty.component_issue",
+        "label": "Xuất linh kiện"
+      },
+      {
+        "id": "warranty.handover",
+        "label": "Bàn giao bảo hành"
+      },
+      {
+        "id": "nfc.read",
+        "label": "Đọc NFC"
+      },
+      {
+        "id": "nfc.link",
+        "label": "Liên kết NFC"
+      },
+      {
+        "id": "documents.read",
+        "label": "Xem chứng từ"
+      },
+      {
+        "id": "documents.create",
+        "label": "Tạo chứng từ"
+      },
+      {
+        "id": "documents.attach",
+        "label": "Đính kèm tệp"
+      },
+      {
+        "id": "notifications.read",
+        "label": "Xem thông báo"
+      },
+      {
+        "id": "notifications.mark_read",
+        "label": "Đánh dấu đã đọc"
+      },
+      {
+        "id": "history.read",
+        "label": "Xem lịch sử"
+      },
+      {
+        "id": "history.export",
+        "label": "Xuất lịch sử"
+      },
+      {
+        "id": "history.nfc.read",
+        "label": "Xem lịch sử NFC"
+      },
+      {
+        "id": "history.warranty.read",
+        "label": "Xem lịch sử bảo hành"
+      },
+      {
+        "id": "history.sessions.read",
+        "label": "Xem lịch sử phiên"
+      },
+      {
+        "id": "profile.read_self",
+        "label": "Xem hồ sơ bản thân"
+      },
+      {
+        "id": "profile.update_self",
+        "label": "Sửa hồ sơ bản thân"
+      },
+      {
+        "id": "security.change_password",
+        "label": "Đổi mật khẩu"
+      },
+      {
+        "id": "security.revoke_session",
+        "label": "Thu hồi phiên khác"
+      },
+      {
+        "id": "shift.recover",
+        "label": "Khôi phục ca"
+      },
+      {
+        "id": "shift.save",
+        "label": "Lưu nháp ca"
+      },
+      {
+        "id": "shift.end",
+        "label": "Kết thúc ca"
+      },
+      {
+        "id": "device.camera",
+        "label": "Dùng camera"
+      },
+      {
+        "id": "device.nfc",
+        "label": "Dùng NFC"
+      },
+      {
+        "id": "rbac.read",
+        "label": "Xem RBAC"
+      },
+      {
+        "id": "rbac.manage",
+        "label": "Quản lý RBAC"
+      }
+    ],
+    "matrix": {
+      "tenant_owner": {
+        "scope": "tenant",
+        "allow": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ],
+        "deny": []
+      },
+      "org_admin": {
+        "scope": "organization",
+        "allow": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ],
+        "deny": []
+      },
+      "warehouse_manager": {
+        "scope": "warehouse",
+        "allow": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ],
+        "deny": []
+      },
+      "warehouse_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ],
+        "deny": []
+      },
+      "warranty_agent": {
+        "scope": "warehouse",
+        "allow": [
+          "history.warranty.read",
+          "history.read"
+        ],
+        "deny": [
+          "history.sessions.read"
+        ]
+      },
+      "auditor": {
+        "scope": "organization",
+        "allow": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ],
+        "deny": []
+      },
+      "viewer": {
+        "scope": "warehouse",
+        "allow": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ],
+        "deny": []
+      },
+      "device_operator": {
+        "scope": "warehouse",
+        "allow": [],
+        "deny": [
+          "history.warranty.read",
+          "history.sessions.read",
+          "history.read"
+        ]
+      },
+      "integration_service": {
+        "scope": "system",
+        "allow": [
+          "history.read"
+        ],
+        "deny": [
+          "history.warranty.read",
+          "history.sessions.read"
+        ]
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "RBAC-001",
+      "title": "Deny by default",
+      "condition": "permission không có grant hoặc scope không khớp",
+      "expected": "deny",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-002",
+      "title": "Session owner",
+      "condition": "actorId/authSessionId/warehouseId đổi giữa request và response",
+      "expected": "deny mutation; ignore late response",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-006",
+      "title": "Explicit identity links",
+      "condition": "document/case/session/receipt ID không khớp",
+      "expected": "deny fallback-first-record",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-011",
+      "title": "Tenant isolation",
+      "condition": "tenantId/organizationId mismatch",
+      "expected": "deny read and mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-013",
+      "title": "Least privilege",
+      "condition": "viewer/auditor invokes create/update/post",
+      "expected": "deny without mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-015",
+      "title": "No sensitive leakage",
+      "condition": "export/log/reader payload",
+      "expected": "exclude password/token; keep business IDs",
+      "status": "implemented-fixture"
+    }
+  ],
+  "fields": [
+    {
+      "name": "tenantId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "organizationId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "warehouseId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "actorId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "authSessionId",
+      "type": "string",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "requestId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "caseId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "version",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "createdAt",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "required": false,
+      "sensitive": false,
+      "maxLength": 200
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "sessionId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "result",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "accepted",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "fixtures": {
+    "rows": [
+      {
+        "confirmed": true,
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh — Tiếng Việt <>& 🌸\nTên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài ",
+        "day": "2026-09-10",
+        "sessionStatus": "Đã kết thúc",
+        "rejected": 0,
+        "duplicate": 0,
+        "id": "PQ-0003",
+        "type": "Xuất linh kiện",
+        "time": "14:30 – 14:45",
+        "result": "POSTED",
+        "doc": "XLK-0002",
+        "caseId": "BH-001",
+        "linkedReceiptId": "XLK-0002",
+        "accepted": 2,
+        "quantity": 3,
+        "events": [
+          {
+            "id": "B23-PQ-0003-E1",
+            "sessionId": "PQ-0003",
+            "code": "MÃ<>&🌸ABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABC",
+            "time": "14:31",
+            "quantity": 1,
+            "result": "accepted"
+          },
+          {
+            "id": "B23-PQ-0003-E2",
+            "sessionId": "PQ-0003",
+            "code": "BOX-LK-0002-01",
+            "time": "14:33",
+            "quantity": 2,
+            "result": "accepted"
+          }
+        ]
+      },
+      {
+        "confirmed": true,
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh — Tiếng Việt <>& 🌸\nTên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài ",
+        "day": "2026-09-10",
+        "sessionStatus": "Đã kết thúc",
+        "rejected": 0,
+        "duplicate": 0,
+        "id": "PQ-0002",
+        "type": "Nhập kho",
+        "time": "11:10 – 11:25",
+        "result": "RECORDED",
+        "doc": "PN-0005",
+        "accepted": 12,
+        "quantity": null,
+        "events": null
+      },
+      {
+        "confirmed": true,
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh — Tiếng Việt <>& 🌸\nTên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài Tên người thao tác dài ",
+        "day": "2026-09-10",
+        "sessionStatus": "Đã kết thúc",
+        "rejected": 0,
+        "duplicate": 0,
+        "id": "PQ-0001",
+        "type": "Tra cứu",
+        "time": "09:00 – 09:08",
+        "result": "ENDED",
+        "doc": null,
+        "accepted": 5,
+        "quantity": null,
+        "events": null
+      }
+    ],
+    "scenarios": [
+      "unavailable",
+      "error",
+      "empty",
+      "long",
+      "missing"
+    ],
+    "namespace": "B23-session-fixture"
+  },
+  "mapping": {
+    "P23.S01": {
+      "dataRef": "fixtures.sessionHistory",
+      "permissionIds": [
+        "history.warranty.read",
+        "history.sessions.read",
+        "history.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P23.S01-T01",
+        "P23.S01-T02",
+        "P23.S01-T03",
+        "P23.S01-T04"
+      ],
+      "sourcePanel": 1
+    },
+    "P23.S02": {
+      "dataRef": "fixtures.sessionHistory",
+      "permissionIds": [
+        "history.warranty.read",
+        "history.sessions.read",
+        "history.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P23.S02-T01",
+        "P23.S02-T02",
+        "P23.S02-T03",
+        "P23.S02-T04"
+      ],
+      "sourcePanel": 2
+    },
+    "P23.S03": {
+      "dataRef": "fixtures.sessionHistory",
+      "permissionIds": [
+        "history.warranty.read",
+        "history.sessions.read",
+        "history.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P23.S03-T01",
+        "P23.S03-T02",
+        "P23.S03-T03",
+        "P23.S03-T04"
+      ],
+      "sourcePanel": 3
+    },
+    "P23.S04": {
+      "dataRef": "fixtures.sessionHistory",
+      "permissionIds": [
+        "history.warranty.read",
+        "history.sessions.read",
+        "history.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P23.S04-T01",
+        "P23.S04-T02",
+        "P23.S04-T03",
+        "P23.S04-T04"
+      ],
+      "sourcePanel": 4
+    }
+  },
+  "testCases": [
+    {
+      "id": "P23.S01-T01",
+      "panelId": "P23.S01",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "History explicit source",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S01-T02",
+      "panelId": "P23.S01",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "PQ-0001 B23 không trộn B08",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P23.S01-T03",
+      "panelId": "P23.S01",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Thiếu counts là unverified",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P23.S01-T04",
+      "panelId": "P23.S01",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Closed read-only",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S02-T01",
+      "panelId": "P23.S02",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "History explicit source",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S02-T02",
+      "panelId": "P23.S02",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "PQ-0001 B23 không trộn B08",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P23.S02-T03",
+      "panelId": "P23.S02",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Thiếu counts là unverified",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P23.S02-T04",
+      "panelId": "P23.S02",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Closed read-only",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S03-T01",
+      "panelId": "P23.S03",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "History explicit source",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S03-T02",
+      "panelId": "P23.S03",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "PQ-0001 B23 không trộn B08",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P23.S03-T03",
+      "panelId": "P23.S03",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Thiếu counts là unverified",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P23.S03-T04",
+      "panelId": "P23.S03",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Closed read-only",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S04-T01",
+      "panelId": "P23.S04",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "History explicit source",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P23.S04-T02",
+      "panelId": "P23.S04",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "PQ-0001 B23 không trộn B08",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P23.S04-T03",
+      "panelId": "P23.S04",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Thiếu counts là unverified",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P23.S04-T04",
+      "panelId": "P23.S04",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Closed read-only",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    }
+  ],
+  "quality": {
+    "panelCoverage": "100%",
+    "permissionScenarioCoverage": "100% of listed board permissions",
+    "datasetTargetCoverage": "99%",
+    "sourceTruth": "fixture adapters and handoff contracts",
+    "productionBackend": "BLOCKED_UNVERIFIED",
+    "testerUse": "fixture-pass runs now; proposed-rbac-test runs against future RBAC adapter"
+  }
+}

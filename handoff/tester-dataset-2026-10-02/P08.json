@@ -1,0 +1,4235 @@
+{
+  "schemaVersion": "tester-dataset.v1",
+  "generatedAt": "2026-10-02",
+  "sourceCommit": "81d6f61fbaff0d7cef1779d08deb21ceb41f2007",
+  "classification": "PREVIEW_FIXTURE_PLUS_EXPLICIT_RBAC_TEST_MATRIX",
+  "board": "P08",
+  "domain": "History list/detail",
+  "panelCount": 4,
+  "panels": [
+    {
+      "id": "P08.S01",
+      "title": "Lịch sử danh sách",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P08.S02",
+      "title": "Chi tiết lịch sử",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P08.S03",
+      "title": "Phiên quét tham chiếu",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P08.S04",
+      "title": "Hoạt động theo ngày",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    }
+  ],
+  "sourceRefs": [
+    {
+      "file": "docs/flows/history/history-model.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/shared/history-fixtures.js",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/history/history-source.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    }
+  ],
+  "scope": {
+    "tenantId": "tenant-hoa-nam",
+    "organizationId": "org-hoa-nam",
+    "warehouseId": "fixture-hoa-nam",
+    "warehouseName": "Kho Hoa Nam",
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  "actors": [
+    {
+      "id": "fixture-minhanh",
+      "name": "Minh Anh",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "demo-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-lan",
+      "name": "Lan Nguyễn",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "scenario-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-manager",
+      "name": "Quản lý kho mẫu",
+      "role": "warehouse_manager",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-auditor",
+      "name": "Kiểm toán mẫu",
+      "role": "auditor",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-viewer",
+      "name": "Người xem mẫu",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warranty",
+      "name": "Kỹ thuật bảo hành mẫu",
+      "role": "warranty_agent",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warehouse-stopped",
+      "name": "Kho tạm dừng mẫu",
+      "role": "warehouse_operator",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "warehouse-stopped"
+    },
+    {
+      "id": "fixture-denied",
+      "name": "Tài khoản không có quyền kho",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    }
+  ],
+  "roles": {
+    "tenant_owner": {
+      "label": "Chủ tenant",
+      "scope": "tenant"
+    },
+    "org_admin": {
+      "label": "Quản trị tổ chức",
+      "scope": "organization"
+    },
+    "warehouse_manager": {
+      "label": "Quản lý kho",
+      "scope": "warehouse"
+    },
+    "warehouse_operator": {
+      "label": "Nhân viên kho",
+      "scope": "warehouse"
+    },
+    "warranty_agent": {
+      "label": "Nhân viên bảo hành",
+      "scope": "warehouse"
+    },
+    "auditor": {
+      "label": "Kiểm toán viên",
+      "scope": "organization"
+    },
+    "viewer": {
+      "label": "Người xem",
+      "scope": "warehouse"
+    },
+    "device_operator": {
+      "label": "Vận hành thiết bị",
+      "scope": "warehouse"
+    },
+    "integration_service": {
+      "label": "Dịch vụ tích hợp",
+      "scope": "system"
+    }
+  },
+  "permissions": {
+    "used": [
+      "history.read",
+      "documents.read",
+      "history.export"
+    ],
+    "catalog": [
+      {
+        "id": "auth.login",
+        "label": "Đăng nhập"
+      },
+      {
+        "id": "auth.start_session",
+        "label": "Xác nhận phiên và bắt đầu ca"
+      },
+      {
+        "id": "auth.recover_account",
+        "label": "Yêu cầu khôi phục tài khoản"
+      },
+      {
+        "id": "warehouse.read",
+        "label": "Xem kho"
+      },
+      {
+        "id": "warehouse.inbound.create",
+        "label": "Tạo phiếu nhập"
+      },
+      {
+        "id": "warehouse.inbound.scan",
+        "label": "Quét/nhập hàng nhập"
+      },
+      {
+        "id": "warehouse.inbound.record",
+        "label": "Gửi phiếu nhập"
+      },
+      {
+        "id": "warehouse.outbound.create",
+        "label": "Tạo phiếu xuất"
+      },
+      {
+        "id": "warehouse.outbound.scan",
+        "label": "Quét/nhập hàng xuất"
+      },
+      {
+        "id": "warehouse.outbound.record",
+        "label": "Gửi phiếu xuất"
+      },
+      {
+        "id": "warehouse.inventory.read",
+        "label": "Xem tồn"
+      },
+      {
+        "id": "warehouse.inventory.adjust",
+        "label": "Điều chỉnh tồn"
+      },
+      {
+        "id": "warranty.read",
+        "label": "Xem bảo hành"
+      },
+      {
+        "id": "warranty.intake",
+        "label": "Tiếp nhận bảo hành"
+      },
+      {
+        "id": "warranty.update",
+        "label": "Cập nhật bảo hành"
+      },
+      {
+        "id": "warranty.component_issue",
+        "label": "Xuất linh kiện"
+      },
+      {
+        "id": "warranty.handover",
+        "label": "Bàn giao bảo hành"
+      },
+      {
+        "id": "nfc.read",
+        "label": "Đọc NFC"
+      },
+      {
+        "id": "nfc.link",
+        "label": "Liên kết NFC"
+      },
+      {
+        "id": "documents.read",
+        "label": "Xem chứng từ"
+      },
+      {
+        "id": "documents.create",
+        "label": "Tạo chứng từ"
+      },
+      {
+        "id": "documents.attach",
+        "label": "Đính kèm tệp"
+      },
+      {
+        "id": "notifications.read",
+        "label": "Xem thông báo"
+      },
+      {
+        "id": "notifications.mark_read",
+        "label": "Đánh dấu đã đọc"
+      },
+      {
+        "id": "history.read",
+        "label": "Xem lịch sử"
+      },
+      {
+        "id": "history.export",
+        "label": "Xuất lịch sử"
+      },
+      {
+        "id": "history.nfc.read",
+        "label": "Xem lịch sử NFC"
+      },
+      {
+        "id": "history.warranty.read",
+        "label": "Xem lịch sử bảo hành"
+      },
+      {
+        "id": "history.sessions.read",
+        "label": "Xem lịch sử phiên"
+      },
+      {
+        "id": "profile.read_self",
+        "label": "Xem hồ sơ bản thân"
+      },
+      {
+        "id": "profile.update_self",
+        "label": "Sửa hồ sơ bản thân"
+      },
+      {
+        "id": "security.change_password",
+        "label": "Đổi mật khẩu"
+      },
+      {
+        "id": "security.revoke_session",
+        "label": "Thu hồi phiên khác"
+      },
+      {
+        "id": "shift.recover",
+        "label": "Khôi phục ca"
+      },
+      {
+        "id": "shift.save",
+        "label": "Lưu nháp ca"
+      },
+      {
+        "id": "shift.end",
+        "label": "Kết thúc ca"
+      },
+      {
+        "id": "device.camera",
+        "label": "Dùng camera"
+      },
+      {
+        "id": "device.nfc",
+        "label": "Dùng NFC"
+      },
+      {
+        "id": "rbac.read",
+        "label": "Xem RBAC"
+      },
+      {
+        "id": "rbac.manage",
+        "label": "Quản lý RBAC"
+      }
+    ],
+    "matrix": {
+      "tenant_owner": {
+        "scope": "tenant",
+        "allow": [
+          "history.read",
+          "documents.read",
+          "history.export"
+        ],
+        "deny": []
+      },
+      "org_admin": {
+        "scope": "organization",
+        "allow": [
+          "history.read",
+          "documents.read",
+          "history.export"
+        ],
+        "deny": []
+      },
+      "warehouse_manager": {
+        "scope": "warehouse",
+        "allow": [
+          "history.read",
+          "documents.read",
+          "history.export"
+        ],
+        "deny": []
+      },
+      "warehouse_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "history.read",
+          "documents.read"
+        ],
+        "deny": [
+          "history.export"
+        ]
+      },
+      "warranty_agent": {
+        "scope": "warehouse",
+        "allow": [
+          "history.read",
+          "documents.read"
+        ],
+        "deny": [
+          "history.export"
+        ]
+      },
+      "auditor": {
+        "scope": "organization",
+        "allow": [
+          "history.read",
+          "documents.read",
+          "history.export"
+        ],
+        "deny": []
+      },
+      "viewer": {
+        "scope": "warehouse",
+        "allow": [
+          "history.read",
+          "documents.read"
+        ],
+        "deny": [
+          "history.export"
+        ]
+      },
+      "device_operator": {
+        "scope": "warehouse",
+        "allow": [],
+        "deny": [
+          "history.read",
+          "documents.read",
+          "history.export"
+        ]
+      },
+      "integration_service": {
+        "scope": "system",
+        "allow": [
+          "history.read",
+          "documents.read"
+        ],
+        "deny": [
+          "history.export"
+        ]
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "RBAC-001",
+      "title": "Deny by default",
+      "condition": "permission không có grant hoặc scope không khớp",
+      "expected": "deny",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-002",
+      "title": "Session owner",
+      "condition": "actorId/authSessionId/warehouseId đổi giữa request và response",
+      "expected": "deny mutation; ignore late response",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-006",
+      "title": "Explicit identity links",
+      "condition": "document/case/session/receipt ID không khớp",
+      "expected": "deny fallback-first-record",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-011",
+      "title": "Tenant isolation",
+      "condition": "tenantId/organizationId mismatch",
+      "expected": "deny read and mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-013",
+      "title": "Least privilege",
+      "condition": "viewer/auditor invokes create/update/post",
+      "expected": "deny without mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-015",
+      "title": "No sensitive leakage",
+      "condition": "export/log/reader payload",
+      "expected": "exclude password/token; keep business IDs",
+      "status": "implemented-fixture"
+    }
+  ],
+  "fields": [
+    {
+      "name": "tenantId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "organizationId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "warehouseId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "actorId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "authSessionId",
+      "type": "string",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "requestId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "caseId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "version",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "createdAt",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "required": false,
+      "sensitive": false,
+      "maxLength": 200
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "recordId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "activityId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "sessionId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "nfcEventId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "filters",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "fixtures": {
+    "namespace": "hn-history-fixture-v1",
+    "config": {
+      "nfc": {
+        "title": "Lịch sử NFC",
+        "tabs": [
+          [
+            "Gán thẻ",
+            "Gán thẻ"
+          ],
+          [
+            "Thay thẻ",
+            "Thay thẻ"
+          ],
+          [
+            "Thu hồi thẻ",
+            "Thu hồi thẻ"
+          ]
+        ],
+        "statuses": {
+          "success": "Thành công",
+          "revoked": "Đã thu hồi"
+        },
+        "placeholder": "Tìm UID, serial hoặc người thao tác"
+      },
+      "warranty": {
+        "title": "Lịch sử bảo hành",
+        "tabs": [],
+        "statuses": {
+          "checking": "Đang kiểm tra",
+          "returned": "Đã trả khách",
+          "received": "Đã tiếp nhận",
+          "handover": "Chờ bàn giao"
+        },
+        "placeholder": "Tìm hồ sơ, serial hoặc người thao tác"
+      },
+      "sessions": {
+        "title": "Lịch sử phiên quét",
+        "tabs": [
+          [
+            "Nhập kho",
+            "Nhập kho"
+          ],
+          [
+            "Xuất linh kiện",
+            "Xuất linh kiện"
+          ],
+          [
+            "Phiên quét mã",
+            "Phiên quét mã"
+          ]
+        ],
+        "statuses": {
+          "waiting": "Chờ xử lý trên Web",
+          "exported": "Đã xuất"
+        },
+        "statusTitle": "Kết quả chứng từ",
+        "placeholder": "Tìm phiên, chứng từ hoặc người thao tác"
+      }
+    },
+    "records": [
+      {
+        "id": "LS-0001",
+        "activityId": "B08-ACT-1",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-0005",
+        "day": "2026-09-09",
+        "time": "08:32",
+        "occurredAt": "2026-09-09T08:32:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "HN12345",
+        "sessionId": "PQ-0001",
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": "Nhập hàng theo đơn đặt hàng số ĐH-2026-1023",
+        "attachments": [
+          {
+            "id": "B08-ATT-1",
+            "name": "Ảnh kiện hàng",
+            "available": false
+          },
+          {
+            "id": "B08-ATT-2",
+            "name": "Phiếu giao hàng",
+            "available": false
+          }
+        ],
+        "events": [
+          {
+            "id": "B08-LS1-E1",
+            "label": "Tạo phiếu",
+            "time": "08:30",
+            "actor": "Minh Anh"
+          },
+          {
+            "id": "B08-LS1-E2",
+            "label": "Quét mã sản phẩm",
+            "time": "08:31",
+            "actor": "Minh Anh"
+          },
+          {
+            "id": "B08-LS1-E3",
+            "label": "Kiểm tra phiếu",
+            "time": "08:32",
+            "actor": "Minh Anh"
+          },
+          {
+            "id": "B08-LS1-E4",
+            "label": "Gửi phiếu lên Web",
+            "time": "08:32",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0002",
+        "activityId": "B08-ACT-2",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-0005",
+        "day": "2026-09-09",
+        "time": "10:15",
+        "occurredAt": "2026-09-09T10:15:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-2",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS2-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "10:15",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0003",
+        "activityId": "B08-ACT-3",
+        "type": "warranty",
+        "label": "Bảo hành",
+        "documentId": "BH-001",
+        "day": "2026-09-08",
+        "time": "14:20",
+        "occurredAt": "2026-09-08T14:20:00+07:00",
+        "status": "processing",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-3",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS3-E1",
+            "label": "Đang xử lý",
+            "time": "14:20",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0004",
+        "activityId": "B08-ACT-4",
+        "type": "nfc",
+        "label": "Quét NFC",
+        "documentId": "TAG-001",
+        "day": "2026-09-09",
+        "time": "11:05",
+        "occurredAt": "2026-09-09T11:05:00+07:00",
+        "status": "linked",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "HN12345",
+        "sessionId": null,
+        "nfcEventId": "NFC-B08-004",
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS4-E1",
+            "label": "Đã liên kết",
+            "time": "11:05",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0005",
+        "activityId": "B08-ACT-5",
+        "type": "documents",
+        "label": "Điều chỉnh",
+        "documentId": "DC-0001",
+        "day": "2026-09-07",
+        "time": "16:40",
+        "occurredAt": "2026-09-07T16:40:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-5",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS5-E1",
+            "label": "Đã ghi nhận",
+            "time": "16:40",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0006",
+        "activityId": "B08-ACT-6",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-0004",
+        "day": "2026-09-06",
+        "time": "09:18",
+        "occurredAt": "2026-09-06T09:18:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-6",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS6-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "09:18",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0007",
+        "activityId": "B08-ACT-7",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-007",
+        "day": "2026-09-09",
+        "time": "13:10",
+        "occurredAt": "2026-09-09T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-7",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS7-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0008",
+        "activityId": "B08-ACT-8",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-008",
+        "day": "2026-09-09",
+        "time": "13:11",
+        "occurredAt": "2026-09-09T13:11:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-8",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS8-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0009",
+        "activityId": "B08-ACT-9",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-009",
+        "day": "2026-09-09",
+        "time": "13:12",
+        "occurredAt": "2026-09-09T13:12:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-9",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS9-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:12",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0010",
+        "activityId": "B08-ACT-10",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-010",
+        "day": "2026-09-09",
+        "time": "13:13",
+        "occurredAt": "2026-09-09T13:13:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-10",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS10-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:13",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0011",
+        "activityId": "B08-ACT-11",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-011",
+        "day": "2026-09-09",
+        "time": "13:14",
+        "occurredAt": "2026-09-09T13:14:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-11",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS11-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:14",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0012",
+        "activityId": "B08-ACT-12",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-012",
+        "day": "2026-09-09",
+        "time": "13:15",
+        "occurredAt": "2026-09-09T13:15:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-12",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS12-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:15",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0013",
+        "activityId": "B08-ACT-13",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-013",
+        "day": "2026-09-09",
+        "time": "13:16",
+        "occurredAt": "2026-09-09T13:16:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-13",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS13-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:16",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0014",
+        "activityId": "B08-ACT-14",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-014",
+        "day": "2026-09-09",
+        "time": "13:17",
+        "occurredAt": "2026-09-09T13:17:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-14",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS14-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:17",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0015",
+        "activityId": "B08-ACT-15",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-015",
+        "day": "2026-09-09",
+        "time": "13:18",
+        "occurredAt": "2026-09-09T13:18:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-15",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS15-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:18",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0016",
+        "activityId": "B08-ACT-16",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-016",
+        "day": "2026-09-09",
+        "time": "13:19",
+        "occurredAt": "2026-09-09T13:19:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-16",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS16-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:19",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0017",
+        "activityId": "B08-ACT-17",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-017",
+        "day": "2026-09-09",
+        "time": "13:20",
+        "occurredAt": "2026-09-09T13:20:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-17",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS17-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:20",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0018",
+        "activityId": "B08-ACT-18",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-018",
+        "day": "2026-09-09",
+        "time": "13:10",
+        "occurredAt": "2026-09-09T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-18",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS18-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0019",
+        "activityId": "B08-ACT-19",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-019",
+        "day": "2026-09-09",
+        "time": "13:11",
+        "occurredAt": "2026-09-09T13:11:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-19",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS19-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0020",
+        "activityId": "B08-ACT-20",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-020",
+        "day": "2026-09-09",
+        "time": "13:12",
+        "occurredAt": "2026-09-09T13:12:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-20",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS20-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:12",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0021",
+        "activityId": "B08-ACT-21",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-021",
+        "day": "2026-09-09",
+        "time": "13:13",
+        "occurredAt": "2026-09-09T13:13:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-21",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS21-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:13",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0022",
+        "activityId": "B08-ACT-22",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-022",
+        "day": "2026-09-09",
+        "time": "13:14",
+        "occurredAt": "2026-09-09T13:14:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-22",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS22-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:14",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0023",
+        "activityId": "B08-ACT-23",
+        "type": "warranty",
+        "label": "Bảo hành",
+        "documentId": "BH-DEMO-023",
+        "day": "2026-09-09",
+        "time": "13:10",
+        "occurredAt": "2026-09-09T13:10:00+07:00",
+        "status": "processing",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-23",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS23-E1",
+            "label": "Đang xử lý",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0024",
+        "activityId": "B08-ACT-24",
+        "type": "warranty",
+        "label": "Bảo hành",
+        "documentId": "BH-DEMO-024",
+        "day": "2026-09-09",
+        "time": "13:11",
+        "occurredAt": "2026-09-09T13:11:00+07:00",
+        "status": "processing",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-24",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS24-E1",
+            "label": "Đang xử lý",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0025",
+        "activityId": "B08-ACT-25",
+        "type": "warranty",
+        "label": "Bảo hành",
+        "documentId": "BH-DEMO-025",
+        "day": "2026-09-09",
+        "time": "13:12",
+        "occurredAt": "2026-09-09T13:12:00+07:00",
+        "status": "processing",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-25",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS25-E1",
+            "label": "Đang xử lý",
+            "time": "13:12",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0026",
+        "activityId": "B08-ACT-26",
+        "type": "warranty",
+        "label": "Bảo hành",
+        "documentId": "BH-DEMO-026",
+        "day": "2026-09-09",
+        "time": "13:13",
+        "occurredAt": "2026-09-09T13:13:00+07:00",
+        "status": "processing",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-26",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS26-E1",
+            "label": "Đang xử lý",
+            "time": "13:13",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0027",
+        "activityId": "B08-ACT-27",
+        "type": "nfc",
+        "label": "Quét NFC",
+        "documentId": "TAG-DEMO-027",
+        "day": "2026-09-09",
+        "time": "13:10",
+        "occurredAt": "2026-09-09T13:10:00+07:00",
+        "status": "linked",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-27",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS27-E1",
+            "label": "Đã liên kết",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0028",
+        "activityId": "B08-ACT-28",
+        "type": "nfc",
+        "label": "Quét NFC",
+        "documentId": "TAG-DEMO-028",
+        "day": "2026-09-09",
+        "time": "13:11",
+        "occurredAt": "2026-09-09T13:11:00+07:00",
+        "status": "linked",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-28",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS28-E1",
+            "label": "Đã liên kết",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0029",
+        "activityId": "B08-ACT-29",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-029",
+        "day": "2026-09-09",
+        "time": "13:10",
+        "occurredAt": "2026-09-09T13:10:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-29",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS29-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0030",
+        "activityId": "B08-ACT-30",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-030",
+        "day": "2026-09-09",
+        "time": "13:11",
+        "occurredAt": "2026-09-09T13:11:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-30",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS30-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0031",
+        "activityId": "B08-ACT-31",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-031",
+        "day": "2026-09-09",
+        "time": "13:12",
+        "occurredAt": "2026-09-09T13:12:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-31",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS31-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:12",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0032",
+        "activityId": "B08-ACT-32",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-032",
+        "day": "2026-09-09",
+        "time": "13:13",
+        "occurredAt": "2026-09-09T13:13:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-32",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS32-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:13",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0033",
+        "activityId": "B08-ACT-33",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-033",
+        "day": "2026-09-09",
+        "time": "13:14",
+        "occurredAt": "2026-09-09T13:14:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-33",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS33-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:14",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0034",
+        "activityId": "B08-ACT-34",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-034",
+        "day": "2026-09-08",
+        "time": "13:10",
+        "occurredAt": "2026-09-08T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-34",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS34-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0035",
+        "activityId": "B08-ACT-35",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-035",
+        "day": "2026-09-08",
+        "time": "13:11",
+        "occurredAt": "2026-09-08T13:11:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-35",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS35-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0036",
+        "activityId": "B08-ACT-36",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-036",
+        "day": "2026-09-08",
+        "time": "13:12",
+        "occurredAt": "2026-09-08T13:12:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-36",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS36-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:12",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0037",
+        "activityId": "B08-ACT-37",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-037",
+        "day": "2026-09-08",
+        "time": "13:10",
+        "occurredAt": "2026-09-08T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-37",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS37-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0038",
+        "activityId": "B08-ACT-38",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-038",
+        "day": "2026-09-08",
+        "time": "13:11",
+        "occurredAt": "2026-09-08T13:11:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-38",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS38-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0039",
+        "activityId": "B08-ACT-39",
+        "type": "nfc",
+        "label": "Quét NFC",
+        "documentId": "TAG-DEMO-039",
+        "day": "2026-09-08",
+        "time": "13:10",
+        "occurredAt": "2026-09-08T13:10:00+07:00",
+        "status": "linked",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-39",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS39-E1",
+            "label": "Đã liên kết",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0040",
+        "activityId": "B08-ACT-40",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-040",
+        "day": "2026-09-08",
+        "time": "13:10",
+        "occurredAt": "2026-09-08T13:10:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-40",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS40-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0041",
+        "activityId": "B08-ACT-41",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-041",
+        "day": "2026-09-07",
+        "time": "13:10",
+        "occurredAt": "2026-09-07T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-41",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS41-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0042",
+        "activityId": "B08-ACT-42",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-042",
+        "day": "2026-09-07",
+        "time": "13:11",
+        "occurredAt": "2026-09-07T13:11:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-42",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS42-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:11",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0043",
+        "activityId": "B08-ACT-43",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-043",
+        "day": "2026-09-07",
+        "time": "13:10",
+        "occurredAt": "2026-09-07T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-43",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS43-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0044",
+        "activityId": "B08-ACT-44",
+        "type": "warranty",
+        "label": "Bảo hành",
+        "documentId": "BH-DEMO-044",
+        "day": "2026-09-07",
+        "time": "13:10",
+        "occurredAt": "2026-09-07T13:10:00+07:00",
+        "status": "processing",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-44",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS44-E1",
+            "label": "Đang xử lý",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0045",
+        "activityId": "B08-ACT-45",
+        "type": "nfc",
+        "label": "Quét NFC",
+        "documentId": "TAG-DEMO-045",
+        "day": "2026-09-07",
+        "time": "13:10",
+        "occurredAt": "2026-09-07T13:10:00+07:00",
+        "status": "linked",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-45",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS45-E1",
+            "label": "Đã liên kết",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0046",
+        "activityId": "B08-ACT-46",
+        "type": "inbound",
+        "label": "Nhập kho",
+        "documentId": "PN-DEMO-046",
+        "day": "2026-09-06",
+        "time": "13:10",
+        "occurredAt": "2026-09-06T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-46",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS46-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0047",
+        "activityId": "B08-ACT-47",
+        "type": "outbound",
+        "label": "Xuất kho",
+        "documentId": "PX-DEMO-047",
+        "day": "2026-09-06",
+        "time": "13:10",
+        "occurredAt": "2026-09-06T13:10:00+07:00",
+        "status": "waiting",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-47",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS47-E1",
+            "label": "Gửi phiếu lên Web",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      },
+      {
+        "id": "LS-0048",
+        "activityId": "B08-ACT-48",
+        "type": "documents",
+        "label": "Chứng từ",
+        "documentId": "DC-DEMO-048",
+        "day": "2026-09-06",
+        "time": "13:10",
+        "occurredAt": "2026-09-06T13:10:00+07:00",
+        "status": "recorded",
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "serial": "SN-DEMO-48",
+        "sessionId": null,
+        "nfcEventId": null,
+        "version": "fixture-v1",
+        "note": null,
+        "attachments": [],
+        "events": [
+          {
+            "id": "B08-LS48-E1",
+            "label": "Đã ghi nhận",
+            "time": "13:10",
+            "actor": "Minh Anh"
+          }
+        ]
+      }
+    ],
+    "sessions": [
+      {
+        "id": "PQ-0003",
+        "type": "Xuất linh kiện",
+        "day": "2026-09-10",
+        "time": "14:30 – 14:45",
+        "count": "2 mã · 3 linh kiện",
+        "status": "Đã xuất",
+        "doc": "XLK-0002",
+        "sessionStatus": "Hoàn thành",
+        "total": 2,
+        "accepted": 2,
+        "duplicate": 0,
+        "quantity": 3,
+        "events": []
+      },
+      {
+        "id": "PQ-0002",
+        "type": "Nhập kho",
+        "day": "2026-09-10",
+        "time": "11:10 – 11:25",
+        "count": "12 mã được ghi nhận",
+        "status": "Chờ xử lý trên Web",
+        "doc": "PN-0005",
+        "sessionStatus": "Hoàn thành",
+        "total": 12,
+        "accepted": 12,
+        "duplicate": 0,
+        "quantity": null,
+        "events": []
+      },
+      {
+        "id": "PQ-0001",
+        "type": "Phiên quét mã",
+        "day": "2026-09-09",
+        "time": "08:30 – 09:15",
+        "startedAt": "2026-09-09T08:30:00+07:00",
+        "endedAt": "2026-09-09T09:15:00+07:00",
+        "count": "19 lượt · 18 hợp lệ · 1 trùng",
+        "status": "Chờ xử lý trên Web",
+        "doc": "PN-0005",
+        "sessionStatus": "Hoàn thành",
+        "total": 19,
+        "accepted": 18,
+        "duplicate": 1,
+        "quantity": 17,
+        "actor": "Minh Anh",
+        "warehouse": "Kho Hoa Nam",
+        "events": [
+          {
+            "id": "B08-SCAN-1",
+            "sessionId": "PQ-0001",
+            "code": "HN12345",
+            "sku": "XP-420B",
+            "serial": "HN12345",
+            "uid": null,
+            "time": "08:30:12",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-2",
+            "sessionId": "PQ-0001",
+            "code": "HN12346",
+            "sku": "XP-420B",
+            "serial": "HN12346",
+            "uid": null,
+            "time": "08:30:28",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-3",
+            "sessionId": "PQ-0001",
+            "code": "HN12345",
+            "sku": "XP-420B",
+            "serial": "HN12345",
+            "uid": null,
+            "time": "08:31:05",
+            "result": "duplicate",
+            "quantity": 0
+          },
+          {
+            "id": "B08-SCAN-4",
+            "sessionId": "PQ-0001",
+            "code": "HN12347",
+            "sku": "XP-420B",
+            "serial": "HN12347",
+            "uid": null,
+            "time": "08:31:20",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-5",
+            "sessionId": "PQ-0001",
+            "code": "NFC-8A2F",
+            "sku": "TAG-001",
+            "serial": null,
+            "uid": "8A2F",
+            "time": "08:31:45",
+            "result": "accepted",
+            "quantity": 0
+          },
+          {
+            "id": "B08-SCAN-6",
+            "sessionId": "PQ-0001",
+            "code": "HN12349",
+            "sku": "XP-420B",
+            "serial": "HN12349",
+            "uid": null,
+            "time": "08:37:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-7",
+            "sessionId": "PQ-0001",
+            "code": "HN12350",
+            "sku": "XP-420B",
+            "serial": "HN12350",
+            "uid": null,
+            "time": "08:38:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-8",
+            "sessionId": "PQ-0001",
+            "code": "HN12351",
+            "sku": "XP-420B",
+            "serial": "HN12351",
+            "uid": null,
+            "time": "08:39:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-9",
+            "sessionId": "PQ-0001",
+            "code": "HN12352",
+            "sku": "XP-420B",
+            "serial": "HN12352",
+            "uid": null,
+            "time": "08:40:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-10",
+            "sessionId": "PQ-0001",
+            "code": "HN12353",
+            "sku": "XP-420B",
+            "serial": "HN12353",
+            "uid": null,
+            "time": "08:41:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-11",
+            "sessionId": "PQ-0001",
+            "code": "HN12354",
+            "sku": "XP-420B",
+            "serial": "HN12354",
+            "uid": null,
+            "time": "08:42:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-12",
+            "sessionId": "PQ-0001",
+            "code": "HN12355",
+            "sku": "XP-420B",
+            "serial": "HN12355",
+            "uid": null,
+            "time": "08:43:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-13",
+            "sessionId": "PQ-0001",
+            "code": "HN12356",
+            "sku": "XP-420B",
+            "serial": "HN12356",
+            "uid": null,
+            "time": "08:44:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-14",
+            "sessionId": "PQ-0001",
+            "code": "HN12357",
+            "sku": "XP-420B",
+            "serial": "HN12357",
+            "uid": null,
+            "time": "08:45:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-15",
+            "sessionId": "PQ-0001",
+            "code": "HN12358",
+            "sku": "XP-420B",
+            "serial": "HN12358",
+            "uid": null,
+            "time": "08:46:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-16",
+            "sessionId": "PQ-0001",
+            "code": "HN12359",
+            "sku": "XP-420B",
+            "serial": "HN12359",
+            "uid": null,
+            "time": "08:47:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-17",
+            "sessionId": "PQ-0001",
+            "code": "HN12360",
+            "sku": "XP-420B",
+            "serial": "HN12360",
+            "uid": null,
+            "time": "08:48:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-18",
+            "sessionId": "PQ-0001",
+            "code": "HN12361",
+            "sku": "XP-420B",
+            "serial": "HN12361",
+            "uid": null,
+            "time": "08:49:00",
+            "result": "accepted",
+            "quantity": 1
+          },
+          {
+            "id": "B08-SCAN-19",
+            "sessionId": "PQ-0001",
+            "code": "HN12362",
+            "sku": "XP-420B",
+            "serial": "HN12362",
+            "uid": null,
+            "time": "08:50:00",
+            "result": "accepted",
+            "quantity": 1
+          }
+        ]
+      }
+    ],
+    "businessData": {
+      "nfcEvents": [
+        {
+          "id": "NFC-E003",
+          "type": "Gán thẻ",
+          "time": "14:35",
+          "date": "Hôm nay · 10/09",
+          "day": "2026-09-10",
+          "uid": "NFC-8A2F",
+          "serial": "HN12345",
+          "actor": "Minh Anh",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E002",
+          "type": "Thay thẻ",
+          "time": "11:20",
+          "date": "Hôm nay · 10/09",
+          "day": "2026-09-10",
+          "uid": "NFC-7B10",
+          "serial": "HN12346",
+          "actor": "Minh Anh",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E001",
+          "type": "Thu hồi thẻ",
+          "time": "09:15",
+          "date": "Hôm nay · 10/09",
+          "day": "2026-09-10",
+          "uid": "NFC-5C22",
+          "serial": "HN12347",
+          "actor": "Minh Anh",
+          "status": "Đã thu hồi"
+        },
+        {
+          "id": "NFC-B08-004",
+          "type": "Gán thẻ",
+          "time": "11:05",
+          "date": "09/09/2026",
+          "day": "2026-09-09",
+          "uid": "NFC-8A2F",
+          "serial": "HN12345",
+          "actor": "Minh Anh",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E004",
+          "type": "Gán thẻ",
+          "day": "2026-09-12",
+          "time": "09:20",
+          "uid": "NFC-9C31",
+          "serial": "HN12345",
+          "actor": "Minh Anh",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E005",
+          "type": "Thay thẻ",
+          "day": "2026-09-13",
+          "time": "09:21",
+          "uid": "NFC-6D20",
+          "serial": "HN12346",
+          "actor": "Lan Nguyễn",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E006",
+          "type": "Thu hồi thẻ",
+          "day": "2026-09-14",
+          "time": "09:22",
+          "uid": "NFC-4E18",
+          "serial": "HN12347",
+          "actor": "Minh Anh",
+          "status": "Đã thu hồi"
+        },
+        {
+          "id": "NFC-E007",
+          "type": "Gán thẻ",
+          "day": "2026-09-15",
+          "time": "09:23",
+          "uid": "NFC-2F44",
+          "serial": "HN12348",
+          "actor": "Lan Nguyễn",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E008",
+          "type": "Thay thẻ",
+          "day": "2026-09-16",
+          "time": "09:24",
+          "uid": "NFC-1A90",
+          "serial": "HN12349",
+          "actor": "Minh Anh",
+          "status": "Thành công"
+        },
+        {
+          "id": "NFC-E009",
+          "type": "Thu hồi thẻ",
+          "day": "2026-09-17",
+          "time": "09:25",
+          "uid": "NFC-3B72",
+          "serial": "HN12345",
+          "actor": "Lan Nguyễn",
+          "status": "Đã thu hồi"
+        }
+      ],
+      "warrantyCases": [
+        {
+          "id": "BH-001",
+          "model": "Máy in nhiệt XP-420B",
+          "serial": "HN12345",
+          "status": "Đang kiểm tra",
+          "day": "2026-09-10",
+          "time": "14:45",
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-001",
+          "customer": "Công ty Minh Phát",
+          "contact": "0901 234 567",
+          "faultId": "power-off",
+          "fault": "Máy không lên nguồn",
+          "diagnosis": "Máy không lên nguồn, kiểm tra nguồn và bo mạch.",
+          "note": "Khách hàng yêu cầu kiểm tra tổng thể và vệ sinh máy.",
+          "accessories": "Adapter nguồn 24V, cáp USB, 01 cuộn tem",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "day": "2026-09-10",
+              "time": "08:32",
+              "id": "BH-001-E1",
+              "actor": "Minh Anh",
+              "description": "Công ty Minh Phát · Máy không lên nguồn"
+            },
+            {
+              "label": "Đang kiểm tra",
+              "day": "2026-09-10",
+              "time": "14:30",
+              "id": "BH-001-E2",
+              "actor": "Minh Anh",
+              "description": "Máy không lên nguồn, kiểm tra nguồn và bo mạch."
+            },
+            {
+              "id": "BH-001-XLK-0002",
+              "label": "Đã xuất linh kiện",
+              "day": "2026-09-10",
+              "time": "14:45",
+              "actor": "Minh Anh",
+              "documentId": "XLK-0002",
+              "description": "XLK-0002 · 2 mã · 3 linh kiện"
+            }
+          ]
+        },
+        {
+          "id": "BH-002",
+          "model": "Máy quét mã vạch ZD421",
+          "serial": "HN12346",
+          "status": "Đã trả khách",
+          "day": "2026-09-10",
+          "time": "11:20",
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-002",
+          "customer": "Đại lý Thành Công",
+          "contact": "0902 345 678",
+          "faultId": "no-scan",
+          "fault": "Không quét được mã vạch",
+          "diagnosis": "Cáp USB tiếp xúc chập chờn; bộ phận đọc mã hoạt động bình thường khi đổi cáp.",
+          "note": "Khách đã kiểm tra thiết bị tại quầy và nhận đủ phụ kiện.",
+          "accessories": "Cáp USB, chân đế",
+          "result": "Đã thay cáp USB, kiểm tra quét liên tục 30 lượt. Thiết bị hoạt động ổn định.",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "day": "2026-09-09",
+              "time": "16:10",
+              "id": "BH-002-E1",
+              "actor": "Minh Anh",
+              "description": "Đại lý Thành Công · Không quét được mã vạch"
+            },
+            {
+              "id": "BH-002-XLK-0003",
+              "label": "Đã xuất linh kiện",
+              "day": "2026-09-10",
+              "time": "09:15",
+              "actor": "Minh Anh",
+              "documentId": "XLK-0003",
+              "description": "XLK-0003 · 1 mã · 1 linh kiện"
+            },
+            {
+              "label": "Hoàn tất sửa chữa",
+              "day": "2026-09-10",
+              "time": "10:45",
+              "id": "BH-002-E2",
+              "actor": "Minh Anh",
+              "description": "Đã thay cáp USB, kiểm tra quét liên tục 30 lượt. Thiết bị hoạt động ổn định."
+            },
+            {
+              "label": "Đã trả khách",
+              "day": "2026-09-10",
+              "time": "11:20",
+              "id": "BH-002-E3",
+              "actor": "Minh Anh",
+              "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+            }
+          ]
+        },
+        {
+          "id": "BH-003",
+          "model": "Máy in nhiệt XP-420B",
+          "serial": "SN-XP420B-202",
+          "status": "Đã tiếp nhận",
+          "day": "2026-09-13",
+          "time": "08:32",
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-003",
+          "customer": "Cửa hàng An Khang",
+          "contact": "0903 456 789",
+          "faultId": "paper-sensor",
+          "fault": "Không nhận giấy / Tem",
+          "diagnosis": "",
+          "note": "Máy báo hết giấy dù đã lắp cuộn tem. Khách gửi kèm cuộn tem đang sử dụng để kiểm tra.",
+          "accessories": "Adapter nguồn 24V, 01 cuộn tem 50×30 mm",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "time": "08:32",
+              "day": "2026-09-13",
+              "id": "BH-003-E1",
+              "actor": "Minh Anh",
+              "description": "Cửa hàng An Khang · Không nhận giấy / Tem"
+            }
+          ]
+        },
+        {
+          "id": "BH-004",
+          "model": "Máy quét mã vạch ZD421",
+          "serial": "SN-ZD421-203",
+          "status": "Đã trả khách",
+          "day": "2026-09-14",
+          "time": "10:23",
+          "actor": "Lan Nguyễn",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-004",
+          "customer": "Siêu thị Minh Tâm",
+          "contact": "0904 567 890",
+          "faultId": "lan",
+          "fault": "Không kết nối mạng LAN",
+          "diagnosis": "Địa chỉ IP trên thiết bị không cùng lớp mạng sau khi đổi router; phần cứng bình thường.",
+          "note": "Đã hướng dẫn nhân viên cửa hàng cách kiểm tra cấu hình mạng.",
+          "accessories": "Adapter nguồn, cáp mạng LAN",
+          "result": "Đã cấu hình lại mạng LAN và kiểm tra kết nối trên máy khách. Không cần thay linh kiện.",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "time": "08:30",
+              "day": "2026-09-14",
+              "id": "BH-004-E1",
+              "actor": "Lan Nguyễn",
+              "description": "Siêu thị Minh Tâm · Không kết nối mạng LAN"
+            },
+            {
+              "label": "Hoàn tất sửa chữa",
+              "time": "10:15",
+              "day": "2026-09-14",
+              "id": "BH-004-E2",
+              "actor": "Lan Nguyễn",
+              "description": "Đã cấu hình lại mạng LAN và kiểm tra kết nối trên máy khách. Không cần thay linh kiện."
+            },
+            {
+              "label": "Đã trả khách",
+              "time": "10:23",
+              "day": "2026-09-14",
+              "id": "BH-004-E3",
+              "actor": "Lan Nguyễn",
+              "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+            }
+          ]
+        },
+        {
+          "id": "BH-005",
+          "model": "Máy in nhiệt XP-420B",
+          "serial": "SN-XP420B-204",
+          "status": "Chờ bàn giao",
+          "day": "2026-09-15",
+          "time": "15:40",
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-005",
+          "customer": "Công ty Phúc An",
+          "contact": "0905 678 901",
+          "faultId": "broken-print",
+          "fault": "Bản in bị sọc / Đứt nét",
+          "diagnosis": "Đầu in có điểm nhiệt suy giảm, trục lăn mòn khiến tem đi không đều.",
+          "note": "Ưu tiên xử lý trước đợt kiểm kê. Khách đề nghị gọi khi thiết bị sẵn sàng nhận.",
+          "accessories": "Adapter nguồn 24V, cáp USB, 02 cuộn tem",
+          "result": "Đã thay đầu in và trục lăn, hiệu chuẩn cảm biến, in thử 20 tem đạt yêu cầu.",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "time": "08:32",
+              "day": "2026-09-15",
+              "id": "BH-005-E1",
+              "actor": "Minh Anh",
+              "description": "Công ty Phúc An · Bản in bị sọc / Đứt nét"
+            },
+            {
+              "label": "Đang kiểm tra",
+              "time": "10:24",
+              "day": "2026-09-15",
+              "id": "BH-005-E2",
+              "actor": "Minh Anh",
+              "description": "Đầu in có điểm nhiệt suy giảm, trục lăn mòn khiến tem đi không đều."
+            },
+            {
+              "id": "BH-005-XLK-0004",
+              "label": "Đã xuất linh kiện",
+              "day": "2026-09-15",
+              "time": "11:10",
+              "actor": "Minh Anh",
+              "documentId": "XLK-0004",
+              "description": "XLK-0004 · 2 mã · 2 linh kiện"
+            },
+            {
+              "label": "Hoàn tất sửa chữa",
+              "time": "14:50",
+              "day": "2026-09-15",
+              "id": "BH-005-E3",
+              "actor": "Minh Anh",
+              "description": "Đã thay đầu in và trục lăn, hiệu chuẩn cảm biến, in thử 20 tem đạt yêu cầu."
+            },
+            {
+              "label": "Chờ bàn giao",
+              "time": "15:40",
+              "day": "2026-09-15",
+              "id": "BH-005-E4",
+              "actor": "Minh Anh",
+              "description": "Thiết bị đã sẵn sàng; chờ khách nhận theo quy trình."
+            }
+          ]
+        },
+        {
+          "id": "BH-006",
+          "model": "Máy quét mã vạch ZD421",
+          "serial": "SN-ZD421-205",
+          "status": "Đã trả khách",
+          "day": "2026-09-16",
+          "time": "10:25",
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-006",
+          "customer": "Nhà thuốc Bình An",
+          "contact": "0906 789 012",
+          "faultId": "button",
+          "fault": "Nút bấm không hoạt động",
+          "diagnosis": "Tiếp điểm cụm nút kích hoạt bị mòn, cần thay cụm nút.",
+          "note": "Khách đã kiểm tra quét mã và nhận lại thiết bị trong ngày.",
+          "accessories": "Cáp USB, dây đeo",
+          "result": "Đã thay cụm nút kích hoạt, vệ sinh thiết bị và kiểm tra chức năng quét.",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "time": "08:30",
+              "day": "2026-09-16",
+              "id": "BH-006-E1",
+              "actor": "Minh Anh",
+              "description": "Nhà thuốc Bình An · Nút bấm không hoạt động"
+            },
+            {
+              "id": "BH-006-XLK-0005",
+              "label": "Đã xuất linh kiện",
+              "day": "2026-09-16",
+              "time": "09:10",
+              "actor": "Minh Anh",
+              "documentId": "XLK-0005",
+              "description": "XLK-0005 · 1 mã · 1 linh kiện"
+            },
+            {
+              "label": "Hoàn tất sửa chữa",
+              "time": "10:15",
+              "day": "2026-09-16",
+              "id": "BH-006-E2",
+              "actor": "Minh Anh",
+              "description": "Đã thay cụm nút kích hoạt, vệ sinh thiết bị và kiểm tra chức năng quét."
+            },
+            {
+              "label": "Đã trả khách",
+              "time": "10:25",
+              "day": "2026-09-16",
+              "id": "BH-006-E3",
+              "actor": "Minh Anh",
+              "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+            }
+          ]
+        },
+        {
+          "id": "BH-007",
+          "model": "Máy in nhiệt XP-420B",
+          "serial": "SN-XP420B-206",
+          "status": "Đang kiểm tra",
+          "day": "2026-09-17",
+          "time": "10:26",
+          "actor": "Lan Nguyễn",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-007",
+          "customer": "Công ty Sông Việt",
+          "contact": "0907 890 123",
+          "faultId": "usb",
+          "fault": "Không kết nối USB",
+          "diagnosis": "Máy không nhận lệnh in sau khi cập nhật driver; đang kiểm tra cấu hình cổng USB và phần mềm.",
+          "note": "Nguồn và cơ cấu cấp tem bình thường. Khách đã cung cấp phiên bản phần mềm đang sử dụng.",
+          "accessories": "Adapter nguồn 24V, cáp USB",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "time": "08:32",
+              "day": "2026-09-17",
+              "id": "BH-007-E1",
+              "actor": "Lan Nguyễn",
+              "description": "Công ty Sông Việt · Không kết nối USB"
+            },
+            {
+              "label": "Đang kiểm tra",
+              "time": "10:26",
+              "day": "2026-09-17",
+              "id": "BH-007-E2",
+              "actor": "Lan Nguyễn",
+              "description": "Máy không nhận lệnh in sau khi cập nhật driver; đang kiểm tra cấu hình cổng USB và phần mềm."
+            }
+          ]
+        },
+        {
+          "id": "BH-008",
+          "model": "Máy quét mã vạch ZD421",
+          "serial": "SN-ZD421-207",
+          "status": "Đã trả khách",
+          "day": "2026-09-18",
+          "time": "10:27",
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "version": 1,
+          "customerId": "KH-HN-008",
+          "customer": "Đại lý Nam Phương",
+          "contact": "0908 901 234",
+          "faultId": "usb",
+          "fault": "Không kết nối USB",
+          "diagnosis": "Bo giao tiếp USB không ổn định, kiểm tra cổng kết nối và thay bo tương ứng.",
+          "note": "Khách đã kiểm tra thiết bị, xác nhận đủ phụ kiện và nhận lại tại quầy.",
+          "accessories": "Cáp USB, chân đế",
+          "result": "Đã thay bo giao tiếp USB và kiểm tra kết nối liên tục. Thiết bị hoạt động bình thường.",
+          "ledgerKnown": true,
+          "events": [
+            {
+              "label": "Đã tiếp nhận",
+              "time": "08:30",
+              "day": "2026-09-18",
+              "id": "BH-008-E1",
+              "actor": "Minh Anh",
+              "description": "Đại lý Nam Phương · Không kết nối USB"
+            },
+            {
+              "id": "BH-008-XLK-0006",
+              "label": "Đã xuất linh kiện",
+              "day": "2026-09-18",
+              "time": "09:15",
+              "actor": "Minh Anh",
+              "documentId": "XLK-0006",
+              "description": "XLK-0006 · 1 mã · 1 linh kiện"
+            },
+            {
+              "label": "Hoàn tất sửa chữa",
+              "time": "10:15",
+              "day": "2026-09-18",
+              "id": "BH-008-E2",
+              "actor": "Minh Anh",
+              "description": "Đã thay bo giao tiếp USB và kiểm tra kết nối liên tục. Thiết bị hoạt động bình thường."
+            },
+            {
+              "label": "Đã trả khách",
+              "time": "10:27",
+              "day": "2026-09-18",
+              "id": "BH-008-E3",
+              "actor": "Minh Anh",
+              "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+            }
+          ]
+        }
+      ],
+      "sessions": [
+        {
+          "id": "PQ-0003",
+          "type": "Xuất linh kiện",
+          "day": "2026-09-10",
+          "time": "14:30 – 14:45",
+          "count": "2 mã · 3 linh kiện",
+          "status": "Đã xuất",
+          "doc": "XLK-0002",
+          "sessionStatus": "Hoàn thành",
+          "total": 2,
+          "accepted": 2,
+          "duplicate": 0,
+          "quantity": 3,
+          "events": [
+            {
+              "id": "PQ-0003-SCAN-1",
+              "sessionId": "PQ-0003",
+              "code": "LK0001-HN001",
+              "sku": "LK-0001",
+              "serial": "SN-LK-0001",
+              "time": "14:31:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0003-SCAN-2",
+              "sessionId": "PQ-0003",
+              "code": "BOX-LK-0002-01",
+              "sku": "LK-0002",
+              "serial": "BOX-LK-0002-01",
+              "time": "14:33:00",
+              "result": "accepted",
+              "quantity": 2
+            }
+          ],
+          "actor": "Lan Nguyễn",
+          "warehouse": "Kho Hoa Nam"
+        },
+        {
+          "id": "PQ-0002",
+          "type": "Nhập kho",
+          "day": "2026-09-10",
+          "time": "11:10 – 11:25",
+          "count": "12 mã được ghi nhận",
+          "status": "Chờ xử lý trên Web",
+          "doc": "PN-0005",
+          "sessionStatus": "Hoàn thành",
+          "total": 12,
+          "accepted": 12,
+          "duplicate": 0,
+          "quantity": 12,
+          "events": [
+            {
+              "id": "PQ-0002-SCAN-1",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-001",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-001",
+              "uid": null,
+              "time": "11:10:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-2",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-002",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-002",
+              "uid": null,
+              "time": "11:11:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-3",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-003",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-003",
+              "uid": null,
+              "time": "11:12:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-4",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-004",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-004",
+              "uid": null,
+              "time": "11:13:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-5",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-005",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-005",
+              "uid": null,
+              "time": "11:14:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-6",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-006",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-006",
+              "uid": null,
+              "time": "11:15:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-7",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-007",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-007",
+              "uid": null,
+              "time": "11:16:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-8",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-008",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-008",
+              "uid": null,
+              "time": "11:17:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-9",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-009",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-009",
+              "uid": null,
+              "time": "11:18:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-10",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-010",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-010",
+              "uid": null,
+              "time": "11:19:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-11",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-011",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-011",
+              "uid": null,
+              "time": "11:20:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0002-SCAN-12",
+              "sessionId": "PQ-0002",
+              "code": "SN-XP420B-0002-012",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0002-012",
+              "uid": null,
+              "time": "11:21:00",
+              "result": "accepted",
+              "quantity": 1
+            }
+          ],
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam"
+        },
+        {
+          "id": "PQ-0001",
+          "type": "Phiên quét mã",
+          "day": "2026-09-09",
+          "time": "08:30 – 09:15",
+          "startedAt": "2026-09-09T08:30:00+07:00",
+          "endedAt": "2026-09-09T09:15:00+07:00",
+          "count": "19 lượt · 18 hợp lệ · 1 trùng",
+          "status": "Chờ xử lý trên Web",
+          "doc": "PN-0005",
+          "sessionStatus": "Hoàn thành",
+          "total": 19,
+          "accepted": 18,
+          "duplicate": 1,
+          "quantity": 17,
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "events": [
+            {
+              "id": "B08-SCAN-1",
+              "sessionId": "PQ-0001",
+              "code": "HN12345",
+              "sku": "XP-420B",
+              "serial": "HN12345",
+              "uid": null,
+              "time": "08:30:12",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-2",
+              "sessionId": "PQ-0001",
+              "code": "HN12346",
+              "sku": "XP-420B",
+              "serial": "HN12346",
+              "uid": null,
+              "time": "08:30:28",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-3",
+              "sessionId": "PQ-0001",
+              "code": "HN12345",
+              "sku": "XP-420B",
+              "serial": "HN12345",
+              "uid": null,
+              "time": "08:31:05",
+              "result": "duplicate",
+              "quantity": 0
+            },
+            {
+              "id": "B08-SCAN-4",
+              "sessionId": "PQ-0001",
+              "code": "HN12347",
+              "sku": "XP-420B",
+              "serial": "HN12347",
+              "uid": null,
+              "time": "08:31:20",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-5",
+              "sessionId": "PQ-0001",
+              "code": "NFC-8A2F",
+              "sku": "TAG-001",
+              "serial": null,
+              "uid": "8A2F",
+              "time": "08:31:45",
+              "result": "accepted",
+              "quantity": 0
+            },
+            {
+              "id": "B08-SCAN-6",
+              "sessionId": "PQ-0001",
+              "code": "HN12349",
+              "sku": "XP-420B",
+              "serial": "HN12349",
+              "uid": null,
+              "time": "08:37:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-7",
+              "sessionId": "PQ-0001",
+              "code": "HN12350",
+              "sku": "XP-420B",
+              "serial": "HN12350",
+              "uid": null,
+              "time": "08:38:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-8",
+              "sessionId": "PQ-0001",
+              "code": "HN12351",
+              "sku": "XP-420B",
+              "serial": "HN12351",
+              "uid": null,
+              "time": "08:39:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-9",
+              "sessionId": "PQ-0001",
+              "code": "HN12352",
+              "sku": "XP-420B",
+              "serial": "HN12352",
+              "uid": null,
+              "time": "08:40:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-10",
+              "sessionId": "PQ-0001",
+              "code": "HN12353",
+              "sku": "XP-420B",
+              "serial": "HN12353",
+              "uid": null,
+              "time": "08:41:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-11",
+              "sessionId": "PQ-0001",
+              "code": "HN12354",
+              "sku": "XP-420B",
+              "serial": "HN12354",
+              "uid": null,
+              "time": "08:42:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-12",
+              "sessionId": "PQ-0001",
+              "code": "HN12355",
+              "sku": "XP-420B",
+              "serial": "HN12355",
+              "uid": null,
+              "time": "08:43:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-13",
+              "sessionId": "PQ-0001",
+              "code": "HN12356",
+              "sku": "XP-420B",
+              "serial": "HN12356",
+              "uid": null,
+              "time": "08:44:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-14",
+              "sessionId": "PQ-0001",
+              "code": "HN12357",
+              "sku": "XP-420B",
+              "serial": "HN12357",
+              "uid": null,
+              "time": "08:45:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-15",
+              "sessionId": "PQ-0001",
+              "code": "HN12358",
+              "sku": "XP-420B",
+              "serial": "HN12358",
+              "uid": null,
+              "time": "08:46:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-16",
+              "sessionId": "PQ-0001",
+              "code": "HN12359",
+              "sku": "XP-420B",
+              "serial": "HN12359",
+              "uid": null,
+              "time": "08:47:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-17",
+              "sessionId": "PQ-0001",
+              "code": "HN12360",
+              "sku": "XP-420B",
+              "serial": "HN12360",
+              "uid": null,
+              "time": "08:48:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-18",
+              "sessionId": "PQ-0001",
+              "code": "HN12361",
+              "sku": "XP-420B",
+              "serial": "HN12361",
+              "uid": null,
+              "time": "08:49:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "B08-SCAN-19",
+              "sessionId": "PQ-0001",
+              "code": "HN12362",
+              "sku": "XP-420B",
+              "serial": "HN12362",
+              "uid": null,
+              "time": "08:50:00",
+              "result": "accepted",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ-0004",
+          "type": "Xuất linh kiện",
+          "day": "2026-09-14",
+          "time": "09:00 – 10:00",
+          "status": "Đã xuất",
+          "doc": "XLK-0204",
+          "sessionStatus": "Hoàn thành",
+          "total": 9,
+          "accepted": 9,
+          "duplicate": 0,
+          "quantity": 9,
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "count": "9 lượt · 9 hợp lệ · 0 trùng",
+          "events": [
+            {
+              "id": "PQ-0004-SCAN-1",
+              "sessionId": "PQ-0004",
+              "code": "LK100",
+              "sku": "LK-0001",
+              "serial": "SN-LK-100",
+              "uid": null,
+              "time": "09:10:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-2",
+              "sessionId": "PQ-0004",
+              "code": "LK101",
+              "sku": "LK-0002",
+              "serial": "SN-LK-101",
+              "uid": null,
+              "time": "09:11:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-3",
+              "sessionId": "PQ-0004",
+              "code": "LK102",
+              "sku": "LK-0003",
+              "serial": "SN-LK-102",
+              "uid": null,
+              "time": "09:12:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-4",
+              "sessionId": "PQ-0004",
+              "code": "LK103",
+              "sku": "LK-0004",
+              "serial": "SN-LK-103",
+              "uid": null,
+              "time": "09:13:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-5",
+              "sessionId": "PQ-0004",
+              "code": "LK104",
+              "sku": "LK-0005",
+              "serial": "SN-LK-104",
+              "uid": null,
+              "time": "09:14:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-6",
+              "sessionId": "PQ-0004",
+              "code": "LK105",
+              "sku": "LK-0006",
+              "serial": "SN-LK-105",
+              "uid": null,
+              "time": "09:15:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-7",
+              "sessionId": "PQ-0004",
+              "code": "LK106",
+              "sku": "LK-0007",
+              "serial": "SN-LK-106",
+              "uid": null,
+              "time": "09:16:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-8",
+              "sessionId": "PQ-0004",
+              "code": "LK107",
+              "sku": "LK-0008",
+              "serial": "SN-LK-107",
+              "uid": null,
+              "time": "09:17:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0004-SCAN-9",
+              "sessionId": "PQ-0004",
+              "code": "LK108",
+              "sku": "LK-0009",
+              "serial": "SN-LK-108",
+              "uid": null,
+              "time": "09:18:00",
+              "result": "accepted",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ-0005",
+          "type": "Nhập kho",
+          "day": "2026-09-15",
+          "time": "09:00 – 10:00",
+          "status": "Chờ xử lý trên Web",
+          "doc": "PN-0205",
+          "sessionStatus": "Hoàn thành",
+          "total": 10,
+          "accepted": 10,
+          "duplicate": 0,
+          "quantity": 10,
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "count": "10 lượt · 10 hợp lệ · 0 trùng",
+          "events": [
+            {
+              "id": "PQ-0005-SCAN-1",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-001",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-001",
+              "uid": null,
+              "time": "09:10:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-2",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-002",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-002",
+              "uid": null,
+              "time": "09:11:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-3",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-003",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-003",
+              "uid": null,
+              "time": "09:12:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-4",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-004",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-004",
+              "uid": null,
+              "time": "09:13:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-5",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-005",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-005",
+              "uid": null,
+              "time": "09:14:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-6",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-006",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-006",
+              "uid": null,
+              "time": "09:15:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-7",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-007",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-007",
+              "uid": null,
+              "time": "09:16:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-8",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-008",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-008",
+              "uid": null,
+              "time": "09:17:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-9",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-009",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-009",
+              "uid": null,
+              "time": "09:18:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0005-SCAN-10",
+              "sessionId": "PQ-0005",
+              "code": "SN-XP420B-0005-010",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0005-010",
+              "uid": null,
+              "time": "09:19:00",
+              "result": "accepted",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ-0006",
+          "type": "Xuất linh kiện",
+          "day": "2026-09-16",
+          "time": "09:00 – 10:00",
+          "status": "Đã xuất",
+          "doc": "XLK-0206",
+          "sessionStatus": "Hoàn thành",
+          "total": 11,
+          "accepted": 10,
+          "duplicate": 1,
+          "quantity": 10,
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "count": "11 lượt · 10 hợp lệ · 1 trùng",
+          "events": [
+            {
+              "id": "PQ-0006-SCAN-1",
+              "sessionId": "PQ-0006",
+              "code": "LK100",
+              "sku": "LK-0001",
+              "serial": "SN-LK-100",
+              "uid": null,
+              "time": "09:10:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-2",
+              "sessionId": "PQ-0006",
+              "code": "LK101",
+              "sku": "LK-0002",
+              "serial": "SN-LK-101",
+              "uid": null,
+              "time": "09:11:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-3",
+              "sessionId": "PQ-0006",
+              "code": "LK102",
+              "sku": "LK-0003",
+              "serial": "SN-LK-102",
+              "uid": null,
+              "time": "09:12:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-4",
+              "sessionId": "PQ-0006",
+              "code": "LK103",
+              "sku": "LK-0004",
+              "serial": "SN-LK-103",
+              "uid": null,
+              "time": "09:13:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-5",
+              "sessionId": "PQ-0006",
+              "code": "LK104",
+              "sku": "LK-0005",
+              "serial": "SN-LK-104",
+              "uid": null,
+              "time": "09:14:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-6",
+              "sessionId": "PQ-0006",
+              "code": "LK105",
+              "sku": "LK-0006",
+              "serial": "SN-LK-105",
+              "uid": null,
+              "time": "09:15:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-7",
+              "sessionId": "PQ-0006",
+              "code": "LK106",
+              "sku": "LK-0007",
+              "serial": "SN-LK-106",
+              "uid": null,
+              "time": "09:16:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-8",
+              "sessionId": "PQ-0006",
+              "code": "LK107",
+              "sku": "LK-0008",
+              "serial": "SN-LK-107",
+              "uid": null,
+              "time": "09:17:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-9",
+              "sessionId": "PQ-0006",
+              "code": "LK108",
+              "sku": "LK-0009",
+              "serial": "SN-LK-108",
+              "uid": null,
+              "time": "09:18:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-10",
+              "sessionId": "PQ-0006",
+              "code": "LK109",
+              "sku": "LK-0010",
+              "serial": "SN-LK-109",
+              "uid": null,
+              "time": "09:19:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0006-SCAN-11",
+              "sessionId": "PQ-0006",
+              "code": "LK100",
+              "sku": "LK-0001",
+              "serial": "SN-LK-100",
+              "uid": null,
+              "time": "09:20:00",
+              "result": "duplicate",
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "id": "PQ-0007",
+          "type": "Nhập kho",
+          "day": "2026-09-17",
+          "time": "09:00 – 10:00",
+          "status": "Chờ xử lý trên Web",
+          "doc": "PN-0207",
+          "sessionStatus": "Hoàn thành",
+          "total": 12,
+          "accepted": 12,
+          "duplicate": 0,
+          "quantity": 12,
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "count": "12 lượt · 12 hợp lệ · 0 trùng",
+          "events": [
+            {
+              "id": "PQ-0007-SCAN-1",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-001",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-001",
+              "uid": null,
+              "time": "09:10:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-2",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-002",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-002",
+              "uid": null,
+              "time": "09:11:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-3",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-003",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-003",
+              "uid": null,
+              "time": "09:12:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-4",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-004",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-004",
+              "uid": null,
+              "time": "09:13:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-5",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-005",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-005",
+              "uid": null,
+              "time": "09:14:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-6",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-006",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-006",
+              "uid": null,
+              "time": "09:15:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-7",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-007",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-007",
+              "uid": null,
+              "time": "09:16:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-8",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-008",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-008",
+              "uid": null,
+              "time": "09:17:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-9",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-009",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-009",
+              "uid": null,
+              "time": "09:18:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-10",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-010",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-010",
+              "uid": null,
+              "time": "09:19:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-11",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-011",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-011",
+              "uid": null,
+              "time": "09:20:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0007-SCAN-12",
+              "sessionId": "PQ-0007",
+              "code": "SN-XP420B-0007-012",
+              "sku": "XP-420B",
+              "serial": "SN-XP420B-0007-012",
+              "uid": null,
+              "time": "09:21:00",
+              "result": "accepted",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ-0008",
+          "type": "Xuất linh kiện",
+          "day": "2026-09-18",
+          "time": "09:00 – 10:00",
+          "status": "Đã xuất",
+          "doc": "XLK-0208",
+          "sessionStatus": "Hoàn thành",
+          "total": 13,
+          "accepted": 13,
+          "duplicate": 0,
+          "quantity": 13,
+          "actor": "Minh Anh",
+          "warehouse": "Kho Hoa Nam",
+          "count": "13 lượt · 13 hợp lệ · 0 trùng",
+          "events": [
+            {
+              "id": "PQ-0008-SCAN-1",
+              "sessionId": "PQ-0008",
+              "code": "LK100",
+              "sku": "LK-0001",
+              "serial": "SN-LK-100",
+              "uid": null,
+              "time": "09:10:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-2",
+              "sessionId": "PQ-0008",
+              "code": "LK101",
+              "sku": "LK-0002",
+              "serial": "SN-LK-101",
+              "uid": null,
+              "time": "09:11:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-3",
+              "sessionId": "PQ-0008",
+              "code": "LK102",
+              "sku": "LK-0003",
+              "serial": "SN-LK-102",
+              "uid": null,
+              "time": "09:12:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-4",
+              "sessionId": "PQ-0008",
+              "code": "LK103",
+              "sku": "LK-0004",
+              "serial": "SN-LK-103",
+              "uid": null,
+              "time": "09:13:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-5",
+              "sessionId": "PQ-0008",
+              "code": "LK104",
+              "sku": "LK-0005",
+              "serial": "SN-LK-104",
+              "uid": null,
+              "time": "09:14:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-6",
+              "sessionId": "PQ-0008",
+              "code": "LK105",
+              "sku": "LK-0006",
+              "serial": "SN-LK-105",
+              "uid": null,
+              "time": "09:15:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-7",
+              "sessionId": "PQ-0008",
+              "code": "LK106",
+              "sku": "LK-0007",
+              "serial": "SN-LK-106",
+              "uid": null,
+              "time": "09:16:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-8",
+              "sessionId": "PQ-0008",
+              "code": "LK107",
+              "sku": "LK-0008",
+              "serial": "SN-LK-107",
+              "uid": null,
+              "time": "09:17:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-9",
+              "sessionId": "PQ-0008",
+              "code": "LK108",
+              "sku": "LK-0009",
+              "serial": "SN-LK-108",
+              "uid": null,
+              "time": "09:18:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-10",
+              "sessionId": "PQ-0008",
+              "code": "LK109",
+              "sku": "LK-0010",
+              "serial": "SN-LK-109",
+              "uid": null,
+              "time": "09:19:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-11",
+              "sessionId": "PQ-0008",
+              "code": "LK110",
+              "sku": "LK-0011",
+              "serial": "SN-LK-110",
+              "uid": null,
+              "time": "09:20:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-12",
+              "sessionId": "PQ-0008",
+              "code": "LK111",
+              "sku": "LK-0012",
+              "serial": "SN-LK-111",
+              "uid": null,
+              "time": "09:21:00",
+              "result": "accepted",
+              "quantity": 1
+            },
+            {
+              "id": "PQ-0008-SCAN-13",
+              "sessionId": "PQ-0008",
+              "code": "LK112",
+              "sku": "LK-0013",
+              "serial": "SN-LK-112",
+              "uid": null,
+              "time": "09:22:00",
+              "result": "accepted",
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mapping": {
+    "P08.S01": {
+      "dataRef": "fixtures.history",
+      "permissionIds": [
+        "history.read",
+        "documents.read",
+        "history.export"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P08.S01-T01",
+        "P08.S01-T02",
+        "P08.S01-T03",
+        "P08.S01-T04"
+      ],
+      "sourcePanel": 1
+    },
+    "P08.S02": {
+      "dataRef": "fixtures.history",
+      "permissionIds": [
+        "history.read",
+        "documents.read",
+        "history.export"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P08.S02-T01",
+        "P08.S02-T02",
+        "P08.S02-T03",
+        "P08.S02-T04"
+      ],
+      "sourcePanel": 2
+    },
+    "P08.S03": {
+      "dataRef": "fixtures.history",
+      "permissionIds": [
+        "history.read",
+        "documents.read",
+        "history.export"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P08.S03-T01",
+        "P08.S03-T02",
+        "P08.S03-T03",
+        "P08.S03-T04"
+      ],
+      "sourcePanel": 3
+    },
+    "P08.S04": {
+      "dataRef": "fixtures.history",
+      "permissionIds": [
+        "history.read",
+        "documents.read",
+        "history.export"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P08.S04-T01",
+        "P08.S04-T02",
+        "P08.S04-T03",
+        "P08.S04-T04"
+      ],
+      "sourcePanel": 4
+    }
+  },
+  "testCases": [
+    {
+      "id": "P08.S01-T01",
+      "panelId": "P08.S01",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Danh sách/lọc/mở record explicit",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S01-T02",
+      "panelId": "P08.S01",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "ID invalid không fallback",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P08.S01-T03",
+      "panelId": "P08.S01",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Scope khác kho bị chặn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P08.S01-T04",
+      "panelId": "P08.S01",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Export đúng grant",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S02-T01",
+      "panelId": "P08.S02",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Danh sách/lọc/mở record explicit",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S02-T02",
+      "panelId": "P08.S02",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "ID invalid không fallback",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P08.S02-T03",
+      "panelId": "P08.S02",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Scope khác kho bị chặn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P08.S02-T04",
+      "panelId": "P08.S02",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Export đúng grant",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S03-T01",
+      "panelId": "P08.S03",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Danh sách/lọc/mở record explicit",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S03-T02",
+      "panelId": "P08.S03",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "ID invalid không fallback",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P08.S03-T03",
+      "panelId": "P08.S03",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Scope khác kho bị chặn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P08.S03-T04",
+      "panelId": "P08.S03",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Export đúng grant",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S04-T01",
+      "panelId": "P08.S04",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Danh sách/lọc/mở record explicit",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-006",
+        "RBAC-011",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P08.S04-T02",
+      "panelId": "P08.S04",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "ID invalid không fallback",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P08.S04-T03",
+      "panelId": "P08.S04",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Scope khác kho bị chặn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P08.S04-T04",
+      "panelId": "P08.S04",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Export đúng grant",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    }
+  ],
+  "quality": {
+    "panelCoverage": "100%",
+    "permissionScenarioCoverage": "100% of listed board permissions",
+    "datasetTargetCoverage": "99%",
+    "sourceTruth": "fixture adapters and handoff contracts",
+    "productionBackend": "BLOCKED_UNVERIFIED",
+    "testerUse": "fixture-pass runs now; proposed-rbac-test runs against future RBAC adapter"
+  }
+}

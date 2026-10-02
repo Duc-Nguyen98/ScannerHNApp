@@ -1,0 +1,2701 @@
+{
+  "schemaVersion": "tester-dataset.v1",
+  "generatedAt": "2026-10-02",
+  "sourceCommit": "81d6f61fbaff0d7cef1779d08deb21ceb41f2007",
+  "classification": "PREVIEW_FIXTURE_PLUS_EXPLICIT_RBAC_TEST_MATRIX",
+  "board": "P12",
+  "domain": "Documents",
+  "panelCount": 4,
+  "panels": [
+    {
+      "id": "P12.S01",
+      "title": "Chứng từ — Danh sách",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P12.S02",
+      "title": "Chi tiết chứng từ",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P12.S03",
+      "title": "Sản phẩm trong chứng từ",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    },
+    {
+      "id": "P12.S04",
+      "title": "Tạo chứng từ mới",
+      "disposition": "MIGRATED",
+      "note": "Phiên bản nghiệp vụ hiện hành; không phục hồi action cũ."
+    }
+  ],
+  "sourceRefs": [
+    {
+      "file": "docs/flows/documents/document-model.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/documents/documents.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    }
+  ],
+  "scope": {
+    "tenantId": "tenant-hoa-nam",
+    "organizationId": "org-hoa-nam",
+    "warehouseId": "fixture-hoa-nam",
+    "warehouseName": "Kho Hoa Nam",
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  "actors": [
+    {
+      "id": "fixture-minhanh",
+      "name": "Minh Anh",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "demo-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-lan",
+      "name": "Lan Nguyễn",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "scenario-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-manager",
+      "name": "Quản lý kho mẫu",
+      "role": "warehouse_manager",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-auditor",
+      "name": "Kiểm toán mẫu",
+      "role": "auditor",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-viewer",
+      "name": "Người xem mẫu",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warranty",
+      "name": "Kỹ thuật bảo hành mẫu",
+      "role": "warranty_agent",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warehouse-stopped",
+      "name": "Kho tạm dừng mẫu",
+      "role": "warehouse_operator",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "warehouse-stopped"
+    },
+    {
+      "id": "fixture-denied",
+      "name": "Tài khoản không có quyền kho",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    }
+  ],
+  "roles": {
+    "tenant_owner": {
+      "label": "Chủ tenant",
+      "scope": "tenant"
+    },
+    "org_admin": {
+      "label": "Quản trị tổ chức",
+      "scope": "organization"
+    },
+    "warehouse_manager": {
+      "label": "Quản lý kho",
+      "scope": "warehouse"
+    },
+    "warehouse_operator": {
+      "label": "Nhân viên kho",
+      "scope": "warehouse"
+    },
+    "warranty_agent": {
+      "label": "Nhân viên bảo hành",
+      "scope": "warehouse"
+    },
+    "auditor": {
+      "label": "Kiểm toán viên",
+      "scope": "organization"
+    },
+    "viewer": {
+      "label": "Người xem",
+      "scope": "warehouse"
+    },
+    "device_operator": {
+      "label": "Vận hành thiết bị",
+      "scope": "warehouse"
+    },
+    "integration_service": {
+      "label": "Dịch vụ tích hợp",
+      "scope": "system"
+    }
+  },
+  "permissions": {
+    "used": [
+      "documents.read",
+      "documents.create",
+      "documents.attach",
+      "warehouse.inbound.create",
+      "warehouse.outbound.create"
+    ],
+    "catalog": [
+      {
+        "id": "auth.login",
+        "label": "Đăng nhập"
+      },
+      {
+        "id": "auth.start_session",
+        "label": "Xác nhận phiên và bắt đầu ca"
+      },
+      {
+        "id": "auth.recover_account",
+        "label": "Yêu cầu khôi phục tài khoản"
+      },
+      {
+        "id": "warehouse.read",
+        "label": "Xem kho"
+      },
+      {
+        "id": "warehouse.inbound.create",
+        "label": "Tạo phiếu nhập"
+      },
+      {
+        "id": "warehouse.inbound.scan",
+        "label": "Quét/nhập hàng nhập"
+      },
+      {
+        "id": "warehouse.inbound.record",
+        "label": "Gửi phiếu nhập"
+      },
+      {
+        "id": "warehouse.outbound.create",
+        "label": "Tạo phiếu xuất"
+      },
+      {
+        "id": "warehouse.outbound.scan",
+        "label": "Quét/nhập hàng xuất"
+      },
+      {
+        "id": "warehouse.outbound.record",
+        "label": "Gửi phiếu xuất"
+      },
+      {
+        "id": "warehouse.inventory.read",
+        "label": "Xem tồn"
+      },
+      {
+        "id": "warehouse.inventory.adjust",
+        "label": "Điều chỉnh tồn"
+      },
+      {
+        "id": "warranty.read",
+        "label": "Xem bảo hành"
+      },
+      {
+        "id": "warranty.intake",
+        "label": "Tiếp nhận bảo hành"
+      },
+      {
+        "id": "warranty.update",
+        "label": "Cập nhật bảo hành"
+      },
+      {
+        "id": "warranty.component_issue",
+        "label": "Xuất linh kiện"
+      },
+      {
+        "id": "warranty.handover",
+        "label": "Bàn giao bảo hành"
+      },
+      {
+        "id": "nfc.read",
+        "label": "Đọc NFC"
+      },
+      {
+        "id": "nfc.link",
+        "label": "Liên kết NFC"
+      },
+      {
+        "id": "documents.read",
+        "label": "Xem chứng từ"
+      },
+      {
+        "id": "documents.create",
+        "label": "Tạo chứng từ"
+      },
+      {
+        "id": "documents.attach",
+        "label": "Đính kèm tệp"
+      },
+      {
+        "id": "notifications.read",
+        "label": "Xem thông báo"
+      },
+      {
+        "id": "notifications.mark_read",
+        "label": "Đánh dấu đã đọc"
+      },
+      {
+        "id": "history.read",
+        "label": "Xem lịch sử"
+      },
+      {
+        "id": "history.export",
+        "label": "Xuất lịch sử"
+      },
+      {
+        "id": "history.nfc.read",
+        "label": "Xem lịch sử NFC"
+      },
+      {
+        "id": "history.warranty.read",
+        "label": "Xem lịch sử bảo hành"
+      },
+      {
+        "id": "history.sessions.read",
+        "label": "Xem lịch sử phiên"
+      },
+      {
+        "id": "profile.read_self",
+        "label": "Xem hồ sơ bản thân"
+      },
+      {
+        "id": "profile.update_self",
+        "label": "Sửa hồ sơ bản thân"
+      },
+      {
+        "id": "security.change_password",
+        "label": "Đổi mật khẩu"
+      },
+      {
+        "id": "security.revoke_session",
+        "label": "Thu hồi phiên khác"
+      },
+      {
+        "id": "shift.recover",
+        "label": "Khôi phục ca"
+      },
+      {
+        "id": "shift.save",
+        "label": "Lưu nháp ca"
+      },
+      {
+        "id": "shift.end",
+        "label": "Kết thúc ca"
+      },
+      {
+        "id": "device.camera",
+        "label": "Dùng camera"
+      },
+      {
+        "id": "device.nfc",
+        "label": "Dùng NFC"
+      },
+      {
+        "id": "rbac.read",
+        "label": "Xem RBAC"
+      },
+      {
+        "id": "rbac.manage",
+        "label": "Quản lý RBAC"
+      }
+    ],
+    "matrix": {
+      "tenant_owner": {
+        "scope": "tenant",
+        "allow": [
+          "documents.read",
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ],
+        "deny": []
+      },
+      "org_admin": {
+        "scope": "organization",
+        "allow": [
+          "documents.read",
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ],
+        "deny": []
+      },
+      "warehouse_manager": {
+        "scope": "warehouse",
+        "allow": [
+          "documents.read",
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ],
+        "deny": []
+      },
+      "warehouse_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "documents.read",
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ],
+        "deny": []
+      },
+      "warranty_agent": {
+        "scope": "warehouse",
+        "allow": [
+          "documents.read",
+          "documents.attach"
+        ],
+        "deny": [
+          "documents.create",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ]
+      },
+      "auditor": {
+        "scope": "organization",
+        "allow": [
+          "documents.read"
+        ],
+        "deny": [
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ]
+      },
+      "viewer": {
+        "scope": "warehouse",
+        "allow": [
+          "documents.read"
+        ],
+        "deny": [
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ]
+      },
+      "device_operator": {
+        "scope": "warehouse",
+        "allow": [],
+        "deny": [
+          "documents.read",
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ]
+      },
+      "integration_service": {
+        "scope": "system",
+        "allow": [
+          "documents.read"
+        ],
+        "deny": [
+          "documents.create",
+          "documents.attach",
+          "warehouse.inbound.create",
+          "warehouse.outbound.create"
+        ]
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "RBAC-001",
+      "title": "Deny by default",
+      "condition": "permission không có grant hoặc scope không khớp",
+      "expected": "deny",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-002",
+      "title": "Session owner",
+      "condition": "actorId/authSessionId/warehouseId đổi giữa request và response",
+      "expected": "deny mutation; ignore late response",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-003",
+      "title": "Warehouse active",
+      "condition": "warehouse.active !== true",
+      "expected": "deny operation; preserve draft",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-006",
+      "title": "Explicit identity links",
+      "condition": "document/case/session/receipt ID không khớp",
+      "expected": "deny fallback-first-record",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-011",
+      "title": "Tenant isolation",
+      "condition": "tenantId/organizationId mismatch",
+      "expected": "deny read and mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-013",
+      "title": "Least privilege",
+      "condition": "viewer/auditor invokes create/update/post",
+      "expected": "deny without mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-015",
+      "title": "No sensitive leakage",
+      "condition": "export/log/reader payload",
+      "expected": "exclude password/token; keep business IDs",
+      "status": "implemented-fixture"
+    }
+  ],
+  "fields": [
+    {
+      "name": "tenantId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "organizationId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "warehouseId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "actorId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "authSessionId",
+      "type": "string",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "requestId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "caseId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "version",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "createdAt",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "required": false,
+      "sensitive": false,
+      "maxLength": 200
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "number",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "partner",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "lines",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "attachments",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "fixtures": {
+    "types": {
+      "inbound": "Nhập kho",
+      "outbound": "Xuất kho",
+      "warranty": "Bảo hành"
+    },
+    "statuses": {
+      "waiting": "Chờ xử lý trên Web",
+      "posted": "Đã ghi sổ",
+      "processing": "Đang xử lý",
+      "warrantyWaiting": "Chờ duyệt",
+      "received": "Đã tiếp nhận",
+      "checking": "Đang kiểm tra",
+      "ready": "Chờ bàn giao",
+      "returned": "Đã trả khách"
+    },
+    "rows": [
+      {
+        "id": "fixture-inbound-0005",
+        "number": "PN-0005",
+        "type": "inbound",
+        "day": "2026-09-09",
+        "time": "08:32",
+        "partner": "Công ty Minh Phát",
+        "status": "waiting",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": "p12-data-r02",
+        "note": "Nhập hàng theo đơn đặt hàng số ĐH-2026-0091",
+        "lines": [
+          {
+            "id": "fixture-inbound-0005:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 5,
+            "serialCount": 5,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-0005-1001",
+              "SN-XP420B-0005-1002",
+              "SN-XP420B-0005-1003",
+              "SN-XP420B-0005-1004",
+              "SN-XP420B-0005-1005"
+            ]
+          },
+          {
+            "id": "fixture-inbound-0005:line:1",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 4,
+            "serialCount": 4,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-0005-2001",
+              "SN-ZD421-0005-2002",
+              "SN-ZD421-0005-2003",
+              "SN-ZD421-0005-2004"
+            ]
+          },
+          {
+            "id": "fixture-inbound-0005:line:2",
+            "name": "Máy quét DS2208",
+            "sku": "DS2208",
+            "quantity": 2,
+            "serialCount": 2,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-DS2208-0005-3001",
+              "SN-DS2208-0005-3002"
+            ]
+          }
+        ],
+        "historyRecordId": "LS-0001",
+        "events": null,
+        "attachments": [
+          {
+            "id": "b12-attachment-1",
+            "name": "BienBanKiemDem_PN-0005.pdf",
+            "size": "77.4 KB",
+            "url": "docs/flows/documents/assets/BienBanKiemDem_PN-0005.pdf"
+          },
+          {
+            "id": "b12-attachment-2",
+            "name": "PhieuNhap_PN-0005.pdf",
+            "size": "77.1 KB",
+            "url": "docs/flows/documents/assets/PhieuNhap_PN-0005.pdf"
+          }
+        ]
+      },
+      {
+        "id": "b12-outbound-0004",
+        "number": "PX-0004",
+        "type": "outbound",
+        "day": "2026-09-08",
+        "time": "15:20",
+        "partner": "Đại lý Minh Phát",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Đại lý Minh Phát. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "b12-outbound-0004:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 3,
+            "serialCount": 3,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120004-1001",
+              "SN-ZD421-120004-1002",
+              "SN-ZD421-120004-1003"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "b12-outbound-0004:created",
+            "day": "2026-09-08",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "b12-outbound-0004:checked",
+            "day": "2026-09-08",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "b12-outbound-0004:sent",
+            "day": "2026-09-08",
+            "time": "15:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "b12-outbound-0004:posted",
+            "day": "2026-09-08",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "b12-inbound-0004",
+        "number": "PN-0004",
+        "type": "inbound",
+        "day": "2026-09-05",
+        "time": "09:10",
+        "partner": "Công ty An Khang",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Nhận hàng theo đơn ĐH-2026-0092. Đã kiểm tra bao bì và số lượng trước khi bàn giao.",
+        "lines": [
+          {
+            "id": "b12-inbound-0004:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 4,
+            "serialCount": 4,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120004-1001",
+              "SN-XP420B-120004-1002",
+              "SN-XP420B-120004-1003",
+              "SN-XP420B-120004-1004"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "b12-inbound-0004:created",
+            "day": "2026-09-05",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "b12-inbound-0004:checked",
+            "day": "2026-09-05",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "b12-inbound-0004:sent",
+            "day": "2026-09-05",
+            "time": "09:10",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "b12-inbound-0004:posted",
+            "day": "2026-09-05",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "b12-outbound-0003",
+        "number": "PX-0003",
+        "type": "outbound",
+        "day": "2026-09-03",
+        "time": "16:25",
+        "partner": "Cửa hàng Thịnh Phát",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Cửa hàng Thịnh Phát. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "b12-outbound-0003:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 5,
+            "serialCount": 5,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120003-1001",
+              "SN-ZD421-120003-1002",
+              "SN-ZD421-120003-1003",
+              "SN-ZD421-120003-1004",
+              "SN-ZD421-120003-1005"
+            ]
+          },
+          {
+            "id": "b12-outbound-0003:line:1",
+            "name": "Máy quét DS2208",
+            "sku": "DS2208",
+            "quantity": 6,
+            "serialCount": 6,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-DS2208-120003-2001",
+              "SN-DS2208-120003-2002",
+              "SN-DS2208-120003-2003",
+              "SN-DS2208-120003-2004",
+              "SN-DS2208-120003-2005",
+              "SN-DS2208-120003-2006"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "b12-outbound-0003:created",
+            "day": "2026-09-03",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "b12-outbound-0003:checked",
+            "day": "2026-09-03",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "b12-outbound-0003:sent",
+            "day": "2026-09-03",
+            "time": "16:25",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "b12-outbound-0003:posted",
+            "day": "2026-09-03",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PN-0006",
+        "number": "PN-0006",
+        "type": "inbound",
+        "day": "2026-09-16",
+        "time": "14:35",
+        "partner": "Công ty Phúc An",
+        "status": "waiting",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": "p12-data-r02",
+        "note": "Nhận hàng theo đơn ĐH-2026-0094. Đã kiểm tra bao bì và số lượng trước khi bàn giao.",
+        "lines": [
+          {
+            "id": "p12-stock-PN-0006:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 6,
+            "serialCount": 6,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120006-1001",
+              "SN-XP420B-120006-1002",
+              "SN-XP420B-120006-1003",
+              "SN-XP420B-120006-1004",
+              "SN-XP420B-120006-1005",
+              "SN-XP420B-120006-1006"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PN-0006:created",
+            "day": "2026-09-16",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Minh Anh",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PN-0006:checked",
+            "day": "2026-09-16",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Minh Anh",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PN-0006:sent",
+            "day": "2026-09-16",
+            "time": "14:35",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Minh Anh",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PX-0006",
+        "number": "PX-0006",
+        "type": "outbound",
+        "day": "2026-09-17",
+        "time": "09:20",
+        "partner": "Đại lý Nam Phương",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Đại lý Nam Phương. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "p12-stock-PX-0006:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 7,
+            "serialCount": 7,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120006-1001",
+              "SN-ZD421-120006-1002",
+              "SN-ZD421-120006-1003",
+              "SN-ZD421-120006-1004",
+              "SN-ZD421-120006-1005",
+              "SN-ZD421-120006-1006",
+              "SN-ZD421-120006-1007"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PX-0006:created",
+            "day": "2026-09-17",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PX-0006:checked",
+            "day": "2026-09-17",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PX-0006:sent",
+            "day": "2026-09-17",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PX-0006:posted",
+            "day": "2026-09-17",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PN-0007",
+        "number": "PN-0007",
+        "type": "inbound",
+        "day": "2026-09-18",
+        "time": "09:20",
+        "partner": "Công ty Thiên Long",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Nhận hàng theo đơn ĐH-2026-0096. Đã kiểm tra bao bì và số lượng trước khi bàn giao.",
+        "lines": [
+          {
+            "id": "p12-stock-PN-0007:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 8,
+            "serialCount": 8,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120007-1001",
+              "SN-XP420B-120007-1002",
+              "SN-XP420B-120007-1003",
+              "SN-XP420B-120007-1004",
+              "SN-XP420B-120007-1005",
+              "SN-XP420B-120007-1006",
+              "SN-XP420B-120007-1007",
+              "SN-XP420B-120007-1008"
+            ]
+          },
+          {
+            "id": "p12-stock-PN-0007:line:1",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 2,
+            "serialCount": 2,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120007-2001",
+              "SN-ZD421-120007-2002"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PN-0007:created",
+            "day": "2026-09-18",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PN-0007:checked",
+            "day": "2026-09-18",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PN-0007:sent",
+            "day": "2026-09-18",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PN-0007:posted",
+            "day": "2026-09-18",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PX-0007",
+        "number": "PX-0007",
+        "type": "outbound",
+        "day": "2026-09-19",
+        "time": "14:35",
+        "partner": "Cửa hàng An Bình",
+        "status": "waiting",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Cửa hàng An Bình. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "p12-stock-PX-0007:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 2,
+            "serialCount": 2,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120007-1001",
+              "SN-ZD421-120007-1002"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PX-0007:created",
+            "day": "2026-09-19",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PX-0007:checked",
+            "day": "2026-09-19",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PX-0007:sent",
+            "day": "2026-09-19",
+            "time": "14:35",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PN-0008",
+        "number": "PN-0008",
+        "type": "inbound",
+        "day": "2026-09-20",
+        "time": "09:20",
+        "partner": "Công ty Phúc An",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": "p12-data-r02",
+        "note": "Nhận hàng theo đơn ĐH-2026-0098. Đã kiểm tra bao bì và số lượng trước khi bàn giao.",
+        "lines": [
+          {
+            "id": "p12-stock-PN-0008:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 3,
+            "serialCount": 3,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120008-1001",
+              "SN-XP420B-120008-1002",
+              "SN-XP420B-120008-1003"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PN-0008:created",
+            "day": "2026-09-20",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Minh Anh",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PN-0008:checked",
+            "day": "2026-09-20",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Minh Anh",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PN-0008:sent",
+            "day": "2026-09-20",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Minh Anh",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PN-0008:posted",
+            "day": "2026-09-20",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PX-0008",
+        "number": "PX-0008",
+        "type": "outbound",
+        "day": "2026-09-21",
+        "time": "09:20",
+        "partner": "Đại lý Nam Phương",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Đại lý Nam Phương. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "p12-stock-PX-0008:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 4,
+            "serialCount": 4,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120008-1001",
+              "SN-ZD421-120008-1002",
+              "SN-ZD421-120008-1003",
+              "SN-ZD421-120008-1004"
+            ]
+          },
+          {
+            "id": "p12-stock-PX-0008:line:1",
+            "name": "Máy quét DS2208",
+            "sku": "DS2208",
+            "quantity": 5,
+            "serialCount": 5,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-DS2208-120008-2001",
+              "SN-DS2208-120008-2002",
+              "SN-DS2208-120008-2003",
+              "SN-DS2208-120008-2004",
+              "SN-DS2208-120008-2005"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PX-0008:created",
+            "day": "2026-09-21",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PX-0008:checked",
+            "day": "2026-09-21",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PX-0008:sent",
+            "day": "2026-09-21",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PX-0008:posted",
+            "day": "2026-09-21",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PN-0009",
+        "number": "PN-0009",
+        "type": "inbound",
+        "day": "2026-09-22",
+        "time": "14:35",
+        "partner": "Công ty Thiên Long",
+        "status": "waiting",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Nhận hàng theo đơn ĐH-2026-0100. Đã kiểm tra bao bì và số lượng trước khi bàn giao.",
+        "lines": [
+          {
+            "id": "p12-stock-PN-0009:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 5,
+            "serialCount": 5,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120009-1001",
+              "SN-XP420B-120009-1002",
+              "SN-XP420B-120009-1003",
+              "SN-XP420B-120009-1004",
+              "SN-XP420B-120009-1005"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PN-0009:created",
+            "day": "2026-09-22",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PN-0009:checked",
+            "day": "2026-09-22",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PN-0009:sent",
+            "day": "2026-09-22",
+            "time": "14:35",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PX-0009",
+        "number": "PX-0009",
+        "type": "outbound",
+        "day": "2026-09-23",
+        "time": "09:20",
+        "partner": "Cửa hàng An Bình",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Cửa hàng An Bình. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "p12-stock-PX-0009:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 6,
+            "serialCount": 6,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120009-1001",
+              "SN-ZD421-120009-1002",
+              "SN-ZD421-120009-1003",
+              "SN-ZD421-120009-1004",
+              "SN-ZD421-120009-1005",
+              "SN-ZD421-120009-1006"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PX-0009:created",
+            "day": "2026-09-23",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PX-0009:checked",
+            "day": "2026-09-23",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PX-0009:sent",
+            "day": "2026-09-23",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PX-0009:posted",
+            "day": "2026-09-23",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PN-0010",
+        "number": "PN-0010",
+        "type": "inbound",
+        "day": "2026-09-24",
+        "time": "09:20",
+        "partner": "Công ty Phúc An",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": "p12-data-r02",
+        "note": "Lô hàng phục vụ đợt bổ sung thiết bị cho các điểm bán trong tháng 10. Khi nhận hàng, đối chiếu từng serial trên tem sản phẩm với danh sách đóng gói và giữ nguyên nhãn của nhà cung cấp.\n\nKiểm tra riêng hộp phụ kiện đi kèm: adapter nguồn, cáp kết nối và tài liệu hướng dẫn. Nếu thiếu phụ kiện, ghi rõ mã sản phẩm liên quan để bộ phận mua hàng làm việc với nhà cung cấp; không tự thay thế bằng phụ kiện của lô khác.\n\nCác kiện hàng được sắp theo nhóm sản phẩm để thuận tiện kiểm đếm. Bao bì cần khô ráo, không móp góc; chụp lại vị trí bất thường trước khi mở kiện và chuyển thông tin cho người phụ trách.\n\nChứng từ và hàng thực nhận phải được đối chiếu đầy đủ trước khi hoàn tất bàn giao. Ghi chú này được lưu nguyên văn để các ca sau tiếp tục theo dõi.",
+        "lines": [
+          {
+            "id": "p12-stock-PN-0010:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 7,
+            "serialCount": 7,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120010-1001",
+              "SN-XP420B-120010-1002",
+              "SN-XP420B-120010-1003",
+              "SN-XP420B-120010-1004",
+              "SN-XP420B-120010-1005",
+              "SN-XP420B-120010-1006",
+              "SN-XP420B-120010-1007"
+            ]
+          },
+          {
+            "id": "p12-stock-PN-0010:line:1",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 8,
+            "serialCount": 8,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120010-2001",
+              "SN-ZD421-120010-2002",
+              "SN-ZD421-120010-2003",
+              "SN-ZD421-120010-2004",
+              "SN-ZD421-120010-2005",
+              "SN-ZD421-120010-2006",
+              "SN-ZD421-120010-2007",
+              "SN-ZD421-120010-2008"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PN-0010:created",
+            "day": "2026-09-24",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Minh Anh",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PN-0010:checked",
+            "day": "2026-09-24",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Minh Anh",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PN-0010:sent",
+            "day": "2026-09-24",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Minh Anh",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PN-0010:posted",
+            "day": "2026-09-24",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PX-0010",
+        "number": "PX-0010",
+        "type": "outbound",
+        "day": "2026-09-25",
+        "time": "14:35",
+        "partner": "Đại lý Nam Phương",
+        "status": "waiting",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Đại lý Nam Phương. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "p12-stock-PX-0010:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 8,
+            "serialCount": 8,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120010-1001",
+              "SN-ZD421-120010-1002",
+              "SN-ZD421-120010-1003",
+              "SN-ZD421-120010-1004",
+              "SN-ZD421-120010-1005",
+              "SN-ZD421-120010-1006",
+              "SN-ZD421-120010-1007",
+              "SN-ZD421-120010-1008"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PX-0010:created",
+            "day": "2026-09-25",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PX-0010:checked",
+            "day": "2026-09-25",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PX-0010:sent",
+            "day": "2026-09-25",
+            "time": "14:35",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PN-0011",
+        "number": "PN-0011",
+        "type": "inbound",
+        "day": "2026-09-26",
+        "time": "09:20",
+        "partner": "Công ty Thiên Long",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Nhận hàng theo đơn ĐH-2026-0104. Đã kiểm tra bao bì và số lượng trước khi bàn giao.",
+        "lines": [
+          {
+            "id": "p12-stock-PN-0011:line:0",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 2,
+            "serialCount": 2,
+            "unit": "Cái",
+            "image": "docs/flows/lookup/assets/demo/box.png",
+            "serials": [
+              "SN-XP420B-120011-1001",
+              "SN-XP420B-120011-1002"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PN-0011:created",
+            "day": "2026-09-26",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PN-0011:checked",
+            "day": "2026-09-26",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PN-0011:sent",
+            "day": "2026-09-26",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PN-0011:posted",
+            "day": "2026-09-26",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": []
+      },
+      {
+        "id": "p12-stock-PX-0011",
+        "number": "PX-0011",
+        "type": "outbound",
+        "day": "2026-09-27",
+        "time": "09:20",
+        "partner": "Cửa hàng An Bình",
+        "status": "posted",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": "p12-data-r02",
+        "note": "Giao hàng cho Cửa hàng An Bình. Đối chiếu serial và phụ kiện theo phiếu trước khi đóng gói.",
+        "lines": [
+          {
+            "id": "p12-stock-PX-0011:line:0",
+            "name": "Đầu in ZD421",
+            "sku": "ZD421",
+            "quantity": 3,
+            "serialCount": 3,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-ZD421-120011-1001",
+              "SN-ZD421-120011-1002",
+              "SN-ZD421-120011-1003"
+            ]
+          },
+          {
+            "id": "p12-stock-PX-0011:line:1",
+            "name": "Máy quét DS2208",
+            "sku": "DS2208",
+            "quantity": 4,
+            "serialCount": 4,
+            "unit": "Cái",
+            "image": null,
+            "serials": [
+              "SN-DS2208-120011-2001",
+              "SN-DS2208-120011-2002",
+              "SN-DS2208-120011-2003",
+              "SN-DS2208-120011-2004"
+            ]
+          }
+        ],
+        "historyRecordId": null,
+        "events": [
+          {
+            "id": "p12-stock-PX-0011:created",
+            "day": "2026-09-27",
+            "time": "08:00",
+            "label": "Tạo chứng từ",
+            "actor": "Lan Nguyễn",
+            "description": "Ghi nhận thông tin đối tác và Kho Hoa Nam."
+          },
+          {
+            "id": "p12-stock-PX-0011:checked",
+            "day": "2026-09-27",
+            "time": "08:15",
+            "label": "Kiểm tra sản phẩm",
+            "actor": "Lan Nguyễn",
+            "description": "Đối chiếu số lượng và serial theo các dòng chứng từ."
+          },
+          {
+            "id": "p12-stock-PX-0011:sent",
+            "day": "2026-09-27",
+            "time": "09:20",
+            "label": "Gửi phiếu lên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Phiếu đã gửi, chưa ghi sổ."
+          },
+          {
+            "id": "p12-stock-PX-0011:posted",
+            "day": "2026-09-27",
+            "time": "17:30",
+            "label": "Đã ghi sổ trên Web",
+            "actor": "Lan Nguyễn",
+            "description": "Hoàn tất đối chiếu chứng từ trên hệ thống Web."
+          }
+        ],
+        "attachments": [
+          {
+            "id": "p12-px0011-receipt",
+            "title": "Phiếu xuất kho",
+            "kind": "receipt",
+            "name": "PhieuXuat_PX-0011.pdf",
+            "size": "76.8 KB",
+            "pages": 1,
+            "url": "docs/flows/documents/assets/PhieuXuat_PX-0011.pdf"
+          },
+          {
+            "id": "p12-px0011-handover",
+            "title": "Biên bản giao nhận",
+            "kind": "handover",
+            "name": "BienBanGiaoNhan_PX-0011.pdf",
+            "size": "76.9 KB",
+            "pages": 1,
+            "url": "docs/flows/documents/assets/BienBanGiaoNhan_PX-0011.pdf"
+          }
+        ]
+      },
+      {
+        "id": "b12-warranty-001",
+        "caseId": "BH-001",
+        "number": "BH-001",
+        "type": "warranty",
+        "day": "2026-09-10",
+        "time": "14:45",
+        "partner": "Công ty Minh Phát",
+        "status": "checking",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": 1,
+        "note": "Khách hàng yêu cầu kiểm tra tổng thể và vệ sinh máy.",
+        "lines": [
+          {
+            "id": "BH-001:product",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP-420B",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "HN12345"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "day": "2026-09-10",
+            "time": "08:32",
+            "id": "BH-001-E1",
+            "actor": "Minh Anh",
+            "description": "Công ty Minh Phát · Máy không lên nguồn"
+          },
+          {
+            "label": "Đang kiểm tra",
+            "day": "2026-09-10",
+            "time": "14:30",
+            "id": "BH-001-E2",
+            "actor": "Minh Anh",
+            "description": "Máy không lên nguồn, kiểm tra nguồn và bo mạch."
+          },
+          {
+            "id": "BH-001-XLK-0002",
+            "label": "Đã xuất linh kiện",
+            "day": "2026-09-10",
+            "time": "14:45",
+            "actor": "Minh Anh",
+            "documentId": "XLK-0002",
+            "description": "XLK-0002 · 2 mã · 3 linh kiện"
+          }
+        ]
+      },
+      {
+        "id": "b12-warranty-002",
+        "caseId": "BH-002",
+        "number": "BH-002",
+        "type": "warranty",
+        "day": "2026-09-10",
+        "time": "11:20",
+        "partner": "Đại lý Thành Công",
+        "status": "returned",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": 1,
+        "note": "Khách đã kiểm tra thiết bị tại quầy và nhận đủ phụ kiện.",
+        "lines": [
+          {
+            "id": "BH-002:product",
+            "name": "Máy quét mã vạch ZD421",
+            "sku": "ZD421",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "HN12346"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "day": "2026-09-09",
+            "time": "16:10",
+            "id": "BH-002-E1",
+            "actor": "Minh Anh",
+            "description": "Đại lý Thành Công · Không quét được mã vạch"
+          },
+          {
+            "id": "BH-002-XLK-0003",
+            "label": "Đã xuất linh kiện",
+            "day": "2026-09-10",
+            "time": "09:15",
+            "actor": "Minh Anh",
+            "documentId": "XLK-0003",
+            "description": "XLK-0003 · 1 mã · 1 linh kiện"
+          },
+          {
+            "label": "Hoàn tất sửa chữa",
+            "day": "2026-09-10",
+            "time": "10:45",
+            "id": "BH-002-E2",
+            "actor": "Minh Anh",
+            "description": "Đã thay cáp USB, kiểm tra quét liên tục 30 lượt. Thiết bị hoạt động ổn định."
+          },
+          {
+            "label": "Đã trả khách",
+            "day": "2026-09-10",
+            "time": "11:20",
+            "id": "BH-002-E3",
+            "actor": "Minh Anh",
+            "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+          }
+        ]
+      },
+      {
+        "id": "p12-warranty-BH-003",
+        "caseId": "BH-003",
+        "number": "BH-003",
+        "type": "warranty",
+        "day": "2026-09-13",
+        "time": "08:32",
+        "partner": "Cửa hàng An Khang",
+        "status": "received",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": 1,
+        "note": "Máy báo hết giấy dù đã lắp cuộn tem. Khách gửi kèm cuộn tem đang sử dụng để kiểm tra.",
+        "lines": [
+          {
+            "id": "BH-003:product",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP420B",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "SN-XP420B-202"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "time": "08:32",
+            "day": "2026-09-13",
+            "id": "BH-003-E1",
+            "actor": "Minh Anh",
+            "description": "Cửa hàng An Khang · Không nhận giấy / Tem"
+          }
+        ]
+      },
+      {
+        "id": "p12-warranty-BH-004",
+        "caseId": "BH-004",
+        "number": "BH-004",
+        "type": "warranty",
+        "day": "2026-09-14",
+        "time": "10:23",
+        "partner": "Siêu thị Minh Tâm",
+        "status": "returned",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": 1,
+        "note": "Đã hướng dẫn nhân viên cửa hàng cách kiểm tra cấu hình mạng.",
+        "lines": [
+          {
+            "id": "BH-004:product",
+            "name": "Máy quét mã vạch ZD421",
+            "sku": "ZD421",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "SN-ZD421-203"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "time": "08:30",
+            "day": "2026-09-14",
+            "id": "BH-004-E1",
+            "actor": "Lan Nguyễn",
+            "description": "Siêu thị Minh Tâm · Không kết nối mạng LAN"
+          },
+          {
+            "label": "Hoàn tất sửa chữa",
+            "time": "10:15",
+            "day": "2026-09-14",
+            "id": "BH-004-E2",
+            "actor": "Lan Nguyễn",
+            "description": "Đã cấu hình lại mạng LAN và kiểm tra kết nối trên máy khách. Không cần thay linh kiện."
+          },
+          {
+            "label": "Đã trả khách",
+            "time": "10:23",
+            "day": "2026-09-14",
+            "id": "BH-004-E3",
+            "actor": "Lan Nguyễn",
+            "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+          }
+        ]
+      },
+      {
+        "id": "p12-warranty-BH-005",
+        "caseId": "BH-005",
+        "number": "BH-005",
+        "type": "warranty",
+        "day": "2026-09-15",
+        "time": "15:40",
+        "partner": "Công ty Phúc An",
+        "status": "ready",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": 1,
+        "note": "Ưu tiên xử lý trước đợt kiểm kê. Khách đề nghị gọi khi thiết bị sẵn sàng nhận.",
+        "lines": [
+          {
+            "id": "BH-005:product",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP420B",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "SN-XP420B-204"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "time": "08:32",
+            "day": "2026-09-15",
+            "id": "BH-005-E1",
+            "actor": "Minh Anh",
+            "description": "Công ty Phúc An · Bản in bị sọc / Đứt nét"
+          },
+          {
+            "label": "Đang kiểm tra",
+            "time": "10:24",
+            "day": "2026-09-15",
+            "id": "BH-005-E2",
+            "actor": "Minh Anh",
+            "description": "Đầu in có điểm nhiệt suy giảm, trục lăn mòn khiến tem đi không đều."
+          },
+          {
+            "id": "BH-005-XLK-0004",
+            "label": "Đã xuất linh kiện",
+            "day": "2026-09-15",
+            "time": "11:10",
+            "actor": "Minh Anh",
+            "documentId": "XLK-0004",
+            "description": "XLK-0004 · 2 mã · 2 linh kiện"
+          },
+          {
+            "label": "Hoàn tất sửa chữa",
+            "time": "14:50",
+            "day": "2026-09-15",
+            "id": "BH-005-E3",
+            "actor": "Minh Anh",
+            "description": "Đã thay đầu in và trục lăn, hiệu chuẩn cảm biến, in thử 20 tem đạt yêu cầu."
+          },
+          {
+            "label": "Chờ bàn giao",
+            "time": "15:40",
+            "day": "2026-09-15",
+            "id": "BH-005-E4",
+            "actor": "Minh Anh",
+            "description": "Thiết bị đã sẵn sàng; chờ khách nhận theo quy trình."
+          }
+        ]
+      },
+      {
+        "id": "p12-warranty-BH-006",
+        "caseId": "BH-006",
+        "number": "BH-006",
+        "type": "warranty",
+        "day": "2026-09-16",
+        "time": "10:25",
+        "partner": "Nhà thuốc Bình An",
+        "status": "returned",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": 1,
+        "note": "Khách đã kiểm tra quét mã và nhận lại thiết bị trong ngày.",
+        "lines": [
+          {
+            "id": "BH-006:product",
+            "name": "Máy quét mã vạch ZD421",
+            "sku": "ZD421",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "SN-ZD421-205"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "time": "08:30",
+            "day": "2026-09-16",
+            "id": "BH-006-E1",
+            "actor": "Minh Anh",
+            "description": "Nhà thuốc Bình An · Nút bấm không hoạt động"
+          },
+          {
+            "id": "BH-006-XLK-0005",
+            "label": "Đã xuất linh kiện",
+            "day": "2026-09-16",
+            "time": "09:10",
+            "actor": "Minh Anh",
+            "documentId": "XLK-0005",
+            "description": "XLK-0005 · 1 mã · 1 linh kiện"
+          },
+          {
+            "label": "Hoàn tất sửa chữa",
+            "time": "10:15",
+            "day": "2026-09-16",
+            "id": "BH-006-E2",
+            "actor": "Minh Anh",
+            "description": "Đã thay cụm nút kích hoạt, vệ sinh thiết bị và kiểm tra chức năng quét."
+          },
+          {
+            "label": "Đã trả khách",
+            "time": "10:25",
+            "day": "2026-09-16",
+            "id": "BH-006-E3",
+            "actor": "Minh Anh",
+            "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+          }
+        ]
+      },
+      {
+        "id": "p12-warranty-BH-007",
+        "caseId": "BH-007",
+        "number": "BH-007",
+        "type": "warranty",
+        "day": "2026-09-17",
+        "time": "10:26",
+        "partner": "Công ty Sông Việt",
+        "status": "checking",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Lan Nguyễn",
+        "version": 1,
+        "note": "Nguồn và cơ cấu cấp tem bình thường. Khách đã cung cấp phiên bản phần mềm đang sử dụng.",
+        "lines": [
+          {
+            "id": "BH-007:product",
+            "name": "Máy in nhiệt XP-420B",
+            "sku": "XP420B",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "SN-XP420B-206"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "time": "08:32",
+            "day": "2026-09-17",
+            "id": "BH-007-E1",
+            "actor": "Lan Nguyễn",
+            "description": "Công ty Sông Việt · Không kết nối USB"
+          },
+          {
+            "label": "Đang kiểm tra",
+            "time": "10:26",
+            "day": "2026-09-17",
+            "id": "BH-007-E2",
+            "actor": "Lan Nguyễn",
+            "description": "Máy không nhận lệnh in sau khi cập nhật driver; đang kiểm tra cấu hình cổng USB và phần mềm."
+          }
+        ]
+      },
+      {
+        "id": "p12-warranty-BH-008",
+        "caseId": "BH-008",
+        "number": "BH-008",
+        "type": "warranty",
+        "day": "2026-09-18",
+        "time": "10:27",
+        "partner": "Đại lý Nam Phương",
+        "status": "returned",
+        "warehouseId": "fixture-hoa-nam",
+        "warehouse": "Kho Hoa Nam",
+        "actor": "Minh Anh",
+        "version": 1,
+        "note": "Khách đã kiểm tra thiết bị, xác nhận đủ phụ kiện và nhận lại tại quầy.",
+        "lines": [
+          {
+            "id": "BH-008:product",
+            "name": "Máy quét mã vạch ZD421",
+            "sku": "ZD421",
+            "quantity": 1,
+            "serialCount": 1,
+            "serials": [
+              "SN-ZD421-207"
+            ],
+            "unit": "Cái",
+            "image": null
+          }
+        ],
+        "attachments": [],
+        "historyRecordId": null,
+        "events": [
+          {
+            "label": "Đã tiếp nhận",
+            "time": "08:30",
+            "day": "2026-09-18",
+            "id": "BH-008-E1",
+            "actor": "Minh Anh",
+            "description": "Đại lý Nam Phương · Không kết nối USB"
+          },
+          {
+            "id": "BH-008-XLK-0006",
+            "label": "Đã xuất linh kiện",
+            "day": "2026-09-18",
+            "time": "09:15",
+            "actor": "Minh Anh",
+            "documentId": "XLK-0006",
+            "description": "XLK-0006 · 1 mã · 1 linh kiện"
+          },
+          {
+            "label": "Hoàn tất sửa chữa",
+            "time": "10:15",
+            "day": "2026-09-18",
+            "id": "BH-008-E2",
+            "actor": "Minh Anh",
+            "description": "Đã thay bo giao tiếp USB và kiểm tra kết nối liên tục. Thiết bị hoạt động bình thường."
+          },
+          {
+            "label": "Đã trả khách",
+            "time": "10:27",
+            "day": "2026-09-18",
+            "id": "BH-008-E3",
+            "actor": "Minh Anh",
+            "description": "Khách đã kiểm tra thiết bị và nhận đủ phụ kiện."
+          }
+        ]
+      }
+    ],
+    "totals": {
+      "rowCount": 24
+    },
+    "creationPolicy": {
+      "noteMaxLength": 200
+    },
+    "attachments": [
+      {
+        "id": "p18-pn0005-dossier",
+        "name": "HoSoNhap_PN-0005.pdf",
+        "size": "153.1 KiB",
+        "mime": "application/pdf",
+        "state": "ready",
+        "url": "docs/flows/attachments/assets/HoSoNhap_PN-0005.pdf",
+        "day": "2026-09-09"
+      },
+      {
+        "id": "p18-pn0005-photo1",
+        "taskId": "p18-upload-photo1",
+        "name": "Hinh_01.png",
+        "size": null,
+        "mime": "image/png",
+        "state": "uploading",
+        "progress": 75,
+        "url": "docs/flows/lookup/assets/demo/box.png"
+      },
+      {
+        "id": "p18-pn0005-handover",
+        "taskId": "p18-upload-handover",
+        "name": "BienBanKiemDem_PN-0005.pdf",
+        "size": "77.4 KB",
+        "mime": "application/pdf",
+        "state": "error",
+        "error": "Tải lên thất bại",
+        "url": "docs/flows/documents/assets/BienBanKiemDem_PN-0005.pdf"
+      },
+      {
+        "id": "p18-pn0005-photo2",
+        "name": "Hinh_02.png",
+        "size": null,
+        "mime": "image/png",
+        "state": "ready",
+        "url": "docs/flows/lookup/assets/demo/box.png",
+        "day": "2026-09-09"
+      }
+    ]
+  },
+  "mapping": {
+    "P12.S01": {
+      "dataRef": "fixtures.documents",
+      "permissionIds": [
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "warehouse.inbound.create",
+        "warehouse.outbound.create"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P12.S01-T01",
+        "P12.S01-T02",
+        "P12.S01-T03",
+        "P12.S01-T04"
+      ],
+      "sourcePanel": 1
+    },
+    "P12.S02": {
+      "dataRef": "fixtures.documents",
+      "permissionIds": [
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "warehouse.inbound.create",
+        "warehouse.outbound.create"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P12.S02-T01",
+        "P12.S02-T02",
+        "P12.S02-T03",
+        "P12.S02-T04"
+      ],
+      "sourcePanel": 2
+    },
+    "P12.S03": {
+      "dataRef": "fixtures.documents",
+      "permissionIds": [
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "warehouse.inbound.create",
+        "warehouse.outbound.create"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P12.S03-T01",
+        "P12.S03-T02",
+        "P12.S03-T03",
+        "P12.S03-T04"
+      ],
+      "sourcePanel": 3
+    },
+    "P12.S04": {
+      "dataRef": "fixtures.documents",
+      "permissionIds": [
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "warehouse.inbound.create",
+        "warehouse.outbound.create"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P12.S04-T01",
+        "P12.S04-T02",
+        "P12.S04-T03",
+        "P12.S04-T04"
+      ],
+      "sourcePanel": 4
+    }
+  },
+  "testCases": [
+    {
+      "id": "P12.S01-T01",
+      "panelId": "P12.S01",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lọc/mở đúng document",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S01-T02",
+      "panelId": "P12.S01",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Form thiếu dữ liệu bị chặn",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P12.S01-T03",
+      "panelId": "P12.S01",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Readonly không create",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P12.S01-T04",
+      "panelId": "P12.S01",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Attachment đúng owner/version",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S02-T01",
+      "panelId": "P12.S02",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lọc/mở đúng document",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S02-T02",
+      "panelId": "P12.S02",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Form thiếu dữ liệu bị chặn",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P12.S02-T03",
+      "panelId": "P12.S02",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Readonly không create",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P12.S02-T04",
+      "panelId": "P12.S02",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Attachment đúng owner/version",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S03-T01",
+      "panelId": "P12.S03",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lọc/mở đúng document",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S03-T02",
+      "panelId": "P12.S03",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Form thiếu dữ liệu bị chặn",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P12.S03-T03",
+      "panelId": "P12.S03",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Readonly không create",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P12.S03-T04",
+      "panelId": "P12.S03",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Attachment đúng owner/version",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S04-T01",
+      "panelId": "P12.S04",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lọc/mở đúng document",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P12.S04-T02",
+      "panelId": "P12.S04",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Form thiếu dữ liệu bị chặn",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P12.S04-T03",
+      "panelId": "P12.S04",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Readonly không create",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P12.S04-T04",
+      "panelId": "P12.S04",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Attachment đúng owner/version",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    }
+  ],
+  "quality": {
+    "panelCoverage": "100%",
+    "permissionScenarioCoverage": "100% of listed board permissions",
+    "datasetTargetCoverage": "99%",
+    "sourceTruth": "fixture adapters and handoff contracts",
+    "productionBackend": "BLOCKED_UNVERIFIED",
+    "testerUse": "fixture-pass runs now; proposed-rbac-test runs against future RBAC adapter"
+  }
+}

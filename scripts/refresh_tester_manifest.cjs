@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const crypto=require('node:crypto');
+const dir=path.resolve(__dirname,'../handoff/tester-dataset-2026-10-02');
+const file=path.join(dir,'MANIFEST.json');
+const manifest=JSON.parse(fs.readFileSync(file,'utf8'));
+manifest.files=fs.readdirSync(dir).filter(name=>name!=='MANIFEST.json'&&name!=='VALIDATION.json').sort().map(name=>{const bytes=fs.readFileSync(path.join(dir,name));return {file:name,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};});
+manifest.csvExports=['PANEL_INDEX.csv','TEST_CASE_INDEX.csv','RBAC_ROLE_PERMISSION.csv'];
+fs.writeFileSync(file,JSON.stringify(manifest,null,2)+'\n');
+console.log(JSON.stringify({files:manifest.files.length,csvExports:manifest.csvExports},null,2));

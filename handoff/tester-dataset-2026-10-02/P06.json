@@ -1,0 +1,1599 @@
+{
+  "schemaVersion": "tester-dataset.v1",
+  "generatedAt": "2026-10-02",
+  "sourceCommit": "81d6f61fbaff0d7cef1779d08deb21ceb41f2007",
+  "classification": "PREVIEW_FIXTURE_PLUS_EXPLICIT_RBAC_TEST_MATRIX",
+  "board": "P06",
+  "domain": "Product lookup/inventory",
+  "panelCount": 4,
+  "panels": [
+    {
+      "id": "P06.S01",
+      "title": "Tra cứu sản phẩm",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P06.S02",
+      "title": "Thông tin sản phẩm",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P06.S03",
+      "title": "Tồn kho sản phẩm",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P06.S04",
+      "title": "Lịch sử giao dịch",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    }
+  ],
+  "sourceRefs": [
+    {
+      "file": "docs/flows/lookup/demo-data.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/lookup/fixture-adapter.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/lookup/read-owner.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    }
+  ],
+  "scope": {
+    "tenantId": "tenant-hoa-nam",
+    "organizationId": "org-hoa-nam",
+    "warehouseId": "fixture-hoa-nam",
+    "warehouseName": "Kho Hoa Nam",
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  "actors": [
+    {
+      "id": "fixture-minhanh",
+      "name": "Minh Anh",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "demo-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-lan",
+      "name": "Lan Nguyễn",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "scenario-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-manager",
+      "name": "Quản lý kho mẫu",
+      "role": "warehouse_manager",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-auditor",
+      "name": "Kiểm toán mẫu",
+      "role": "auditor",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-viewer",
+      "name": "Người xem mẫu",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warranty",
+      "name": "Kỹ thuật bảo hành mẫu",
+      "role": "warranty_agent",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warehouse-stopped",
+      "name": "Kho tạm dừng mẫu",
+      "role": "warehouse_operator",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "warehouse-stopped"
+    },
+    {
+      "id": "fixture-denied",
+      "name": "Tài khoản không có quyền kho",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    }
+  ],
+  "roles": {
+    "tenant_owner": {
+      "label": "Chủ tenant",
+      "scope": "tenant"
+    },
+    "org_admin": {
+      "label": "Quản trị tổ chức",
+      "scope": "organization"
+    },
+    "warehouse_manager": {
+      "label": "Quản lý kho",
+      "scope": "warehouse"
+    },
+    "warehouse_operator": {
+      "label": "Nhân viên kho",
+      "scope": "warehouse"
+    },
+    "warranty_agent": {
+      "label": "Nhân viên bảo hành",
+      "scope": "warehouse"
+    },
+    "auditor": {
+      "label": "Kiểm toán viên",
+      "scope": "organization"
+    },
+    "viewer": {
+      "label": "Người xem",
+      "scope": "warehouse"
+    },
+    "device_operator": {
+      "label": "Vận hành thiết bị",
+      "scope": "warehouse"
+    },
+    "integration_service": {
+      "label": "Dịch vụ tích hợp",
+      "scope": "system"
+    }
+  },
+  "permissions": {
+    "used": [
+      "warehouse.inventory.read",
+      "history.read",
+      "documents.read"
+    ],
+    "catalog": [
+      {
+        "id": "auth.login",
+        "label": "Đăng nhập"
+      },
+      {
+        "id": "auth.start_session",
+        "label": "Xác nhận phiên và bắt đầu ca"
+      },
+      {
+        "id": "auth.recover_account",
+        "label": "Yêu cầu khôi phục tài khoản"
+      },
+      {
+        "id": "warehouse.read",
+        "label": "Xem kho"
+      },
+      {
+        "id": "warehouse.inbound.create",
+        "label": "Tạo phiếu nhập"
+      },
+      {
+        "id": "warehouse.inbound.scan",
+        "label": "Quét/nhập hàng nhập"
+      },
+      {
+        "id": "warehouse.inbound.record",
+        "label": "Gửi phiếu nhập"
+      },
+      {
+        "id": "warehouse.outbound.create",
+        "label": "Tạo phiếu xuất"
+      },
+      {
+        "id": "warehouse.outbound.scan",
+        "label": "Quét/nhập hàng xuất"
+      },
+      {
+        "id": "warehouse.outbound.record",
+        "label": "Gửi phiếu xuất"
+      },
+      {
+        "id": "warehouse.inventory.read",
+        "label": "Xem tồn"
+      },
+      {
+        "id": "warehouse.inventory.adjust",
+        "label": "Điều chỉnh tồn"
+      },
+      {
+        "id": "warranty.read",
+        "label": "Xem bảo hành"
+      },
+      {
+        "id": "warranty.intake",
+        "label": "Tiếp nhận bảo hành"
+      },
+      {
+        "id": "warranty.update",
+        "label": "Cập nhật bảo hành"
+      },
+      {
+        "id": "warranty.component_issue",
+        "label": "Xuất linh kiện"
+      },
+      {
+        "id": "warranty.handover",
+        "label": "Bàn giao bảo hành"
+      },
+      {
+        "id": "nfc.read",
+        "label": "Đọc NFC"
+      },
+      {
+        "id": "nfc.link",
+        "label": "Liên kết NFC"
+      },
+      {
+        "id": "documents.read",
+        "label": "Xem chứng từ"
+      },
+      {
+        "id": "documents.create",
+        "label": "Tạo chứng từ"
+      },
+      {
+        "id": "documents.attach",
+        "label": "Đính kèm tệp"
+      },
+      {
+        "id": "notifications.read",
+        "label": "Xem thông báo"
+      },
+      {
+        "id": "notifications.mark_read",
+        "label": "Đánh dấu đã đọc"
+      },
+      {
+        "id": "history.read",
+        "label": "Xem lịch sử"
+      },
+      {
+        "id": "history.export",
+        "label": "Xuất lịch sử"
+      },
+      {
+        "id": "history.nfc.read",
+        "label": "Xem lịch sử NFC"
+      },
+      {
+        "id": "history.warranty.read",
+        "label": "Xem lịch sử bảo hành"
+      },
+      {
+        "id": "history.sessions.read",
+        "label": "Xem lịch sử phiên"
+      },
+      {
+        "id": "profile.read_self",
+        "label": "Xem hồ sơ bản thân"
+      },
+      {
+        "id": "profile.update_self",
+        "label": "Sửa hồ sơ bản thân"
+      },
+      {
+        "id": "security.change_password",
+        "label": "Đổi mật khẩu"
+      },
+      {
+        "id": "security.revoke_session",
+        "label": "Thu hồi phiên khác"
+      },
+      {
+        "id": "shift.recover",
+        "label": "Khôi phục ca"
+      },
+      {
+        "id": "shift.save",
+        "label": "Lưu nháp ca"
+      },
+      {
+        "id": "shift.end",
+        "label": "Kết thúc ca"
+      },
+      {
+        "id": "device.camera",
+        "label": "Dùng camera"
+      },
+      {
+        "id": "device.nfc",
+        "label": "Dùng NFC"
+      },
+      {
+        "id": "rbac.read",
+        "label": "Xem RBAC"
+      },
+      {
+        "id": "rbac.manage",
+        "label": "Quản lý RBAC"
+      }
+    ],
+    "matrix": {
+      "tenant_owner": {
+        "scope": "tenant",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "org_admin": {
+        "scope": "organization",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "warehouse_manager": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "warehouse_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "warranty_agent": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "auditor": {
+        "scope": "organization",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "viewer": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      },
+      "device_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read"
+        ],
+        "deny": [
+          "history.read",
+          "documents.read"
+        ]
+      },
+      "integration_service": {
+        "scope": "system",
+        "allow": [
+          "warehouse.inventory.read",
+          "history.read",
+          "documents.read"
+        ],
+        "deny": []
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "RBAC-001",
+      "title": "Deny by default",
+      "condition": "permission không có grant hoặc scope không khớp",
+      "expected": "deny",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-002",
+      "title": "Session owner",
+      "condition": "actorId/authSessionId/warehouseId đổi giữa request và response",
+      "expected": "deny mutation; ignore late response",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-003",
+      "title": "Warehouse active",
+      "condition": "warehouse.active !== true",
+      "expected": "deny operation; preserve draft",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-006",
+      "title": "Explicit identity links",
+      "condition": "document/case/session/receipt ID không khớp",
+      "expected": "deny fallback-first-record",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-011",
+      "title": "Tenant isolation",
+      "condition": "tenantId/organizationId mismatch",
+      "expected": "deny read and mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-013",
+      "title": "Least privilege",
+      "condition": "viewer/auditor invokes create/update/post",
+      "expected": "deny without mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-015",
+      "title": "No sensitive leakage",
+      "condition": "export/log/reader payload",
+      "expected": "exclude password/token; keep business IDs",
+      "status": "implemented-fixture"
+    }
+  ],
+  "fields": [
+    {
+      "name": "tenantId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "organizationId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "warehouseId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "actorId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "authSessionId",
+      "type": "string",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "requestId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "caseId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "version",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "createdAt",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "required": false,
+      "sensitive": false,
+      "maxLength": 200
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "query",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "itemCode",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "sku",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "serial",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "stock",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "locations",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "eventId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "fixtures": {
+    "items": {
+      "HN12345": {
+        "images": [
+          "docs/flows/lookup/assets/demo/printer-white.png",
+          "docs/flows/lookup/assets/demo/box.png"
+        ],
+        "imageLabels": [
+          "Máy in",
+          "Đóng gói"
+        ]
+      },
+      "HN12346": {
+        "serial": "SN-XP420B-BK-0008",
+        "stock": {
+          "total": 8,
+          "available": 8,
+          "held": 0,
+          "unavailable": 0
+        },
+        "description": "Máy in nhiệt màu đen, dùng in tem nhãn hàng hóa trong kho.",
+        "locations": [
+          {
+            "id": "B-02-01",
+            "total": 5,
+            "available": 5,
+            "held": 0,
+            "unavailable": 0
+          },
+          {
+            "id": "B-02-02",
+            "total": 3,
+            "available": 3,
+            "held": 0,
+            "unavailable": 0
+          }
+        ],
+        "images": [
+          "docs/flows/lookup/assets/demo/printer-black.png",
+          "docs/flows/lookup/assets/demo/box.png"
+        ],
+        "imageLabels": [
+          "Máy in đen",
+          "Đóng gói"
+        ]
+      },
+      "HN12347": {
+        "group": "Vật tư tiêu hao",
+        "brand": "Hoa Nam",
+        "unit": "Cuộn",
+        "description": "Cuộn giấy in nhiệt khổ 80 mm, dùng cho máy in hóa đơn. Bảo quản nơi khô ráo.",
+        "stock": {
+          "total": 150,
+          "available": 145,
+          "held": 3,
+          "unavailable": 2
+        },
+        "locations": [
+          {
+            "id": "C-01-02",
+            "total": 100,
+            "available": 97,
+            "held": 2,
+            "unavailable": 1
+          },
+          {
+            "id": "C-01-03",
+            "total": 50,
+            "available": 48,
+            "held": 1,
+            "unavailable": 1
+          }
+        ],
+        "images": [
+          "docs/flows/lookup/assets/demo/paper-roll.png"
+        ],
+        "imageLabels": [
+          "Giấy in nhiệt"
+        ]
+      },
+      "HN12348": {
+        "group": "Phụ kiện máy in",
+        "brand": "Hoa Nam",
+        "description": "Dây nguồn màu đen, dùng cấp điện cho thiết bị tại quầy và kho.",
+        "stock": {
+          "total": 25,
+          "available": 25,
+          "held": 0,
+          "unavailable": 0
+        },
+        "locations": [
+          {
+            "id": "A-02-01",
+            "total": 15,
+            "available": 15,
+            "held": 0,
+            "unavailable": 0
+          },
+          {
+            "id": "A-02-02",
+            "total": 10,
+            "available": 10,
+            "held": 0,
+            "unavailable": 0
+          }
+        ],
+        "images": [
+          "docs/flows/lookup/assets/demo/power-cable.png"
+        ],
+        "imageLabels": [
+          "Dây nguồn"
+        ]
+      },
+      "HN12349": {
+        "group": "Vật tư bảo dưỡng",
+        "brand": "Hoa Nam",
+        "unit": "Bộ",
+        "description": "Bộ vệ sinh đầu in gồm que lau và bút vệ sinh. Lô hàng đã xuất hết.",
+        "locations": [
+          {
+            "id": "D-01-01",
+            "total": 0,
+            "available": 0,
+            "held": 0,
+            "unavailable": 0
+          }
+        ],
+        "images": [
+          "docs/flows/lookup/assets/demo/cleaning-kit.png"
+        ],
+        "imageLabels": [
+          "Bộ vệ sinh"
+        ]
+      },
+      "LK0001-HN001": {
+        "name": "Trục lăn máy in XP-420B",
+        "group": "Linh kiện máy in",
+        "brand": "Hoa Nam",
+        "location": "D-02-01",
+        "description": "Trục lăn cao su dùng thay thế khi bảo dưỡng máy in. Dùng trong bảo dưỡng thiết bị.",
+        "stock": {
+          "total": 24,
+          "available": 20,
+          "held": 3,
+          "unavailable": 1
+        },
+        "locations": [
+          {
+            "id": "D-02-01",
+            "total": 14,
+            "available": 12,
+            "held": 1,
+            "unavailable": 1
+          },
+          {
+            "id": "D-02-02",
+            "total": 10,
+            "available": 8,
+            "held": 2,
+            "unavailable": 0
+          }
+        ],
+        "images": [
+          "docs/flows/lookup/assets/demo/component.png"
+        ],
+        "imageLabels": [
+          "Trục lăn"
+        ]
+      }
+    },
+    "events": [
+      {
+        "id": "fixture-demo-event-HN12346-1",
+        "itemId": "fixture-item-HN12346",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-09",
+        "time": "15:40",
+        "type": "inbound",
+        "quantity": 5,
+        "description": "Nhận máy từ NCC Thiên Phát",
+        "documentId": "fixture-PN-DEMO-020",
+        "documentNo": "PN-DEMO-020",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12346-2",
+        "itemId": "fixture-item-HN12346",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-08",
+        "time": "10:20",
+        "type": "outbound",
+        "quantity": -2,
+        "description": "Giao Đại lý Minh Phát",
+        "documentId": "fixture-PX-DEMO-021",
+        "documentNo": "PX-DEMO-021",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12346-3",
+        "itemId": "fixture-item-HN12346",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-07",
+        "time": "14:15",
+        "type": "warranty",
+        "quantity": 1,
+        "description": "Nhận lại máy sau bảo hành",
+        "documentId": "fixture-BH-DEMO-022",
+        "documentNo": "BH-DEMO-022",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12346-4",
+        "itemId": "fixture-item-HN12346",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-05",
+        "time": "09:30",
+        "type": "inbound",
+        "quantity": 6,
+        "description": "Bổ sung máy in màu đen",
+        "documentId": "fixture-PN-DEMO-023",
+        "documentNo": "PN-DEMO-023",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12346-5",
+        "itemId": "fixture-item-HN12346",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-03",
+        "time": "16:00",
+        "type": "outbound",
+        "quantity": -3,
+        "description": "Giao cửa hàng Hồng Hà",
+        "documentId": "fixture-PX-DEMO-024",
+        "documentNo": "PX-DEMO-024",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12346-6",
+        "itemId": "fixture-item-HN12346",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-02",
+        "time": "08:45",
+        "type": "warranty",
+        "quantity": -1,
+        "description": "Gửi máy kiểm tra bảo hành",
+        "documentId": "fixture-BH-DEMO-025",
+        "documentNo": "BH-DEMO-025",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12347-1",
+        "itemId": "fixture-item-HN12347",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-09",
+        "time": "13:10",
+        "type": "inbound",
+        "quantity": 100,
+        "description": "Nhập lô giấy in 80 mm",
+        "documentId": "fixture-PN-DEMO-030",
+        "documentNo": "PN-DEMO-030",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12347-2",
+        "itemId": "fixture-item-HN12347",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-08",
+        "time": "11:45",
+        "type": "outbound",
+        "quantity": -20,
+        "description": "Cấp giấy cho quầy bán hàng",
+        "documentId": "fixture-PX-DEMO-031",
+        "documentNo": "PX-DEMO-031",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12347-3",
+        "itemId": "fixture-item-HN12347",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-06",
+        "time": "08:30",
+        "type": "inbound",
+        "quantity": 80,
+        "description": "Nhận giấy từ NCC An Khang",
+        "documentId": "fixture-PN-DEMO-032",
+        "documentNo": "PN-DEMO-032",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12347-4",
+        "itemId": "fixture-item-HN12347",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-04",
+        "time": "15:20",
+        "type": "outbound",
+        "quantity": -10,
+        "description": "Giao Đại lý Minh Phát",
+        "documentId": "fixture-PX-DEMO-033",
+        "documentNo": "PX-DEMO-033",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12347-5",
+        "itemId": "fixture-item-HN12347",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-03",
+        "time": "09:50",
+        "type": "outbound",
+        "quantity": -5,
+        "description": "Cấp dùng cho kho Hoa Nam",
+        "documentId": "fixture-PX-DEMO-034",
+        "documentNo": "PX-DEMO-034",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12347-6",
+        "itemId": "fixture-item-HN12347",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-01",
+        "time": "08:15",
+        "type": "inbound",
+        "quantity": 50,
+        "description": "Nhận lô giấy đầu tháng",
+        "documentId": "fixture-PN-DEMO-035",
+        "documentNo": "PN-DEMO-035",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12348-1",
+        "itemId": "fixture-item-HN12348",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-09",
+        "time": "10:10",
+        "type": "inbound",
+        "quantity": 20,
+        "description": "Nhận dây nguồn từ NCC An Khang",
+        "documentId": "fixture-PN-DEMO-040",
+        "documentNo": "PN-DEMO-040",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12348-2",
+        "itemId": "fixture-item-HN12348",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-08",
+        "time": "14:00",
+        "type": "outbound",
+        "quantity": -4,
+        "description": "Giao kèm máy in cho khách",
+        "documentId": "fixture-PX-DEMO-041",
+        "documentNo": "PX-DEMO-041",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12348-3",
+        "itemId": "fixture-item-HN12348",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-07",
+        "time": "09:20",
+        "type": "warranty",
+        "quantity": -1,
+        "description": "Cấp dây thay thế bảo hành",
+        "documentId": "fixture-BH-DEMO-042",
+        "documentNo": "BH-DEMO-042",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12348-4",
+        "itemId": "fixture-item-HN12348",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-05",
+        "time": "16:30",
+        "type": "inbound",
+        "quantity": 15,
+        "description": "Nhập bổ sung phụ kiện",
+        "documentId": "fixture-PN-DEMO-043",
+        "documentNo": "PN-DEMO-043",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12348-5",
+        "itemId": "fixture-item-HN12348",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-03",
+        "time": "11:10",
+        "type": "warranty",
+        "quantity": 1,
+        "description": "Nhận lại dây sau kiểm tra",
+        "documentId": "fixture-BH-DEMO-044",
+        "documentNo": "BH-DEMO-044",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12348-6",
+        "itemId": "fixture-item-HN12348",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-01",
+        "time": "15:00",
+        "type": "outbound",
+        "quantity": -6,
+        "description": "Giao phụ kiện cho đại lý",
+        "documentId": "fixture-PX-DEMO-045",
+        "documentNo": "PX-DEMO-045",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12349-1",
+        "itemId": "fixture-item-HN12349",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-09",
+        "time": "16:20",
+        "type": "outbound",
+        "quantity": -2,
+        "description": "Xuất 2 bộ cuối cùng trong lô hàng",
+        "documentId": "fixture-PX-DEMO-050",
+        "documentNo": "PX-DEMO-050",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12349-2",
+        "itemId": "fixture-item-HN12349",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-08",
+        "time": "10:30",
+        "type": "outbound",
+        "quantity": -3,
+        "description": "Cấp bộ vệ sinh cho kỹ thuật",
+        "documentId": "fixture-PX-DEMO-051",
+        "documentNo": "PX-DEMO-051",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12349-3",
+        "itemId": "fixture-item-HN12349",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-06",
+        "time": "09:45",
+        "type": "inbound",
+        "quantity": 5,
+        "description": "Nhập bộ vệ sinh đầu in",
+        "documentId": "fixture-PN-DEMO-052",
+        "documentNo": "PN-DEMO-052",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12349-4",
+        "itemId": "fixture-item-HN12349",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-04",
+        "time": "14:10",
+        "type": "outbound",
+        "quantity": -4,
+        "description": "Giao bộ vệ sinh cho đại lý",
+        "documentId": "fixture-PX-DEMO-053",
+        "documentNo": "PX-DEMO-053",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-HN12349-5",
+        "itemId": "fixture-item-HN12349",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-02",
+        "time": "08:40",
+        "type": "inbound",
+        "quantity": 4,
+        "description": "Nhận vật tư bảo dưỡng",
+        "documentId": "fixture-PN-DEMO-054",
+        "documentNo": "PN-DEMO-054",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-LK0001-HN001-1",
+        "itemId": "fixture-component-01",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-09",
+        "time": "14:30",
+        "type": "warranty",
+        "quantity": -2,
+        "description": "Cấp trục lăn cho hồ sơ bảo hành",
+        "documentId": "fixture-BH-DEMO-060",
+        "documentNo": "BH-DEMO-060",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-LK0001-HN001-2",
+        "itemId": "fixture-component-01",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-08",
+        "time": "09:00",
+        "type": "inbound",
+        "quantity": 12,
+        "description": "Nhận lô trục lăn thay thế",
+        "documentId": "fixture-PN-DEMO-061",
+        "documentNo": "PN-DEMO-061",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-LK0001-HN001-3",
+        "itemId": "fixture-component-01",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-07",
+        "time": "15:10",
+        "type": "warranty",
+        "quantity": 1,
+        "description": "Thu hồi linh kiện còn sử dụng được",
+        "documentId": "fixture-BH-DEMO-062",
+        "documentNo": "BH-DEMO-062",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-LK0001-HN001-4",
+        "itemId": "fixture-component-01",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-05",
+        "time": "10:45",
+        "type": "warranty",
+        "quantity": 0,
+        "description": "Kiểm tra linh kiện — không đổi tồn",
+        "documentId": "fixture-BH-DEMO-063",
+        "documentNo": "BH-DEMO-063",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-LK0001-HN001-5",
+        "itemId": "fixture-component-01",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-03",
+        "time": "13:20",
+        "type": "outbound",
+        "quantity": -3,
+        "description": "Cấp linh kiện cho bộ phận kỹ thuật",
+        "documentId": "fixture-PX-DEMO-064",
+        "documentNo": "PX-DEMO-064",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      },
+      {
+        "id": "fixture-demo-event-LK0001-HN001-6",
+        "itemId": "fixture-component-01",
+        "warehouseId": "fixture-hoa-nam",
+        "date": "2026-09-01",
+        "time": "08:50",
+        "type": "inbound",
+        "quantity": 20,
+        "description": "Nhập linh kiện đầu tháng",
+        "documentId": "fixture-PN-DEMO-065",
+        "documentNo": "PN-DEMO-065",
+        "status": "Thành công",
+        "canOpenDocument": false,
+        "source": "DEMO"
+      }
+    ],
+    "queryModes": [
+      "code",
+      "sku",
+      "serial",
+      "name"
+    ],
+    "zeroStockCode": "HN12349"
+  },
+  "mapping": {
+    "P06.S01": {
+      "dataRef": "fixtures.lookup",
+      "permissionIds": [
+        "warehouse.inventory.read",
+        "history.read",
+        "documents.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P06.S01-T01",
+        "P06.S01-T02",
+        "P06.S01-T03",
+        "P06.S01-T04"
+      ],
+      "sourcePanel": 1
+    },
+    "P06.S02": {
+      "dataRef": "fixtures.lookup",
+      "permissionIds": [
+        "warehouse.inventory.read",
+        "history.read",
+        "documents.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P06.S02-T01",
+        "P06.S02-T02",
+        "P06.S02-T03",
+        "P06.S02-T04"
+      ],
+      "sourcePanel": 2
+    },
+    "P06.S03": {
+      "dataRef": "fixtures.lookup",
+      "permissionIds": [
+        "warehouse.inventory.read",
+        "history.read",
+        "documents.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P06.S03-T01",
+        "P06.S03-T02",
+        "P06.S03-T03",
+        "P06.S03-T04"
+      ],
+      "sourcePanel": 3
+    },
+    "P06.S04": {
+      "dataRef": "fixtures.lookup",
+      "permissionIds": [
+        "warehouse.inventory.read",
+        "history.read",
+        "documents.read"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "caseIds": [
+        "P06.S04-T01",
+        "P06.S04-T02",
+        "P06.S04-T03",
+        "P06.S04-T04"
+      ],
+      "sourcePanel": 4
+    }
+  },
+  "testCases": [
+    {
+      "id": "P06.S01-T01",
+      "panelId": "P06.S01",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Tìm mã/serial và đọc tồn",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S01-T02",
+      "panelId": "P06.S01",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Query rỗng không mở row đầu",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P06.S01-T03",
+      "panelId": "P06.S01",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Tồn zero vẫn hợp lệ",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P06.S01-T04",
+      "panelId": "P06.S01",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lịch sử mở explicit ID",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S02-T01",
+      "panelId": "P06.S02",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Tìm mã/serial và đọc tồn",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S02-T02",
+      "panelId": "P06.S02",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Query rỗng không mở row đầu",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P06.S02-T03",
+      "panelId": "P06.S02",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Tồn zero vẫn hợp lệ",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P06.S02-T04",
+      "panelId": "P06.S02",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lịch sử mở explicit ID",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S03-T01",
+      "panelId": "P06.S03",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Tìm mã/serial và đọc tồn",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S03-T02",
+      "panelId": "P06.S03",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Query rỗng không mở row đầu",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P06.S03-T03",
+      "panelId": "P06.S03",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Tồn zero vẫn hợp lệ",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P06.S03-T04",
+      "panelId": "P06.S03",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lịch sử mở explicit ID",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S04-T01",
+      "panelId": "P06.S04",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Tìm mã/serial và đọc tồn",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-006",
+        "RBAC-015"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P06.S04-T02",
+      "panelId": "P06.S04",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Query rỗng không mở row đầu",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P06.S04-T03",
+      "panelId": "P06.S04",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Tồn zero vẫn hợp lệ",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P06.S04-T04",
+      "panelId": "P06.S04",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Lịch sử mở explicit ID",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    }
+  ],
+  "quality": {
+    "panelCoverage": "100%",
+    "permissionScenarioCoverage": "100% of listed board permissions",
+    "datasetTargetCoverage": "99%",
+    "sourceTruth": "fixture adapters and handoff contracts",
+    "productionBackend": "BLOCKED_UNVERIFIED",
+    "testerUse": "fixture-pass runs now; proposed-rbac-test runs against future RBAC adapter"
+  }
+}

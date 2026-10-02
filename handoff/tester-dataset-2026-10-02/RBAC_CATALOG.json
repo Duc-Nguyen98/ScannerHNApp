@@ -1,0 +1,709 @@
+{
+  "schemaVersion": "tester-rbac.v1",
+  "generatedAt": "2026-10-02",
+  "sourceCommit": "81d6f61fbaff0d7cef1779d08deb21ceb41f2007",
+  "classification": "PROPOSED_B2B_RBAC_TEST_MATRIX",
+  "coverage": {
+    "target": "99%",
+    "mappedBoards": 24,
+    "mappedPanels": 91,
+    "productionStatus": "unverified"
+  },
+  "scopes": [
+    {
+      "id": "tenant-hoa-nam",
+      "type": "tenant",
+      "name": "Hoa Nam B2B",
+      "organizationIds": [
+        "org-hoa-nam"
+      ]
+    },
+    {
+      "id": "org-hoa-nam",
+      "type": "organization",
+      "name": "Hoa Nam Operations",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ]
+    },
+    {
+      "id": "fixture-hoa-nam",
+      "type": "warehouse",
+      "name": "Kho Hoa Nam",
+      "active": true,
+      "timezone": "Asia/Ho_Chi_Minh"
+    }
+  ],
+  "actors": [
+    {
+      "id": "fixture-minhanh",
+      "name": "Minh Anh",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "demo-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-lan",
+      "name": "Lan Nguyễn",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "scenario-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-manager",
+      "name": "Quản lý kho mẫu",
+      "role": "warehouse_manager",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-auditor",
+      "name": "Kiểm toán mẫu",
+      "role": "auditor",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-viewer",
+      "name": "Người xem mẫu",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warranty",
+      "name": "Kỹ thuật bảo hành mẫu",
+      "role": "warranty_agent",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warehouse-stopped",
+      "name": "Kho tạm dừng mẫu",
+      "role": "warehouse_operator",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "warehouse-stopped"
+    },
+    {
+      "id": "fixture-denied",
+      "name": "Tài khoản không có quyền kho",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    }
+  ],
+  "permissionCatalog": [
+    {
+      "id": "auth.login",
+      "label": "Đăng nhập"
+    },
+    {
+      "id": "auth.start_session",
+      "label": "Xác nhận phiên và bắt đầu ca"
+    },
+    {
+      "id": "auth.recover_account",
+      "label": "Yêu cầu khôi phục tài khoản"
+    },
+    {
+      "id": "warehouse.read",
+      "label": "Xem kho"
+    },
+    {
+      "id": "warehouse.inbound.create",
+      "label": "Tạo phiếu nhập"
+    },
+    {
+      "id": "warehouse.inbound.scan",
+      "label": "Quét/nhập hàng nhập"
+    },
+    {
+      "id": "warehouse.inbound.record",
+      "label": "Gửi phiếu nhập"
+    },
+    {
+      "id": "warehouse.outbound.create",
+      "label": "Tạo phiếu xuất"
+    },
+    {
+      "id": "warehouse.outbound.scan",
+      "label": "Quét/nhập hàng xuất"
+    },
+    {
+      "id": "warehouse.outbound.record",
+      "label": "Gửi phiếu xuất"
+    },
+    {
+      "id": "warehouse.inventory.read",
+      "label": "Xem tồn"
+    },
+    {
+      "id": "warehouse.inventory.adjust",
+      "label": "Điều chỉnh tồn"
+    },
+    {
+      "id": "warranty.read",
+      "label": "Xem bảo hành"
+    },
+    {
+      "id": "warranty.intake",
+      "label": "Tiếp nhận bảo hành"
+    },
+    {
+      "id": "warranty.update",
+      "label": "Cập nhật bảo hành"
+    },
+    {
+      "id": "warranty.component_issue",
+      "label": "Xuất linh kiện"
+    },
+    {
+      "id": "warranty.handover",
+      "label": "Bàn giao bảo hành"
+    },
+    {
+      "id": "nfc.read",
+      "label": "Đọc NFC"
+    },
+    {
+      "id": "nfc.link",
+      "label": "Liên kết NFC"
+    },
+    {
+      "id": "documents.read",
+      "label": "Xem chứng từ"
+    },
+    {
+      "id": "documents.create",
+      "label": "Tạo chứng từ"
+    },
+    {
+      "id": "documents.attach",
+      "label": "Đính kèm tệp"
+    },
+    {
+      "id": "notifications.read",
+      "label": "Xem thông báo"
+    },
+    {
+      "id": "notifications.mark_read",
+      "label": "Đánh dấu đã đọc"
+    },
+    {
+      "id": "history.read",
+      "label": "Xem lịch sử"
+    },
+    {
+      "id": "history.export",
+      "label": "Xuất lịch sử"
+    },
+    {
+      "id": "history.nfc.read",
+      "label": "Xem lịch sử NFC"
+    },
+    {
+      "id": "history.warranty.read",
+      "label": "Xem lịch sử bảo hành"
+    },
+    {
+      "id": "history.sessions.read",
+      "label": "Xem lịch sử phiên"
+    },
+    {
+      "id": "profile.read_self",
+      "label": "Xem hồ sơ bản thân"
+    },
+    {
+      "id": "profile.update_self",
+      "label": "Sửa hồ sơ bản thân"
+    },
+    {
+      "id": "security.change_password",
+      "label": "Đổi mật khẩu"
+    },
+    {
+      "id": "security.revoke_session",
+      "label": "Thu hồi phiên khác"
+    },
+    {
+      "id": "shift.recover",
+      "label": "Khôi phục ca"
+    },
+    {
+      "id": "shift.save",
+      "label": "Lưu nháp ca"
+    },
+    {
+      "id": "shift.end",
+      "label": "Kết thúc ca"
+    },
+    {
+      "id": "device.camera",
+      "label": "Dùng camera"
+    },
+    {
+      "id": "device.nfc",
+      "label": "Dùng NFC"
+    },
+    {
+      "id": "rbac.read",
+      "label": "Xem RBAC"
+    },
+    {
+      "id": "rbac.manage",
+      "label": "Quản lý RBAC"
+    }
+  ],
+  "roles": {
+    "tenant_owner": {
+      "label": "Chủ tenant",
+      "scope": "tenant",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "auth.recover_account",
+        "warehouse.read",
+        "warehouse.inbound.create",
+        "warehouse.inbound.scan",
+        "warehouse.inbound.record",
+        "warehouse.outbound.create",
+        "warehouse.outbound.scan",
+        "warehouse.outbound.record",
+        "warehouse.inventory.read",
+        "warehouse.inventory.adjust",
+        "warranty.read",
+        "warranty.intake",
+        "warranty.update",
+        "warranty.component_issue",
+        "warranty.handover",
+        "nfc.read",
+        "nfc.link",
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "notifications.read",
+        "notifications.mark_read",
+        "history.read",
+        "history.export",
+        "history.nfc.read",
+        "history.warranty.read",
+        "history.sessions.read",
+        "profile.read_self",
+        "profile.update_self",
+        "security.change_password",
+        "security.revoke_session",
+        "shift.recover",
+        "shift.save",
+        "shift.end",
+        "device.camera",
+        "device.nfc",
+        "rbac.read",
+        "rbac.manage"
+      ],
+      "denyByDefault": true
+    },
+    "org_admin": {
+      "label": "Quản trị tổ chức",
+      "scope": "organization",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "auth.recover_account",
+        "warehouse.read",
+        "warehouse.inbound.create",
+        "warehouse.inbound.scan",
+        "warehouse.inbound.record",
+        "warehouse.outbound.create",
+        "warehouse.outbound.scan",
+        "warehouse.outbound.record",
+        "warehouse.inventory.read",
+        "warehouse.inventory.adjust",
+        "warranty.read",
+        "warranty.intake",
+        "warranty.update",
+        "warranty.component_issue",
+        "warranty.handover",
+        "nfc.read",
+        "nfc.link",
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "notifications.read",
+        "notifications.mark_read",
+        "history.read",
+        "history.export",
+        "history.nfc.read",
+        "history.warranty.read",
+        "history.sessions.read",
+        "profile.read_self",
+        "profile.update_self",
+        "security.change_password",
+        "security.revoke_session",
+        "shift.recover",
+        "shift.save",
+        "shift.end",
+        "device.camera",
+        "device.nfc",
+        "rbac.read"
+      ],
+      "denyByDefault": true
+    },
+    "warehouse_manager": {
+      "label": "Quản lý kho",
+      "scope": "warehouse",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "auth.recover_account",
+        "warehouse.read",
+        "warehouse.inbound.create",
+        "warehouse.inbound.scan",
+        "warehouse.inbound.record",
+        "warehouse.outbound.create",
+        "warehouse.outbound.scan",
+        "warehouse.outbound.record",
+        "warehouse.inventory.read",
+        "warehouse.inventory.adjust",
+        "warranty.read",
+        "warranty.intake",
+        "warranty.update",
+        "warranty.component_issue",
+        "warranty.handover",
+        "nfc.read",
+        "nfc.link",
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "notifications.read",
+        "notifications.mark_read",
+        "history.read",
+        "history.export",
+        "history.nfc.read",
+        "history.warranty.read",
+        "history.sessions.read",
+        "profile.read_self",
+        "profile.update_self",
+        "security.change_password",
+        "security.revoke_session",
+        "shift.recover",
+        "shift.save",
+        "shift.end",
+        "device.camera",
+        "device.nfc",
+        "rbac.read"
+      ],
+      "denyByDefault": true
+    },
+    "warehouse_operator": {
+      "label": "Nhân viên kho",
+      "scope": "warehouse",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "warehouse.read",
+        "warehouse.inbound.create",
+        "warehouse.inbound.scan",
+        "warehouse.inbound.record",
+        "warehouse.outbound.create",
+        "warehouse.outbound.scan",
+        "warehouse.outbound.record",
+        "warehouse.inventory.read",
+        "warranty.read",
+        "warranty.intake",
+        "warranty.update",
+        "warranty.component_issue",
+        "nfc.read",
+        "nfc.link",
+        "documents.read",
+        "documents.create",
+        "documents.attach",
+        "notifications.read",
+        "notifications.mark_read",
+        "history.read",
+        "history.nfc.read",
+        "history.warranty.read",
+        "history.sessions.read",
+        "profile.read_self",
+        "profile.update_self",
+        "security.change_password",
+        "security.revoke_session",
+        "shift.recover",
+        "shift.save",
+        "device.camera",
+        "device.nfc"
+      ],
+      "denyByDefault": true
+    },
+    "warranty_agent": {
+      "label": "Nhân viên bảo hành",
+      "scope": "warehouse",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "warehouse.read",
+        "warehouse.inventory.read",
+        "warranty.read",
+        "warranty.intake",
+        "warranty.update",
+        "warranty.component_issue",
+        "warranty.handover",
+        "documents.read",
+        "documents.attach",
+        "history.read",
+        "history.warranty.read",
+        "notifications.read",
+        "notifications.mark_read",
+        "profile.read_self",
+        "profile.update_self",
+        "security.change_password",
+        "device.camera"
+      ],
+      "denyByDefault": true
+    },
+    "auditor": {
+      "label": "Kiểm toán viên",
+      "scope": "organization",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "warehouse.read",
+        "warehouse.inventory.read",
+        "warranty.read",
+        "documents.read",
+        "notifications.read",
+        "history.read",
+        "history.export",
+        "history.nfc.read",
+        "history.warranty.read",
+        "history.sessions.read",
+        "profile.read_self",
+        "security.change_password",
+        "rbac.read"
+      ],
+      "denyByDefault": true
+    },
+    "viewer": {
+      "label": "Người xem",
+      "scope": "warehouse",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "warehouse.read",
+        "warehouse.inventory.read",
+        "warranty.read",
+        "documents.read",
+        "notifications.read",
+        "history.read",
+        "history.nfc.read",
+        "history.warranty.read",
+        "history.sessions.read",
+        "profile.read_self",
+        "security.change_password"
+      ],
+      "denyByDefault": true
+    },
+    "device_operator": {
+      "label": "Vận hành thiết bị",
+      "scope": "warehouse",
+      "allow": [
+        "auth.login",
+        "auth.start_session",
+        "warehouse.read",
+        "warehouse.inventory.read",
+        "nfc.read",
+        "nfc.link",
+        "device.camera",
+        "device.nfc",
+        "profile.read_self"
+      ],
+      "denyByDefault": true
+    },
+    "integration_service": {
+      "label": "Dịch vụ tích hợp",
+      "scope": "system",
+      "allow": [
+        "warehouse.read",
+        "warehouse.inventory.read",
+        "documents.read",
+        "history.read",
+        "notifications.read"
+      ],
+      "denyByDefault": true
+    }
+  },
+  "rules": [
+    {
+      "id": "RBAC-001",
+      "title": "Deny by default",
+      "condition": "permission không có grant hoặc scope không khớp",
+      "expected": "deny",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-002",
+      "title": "Session owner",
+      "condition": "actorId/authSessionId/warehouseId đổi giữa request và response",
+      "expected": "deny mutation; ignore late response",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-003",
+      "title": "Warehouse active",
+      "condition": "warehouse.active !== true",
+      "expected": "deny operation; preserve draft",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-004",
+      "title": "Unknown is not success",
+      "condition": "unknown/timeout/status-unavailable",
+      "expected": "keep request; check same request before retry",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-005",
+      "title": "Closed warranty read-only",
+      "condition": "case.status === Đã trả khách",
+      "expected": "allow read; deny write",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-006",
+      "title": "Explicit identity links",
+      "condition": "document/case/session/receipt ID không khớp",
+      "expected": "deny fallback-first-record",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-007",
+      "title": "Device capability",
+      "condition": "camera/NFC unsupported or denied",
+      "expected": "show guidance; no fake success",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-008",
+      "title": "Preview stock boundary",
+      "condition": "P04/P05 fixture record",
+      "expected": "receipt waiting; inventoryDelta=0; no App Post",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-009",
+      "title": "Component posting",
+      "condition": "case version and stock quantity valid",
+      "expected": "POSTED once or reconcile",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-010",
+      "title": "Unknown capabilities",
+      "condition": "P10 source has no per-capability grants",
+      "expected": "show unknown; do not infer role grant",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-011",
+      "title": "Tenant isolation",
+      "condition": "tenantId/organizationId mismatch",
+      "expected": "deny read and mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-012",
+      "title": "Separation of duties",
+      "condition": "actor attempts approval/post outside grant",
+      "expected": "deny or require manager",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-013",
+      "title": "Least privilege",
+      "condition": "viewer/auditor invokes create/update/post",
+      "expected": "deny without mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-014",
+      "title": "Idempotent request",
+      "condition": "same requestId repeated",
+      "expected": "same receipt; no duplicate write",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-015",
+      "title": "No sensitive leakage",
+      "condition": "export/log/reader payload",
+      "expected": "exclude password/token; keep business IDs",
+      "status": "implemented-fixture"
+    }
+  ],
+  "sourceBoundary": {
+    "implementedFixture": [
+      "session owner",
+      "warehouse active",
+      "unknown/idempotency",
+      "closed warranty read-only",
+      "device guidance",
+      "P04/P05 preview boundary",
+      "P19 receipt validation",
+      "P10 unknown capabilities"
+    ],
+    "missingProduction": [
+      "IdP claims and role binding",
+      "tenant/org hierarchy API",
+      "warehouse policy API",
+      "approval/SoD policy",
+      "audit/retention/PII policy",
+      "backend receipt/status API",
+      "camera/NFC hardware contract",
+      "durable session/draft persistence"
+    ]
+  }
+}

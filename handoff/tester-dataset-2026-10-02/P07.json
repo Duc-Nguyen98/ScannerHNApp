@@ -1,0 +1,1450 @@
+{
+  "schemaVersion": "tester-dataset.v1",
+  "generatedAt": "2026-10-02",
+  "sourceCommit": "81d6f61fbaff0d7cef1779d08deb21ceb41f2007",
+  "classification": "PREVIEW_FIXTURE_PLUS_EXPLICIT_RBAC_TEST_MATRIX",
+  "board": "P07",
+  "domain": "NFC",
+  "panelCount": 4,
+  "panels": [
+    {
+      "id": "P07.S01",
+      "title": "Thẻ NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P07.S02",
+      "title": "Đọc thẻ NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P07.S03",
+      "title": "Xác minh liên kết",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    },
+    {
+      "id": "P07.S04",
+      "title": "Đã liên kết thẻ NFC",
+      "disposition": "LEGACY_ADAPTED",
+      "note": null
+    }
+  ],
+  "sourceRefs": [
+    {
+      "file": "docs/flows/nfc/fixture-adapter.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/nfc/nfc-flow.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    },
+    {
+      "file": "docs/flows/nfc/demo-tags.mjs",
+      "why": "adapter/model/contract used by prototype",
+      "status": "source-fixture"
+    }
+  ],
+  "scope": {
+    "tenantId": "tenant-hoa-nam",
+    "organizationId": "org-hoa-nam",
+    "warehouseId": "fixture-hoa-nam",
+    "warehouseName": "Kho Hoa Nam",
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  "actors": [
+    {
+      "id": "fixture-minhanh",
+      "name": "Minh Anh",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "demo-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-lan",
+      "name": "Lan Nguyễn",
+      "role": "warehouse_operator",
+      "sourceRole": "Nhân viên kho",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active",
+      "credential": {
+        "username": "minhanh",
+        "password": "preview",
+        "classification": "scenario-only",
+        "productionSecret": false
+      }
+    },
+    {
+      "id": "fixture-manager",
+      "name": "Quản lý kho mẫu",
+      "role": "warehouse_manager",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-auditor",
+      "name": "Kiểm toán mẫu",
+      "role": "auditor",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-viewer",
+      "name": "Người xem mẫu",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warranty",
+      "name": "Kỹ thuật bảo hành mẫu",
+      "role": "warranty_agent",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "fixture-warehouse-stopped",
+      "name": "Kho tạm dừng mẫu",
+      "role": "warehouse_operator",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "warehouse-stopped"
+    },
+    {
+      "id": "fixture-denied",
+      "name": "Tài khoản không có quyền kho",
+      "role": "viewer",
+      "tenantId": "tenant-hoa-nam",
+      "organizationId": "org-hoa-nam",
+      "warehouseIds": [
+        "fixture-hoa-nam"
+      ],
+      "status": "active"
+    }
+  ],
+  "roles": {
+    "tenant_owner": {
+      "label": "Chủ tenant",
+      "scope": "tenant"
+    },
+    "org_admin": {
+      "label": "Quản trị tổ chức",
+      "scope": "organization"
+    },
+    "warehouse_manager": {
+      "label": "Quản lý kho",
+      "scope": "warehouse"
+    },
+    "warehouse_operator": {
+      "label": "Nhân viên kho",
+      "scope": "warehouse"
+    },
+    "warranty_agent": {
+      "label": "Nhân viên bảo hành",
+      "scope": "warehouse"
+    },
+    "auditor": {
+      "label": "Kiểm toán viên",
+      "scope": "organization"
+    },
+    "viewer": {
+      "label": "Người xem",
+      "scope": "warehouse"
+    },
+    "device_operator": {
+      "label": "Vận hành thiết bị",
+      "scope": "warehouse"
+    },
+    "integration_service": {
+      "label": "Dịch vụ tích hợp",
+      "scope": "system"
+    }
+  },
+  "permissions": {
+    "used": [
+      "nfc.read",
+      "nfc.link",
+      "warehouse.inventory.read",
+      "device.nfc"
+    ],
+    "catalog": [
+      {
+        "id": "auth.login",
+        "label": "Đăng nhập"
+      },
+      {
+        "id": "auth.start_session",
+        "label": "Xác nhận phiên và bắt đầu ca"
+      },
+      {
+        "id": "auth.recover_account",
+        "label": "Yêu cầu khôi phục tài khoản"
+      },
+      {
+        "id": "warehouse.read",
+        "label": "Xem kho"
+      },
+      {
+        "id": "warehouse.inbound.create",
+        "label": "Tạo phiếu nhập"
+      },
+      {
+        "id": "warehouse.inbound.scan",
+        "label": "Quét/nhập hàng nhập"
+      },
+      {
+        "id": "warehouse.inbound.record",
+        "label": "Gửi phiếu nhập"
+      },
+      {
+        "id": "warehouse.outbound.create",
+        "label": "Tạo phiếu xuất"
+      },
+      {
+        "id": "warehouse.outbound.scan",
+        "label": "Quét/nhập hàng xuất"
+      },
+      {
+        "id": "warehouse.outbound.record",
+        "label": "Gửi phiếu xuất"
+      },
+      {
+        "id": "warehouse.inventory.read",
+        "label": "Xem tồn"
+      },
+      {
+        "id": "warehouse.inventory.adjust",
+        "label": "Điều chỉnh tồn"
+      },
+      {
+        "id": "warranty.read",
+        "label": "Xem bảo hành"
+      },
+      {
+        "id": "warranty.intake",
+        "label": "Tiếp nhận bảo hành"
+      },
+      {
+        "id": "warranty.update",
+        "label": "Cập nhật bảo hành"
+      },
+      {
+        "id": "warranty.component_issue",
+        "label": "Xuất linh kiện"
+      },
+      {
+        "id": "warranty.handover",
+        "label": "Bàn giao bảo hành"
+      },
+      {
+        "id": "nfc.read",
+        "label": "Đọc NFC"
+      },
+      {
+        "id": "nfc.link",
+        "label": "Liên kết NFC"
+      },
+      {
+        "id": "documents.read",
+        "label": "Xem chứng từ"
+      },
+      {
+        "id": "documents.create",
+        "label": "Tạo chứng từ"
+      },
+      {
+        "id": "documents.attach",
+        "label": "Đính kèm tệp"
+      },
+      {
+        "id": "notifications.read",
+        "label": "Xem thông báo"
+      },
+      {
+        "id": "notifications.mark_read",
+        "label": "Đánh dấu đã đọc"
+      },
+      {
+        "id": "history.read",
+        "label": "Xem lịch sử"
+      },
+      {
+        "id": "history.export",
+        "label": "Xuất lịch sử"
+      },
+      {
+        "id": "history.nfc.read",
+        "label": "Xem lịch sử NFC"
+      },
+      {
+        "id": "history.warranty.read",
+        "label": "Xem lịch sử bảo hành"
+      },
+      {
+        "id": "history.sessions.read",
+        "label": "Xem lịch sử phiên"
+      },
+      {
+        "id": "profile.read_self",
+        "label": "Xem hồ sơ bản thân"
+      },
+      {
+        "id": "profile.update_self",
+        "label": "Sửa hồ sơ bản thân"
+      },
+      {
+        "id": "security.change_password",
+        "label": "Đổi mật khẩu"
+      },
+      {
+        "id": "security.revoke_session",
+        "label": "Thu hồi phiên khác"
+      },
+      {
+        "id": "shift.recover",
+        "label": "Khôi phục ca"
+      },
+      {
+        "id": "shift.save",
+        "label": "Lưu nháp ca"
+      },
+      {
+        "id": "shift.end",
+        "label": "Kết thúc ca"
+      },
+      {
+        "id": "device.camera",
+        "label": "Dùng camera"
+      },
+      {
+        "id": "device.nfc",
+        "label": "Dùng NFC"
+      },
+      {
+        "id": "rbac.read",
+        "label": "Xem RBAC"
+      },
+      {
+        "id": "rbac.manage",
+        "label": "Quản lý RBAC"
+      }
+    ],
+    "matrix": {
+      "tenant_owner": {
+        "scope": "tenant",
+        "allow": [
+          "nfc.read",
+          "nfc.link",
+          "warehouse.inventory.read",
+          "device.nfc"
+        ],
+        "deny": []
+      },
+      "org_admin": {
+        "scope": "organization",
+        "allow": [
+          "nfc.read",
+          "nfc.link",
+          "warehouse.inventory.read",
+          "device.nfc"
+        ],
+        "deny": []
+      },
+      "warehouse_manager": {
+        "scope": "warehouse",
+        "allow": [
+          "nfc.read",
+          "nfc.link",
+          "warehouse.inventory.read",
+          "device.nfc"
+        ],
+        "deny": []
+      },
+      "warehouse_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "nfc.read",
+          "nfc.link",
+          "warehouse.inventory.read",
+          "device.nfc"
+        ],
+        "deny": []
+      },
+      "warranty_agent": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read"
+        ],
+        "deny": [
+          "nfc.read",
+          "nfc.link",
+          "device.nfc"
+        ]
+      },
+      "auditor": {
+        "scope": "organization",
+        "allow": [
+          "warehouse.inventory.read"
+        ],
+        "deny": [
+          "nfc.read",
+          "nfc.link",
+          "device.nfc"
+        ]
+      },
+      "viewer": {
+        "scope": "warehouse",
+        "allow": [
+          "warehouse.inventory.read"
+        ],
+        "deny": [
+          "nfc.read",
+          "nfc.link",
+          "device.nfc"
+        ]
+      },
+      "device_operator": {
+        "scope": "warehouse",
+        "allow": [
+          "nfc.read",
+          "nfc.link",
+          "warehouse.inventory.read",
+          "device.nfc"
+        ],
+        "deny": []
+      },
+      "integration_service": {
+        "scope": "system",
+        "allow": [
+          "warehouse.inventory.read"
+        ],
+        "deny": [
+          "nfc.read",
+          "nfc.link",
+          "device.nfc"
+        ]
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "RBAC-001",
+      "title": "Deny by default",
+      "condition": "permission không có grant hoặc scope không khớp",
+      "expected": "deny",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-002",
+      "title": "Session owner",
+      "condition": "actorId/authSessionId/warehouseId đổi giữa request và response",
+      "expected": "deny mutation; ignore late response",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-003",
+      "title": "Warehouse active",
+      "condition": "warehouse.active !== true",
+      "expected": "deny operation; preserve draft",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-004",
+      "title": "Unknown is not success",
+      "condition": "unknown/timeout/status-unavailable",
+      "expected": "keep request; check same request before retry",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-007",
+      "title": "Device capability",
+      "condition": "camera/NFC unsupported or denied",
+      "expected": "show guidance; no fake success",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-011",
+      "title": "Tenant isolation",
+      "condition": "tenantId/organizationId mismatch",
+      "expected": "deny read and mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-013",
+      "title": "Least privilege",
+      "condition": "viewer/auditor invokes create/update/post",
+      "expected": "deny without mutation",
+      "status": "proposed-test"
+    },
+    {
+      "id": "RBAC-014",
+      "title": "Idempotent request",
+      "condition": "same requestId repeated",
+      "expected": "same receipt; no duplicate write",
+      "status": "implemented-fixture"
+    },
+    {
+      "id": "RBAC-015",
+      "title": "No sensitive leakage",
+      "condition": "export/log/reader payload",
+      "expected": "exclude password/token; keep business IDs",
+      "status": "implemented-fixture"
+    }
+  ],
+  "fields": [
+    {
+      "name": "tenantId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "organizationId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "warehouseId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "actorId",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "authSessionId",
+      "type": "string",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "requestId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "documentId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "caseId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "version",
+      "type": "integer",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "createdAt",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "required": false,
+      "sensitive": false,
+      "maxLength": 200
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "tagId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "uid",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "itemId",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "linkedAt",
+      "type": "string",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "fixtures": {
+    "namespace": "hn-scanner-nfc-fixture-v1",
+    "boardProduct": {
+      "id": "fixture-nfc-serial-HN12345",
+      "code": "HN12345",
+      "name": "Máy in nhiệt XP-420B",
+      "sku": "XP-420B",
+      "serial": "HN12345",
+      "warehouseId": "fixture-hoa-nam"
+    },
+    "readTags": [
+      {
+        "uid": "NFC-8A2F",
+        "id": "fixture-tag-8a2f",
+        "label": "Thẻ thử 1"
+      },
+      {
+        "uid": "NFC-DEMO-020",
+        "id": "fixture-tag-020",
+        "label": "TAG-020"
+      },
+      {
+        "uid": "NFC-DEMO-021",
+        "id": "fixture-tag-021",
+        "label": "TAG-021"
+      },
+      {
+        "uid": "NFC-DEMO-022",
+        "id": "fixture-tag-022",
+        "label": "TAG-022"
+      },
+      {
+        "uid": "NFC-DEMO-023",
+        "id": "fixture-tag-023",
+        "label": "TAG-023"
+      }
+    ],
+    "fixtureRows": [
+      {
+        "id": "fixture-tag-001",
+        "label": "TAG-001",
+        "uid": "NFC-OLD-001",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-serial-HN12345",
+          "code": "HN12345",
+          "name": "Máy in nhiệt XP-420B",
+          "sku": "XP-420B",
+          "serial": "HN12345",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "09/09/2026 14:32"
+      },
+      {
+        "id": "fixture-tag-002",
+        "label": "TAG-002",
+        "uid": "NFC-3F7D9A",
+        "status": "unlinked",
+        "product": null,
+        "date": "09/09/2026 10:20"
+      },
+      {
+        "id": "fixture-tag-003",
+        "label": "TAG-003",
+        "uid": "NFC-OLD-003",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-head-HN12346",
+          "code": "HN12346",
+          "name": "Đầu in XP-420B",
+          "sku": "XP-420B",
+          "serial": "HN12346",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "08/09/2026 16:15"
+      },
+      {
+        "id": "fixture-tag-004",
+        "label": "TAG-004",
+        "uid": "NFC-LOCK-004",
+        "status": "locked",
+        "product": {
+          "id": "fixture-nfc-paper",
+          "code": "HN12345",
+          "name": "Giấy in nhiệt 80mm",
+          "sku": "PAPER-80",
+          "serial": "PAPER-80",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "08/09/2026 09:10"
+      },
+      {
+        "id": "fixture-tag-005",
+        "label": "TAG-005",
+        "uid": "NFC-OLD-005",
+        "status": "unlinked",
+        "product": {
+          "id": "fixture-nfc-cable",
+          "code": "HN12345",
+          "name": "Cáp nguồn XP-420B",
+          "sku": "CABLE-01",
+          "serial": "CABLE-01",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "07/09/2026 14:08"
+      },
+      {
+        "id": "fixture-tag-006",
+        "label": "TAG-006",
+        "uid": "NFC-DEMO-006",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-006",
+          "code": "DEMO-HN-006",
+          "name": "Máy quét mã vạch cầm tay",
+          "sku": "DEMO-SCAN-01",
+          "serial": "SN-DEMO-006",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "10/09/2026 08:15"
+      },
+      {
+        "id": "fixture-tag-007",
+        "label": "TAG-007",
+        "uid": "NFC-DEMO-007",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-007",
+          "code": "DEMO-HN-007",
+          "name": "Máy in tem vận đơn",
+          "sku": "DEMO-PRINT-02",
+          "serial": "SN-DEMO-007",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "11/09/2026 09:30"
+      },
+      {
+        "id": "fixture-tag-008",
+        "label": "TAG-008",
+        "uid": "NFC-DEMO-008",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-008",
+          "code": "DEMO-HN-008",
+          "name": "Giấy in nhiệt 57mm",
+          "sku": "DEMO-PAPER-57",
+          "serial": "SN-DEMO-008",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "12/09/2026 10:15"
+      },
+      {
+        "id": "fixture-tag-009",
+        "label": "TAG-009",
+        "uid": "NFC-DEMO-009",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-009",
+          "code": "DEMO-HN-009",
+          "name": "Bộ nguồn máy in",
+          "sku": "DEMO-POWER-01",
+          "serial": "SN-DEMO-009",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "13/09/2026 11:30"
+      },
+      {
+        "id": "fixture-tag-010",
+        "label": "TAG-010",
+        "uid": "NFC-DEMO-010",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-010",
+          "code": "DEMO-HN-010",
+          "name": "Đầu đọc mã vạch để bàn",
+          "sku": "DEMO-SCAN-02",
+          "serial": "SN-DEMO-010",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "14/09/2026 12:15"
+      },
+      {
+        "id": "fixture-tag-011",
+        "label": "TAG-011",
+        "uid": "NFC-DEMO-011",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-011",
+          "code": "DEMO-HN-011",
+          "name": "Cuộn tem nhãn sản phẩm",
+          "sku": "DEMO-LABEL-01",
+          "serial": "SN-DEMO-011",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "15/09/2026 13:30"
+      },
+      {
+        "id": "fixture-tag-012",
+        "label": "TAG-012",
+        "uid": "NFC-DEMO-012",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-012",
+          "code": "DEMO-HN-012",
+          "name": "Máy in tem công nghiệp dùng cho kiện hàng tại kho Hoa Nam",
+          "sku": "DEMO-PRINT-LONG",
+          "serial": "SN-DEMO-012",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "16/09/2026 14:15"
+      },
+      {
+        "id": "fixture-tag-013",
+        "label": "TAG-013",
+        "uid": "NFC-DEMO-013",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-013",
+          "code": "DEMO-HN-013",
+          "name": "Máy quét mã vạch cầm tay",
+          "sku": "DEMO-SCAN-01",
+          "serial": "SN-DEMO-013",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "17/09/2026 15:30"
+      },
+      {
+        "id": "fixture-tag-014",
+        "label": "TAG-014",
+        "uid": "NFC-DEMO-014",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-014",
+          "code": "DEMO-HN-014",
+          "name": "Máy in tem vận đơn",
+          "sku": "DEMO-PRINT-02",
+          "serial": "SN-DEMO-014",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "18/09/2026 16:15"
+      },
+      {
+        "id": "fixture-tag-015",
+        "label": "TAG-015",
+        "uid": "NFC-DEMO-015",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-015",
+          "code": "DEMO-HN-015",
+          "name": "Giấy in nhiệt 57mm",
+          "sku": "DEMO-PAPER-57",
+          "serial": "SN-DEMO-015",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "19/09/2026 08:30"
+      },
+      {
+        "id": "fixture-tag-016",
+        "label": "TAG-016",
+        "uid": "NFC-DEMO-016",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-016",
+          "code": "DEMO-HN-016",
+          "name": "Bộ nguồn máy in",
+          "sku": "DEMO-POWER-01",
+          "serial": "SN-DEMO-016",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "20/09/2026 09:15"
+      },
+      {
+        "id": "fixture-tag-017",
+        "label": "TAG-017",
+        "uid": "NFC-DEMO-017",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-017",
+          "code": "DEMO-HN-017",
+          "name": "Đầu đọc mã vạch để bàn",
+          "sku": "DEMO-SCAN-02",
+          "serial": "SN-DEMO-017",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "21/09/2026 10:30"
+      },
+      {
+        "id": "fixture-tag-018",
+        "label": "TAG-018",
+        "uid": "NFC-DEMO-018",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-018",
+          "code": "DEMO-HN-018",
+          "name": "Cuộn tem nhãn sản phẩm",
+          "sku": "DEMO-LABEL-01",
+          "serial": "SN-DEMO-018",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "22/09/2026 11:15"
+      },
+      {
+        "id": "fixture-tag-019",
+        "label": "TAG-019",
+        "uid": "NFC-DEMO-019",
+        "status": "linked",
+        "product": {
+          "id": "fixture-nfc-demo-item-019",
+          "code": "DEMO-HN-019",
+          "name": "Máy in tem công nghiệp dùng cho kiện hàng tại kho Hoa Nam",
+          "sku": "DEMO-PRINT-LONG",
+          "serial": "SN-DEMO-019",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "23/09/2026 12:30"
+      },
+      {
+        "id": "fixture-tag-020",
+        "label": "TAG-020",
+        "uid": "NFC-DEMO-020",
+        "status": "unlinked",
+        "product": null,
+        "date": "24/09/2026 13:15"
+      },
+      {
+        "id": "fixture-tag-021",
+        "label": "TAG-021",
+        "uid": "NFC-DEMO-021",
+        "status": "unlinked",
+        "product": null,
+        "date": "25/09/2026 14:30"
+      },
+      {
+        "id": "fixture-tag-022",
+        "label": "TAG-022",
+        "uid": "NFC-DEMO-022",
+        "status": "unlinked",
+        "product": null,
+        "date": "26/09/2026 15:15"
+      },
+      {
+        "id": "fixture-tag-023",
+        "label": "TAG-023",
+        "uid": "NFC-DEMO-023",
+        "status": "unlinked",
+        "product": null,
+        "date": "27/09/2026 16:30"
+      },
+      {
+        "id": "fixture-tag-024",
+        "label": "TAG-024",
+        "uid": "NFC-DEMO-024",
+        "status": "unlinked",
+        "product": null,
+        "date": "10/09/2026 08:15"
+      },
+      {
+        "id": "fixture-tag-025",
+        "label": "TAG-025",
+        "uid": "NFC-DEMO-025",
+        "status": "unlinked",
+        "product": null,
+        "date": "11/09/2026 09:30"
+      },
+      {
+        "id": "fixture-tag-026",
+        "label": "TAG-026",
+        "uid": "NFC-DEMO-026",
+        "status": "unlinked",
+        "product": null,
+        "date": "12/09/2026 10:15"
+      },
+      {
+        "id": "fixture-tag-027",
+        "label": "TAG-027",
+        "uid": "NFC-DEMO-027",
+        "status": "locked",
+        "product": {
+          "id": "fixture-nfc-demo-item-027",
+          "code": "DEMO-HN-027",
+          "name": "Máy quét mã vạch cầm tay",
+          "sku": "DEMO-SCAN-01",
+          "serial": "SN-DEMO-027",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "13/09/2026 11:30"
+      },
+      {
+        "id": "fixture-tag-028",
+        "label": "TAG-028",
+        "uid": "NFC-DEMO-028",
+        "status": "locked",
+        "product": {
+          "id": "fixture-nfc-demo-item-028",
+          "code": "DEMO-HN-028",
+          "name": "Máy in tem vận đơn",
+          "sku": "DEMO-PRINT-02",
+          "serial": "SN-DEMO-028",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "14/09/2026 12:15"
+      },
+      {
+        "id": "fixture-tag-029",
+        "label": "TAG-029",
+        "uid": "NFC-DEMO-029",
+        "status": "locked",
+        "product": {
+          "id": "fixture-nfc-demo-item-029",
+          "code": "DEMO-HN-029",
+          "name": "Giấy in nhiệt 57mm",
+          "sku": "DEMO-PAPER-57",
+          "serial": "SN-DEMO-029",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "15/09/2026 13:30"
+      },
+      {
+        "id": "fixture-tag-030",
+        "label": "TAG-030",
+        "uid": "NFC-DEMO-030",
+        "status": "locked",
+        "product": {
+          "id": "fixture-nfc-demo-item-030",
+          "code": "DEMO-HN-030",
+          "name": "Bộ nguồn máy in",
+          "sku": "DEMO-POWER-01",
+          "serial": "SN-DEMO-030",
+          "warehouseId": "fixture-hoa-nam"
+        },
+        "date": "16/09/2026 14:15"
+      }
+    ],
+    "scenarios": [
+      "ready",
+      "unsupported",
+      "permission",
+      "read-error",
+      "conflict",
+      "locked",
+      "link-denied",
+      "failed",
+      "unknown"
+    ]
+  },
+  "mapping": {
+    "P07.S01": {
+      "dataRef": "fixtures.nfc",
+      "permissionIds": [
+        "nfc.read",
+        "nfc.link",
+        "warehouse.inventory.read",
+        "device.nfc"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "caseIds": [
+        "P07.S01-T01",
+        "P07.S01-T02",
+        "P07.S01-T03",
+        "P07.S01-T04"
+      ],
+      "sourcePanel": 1
+    },
+    "P07.S02": {
+      "dataRef": "fixtures.nfc",
+      "permissionIds": [
+        "nfc.read",
+        "nfc.link",
+        "warehouse.inventory.read",
+        "device.nfc"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "caseIds": [
+        "P07.S02-T01",
+        "P07.S02-T02",
+        "P07.S02-T03",
+        "P07.S02-T04"
+      ],
+      "sourcePanel": 2
+    },
+    "P07.S03": {
+      "dataRef": "fixtures.nfc",
+      "permissionIds": [
+        "nfc.read",
+        "nfc.link",
+        "warehouse.inventory.read",
+        "device.nfc"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "caseIds": [
+        "P07.S03-T01",
+        "P07.S03-T02",
+        "P07.S03-T03",
+        "P07.S03-T04"
+      ],
+      "sourcePanel": 3
+    },
+    "P07.S04": {
+      "dataRef": "fixtures.nfc",
+      "permissionIds": [
+        "nfc.read",
+        "nfc.link",
+        "warehouse.inventory.read",
+        "device.nfc"
+      ],
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "caseIds": [
+        "P07.S04-T01",
+        "P07.S04-T02",
+        "P07.S04-T03",
+        "P07.S04-T04"
+      ],
+      "sourcePanel": 4
+    }
+  },
+  "testCases": [
+    {
+      "id": "P07.S01-T01",
+      "panelId": "P07.S01",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Đọc thẻ unlinked và liên kết",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S01-T02",
+      "panelId": "P07.S01",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Linked/locked/conflict không ghi đè",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P07.S01-T03",
+      "panelId": "P07.S01",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Permission/unsupported có hướng dẫn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P07.S01-T04",
+      "panelId": "P07.S01",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "UNKNOWN giữ UID/request",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S02-T01",
+      "panelId": "P07.S02",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Đọc thẻ unlinked và liên kết",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S02-T02",
+      "panelId": "P07.S02",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Linked/locked/conflict không ghi đè",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P07.S02-T03",
+      "panelId": "P07.S02",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Permission/unsupported có hướng dẫn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P07.S02-T04",
+      "panelId": "P07.S02",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "UNKNOWN giữ UID/request",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S03-T01",
+      "panelId": "P07.S03",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Đọc thẻ unlinked và liên kết",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S03-T02",
+      "panelId": "P07.S03",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Linked/locked/conflict không ghi đè",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P07.S03-T03",
+      "panelId": "P07.S03",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Permission/unsupported có hướng dẫn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P07.S03-T04",
+      "panelId": "P07.S03",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "UNKNOWN giữ UID/request",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S04-T01",
+      "panelId": "P07.S04",
+      "type": "happy-path",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "Đọc thẻ unlinked và liên kết",
+      "action": "Thực hiện thao tác fixture mặc định",
+      "expected": "Hiển thị đúng trạng thái, giữ owner IDs, không gọi nguồn ngoài fixture.",
+      "ruleIds": [
+        "RBAC-002",
+        "RBAC-003",
+        "RBAC-004",
+        "RBAC-007",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    },
+    {
+      "id": "P07.S04-T02",
+      "panelId": "P07.S04",
+      "type": "least-privilege",
+      "actorId": "fixture-viewer",
+      "role": "viewer",
+      "setup": "Linked/locked/conflict không ghi đè",
+      "action": "Gọi thao tác ghi hoặc resource ngoài grant",
+      "expected": "Deny/readonly, không mutation, không đổi owner route.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-013"
+      ],
+      "status": "proposed-rbac-test"
+    },
+    {
+      "id": "P07.S04-T03",
+      "panelId": "P07.S04",
+      "type": "scope-boundary",
+      "actorId": "fixture-denied",
+      "role": "viewer",
+      "setup": "Permission/unsupported có hướng dẫn",
+      "action": "Đổi tenant/kho, dùng closed hoặc dữ liệu biên",
+      "expected": "Deny theo scope; giữ draft/rows an toàn; nêu nguyên nhân.",
+      "ruleIds": [
+        "RBAC-001",
+        "RBAC-003",
+        "RBAC-005",
+        "RBAC-011"
+      ],
+      "status": "fixture-or-proposed"
+    },
+    {
+      "id": "P07.S04-T04",
+      "panelId": "P07.S04",
+      "type": "unknown-idempotency",
+      "actorId": "fixture-minhanh",
+      "role": "warehouse_operator",
+      "setup": "UNKNOWN giữ UID/request",
+      "action": "Timeout/UNKNOWN rồi reconcile cùng requestId",
+      "expected": "Giữ requestId/documentId/caseId/version; không retry blind và không duplicate.",
+      "ruleIds": [
+        "RBAC-004",
+        "RBAC-006",
+        "RBAC-014"
+      ],
+      "status": "fixture-pass"
+    }
+  ],
+  "quality": {
+    "panelCoverage": "100%",
+    "permissionScenarioCoverage": "100% of listed board permissions",
+    "datasetTargetCoverage": "99%",
+    "sourceTruth": "fixture adapters and handoff contracts",
+    "productionBackend": "BLOCKED_UNVERIFIED",
+    "testerUse": "fixture-pass runs now; proposed-rbac-test runs against future RBAC adapter"
+  }
+}
