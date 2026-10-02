@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const out=path.resolve(process.env.HOME_AUDIT_EVIDENCE_DIR||'handoff/P02/evidence/revision-16-audit');fs.mkdirSync(out,{recursive:true});
 (async()=>{const browser=await chromium.launch({headless:true}),page=await browser.newPage({viewport:{width:494,height:950},deviceScaleFactor:1});const checks=[],errors=[],metrics={};page.on('pageerror',e=>errors.push(e.message));
 const check=async(name,fn)=>{await fn();checks.push({name,status:'PASS'});console.log('PASS '+name);};
-const shot=async(name)=>{await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(out,name+'.png')});};
+const shot=async(name)=>{await page.waitForLoadState('domcontentloaded').catch(()=>{});await page.waitForTimeout(0);await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(out,name+'.png')});};
 const refresh=()=>page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
 const home=async()=>{await page.evaluate(()=>location.hash='#home');await page.locator('#hn-home').waitFor({state:'visible'});};
 try{

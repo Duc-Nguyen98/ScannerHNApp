@@ -205,13 +205,13 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
       ].map(([amount, label, glyph,key,name]) => `<button type="button" class="hn-kpi hn-kpi-link" data-home-kpi="${key}" aria-label="${name}" title="${name}" ${amount==null?'disabled':''}><span class="hn-kpi-top"><strong class="${amount == null ? 'hn-unknown' : ''}">${value(amount)}</strong>${icon(glyph)}</span><span class="hn-kpi-label">${label}</span></button>`).join('')}<div class="hn-kpi hn-kpi-clock"><div class="hn-kpi-top"><time data-shift-start datetime="${esc(data.shiftStartedAt || '')}" aria-label="Ca bắt đầu, giờ Việt Nam UTC+7" title="Thời điểm xác nhận ca thành công · UTC+7">${data.shiftStartedAt ? vietnamTime(data.shiftStartedAt) : '—'}</time>${icon('clock')}</div><p>Ca bắt đầu</p></div></section>
       <section class="hn-resume" aria-labelledby="hn-resume-title" hidden></section>
       <section aria-labelledby="hn-task-title"><div class="hn-section-head"><h2 id="hn-task-title">Tác vụ kho</h2></div>
-      <div class="hn-tasks">${tasks.map(([key, glyph, label, description]) => `<button class="hn-task" data-route="${key}"><span class="hn-tile hn-operation-icon" data-hn-operation="${key}">${icon(glyph)}</span><span class="hn-task-copy"><strong>${label}</strong><small>${description}</small></span>${icon('chevron', 'hn-chevron')}</button>`).join('')}</div>
-      <button class="hn-scanner" data-route="lookup"><span class="hn-tile hn-operation-icon" data-hn-operation="lookup">${icon('scan')}</span><span><strong>Quét hoặc nhập mã sản phẩm</strong><small>QR · Serial · SKU</small></span>${icon('chevron')}</button></section>
+      <div class="hn-tasks">${tasks.map(([key, glyph, label, description]) => `<button type="button" class="hn-task" data-route="${key}"><span class="hn-tile hn-operation-icon" data-hn-operation="${key}">${icon(glyph)}</span><span class="hn-task-copy"><strong>${label}</strong><small>${description}</small></span>${icon('chevron', 'hn-chevron')}</button>`).join('')}</div>
+      <button type="button" class="hn-scanner" data-route="lookup"><span class="hn-tile hn-operation-icon" data-hn-operation="lookup">${icon('scan')}</span><span><strong>Quét hoặc nhập mã sản phẩm</strong><small>QR · Serial · SKU</small></span>${icon('chevron')}</button></section>
       <section class="hn-recent" aria-labelledby="hn-recent-title"><div class="hn-section-head"><h2 id="hn-recent-title" tabindex="-1">Chứng từ gần đây</h2><button type="button" class="hn-view-all" data-home-documents aria-label="Xem tất cả — mở quản lý Chứng từ" title="Mở quản lý Chứng từ, mới nhất trước">Xem tất cả</button></div>
       <div class="hn-recent-list">${recentMarkup(data.recent)}</div></section></div>`;
   }
   root.innerHTML = `<div class="hn-stage" aria-label="Màn hình thiết kế P02"><section class="hn-screen" data-panel="P02.S01"><div id="hn-home">${homeMarkup()}</div><div id="hn-destination" hidden></div>
-    <nav class="hn-nav" aria-label="Điều hướng chính">${[['home', 'house', 'Trang chủ'], ['documents', 'document', 'Chứng từ'], ['lookup', 'scan', 'Quét mã'], ['history', 'history', 'Lịch sử'], ['profile', 'user', 'Cá nhân']].map(([key, glyph, label]) => `<button data-route="${key}" data-tab="${key}" class="${key === 'lookup' ? 'hn-scan-tab' : ''}">${key === 'lookup' ? `<span class="hn-scan-circle">${icon(glyph)}</span>` : icon(glyph)}<span>${label}</span></button>`).join('')}</nav></section></div>
+    <nav class="hn-nav" aria-label="Điều hướng chính">${[['home', 'house', 'Trang chủ'], ['documents', 'document', 'Chứng từ'], ['lookup', 'scan', 'Quét mã'], ['history', 'history', 'Lịch sử'], ['profile', 'user', 'Cá nhân']].map(([key, glyph, label]) => `<button type="button" data-route="${key}" data-tab="${key}" class="${key === 'lookup' ? 'hn-scan-tab' : ''}">${key === 'lookup' ? `<span class="hn-scan-circle">${icon(glyph)}</span>` : icon(glyph)}<span>${label}</span></button>`).join('')}</nav></section></div>
     <aside class="hn-tools" aria-label="Công cụ prototype P02"><strong>P02 · PROTOTYPE — dữ liệu fixture, không kết nối WMS</strong><p>Quyền thao tác kho: được xác nhận trong phiên fixture. Mapping quyền từng module/backend: UNKNOWN.</p><details><summary>Kịch bản kiểm tra P02</summary><label>Hiển thị fixture <select id="hn-scenario"><option value="baseline">B02 · Minh Anh · KPI minh họa</option><option value="long">Tên dài</option><option value="unknown">Nguồn dữ liệu UNKNOWN</option></select></label><button id="hn-logout">Đăng xuất fixture</button><p>${TEMPORARY_ASSETS_APPROVED ? 'Đang dùng ảnh nền và icon có sẵn trong repo để khắc phục phần bị thiếu; chưa xác minh khớp tuyệt đối B02.' : 'Hero/logo/icon chính xác chưa có; phần tài nguyên đang chờ xác nhận, chưa dùng thay thế.'}</p><p id="hn-route-status" role="status"></p></details></aside>`;
   const home = root.querySelector('#hn-home');
   // Keep the full identity intact. Only CSS shortens the visible name in the header.
@@ -270,6 +270,14 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
   const sizeObserver = new ResizeObserver(fitPreview);
   sizeObserver.observe(screen);
   window.addEventListener('resize', fitPreview);
+  // Route modules are independently authored and some legacy controls omit a
+  // type attribute. Explicitly mark non-form controls as buttons so a future
+  // shell/form wrapper cannot turn navigation or filters into submits.
+  const normalizeButtonTypes = () => {
+    for (const button of root.querySelectorAll('.hn-screen button:not([type])')) {
+      if (!button.closest('form')) button.type = 'button';
+    }
+  };
   function showRoute({ key, id }, { push = false, restore = false, scannerContext = null } = {}) {
     if(['inbound','outbound'].includes(key))lastStockOperation=key;
     if (disposed || suspended) return;
@@ -499,6 +507,7 @@ export function mountHome({ root, getState, logout, expire = logout, securitySto
     shellMotion.commit(result.kind==='warranty-session'?warrantySession.routeKey():result.kind==='nfc-audit'?nfcAudit.routeKey():result.kind==='component-resume'?componentResume.routeKey():result.kind==='shift'?shift.routeKey():result.kind==='notifications'?notifications.routeKey():result.kind==='documents'?documents.routeKey():result.kind==='lookup'?lookup.routeKey():result.kind==='history-list'?historyView.routeKey():result.kind==='profile'?profile.routeKey():result.kind, result.kind==='home'?home.querySelector('.hn-main'):destination, screen.querySelector('.hn-nav [aria-current="page"]'), {securitySensitive:result.kind==='security'||result.kind==='warehouse-stopped'});
     previousKey = result.kind === 'home' ? 'home' : key;
     currentHash = location.hash;
+    normalizeButtonTypes();
     fitPreview();
     if (result.kind !== 'blocked') root.dispatchEvent(new CustomEvent('hn-scanner-preview:navigation', { bubbles: true, detail: result }));
   }

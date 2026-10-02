@@ -23,7 +23,7 @@
 .p08-search>button{width:54px;border:0;border-radius:10px;background:linear-gradient(120deg,#007eaa,#034865);color:white}
 .p08-tabs{display:flex;gap:6px;margin-bottom:16px}
 .p08-tabs button{flex:1;border:0;border-radius:10px;padding:12px 5px;background:#edf7fe;font-size:16px;white-space:nowrap}
-.p08-tabs button[aria-selected=true]{background:linear-gradient(120deg,#0084a9,#005574);color:white}
+.p08-tabs button[aria-pressed=true]{background:linear-gradient(120deg,#0084a9,#005574);color:white}
 .p08-filters{display:flex;gap:8px;margin-bottom:16px}
 .p08-filters button,.p08-filters select{border:1px solid #d9e9fc;border-radius:9px;background:#f0f7ff;min-height:48px;font-size:16px;padding:6px 9px}
 .p08-filters button:first-child{flex:1.1;display:flex;align-items:center;gap:7px}
@@ -465,7 +465,7 @@
 #home-app .p12-controls :where(button,input){font:inherit;color:inherit;min-width:0}
 #home-app .p12-controls .p08-search input{font-size:17px}
 #home-app .p12-controls .p08-search>button{color:white}
-#home-app .p12-controls .p08-tabs button[aria-selected=true]{color:white}
+#home-app .p12-controls .p08-tabs button[aria-pressed=true]{color:white}
 #home-app .p12-controls .p08-results-toolbar button{color:#006b91}
 #home-app .p08-results-toolbar .p08-control-extra{width:44px;justify-content:center;padding:0;border:1px solid #dceafa;border-radius:10px;background:#f0f7ff;color:#42658f}
 #home-app .p08-results-toolbar .p08-control-extra .p08-icon{width:24px;height:24px;transform:none}

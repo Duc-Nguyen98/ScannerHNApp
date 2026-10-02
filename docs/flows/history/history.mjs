@@ -181,7 +181,7 @@ export function mountHistory({root,tools,screen,getState,onHub,onDependency,onSi
     review.querySelector('[data-p08-snapshot]').textContent=JSON.stringify({panel,business,recordId,sessionId,filters,dayFilters,limit,tab,scenario,source:DATA.namespace});
     onSize();
   }
-  function onKey(e){const b=e.target.closest('[role=tab]');if(!active||!b||!b.closest('.p08-app')||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const list=[...b.parentElement.children],i=list.indexOf(b);list[e.key==='Home'?0:e.key==='End'?list.length-1:(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length].click();}
+  function onKey(e){const b=e.target.closest('[data-p08-type]');if(!active||!b||!b.closest('.p08-app')||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const list=[...b.parentElement.children],i=list.indexOf(b);list[e.key==='Home'?0:e.key==='End'?list.length-1:(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length].click();}
   root.addEventListener('scroll',onScroll,true);
   root.addEventListener('click',onClick);root.addEventListener('input',onInput);root.addEventListener('keydown',onKey);
   review.addEventListener('click',e=>{const p=e.target.closest('[data-p08-preview]')?.dataset.p08Preview;if(p){tab='info';navigate(Number(p),p==='2'?{record:'LS-0001'}:p==='3'?{session:'PQ-0001'}:{},null,'');}});

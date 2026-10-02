@@ -6,6 +6,7 @@ import { createFixtureAdapter } from './fixture-adapter.mjs?v=shift-r07';
 import { createAuthFlow } from './auth-flow.mjs?v=shift-r07';
 import { SOURCED_ICONS } from './sourced-icons.mjs';
 import { createLazyHome } from './lazy-home.mjs';
+import { loadDeferredStyles } from './style-loader.mjs';
 import { mountAuthMotion } from './motion.mjs';
 import { bindLoginExperience, confirmationGuidance, warehousePresentation, syncConfirmation } from './experience.mjs';
 
@@ -88,7 +89,16 @@ new MutationObserver(()=>{
   }
   visibleAuthDialog=dialog;
 }).observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['open','hidden']});
-const homeLoader=createLazyHome(attempt=>import(`../home/home.mjs?v=motion-M06-r01&p02=audit-r16&authLoad=${attempt}`),()=>{if(flow?.snapshot().previewReady)flow.enforceSession();});
+const homeLoader=createLazyHome(async attempt=>{
+  // Keep the login shell responsive while Home and the route-specific CSS
+  // arrive together. mountHome runs only after the styles settle, preventing
+  // an unstyled P02 frame or a motion reset during the first route change.
+  const [module] = await Promise.all([
+    import(`../home/home.mjs?v=motion-M06-r01&p02=audit-r16&authLoad=${attempt}`),
+    loadDeferredStyles(),
+  ]);
+  return module;
+},()=>{if(flow?.snapshot().previewReady)flow.enforceSession();});
 let homeView = null;
 let homeWaitForUser = false;
 let heldHome=false,homeIdentity=null;

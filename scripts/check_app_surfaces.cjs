@@ -29,22 +29,22 @@ const out=path.resolve('handoff/P07/evidence/revision-02/surfaces');fs.mkdirSync
  await check('modal and backdrop confined to app across six sizes; outside tools undimmed',async()=>{
   for(const [width,height]of [[1869,940],[1495,752],[685,872],[494,1000],[360,800],[340,420]]){
    await page.setViewportSize({width,height});await page.locator('.p07-scroll').evaluate(e=>e.scrollTop=0);await page.click('[data-p07-tag="fixture-tag-001"]');
-   const s=await page.locator('.hn-screen').boundingBox(),d=await page.locator('dialog').boundingBox(),b=await page.locator('.app-modal-host').boundingBox();
+   const s=await page.locator('.hn-screen').boundingBox(),d=await page.locator('dialog[open]').boundingBox(),b=await page.locator('.app-modal-host').boundingBox();
    assert.ok(d.x>=s.x&&d.y>=s.y&&d.x+d.width<=s.x+s.width+1&&d.y+d.height<=s.y+s.height+1);
    for(const key of ['x','y','width','height'])assert.ok(Math.abs(b[key]-s[key])<1);
-   assert.equal(await page.locator('dialog').evaluate(e=>e.matches(':modal')),false);
+   assert.equal(await page.locator('dialog[open]').evaluate(e=>e.matches(':modal')),false);
    assert.equal(await page.locator('.hn-tools').evaluate(e=>e.inert),true);
    await audit('modal-'+width);await page.screenshot({path:path.join(out,`modal-${width}x${height}.png`)});
-   for(let i=0;i<6;i++)await page.keyboard.press('Tab');assert.equal(await page.locator('dialog').evaluate(e=>e.contains(document.activeElement)),true);
-   await page.keyboard.press('Escape');await page.locator('dialog').waitFor({state:'detached'});assert.equal(await page.locator('[data-p07-tag="fixture-tag-001"]').evaluate(e=>e===document.activeElement),true);assert.equal(await page.locator('.hn-tools').evaluate(e=>e.inert),false);
+   for(let i=0;i<6;i++)await page.keyboard.press('Tab');assert.equal(await page.locator('dialog[open]').evaluate(e=>e.contains(document.activeElement)),true);
+   await page.keyboard.press('Escape');await page.locator('dialog[open]').waitFor({state:'detached'});assert.equal(await page.locator('[data-p07-tag="fixture-tag-001"]').evaluate(e=>e===document.activeElement),true);assert.equal(await page.locator('.hn-tools').evaluate(e=>e.inert),false);
   }
  });
- await check('long modal body scrolls, background locked, close button always visible, backdrop dismiss',async()=>{
+ await check('long modal body scrolls, background locked, close button always visible, backdrop stays open',async()=>{
   await page.setViewportSize({width:494,height:1000});await page.click('[data-p07-tag="fixture-tag-001"]');
   await page.locator('dialog dd').nth(2).evaluate(e=>e.textContent=('Tên sản phẩm dài kiểm tra xuống dòng. ').repeat(90));
-  const body=page.locator('.app-modal-body');await body.hover();const old=await page.locator('.p07-scroll').evaluate(e=>e.scrollTop);await page.mouse.wheel(0,400);await page.waitForFunction(()=>document.querySelector('.app-modal-body').scrollTop>0);assert.equal(await page.locator('.p07-scroll').evaluate(e=>e.scrollTop),old);
-  const d=await page.locator('dialog').boundingBox(),close=await page.locator('[data-p07="close-detail"]').boundingBox();assert.ok(close.y+close.height<=d.y+d.height);await page.locator('.hn-screen').screenshot({path:path.join(out,'modal-long-content.png')});
-  const host=await page.locator('.app-modal-host').boundingBox();await page.mouse.click(host.x+2,host.y+2);await page.locator('dialog').waitFor({state:'detached'});
+  const body=page.locator('dialog[open] .app-modal-body');await body.hover();const old=await page.locator('.p07-scroll').evaluate(e=>e.scrollTop);await page.mouse.wheel(0,400);await page.waitForFunction(()=>document.querySelector('dialog[open] .app-modal-body').scrollTop>0);assert.equal(await page.locator('.p07-scroll').evaluate(e=>e.scrollTop),old);
+  const d=await page.locator('dialog[open]').boundingBox(),close=await page.locator('dialog[open] [data-p07="close-detail"]').first().boundingBox();assert.ok(close.y+close.height<=d.y+d.height);await page.locator('.hn-screen').screenshot({path:path.join(out,'modal-long-content.png')});
+  const host=await page.locator('.app-modal-host').boundingBox();await page.mouse.click(host.x+2,host.y+2);await page.locator('dialog[open]').waitFor();await page.keyboard.press('Escape');await page.locator('dialog[open]').waitFor({state:'detached'});
  });
  await check('touch swipe scrolls content with hidden scrollbar',async()=>{
   const box=await page.locator('.p07-scroll').boundingBox();await page.locator('.p07-scroll').evaluate(e=>e.scrollTop=0);

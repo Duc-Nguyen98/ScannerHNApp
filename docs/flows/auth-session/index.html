@@ -8,38 +8,44 @@
   <title>P01 · Hoa Nam Scanner · Prototype</title>
   <link rel="stylesheet" href="./style.css?v=audit-r07">
   <link rel="stylesheet" href="./motion.css?v=M01-r01">
-  <link rel="stylesheet" href="../shared/list-actions.css?v=ux-r15">
-  <link rel="stylesheet" href="../home/style.css?v=p02-audit-r16">
-  <link rel="stylesheet" href="../home/motion.css?v=M02-r01">
-  <link rel="stylesheet" href="../scanner-dialogs/style.css?v=p03-frame-r08">
-  <link rel="stylesheet" href="../inbound/motion.css?v=M04-r01">
-  <link rel="stylesheet" href="../inbound/style.css?v=p04-ui-r09">
-  <link rel="stylesheet" href="../outbound/motion.css?v=M05-r01">
-  <link rel="stylesheet" href="../outbound/style.css?v=p05-r11">
-  <link rel="stylesheet" href="../lookup/style.css?v=p06-polish-20260929">
-  <link rel="stylesheet" href="../nfc/style.css?v=p07-r13">
-  <link rel="stylesheet" href="../history/style.css?v=p08-r19">
-  <link rel="stylesheet" href="../history/nfc-audit.css?v=p22-r01">
-  <link rel="stylesheet" href="../history/warranty-session.css?v=p23-r01">
-  <link rel="stylesheet" href="../warranty/style.css?v=p09-r11">
-  <link rel="stylesheet" href="../profile/style.css?v=p10-r10">
-  <link rel="stylesheet" href="../security/style.css?v=p11-r01">
-  <link rel="stylesheet" href="../documents/style.css?v=p12-r10">
-  <link rel="stylesheet" href="../recovery-shift/style.css?v=p14-r01">
-  <link rel="stylesheet" href="../notifications/style.css?v=p13-r07">
-  <link rel="stylesheet" href="../shared/scan-entry.css?v=p09-r02">
-  <link rel="stylesheet" href="../history/category-colors.css?v=p08-r17">
-  <link rel="stylesheet" href="../system/style.css?v=p15-r01">
-  <link rel="stylesheet" href="../scan-exceptions/style.css?v=p17-r01">
-  <link rel="stylesheet" href="../attachments/style.css?v=p18-r01">
-  <link rel="stylesheet" href="../warranty-components/issue.css?v=p19-r01">
-  <link rel="stylesheet" href="../warranty-components/history.css?v=p20-r01">
-  <link rel="stylesheet" href="../warranty-components/resume.css?v=p21-r01">
+  <!-- Critical shared primitives keep auth/recovery feedback styled before Home loads. -->
   <link rel="stylesheet" href="../shared/app-surfaces.css?v=20260927">
   <link rel="stylesheet" href="../shared/action-dialog.css?v=hn-feedback-v1">
   <link rel="stylesheet" href="../shared/operation-icons.css?v=hn-approved-v1">
   <link rel="stylesheet" href="../shared/readable-text.css?v=hn-readable-v1">
   <link rel="stylesheet" href="../shared/priority-touch.css?v=ux-20260930">
+  <link rel="stylesheet" href="../shared/list-actions.css?v=ux-r15" media="not all" data-hn-deferred-style="../shared/list-actions.css?v=ux-r15">
+  <link rel="stylesheet" href="../home/style.css?v=p02-audit-r16" media="not all" data-hn-deferred-style="../home/style.css?v=p02-audit-r16">
+  <link rel="stylesheet" href="../home/motion.css?v=M02-r01" media="not all" data-hn-deferred-style="../home/motion.css?v=M02-r01">
+  <link rel="stylesheet" href="../scanner-dialogs/style.css?v=p03-frame-r08" media="not all" data-hn-deferred-style="../scanner-dialogs/style.css?v=p03-frame-r08">
+  <link rel="stylesheet" href="../inbound/motion.css?v=M04-r01" media="not all" data-hn-deferred-style="../inbound/motion.css?v=M04-r01">
+  <link rel="stylesheet" href="../inbound/style.css?v=p04-ui-r09" media="not all" data-hn-deferred-style="../inbound/style.css?v=p04-ui-r09">
+  <link rel="stylesheet" href="../outbound/motion.css?v=M05-r01" media="not all" data-hn-deferred-style="../outbound/motion.css?v=M05-r01">
+  <link rel="stylesheet" href="../outbound/style.css?v=p05-r11" media="not all" data-hn-deferred-style="../outbound/style.css?v=p05-r11">
+  <link rel="stylesheet" href="../lookup/style.css?v=p06-polish-20260929" media="not all" data-hn-deferred-style="../lookup/style.css?v=p06-polish-20260929">
+  <link rel="stylesheet" href="../nfc/style.css?v=p07-r13" media="not all" data-hn-deferred-style="../nfc/style.css?v=p07-r13">
+  <link rel="stylesheet" href="../history/style.css?v=p08-r19" media="not all" data-hn-deferred-style="../history/style.css?v=p08-r19">
+  <link rel="stylesheet" href="../history/nfc-audit.css?v=p22-r01" media="not all" data-hn-deferred-style="../history/nfc-audit.css?v=p22-r01">
+  <link rel="stylesheet" href="../history/warranty-session.css?v=p23-r01" media="not all" data-hn-deferred-style="../history/warranty-session.css?v=p23-r01">
+  <link rel="stylesheet" href="../warranty/style.css?v=p09-r11" media="not all" data-hn-deferred-style="../warranty/style.css?v=p09-r11">
+  <link rel="stylesheet" href="../profile/style.css?v=p10-r10" media="not all" data-hn-deferred-style="../profile/style.css?v=p10-r10">
+  <link rel="stylesheet" href="../security/style.css?v=p11-r01" media="not all" data-hn-deferred-style="../security/style.css?v=p11-r01">
+  <link rel="stylesheet" href="../documents/style.css?v=p12-r10" media="not all" data-hn-deferred-style="../documents/style.css?v=p12-r10">
+  <link rel="stylesheet" href="../recovery-shift/style.css?v=p14-r01">
+  <link rel="stylesheet" href="../notifications/style.css?v=p13-r07" media="not all" data-hn-deferred-style="../notifications/style.css?v=p13-r07">
+  <link rel="stylesheet" href="../shared/scan-entry.css?v=p09-r02" media="not all" data-hn-deferred-style="../shared/scan-entry.css?v=p09-r02">
+  <link rel="stylesheet" href="../history/category-colors.css?v=p08-r17" media="not all" data-hn-deferred-style="../history/category-colors.css?v=p08-r17">
+  <link rel="stylesheet" href="../system/style.css?v=p15-r01" media="not all" data-hn-deferred-style="../system/style.css?v=p15-r01">
+  <link rel="stylesheet" href="../scan-exceptions/style.css?v=p17-r01" media="not all" data-hn-deferred-style="../scan-exceptions/style.css?v=p17-r01">
+  <link rel="stylesheet" href="../attachments/style.css?v=p18-r01" media="not all" data-hn-deferred-style="../attachments/style.css?v=p18-r01">
+  <link rel="stylesheet" href="../warranty-components/issue.css?v=p19-r01" media="not all" data-hn-deferred-style="../warranty-components/issue.css?v=p19-r01">
+  <link rel="stylesheet" href="../warranty-components/history.css?v=p20-r01" media="not all" data-hn-deferred-style="../warranty-components/history.css?v=p20-r01">
+  <link rel="stylesheet" href="../warranty-components/resume.css?v=p21-r01" media="not all" data-hn-deferred-style="../warranty-components/resume.css?v=p21-r01">
+  <link rel="stylesheet" href="../shared/app-surfaces.css?v=20260927" media="not all" data-hn-deferred-style="../shared/app-surfaces.css?v=20260927">
+  <link rel="stylesheet" href="../shared/action-dialog.css?v=hn-feedback-v1" media="not all" data-hn-deferred-style="../shared/action-dialog.css?v=hn-feedback-v1">
+  <link rel="stylesheet" href="../shared/operation-icons.css?v=hn-approved-v1" media="not all" data-hn-deferred-style="../shared/operation-icons.css?v=hn-approved-v1">
+  <link rel="stylesheet" href="../shared/readable-text.css?v=hn-readable-v1" media="not all" data-hn-deferred-style="../shared/readable-text.css?v=hn-readable-v1">
+  <link rel="stylesheet" href="../shared/priority-touch.css?v=ux-20260930" media="not all" data-hn-deferred-style="../shared/priority-touch.css?v=ux-20260930">
 </head>
 <body>
   <main id="app" aria-label="Hoa Nam Scanner"></main>

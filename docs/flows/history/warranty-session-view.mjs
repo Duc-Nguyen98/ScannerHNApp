@@ -40,7 +40,7 @@ export function mountWarrantySession({root,screen,tools,getState,onNavigate,onSi
  const occupied=()=>!!screen.querySelector('.app-modal-host,dialog[open]');
  const motion=mountWarrantySessionMotion({root,requested:motionMode,active:()=>allowed()&&!occupied()});
  const filterKey=()=>JSON.stringify([family(),filters[family()]]);
- const animateFilter=()=>{if(!detail())motion.filter(filterKey(),root.querySelector('[data-p23-type][aria-selected="true"]'),family());};
+ const animateFilter=()=>{if(!detail())motion.filter(filterKey(),root.querySelector('[data-p23-type][aria-pressed="true"]'),family());};
  // Stable descriptors also cover duplicate Back/filter buttons and deferred readers.
  function focusKey(e=document.activeElement){
   if(!e||!root.contains(e))return null;

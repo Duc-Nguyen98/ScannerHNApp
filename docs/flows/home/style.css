@@ -42,7 +42,7 @@
 #home-app .hn-name-dialog form { margin-top: 22px; text-align: right; }
 #home-app .hn-name-dialog button { min-height: 44px; padding: 10px 22px; border: 0; border-radius: 9px; background: #00597b; color: white; }
 #home-app .hn-intro > p { font-size: 16px; line-height: 22px; margin-top: 3px; }
-#home-app .hn-main { position: relative; width: 100%; min-width: 0; padding: 0 var(--hn-home-gutter) 15px; }
+#home-app .hn-main { position: relative; width: 100%; min-width: 0; padding: 0 var(--hn-home-gutter) 56px; }
 #home-app .hn-main > section { min-width: 0; width: 100%; }
 #home-app .hn-main::before { content: ''; position: absolute; z-index: -1; inset: 37px 0 0; background: var(--hn-home-surface); border-radius: 25px 25px 0 0; }
 #home-app .hn-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); min-height: 98px; padding: 0; border: 1px solid var(--hn-home-line); border-radius: 14px; background: var(--hn-home-card); box-shadow: 0 2px 8px #1d4b6508; }
@@ -80,7 +80,7 @@
 #home-app .hn-section-head p, #home-app .hn-section-head button { font-size: 14px; line-height: 20px; color: #006689; }
 #home-app .hn-section-head button { background: transparent; border: 0; padding: 0; display: flex; align-items: center; gap: 6px; min-height: 24px; }
 #home-app .hn-section-head .hn-icon { width: 16px; height: 16px; }
-#home-app .hn-section-head .hn-view-all { font-size: 13px; font-weight: 500; min-height:44px; padding:10px 8px; margin:-10px -8px -10px 0; border-radius:8px; }
+#home-app .hn-section-head .hn-view-all { font-size: 13px; font-weight: 500; min-height:44px; padding:10px 8px; margin:-10px 0; border-radius:8px; }
 @media (hover:hover) and (pointer:fine) {
   #home-app .hn-view-all:hover { background:#f0f7fa; }
 }
@@ -119,7 +119,7 @@
 #home-app .hn-resume-row small { display:block; margin-top:3px; font-size:13px; line-height:18px; color:var(--hn-muted); }
 #home-app .hn-resume-row > .hn-icon { width:18px; }
 #home-app .hn-resume-row + .hn-resume-row { border-top:1px solid var(--hn-home-line); }
-#home-app .hn-main:has(.hn-resume:not([hidden])) { padding-bottom:28px; }
+#home-app .hn-main:has(.hn-resume:not([hidden])) { padding-bottom:56px; }
 #home-app .hn-record .hn-tile { width: 42px; height: 44px; flex-basis: 42px; }
 #home-app .hn-record-copy { min-width: 0; flex: 1; }
 #home-app .hn-record strong { display: block; font-size: 16px; line-height: 21px; overflow-wrap:anywhere; }

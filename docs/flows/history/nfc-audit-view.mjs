@@ -33,7 +33,7 @@ export function mountNfcAudit({root,screen,tools,getState,onNavigate,onHome,onSi
   const occupied=()=>!!screen.querySelector('.app-modal-host,dialog[open]');
   const motion=mountNfcAuditMotion({root,requested:motionMode,active:()=>allowed()&&!occupied()});
   const filterKey=()=>JSON.stringify(filters);
-  const animateFilter=()=>motion.filter(filterKey(),root.querySelector('.p22-results'),root.querySelector('[data-p22-type][aria-selected="true"]'));
+  const animateFilter=()=>motion.filter(filterKey(),root.querySelector('.p22-results'),root.querySelector('[data-p22-type][aria-pressed="true"]'));
   const observer=new MutationObserver(()=>{if(occupied())motion.cancel();if(deferredPaint&&allowed()&&!occupied()){deferredPaint=false;paintRead();}});
   observer.observe(screen,{childList:true,subtree:true});
   const outcome=document.createElement('label');outcome.innerHTML='Lần tải lại <select data-p22-read-outcome><option value="ready">Bình thường</option><option value="error">Lỗi đọc</option><option value="slow">Đọc chậm</option><option value="timeout">Treo15giây</option></select>';review.append(outcome);
