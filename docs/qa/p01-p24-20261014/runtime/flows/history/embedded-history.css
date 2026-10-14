@@ -1,0 +1,49 @@
+/* Only P08 host history edges. Standalone boards and other warranty scenes unchanged. */
+.mode-screen .phone[data-history-embedded="true"]{font:20px/1.35 Arial,sans-serif;color:#061568;background:#fcfeff;--ink:#061568;--muted:#55729f;--line:#e0edfc;--header:linear-gradient(115deg,#04334c,#00577c);--primary:#006d91}
+.phone[data-history-embedded="true"]>.phone-header{height:86px;padding:16px 20px 24px;flex:0 0 86px}
+.phone[data-history-embedded="true"] .statusbar{display:none}
+.phone[data-history-embedded="true"] .titlebar{display:flex;gap:18px;min-height:0;height:46px}
+.phone[data-history-embedded="true"] .titlebar h1{font:600 26px/1.2 Arial,sans-serif;text-align:left;white-space:normal;letter-spacing:normal;min-width:0}
+.phone[data-history-embedded="true"] .titlebar button{width:38px;height:38px;min-height:38px;padding:5px;flex-shrink:0}
+.phone[data-history-embedded="true"] .titlebar .icon{width:28px;height:28px;stroke-width:1.9}
+.phone[data-history-embedded="true"]>.body{margin-top:-12px;border-radius:24px 24px 0 0;padding:14px 18px 30px;background:#fcfeff;gap:14px;min-height:0;overflow:auto;overscroll-behavior:contain}
+.phone[data-history-embedded="true"]>.phone-footer{display:none}
+.phone[data-history-embedded="true"] .history-demo{align-self:flex-start;color:#55729f;background:#edf7ff;border-radius:6px;padding:3px 8px;font-size:13px;margin:0}
+.phone[data-history-embedded="true"] .history-intro{padding:0}
+.phone[data-history-embedded="true"] .history-intro h2{font-size:24px;line-height:1.3;margin:5px 0}
+.phone[data-history-embedded="true"] .titlebar h1:focus{outline:none}
+.phone[data-history-embedded="true"] .card{border-radius:12px;border-color:#e0edfc;padding:13px;background:white;box-shadow:none}
+.phone[data-history-embedded="true"] .history-links{gap:10px}
+.phone[data-history-embedded="true"] .history-link{gap:14px;min-height:78px}
+.phone[data-history-embedded="true"] .history-link strong{font-size:20px}
+.phone[data-history-embedded="true"] .history-link small{font-size:16px;color:#55729f;line-height:1.35}
+.phone[data-history-embedded="true"] .icon-tile{width:52px;height:52px;border-radius:10px;background:#eaf7fc;color:#007ca0}
+.phone[data-history-embedded="true"] .icon{width:28px;height:28px;stroke-width:1.9}
+.phone[data-history-embedded="true"] .small-copy{font-size:17px;line-height:1.4}
+.phone[data-history-embedded="true"] .tiny{font-size:15px}
+.phone[data-history-embedded="true"] .section-title{font-size:21px}
+.phone[data-history-embedded="true"] .badge{font-size:15px;white-space:normal;border-radius:9px;padding:4px 8px}
+.phone[data-history-embedded="true"] .event-card{font-size:19px;min-width:0}
+.phone[data-history-embedded="true"] .event-card strong{font-size:20px}
+.phone[data-history-embedded="true"] .event-card>p{font-size:17px}
+.phone[data-history-embedded="true"] .event-card[aria-current="true"]{border:2px solid #007da5;background:#f2faff}
+.phone[data-history-embedded="true"] .filter-row{flex-wrap:wrap;gap:7px}
+.phone[data-history-embedded="true"] .filter-chip{font-size:16px;min-height:42px;padding:7px 12px;border-radius:10px}
+.phone[data-history-embedded="true"] .kv{font-size:18px;gap:12px}
+.phone[data-history-embedded="true"] .kv>span,.phone[data-history-embedded="true"] .kv>strong{min-width:0;overflow-wrap:anywhere}
+.phone[data-history-embedded="true"] button:focus-visible,.phone[data-history-embedded="true"] .body:focus-visible{outline:3px solid #008cff;outline-offset:-3px}
+/* r03: only the approved history hub; keep all other scenes unchanged. */
+.phone[data-history-hub="true"]>.body{padding-top:20px;gap:20px}
+.phone[data-history-hub="true"] .titlebar{gap:12px}
+.phone[data-history-hub="true"] .titlebar button{width:44px;height:44px;min-height:44px;border-radius:12px;cursor:pointer}
+.phone[data-history-hub="true"] .history-link{min-height:86px;padding:14px;cursor:pointer;touch-action:manipulation;transition:background-color .14s,border-color .14s}
+.phone[data-history-hub="true"] .history-link .grow{min-width:0}
+.phone[data-history-hub="true"] .history-link .icon-tile{flex-shrink:0}
+.phone[data-history-hub="true"] .history-forward{width:22px;height:22px;flex-shrink:0;transform:rotate(-90deg);color:#48798f}
+.phone[data-history-hub="true"] .history-link:active{background:#e9f6fb;border-color:#0083a6}
+.phone[data-history-hub="true"] .titlebar button:active{background:#ffffff26}
+@media(hover:hover){
+  .phone[data-history-hub="true"] .history-link:hover{background:#f2faff;border-color:#87c6dc}
+  .phone[data-history-hub="true"] .titlebar button:hover{background:#ffffff18}
+}
+@media(prefers-reduced-motion:reduce){.phone[data-history-hub="true"] .history-link{transition:none}}

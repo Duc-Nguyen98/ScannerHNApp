@@ -1,0 +1,8 @@
+@import url('../shared/motion/motion-tokens.css');
+/* Fixed validation slot in the existing label row; controls never move.
+   Field messages are the existing short validators. No clipping/line clamp. */
+#home-app .p04-app[data-panel="P04.S01"] .p04-field {position:relative;}
+#home-app .p04-app[data-panel="P04.S01"] .p04-field-error {position:absolute;top:0;right:0;width:calc(100% - 125px);min-height:20px;margin:0;text-align:right;line-height:20px;}
+/* Row/confirmation opacity belongs solely to the M00 WAAPI consumer. */
+#home-app .p04-recent-attempt {animation:none;box-shadow:none;}
+#home-app .p04-sku-toggle>.p04-icon {transition:none;}

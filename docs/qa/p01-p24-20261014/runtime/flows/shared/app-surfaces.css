@@ -1,0 +1,88 @@
+/* Shared app-only scroll policy. Keep native wheel/touch/keyboard scrolling;
+   suppress desktop scrollbar chrome and its layout gutter, never content. */
+html:has(#app), html:has(#home-app), html:has(.phone) {
+  scrollbar-width: none !important;
+  scrollbar-gutter: auto !important;
+}
+#app, #app *, #home-app .hn-screen, #home-app .hn-screen *, .phone, .phone * {
+  scrollbar-width: none !important;
+  scrollbar-gutter: auto !important;
+}
+html:has(#app)::-webkit-scrollbar, html:has(#home-app)::-webkit-scrollbar,
+html:has(.phone)::-webkit-scrollbar,
+#app::-webkit-scrollbar, #app *::-webkit-scrollbar,
+#home-app .hn-screen::-webkit-scrollbar, #home-app .hn-screen *::-webkit-scrollbar,
+.phone::-webkit-scrollbar, .phone *::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.p04-scroll:focus-visible, .p05-scroll:focus-visible,
+.p06-scroll:focus-visible, .p07-scroll:focus-visible {
+  outline: 2px solid #008cff;
+  outline-offset: -3px;
+}
+/* Local overlay, sized in the same CSS coordinate space as the scaled app.
+   No viewport units or browser top-layer backdrop. */
+:is(#home-app,#app) :is(.app-modal-host,.app-modal-visual-exit) {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 18px;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #09283980;
+  overscroll-behavior: none;
+}
+:is(#home-app,#app) .app-modal-host .p07-dialog {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #d2e7f7;
+  border-radius: 20px;
+  background: #fff;
+  color: #061568;
+  box-shadow: 0 12px 40px #00345433;
+  font: 18px/1.4 Arial,sans-serif;
+}
+:is(#home-app,#app) .p07-dialog .app-modal-heading {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 22px 18px 14px;
+  font-size: 23px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+:is(#home-app,#app) .app-modal-body {
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 0 18px;
+  scroll-padding-block: 12px;
+}
+:is(#home-app,#app) .p07-dialog .app-modal-footer {
+  flex-shrink: 0;
+  padding: 14px 18px 18px;
+  background: white;
+}
+:is(#home-app,#app) .p07-dialog dl { margin: 0; padding: 0; }
+:is(#home-app,#app) .p07-dialog dl>div {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.2fr);
+  align-items: center; gap: 12px; min-width: 0;
+  padding: 12px 0; border-top: 1px solid #e5effb;
+}
+:is(#home-app,#app) .p07-dialog dt { flex: 1; min-width: 0; color: #56749f; font-size: 18px; overflow-wrap: anywhere; }
+:is(#home-app,#app) .p07-dialog dd { flex: 1.2; min-width: 0; margin: 0; font-size: 18px; overflow-wrap: anywhere; }
+:is(#home-app,#app) .p07-dialog .p07-hint { padding: 16px 0 4px; }

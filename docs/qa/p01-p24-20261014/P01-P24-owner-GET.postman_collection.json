@@ -1,0 +1,1937 @@
+{
+  "info": {
+    "name": "P01–P24 owner GET smoke · EXPLICIT ONE REQUEST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Core GET-only owner checks, not all writes or UI E2E. CORS not required in desktop Postman. Use approved own account. No credentials/default IDs/raw captures. Do not run collection in bulk or export environment with token."
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://khohoanamdev.lptech.info.vn",
+      "type": "string"
+    },
+    {
+      "key": "access_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "selected_request",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "allow_dev_read",
+      "value": "false",
+      "type": "string"
+    },
+    {
+      "key": "page",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "per_page",
+      "value": "20",
+      "type": "string"
+    },
+    {
+      "key": "command",
+      "value": "CREATE",
+      "type": "string"
+    },
+    {
+      "key": "warehouse_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "draft_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "scan_session_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "operation_key",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "document_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "sku_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "physical_code_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "item_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "record_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "activity_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "case_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "request_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "attachment_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "recipient_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "shift_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "file_sha256",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "event_id",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "function stop(message){ pm.execution.skipRequest(); throw new Error(message); }",
+          "const id=pm.info.requestName.split(\" · \")[0];",
+          "const allowlist={\"P01-GET-1\":\"{{base_url}}/api/v1/auth/me\",\"P01-GET-2\":\"{{base_url}}/api/v1/mini-app/work-shifts/current\",\"P02-GET-1\":\"{{base_url}}/api/v1/mini-app/dashboard/summary?warehouse_id={{warehouse_id}}\",\"P02-GET-2\":\"{{base_url}}/api/v1/mini-app/documents?warehouse_id={{warehouse_id}}&cursor=start&per_page=3\",\"P02-GET-3\":\"{{base_url}}/api/v1/auth/me\",\"P03-GET-1\":\"{{base_url}}/api/v1/mini-app/p03/context\",\"P03-GET-2\":\"{{base_url}}/api/v1/mini-app/drafts?warehouse_id={{warehouse_id}}&operation=INBOUND&status=DRAFT&page=1&per_page=20\",\"P03-GET-3\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=INBOUND&scan_session_id={{scan_session_id}}\",\"P03-GET-4\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=INBOUND&scan_session_id={{scan_session_id}}&command=SAVE\",\"P04-GET-1\":\"{{base_url}}/api/v1/mini-app/inbound/suppliers?status=ACTIVE&page=1&per_page=20\",\"P04-GET-2\":\"{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}\",\"P04-GET-3\":\"{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD\",\"P04-GET-4\":\"{{base_url}}/api/v1/mini-app/inbound/documents/{{document_id}}?warehouse_id={{warehouse_id}}\",\"P05-GET-1\":\"{{base_url}}/api/v1/mini-app/outbound/context\",\"P05-GET-2\":\"{{base_url}}/api/v1/mini-app/outbound/sources?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P05-GET-3\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=OUTBOUND&scan_session_id={{scan_session_id}}&command=RECORD\",\"P05-GET-4\":\"{{base_url}}/api/v1/mini-app/outbound/documents/{{document_id}}?warehouse_id={{warehouse_id}}\",\"P06-GET-1\":\"{{base_url}}/api/v1/mini-app/catalog/context\",\"P06-GET-2\":\"{{base_url}}/api/v1/mini-app/catalog/skus?warehouse_id={{warehouse_id}}&sku_type=ALL&status=ACTIVE&page=1&per_page=20\",\"P06-GET-3\":\"{{base_url}}/api/v1/mini-app/catalog/skus/{{sku_id}}?warehouse_id={{warehouse_id}}\",\"P06-GET-4\":\"{{base_url}}/api/v1/mini-app/catalog/skus/{{sku_id}}/stock?warehouse_id={{warehouse_id}}\",\"P06-GET-5\":\"{{base_url}}/api/v1/mini-app/catalog/skus/{{sku_id}}/timeline?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P07-GET-1\":\"{{base_url}}/api/v1/mini-app/nfc-tags?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P07-GET-2\":\"{{base_url}}/api/v1/mini-app/nfc-tags/{{physical_code_id}}?warehouse_id={{warehouse_id}}\",\"P07-GET-3\":\"{{base_url}}/api/v1/mini-app/items/{{item_id}}/nfc/confirmation?warehouse_id={{warehouse_id}}\",\"P08-GET-1\":\"{{base_url}}/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=ALL&business=ALL&limit=20\",\"P08-GET-2\":\"{{base_url}}/api/v1/mini-app/history/records/{{record_id}}?warehouse_id={{warehouse_id}}&activityId={{activity_id}}&limit=20\",\"P08-GET-3\":\"{{base_url}}/api/v1/mini-app/history/scan-sessions/{{scan_session_id}}?warehouse_id={{warehouse_id}}&limit=20\",\"P08-GET-4\":\"{{base_url}}/api/v1/mini-app/history/summary?warehouse_id={{warehouse_id}}&source=ALL&date_mode=ALL\",\"P09-GET-1\":\"{{base_url}}/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20&sort=created_at_desc\",\"P09-GET-2\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}\",\"P09-GET-3\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/events?warehouse_id={{warehouse_id}}&sort=event_at_asc&per_page=20\",\"P09-GET-4\":\"{{base_url}}/api/v1/mini-app/warranty-requests/{{request_id}}?warehouse_id={{warehouse_id}}\",\"P10-GET-1\":\"{{base_url}}/api/v1/auth/me\",\"P10-GET-2\":\"{{base_url}}/api/v1/auth/sessions?page=1&per_page=20\",\"P11-GET-1\":\"{{base_url}}/api/v1/auth/me\",\"P11-GET-2\":\"{{base_url}}/api/v1/auth/sessions?page=1&per_page=20\",\"P12-GET-1\":\"{{base_url}}/api/v1/mini-app/documents?warehouse_id={{warehouse_id}}&cursor=start&per_page=20\",\"P12-GET-2\":\"{{base_url}}/api/v1/mini-app/inbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P12-GET-3\":\"{{base_url}}/api/v1/mini-app/outbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P12-GET-4\":\"{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}\",\"P12-GET-5\":\"{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/scan-entries\",\"P12-GET-6\":\"{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}\",\"P12-GET-7\":\"{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}/scan-entries\",\"P12-GET-8\":\"{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/attachments\",\"P12-GET-9\":\"{{base_url}}/api/v1/mini-app/document-attachments/{{attachment_id}}/download\",\"P13-GET-1\":\"{{base_url}}/api/v1/notifications?cursor=start&unread=1&per_page=20\",\"P13-GET-2\":\"{{base_url}}/api/v1/notifications/{{recipient_id}}\",\"P13-GET-3\":\"{{base_url}}/api/v1/notifications/unread-count\",\"P14-GET-1\":\"{{base_url}}/api/v1/mini-app/work-shifts/{{shift_id}}/close-check?warehouse_id={{warehouse_id}}\",\"P14-GET-2\":\"{{base_url}}/api/v1/mini-app/work-shifts/{{shift_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}\",\"P14-GET-3\":\"{{base_url}}/api/v1/mini-app/work-shifts/{{shift_id}}/summary?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P15-GET-1\":\"{{base_url}}/api/v1/mini-app/p03/context\",\"P15-GET-2\":\"{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD\",\"P15-GET-3\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=OUTBOUND&scan_session_id={{scan_session_id}}&command=RECORD\",\"P16-GET-1\":\"{{base_url}}/api/v1/mini-app/inbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P16-GET-2\":\"{{base_url}}/api/v1/mini-app/outbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P16-GET-3\":\"{{base_url}}/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P17-GET-1\":\"{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}\",\"P17-GET-2\":\"{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD\",\"P18-GET-1\":\"{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/attachments\",\"P18-GET-2\":\"{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}\",\"P18-GET-3\":\"{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}\",\"P18-GET-4\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}\",\"P19-GET-1\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}\",\"P19-GET-2\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}\",\"P19-GET-3\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}&command=RECORD\",\"P20-GET-1\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}\",\"P20-GET-2\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/component-issues?warehouse_id={{warehouse_id}}&per_page=20&page=1\",\"P20-GET-3\":\"{{base_url}}/api/v1/mini-app/warranty-component-issues/{{document_id}}?warehouse_id={{warehouse_id}}\",\"P21-GET-1\":\"{{base_url}}/api/v1/mini-app/drafts?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&page=1&per_page=20\",\"P21-GET-2\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}\",\"P21-GET-3\":\"{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}&command=RECORD\",\"P22-GET-1\":\"{{base_url}}/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=NFC&limit=20\",\"P22-GET-2\":\"{{base_url}}/api/v1/mini-app/history/records/{{record_id}}?warehouse_id={{warehouse_id}}&source=NFC&activityId={{activity_id}}\",\"P22-GET-3\":\"{{base_url}}/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=NFC&event_id={{event_id}}\",\"P22-GET-4\":\"{{base_url}}/api/v1/mini-app/history/summary?warehouse_id={{warehouse_id}}&source=NFC&date_mode=ALL\",\"P23-GET-1\":\"{{base_url}}/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P23-GET-2\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}\",\"P23-GET-3\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/events?warehouse_id={{warehouse_id}}&sort=event_at_asc&per_page=20\",\"P23-GET-4\":\"{{base_url}}/api/v1/mini-app/scan-sessions?warehouse_id={{warehouse_id}}&page=1&per_page=20\",\"P23-GET-5\":\"{{base_url}}/api/v1/mini-app/history/scan-sessions/{{scan_session_id}}?warehouse_id={{warehouse_id}}&limit=20\",\"P24-GET-1\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}\",\"P24-GET-2\":\"{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/component-issues?warehouse_id={{warehouse_id}}&per_page=20&page=1\",\"P24-GET-3\":\"{{base_url}}/api/v1/mini-app/component-issue-requests/{{operation_key}}?operation={{command}}\"};",
+          "if(pm.request.url.toString()!==allowlist[id]) stop(\"URL template changed; use the reviewed original owner request\");",
+          "if(pm.variables.get(\"allow_dev_read\")!==\"true\") stop(\"Explicit DEV read authorization required\");",
+          "if(pm.variables.get(\"selected_request\")!==id) stop(\"Select exactly this request; no bulk Run All\");",
+          "if(pm.request.method!==\"GET\"||pm.request.body) stop(\"GET with no body only\");",
+          "const expanded=pm.variables.replaceIn(pm.request.url.toString());",
+          "if(!expanded.startsWith(\"https://khohoanamdev.lptech.info.vn/api/v1/\")) stop(\"Origin/path not allowed\");",
+          "if(pm.variables.get(\"base_url\")!==\"https://khohoanamdev.lptech.info.vn\") stop(\"Exact DEV origin required\");",
+          "for(const match of (pm.request.url.toString()+JSON.stringify(pm.request.headers.toJSON())).matchAll(/\\{\\{(\\w+)\\}\\}/g)){if(!String(pm.variables.get(match[1])||\"\").trim())stop(\"Missing original scope/value: \"+match[1]);}",
+          "pm.request.headers.upsert({key:\"X-Request-ID\",value:pm.variables.replaceIn(\"{{$guid}}\")});",
+          "// Original operation keys remain supplied by the tester. No replay/mutation/follow/response storage."
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "P01 · Đăng nhập / xác nhận phiên",
+      "item": [
+        {
+          "name": "P01-GET-1 · Profile / phiên / quyền / kho",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/auth/me",
+            "description": "Auth dùng owner hiện có; P14 live OFF. Không tự bắt đầu ca hoặc tiếp quản phiên cũ. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P01-GET-2 · Ca hiện tại",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/work-shifts/current",
+            "description": "Auth dùng owner hiện có; P14 live OFF. Không tự bắt đầu ca hoặc tiếp quản phiên cũ. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P02 · Trang chủ",
+      "item": [
+        {
+          "name": "P02-GET-1 · Dashboard thật",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/dashboard/summary?warehouse_id={{warehouse_id}}",
+            "description": "Timestamp RFC3339 parse một lần, giờ Việt Nam; recent không lấy KPI. Mixed flag theo phê duyệt DEV, chưa đo trong lượt này. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P02-GET-2 · Recent từ P12 mixed",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/documents?warehouse_id={{warehouse_id}}&cursor=start&per_page=3",
+            "description": "Timestamp RFC3339 parse một lần, giờ Việt Nam; recent không lấy KPI. Mixed flag theo phê duyệt DEV, chưa đo trong lượt này. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P02-GET-3 · Profile / phiên / quyền / kho",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/auth/me",
+            "description": "Timestamp RFC3339 parse một lần, giờ Việt Nam; recent không lấy KPI. Mixed flag theo phê duyệt DEV, chưa đo trong lượt này. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P03 · Quét / quản lý nháp",
+      "item": [
+        {
+          "name": "P03-GET-1 · Context owner P03",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/p03/context",
+            "description": "Nháp không thay business document; UNKNOWN chỉ GET đúng key/context. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P03-GET-2 · Nháp INBOUND",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts?warehouse_id={{warehouse_id}}&operation=INBOUND&status=DRAFT&page=1&per_page=20",
+            "description": "Nháp không thay business document; UNKNOWN chỉ GET đúng key/context. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P03-GET-3 · Nháp đúng scan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=INBOUND&scan_session_id={{scan_session_id}}",
+            "description": "Nháp không thay business document; UNKNOWN chỉ GET đúng key/context. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P03-GET-4 · Đối chiếu SAVE gốc",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=INBOUND&scan_session_id={{scan_session_id}}&command=SAVE",
+            "description": "Nháp không thay business document; UNKNOWN chỉ GET đúng key/context. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P04 · Nhập kho",
+      "item": [
+        {
+          "name": "P04-GET-1 · NCC GLOBAL",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound/suppliers?status=ACTIVE&page=1&per_page=20",
+            "description": "SAVE rồi RECORD đúng owner; RECORDED chưa POSTED/chưa đổi tồn. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P04-GET-2 · Nháp nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}",
+            "description": "SAVE rồi RECORD đúng owner; RECORDED chưa POSTED/chưa đổi tồn. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P04-GET-3 · Đối chiếu RECORD nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "SAVE rồi RECORD đúng owner; RECORDED chưa POSTED/chưa đổi tồn. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P04-GET-4 · Phiếu vừa ghi nhận",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound/documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+            "description": "SAVE rồi RECORD đúng owner; RECORDED chưa POSTED/chưa đổi tồn. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P05 · Xuất kho",
+      "item": [
+        {
+          "name": "P05-GET-1 · Context xuất",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound/context",
+            "description": "Linked và manual-create là mode riêng; không fallback standalone hoặc dùng receipt cũ làm trạng thái hiện tại. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P05-GET-2 · Nguồn xuất",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound/sources?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "Linked và manual-create là mode riêng; không fallback standalone hoặc dùng receipt cũ làm trạng thái hiện tại. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P05-GET-3 · Đối chiếu linked RECORD",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=OUTBOUND&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "Linked và manual-create là mode riêng; không fallback standalone hoặc dùng receipt cũ làm trạng thái hiện tại. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P05-GET-4 · Phiếu xuất hiện tại",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound/documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+            "description": "Linked và manual-create là mode riêng; không fallback standalone hoặc dùng receipt cũ làm trạng thái hiện tại. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P06 · Tra cứu SKU / tồn / lịch sử",
+      "item": [
+        {
+          "name": "P06-GET-1 · Catalog context",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/catalog/context",
+            "description": "S01 theo SKU; total từ API, không tự chọn kết quả đầu. Verify đủ 9 route owner riêng trước nghiệm thu. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P06-GET-2 · SKU theo kho",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/catalog/skus?warehouse_id={{warehouse_id}}&sku_type=ALL&status=ACTIVE&page=1&per_page=20",
+            "description": "S01 theo SKU; total từ API, không tự chọn kết quả đầu. Verify đủ 9 route owner riêng trước nghiệm thu. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P06-GET-3 · SKU detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/catalog/skus/{{sku_id}}?warehouse_id={{warehouse_id}}",
+            "description": "S01 theo SKU; total từ API, không tự chọn kết quả đầu. Verify đủ 9 route owner riêng trước nghiệm thu. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P06-GET-4 · Tồn SKU",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/catalog/skus/{{sku_id}}/stock?warehouse_id={{warehouse_id}}",
+            "description": "S01 theo SKU; total từ API, không tự chọn kết quả đầu. Verify đủ 9 route owner riêng trước nghiệm thu. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P06-GET-5 · Timeline SKU",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/catalog/skus/{{sku_id}}/timeline?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "S01 theo SKU; total từ API, không tự chọn kết quả đầu. Verify đủ 9 route owner riêng trước nghiệm thu. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P07 · NFC",
+      "item": [
+        {
+          "name": "P07-GET-1 · Danh sách tag",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/nfc-tags?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "Không NFC phần cứng/assign/revoke/replace trong preview. Current mapping không phải receipt/hardware readback. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P07-GET-2 · Tag đúng ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/nfc-tags/{{physical_code_id}}?warehouse_id={{warehouse_id}}",
+            "description": "Không NFC phần cứng/assign/revoke/replace trong preview. Current mapping không phải receipt/hardware readback. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P07-GET-3 · Receipt confirm gốc",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Idempotency-Key",
+                "value": "{{operation_key}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/items/{{item_id}}/nfc/confirmation?warehouse_id={{warehouse_id}}",
+            "description": "Không NFC phần cứng/assign/revoke/replace trong preview. Current mapping không phải receipt/hardware readback. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P08 · Lịch sử tổng hợp",
+      "item": [
+        {
+          "name": "P08-GET-1 · Records",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=ALL&business=ALL&limit=20",
+            "description": "Không export. Scan-batch ID khác auth-session; totals từ server; null không đổi 0. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P08-GET-2 · Exact record/activity",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/records/{{record_id}}?warehouse_id={{warehouse_id}}&activityId={{activity_id}}&limit=20",
+            "description": "Không export. Scan-batch ID khác auth-session; totals từ server; null không đổi 0. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P08-GET-3 · Phiên quét: event cursor riêng",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/scan-sessions/{{scan_session_id}}?warehouse_id={{warehouse_id}}&limit=20",
+            "description": "Không export. Scan-batch ID khác auth-session; totals từ server; null không đổi 0. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P08-GET-4 · Summary ALL",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/summary?warehouse_id={{warehouse_id}}&source=ALL&date_mode=ALL",
+            "description": "Không export. Scan-batch ID khác auth-session; totals từ server; null không đổi 0. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P09 · Bảo hành",
+      "item": [
+        {
+          "name": "P09-GET-1 · Danh sách hồ sơ",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20&sort=created_at_desc",
+            "description": "receipt SUCCEEDED rồi GET canonical detail; original key/body/version giữ khi UNKNOWN. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P09-GET-2 · Hồ sơ đúng canonical ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+            "description": "receipt SUCCEEDED rồi GET canonical detail; original key/body/version giữ khi UNKNOWN. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P09-GET-3 · Events đúng hồ sơ",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/events?warehouse_id={{warehouse_id}}&sort=event_at_asc&per_page=20",
+            "description": "receipt SUCCEEDED rồi GET canonical detail; original key/body/version giữ khi UNKNOWN. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P09-GET-4 · Receipt theo X-Request-ID gốc",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-requests/{{request_id}}?warehouse_id={{warehouse_id}}",
+            "description": "receipt SUCCEEDED rồi GET canonical detail; original key/body/version giữ khi UNKNOWN. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P10 · Cá nhân",
+      "item": [
+        {
+          "name": "P10-GET-1 · Profile / phiên / quyền / kho",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/auth/me",
+            "description": "Avatar unsupported; không uploader giả. Logout khác END; timeout không tự success/retry. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P10-GET-2 · Sessions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/auth/sessions?page=1&per_page=20",
+            "description": "Avatar unsupported; không uploader giả. Logout khác END; timeout không tự success/retry. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P11 · Bảo mật",
+      "item": [
+        {
+          "name": "P11-GET-1 · Profile / phiên / quyền / kho",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/auth/me",
+            "description": "Policy server gồm UTF8 bytes; ID DELETE khác session_id; receipt/reconcile chưa đủ, timeout giữ khóa. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P11-GET-2 · Danh sách phiên",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/auth/sessions?page=1&per_page=20",
+            "description": "Policy server gồm UTF8 bytes; ID DELETE khác session_id; receipt/reconcile chưa đủ, timeout giữ khóa. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P12 · Chứng từ",
+      "item": [
+        {
+          "name": "P12-GET-1 · All mixed",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/documents?warehouse_id={{warehouse_id}}&cursor=start&per_page=20",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-2 · Nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-3 · Xuất",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-4 · Detail nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-5 · Scan evidence nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/scan-entries",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-6 · Detail xuất",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-7 · Scan evidence xuất",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}/scan-entries",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-8 · Tệp nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/attachments",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P12-GET-9 · Tải tệp",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/document-attachments/{{attachment_id}}/download",
+            "description": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P13 · Thông báo",
+      "item": [
+        {
+          "name": "P13-GET-1 · Thông báo unread",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/notifications?cursor=start&unread=1&per_page=20",
+            "description": "Recipient ID không notification ID. PATCH không body/query; read_at đầu tiên; current_waiting_for_web null. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P13-GET-2 · Exact recipient",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/notifications/{{recipient_id}}",
+            "description": "Recipient ID không notification ID. PATCH không body/query; read_at đầu tiên; current_waiting_for_web null. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P13-GET-3 · Unread count",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/notifications/unread-count",
+            "description": "Recipient ID không notification ID. PATCH không body/query; read_at đầu tiên; current_waiting_for_web null. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P14 · Recovery / kết thúc ca",
+      "item": [
+        {
+          "name": "P14-GET-1 · Close-check",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/work-shifts/{{shift_id}}/close-check?warehouse_id={{warehouse_id}}",
+            "description": "P14/recovery OFF. end_supported không CLEAN; END receipt data trực tiếp. Không proof public hoặc legacy backfill. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P14-GET-2 · GET END key gốc",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/work-shifts/{{shift_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}",
+            "description": "P14/recovery OFF. end_supported không CLEAN; END receipt data trực tiếp. Không proof public hoặc legacy backfill. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P14-GET-3 · Summary immutable",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/work-shifts/{{shift_id}}/summary?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "P14/recovery OFF. end_supported không CLEAN; END receipt data trực tiếp. Không proof public hoặc legacy backfill. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P15 · Lỗi / đối chiếu",
+      "item": [
+        {
+          "name": "P15-GET-1 · Support owner",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/p03/context",
+            "description": "CHECK_ONLY; không endpoint retry/device/permissions mới; 404/null không NOT_RECORDED. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P15-GET-2 · P04 reconcile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "CHECK_ONLY; không endpoint retry/device/permissions mới; 404/null không NOT_RECORDED. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P15-GET-3 · P05 linked reconcile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=OUTBOUND&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "CHECK_ONLY; không endpoint retry/device/permissions mới; 404/null không NOT_RECORDED. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P16 · Loading / empty / no-match / lỗi",
+      "item": [
+        {
+          "name": "P16-GET-1 · Nhập owner",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "Empty/no-match phải dựa count_evidence hợp lệ; không data.length, error→0 hoặc merge trang All. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P16-GET-2 · Xuất owner",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "Empty/no-match phải dựa count_evidence hợp lệ; không data.length, error→0 hoặc merge trang All. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P16-GET-3 · Bảo hành owner",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "Empty/no-match phải dựa count_evidence hợp lệ; không data.length, error→0 hoặc merge trang All. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P17 · Ngoại lệ quét",
+      "item": [
+        {
+          "name": "P17-GET-1 · Phiếu giữ hàng",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+            "description": "Reservation redacted vẫn đang giữ; không mở phiếu khi can_open=false, không sửa tồn/hủy/retry để xử lý ngoại lệ. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P17-GET-2 · P04 request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "Reservation redacted vẫn đang giữ; không mở phiếu khi can_open=false, không sửa tồn/hủy/retry để xử lý ngoại lệ. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P18 · Tệp / bàn giao / vị trí",
+      "item": [
+        {
+          "name": "P18-GET-1 · Tệp nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/attachments",
+            "description": "Upload UNKNOWN chỉ GET; abort không rollback; QUARANTINED không mở. Receiver mapping/vị trí chưa chốt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P18-GET-2 · Upload receipt nhập",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/inbound-documents/{{document_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}",
+            "description": "Upload UNKNOWN chỉ GET; abort không rollback; QUARANTINED không mở. Receiver mapping/vị trí chưa chốt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P18-GET-3 · Upload receipt xuất",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/outbound-documents/{{document_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}",
+            "description": "Upload UNKNOWN chỉ GET; abort không rollback; QUARANTINED không mở. Receiver mapping/vị trí chưa chốt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P18-GET-4 · Upload receipt bảo hành",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}",
+            "description": "Upload UNKNOWN chỉ GET; abort không rollback; QUARANTINED không mở. Receiver mapping/vị trí chưa chốt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P19 · Xuất linh kiện",
+      "item": [
+        {
+          "name": "P19-GET-1 · Hồ sơ đúng canonical ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+            "description": "SAVE 0–1000, RECORD 1–500; >500 khóa, không chia/copy/chuyển canonical. Returned chặn xuất. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P19-GET-2 · P03 linked checkpoint",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}",
+            "description": "SAVE 0–1000, RECORD 1–500; >500 khóa, không chia/copy/chuyển canonical. Returned chặn xuất. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P19-GET-3 · Linked RECORD gốc",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "SAVE 0–1000, RECORD 1–500; >500 khóa, không chia/copy/chuyển canonical. Returned chặn xuất. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P20 · Linh kiện đã xuất",
+      "item": [
+        {
+          "name": "P20-GET-1 · Hồ sơ đúng canonical ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+            "description": "posted_at không created_at; lines ngang document; quantity/raw thiếu proof giữ null. Lỗi dòng không empty toàn lịch sử. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P20-GET-2 · POSTED links",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-History-Contract",
+                "value": "p20-component-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/component-issues?warehouse_id={{warehouse_id}}&per_page=20&page=1",
+            "description": "posted_at không created_at; lines ngang document; quantity/raw thiếu proof giữ null. Lỗi dòng không empty toàn lịch sử. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P20-GET-3 · Detail proof",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-History-Contract",
+                "value": "p20-component-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-component-issues/{{document_id}}?warehouse_id={{warehouse_id}}",
+            "description": "posted_at không created_at; lines ngang document; quantity/raw thiếu proof giữ null. Lỗi dòng không empty toàn lịch sử. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P21 · Tiếp tục phiếu linh kiện",
+      "item": [
+        {
+          "name": "P21-GET-1 · Linked tasks",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-Resume-Contract",
+                "value": "p21-component-resume-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&page=1&per_page=20",
+            "description": "Header chỉ GET, không fallback P03 cũ; task ID/version khác business. Same original context, không auto Post. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P21-GET-2 · Checkpoint",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-Resume-Contract",
+                "value": "p21-component-resume-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}",
+            "description": "Header chỉ GET, không fallback P03 cũ; task ID/version khác business. Same original context, không auto Post. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P21-GET-3 · RECORD gốc",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-Resume-Contract",
+                "value": "p21-component-resume-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}&command=RECORD",
+            "description": "Header chỉ GET, không fallback P03 cũ; task ID/version khác business. Same original context, không auto Post. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P22 · Lịch sử NFC",
+      "item": [
+        {
+          "name": "P22-GET-1 · Events theo P08",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-NFC-History-Contract",
+                "value": "p22-nfc-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=NFC&limit=20",
+            "description": "Không /nfc-events; thiếu owner result null/NOT_RECORDED, không SUCCESS bù; EVENT count, outbox publication không hardware receipt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P22-GET-2 · Exact parent/activity",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-NFC-History-Contract",
+                "value": "p22-nfc-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/records/{{record_id}}?warehouse_id={{warehouse_id}}&source=NFC&activityId={{activity_id}}",
+            "description": "Không /nfc-events; thiếu owner result null/NOT_RECORDED, không SUCCESS bù; EVENT count, outbox publication không hardware receipt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P22-GET-3 · UUID lookup",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-NFC-History-Contract",
+                "value": "p22-nfc-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=NFC&event_id={{event_id}}",
+            "description": "Không /nfc-events; thiếu owner result null/NOT_RECORDED, không SUCCESS bù; EVENT count, outbox publication không hardware receipt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P22-GET-4 · NFC summary",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-NFC-History-Contract",
+                "value": "p22-nfc-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/summary?warehouse_id={{warehouse_id}}&source=NFC&date_mode=ALL",
+            "description": "Không /nfc-events; thiếu owner result null/NOT_RECORDED, không SUCCESS bù; EVENT count, outbox publication không hardware receipt. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P23 · Lịch sử bảo hành / phiên",
+      "item": [
+        {
+          "name": "P23-GET-1 · Hồ sơ",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "p23-read-v2; source thiếu total=null, available phần có; RESOLVED không ACCEPTED, OTHER không rejected. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P23-GET-2 · Hồ sơ đúng canonical ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+            "description": "p23-read-v2; source thiếu total=null, available phần có; RESOLVED không ACCEPTED, OTHER không rejected. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P23-GET-3 · Timeline",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/events?warehouse_id={{warehouse_id}}&sort=event_at_asc&per_page=20",
+            "description": "p23-read-v2; source thiếu total=null, available phần có; RESOLVED không ACCEPTED, OTHER không rejected. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P23-GET-4 · Phiên SCAN_SESSION",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/scan-sessions?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+            "description": "p23-read-v2; source thiếu total=null, available phần có; RESOLVED không ACCEPTED, OTHER không rejected. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P23-GET-5 · Phiên quét: event cursor riêng",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/history/scan-sessions/{{scan_session_id}}?warehouse_id={{warehouse_id}}&limit=20",
+            "description": "p23-read-v2; source thiếu total=null, available phần có; RESOLVED không ACCEPTED, OTHER không rejected. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "P24 · Panel ngoại lệ owner",
+      "item": [
+        {
+          "name": "P24-GET-1 · Hồ sơ đúng canonical ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+            "description": "Canonical command recovery mới chỉ dùng yêu cầu đã gửi protocol mới, không nâng request cũ. Flag OFF; local confirm không scan/Post. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P24-GET-2 · POSTED history",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-History-Contract",
+                "value": "p20-component-history-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/warranty-cases/{{case_id}}/component-issues?warehouse_id={{warehouse_id}}&per_page=20&page=1",
+            "description": "Canonical command recovery mới chỉ dùng yêu cầu đã gửi protocol mới, không nâng request cũ. Flag OFF; local confirm không scan/Post. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        },
+        {
+          "name": "P24-GET-3 · P19 command GET-only",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "X-Component-Command-Contract",
+                "value": "p19-component-command-v1"
+              }
+            ],
+            "url": "{{base_url}}/api/v1/mini-app/component-issue-requests/{{operation_key}}?operation={{command}}",
+            "description": "Canonical command recovery mới chỉ dùng yêu cầu đã gửi protocol mới, không nâng request cũ. Flag OFF; local confirm không scan/Post. · IDs/keys/context phải là của yêu cầu gốc đã được phép. Không follow/replay tự động."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

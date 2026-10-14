@@ -1,0 +1,12 @@
+import {need,checkIdentity,object,P18_RELEASE} from './api-contract.mjs';
+import {hashText} from './file-hash.mjs';
+// Raw file/name/form/PII/credentials never enter this checkpoint. Reconcile needs
+// IDs/hash, not raw note. Original multipart stays private and ephemeral in owner.
+const keys=['contract','mode','parent','actorId','authSessionId','warehouseId','operationKey','fileSha256','fileSize','mime','filenameSha256','fieldsSha256','fingerprint','outcome'];
+export function safeUploadCheckpoint(j){need(object(j),'INVALID_CAPTURE');need(Object.keys(j).every(k=>keys.includes(k)),'CHECKPOINT_FIELD_PROHIBITED');need(Object.keys(j.parent||{}).every(k=>['owner','id','kind','warehouseId'].includes(k)),'CHECKPOINT_FIELD_PROHIBITED');need(['NEW_NOT_SENT','UNKNOWN','SUCCEEDED','REJECTED'].includes(j.outcome),'INVALID_CHECKPOINT_OUTCOME');return structuredClone(j);}
+export function createUploadJournal({storage,getContext,origin='https://p18.invalid'}){
+ function key(j){return 'hn-p18-upload-v1:'+hashText(JSON.stringify([origin,j.actorId,j.authSessionId,j.warehouseId,j.operationKey]));}
+ const fileIndex=j=>'hn-p18-upload-file:'+hashText(JSON.stringify([origin,j.actorId,j.authSessionId,j.warehouseId,j.parent.owner,j.parent.id,j.fileSha256]));
+ const operationIndex=j=>'hn-p18-upload-operation:'+hashText(JSON.stringify([origin,j.actorId,j.operationKey]));
+ return {write(j){checkIdentity(j,getContext());const copy=safeUploadCheckpoint(j),prior=storage.getItem(key(j)),index=storage.getItem(fileIndex(j)),reserved=storage.getItem(operationIndex(j));need(!index||index===j.operationKey,'ORIGINAL_FILE_REQUEST_REQUIRED');if(reserved){const old=JSON.parse(reserved);need(old.authSessionId===j.authSessionId,'UPLOAD_SESSION_MISMATCH');need(old.fingerprint===j.fingerprint,'IMMUTABLE_UPLOAD_CAPTURE');}if(prior){const old=JSON.parse(prior);need(old.fingerprint===j.fingerprint,'IMMUTABLE_UPLOAD_CAPTURE');}storage.setItem(operationIndex(j),JSON.stringify({authSessionId:j.authSessionId,fingerprint:j.fingerprint}));storage.setItem(key(j),JSON.stringify(copy));storage.setItem(fileIndex(j),j.operationKey);},read(j){checkIdentity(j,getContext());const text=storage.getItem(key(j));if(!text)return null;const copy=safeUploadCheckpoint(JSON.parse(text));checkIdentity(copy,getContext());need(copy.fingerprint===j.fingerprint,'IMMUTABLE_UPLOAD_CAPTURE');return copy;},contract:P18_RELEASE.contract};
+}

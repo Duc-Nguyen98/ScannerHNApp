@@ -1,0 +1,31 @@
+@import url('./scaled-controls.css');
+/* Real layout space prevents adjacent targets from overlapping after scaling. */
+:is(#app,#home-app) [data-hn-touch-layout]{
+ min-width:max(var(--hn-control-hit-min,44px),var(--hn-control-layout-min-width,0px))!important;
+ min-height:max(var(--hn-control-hit-min,44px),var(--hn-control-layout-min-height,0px))!important;
+ flex-shrink:0;
+ touch-action:manipulation;
+}
+/* The visual control is already the target; do not cover neighbouring inputs. */
+[data-hn-touch-layout][data-hn-hit-ready]::before{left:0;top:0;width:100%;height:100%}
+:is(#app,#home-app) :is(.input-wrap,.p06-search,.p07-search-row,.p08-search):has([data-hn-touch-layout]){height:auto;min-height:50px}
+#home-app :is(.p04-header,.p05-header,.p06-header,.p07-header,.p08-header,.p09-header,.p11-header):has([data-hn-touch-layout]){flex-basis:auto;flex-shrink:0}
+#home-app :is(.p04-header,.p05-header,.p06-header,.p07-header,.p08-header,.p09-header,.p11-header):has([data-hn-touch-layout]) h1{min-width:0;overflow-wrap:anywhere}
+#home-app :is(.p04-header,.p05-header):has([data-hn-touch-layout]){height:auto;min-height:63px;padding-bottom:14px;align-items:center}
+#home-app .p06-header:has([data-hn-touch-layout]){min-height:92px}
+#home-app :is(.p07-header,.p08-header,.p09-header):has([data-hn-touch-layout]){min-height:86px}
+/* P09's compact wizard title previously allowed only 32px controls. */
+#home-app .p09-app[data-panel="P09.S02"] .p09-header:has([data-hn-touch-layout]){min-height:63px;padding-bottom:20px;align-items:center}
+/* Absolute copy icons must reserve their entire new footprint in the data row. */
+#home-app :is(.p07-app,.p07-dialog) dd:has(.p07-copy[data-hn-touch-layout]){min-height:var(--hn-priority-hit-min,44px);padding-right:calc(var(--hn-priority-hit-min,44px) + 8px)}
+#home-app dl dd>.p07-copy[data-hn-touch-layout]{top:0}
+#home-app .p04-search-row:has(.p04-search-clear[data-hn-touch-layout]) .p04-select-search,
+#home-app .p05-code-entry:has(.p05-clear-code[data-hn-touch-layout]) input{min-height:calc(var(--hn-priority-hit-min,44px) + 8px);padding-right:calc(var(--hn-priority-hit-min,44px) + 12px)}
+/* Close shares a heading row, with no hit area over the first operation. */
+#home-app .p03-dialog.sheet:has(.p03-close[data-hn-touch-layout]){display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px}
+#home-app .p03-close[data-hn-touch-layout]{position:relative;right:auto;top:auto;grid-column:2;grid-row:1/3;align-self:center}
+#home-app .p03-dialog.sheet:has(.p03-close[data-hn-touch-layout]) h2{grid-column:1;grid-row:1}
+#home-app .p03-dialog.sheet:has(.p03-close[data-hn-touch-layout]) #p03-description{grid-column:1;grid-row:2}
+#home-app .p03-dialog.sheet:has(.p03-close[data-hn-touch-layout]) .p03-operations{grid-column:1/-1}
+#home-app .p03-screen .p03-header:has([data-hn-touch-layout]){height:calc(max(47px,var(--hn-priority-hit-min,44px)) + var(--p03-safe-top,0px));align-items:center}
+#home-app .p03-screen:has(.p03-header [data-hn-touch-layout]) .p03-host{top:calc(max(47px,var(--hn-priority-hit-min,44px)) + var(--p03-safe-top,0px))}

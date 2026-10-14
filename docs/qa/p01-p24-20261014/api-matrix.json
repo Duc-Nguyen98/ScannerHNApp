@@ -1,0 +1,1134 @@
+{
+  "date": "2026-10-14",
+  "origin": "https://khohoanamdev.lptech.info.vn",
+  "backend_health_sha": "709744875a039178f432574ce1b59aaa3b42395c",
+  "public_browser_cors": "BLOCKED_NO_ALLOW_ORIGIN",
+  "production": false,
+  "flags_observed_live": false,
+  "all_flows_live_accepted": false,
+  "api_suite_scope": "CORE_OWNER_GET_SMOKE_NOT_EXHAUSTIVE_BUSINESS_OR_BINARY_SUITE",
+  "boards": [
+    {
+      "board": "P01",
+      "title": "Đăng nhập / xác nhận phiên",
+      "sourceDir": "auth-session",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Profile / phiên / quyền / kho",
+          "method": "GET",
+          "url": "/api/v1/auth/me",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P01-GET-1"
+        },
+        {
+          "name": "Ca hiện tại",
+          "method": "GET",
+          "url": "/api/v1/mini-app/work-shifts/current",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P01-GET-2"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/auth/login",
+        "POST /api/v1/auth/refresh",
+        "POST /api/v1/auth/switch-context",
+        "POST /api/v1/mini-app/work-shifts/start",
+        "POST /api/v1/auth/logout"
+      ],
+      "note": "Auth dùng owner hiện có; P14 live OFF. Không tự bắt đầu ca hoặc tiếp quản phiên cũ."
+    },
+    {
+      "board": "P02",
+      "title": "Trang chủ",
+      "sourceDir": "home",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Dashboard thật",
+          "method": "GET",
+          "url": "/api/v1/mini-app/dashboard/summary?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P02-GET-1"
+        },
+        {
+          "name": "Recent từ P12 mixed",
+          "method": "GET",
+          "url": "/api/v1/mini-app/documents?warehouse_id={{warehouse_id}}&cursor=start&per_page=3",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P02-GET-2"
+        },
+        {
+          "name": "Profile / phiên / quyền / kho",
+          "method": "GET",
+          "url": "/api/v1/auth/me",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P02-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "Timestamp RFC3339 parse một lần, giờ Việt Nam; recent không lấy KPI. Mixed flag theo phê duyệt DEV, chưa đo trong lượt này."
+    },
+    {
+      "board": "P03",
+      "title": "Quét / quản lý nháp",
+      "sourceDir": "scanner-dialogs",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Context owner P03",
+          "method": "GET",
+          "url": "/api/v1/mini-app/p03/context",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P03-GET-1"
+        },
+        {
+          "name": "Nháp INBOUND",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts?warehouse_id={{warehouse_id}}&operation=INBOUND&status=DRAFT&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P03-GET-2"
+        },
+        {
+          "name": "Nháp đúng scan",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=INBOUND&scan_session_id={{scan_session_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P03-GET-3"
+        },
+        {
+          "name": "Đối chiếu SAVE gốc",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=INBOUND&scan_session_id={{scan_session_id}}&command=SAVE",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P03-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "PUT /api/v1/mini-app/drafts/{draft_id}",
+        "POST /api/v1/mini-app/drafts/{draft_id}/cancel"
+      ],
+      "note": "Nháp không thay business document; UNKNOWN chỉ GET đúng key/context."
+    },
+    {
+      "board": "P04",
+      "title": "Nhập kho",
+      "sourceDir": "inbound",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "NCC GLOBAL",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound/suppliers?status=ACTIVE&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P04-GET-1"
+        },
+        {
+          "name": "Nháp nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P04-GET-2"
+        },
+        {
+          "name": "Đối chiếu RECORD nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P04-GET-3"
+        },
+        {
+          "name": "Phiếu vừa ghi nhận",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound/documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P04-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "PUT /api/v1/mini-app/inbound/drafts/{draft_id}",
+        "POST /api/v1/mini-app/inbound/drafts/{draft_id}/validate-code",
+        "POST /api/v1/mini-app/inbound/drafts/{draft_id}/review",
+        "POST /api/v1/mini-app/inbound/drafts/{draft_id}/record"
+      ],
+      "note": "SAVE rồi RECORD đúng owner; RECORDED chưa POSTED/chưa đổi tồn."
+    },
+    {
+      "board": "P05",
+      "title": "Xuất kho",
+      "sourceDir": "outbound",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Context xuất",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound/context",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P05-GET-1"
+        },
+        {
+          "name": "Nguồn xuất",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound/sources?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P05-GET-2"
+        },
+        {
+          "name": "Đối chiếu linked RECORD",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=OUTBOUND&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P05-GET-3"
+        },
+        {
+          "name": "Phiếu xuất hiện tại",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound/documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P05-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "PUT /api/v1/mini-app/drafts/{draft_id}",
+        "POST /api/v1/mini-app/outbound/resolve-code",
+        "POST /api/v1/mini-app/outbound/record"
+      ],
+      "note": "Linked và manual-create là mode riêng; không fallback standalone hoặc dùng receipt cũ làm trạng thái hiện tại."
+    },
+    {
+      "board": "P06",
+      "title": "Tra cứu SKU / tồn / lịch sử",
+      "sourceDir": "lookup",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Catalog context",
+          "method": "GET",
+          "url": "/api/v1/mini-app/catalog/context",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P06-GET-1"
+        },
+        {
+          "name": "SKU theo kho",
+          "method": "GET",
+          "url": "/api/v1/mini-app/catalog/skus?warehouse_id={{warehouse_id}}&sku_type=ALL&status=ACTIVE&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P06-GET-2"
+        },
+        {
+          "name": "SKU detail",
+          "method": "GET",
+          "url": "/api/v1/mini-app/catalog/skus/{{sku_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P06-GET-3"
+        },
+        {
+          "name": "Tồn SKU",
+          "method": "GET",
+          "url": "/api/v1/mini-app/catalog/skus/{{sku_id}}/stock?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P06-GET-4"
+        },
+        {
+          "name": "Timeline SKU",
+          "method": "GET",
+          "url": "/api/v1/mini-app/catalog/skus/{{sku_id}}/timeline?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P06-GET-5"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "S01 theo SKU; total từ API, không tự chọn kết quả đầu. Verify đủ 9 route owner riêng trước nghiệm thu."
+    },
+    {
+      "board": "P07",
+      "title": "NFC",
+      "sourceDir": "nfc",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Danh sách tag",
+          "method": "GET",
+          "url": "/api/v1/mini-app/nfc-tags?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P07-GET-1"
+        },
+        {
+          "name": "Tag đúng ID",
+          "method": "GET",
+          "url": "/api/v1/mini-app/nfc-tags/{{physical_code_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P07-GET-2"
+        },
+        {
+          "name": "Receipt confirm gốc",
+          "method": "GET",
+          "url": "/api/v1/mini-app/items/{{item_id}}/nfc/confirmation?warehouse_id={{warehouse_id}}",
+          "headers": {
+            "Idempotency-Key": "{{operation_key}}"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P07-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/mini-app/items/{item_id}/nfc/prepare",
+        "PATCH /api/v1/mini-app/items/{item_id}/nfc"
+      ],
+      "note": "Không NFC phần cứng/assign/revoke/replace trong preview. Current mapping không phải receipt/hardware readback."
+    },
+    {
+      "board": "P08",
+      "title": "Lịch sử tổng hợp",
+      "sourceDir": "history",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Records",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=ALL&business=ALL&limit=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P08-GET-1"
+        },
+        {
+          "name": "Exact record/activity",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/records/{{record_id}}?warehouse_id={{warehouse_id}}&activityId={{activity_id}}&limit=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P08-GET-2"
+        },
+        {
+          "name": "Phiên quét: event cursor riêng",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/scan-sessions/{{scan_session_id}}?warehouse_id={{warehouse_id}}&limit=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P08-GET-3"
+        },
+        {
+          "name": "Summary ALL",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/summary?warehouse_id={{warehouse_id}}&source=ALL&date_mode=ALL",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P08-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "Không export. Scan-batch ID khác auth-session; totals từ server; null không đổi 0."
+    },
+    {
+      "board": "P09",
+      "title": "Bảo hành",
+      "sourceDir": "warranty",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Danh sách hồ sơ",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20&sort=created_at_desc",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P09-GET-1"
+        },
+        {
+          "name": "Hồ sơ đúng canonical ID",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P09-GET-2"
+        },
+        {
+          "name": "Events đúng hồ sơ",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}/events?warehouse_id={{warehouse_id}}&sort=event_at_asc&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P09-GET-3"
+        },
+        {
+          "name": "Receipt theo X-Request-ID gốc",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-requests/{{request_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P09-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/mini-app/warranty/resolve-code",
+        "POST /api/v1/mini-app/warranty-cases",
+        "PATCH /api/v1/mini-app/warranty-cases/{case_id}"
+      ],
+      "note": "receipt SUCCEEDED rồi GET canonical detail; original key/body/version giữ khi UNKNOWN."
+    },
+    {
+      "board": "P10",
+      "title": "Cá nhân",
+      "sourceDir": "profile",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Profile / phiên / quyền / kho",
+          "method": "GET",
+          "url": "/api/v1/auth/me",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P10-GET-1"
+        },
+        {
+          "name": "Sessions",
+          "method": "GET",
+          "url": "/api/v1/auth/sessions?page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P10-GET-2"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "PATCH /api/v1/auth/me",
+        "POST /api/v1/auth/logout"
+      ],
+      "note": "Avatar unsupported; không uploader giả. Logout khác END; timeout không tự success/retry."
+    },
+    {
+      "board": "P11",
+      "title": "Bảo mật",
+      "sourceDir": "security",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Profile / phiên / quyền / kho",
+          "method": "GET",
+          "url": "/api/v1/auth/me",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P11-GET-1"
+        },
+        {
+          "name": "Danh sách phiên",
+          "method": "GET",
+          "url": "/api/v1/auth/sessions?page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P11-GET-2"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/auth/change-password",
+        "DELETE /api/v1/auth/sessions/{id}"
+      ],
+      "note": "Policy server gồm UTF8 bytes; ID DELETE khác session_id; receipt/reconcile chưa đủ, timeout giữ khóa."
+    },
+    {
+      "board": "P12",
+      "title": "Chứng từ",
+      "sourceDir": "documents",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "All mixed",
+          "method": "GET",
+          "url": "/api/v1/mini-app/documents?warehouse_id={{warehouse_id}}&cursor=start&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-1"
+        },
+        {
+          "name": "Nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-2"
+        },
+        {
+          "name": "Xuất",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-3"
+        },
+        {
+          "name": "Detail nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-4"
+        },
+        {
+          "name": "Scan evidence nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents/{{document_id}}/scan-entries",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-5"
+        },
+        {
+          "name": "Detail xuất",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-6"
+        },
+        {
+          "name": "Scan evidence xuất",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound-documents/{{document_id}}/scan-entries",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-7"
+        },
+        {
+          "name": "Tệp nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents/{{document_id}}/attachments",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-8"
+        },
+        {
+          "name": "Tải tệp",
+          "method": "GET",
+          "url": "/api/v1/mini-app/document-attachments/{{attachment_id}}/download",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P12-GET-9"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "v2 nullable/known partial; timestamp/cursor v3. Không global fetch, fixture fallback hoặc suy checked/sent từ fullscan."
+    },
+    {
+      "board": "P13",
+      "title": "Thông báo",
+      "sourceDir": "notifications",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Thông báo unread",
+          "method": "GET",
+          "url": "/api/v1/notifications?cursor=start&unread=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P13-GET-1"
+        },
+        {
+          "name": "Exact recipient",
+          "method": "GET",
+          "url": "/api/v1/notifications/{{recipient_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P13-GET-2"
+        },
+        {
+          "name": "Unread count",
+          "method": "GET",
+          "url": "/api/v1/notifications/unread-count",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P13-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "PATCH /api/v1/notifications/{recipient_id}/read"
+      ],
+      "note": "Recipient ID không notification ID. PATCH không body/query; read_at đầu tiên; current_waiting_for_web null."
+    },
+    {
+      "board": "P14",
+      "title": "Recovery / kết thúc ca",
+      "sourceDir": "recovery-shift",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Close-check",
+          "method": "GET",
+          "url": "/api/v1/mini-app/work-shifts/{{shift_id}}/close-check?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P14-GET-1"
+        },
+        {
+          "name": "GET END key gốc",
+          "method": "GET",
+          "url": "/api/v1/mini-app/work-shifts/{{shift_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P14-GET-2"
+        },
+        {
+          "name": "Summary immutable",
+          "method": "GET",
+          "url": "/api/v1/mini-app/work-shifts/{{shift_id}}/summary?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P14-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/auth/recovery-requests",
+        "POST /api/v1/mini-app/work-shifts/{shift_id}/end"
+      ],
+      "note": "P14/recovery OFF. end_supported không CLEAN; END receipt data trực tiếp. Không proof public hoặc legacy backfill."
+    },
+    {
+      "board": "P15",
+      "title": "Lỗi / đối chiếu",
+      "sourceDir": "system",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Support owner",
+          "method": "GET",
+          "url": "/api/v1/mini-app/p03/context",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P15-GET-1"
+        },
+        {
+          "name": "P04 reconcile",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P15-GET-2"
+        },
+        {
+          "name": "P05 linked reconcile",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=OUTBOUND&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P15-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "CHECK_ONLY; không endpoint retry/device/permissions mới; 404/null không NOT_RECORDED."
+    },
+    {
+      "board": "P16",
+      "title": "Loading / empty / no-match / lỗi",
+      "sourceDir": "data-states",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Nhập owner",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P16-GET-1"
+        },
+        {
+          "name": "Xuất owner",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound-documents?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P16-GET-2"
+        },
+        {
+          "name": "Bảo hành owner",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P16-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "Empty/no-match phải dựa count_evidence hợp lệ; không data.length, error→0 hoặc merge trang All."
+    },
+    {
+      "board": "P17",
+      "title": "Ngoại lệ quét",
+      "sourceDir": "scan-exceptions",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Phiếu giữ hàng",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound-documents/{{document_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P17-GET-1"
+        },
+        {
+          "name": "P04 request",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P17-GET-2"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "Reservation redacted vẫn đang giữ; không mở phiếu khi can_open=false, không sửa tồn/hủy/retry để xử lý ngoại lệ."
+    },
+    {
+      "board": "P18",
+      "title": "Tệp / bàn giao / vị trí",
+      "sourceDir": "attachments",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Tệp nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents/{{document_id}}/attachments",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P18-GET-1"
+        },
+        {
+          "name": "Upload receipt nhập",
+          "method": "GET",
+          "url": "/api/v1/mini-app/inbound-documents/{{document_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P18-GET-2"
+        },
+        {
+          "name": "Upload receipt xuất",
+          "method": "GET",
+          "url": "/api/v1/mini-app/outbound-documents/{{document_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P18-GET-3"
+        },
+        {
+          "name": "Upload receipt bảo hành",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}/attachments/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&file_sha256={{file_sha256}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P18-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST owner attachments upload",
+        "PATCH /api/v1/mini-app/warranty-cases/{case_id}"
+      ],
+      "note": "Upload UNKNOWN chỉ GET; abort không rollback; QUARANTINED không mở. Receiver mapping/vị trí chưa chốt."
+    },
+    {
+      "board": "P19",
+      "title": "Xuất linh kiện",
+      "sourceDir": "warranty-components",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Hồ sơ đúng canonical ID",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P19-GET-1"
+        },
+        {
+          "name": "P03 linked checkpoint",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P19-GET-2"
+        },
+        {
+          "name": "Linked RECORD gốc",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P19-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/mini-app/warranty-component-issues/resolve-code",
+        "PUT /api/v1/mini-app/drafts/{draft_id}",
+        "POST /api/v1/mini-app/warranty-component-issues/record"
+      ],
+      "note": "SAVE 0–1000, RECORD 1–500; >500 khóa, không chia/copy/chuyển canonical. Returned chặn xuất."
+    },
+    {
+      "board": "P20",
+      "title": "Linh kiện đã xuất",
+      "sourceDir": "warranty-components",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Hồ sơ đúng canonical ID",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P20-GET-1"
+        },
+        {
+          "name": "POSTED links",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}/component-issues?warehouse_id={{warehouse_id}}&per_page=20&page=1",
+          "headers": {
+            "X-Component-History-Contract": "p20-component-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P20-GET-2"
+        },
+        {
+          "name": "Detail proof",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-component-issues/{{document_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {
+            "X-Component-History-Contract": "p20-component-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P20-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "posted_at không created_at; lines ngang document; quantity/raw thiếu proof giữ null. Lỗi dòng không empty toàn lịch sử."
+    },
+    {
+      "board": "P21",
+      "title": "Tiếp tục phiếu linh kiện",
+      "sourceDir": "warranty-components",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Linked tasks",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&page=1&per_page=20",
+          "headers": {
+            "X-Component-Resume-Contract": "p21-component-resume-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P21-GET-1"
+        },
+        {
+          "name": "Checkpoint",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}",
+          "headers": {
+            "X-Component-Resume-Contract": "p21-component-resume-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P21-GET-2"
+        },
+        {
+          "name": "RECORD gốc",
+          "method": "GET",
+          "url": "/api/v1/mini-app/drafts/{{draft_id}}/requests/{{operation_key}}?warehouse_id={{warehouse_id}}&operation=COMPONENT_ISSUE&scan_session_id={{scan_session_id}}&command=RECORD",
+          "headers": {
+            "X-Component-Resume-Contract": "p21-component-resume-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P21-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "Header chỉ GET, không fallback P03 cũ; task ID/version khác business. Same original context, không auto Post."
+    },
+    {
+      "board": "P22",
+      "title": "Lịch sử NFC",
+      "sourceDir": "history",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Events theo P08",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=NFC&limit=20",
+          "headers": {
+            "X-NFC-History-Contract": "p22-nfc-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P22-GET-1"
+        },
+        {
+          "name": "Exact parent/activity",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/records/{{record_id}}?warehouse_id={{warehouse_id}}&source=NFC&activityId={{activity_id}}",
+          "headers": {
+            "X-NFC-History-Contract": "p22-nfc-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P22-GET-2"
+        },
+        {
+          "name": "UUID lookup",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/records?warehouse_id={{warehouse_id}}&source=NFC&event_id={{event_id}}",
+          "headers": {
+            "X-NFC-History-Contract": "p22-nfc-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P22-GET-3"
+        },
+        {
+          "name": "NFC summary",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/summary?warehouse_id={{warehouse_id}}&source=NFC&date_mode=ALL",
+          "headers": {
+            "X-NFC-History-Contract": "p22-nfc-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P22-GET-4"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "Không /nfc-events; thiếu owner result null/NOT_RECORDED, không SUCCESS bù; EVENT count, outbox publication không hardware receipt."
+    },
+    {
+      "board": "P23",
+      "title": "Lịch sử bảo hành / phiên",
+      "sourceDir": "history",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Hồ sơ",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P23-GET-1"
+        },
+        {
+          "name": "Hồ sơ đúng canonical ID",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P23-GET-2"
+        },
+        {
+          "name": "Timeline",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}/events?warehouse_id={{warehouse_id}}&sort=event_at_asc&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P23-GET-3"
+        },
+        {
+          "name": "Phiên SCAN_SESSION",
+          "method": "GET",
+          "url": "/api/v1/mini-app/scan-sessions?warehouse_id={{warehouse_id}}&page=1&per_page=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P23-GET-4"
+        },
+        {
+          "name": "Phiên quét: event cursor riêng",
+          "method": "GET",
+          "url": "/api/v1/mini-app/history/scan-sessions/{{scan_session_id}}?warehouse_id={{warehouse_id}}&limit=20",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P23-GET-5"
+        }
+      ],
+      "writes_documented_not_executable": [],
+      "note": "p23-read-v2; source thiếu total=null, available phần có; RESOLVED không ACCEPTED, OTHER không rejected."
+    },
+    {
+      "board": "P24",
+      "title": "Panel ngoại lệ owner",
+      "sourceDir": "warranty-components",
+      "ui_mode": "FIXTURE_SOURCE_SNAPSHOT",
+      "api_integration": "NOT_VERIFIED_END_TO_END",
+      "live_write_allowed": false,
+      "reads": [
+        {
+          "name": "Hồ sơ đúng canonical ID",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}?warehouse_id={{warehouse_id}}",
+          "headers": {},
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P24-GET-1"
+        },
+        {
+          "name": "POSTED history",
+          "method": "GET",
+          "url": "/api/v1/mini-app/warranty-cases/{{case_id}}/component-issues?warehouse_id={{warehouse_id}}&per_page=20&page=1",
+          "headers": {
+            "X-Component-History-Contract": "p20-component-history-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P24-GET-2"
+        },
+        {
+          "name": "P19 command GET-only",
+          "method": "GET",
+          "url": "/api/v1/mini-app/component-issue-requests/{{operation_key}}?operation={{command}}",
+          "headers": {
+            "X-Component-Command-Contract": "p19-component-command-v1"
+          },
+          "live_result": "NOT_RUN_AUTHENTICATED",
+          "executable": "EXPLICIT_GET_ONLY",
+          "id": "P24-GET-3"
+        }
+      ],
+      "writes_documented_not_executable": [
+        "POST /api/v1/mini-app/warranty-component-issues/resolve-code"
+      ],
+      "note": "Canonical command recovery mới chỉ dùng yêu cầu đã gửi protocol mới, không nâng request cũ. Flag OFF; local confirm không scan/Post."
+    }
+  ]
+}

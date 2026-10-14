@@ -1,0 +1,67 @@
+/* P03 only. Measurements estimated from B03; see handoff/P03/CONTEXT.md. */
+/* P04 reserves a page scrollbar gutter; a locked P03 overlay must not retain it. */
+html:has(#home-app:not([hidden]) .p03-screen) { scrollbar-gutter: auto; }
+/* Inherit the locked P02 494px width / 950px minimum height and its uniform fit. */
+#home-app .hn-screen.p03-screen { --p03-safe-bottom: env(safe-area-inset-bottom, 0px); --p03-safe-top: env(safe-area-inset-top, 0px); background: #e6f5fa; }
+#home-app .p03-header { height: 47px; padding: 0 18px; display: flex; align-items: flex-start; gap: 23px; background: linear-gradient(110deg,#003951,#005477); color: #fff; flex-shrink: 0; }
+#home-app .p03-header strong { font-size: 22px; line-height: 28px; padding-top: 5px; font-weight: 600; }
+#home-app .p03-header button { display: grid; place-items: center; background: none; border: 0; color: white; width: 32px; height: 36px; padding: 0; }
+#home-app .p03-header .p03-icon { width: 29px; height: 29px; }
+#home-app .p03-header::after { content: none; }
+/* Reuse P02 footer DOM + styles verbatim; only anchoring belongs to this overlay. */
+#home-app .p03-screen .hn-nav { position: absolute; bottom: 0; left: 0; right: 0; margin-top: 0; }
+/* Continuous footer substrate: rounded P02 corners must not expose the blue app canvas. */
+#home-app .hn-screen.p03-screen::after { content: ''; position: absolute; inset: auto 0 0; height: var(--p03-footer-height, 75px); background: #fff; pointer-events: none; z-index: 0; }
+#home-app .p03-host { position: absolute; inset: 47px 0 var(--p03-footer-height, 75px); z-index: 4; border-radius: 0; display: flex; align-items: center; justify-content: center; padding: 16px 8px 32px; }
+#home-app .p03-backdrop { position: absolute; inset: 0; background: rgb(0 0 0 / 80%); border-radius: 0; border: 0; margin: 0; padding: 0; box-shadow: none; }
+#home-app .p03-dialog { position: absolute; background: #fffffffa; border-radius: 14px; outline: none; color: #080b70; max-height: calc(100% - 24px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; box-shadow: 0 0 35px #12567908; }
+#home-app .p03-dialog.modal { position: relative; top: auto; left: auto; right: auto; width: 100%; padding: 20px; text-align: center; max-height: 100%; }
+#home-app .p03-dialog.unfinished { padding: 12px 20px 13px; }
+#home-app .p03-dialog h2 { font-size: 21px; line-height: 26px; font-weight: 600; letter-spacing: -.55px; margin: 12px 0 6px; }
+#home-app .p03-dialog p { font-size: 17px; line-height: 24px; color: #234a80; margin: 0; }
+#home-app .p03-dialog [data-panel] { font-family: Arial, sans-serif; }
+#home-app .p03-icon { display: inline-block; width: 28px; height: 28px; flex-shrink: 0; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; vertical-align: middle; }
+#home-app .p03-emblem { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto; border-radius: 50%; background: #ffe9ec; color: #f20f2f; }
+#home-app .p03-emblem .p03-icon { width: 36px; height: 36px; stroke-width: 2; }
+#home-app .p03-emblem.warning { width: 57px; height: 57px; background: #fff1e3; color: #ff7b05; }
+#home-app .p03-emblem.warning .p03-icon { width: 44px; height: 44px; stroke-width: 1.7; }
+#home-app .p03-actions { display: grid; gap: 9px; margin-top: 20px; }
+#home-app .p03-button { display: block; width: 100%; min-height: 49px; border: 1px solid #cbdbe5; border-radius: 8px; background: #f6fbff; color: #004878; font-size: 18px; line-height: 23px; font-weight: 600; padding: 10px 12px; }
+/* User revision: colors sourced from P01 .primary/.secondary/.forgot, geometry stays P03. */
+#home-app .p03-button.p03-primary { color: #fff; background: #02517a; border-color: #075b83; box-shadow: inset 0 -2px 0 #043f5720; }
+#home-app .p03-button.p03-danger { color: white; background: #e92135; border-color: #ef1c35; }
+#home-app .p03-button.p03-danger-outline { color: #ff1428; background: #fff0f1; border-color: #ff1f34; }
+#home-app .p03-button.p03-text { color: #006ec5; background: none; border: 0; }
+@media (hover: hover) { #home-app .p03-button.p03-primary:hover:not(:disabled) { background: #034667; } }
+#home-app .unfinished h2 { font-size: 20px; line-height: 25px; margin-top: 11px; }
+#home-app .unfinished p { font-size: 16px; line-height: 21px; }
+#home-app .unfinished .p03-actions { margin-top: 14px; gap: 7px; }
+#home-app .unfinished .p03-button { min-height: 48px; padding: 9px; }
+#home-app .p03-dialog[data-panel="P03.S04"] #p03-description { color: #080b70; }
+#home-app .p03-dialog[data-panel="P03.S04"] .p03-actions { margin-top: 21px; gap: 10px; }
+#home-app .p03-dialog.sheet { bottom: 0; left: 0; right: 0; padding: 33px 20px 32px; scroll-padding-bottom: 32px; scroll-padding-top: 8px; border-radius: 17px 17px 0 0; background: #fff; }
+#home-app .sheet h2 { margin: 0 0 3px; font-size: 20px; line-height: 26px; }
+#home-app .sheet p { font-size: 14px; line-height: 20px; }
+#home-app .p03-grip { position: absolute; width: 48px; height: 5px; top: 10px; left: calc(50% - 24px); border-radius: 5px; background: #a2b6cd; }
+#home-app .p03-close { position: absolute; right: 12px; top: 12px; display: grid; place-items: center; width: 32px; height: 32px; background: none; border: 0; color: #234a80; padding: 0; }
+#home-app .p03-close .p03-icon { width: 20px; height: 20px; stroke-width: 1.5; }
+#home-app .p03-operations { display: grid; gap: 7px; margin-top: 13px; }
+#home-app .p03-operation { display: flex; align-items: center; gap: 18px; min-height: 65px; width: 100%; border: 1px solid #e0ecf7; border-radius: 10px; background: #fff; padding: 6px 8px; color: #080b70; text-align: left; }
+#home-app .p03-operation > span:nth-child(2) { flex: 1; min-width: 0; }
+#home-app .p03-operation strong { display: block; font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -.45px; }
+#home-app .p03-operation small { display: block; font-size: 13px; line-height: 18px; margin-top: 1px; letter-spacing: -.35px; color: #466b9c; }
+#home-app .p03-operation > .p03-icon { width: 15px; height: 18px; margin-left: 0; }
+#home-app .p03-tile { width: 50px; height: 50px; display: grid; place-items: center; flex-shrink: 0; border-radius: 11px; background: #e6f5ff; color: #005b90; }
+#home-app .p03-tile .p03-icon { width: 32px; height: 32px; stroke-width: 2; }
+#home-app .p03-tile.inbound { background: #fff3e3; color: #ff8800; }
+#home-app .p03-tile.outbound { color: #0085ff; }
+#home-app .p03-tile.lookup { background: #ddf9fc; color: #0081a5; }
+#home-app .p03-dialog .p03-feedback { margin-top: 12px; padding: 9px; font-size: 14px; line-height: 20px; border-radius: 7px; background: #fff5e4; color: #77410b; overflow-wrap: anywhere; }
+#home-app .p03-feedback:focus-visible { outline: 2px solid #008cff; outline-offset: 1px; }
+#home-app .p03-contact-link { display: block; margin-top: 12px; }
+#home-app .p03-tools { margin-top: 16px; border-top: 1px solid #d3e1e8; padding-top: 12px; }
+#home-app .p03-tools pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 11px; }
+#home-app .p03-tools button { display: block; }
+#home-app .p03-screen .p03-header { padding-top: var(--p03-safe-top); height: calc(47px + var(--p03-safe-top)); }
+#home-app .p03-screen .p03-host { top: calc(47px + var(--p03-safe-top)); bottom: var(--p03-footer-height, 75px); }
+/* Flex centering + max-height reserve room for the scan circle even with a keyboard. */

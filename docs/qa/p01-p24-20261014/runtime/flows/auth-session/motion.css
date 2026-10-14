@@ -1,0 +1,13 @@
+@import url('../shared/motion/motion-tokens.css');
+/* No height, transform, layout, hero, input-value, or route animation in P01. */
+#app .screen[data-hn-motion-mode="auto"] .input-wrap {
+  transition: border-color var(--hn-motion-press) var(--hn-motion-ease-standard),
+    outline-color var(--hn-motion-press) var(--hn-motion-ease-standard);
+}
+/* Security/permission validation is immediate, not a delayed visual guard. */
+#app .screen .input-wrap:has([aria-invalid="true"]),
+#app .screen[data-hn-motion-mode="off"] .input-wrap,
+#app .screen[data-hn-motion-mode="reduced"] .input-wrap { transition:none; }
+@media (prefers-reduced-motion: reduce) {
+  #app .screen[data-hn-motion-mode] .input-wrap { transition:none; }
+}

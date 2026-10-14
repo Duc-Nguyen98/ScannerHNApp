@@ -1,0 +1,19 @@
+/* Uses shared/operation-icons.css tokens. Status colors stay separate. */
+#home-app .p08-app .p08-row[data-history-tone] .p08-tile,
+#home-app .p08-app .p08-detail-glyph[data-history-tone],
+#home-app .p08-app .p08-tile[data-history-tone],
+#home-app .p08-app .p08-group[data-history-tone] .p08-day-tile{
+ background:var(--history-tone-soft);color:var(--history-tone-ink);
+}
+#home-app .p08-app .p08-group[data-history-tone] .p08-day-tile .p08-icon{color:var(--history-tone-ink)}
+#home-app .p08-app .p08-stat[data-history-tone]:not(.p08-stat-total){
+ background:var(--history-tone-soft);box-shadow:inset 0 2px var(--history-tone-line);
+}
+#home-app .p08-app .p08-stat[data-history-tone]:not(.p08-stat-total) :is(strong,.p08-icon,span){
+ color:var(--history-tone-ink);
+}
+#home-app .p08-app .p08-group[data-history-tone] .p08-count-badge{
+ background:var(--history-tone-soft);border-color:var(--history-tone-line);color:var(--history-tone-ink);
+}
+#home-app .p08-app .p08-group[data-history-tone] .p08-count-badge strong{color:var(--history-tone-ink)}
+/* Retain one continuous canvas, white list cards and the existing total accent. */

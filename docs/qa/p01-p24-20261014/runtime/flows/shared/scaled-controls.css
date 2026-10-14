@@ -1,0 +1,3 @@
+/* Only explicitly measured controls opt in. Original visual bounds stay intact. */
+:where([data-hn-hit-ready]){position:relative;touch-action:manipulation}
+[data-hn-hit-ready]::before{content:"";position:absolute;left:var(--hn-hit-left);top:var(--hn-hit-top);width:var(--hn-hit-width);height:var(--hn-hit-height);background:transparent;pointer-events:auto}

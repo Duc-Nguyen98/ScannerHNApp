@@ -1,0 +1,17 @@
+/* Shared detail tabs: exact approved P08.S02 styling, also used by P09.S03. */
+#home-app .p08-app[data-panel="P08.S02"] .p08-detail-tabs,
+#home-app .p12-app .p12-tabs,
+#home-app .p09-app[data-panel="P09.S03"] .p09-tabs{display:flex;gap:4px;border-bottom:1px solid #dae8f4;background:none;margin:0 0 18px}
+#home-app .p08-app[data-panel="P08.S02"] .p08-detail-tabs button,
+#home-app .p12-app .p12-tabs button,
+#home-app .p09-app[data-panel="P09.S03"] .p09-tabs button{flex:1;min-width:0;min-height:48px;border:0;border-radius:8px 8px 0 0;background:none;color:#597193;padding:10px 3px;font-size:17px;line-height:1.35;white-space:normal;font-weight:400;box-shadow:none}
+#home-app .p08-app[data-panel="P08.S02"] .p08-detail-tabs button[aria-selected=true],
+#home-app .p12-app .p12-tabs button[aria-selected=true],
+#home-app .p09-app[data-panel="P09.S03"] .p09-tabs button[aria-selected=true]{background:#edf8fc;color:#006887;box-shadow:inset 0 -3px #007b9d;font-weight:600}
+#home-app .p12-app .p12-tabs button,
+#home-app .p09-app[data-panel="P09.S03"] .p09-tabs button{display:flex;align-items:center;justify-content:center;gap:6px}
+#home-app .hn-tab-count{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 5px;border-radius:6px;background:#eaf1f7;color:#42658f;font:600 13px/20px Arial,sans-serif;font-variant-numeric:tabular-nums}
+#home-app [aria-selected=true] .hn-tab-count{background:#fff;color:#006887}
+/* Four counted tabs: stable columns reserve label+badge space even on selection. */
+#home-app .p12-app .hn-counted-tabs{display:grid;grid-template-columns:1fr 1.35fr 1.1fr 1fr}
+#home-app .hn-counted-tabs button>span:first-child{white-space:nowrap}

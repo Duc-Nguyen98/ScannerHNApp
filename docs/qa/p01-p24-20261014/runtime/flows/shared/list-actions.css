@@ -1,0 +1,10 @@
+/* Actionable tiles/records only; never applies to LOCKED nav or semantic badges. */
+#home-app .hn-screen :is(.hn-task,.hn-record,.hn-resume-row,.p12-record,.p09-case,.p07-tag,.p06-card,.p08-row,.p13-notification-open,.p13-waiting-record) { transition: background-color 120ms ease; -webkit-tap-highlight-color: transparent; }
+@media (hover:hover) and (pointer:fine) {
+ #home-app .hn-screen :is(.hn-task,.hn-record,.hn-resume-row,.p12-record,.p09-case,.p07-tag,.p06-card,.p08-row,.p13-notification-open,.p13-waiting-record):hover:not(:disabled) { background-color: #f0f7fa; }
+}
+#home-app .hn-screen :is(.hn-task,.hn-record,.hn-resume-row,.p12-record,.p09-case,.p07-tag,.p06-card,.p08-row,.p13-notification-open,.p13-waiting-record):active:not(:disabled) { background-color:#e4f0f5; filter:none; }
+#home-app .hn-clear-filters { display:block; margin:12px auto 4px; min-height:44px; padding:10px 18px; border:1px solid #cddfe8; border-radius:10px; background:#fff; color:#00597b; font-weight:600; }
+@media (prefers-reduced-motion:reduce) {
+ #home-app .hn-screen :is(.hn-task,.hn-record,.hn-resume-row,.p12-record,.p09-case,.p07-tag,.p06-card,.p08-row,.p13-notification-open,.p13-waiting-record) { transition:none; }
+}
