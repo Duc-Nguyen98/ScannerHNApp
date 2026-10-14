@@ -1,5 +1,7 @@
 # Native repaired final — 14/10/2026
 
+**Cập nhật hosting:** build tại `native-repaired-final/` đã thay bằng `PREVIEW_PROXY_FIX_20261014`. Pages bị khóa đăng nhập/API do không có proxy; dùng bản local hoặc chờ deploy cùng origin BE. Xem [lỗi HTTP 405 và phạm vi chạy thật](./PREVIEW_PROXY_FIX.md). Số test/build bên dưới thuộc bản repaired trước, không thay bằng chứng bản cập nhật.
+
 Target apps/wms-mobile; bản mới ở native-repaired-final/. Các bản trước giữ nguyên lịch sử.
 
 - **2403 test / 128 suite PASS**, 0 fail; full typecheck PASS, lint phạm vi sửa PASS/0 warnings.

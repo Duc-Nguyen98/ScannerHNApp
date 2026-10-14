@@ -1,0 +1,1 @@
+import{j as t}from"./index-BPjDzP2c.js";import{NfcAssignmentScreen as e}from"./NfcAssignmentScreen-BwSwCIHD.js";import"./nfcUserMessage-8X4XPJp2.js";function s({onBack:r}){return t.jsx(e,{onBack:r})}export{s as NfcTagListScreen};
