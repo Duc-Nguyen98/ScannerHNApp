@@ -1,0 +1,1 @@
+import{j as s,I as t}from"./index-CcZtOi6O.js";function r({preserveCase:e=!1,...a}){return s.jsx(t,{...a,keyboardType:"visible-password",autoCapitalize:e?"none":"characters",autoCorrect:!1,spellCheck:!1})}export{r as C};
