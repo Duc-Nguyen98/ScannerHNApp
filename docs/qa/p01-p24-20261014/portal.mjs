@@ -2,6 +2,8 @@ import {openScene,visiblePanels} from './scenes.mjs';
 import {runRead,API_ORIGIN} from './read-client.mjs';
 const $=id=>document.getElementById(id),params=new URLSearchParams(location.search);
 const [catalog,matrix]=await Promise.all(['catalog.json','api-matrix.json'].map(x=>fetch('./'+x,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Không tải được metadata');return r.json();})));
+const contractIndex=await fetch('./contract-index.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Contract index chưa tải');return r.json();});
+for(const c of contractIndex.contracts){const li=document.createElement('li'),a=document.createElement('a');a.href='./'+c.path;a.textContent=c.board+' · '+c.source;a.target='_blank';a.rel='noopener';li.append(a);$('contracts').append(li);}
 const frame=$('app');let current=null,busy=false,controller=null,readController=null,readGeneration=0,readBusy=false;
 for(const b of matrix.boards)$('board').add(new Option(b.board+' · '+b.title,b.board));
 function options(board,id){$('board').value=board;$('panel').replaceChildren(...catalog.panels.filter(p=>p.board===board).map(p=>new Option(p.id+' · '+p.title,p.id)));if(id&&catalog.panels.some(p=>p.id===id))$('panel').value=id;describe();}
